@@ -19,7 +19,7 @@ CHECK_RELEASE = YES
 # Set this when you only want to compile this application
 #   for a subset of the cross-compiled target architectures
 #   that Base is built for.
-#CROSS_COMPILER_TARGET_ARCHS = vxWorks-ppc32
+CROSS_COMPILER_TARGET_ARCHS = linuxRT-x86_64
 
 # To install files into a location other than $(TOP) define
 #   INSTALL_LOCATION here.
@@ -30,14 +30,21 @@ CHECK_RELEASE = YES
 #   a Microsoft FTP server say, or on some NFS configurations.
 #IOCS_APPL_TOP = </IOC's/absolute/path/to/install/top>
 
-# For application debugging purposes, override the HOST_OPT and/
-#   or CROSS_OPT settings from base/configure/CONFIG_SITE
-#HOST_OPT = NO
-#CROSS_OPT = NO
+# =======================================================
+# Let's install our IOC boot products:
+# envPaths and st.cmd
+# =======================================================
+INSTALL_LOCATION_STARTUP += $(INSTALL_LOCATION)/startup
+DIRECTORY_TARGETS += $(INSTALL_LOCATION_STARTUP)
 
-# These allow developers to override the CONFIG_SITE variable
-# settings without having to modify the configure/CONFIG_SITE
-# file itself.
--include $(TOP)/../CONFIG_SITE.local
--include $(TOP)/configure/CONFIG_SITE.local
+# =============================
+# Build Application Statically
+# =============================
+SHARED_LIBRARIES=NO
+STATIC_BUILD=YES
 
+# =============================
+# Define the archiecture versions
+# =============================
+LINUXRT_BUILDROOT_VERSION=buildroot-2016.11.1
+LINUX_VERSION=rhel6
