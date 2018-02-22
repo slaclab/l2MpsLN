@@ -144,7 +144,7 @@ file "RegRW.template" { pattern
 { ANA_FPEAKVAL_5,   "Force peak value (channel 5)",             "1 second", "",         ANACORE_ForcePeakValue_5    }
 { DIG_APPID,        "Application ID",                           "Passive",  "",         DIGMES_AppId                }
 { DIG_FORCEBITS,    "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits     }
-{ DIG_OUTBITS,      "Output digital values",                    "1 second", "",         DIGMES_OutputBits           }
+{ DIG_OUTBITS,      "Output digital values",                    "Passive",  "",         DIGMES_OutputBits           }
 { DIG_SWBITERR,     "Value to set for sw bits when timeout",    "1 second", "",         DIGMES_SwBitError           }
 { DIG_SWBIT,        "Value to set for sw bits",                 "1 second", "",         DIGMES_SwBitValue           }
 { MITMSG_AMCDEST_0, "Destination for AMC channel 0",            "1 second", "",         MITIG_mpsAmcDest_0          }
