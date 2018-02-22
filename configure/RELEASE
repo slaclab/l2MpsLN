@@ -15,6 +15,8 @@
 # Don't set your version to anything such as "test" that
 # could match a directory name.
 # ==========================================================
+IOCADMIN_MODULE_VERSION=R3.1.15-1.0.0
+AUTOSAVE_MODULE_VERSION=R5.7.1-0.1.0
 ASYN_MODULE_VERSION=R4.30-0.3.0
 YAMLLOADER_MODULE_VERSION=R1.0.3
 L2MPSASYN_MODULE_VERSION=l2MpsAsyn.git
@@ -26,6 +28,8 @@ YCPSWASYN_MODULE_VERSION=R2.0.0
 #  or
 # FOO = /Full/Path/To/Development/Version
 # ==========================================================
+IOCADMIN=$(EPICS_MODULES)/iocAdmin/$(IOCADMIN_MODULE_VERSION)
+AUTOSAVE=$(EPICS_MODULES)/autosave/$(AUTOSAVE_MODULE_VERSION)
 ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
 YAMLLOADER=$(EPICS_MODULES)/yamlLoader/$(YAMLLOADER_MODULE_VERSION)
 L2MPSASYN=$(EPICS_MODULES)/l2MpsAsyn/$(L2MPSASYN_MODULE_VERSION)

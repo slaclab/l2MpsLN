@@ -45,6 +45,11 @@ epicsEnvSet("PREFIX_MPS_BAY1","MPLN:LI00:BAY1")
 # Application ID
 epicsEnvSet("MPS_APP_ID", "0x01")
 
+# *********************************************
+# **** Environment variables for IOC Admin ****
+epicsEnvSet("ENGINEER","Luciano Piccoli")
+epicsEnvSet("IOC_NAME","SIOC-${LOCATION}-MP${LOCATION_INDEX}")
+
 # ======================================
 # Start from TOP
 # ======================================
@@ -101,6 +106,47 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 
+# **********************************************************************
+# **** Load iocAdmin databases to support IOC Health and monitoring ****
+dbLoadRecords("db/iocAdminSoft.db","IOC=${IOC_NAME}")
+dbLoadRecords("db/iocAdminScanMon.db","IOC=${IOC_NAME}")
+
+# The following database is a result of a python parser
+# which looks at RELEASE_SITE and RELEASE to discover
+# versions of software your IOC is referencing
+# The python parser is part of iocAdmin
+dbLoadRecords("db/iocRelease.db","IOC=${IOC_NAME}")
+
+# *******************************************
+# **** Load database for autosave status ****
+dbLoadRecords("db/save_restoreStatus.db", "P=${PREFIX_MPS_BASE}:")
+
+# ===========================================
+#           SETUP AUTOSAVE/RESTORE
+# ===========================================
+
+# If all PVs don't connect continue anyway
+save_restoreSet_IncompleteSetsOk(1)
+
+# created save/restore backup files with date string
+# useful for recovery.
+save_restoreSet_DatedBackupFiles(1)
+
+# Where to find the list of PVs to save
+# Where "/data" is an NFS mount point setup when linuxRT target
+# boots up.
+set_requestfile_path("/data/sioc-li00-mp01/autosave-req")
+
+# Where to write the save files that will be used to restore
+set_savefile_path("/data/sioc-li00-mp01/autosave")
+
+# Prefix that is use to update save/restore status database
+# records
+save_restoreSet_UseStatusPVs(1)
+save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
+
+## Restore datasets
+set_pass1_restoreFile("defaults.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -114,3 +160,9 @@ dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PO
 #               IOC INIT
 # ===========================================
 iocInit()
+
+# Start the save_restore task
+# save changes on change, but no faster
+# than every 30 seconds.
+# Note: the last arg cannot be set to 0
+create_monitor_set("defaults.req" , 30 )

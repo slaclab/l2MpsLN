@@ -29,6 +29,18 @@ DB += mpsLN.db
 # For saving and loading yaml configuration
 DB += saveLoadConfig.db
 
+# Install Common databases needed by All IOCs
+# ========================================================
+# Install databases from iocAdmin package
+# These databases support IOC Health and Monitoring
+# ========================================================
+DB_INSTALLS += $(IOCADMIN)/db/iocAdminSoft.db
+DB_INSTALLS += $(IOCADMIN)/db/iocAdminScanMon.db
+IOCRELEASE_DB += iocRelease.db
+
+# Install Database to support reading the status of the autosave package:
+DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

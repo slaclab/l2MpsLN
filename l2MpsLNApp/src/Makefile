@@ -35,6 +35,8 @@ DBD += l2MpsLN.dbd
 
 # l2MpsLN.dbd will be made up from these files:
 l2MpsLN_DBD += base.dbd
+l2MpsLN_DBD += devIocStats.dbd 
+l2MpsLN_DBD += asSupport.dbd
 
 # Include dbd files from all support applications:
 l2MpsLN_DBD += asyn.dbd
@@ -43,6 +45,8 @@ l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
 
 # Add all the support libraries needed by this IOC
+l2MpsLN_LIBS += devIocStats
+l2MpsLN_LIBS += autosave
 l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
 l2MpsLN_LIBS += ycpswasyn
