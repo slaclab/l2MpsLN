@@ -78,7 +78,10 @@ file "RegRO.template" { pattern
 { MITMSG_TMSTMP,        "Mit msg time stamp",                       "YES",  "1 second", "",         MITIG_mitMsgTimeStamp       }
 { MITMSG_ERRORCNT,      "Mit msg error counter",                    "YES",  "1 second", "",         MITIG_mpsErrorCnt           }
 { MITMSG_TIMEOUTCNT,    "Mit msg timeout counter",                  "YES",  "1 second", "",         MITIG_mpsTimeoutCnt         }
+{ RTM_DI,               "RTM digital input status",                 "YES",  "1 second", "",         RTM_DIN                     }
+{ RTM_DO,               "RTM digital output status",                "YES",  "1 second", "",         RTM_DOUT                    }
 }
+
 
 #======================================
 # Register with Command interfaces

@@ -14,6 +14,7 @@ EDL += mps_node_salt.edl
 EDL += saveLoadConfig.edl
 EDL += thr_ch.edl
 EDL += mps_mit_msg.edl
+EDL += mps_rtm_dio.edl
 EDL += start_edm_li00-mp01.sh
 
 include $(TOP)/configure/RULES

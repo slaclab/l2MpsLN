@@ -421,3 +421,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[6]            MITIG_mpsRtmDest_6
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[7]            MITIG_mpsRtmDest_7
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsTimeoutCnt            MITIG_mpsTimeoutCnt
+
+# =============================
+# RTM Digital I/O
+# =============================
+/mmio/AppTop/AppCore/RtmMpsLinkNode/RtmDin                                      RTM_DIN
+/mmio/AppTop/AppCore/RtmMpsLinkNode/RtmDout                                     RTM_DOUT
