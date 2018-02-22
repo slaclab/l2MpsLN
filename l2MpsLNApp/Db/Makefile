@@ -26,6 +26,9 @@ DB_INSTALLS += $(L2MPSASYN)/db/blm.db
 DB += mpsLN.db
 # ==========================================
 
+# For saving and loading yaml configuration
+DB += saveLoadConfig.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

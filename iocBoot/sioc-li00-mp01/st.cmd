@@ -99,6 +99,8 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 #               DB LOADING
 # ===========================================
 dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
