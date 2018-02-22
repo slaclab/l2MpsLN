@@ -5,6 +5,27 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
 
+# =====================================================
+# Path to "NON EPICS" External PACKAGES: USER INCLUDES
+# ======================================================
+USR_INCLUDES = -I$(BOOST_INCLUDE) -I$(CPSW_FRAMEWORK_INCLUDE) -I$(YAML_INCLUDE) -I$(L2MPS_INCLUDE)
+# =====================================================
+
+# ======================================================
+#PATH TO "NON EPICS" EXTERNAL PACKAGES: USER LIBRARIES
+# ======================================================
+cpsw_DIR = $(CPSW_FRAMEWORK_LIB)
+boost_system_DIR = $(BOOST_LIB)
+yaml-cpp_DIR = $(YAML_LIB)
+l2Mps_DIR = $(L2MPS_LIB)
+# =====================================================
+
+# ======================================================
+# LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
+# =======================================================
+USR_LIBS_Linux += l2Mps cpsw boost_system yaml-cpp
+# ======================================================
+
 #=============================
 # Build the IOC application
 
@@ -16,10 +37,14 @@ DBD += l2MpsLN.dbd
 l2MpsLN_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#l2MpsLN_DBD += xxx.dbd
+l2MpsLN_DBD += asyn.dbd
+l2MpsLN_DBD += l2MpsAsyn.dbd
+l2MpsLN_DBD += yamlLoader.dbd
 
 # Add all the support libraries needed by this IOC
-#l2MpsLN_LIBS += xxx
+l2MpsLN_LIBS += yamlLoader
+l2MpsLN_LIBS += l2MpsAsyn
+l2MpsLN_LIBS += asyn
 
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
 l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
@@ -27,6 +52,7 @@ l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
 # Build the main IOC entry point on workstation OSs.
 l2MpsLN_SRCS_DEFAULT += l2MpsLNMain.cpp
 l2MpsLN_SRCS_vxWorks += -nil-
+
 
 # Add support from base/src/vxWorks if needed
 #l2MpsLN_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
