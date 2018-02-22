@@ -104,6 +104,12 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 #               DB LOADING
 # ===========================================
 dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY0}, R=C0I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY0}, R=C1I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY0}, R=C2I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY1}, R=C0I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY1}, R=C1I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/scale.db", "P=${PREFIX_MPS_BAY1}, R=C2I0_FWSCL, EGU=, PREC=4, VAL=1")
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 
 # **********************************************************************

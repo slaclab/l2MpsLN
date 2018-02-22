@@ -24,6 +24,7 @@ DB_INSTALLS += $(L2MPSASYN)/db/blm.db
 # MPS LN specific databases
 # ==========================================
 DB += mpsLN.db
+DB += scale.db
 # ==========================================
 
 # For saving and loading yaml configuration
