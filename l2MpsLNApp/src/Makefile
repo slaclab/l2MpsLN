@@ -40,10 +40,12 @@ l2MpsLN_DBD += base.dbd
 l2MpsLN_DBD += asyn.dbd
 l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
+l2MpsLN_DBD += ycpswasyn.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
+l2MpsLN_LIBS += ycpswasyn
 l2MpsLN_LIBS += asyn
 
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd

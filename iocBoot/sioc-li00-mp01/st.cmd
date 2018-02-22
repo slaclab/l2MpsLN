@@ -9,16 +9,14 @@
 #            ENVIRONMENT VARIABLES
 # ===========================================
 
-# **************************************************
-# **** Environment variables for L2MPSASYN      ****
-
 # Location
 epicsEnvSet("LOCATION", "LI00")
 epicsEnvSet("LOCATION_INDEX", "01")
 epicsEnvSet("CARD_INDEX", "1")
 
 # CPSW Port names
-epicsEnvSet("L2MPSASYN_PORT","LI00-SP01_S2_MPS")
+epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
+epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 
 # Firmware project name
 epicsEnvSet("FW_PROJ_NAME", "AmcCarrierMpsAnalogLinkNode_project.yaml")
@@ -75,10 +73,29 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 #    MPS Root Path              # OPTIONAL: Root path to the MPS register area
 L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
 
+## Configure asyn port driver
+# YCPSWASYNConfig(
+#    Port Name,                 # the name given to this port driver
+#    Yaml Doc,                  # Path to the YAML file
+#    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
+#    IP Address,                # OPTIONAL: Target FPGA IP Address. If not given it is taken from the YAML file
+#    Record name Prefix,        # Record name prefix
+#    Record name Length Max,    # Record name maximum length (must be greater than lenght of prefix + 4)
+#    Use DB Autogeneration,     # Set to 1 for autogeneration of records from the YAML definition. Set to 0 to disable it
+#    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
+# In Sector 0 L2KA00-05, the BCMs are in slots 6 and 7. Here, for testing purposes we are using slots 4 and 5.
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "mpsLN.dict")
+
 # ===========================================
 #               ASYN MASKS
 # ===========================================
 asynSetTraceMask("${L2MPSASYN_PORT}",, -1, 0)
+asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
+
+# ===========================================
+#               DB LOADING
+# ===========================================
+
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
