@@ -94,7 +94,7 @@ x 340
 y 70
 w 120
 h 16
-controlPv "$(P):1:AdcValid"
+controlPv "$(P):ADC_VALID_1"
 format "hex"
 font "helvetica-medium-r-12.0"
 fgColor index 16
@@ -118,7 +118,7 @@ x 340
 y 130
 w 120
 h 16
-controlPv "$(P):3:AdcData"
+controlPv "$(P):ADC_DATA_3"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -141,7 +141,7 @@ x 340
 y 150
 w 120
 h 16
-controlPv "$(P):4:AdcData"
+controlPv "$(P):ADC_DATA_4"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -164,7 +164,7 @@ x 340
 y 170
 w 120
 h 16
-controlPv "$(P):5:AdcData"
+controlPv "$(P):ADC_DATA_5"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -308,7 +308,7 @@ x 100
 y 70
 w 120
 h 16
-controlPv "$(P):0:AdcValid"
+controlPv "$(P):ADC_VALID_0"
 format "hex"
 font "helvetica-medium-r-12.0"
 fgColor index 16
@@ -332,7 +332,7 @@ x 100
 y 130
 w 120
 h 16
-controlPv "$(P):0:AdcData"
+controlPv "$(P):ADC_DATA_0"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -355,7 +355,7 @@ x 100
 y 150
 w 120
 h 16
-controlPv "$(P):1:AdcData"
+controlPv "$(P):ADC_DATA_1"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -378,7 +378,7 @@ x 100
 y 170
 w 120
 h 16
-controlPv "$(P):2:AdcData"
+controlPv "$(P):ADC_DATA_2"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm

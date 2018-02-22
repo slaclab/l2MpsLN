@@ -51,6 +51,14 @@ file "RegRO.template" { pattern
 { DIG_BYTESCNT,         "Number of digital bytes in message",       "YES",  "Passive",  "",         DIGMES_DigitalBytes         }
 { DIG_DBIN,             "Debounced Input Values",                   "YES",  "1 second", "",         DIGMES_RegInputBits         }
 { DIG_SWBYTECNT,        "Number of software bytes in message",      "YES",  "Passive",  "",         DIGMES_SwBytes              }
+{ ADC_DATA_0,           "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second", "counts",   AMCADC_AdcData_00           }
+{ ADC_DATA_1,           "Adc raw data (slow rate), Bay 0, ch 1",    "YES",  "1 second", "counts",   AMCADC_AdcData_01           }
+{ ADC_DATA_2,           "Adc raw data (slow rate), Bay 0, ch 2",    "YES",  "1 second", "counts",   AMCADC_AdcData_02           }
+{ ADC_DATA_3,           "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second", "counts",   AMCADC_AdcData_10           }
+{ ADC_DATA_4,           "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second", "counts",   AMCADC_AdcData_11           }
+{ ADC_DATA_5,           "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second", "counts",   AMCADC_AdcData_12           }
+{ ADC_VALID_0,          "Adc valid flags, Bay 0",                   "YES",  "1 second", "",         AMCADC_AdcValid_0           }
+{ ADC_VALID_1,          "Adc valid flags, Bay 1",                   "YES",  "1 second", "",         AMCADC_AdcValid_1           }
 }
 
 #======================================

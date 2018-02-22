@@ -374,3 +374,15 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/L2Polarity[61]           DIGMES_L2Polarity_61
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/L2Polarity[62]           DIGMES_L2Polarity_62
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/L2Polarity[63]           DIGMES_L2Polarity_63
+
+# =============================
+# AMC GenericAdc/DAC
+# =============================
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AdcData[0]    AMCADC_AdcData_00
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AdcData[1]    AMCADC_AdcData_01
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AdcData[2]    AMCADC_AdcData_02
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcData[0]    AMCADC_AdcData_10
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcData[1]    AMCADC_AdcData_11
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcData[2]    AMCADC_AdcData_12
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AdcValid      AMCADC_AdcValid_0
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcValid      AMCADC_AdcValid_1
