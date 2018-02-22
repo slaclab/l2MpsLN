@@ -2,7 +2,7 @@
 # Registers with ScalVal_RO interfaces
 # ======================================
 # Single register
-file "RegisterIn.template" { pattern
+file "RegRO.template" { pattern
 { R,                    DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
 
 { CON_LOCSIZE,          "Number Of Local Channels",                 "YES",  "Passive",  "",         CONCEN_LocSize              }
@@ -58,7 +58,7 @@ file "RegisterIn.template" { pattern
 #======================================
 # Register with ScalVal interfaces
 #======================================
-file "RegisterOut.template" { pattern
+file "RegWO.template" { pattern
 { R,                DESC,                                       PINI,   SCAN,       EGU,    PARAM               }
 { CON_USRRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_UserReset    }
 { CON_CNTRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_CountReset   }

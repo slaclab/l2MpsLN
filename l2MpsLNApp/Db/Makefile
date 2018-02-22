@@ -20,13 +20,11 @@ DB_INSTALLS += $(L2MPSASYN)/db/mps.db
 DB_INSTALLS += $(L2MPSASYN)/db/blm.db
 # ==========================================
 
-# ================================================
-# YCPSWASYN databases
-# ================================================
-DB_INSTALLS += $(YCPSWASYN)/db/RegisterIn.template
-DB_INSTALLS += $(YCPSWASYN)/db/RegisterOut.template
+# ==========================================
+# MPS LN specific databases
+# ==========================================
 DB += mpsLN.db
-# ================================================
+# ==========================================
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
