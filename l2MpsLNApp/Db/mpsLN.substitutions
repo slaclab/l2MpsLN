@@ -1,0 +1,65 @@
+# ======================================
+# Registers with ScalVal_RO interfaces
+# ======================================
+# Single register
+file "RegisterIn.template" { pattern
+{ R,                    DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
+
+{ CON_LOCSIZE,          "Number Of Local Channels",                 "YES",  "Passive",  "",         CONCEN_LocSize              }
+{ CON_PGPSIZE,          "Number Of PGP Channels",                   "YES",  "Passive",  "",         CONCEN_PgpSize              }
+{ CON_TOTSIZE,          "Total Number Of Channels",                 "YES",  "Passive",  "",         CONCEN_Size                 }
+{ CON_ARBSIZE,          "Arbiter Count Size",                       "YES",  "Passive",  "",         CONCEN_ArbCount             }
+
+{ CON_PACKCNT,          "Total packet count (TX)",                  "YES",  "1 second", "",         CONCEN_PacketCount          }
+{ CON_PACKRATE,         "Total Packet Rate",                        "YES",  "1 second", "",         CONCEN_PacketRate           }
+{ CON_WORDCNT,          "Total Word Count",                         "YES",  "1 second", "",         CONCEN_WordCount            }
+{ CON_WORDRATE,         "Total Word Rate",                          "YES",  "1 second", "",         CONCEN_WordRate             }
+
+{ CON_PACKDROPCNT_0,    "Packet Drop count ch 0",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_0    }
+{ CON_PACKDROPCNT_1,    "Packet Drop count ch 1",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_1    }
+{ CON_PACKDROPCNT_2,    "Packet Drop count ch 2",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_2    }
+{ CON_PACKDROPCNT_3,    "Packet Drop count ch 3",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_3    }
+{ CON_PACKDROPCNT_4,    "Packet Drop count ch 4",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_4    }
+{ CON_PACKDROPCNT_5,    "Packet Drop count ch 5",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_5    }
+{ CON_PACKDROPCNT_6,    "Packet Drop count ch 6",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_6    }
+{ CON_PACKDROPCNT_7,    "Packet Drop count ch 7",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_7    }
+{ CON_PACKDROPCNT_8,    "Packet Drop count ch 8",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_8    }
+{ CON_PACKDROPCNT_9,    "Packet Drop count ch 9",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_9    }
+{ CON_PACKDROPCNT_10,   "Packet Drop count ch 10",                  "YES",  "1 second", "",         CONCEN_PacketDropCount_10   }
+{ CON_PACKDROPCNT_11,   "Packet Drop count ch 11",                  "YES",  "1 second", "",         CONCEN_PacketDropCount_11   }
+
+{ CON_PACKOFCNT_0,      "Packet Overflow count ch 0",               "YES",  "1 second", "",         CONCEN_OverflowCount_0      }
+{ CON_PACKOFCNT_1,      "Packet Overflow count ch 1",               "YES",  "1 second", "",         CONCEN_OverflowCount_1      }
+{ CON_PACKOFCNT_2,      "Packet Overflow count ch 2",               "YES",  "1 second", "",         CONCEN_OverflowCount_2      }
+{ CON_PACKOFCNT_3,      "Packet Overflow count ch 3",               "YES",  "1 second", "",         CONCEN_OverflowCount_3      }
+{ CON_PACKOFCNT_4,      "Packet Overflow count ch 4",               "YES",  "1 second", "",         CONCEN_OverflowCount_4      }
+{ CON_PACKOFCNT_5,      "Packet Overflow count ch 5",               "YES",  "1 second", "",         CONCEN_OverflowCount_5      }
+{ CON_PACKOFCNT_6,      "Packet Overflow count ch 6",               "YES",  "1 second", "",         CONCEN_OverflowCount_6      }
+{ CON_PACKOFCNT_7,      "Packet Overflow count ch 7",               "YES",  "1 second", "",         CONCEN_OverflowCount_7      }
+{ CON_PACKOFCNT_8,      "Packet Overflow count ch 8",               "YES",  "1 second", "",         CONCEN_OverflowCount_8      }
+{ CON_PACKOFCNT_9,      "Packet Overflow count ch 9",               "YES",  "1 second", "",         CONCEN_OverflowCount_9      }
+{ CON_PACKOFCNT_10,     "Packet Overflow count ch 10",              "YES",  "1 second", "",         CONCEN_OverflowCount_10     }
+{ CON_PACKOFCNT_11,     "Packet Overflow count ch 11",              "YES",  "1 second", "",         CONCEN_OverflowCount_11     }
+
+{ CON_PAUSECNT_0,       "Pause Detection count ch 0",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_0        }
+{ CON_PAUSECNT_1,       "Pause Detection count ch 1",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_1        }
+{ CON_PAUSECNT_2,       "Pause Detection count ch 2",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_2        }
+{ CON_PAUSECNT_3,       "Pause Detection count ch 3",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_3        }
+{ CON_PAUSECNT_4,       "Pause Detection count ch 4",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_4        }
+{ CON_PAUSECNT_5,       "Pause Detection count ch 5",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_5        }
+{ CON_PAUSECNT_6,       "Pause Detection count ch 6",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_6        }
+{ CON_PAUSECNT_7,       "Pause Detection count ch 7",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_7        }
+{ CON_PAUSECNT_8,       "Pause Detection count ch 8",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_8        }
+{ CON_PAUSECNT_9,       "Pause Detection count ch 9",               "YESY", "1 second", "",         CONCEN_PauseDetCnt_9        }
+{ CON_PAUSECNT_10,      "Pause Detection count ch 10",              "YESY", "1 second", "",         CONCEN_PauseDetCnt_10       }
+{ CON_PAUSECNT_11,      "Pause Detection count ch 11",              "YESY", "1 second", "",         CONCEN_PauseDetCnt_11       }
+}
+
+#======================================
+# Register with ScalVal interfaces
+#======================================
+file "RegisterOut.template" { pattern
+{ R,                DESC,                                       PINI,   SCAN,       EGU,    PARAM               }
+{ CON_USRRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_UserReset    }
+{ CON_CNTRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_CountReset   }
+}

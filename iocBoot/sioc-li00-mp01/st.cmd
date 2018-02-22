@@ -27,6 +27,9 @@ epicsEnvSet("YAML","firmware/${FW_PROJ_NAME}/000TopLevel.yaml")
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "firmware/${FW_PROJ_NAME}/config/defaults.yaml")
 
+# YCPSWASYN Dictionary file
+epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
+
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
@@ -84,7 +87,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PR
 #    Use DB Autogeneration,     # Set to 1 for autogeneration of records from the YAML definition. Set to 0 to disable it
 #    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
 # In Sector 0 L2KA00-05, the BCMs are in slots 6 and 7. Here, for testing purposes we are using slots 4 and 5.
-YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "mpsLN.dict")
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "${YCPSWASYN_DICT_FILE}")
 
 # ===========================================
 #               ASYN MASKS
@@ -95,7 +98,7 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               DB LOADING
 # ===========================================
-
+dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
