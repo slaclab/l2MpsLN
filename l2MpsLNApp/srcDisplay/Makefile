@@ -13,6 +13,7 @@ EDL += mps_ln.edl
 EDL += mps_node_salt.edl
 EDL += saveLoadConfig.edl
 EDL += thr_ch.edl
+EDL += mps_mit_msg.edl
 EDL += start_edm_li00-mp01.sh
 
 include $(TOP)/configure/RULES
