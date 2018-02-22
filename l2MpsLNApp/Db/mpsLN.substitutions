@@ -56,7 +56,7 @@ file "RegRO.template" { pattern
 }
 
 #======================================
-# Register with ScalVal interfaces
+# Register with Command interfaces
 #======================================
 file "RegWO.template" { pattern
 { R,                DESC,                                       PINI,   SCAN,       EGU,    PARAM               }
@@ -65,7 +65,7 @@ file "RegWO.template" { pattern
 }
 
 #======================================
-# Register with RBV
+# Register with ScalVal interfaces
 #======================================
 file "RegRW.template" { pattern
 { R,                DESC,                                       SCAN,       EGU,        PARAM                       }
@@ -120,9 +120,17 @@ file "RegRW.template" { pattern
 }
 
 #======================================
-# 1-bit ENUMS with RBV
+# 1-bit Register with ScalVal interfaces
 #======================================
 file "Reg1BitRW.template" { pattern
 { R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          PARAM                    }
 { ANA_FORCEPEAKEN,    "Enable Analog Force Peak Values",        "Disable",  "Enable",   "1 second",    ANACORE_ForcePeakValEn   }
+}
+
+#======================================
+# 1-bit Register with ScalVal interfaces
+#======================================
+file "Reg2BitsRW.template" { pattern
+{ R,              DESC,                                     ZRST,       ONST,       TWST,       THST,       SCAN,          PARAM                     }
+{ ANA_AMCEN,      "Disable analog AMC card",                "Both",     "B1 Only",  "B0 Only",  "None",     "1 second",    ANACORE_InputDisable      }
 }
