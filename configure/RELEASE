@@ -1,43 +1,35 @@
-# RELEASE - Location of external support modules
+# RELEASE.local
 #
-# IF YOU MAKE ANY CHANGES to this file you must subsequently
-# do a "gnumake rebuild" in this application's top level
-# directory.
-#
-# The build process does not check dependencies against files
-# that are outside this application, thus you should do a
-# "gnumake rebuild" in the top level directory after EPICS_BASE
-# or any other external module pointed to below is rebuilt.
-#
-# Host- or target-specific settings can be given in files named
-#  RELEASE.$(EPICS_HOST_ARCH).Common
-#  RELEASE.Common.$(T_A)
-#  RELEASE.$(EPICS_HOST_ARCH).$(T_A)
-#
-# This file is parsed by both GNUmake and an EPICS Perl script,
-# so it can ONLY contain definititions of paths to other support
-# modules, variable definitions that are used in module paths,
-# and include statements that pull in other RELEASE files.
-# Variables may be used before their values have been set.
-# Build variables that are NOT used in paths should be set in
-# the CONFIG_SITE file.
+# Read definitions of:
+#       EPICS_SITE_TOP
+#       BASE_MODULE_VERSION
+#       EPICS_MODULES
+# from one of the following options
+-include $(TOP)/RELEASE_SITE
 
-# Variables and paths to dependent modules:
-#MODULES = /path/to/modules
-#MYMODULE = $(MODULES)/my-module
+# ==========================================================
+# Define the version strings for all needed modules
+# Use naming pattern:
+#   FOO_MODULE_VERSION = R1.2
+# so scripts can extract version strings
+# Don't set your version to anything such as "test" that
+# could match a directory name.
+# ==========================================================
+ASYN_MODULE_VERSION=R4.30-0.3.0
+YAMLLOADER_MODULE_VERSION=R1.0.3
+L2MPSASYN_MODULE_VERSION=l2MpsAsyn.git
 
-# If using the sequencer, point SNCSEQ at its top directory:
-#SNCSEQ = $(MODULES)/seq-ver
+# ==========================================================
+# Define module paths using pattern
+# FOO = $(EPICS_MODULES)/foo/$(FOO_MODULE_VERSION)
+#  or
+# FOO = /Full/Path/To/Development/Version
+# ==========================================================
+ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
+YAMLLOADER=$(EPICS_MODULES)/yamlLoader/$(YAMLLOADER_MODULE_VERSION)
+L2MPSASYN=$(EPICS_MODULES)/l2MpsAsyn/$(L2MPSASYN_MODULE_VERSION)
 
-# EPICS_BASE should appear last so earlier modules can override stuff:
-EPICS_BASE = /afs/slac/g/lcls/epics/base/R3.15.5-1.0
-
-# Set RULES here if you want to use build rules from somewhere
-# other than EPICS_BASE:
-#RULES = $(MODULES)/build-rules
-
-# These allow developers to override the RELEASE variable settings
-# without having to modify the configure/RELEASE file itself.
--include $(TOP)/../RELEASE.local
--include $(TOP)/configure/RELEASE.local
-
+# =====================================================================
+# Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
+# ====================================================================
+EPICS_BASE=$(BASE_SITE_TOP)/$(BASE_MODULE_VERSION)
