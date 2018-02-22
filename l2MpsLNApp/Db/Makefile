@@ -10,7 +10,16 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-#DB += xxx.db
+
+# ==========================================
+# LCLS2 MPS application specific databases
+# ==========================================
+
+# Common database to all applications
+DB_INSTALLS += $(L2MPSASYN)/db/mps.db
+
+# Application specific database
+DB_INSTALLS += $(L2MPSASYN)/db/blm.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
