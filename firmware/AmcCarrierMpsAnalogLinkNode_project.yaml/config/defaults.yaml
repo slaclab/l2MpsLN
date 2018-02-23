@@ -41,6 +41,9 @@
             - RTM_TIMING_IN1
             - RTM_TIMING_IN1
             - FPGA_TIMING_IN
+    - AmcCarrierTiming:
+        - TimingFrameRx:
+            - ClkSel: !<value> 1
 - AppTop:
     - AppCore:
         - AmcGenericAdcDacCore:
