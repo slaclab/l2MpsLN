@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1731
-y 266
+x 1735
+y 291
 w 320
 h 570
 font "helvetica-medium-r-18.0"
@@ -773,7 +773,7 @@ major 4
 minor 4
 release 0
 x 170
-y 360
+y 440
 w 120
 h 30
 fgColor index 14
@@ -832,6 +832,29 @@ numPvs 4
 numDsps 1
 displayFileName {
   0 "mps_rtm_dio.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 170
+y 360
+w 120
+h 30
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-12.0"
+buttonLabel "Timing"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_timing.edl"
 }
 endObjectProperties
 

@@ -173,12 +173,25 @@ file "Reg1BitRW.template" { pattern
 { DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "INVERSE",  "DIRECT",   "1 second",    DIGMES_L1Polarity_0      }
 { DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "INVERSE",  "DIRECT",   "1 second",    DIGMES_L2Polarity_0      }
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
+{ TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
 }
 
 #======================================
-# 1-bit Register with ScalVal interfaces
+# 1-bit Register with ScalVal_RO interfaces
+#======================================
+file "Reg1BitRO.template" { pattern
+{ R,                  DESC,                                     ZNAM,           ONAM,       SCAN,           PARAM           }
+{ TIM_LINK_STAT       "Timing Rx link status",                  "Non-locked",   "Locked",   "1 second",     TIM_RX_LINK     }
+}
+
+#======================================
+# 2-bit Register with ScalVal interfaces
 #======================================
 file "Reg2BitsRW.template" { pattern
-{ R,              DESC,                                     ZRST,       ONST,       TWST,       THST,       SCAN,          PARAM                     }
-{ ANA_AMCEN,      "Disable analog AMC card",                "Both",     "B1 Only",  "B0 Only",  "None",     "1 second",    ANACORE_InputDisable      }
+{ R,              DESC,                                     ZRST,       ONST,       TWST,           THST,       SCAN,          PARAM                     }
+{ ANA_AMCEN,      "Disable analog AMC card",                "Both",     "B1 Only",  "B0 Only",      "None",     "1 second",    ANACORE_InputDisable      }
+{ TIM_SRC_RTM0,   "Timing source for RTM #0",               "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_0              }
+{ TIM_SRC_FPGA,   "Timing source for FPGA",                 "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_1              }
+{ TIM_SRC_BP,     "Timing source for Backplane",            "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_2              }
+{ TIM_SRC_RTM1,   "Timing source for RTM #1",               "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_3              }
 }
