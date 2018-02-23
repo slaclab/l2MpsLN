@@ -94,6 +94,13 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PR
 # In Sector 0 L2KA00-05, the BCMs are in slots 6 and 7. Here, for testing purposes we are using slots 4 and 5.
 YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "${YCPSWASYN_DICT_FILE}")
 
+# ==========================================
+# Load application specific configurations
+# ==========================================
+# Set the digital application ID
+cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
+# ==========================================
+ 
 # ===========================================
 #               ASYN MASKS
 # ===========================================
