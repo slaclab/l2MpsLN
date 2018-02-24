@@ -1,1 +1,0 @@
-edm -x -m "P=MPLN:LI00:MP01:1,PB0=MPLN:LI00:BAY0,PB1=MPLN:LI00:BAY1" mps_ln.edl &
