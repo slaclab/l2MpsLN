@@ -97,8 +97,12 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "${YCPSWASYN_DICT_
 # ==========================================
 # Load application specific configurations
 # ==========================================
+# Load the defautl configuration
+cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 # Set the digital application ID
 cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
+# Set the threshold enables
+cpswLoadConfigFile("iocBoot/${IOC}/configs/thresholds.yaml", "mmio")
 # ==========================================
  
 # ===========================================
