@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1735
-y 291
+x 1680
+y 230
 w 320
-h 570
+h 720
 font "helvetica-medium-r-18.0"
 ctlFont "helvetica-medium-r-18.0"
 btnFont "helvetica-medium-r-18.0"
@@ -49,38 +49,6 @@ major 4
 minor 4
 release 0
 x 20
-y 530
-w 130
-h 30
-fgColor index 14
-bgColor index 0
-topShadowColor index 0
-botShadowColor index 14
-font "helvetica-medium-r-12.0"
-buttonLabel "$(PB0)"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_blm.edl"
-}
-menuLabel {
-  0 "BLM"
-}
-symbols {
-  0 "P=$(PB0)"
-}
-replaceSymbols {
-  0 1
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 20
 y 240
 w 120
 h 30
@@ -113,7 +81,7 @@ fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "Local Applicatioins"
+  "Local Applications:"
 }
 endObjectProperties
 
@@ -137,38 +105,6 @@ numPvs 4
 numDsps 1
 displayFileName {
   0 "mps_concentrator.edl"
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 160
-y 530
-w 130
-h 30
-fgColor index 14
-bgColor index 0
-topShadowColor index 0
-botShadowColor index 14
-font "helvetica-medium-r-12.0"
-buttonLabel "$(PB1)"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_blm.edl"
-}
-menuLabel {
-  0 "BLM"
-}
-symbols {
-  0 "P=$(PB1)"
-}
-replaceSymbols {
-  0 1
 }
 endObjectProperties
 
@@ -856,5 +792,195 @@ numDsps 1
 displayFileName {
   0 "mps_timing.edl"
 }
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 130
+y 530
+w 130
+h 30
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-12.0"
+buttonLabel "SOLN:GUNB:212"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "thr_ch.edl"
+}
+menuLabel {
+  0 "Integration 0"
+}
+symbols {
+  0 "P=SOLN:GUNB:212,CH=I0"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 130
+y 560
+w 130
+h 30
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-12.0"
+buttonLabel "SOLN:GUNB:823"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "thr_ch.edl"
+}
+menuLabel {
+  0 "Integration 0"
+}
+symbols {
+  0 "P=SOLN:GUNB:823,CH=I0"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 540
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 570
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 600
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 660
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 630
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 690
+w 40
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Input 5"
+}
+autoSize
 endObjectProperties
 

@@ -5,7 +5,6 @@ include $(TOP)/configure/CONFIG
 
 EDL += mps_analog_amc.edl
 EDL += mps_analog_core.edl
-EDL += mps_blm.edl
 EDL += mps_concentrator.edl
 EDL += mps_debug.edl
 EDL += mps_digital_msg.edl
