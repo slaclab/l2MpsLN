@@ -2812,7 +2812,7 @@ x 1370
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_H_EN"
+controlPv "$(P):$(CH)_T7_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -2835,7 +2835,7 @@ x 1280
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_L_EN"
+controlPv "$(P):$(CH)_T7_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -2858,7 +2858,7 @@ x 1280
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T7_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -2881,7 +2881,7 @@ x 1370
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T7_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -2904,7 +2904,7 @@ x 1370
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_H"
+controlPv "$(P):$(CH)_T7_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -2927,7 +2927,7 @@ x 1280
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_L"
+controlPv "$(P):$(CH)_T7_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -2950,7 +2950,7 @@ x 1370
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_H_RBV"
+controlPv "$(P):$(CH)_T7_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -2973,7 +2973,7 @@ x 1280
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T7_STD_L_RBV"
+controlPv "$(P):$(CH)_T7_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3087,7 +3087,7 @@ x 1190
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_H_EN"
+controlPv "$(P):$(CH)_T6_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3110,7 +3110,7 @@ x 1100
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_L_EN"
+controlPv "$(P):$(CH)_T6_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3133,7 +3133,7 @@ x 1100
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T6_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3156,7 +3156,7 @@ x 1190
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T6_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3179,7 +3179,7 @@ x 1190
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_H"
+controlPv "$(P):$(CH)_T6_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3202,7 +3202,7 @@ x 1100
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_L"
+controlPv "$(P):$(CH)_T6_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3225,7 +3225,7 @@ x 1190
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_H_RBV"
+controlPv "$(P):$(CH)_T6_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3248,7 +3248,7 @@ x 1100
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T6_STD_L_RBV"
+controlPv "$(P):$(CH)_T6_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3362,7 +3362,7 @@ x 1010
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_H_EN"
+controlPv "$(P):$(CH)_T5_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3385,7 +3385,7 @@ x 920
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_L_EN"
+controlPv "$(P):$(CH)_T5_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3408,7 +3408,7 @@ x 920
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T5_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3431,7 +3431,7 @@ x 1010
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T5_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3454,7 +3454,7 @@ x 1010
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_H"
+controlPv "$(P):$(CH)_T5_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3477,7 +3477,7 @@ x 920
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_L"
+controlPv "$(P):$(CH)_T5_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3500,7 +3500,7 @@ x 1010
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_H_RBV"
+controlPv "$(P):$(CH)_T5_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3523,7 +3523,7 @@ x 920
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T5_STD_L_RBV"
+controlPv "$(P):$(CH)_T5_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3637,7 +3637,7 @@ x 830
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_H_EN"
+controlPv "$(P):$(CH)_T4_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3660,7 +3660,7 @@ x 740
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_L_EN"
+controlPv "$(P):$(CH)_T4_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3683,7 +3683,7 @@ x 740
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T4_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3706,7 +3706,7 @@ x 830
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T4_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3729,7 +3729,7 @@ x 830
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_H"
+controlPv "$(P):$(CH)_T4_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3752,7 +3752,7 @@ x 740
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_L"
+controlPv "$(P):$(CH)_T4_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3775,7 +3775,7 @@ x 830
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_H_RBV"
+controlPv "$(P):$(CH)_T4_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3798,7 +3798,7 @@ x 740
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T4_STD_L_RBV"
+controlPv "$(P):$(CH)_T4_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3912,7 +3912,7 @@ x 650
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_H_EN"
+controlPv "$(P):$(CH)_T3_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3935,7 +3935,7 @@ x 560
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_L_EN"
+controlPv "$(P):$(CH)_T3_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -3958,7 +3958,7 @@ x 560
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T3_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -3981,7 +3981,7 @@ x 650
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T3_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4004,7 +4004,7 @@ x 650
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_H"
+controlPv "$(P):$(CH)_T3_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4027,7 +4027,7 @@ x 560
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_L"
+controlPv "$(P):$(CH)_T3_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4050,7 +4050,7 @@ x 650
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_H_RBV"
+controlPv "$(P):$(CH)_T3_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4073,7 +4073,7 @@ x 560
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T3_STD_L_RBV"
+controlPv "$(P):$(CH)_T3_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4187,7 +4187,7 @@ x 470
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_H_EN"
+controlPv "$(P):$(CH)_T2_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4210,7 +4210,7 @@ x 380
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_L_EN"
+controlPv "$(P):$(CH)_T2_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4233,7 +4233,7 @@ x 380
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T2_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4256,7 +4256,7 @@ x 470
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T2_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4279,7 +4279,7 @@ x 470
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_H"
+controlPv "$(P):$(CH)_T2_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4302,7 +4302,7 @@ x 380
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_L"
+controlPv "$(P):$(CH)_T2_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4325,7 +4325,7 @@ x 470
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_H_RBV"
+controlPv "$(P):$(CH)_T2_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4348,7 +4348,7 @@ x 380
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T2_STD_L_RBV"
+controlPv "$(P):$(CH)_T2_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4462,7 +4462,7 @@ x 290
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_H_EN"
+controlPv "$(P):$(CH)_T1_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4485,7 +4485,7 @@ x 200
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_L_EN"
+controlPv "$(P):$(CH)_T1_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4508,7 +4508,7 @@ x 200
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T1_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4531,7 +4531,7 @@ x 290
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T1_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4554,7 +4554,7 @@ x 290
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_H"
+controlPv "$(P):$(CH)_T1_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4577,7 +4577,7 @@ x 200
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_L"
+controlPv "$(P):$(CH)_T1_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4600,7 +4600,7 @@ x 290
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_H_RBV"
+controlPv "$(P):$(CH)_T1_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4623,7 +4623,7 @@ x 200
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T1_STD_L_RBV"
+controlPv "$(P):$(CH)_T1_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4737,7 +4737,7 @@ x 110
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_H_EN"
+controlPv "$(P):$(CH)_T0_H_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4760,7 +4760,7 @@ x 20
 y 380
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_L_EN"
+controlPv "$(P):$(CH)_T0_L_EN"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4783,7 +4783,7 @@ x 20
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_L_EN_RBV"
+controlPv "$(P):$(CH)_T0_L_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4806,7 +4806,7 @@ x 110
 y 400
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_H_EN_RBV"
+controlPv "$(P):$(CH)_T0_H_EN_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4829,7 +4829,7 @@ x 110
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_H"
+controlPv "$(P):$(CH)_T0_H"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4852,7 +4852,7 @@ x 20
 y 420
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_L"
+controlPv "$(P):$(CH)_T0_L"
 font "helvetica-medium-r-12.0"
 fgColor index 30
 bgColor index 12
@@ -4875,7 +4875,7 @@ x 110
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_H_RBV"
+controlPv "$(P):$(CH)_T0_H_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -4898,7 +4898,7 @@ x 20
 y 440
 w 80
 h 16
-controlPv "$(P):$(CH)_T0_STD_L_RBV"
+controlPv "$(P):$(CH)_T0_L_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
