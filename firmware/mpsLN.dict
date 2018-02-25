@@ -6,7 +6,7 @@
 # LinkNode Concentrator
 # =============================
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/ArbCount                   CONCEN_ArbCount
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/CountReset                 CONCEN_CountReset
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/ResetCount                 CONCEN_ResetCount
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/LocSize                    CONCEN_LocSize
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/OverflowCount[0]           CONCEN_OverflowCount_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/OverflowCount[1]           CONCEN_OverflowCount_1
@@ -36,7 +36,7 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PacketRate                 CONCEN_PacketRate
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpSize                    CONCEN_PgpSize
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/Size                       CONCEN_Size
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/UserReset                  CONCEN_UserReset
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/ResetUser                  CONCEN_ResetUser
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/WordCount                  CONCEN_WordCount
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/WordRate                   CONCEN_WordRate
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PauseDetCnt[0]             CONCEN_PauseDetCnt_0
@@ -421,6 +421,7 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[6]            MITIG_mpsRtmDest_6
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[7]            MITIG_mpsRtmDest_7
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsTimeoutCnt            MITIG_mpsTimeoutCnt
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/clrTimeout               MITIG_clrTimeout
 
 # =============================
 # RTM Digital I/O

@@ -86,12 +86,12 @@ file "RegRO.template" { pattern
 #======================================
 # Register with Command interfaces
 #======================================
-file "RegWO.template" { pattern
-{ R,                DESC,                                       PINI,   SCAN,       EGU,    PARAM               }
-{ CON_USRRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_UserReset    }
-{ CON_CNTRST,       "Counter Reset",                            "NO",   "Passive",  "",     CONCEN_CountReset   }
+file "RegCmd.template" { pattern
+{ R,                    DESC,                                   PINI,   SCAN,       PARAM               }
+{ CON_USRRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetUser    }
+{ CON_CNTRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetCount   }
+{ MITMSG_CLRTIMEOUT,    "Clear Timeout",                        "NO",   "Passive",  MITIG_clrTimeout    }
 }
-
 #======================================
 # Register with ScalVal interfaces
 #======================================
