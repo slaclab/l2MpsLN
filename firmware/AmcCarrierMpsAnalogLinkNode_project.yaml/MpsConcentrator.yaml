@@ -140,3 +140,25 @@ MpsConcentrator: &MpsConcentrator
       lsBit: 0
       mode: RW
       description: "User Reset."
+    #########################################################
+    ResetUser:
+      class: SequenceCommand
+      at:
+        offset: 0x0
+      description: "Command send the user reset."
+      sequence:
+        - entry: UserReset
+          value: 0x01
+        - entry: UserReset
+          value: 0x00 
+    #########################################################
+    ResetCount:
+      class: SequenceCommand
+      at:
+        offset: 0x0
+      description: "Command to reset the counter."
+      sequence:
+        - entry: CountReset
+          value: 0x01
+        - entry: CountReset
+          value: 0x00

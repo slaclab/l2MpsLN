@@ -78,3 +78,13 @@ MpsMitigationCore: &MpsMitigationCore
       lsBit:       0
       mode:        RO
       description: Mitigation message, power class limits for each of 16 destinations
+    clrTimeout:
+      class: SequenceCommand
+      at: 
+        offset: 0x0
+      description: Command to clear timeout
+      sequence:
+        - entry: mpsTimeoutClr
+          value: 0x01
+        - entry: mpsTimeoutClr
+          value: 0x00
