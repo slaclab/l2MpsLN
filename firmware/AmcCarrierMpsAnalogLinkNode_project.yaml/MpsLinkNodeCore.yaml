@@ -1,10 +1,10 @@
 ##############################################################################
 ## This file is part of 'SLAC Firmware Standard Library'.
-## It is subject to the license terms in the LICENSE.txt file found in the 
-## top-level directory of this distribution and at: 
-##    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html. 
-## No part of 'SLAC Firmware Standard Library', including this file, 
-## may be copied, modified, propagated, or distributed except according to 
+## It is subject to the license terms in the LICENSE.txt file found in the
+## top-level directory of this distribution and at:
+##    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+## No part of 'SLAC Firmware Standard Library', including this file,
+## may be copied, modified, propagated, or distributed except according to
 ## the terms contained in the LICENSE.txt file.
 ##############################################################################
 #schemaversion 3.0.0
@@ -14,6 +14,7 @@
 #include GigEthReg.yaml
 #include MpsLcls1Core.yaml
 #include MpsMitigationCore.yaml
+#include Pgp2bAxi.yaml
 
 MpsLinkNodeCore: &MpsLinkNodeCore
   class: MMIODev
@@ -24,7 +25,7 @@ MpsLinkNodeCore: &MpsLinkNodeCore
   children:
   ########
     MpsDigitalMessage:
-       <<: *MpsDigitalMessage 
+       <<: *MpsDigitalMessage
        at:
           offset: 0x000000
     #########################################################
@@ -52,15 +53,15 @@ MpsLinkNodeCore: &MpsLinkNodeCore
        at:
          offset: 0x400FF0
        class: IntField
-       sizeBits: 32      
+       sizeBits: 32
        mode: RW
        description: Broadcast IP port
     ##################################################
     UdpDhcpIP:
        at:
-         offset: 0x400FF4 
+         offset: 0x400FF4
        class: IntField
-       sizeBits: 32      
+       sizeBits: 32
        mode: RO
        description: DHCP IP port
     ##################################################
@@ -68,12 +69,19 @@ MpsLinkNodeCore: &MpsLinkNodeCore
        at:
          offset: 0x400FF8
        class: IntField
-       sizeBits: 32      
+       sizeBits: 32
        mode: RO
        description: Local MAC
+    #########################################################
+    Pgp2bAxi:
+       <<: *Pgp2bAxi
+       at:
+          offset: 0x500000
+          nelms:  4
+          stride: 0x100000
     #########################################################
     MpsMitigationCore:
        <<: *MpsMitigationCore
        at:
           offset: 0x900000
-    #########################################################       
+    #########################################################
