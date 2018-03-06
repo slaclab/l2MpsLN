@@ -48,7 +48,7 @@ epicsEnvSet("MPS_APP_ID", "0x01")
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Luciano Piccoli")
-epicsEnvSet("IOC_NAME","SIOC-${LOCATION}-MP${LOCATION_INDEX}")
+epicsEnvSet("IOC_NAME","SIOC:${LOCATION}:MP${LOCATION_INDEX}")
 
 # ======================================
 # Start from TOP
@@ -135,7 +135,7 @@ dbLoadRecords("db/iocAdminScanMon.db","IOC=${IOC_NAME}")
 # which looks at RELEASE_SITE and RELEASE to discover
 # versions of software your IOC is referencing
 # The python parser is part of iocAdmin
-dbLoadRecords("db/iocRelease.db","IOC=${IOC_NAME}")
+dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
