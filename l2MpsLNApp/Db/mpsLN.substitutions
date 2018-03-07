@@ -80,6 +80,8 @@ file "RegRO.template" { pattern
 { MITMSG_TIMEOUTCNT,    "Mit msg timeout counter",                  "YES",  "1 second", "",         MITIG_mpsTimeoutCnt         }
 { RTM_DI,               "RTM digital input status",                 "YES",  "1 second", "",         RTM_DIN                     }
 { RTM_DO,               "RTM digital output status",                "YES",  "1 second", "",         RTM_DOUT                    }
+{ FPGA_VER,             "FPGA's Firmware Version Number",           "YES",  "1 second", "",         AV_FpgaVersion              }
+{ FPGA_UPTIMECNT,       "FPGA's seconds since last reset",          "YES",  "1 second", "s",        AV_UpTimeCnt                }
 }
 
 
@@ -194,4 +196,12 @@ file "Reg2BitsRW.template" { pattern
 { TIM_SRC_FPGA,   "Timing source for FPGA",                 "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_1              }
 { TIM_SRC_BP,     "Timing source for Backplane",            "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_2              }
 { TIM_SRC_RTM1,   "Timing source for RTM #1",               "RTM_0",    "FPGA",     "Backplane",    "RTM_1",    "1 second",    TIM_CB_OUT_3              }
+}
+
+#======================================
+# Char Array Registers with ScalVal_RO interfaces
+#======================================
+file "RegCharArrayRO.template" { pattern
+{ R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
+{ FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
 }

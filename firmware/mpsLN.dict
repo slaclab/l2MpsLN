@@ -438,3 +438,10 @@
 /mmio/AmcCarrierCore/AxiSy56040/OutputConfig[3]                                 TIM_CB_OUT_3
 /mmio/AmcCarrierCore/AmcCarrierTiming/TimingFrameRx/ClkSel                      TIM_CLK_SEL
 /mmio/AmcCarrierCore/AmcCarrierTiming/TimingFrameRx/RxLinkUp                    TIM_RX_LINK
+
+# =============================
+# AxiVersion
+# =============================
+/mmio/AmcCarrierCore/AxiVersion/FpgaVersion                                     AV_FpgaVersion
+/mmio/AmcCarrierCore/AxiVersion/UpTimeCnt                                       AV_UpTimeCnt
+/mmio/AmcCarrierCore/AxiVersion/BuildStamp                                      AV_BuildStamp
