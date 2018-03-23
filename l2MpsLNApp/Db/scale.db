@@ -1,7 +1,0 @@
-record(ao,      "$(P):$(R)") {
-    field(DESC, "Scale factor")
-    field(EGU,  "$(EGU)")
-    field(PREC, "$(PREC)")
-    field(SCAN, "Passive")
-    field(VAL,  "$(VAL)")
-}

@@ -120,8 +120,8 @@ dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 # BLM channels (IOC-spedific), and it scale factor PV
 dbLoadRecords("db/blm.db",   "P=SOLN:GUNB:212, BAY=0, INP=0, PORT=${L2MPSASYN_PORT}")
 dbLoadRecords("db/blm.db",   "P=SOLN:GUNB:823, BAY=0, INP=1, PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/scale.db", "P=SOLN:GUNB:212, R=I0_FWSCL, EGU=, PREC=4, VAL=1")
-dbLoadRecords("db/scale.db", "P=SOLN:GUNB:823, R=I0_FWSCL, EGU=, PREC=4, VAL=1")
+dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=,PREC=4,VAL=1")
+dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=,PREC=4,VAL=1")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")

@@ -17,14 +17,14 @@ include $(TOP)/configure/CONFIG
 # Common database to all applications
 DB_INSTALLS += $(L2MPSASYN)/db/mps.db
 # Application specific database
-DB_INSTALLS += $(L2MPSASYN)/db/blm.db
+DB_INSTALLS += $(L2MPSASYN)/db/mps_blm.db
+DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
 # ==========================================
 
 # ==========================================
 # MPS LN specific databases
 # ==========================================
 DB += mpsLN.db
-DB += scale.db
 # ==========================================
 
 # For saving and loading yaml configuration
