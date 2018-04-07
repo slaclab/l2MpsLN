@@ -89,10 +89,11 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PR
 #    IP Address,                # OPTIONAL: Target FPGA IP Address. If not given it is taken from the YAML file
 #    Record name Prefix,        # Record name prefix
 #    Record name Length Max,    # Record name maximum length (must be greater than lenght of prefix + 4)
-#    Use DB Autogeneration,     # Set to 1 for autogeneration of records from the YAML definition. Set to 0 to disable it
+#    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
+#    Map files path,            # Path to the mapping files use in autogeneration mode (defaults to "yaml/").
 #    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
-# In Sector 0 L2KA00-05, the BCMs are in slots 6 and 7. Here, for testing purposes we are using slots 4 and 5.
-YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "${YCPSWASYN_DICT_FILE}")
+#    default SCAN value,        # Default SCAN value (for registers which YAML's pollScans is not defined)
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "", "", 50, "0", "", "${YCPSWASYN_DICT_FILE}", "")
 
 # ==========================================
 # Load application specific configurations
