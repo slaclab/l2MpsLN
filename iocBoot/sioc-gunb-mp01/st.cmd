@@ -10,7 +10,7 @@
 # ===========================================
 
 # Location
-epicsEnvSet("LOCATION", "LI00")
+epicsEnvSet("LOCATION", "GUNB")
 epicsEnvSet("LOCATION_INDEX", "01")
 epicsEnvSet("CARD_INDEX", "1")
 
@@ -37,10 +37,10 @@ epicsEnvSet("FPGA_IP","10.0.1.102")
 epicsEnvSet("PREFIX_MPS_BASE","MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}")
 
 # PV nama prefix, for the application on Bay 0
-epicsEnvSet("PREFIX_MPS_BAY0","MPLN:LI00:BAY0")
+epicsEnvSet("PREFIX_MPS_BAY0","MPLN:GUNB:BAY0")
 
 # PV nama prefix, for the application on Bay 1
-epicsEnvSet("PREFIX_MPS_BAY1","MPLN:LI00:BAY1")
+epicsEnvSet("PREFIX_MPS_BAY1","MPLN:GUNB:BAY1")
 
 # Application ID
 epicsEnvSet("MPS_APP_ID", "0x01")
@@ -156,10 +156,10 @@ save_restoreSet_DatedBackupFiles(1)
 # Where to find the list of PVs to save
 # Where "/data" is an NFS mount point setup when linuxRT target
 # boots up.
-set_requestfile_path("/data/sioc-li00-mp01/autosave-req")
+set_requestfile_path("/data/sioc-gunb-mp01/autosave-req")
 
 # Where to write the save files that will be used to restore
-set_savefile_path("/data/sioc-li00-mp01/autosave")
+set_savefile_path("/data/sioc-gunb-mp01/autosave")
 
 # Prefix that is use to update save/restore status database
 # records
