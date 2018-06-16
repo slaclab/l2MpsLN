@@ -15,8 +15,6 @@ USR_INCLUDES = -I$(BOOST_INCLUDE) -I$(CPSW_FRAMEWORK_INCLUDE) -I$(YAML_INCLUDE) 
 #PATH TO "NON EPICS" EXTERNAL PACKAGES: USER LIBRARIES
 # ======================================================
 cpsw_DIR = $(CPSW_FRAMEWORK_LIB)
-boost_system_DIR = $(BOOST_LIB)
-boost_thread_DIR = $(BOOST_LIB)
 yaml-cpp_DIR = $(YAML_LIB)
 l2Mps_DIR = $(L2MPS_LIB)
 # =====================================================
@@ -24,7 +22,7 @@ l2Mps_DIR = $(L2MPS_LIB)
 # ======================================================
 # LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
 # =======================================================
-USR_LIBS_Linux += l2Mps cpsw boost_system boost_thread yaml-cpp
+USR_LIBS_Linux += l2Mps cpsw yaml-cpp
 # ======================================================
 
 #=============================
