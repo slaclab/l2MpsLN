@@ -8,7 +8,7 @@ include $(TOP)/configure/CONFIG
 # =====================================================
 # Path to "NON EPICS" External PACKAGES: USER INCLUDES
 # ======================================================
-USR_INCLUDES = -I$(BOOST_INCLUDE) -I$(CPSW_FRAMEWORK_INCLUDE) -I$(YAML_INCLUDE) -I$(L2MPS_INCLUDE)
+USR_INCLUDES = $(addprefix -I,$(BOOST_INCLUDE) $(CPSW_FRAMEWORK_INCLUDE) $(YAML_INCLUDE) $(L2MPS_INCLUDE))
 # =====================================================
 
 # ======================================================
