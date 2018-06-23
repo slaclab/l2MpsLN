@@ -8,39 +8,31 @@
 ## the terms contained in the LICENSE.txt file.
 ##############################################################################
 #schemaversion 3.0.0
-#once RtmMpsLinkNode.yaml
+#once EvrV2CoreTriggers.yaml
+#include EvrV2ChannelReg.yaml
+#include EvrV2TriggerReg.yaml
 
-RtmMpsLinkNode: &RtmMpsLinkNode
-  name: RtmMpsLinkNode
-  description: MPS Link Node RTM
-  class: MMIODev 
-  size: 0x10 
+EvrV2CoreTriggers: &EvrV2CoreTriggers
+  class: MMIODev
+  configPrio: 1
+  description: Core trigger control
+  size: 0x40000
+  metadata:
+    numTriggers: &numTriggers 16
+  ############
   children:
-    #########################################################
-    RtmDin:
+  ############
+    EvrV2ChannelReg:
+      <<: *EvrV2ChannelReg
       at:
-        offset: 0x0
-      class: IntField
-      name: RtmDin
-      sizeBits: 32
-      mode: RO
-      description: Digital Inputs   
+        offset: 0x00000
+        nelms: *numTriggers
+        stride: 0x1000
     #########################################################
-    RtmDout:
+    EvrV2TriggerReg:
+      <<: *EvrV2TriggerReg
       at:
-        offset: 0x4
-      class: IntField
-      name: RtmDout
-      sizeBits: 8
-      mode: RO
-      description: Digital Outputs    
-    #########################################################
-    RtmDoutMask:
-      at:
-        offset: 0x8
-      class: IntField
-      name: RtmDoutMask
-      sizeBits: 8
-      mode: RW
-      description: Digital Outputs Mask          
+        offset: 0x20000
+        nelms: *numTriggers
+        stride: 0x1000
     #########################################################

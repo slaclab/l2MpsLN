@@ -22,7 +22,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0000
       class: IntField
-      name: TxReset
       sizeBits: 1
       lsBit: 0
       mode: WO
@@ -32,7 +31,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0000
       class: IntField
-      name: TxPolarity
       sizeBits: 1
       lsBit: 1
       mode: RW
@@ -42,7 +40,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0000
       class: IntField
-      name: TxLoopback
       sizeBits: 3
       lsBit: 2
       mode: RW
@@ -52,7 +49,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0000
       class: IntField
-      name: TxInhibit
       sizeBits: 1
       lsBit: 5
       mode: RW
@@ -62,7 +58,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0004
       class: IntField
-      name: BaseControl
       sizeBits: 16
       lsBit: 0
       mode: RW
@@ -72,7 +67,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0008
       class: IntField
-      name: PulseIdWr
       sizeBits: 64
       mode: WO
       description: Pulse ID write
@@ -81,7 +75,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0008
       class: IntField
-      name: PulseIdRd
       sizeBits: 64
       mode: RO
       description: Pulse ID read
@@ -90,7 +83,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0010
       class: IntField
-      name: TStampWr
       sizeBits: 64
       mode: WO
       description: Time stamp write
@@ -99,7 +91,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0010
       class: IntField
-      name: TStampRd
       sizeBits: 64
       mode: RO
       description: Time stamp read
@@ -110,7 +101,6 @@ TPGMiniCore: &TPGMiniCore
         stride: 4
         nelms: 10
       class: IntField
-      name: FixedRateDiv
       sizeBits: 32
       mode: RW
       description: Fixed rate marker divisors
@@ -119,7 +109,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0040
       class: IntField
-      name: RateReload
       sizeBits: 1
       mode: WO
       description: Loads cached fixed rate marker divisors
@@ -128,7 +117,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x004C
       class: IntField
-      name: NBeamSeq
       sizeBits: 8
       lsBit: 0
       mode: RO
@@ -138,7 +126,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x004D
       class: IntField
-      name: NControlSeq
       sizeBits: 8
       lsBit: 0
       mode: RO
@@ -148,7 +135,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x004E
       class: IntField
-      name: NArraysBsa
       sizeBits: 8
       lsBit: 0
       mode: RO
@@ -158,7 +144,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x004F
       class: IntField
-      name: SeqAddrLen
       sizeBits: 4
       lsBit: 0
       mode: RO
@@ -168,7 +153,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x004F
       class: IntField
-      name: NAllowSeq
       sizeBits: 4
       lsBit: 4
       mode: RO
@@ -178,7 +162,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0050
       class: IntField
-      name: BsaCompleteWr
       sizeBits: 64
       mode: WO
       description: BSA complete write
@@ -187,10 +170,90 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0050
       class: IntField
-      name: BsaCompleteRd
       sizeBits: 64
       mode: RO
       description: BSA complete read
+    Lcls1BsaNumSamples:
+    #########################################################
+      at:
+        offset: 0x0078
+      class: IntField
+      sizeBits: 12
+      mode: RW
+      description: "Lcls-1 BSA Number of Samples - 1"
+    Lcls1BsaRate:
+    #########################################################
+      at:
+        offset: 0x0079
+      class: IntField
+      sizeBits:  3
+      lsBit:     4
+      mode: RW
+      description: "Lcls-1 BSA Rate"
+      enums:
+        - { name: "120Hz", value: 0 }
+        - { name: "60Hz",  value: 1 }
+        - { name: "30Hz",  value: 2 }
+        - { name: "10Hz",  value: 3 }
+        - { name: "5Hz",   value: 4 }
+        - { name: "1Hz",   value: 5 }
+        - { name: "0.5Hz", value: 6 }
+    Lcls1BsaTimeSlot:
+    #########################################################
+      at:
+        offset: 0x0079
+      class: IntField
+      sizeBits: 3
+      lsBit:    7
+      mode: RW
+      description: "Lcls-1 BSA Time Slot"
+      enums:
+        - { name: "TS1", value: 0 }
+        - { name: "TS2", value: 1 }
+        - { name: "TS3", value: 2 }
+        - { name: "TS4", value: 3 }
+        - { name: "TS5", value: 4 }
+        - { name: "TS6", value: 5 }
+    Lcls1BsaSeverity:
+    #########################################################
+      at:
+        offset: 0x007a
+      class: IntField
+      sizeBits:  2
+      lsBit:     2
+      mode: RW
+      description: "Lcls-1 BSA Rejection Severity Threshold"
+      enums:
+        - { name: "INVALID", value: 0 }
+        - { name: "MAJOR",   value: 2 }
+        - { name: "MINOR",   value: 1 }
+    Lcls1BsaEdefSlot:
+    #########################################################
+      at:
+        offset: 0x007a
+      class: IntField
+      sizeBits:  4
+      lsBit:     4
+      mode: RW
+      description: "Lcls-1 BSA EDEF Slot Number"
+    Lcls1BsaNumAvgs:
+    #########################################################
+      at:
+        offset: 0x007b
+      class: IntField
+      sizeBits:  8
+      lsBit:     0
+      mode: RW
+      description: "Lcls-1 BSA Number of Values to Average per Sample - 1"
+    Lcls1BsaStart:
+    #########################################################
+      at:
+        offset: 0x007c
+      class: IntField
+      sizeBits:  32
+      lsBit:     0
+      mode: RW
+      description: "Lcls-1 BSA Started by Writing any Value Here"
     BsaRateSel:
     #########################################################
       at:
@@ -198,7 +261,6 @@ TPGMiniCore: &TPGMiniCore
         stride: 8
         nelms: *NARRAYSBSA
       class: IntField
-      name: BsaRateSel
       sizeBits: 13
       lsBit: 0
       mode: RW
@@ -210,7 +272,6 @@ TPGMiniCore: &TPGMiniCore
         stride: 8
         nelms: *NARRAYSBSA
       class: IntField
-      name: BsaDestSel
       sizeBits: 19
       lsBit: 5
       mode: RW
@@ -222,7 +283,6 @@ TPGMiniCore: &TPGMiniCore
         stride: 8
         nelms: *NARRAYSBSA
       class: IntField
-      name: BsaNtoAvg
       sizeBits: 16
       lsBit: 0
       mode: RW
@@ -234,7 +294,6 @@ TPGMiniCore: &TPGMiniCore
         stride: 8
         nelms: *NARRAYSBSA
       class: IntField
-      name: BsaAvgToWr
       sizeBits: 16
       lsBit: 0
       mode: RW
@@ -244,7 +303,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0500
       class: IntField
-      name: PllCnt
       sizeBits: 32
       mode: RO
       description: Count of PLL status changes
@@ -253,7 +311,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0504
       class: IntField
-      name: ClkCnt
       sizeBits: 32
       mode: RO
       description: Count of local 186M clock
@@ -262,7 +319,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0508
       class: IntField
-      name: SyncErrCnt
       sizeBits: 32
       mode: RO
       description: Count of 71k sync errors
@@ -271,7 +327,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x050C
       class: IntField
-      name: CountInterval
       sizeBits: 32
       mode: RW
       description: Interval counters update period
@@ -280,7 +335,6 @@ TPGMiniCore: &TPGMiniCore
       at:
         offset: 0x0510
       class: IntField
-      name: BaseRateCount
       sizeBits: 32
       mode: RO
       description: Count of base rate triggers

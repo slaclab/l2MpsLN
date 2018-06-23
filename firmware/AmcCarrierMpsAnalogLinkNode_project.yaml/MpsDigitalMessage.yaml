@@ -126,15 +126,6 @@ MpsDigitalMsg: &MpsDigitalMessage
       mode: RW
       description: "Value to set for sw bits."
     #########################################################
-    OutputBits:
-      class: IntField
-      at:
-        offset: 0x0050
-      sizeBits: 8
-      lsBit: 0
-      mode: RW
-      description: "Output digital values."
-    #########################################################
     RegInputBits:
       class: IntField
       at:

@@ -563,4 +563,12 @@
         - BsaWaveformEngine:
             - WaveformEngineBuffers:   
               - Initialize: !<value> 0x1                 
-            
+
+#############################################
+## Clear Mitigation Core timeout 
+#############################################
+- AppTop:
+    - AppCore:
+        - MpsLinkNodeCore:
+            - MpsMitigationCore:
+                - clrTimeout: !<value> 0x1
