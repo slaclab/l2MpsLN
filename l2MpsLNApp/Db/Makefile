@@ -25,6 +25,7 @@ DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
 # MPS LN specific databases
 # ==========================================
 DB += mpsLN.db
+
 # ==========================================
 
 # For saving and loading yaml configuration

@@ -18,6 +18,7 @@ cpsw_DIR = $(CPSW_FRAMEWORK_LIB)
 yaml-cpp_DIR = $(YAML_LIB)
 l2Mps_DIR = $(L2MPS_LIB)
 # =====================================================
+USR_CXXFLAGS += -std=c++0x
 
 # ======================================================
 # LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
@@ -43,6 +44,8 @@ l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
 
+l2MpsLN_DBD += virtualChannel.dbd
+
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
 l2MpsLN_LIBS += autosave
@@ -53,6 +56,8 @@ l2MpsLN_LIBS += asyn
 
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
 l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
+l2MpsLN_SRCS += virtualChannelDriver.cpp
+l2MpsLN_SRCS += virtualChannelInit.cpp
 
 # Build the main IOC entry point on workstation OSs.
 l2MpsLN_SRCS_DEFAULT += l2MpsLNMain.cpp
