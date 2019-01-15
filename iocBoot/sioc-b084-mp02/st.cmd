@@ -33,9 +33,6 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
-# MPS Prefix - need to remove this -
-epicsEnvSet("PREFIX_MPS_BASE","MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}")
-
 # MPS Configuration location
 epicsEnvSet("MPS_CONFIGURATION_TOP", "/afs/slac/g/lcls/epics/iocTop/users/jvasquez/github/mps_jesus/mps_database/results")
 
@@ -96,10 +93,10 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 #               DB LOADING
 # ===========================================
 # Link Node database
-dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # Save/load configuration database
-dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
@@ -114,7 +111,7 @@ dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${PREFIX_MPS_BASE}:")
+dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -138,7 +135,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
+save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 
 ## Restore datasets
 set_pass1_restoreFile("defaults.sav")
