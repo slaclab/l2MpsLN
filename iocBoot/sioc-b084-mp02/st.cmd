@@ -12,7 +12,6 @@
 # Location
 epicsEnvSet("LOCATION", "GUNB")
 epicsEnvSet("LOCATION_INDEX", "01")
-epicsEnvSet("CARD_INDEX", "1")
 
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
