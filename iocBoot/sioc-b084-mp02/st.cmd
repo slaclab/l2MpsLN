@@ -9,10 +9,6 @@
 #            ENVIRONMENT VARIABLES
 # ===========================================
 
-# Location
-epicsEnvSet("LOCATION", "GUNB")
-epicsEnvSet("LOCATION_INDEX", "01")
-
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
@@ -38,7 +34,6 @@ epicsEnvSet("MPS_CONFIGURATION_TOP", "/afs/slac/g/lcls/epics/iocTop/users/jvasqu
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Luciano Piccoli")
-epicsEnvSet("IOC_NAME","SIOC:${LOCATION}:MP${LOCATION_INDEX}")
 
 # ======================================
 # Start from TOP
