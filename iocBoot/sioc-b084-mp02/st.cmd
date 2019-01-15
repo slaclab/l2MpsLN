@@ -33,17 +33,11 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
-# PV nama prefix, for the MPS application
+# MPS Prefix - need to remove this -
 epicsEnvSet("PREFIX_MPS_BASE","MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}")
 
-# PV nama prefix, for the application on Bay 0
-epicsEnvSet("PREFIX_MPS_BAY0","MPLN:GUNB:BAY0")
-
-# PV nama prefix, for the application on Bay 1
-epicsEnvSet("PREFIX_MPS_BAY1","MPLN:GUNB:BAY1")
-
-# Application ID
-epicsEnvSet("MPS_APP_ID", "0x01")
+# MPS Configuration location
+epicsEnvSet("MPS_CONFIGURATION_TOP", "/afs/slac/g/lcls/epics/iocTop/users/jvasquez/github/mps_jesus/mps_database/results")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
@@ -73,13 +67,8 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # **** Driver setup for L2MPSASYNConfig ****
 ## Configure asyn port driver
 # L2MPSASYNConfig(
-#    Port Name,                 # the name given to this port driver
-#    App ID,                    # Application ID
-#    Record name Prefix,        # Record name prefix
-#    AppType bay0,              # Bay 0 Application type (BPM, BLEN)
-#    AppType bay1,              # Bay 1 Application type (BPM, BLEN)
-#    MPS Root Path              # OPTIONAL: Root path to the MPS register area
-L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
+#    Port Name                  # the name given to this port driver
+L2MPSASYNConfig("${L2MPSASYN_PORT}")
 
 ## Configure asyn port driver
 # YCPSWASYNConfig(
@@ -95,12 +84,8 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 # ==========================================
 # Load the defautl configuration
 cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
-# Set the digital application ID
-cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
-# Set the threshold enables
-cpswLoadConfigFile("iocBoot/${IOC}/configs/thresholds.yaml", "mmio")
 # ==========================================
- 
+
 # ===========================================
 #               ASYN MASKS
 # ===========================================
@@ -110,14 +95,8 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               DB LOADING
 # ===========================================
-# Link Node database 
+# Link Node database
 dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
-
-# BLM channels (IOC-spedific), and it scale factor PV
-dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:212, BAY=0, INP=0, PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:823, BAY=0, INP=1, PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=,PREC=4,VAL=1")
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=,PREC=4,VAL=1")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
