@@ -97,10 +97,8 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 # Set the digital application ID
 cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
-# Set the threshold enables
-cpswLoadConfigFile("iocBoot/${IOC}/configs/thresholds.yaml", "mmio")
 # ==========================================
- 
+
 # ===========================================
 #               ASYN MASKS
 # ===========================================
@@ -110,14 +108,16 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               DB LOADING
 # ===========================================
-# Link Node database 
+# Link Node database
 dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
 
 # BLM channels (IOC-spedific), and it scale factor PV
 dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:212, BAY=0, INP=0, PORT=${L2MPSASYN_PORT}")
 dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:823, BAY=0, INP=1, PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=,PREC=4,VAL=1")
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=,PREC=4,VAL=1")
+# Scale factor comes from all the analog and digital chain from the DCCT to the ADC: ( 1/1500 * 50 * 0.7 * 32768/0.425 )^-1.
+# and the scale offset comes from the ADC word format being in 16-bit binary offset.
+dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
+dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
@@ -162,7 +162,8 @@ save_restoreSet_UseStatusPVs(1)
 save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
 
 ## Restore datasets
-set_pass1_restoreFile("defaults.sav")
+set_pass0_restoreFile("info_settings.sav")
+set_pass1_restoreFile("info_settings.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -181,4 +182,4 @@ iocInit()
 # save changes on change, but no faster
 # than every 30 seconds.
 # Note: the last arg cannot be set to 0
-create_monitor_set("defaults.req" , 30 )
+create_monitor_set("info_settings.req" , 30 )
