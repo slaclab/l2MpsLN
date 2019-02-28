@@ -164,7 +164,8 @@ save_restoreSet_UseStatusPVs(1)
 save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
 
 ## Restore datasets
-set_pass1_restoreFile("defaults.sav")
+set_pass0_restoreFile("info_settings.sav")
+set_pass1_restoreFile("info_settings.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -183,4 +184,4 @@ iocInit()
 # save changes on change, but no faster
 # than every 30 seconds.
 # Note: the last arg cannot be set to 0
-create_monitor_set("defaults.req" , 30 )
+create_monitor_set("info_settings.req" , 30 )
