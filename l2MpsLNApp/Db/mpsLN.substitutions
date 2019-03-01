@@ -1,6 +1,7 @@
 # ======================================
 # Registers with ScalVal_RO interfaces
 # ======================================
+
 # Single register
 file "RegRO.template" { pattern
 { R,                        DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
@@ -51,12 +52,6 @@ file "RegRO.template" { pattern
 { DIG_BYTESCNT,             "Number of digital bytes in message",       "YES",  "Passive",  "",         DIGMES_DigitalBytes         }
 { DIG_DBIN,                 "Debounced Input Values",                   "YES",  "1 second", "",         DIGMES_RegInputBits         }
 { DIG_SWBYTECNT,            "Number of software bytes in message",      "YES",  "Passive",  "",         DIGMES_SwBytes              }
-{ ADC_DATA_0,               "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second", "counts",   AMCADC_AdcData_00           }
-{ ADC_DATA_1,               "Adc raw data (slow rate), Bay 0, ch 1",    "YES",  "1 second", "counts",   AMCADC_AdcData_01           }
-{ ADC_DATA_2,               "Adc raw data (slow rate), Bay 0, ch 2",    "YES",  "1 second", "counts",   AMCADC_AdcData_02           }
-{ ADC_DATA_3,               "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second", "counts",   AMCADC_AdcData_10           }
-{ ADC_DATA_4,               "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second", "counts",   AMCADC_AdcData_11           }
-{ ADC_DATA_5,               "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second", "counts",   AMCADC_AdcData_12           }
 { ADC_VALID_0,              "Adc valid flags, Bay 0",                   "YES",  "1 second", "",         AMCADC_AdcValid_0           }
 { ADC_VALID_1,              "Adc valid flags, Bay 1",                   "YES",  "1 second", "",         AMCADC_AdcValid_1           }
 { MITMSG_CLASS_0,           "Mit msg power class limits,dest 0",        "YES",  "1 second", "",         MITIG_mitMsgClass_0         }
@@ -116,6 +111,16 @@ file "RegRO.template" { pattern
 { PGP_TX_FRAME_ERR_CNT_3,   "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_3         }
 }
 
+# Single register with on AI records
+file "RegAI.template" { pattern
+{ R,                        DESC,                                       PINI,   SCAN,       EGU,    LINR,       EGUF,           EGUL,           PREC,       PARAM                       }
+{ ADC_DATA_0,               "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_00           }
+{ ADC_DATA_1,               "Adc raw data (slow rate), Bay 0, ch 1",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_01           }
+{ ADC_DATA_2,               "Adc raw data (slow rate), Bay 0, ch 2",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_02           }
+{ ADC_DATA_3,               "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_10           }
+{ ADC_DATA_4,               "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_11           }
+{ ADC_DATA_5,               "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_12           }
+}
 
 #======================================
 # Register with Command interfaces
