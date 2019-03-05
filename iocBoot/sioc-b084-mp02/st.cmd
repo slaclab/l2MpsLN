@@ -97,7 +97,7 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 # Load application specific configurations
 # ==========================================
 # Load the defautl configuration
-cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+cpswLoadConfigFile("iocBoot/${IOC}/configs/defaults.yaml", "mmio")
 # Set the digital application ID
 cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
 # ==========================================
