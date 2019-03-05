@@ -11,6 +11,8 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * Update yamlLoader to R1.1.2 and YCPSWASYN to R3.0.5.
   * Use the yamlDownloader to get the YAML files from the FPGA.
   * Use AI record for the ADC values.
+  * Set JesdRx.InvertAdcData = 0xF to invert the ADC data and 
+    revert the effect of the HW inverter present in the ADC card.
   * Add DEV IOC (sioc-b084-mp02).
   * Minor bug fixes and code clean ups.
 
