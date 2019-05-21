@@ -8,7 +8,7 @@ include $(TOP)/configure/CONFIG
 # =====================================================
 # Path to "NON EPICS" External PACKAGES: USER INCLUDES
 # ======================================================
-USR_INCLUDES = $(addprefix -I,$(BOOST_INCLUDE) $(CPSW_FRAMEWORK_INCLUDE) $(YAML_INCLUDE) $(L2MPS_INCLUDE))
+USR_INCLUDES = $(addprefix -I,$(BOOST_INCLUDE) $(CPSW_FRAMEWORK_INCLUDE) $(YAML_INCLUDE) $(L2MPS_INCLUDE) $(YAMLREADER_INCLUDE) $(DEVICELIB_INCLUDE))
 # =====================================================
 
 # ======================================================
@@ -17,12 +17,14 @@ USR_INCLUDES = $(addprefix -I,$(BOOST_INCLUDE) $(CPSW_FRAMEWORK_INCLUDE) $(YAML_
 cpsw_DIR = $(CPSW_FRAMEWORK_LIB)
 yaml-cpp_DIR = $(YAML_LIB)
 l2Mps_DIR = $(L2MPS_LIB)
+deviceLib_DIR = $(DEVICELIB_LIB)
+yamlReader_DIR  = $(YAMLREADER_LIB)
 # =====================================================
 
 # ======================================================
 # LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
 # =======================================================
-USR_LIBS_Linux += l2Mps cpsw yaml-cpp
+USR_LIBS_Linux += l2Mps yamlReader deviceLib cpsw yaml-cpp
 # ======================================================
 
 #=============================
@@ -42,12 +44,14 @@ l2MpsLN_DBD += asyn.dbd
 l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
+l2MpsLN_DBD += yamlDownloader.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
 l2MpsLN_LIBS += autosave
 l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
+l2MpsLN_LIBS += yamlDownloader
 l2MpsLN_LIBS += ycpswasyn
 l2MpsLN_LIBS += asyn
 
