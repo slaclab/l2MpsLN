@@ -168,6 +168,7 @@ save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
 set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
+set_pass1_restoreFile("manual_settings.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -204,3 +205,4 @@ cd ${TOP}
 # Note: the last arg cannot be set to 0
 create_monitor_set("info_positions.req", 5 )
 create_monitor_set("info_settings.req" , 5 )
+create_monitor_set("manual_settings.req" , 5 )
