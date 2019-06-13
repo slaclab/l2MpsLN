@@ -109,6 +109,12 @@ file "RegRO.template" { pattern
 { PGP_TX_CLK_3,             "Pgp2bAxi 3 TX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_TxClkFreq_3             }
 { PGP_TX_FRAME_CNT_3,       "Pgp2bAxi 3 TX Frame Count",                "YES",  "1 second", "frames",   PGP_TxFrameCnt_3            }
 { PGP_TX_FRAME_ERR_CNT_3,   "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_3         }
+{ LC1_UDP_DHCP_IP,          "LCLS-I DHCP Server IP Address",            "YES",  "1 second", "",         LC1_UdpDhcpIP               }
+{ LC1_UDP_LOCAL_MAC,        "LCLS-I Port Local MAC address",            "YES",  "1 second", "",         LC1_UdplocalMac             }
+{ LC1_TIMEOUT_STATUS,       "LCLS-I timeout status (11-bits)",          "YES",  "1 second", "",         LC1_TimeoutStatusMask       }
+{ LC1_MSG_ERROR_CNT,        "LCLS-I Message Error Counter",             "YES",  "1 second", "",         LC1_lcls1MessageError       }
+{ LC2_MSG_ERROR_CNT,        "LCLS-II Message Error Counter",            "YES",  "1 second", "",         LC1_lcls2MessageError       }
+{ LC1_MAC_ADDR,             "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",         LC1_MacAddr                 }
 }
 
 # Single register with on AI records
@@ -134,7 +140,9 @@ file "RegCmd.template" { pattern
 { PGP_CNTRST_1,         "Pgp2bAxi 1 reset counters",            "NO",   "Passive",  PGP_RstCnt_1        }
 { PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2        }
 { PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3        }
+{ LC1_TO_CLR,           "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout       }
 }
+
 #======================================
 # Register with ScalVal interfaces
 #======================================
@@ -204,6 +212,22 @@ file "RegRW.template" { pattern
 { MITMSG_RTMDEST_5, "Destination for RTM channel 5",            "1 second", "",         MITIG_mpsRtmDest_5          }
 { MITMSG_RTMDEST_6, "Destination for RTM channel 6",            "1 second", "",         MITIG_mpsRtmDest_6          }
 { MITMSG_RTMDEST_7, "Destination for RTM channel 7",            "1 second", "",         MITIG_mpsRtmDest_7          }
+{ LC1_UDP_BC_IP,    "LCLS-I Port UDP Broadcast IP address",     "1 second", "",         LC1_UdpBroadcastIP          }
+{ LC1_TIMEOUT,      "LCLS-I Application timeout (0 - 7us)",     "1 second", "us",       LC1_TimeoutTime             }
+{ LC1_TIMEOUT_MASK, "LCLS-I Application timeout mask",          "1 second", "",         LC1_TimeoutMask             }
+{ LC1_NODE_ID,      "LCLS-I Link Node BLM Application ID",      "1 second", "",         LC1_NodeId                  }
+{ LC1_IP_ADDR,      "LCLS-I Port IP Address",                   "1 second", "",         LC1_IpAddr                  }
+{ LC1_REMAP_ID_0,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_0            }
+{ LC1_REMAP_ID_1,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_1            }
+{ LC1_REMAP_ID_2,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_2            }
+{ LC1_REMAP_ID_3,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_3            }
+{ LC1_REMAP_ID_4,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_4            }
+{ LC1_REMAP_ID_5,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_5            }
+{ LC1_REMAP_ID_6,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_6            }
+{ LC1_REMAP_ID_7,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_7            }
+{ LC1_REMAP_ID_8,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_8            }
+{ LC1_REMAP_ID_9,   "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_9            }
+{ LC1_REMAP_ID_10,  "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_10           }
 }
 
 #======================================
@@ -216,6 +240,7 @@ file "Reg1BitRW.template" { pattern
 { DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "INVERSE",  "DIRECT",   "1 second",    DIGMES_L2Polarity_0      }
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
 { TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
+{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    LC1_TimeoutEnable        }
 }
 
 #======================================
