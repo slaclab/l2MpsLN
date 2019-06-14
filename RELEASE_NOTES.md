@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* __l2MpsLN-R2-2-0__: 2019-06-13 J. Vasquez
+  * Add support for the LCLS-I operation related registers.
+
 * __l2MpsLN-R2-1-0__: 2019-06-12 J. Vasquez
   * Update l2MpsAsyn to version R2.1.0.
   * Autosave files are build using the info(autosaveFields)
