@@ -103,24 +103,11 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 #               DB LOADING
 # ===========================================
 # Link Node database
-dbLoadRecords("${LN_CONFIG_TOP}/mps.db", "PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("${LN_CONFIG_TOP}/mps.db", "YCPSWASYN_PORT=${YCPSWASYN_PORT}, L2MPSASYN_PORT=${L2MPSASYN_PORT}")
 
-# Link Node specific analog channels and scale factors
-$(BAY0_INP0) dbLoadRecords("$(BAY0_DB_FILE)", "P=$(BAY0_INP0_NAME), BAY=0, INP=0, PORT=${L2MPSASYN_PORT}")
-$(BAY0_INP1) dbLoadRecords("$(BAY0_DB_FILE)", "P=$(BAY0_INP1_NAME), BAY=0, INP=1, PORT=${L2MPSASYN_PORT}")
-$(BAY0_INP2) dbLoadRecords("$(BAY0_DB_FILE)", "P=$(BAY0_INP2_NAME), BAY=0, INP=2, PORT=${L2MPSASYN_PORT}")
-$(BAY1_INP0) dbLoadRecords("$(BAY1_DB_FILE)", "P=$(BAY1_INP0_NAME), BAY=1, INP=0, PORT=${L2MPSASYN_PORT}")
-$(BAY1_INP1) dbLoadRecords("$(BAY1_DB_FILE)", "P=$(BAY1_INP1_NAME), BAY=1, INP=1, PORT=${L2MPSASYN_PORT}")
-$(BAY1_INP2) dbLoadRecords("$(BAY1_DB_FILE)", "P=$(BAY1_INP2_NAME), BAY=1, INP=2, PORT=${L2MPSASYN_PORT}")
-
-#dbLoadRecords("db/mps_scale_factor.db", "P=CBLM:UNDH:2310,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
-
+# Link Node specific databases for analog channels and scale factors
 < ${LN_CONFIG_TOP}/mps_scale_factor.cmd
-
-# Scale factor comes from all the analog and digital chain from the DCCT to the ADC: ( 1/1500 * 50 * 0.7 * 32768/0.425 )^-1.
-# and the scale offset comes from the ADC word format being in 16-bit binary offset.
-#dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
-#dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
+< ${LN_CONFIG_TOP}/mps_analog_channels.cmd
 
 # Save/load configuration database
 #dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")

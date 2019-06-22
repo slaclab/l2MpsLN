@@ -21,6 +21,7 @@ epicsEnvSet("CPU_NAME", "cpu-undh-sp02")
 epicsEnvSet("CRATE_ID", "0001")
 epicsEnvSet("SLOT_ID", "2")
 epicsEnvSet("LN_CONFIG_TOP", "${CONFIG_TOP}/${CPU_NAME}/${CRATE_ID}/0${SLOT_ID}")
+epicsEnvSet("SLOT_ID", "7") # This is later used to set the LN card IP address (testing it in slot 7)
 
 #
 # Loads generated mps environment variables for this SIOC, variables:
