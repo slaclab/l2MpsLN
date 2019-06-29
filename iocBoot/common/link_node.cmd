@@ -56,7 +56,7 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
@@ -106,8 +106,8 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 dbLoadRecords("${LN_CONFIG_TOP}/mps.db", "YCPSWASYN_PORT=${YCPSWASYN_PORT}, L2MPSASYN_PORT=${L2MPSASYN_PORT}")
 
 # Link Node specific databases for analog channels and scale factors
-< ${LN_CONFIG_TOP}/mps_scale_factor.cmd
 < ${LN_CONFIG_TOP}/mps_analog_channels.cmd
+< ${LN_CONFIG_TOP}/mps_scale_factor.cmd
 
 # Save/load configuration database
 #dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
