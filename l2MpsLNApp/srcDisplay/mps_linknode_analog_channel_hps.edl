@@ -1,0 +1,578 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 61
+y 200
+w 530
+h 190
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 16
+ctlFgColor2 index 14
+ctlBgColor1 index 4
+ctlBgColor2 index 12
+topShadowColor index 1
+botShadowColor index 11
+title "MPS Link Node"
+snapToGrid
+gridSize 2
+templateParams {
+  0 "PARAM1=PARAM1"
+}
+templateInfo {
+  "PARAM_INFO"
+}
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 54
+w 508
+h 120
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 536
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 416
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Print..."
+numCmds 0
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 472
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 24
+y 104
+w 72
+h 24
+controlPv "$(P):$(P_TYPE)"
+displayMode "decimal"
+precision 6
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 8
+y 20
+w 136
+h 16
+controlPv "$(P_LN):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 24
+y 88
+w 77
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "$(CH_NAME)"
+}
+autoSize
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 96
+y 104
+w 24
+h 24
+controlPv "$(P):$(P_TYPE).EGU"
+displayMode "decimal"
+precision 6
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 144
+y 72
+w 56
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Integrator 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 144
+y 96
+w 56
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Integrator 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 144
+y 120
+w 56
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Integrator 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 144
+y 144
+w 56
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Integrator 3"
+}
+autoSize
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 120
+y 80
+w 16
+h 24
+lineColor index 14
+fillColor index 4
+numPoints 2
+xPoints {
+  0 120
+  1 136
+}
+yPoints {
+  0 104
+  1 80
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 120
+y 128
+w 16
+h 24
+lineColor index 14
+fillColor index 4
+numPoints 2
+xPoints {
+  0 120
+  1 136
+}
+yPoints {
+  0 128
+  1 152
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 120
+y 112
+w 0
+h 0
+lineColor index 14
+fillColor index 4
+numPoints 1
+xPoints {
+  0 120
+}
+yPoints {
+  0 112
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 208
+y 72
+w 88
+h 16
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 208
+y 70
+w 88
+h 16
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "Thresholds..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_thresholds"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH=I0"
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P_LN):CH$(CH_NUM)_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 208
+y 96
+w 88
+h 16
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 208
+y 94
+w 88
+h 16
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "Thresholds..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_thresholds"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH=I1"
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P_LN):CH$(CH_NUM)_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 208
+y 120
+w 88
+h 16
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 208
+y 118
+w 88
+h 16
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "Thresholds..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_thresholds"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH=I2"
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P_LN):CH$(CH_NUM)_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 208
+y 144
+w 88
+h 16
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 208
+y 142
+w 88
+h 16
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "Thresholds..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_thresholds"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH=I3"
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P_LN):CH$(CH_NUM)_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 44
+y 8
+w 448
+h 24
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 7
+useDisplayBg
+value {
+  "$(CH_NAME) - $(P)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 18
+y 44
+w 156
+h 20
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+value {
+  " Analog Input: $(CH_NAME)"
+}
+endObjectProperties
+
