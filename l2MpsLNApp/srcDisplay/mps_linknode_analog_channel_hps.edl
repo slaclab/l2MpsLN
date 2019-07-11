@@ -374,7 +374,7 @@ buttonLabel "Thresholds..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "mps_analog_thresholds"
+  0 "mps_linknode_analog_thresholds_hps"
 }
 setPosition {
   0 "button"
@@ -423,7 +423,7 @@ buttonLabel "Thresholds..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "mps_analog_thresholds"
+  0 "mps_linknode_analog_thresholds_hps"
 }
 setPosition {
   0 "button"
@@ -472,7 +472,7 @@ buttonLabel "Thresholds..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "mps_analog_thresholds"
+  0 "mps_linknode_analog_thresholds_hps"
 }
 setPosition {
   0 "button"
@@ -521,7 +521,7 @@ buttonLabel "Thresholds..."
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "mps_analog_thresholds"
+  0 "mps_linknode_analog_thresholds_hps"
 }
 setPosition {
   0 "button"
