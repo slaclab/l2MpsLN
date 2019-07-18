@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 170
-y 120
+x 281
+y 586
 w 624
-h 330
+h 390
 font "helvetica-medium-r-12.0"
 ctlFont "helvetica-medium-r-12.0"
 btnFont "helvetica-medium-r-12.0"
@@ -29,24 +29,10 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 324
-y 234
-w 292
-h 80
-lineColor index 14
-fillColor index 0
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 234
-w 292
-h 80
+x 8
+y 270
+w 608
+h 110
 lineColor index 14
 fillColor index 0
 endObjectProperties
@@ -74,7 +60,7 @@ major 4
 minor 1
 release 1
 x 250
-y 238
+y 294
 w 48
 h 16
 font "helvetica-medium-r-12.0"
@@ -93,7 +79,7 @@ major 4
 minor 4
 release 0
 x 338
-y 274
+y 330
 w 80
 h 24
 fgColor index 14
@@ -131,7 +117,7 @@ major 4
 minor 1
 release 1
 x 58
-y 248
+y 304
 w 144
 h 16
 font "helvetica-medium-r-12.0"
@@ -149,7 +135,7 @@ major 4
 minor 1
 release 1
 x 374
-y 248
+y 304
 w 144
 h 16
 font "helvetica-medium-r-12.0"
@@ -227,7 +213,7 @@ release 0
 x 8
 y 56
 w 608
-h 160
+h 196
 lineColor index 14
 fillColor index 0
 endObjectProperties
@@ -509,9 +495,11 @@ font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
 bgColor index 12
+bgAlarm
 limitsFromDb
 nullColor index 18
 useHexPrefix
+useAlarmBorder
 newPos
 objType "monitors"
 id "FpgaVersion"
@@ -723,6 +711,7 @@ y 64
 w 80
 h 24
 fgColor index 14
+fgAlarm
 onColor index 4
 offColor index 4
 inconsistentColor index 20
@@ -818,44 +807,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 338
-y 224
-w 104
-h 24
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 3
-value {
-  " $(B1_CH0_NAME)"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 16
-y 222
-w 186
-h 24
-font "helvetica-medium-r-12.0"
-fgColor index 14
-bgColor index 3
-value {
-  " Thresholds for $(B0_CH0_NAME)"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
 x 26
-y 250
+y 306
 w 27
 h 14
 font "helvetica-medium-r-12.0"
@@ -875,7 +828,7 @@ major 4
 minor 4
 release 0
 x 24
-y 274
+y 330
 w 80
 h 24
 fgColor index 14
@@ -913,7 +866,7 @@ major 4
 minor 1
 release 1
 x 562
-y 240
+y 296
 w 48
 h 16
 font "helvetica-medium-r-12.0"
@@ -932,7 +885,7 @@ major 4
 minor 1
 release 1
 x 338
-y 250
+y 306
 w 27
 h 14
 font "helvetica-medium-r-12.0"
@@ -943,5 +896,134 @@ value {
   "BPM"
 }
 autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 260
+w 78
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Thresholds"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 318
+y 288
+w 292
+h 80
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 326
+y 276
+w 122
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+value {
+  " $(B1_CH0_NAME)"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 288
+w 292
+h 80
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 276
+w 122
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+value {
+  " $(B0_CH0_NAME)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 312
+y 218
+w 110
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Thresholds Loaded:"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 212
+w 168
+h 24
+controlPv "$(P):THR_LOADED"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+bgAlarm
+limitsFromDb
+nullColor index 18
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+id "FpgaVersion"
 endObjectProperties
 

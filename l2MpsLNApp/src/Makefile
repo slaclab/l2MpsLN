@@ -40,11 +40,13 @@ l2MpsLN_DBD += devIocStats.dbd
 l2MpsLN_DBD += asSupport.dbd
 
 # Include dbd files from all support applications:
+l2MpsLN_DBD += system.dbd
 l2MpsLN_DBD += asyn.dbd
 l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
 l2MpsLN_DBD += yamlDownloader.dbd
+l2MpsLN_DBD += iocAdmin.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats

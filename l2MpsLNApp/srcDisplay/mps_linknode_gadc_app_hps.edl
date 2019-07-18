@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 220
-y 144
+x 843
+y 185
 w 624
-h 476
+h 506
 font "helvetica-medium-r-12.0"
 ctlFont "helvetica-medium-r-12.0"
 btnFont "helvetica-medium-r-12.0"
@@ -30,7 +30,7 @@ major 4
 minor 0
 release 0
 x 18
-y 332
+y 362
 w 290
 h 58
 lineColor index 4
@@ -45,7 +45,7 @@ major 4
 minor 0
 release 0
 x 8
-y 238
+y 268
 w 608
 h 228
 lineColor index 14
@@ -59,7 +59,7 @@ major 4
 minor 0
 release 0
 x 16
-y 260
+y 290
 w 292
 h 196
 lineColor index 14
@@ -89,7 +89,7 @@ major 4
 minor 1
 release 1
 x 22
-y 252
+y 282
 w 48
 h 16
 font "helvetica-medium-r-12.0"
@@ -168,7 +168,7 @@ release 0
 x 8
 y 56
 w 608
-h 160
+h 194
 lineColor index 14
 fillColor index 0
 endObjectProperties
@@ -450,9 +450,11 @@ font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
 bgColor index 12
+bgAlarm
 limitsFromDb
 nullColor index 18
 useHexPrefix
+useAlarmBorder
 newPos
 objType "monitors"
 id "FpgaVersion"
@@ -560,7 +562,7 @@ major 4
 minor 1
 release 1
 x 312
-y 192
+y 189
 w 75
 h 14
 font "helvetica-medium-r-12.0"
@@ -664,6 +666,7 @@ y 64
 w 80
 h 24
 fgColor index 14
+fgAlarm
 onColor index 4
 offColor index 4
 inconsistentColor index 20
@@ -760,7 +763,7 @@ major 4
 minor 1
 release 1
 x 16
-y 228
+y 258
 w 78
 h 16
 font "helvetica-medium-r-12.0"
@@ -779,7 +782,7 @@ major 4
 minor 1
 release 1
 x 176
-y 336
+y 366
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -798,7 +801,7 @@ major 4
 minor 1
 release 1
 x 60
-y 332
+y 362
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -816,7 +819,7 @@ major 4
 minor 4
 release 0
 x 162
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -854,7 +857,7 @@ major 4
 minor 4
 release 0
 x 90
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -892,7 +895,7 @@ major 4
 minor 4
 release 0
 x 18
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -927,7 +930,7 @@ major 4
 minor 4
 release 0
 x 234
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -965,7 +968,7 @@ major 4
 minor 1
 release 1
 x 176
-y 278
+y 308
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -984,7 +987,7 @@ major 4
 minor 1
 release 1
 x 60
-y 274
+y 304
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -1002,7 +1005,7 @@ major 4
 minor 4
 release 0
 x 162
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1040,7 +1043,7 @@ major 4
 minor 4
 release 0
 x 90
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1078,7 +1081,7 @@ major 4
 minor 4
 release 0
 x 18
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1116,7 +1119,7 @@ major 4
 minor 4
 release 0
 x 234
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1154,7 +1157,7 @@ major 4
 minor 1
 release 1
 x 176
-y 400
+y 430
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -1173,7 +1176,7 @@ major 4
 minor 1
 release 1
 x 60
-y 396
+y 426
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -1191,7 +1194,7 @@ major 4
 minor 4
 release 0
 x 162
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1229,7 +1232,7 @@ major 4
 minor 4
 release 0
 x 90
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1267,7 +1270,7 @@ major 4
 minor 4
 release 0
 x 18
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1305,7 +1308,7 @@ major 4
 minor 4
 release 0
 x 234
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1343,7 +1346,7 @@ major 4
 minor 1
 release 1
 x 18
-y 278
+y 308
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -1361,7 +1364,7 @@ major 4
 minor 1
 release 1
 x 18
-y 336
+y 366
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -1379,7 +1382,7 @@ major 4
 minor 1
 release 1
 x 18
-y 400
+y 430
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -1397,7 +1400,7 @@ major 4
 minor 0
 release 0
 x 318
-y 332
+y 362
 w 290
 h 58
 lineColor index 4
@@ -1412,7 +1415,7 @@ major 4
 minor 0
 release 0
 x 316
-y 260
+y 290
 w 292
 h 196
 lineColor index 14
@@ -1426,7 +1429,7 @@ major 4
 minor 1
 release 1
 x 322
-y 252
+y 282
 w 48
 h 16
 font "helvetica-medium-r-12.0"
@@ -1445,7 +1448,7 @@ major 4
 minor 1
 release 1
 x 476
-y 336
+y 366
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -1464,7 +1467,7 @@ major 4
 minor 1
 release 1
 x 360
-y 332
+y 362
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -1482,7 +1485,7 @@ major 4
 minor 4
 release 0
 x 462
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -1520,7 +1523,7 @@ major 4
 minor 4
 release 0
 x 390
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -1558,7 +1561,7 @@ major 4
 minor 4
 release 0
 x 318
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -1593,7 +1596,7 @@ major 4
 minor 4
 release 0
 x 534
-y 358
+y 388
 w 72
 h 24
 fgColor index 14
@@ -1631,7 +1634,7 @@ major 4
 minor 1
 release 1
 x 476
-y 278
+y 308
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -1650,7 +1653,7 @@ major 4
 minor 1
 release 1
 x 360
-y 274
+y 304
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -1668,7 +1671,7 @@ major 4
 minor 4
 release 0
 x 462
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1706,7 +1709,7 @@ major 4
 minor 4
 release 0
 x 390
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1744,7 +1747,7 @@ major 4
 minor 4
 release 0
 x 318
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1782,7 +1785,7 @@ major 4
 minor 4
 release 0
 x 534
-y 300
+y 330
 w 72
 h 24
 fgColor index 14
@@ -1820,7 +1823,7 @@ major 4
 minor 1
 release 1
 x 476
-y 400
+y 430
 w 128
 h 16
 font "helvetica-medium-r-12.0"
@@ -1839,7 +1842,7 @@ major 4
 minor 1
 release 1
 x 360
-y 396
+y 426
 w 90
 h 24
 font "helvetica-medium-r-12.0"
@@ -1857,7 +1860,7 @@ major 4
 minor 4
 release 0
 x 462
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1895,7 +1898,7 @@ major 4
 minor 4
 release 0
 x 390
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1933,7 +1936,7 @@ major 4
 minor 4
 release 0
 x 318
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -1971,7 +1974,7 @@ major 4
 minor 4
 release 0
 x 534
-y 422
+y 452
 w 72
 h 24
 fgColor index 14
@@ -2009,7 +2012,7 @@ major 4
 minor 1
 release 1
 x 318
-y 278
+y 308
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -2027,7 +2030,7 @@ major 4
 minor 1
 release 1
 x 318
-y 336
+y 366
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -2045,7 +2048,7 @@ major 4
 minor 1
 release 1
 x 318
-y 400
+y 430
 w 34
 h 16
 font "helvetica-medium-r-12.0"
@@ -2054,5 +2057,51 @@ bgColor index 3
 value {
   "Ch 2"
 }
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 312
+y 217
+w 110
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Thresholds Loaded:"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 440
+y 212
+w 168
+h 24
+controlPv "$(P):THR_LOADED"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+bgAlarm
+limitsFromDb
+nullColor index 18
+useHexPrefix
+useAlarmBorder
+newPos
+objType "monitors"
+id "FpgaVersion"
 endObjectProperties
 
