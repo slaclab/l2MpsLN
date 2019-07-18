@@ -79,6 +79,8 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # L2MPSASYNSetManagerHost(
 #    MpsManagerHostName,   # Server hostname
 #    MpsManagerPortNumber) # Server port number
+#
+# In PROD, use the default hostname and por number.
 #L2MPSASYNSetManagerHost("", 0)
 
 ## Configure asyn port driver

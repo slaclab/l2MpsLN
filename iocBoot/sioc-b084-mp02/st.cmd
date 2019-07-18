@@ -79,7 +79,9 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # L2MPSASYNSetManagerHost(
 #    MpsManagerHostName,   # Server hostname
 #    MpsManagerPortNumber) # Server port number
-#L2MPSASYNSetManagerHost("", 0)
+#
+# In DEV, the MpsManager runs in lcls-dev3, default port number.
+L2MPSASYNSetManagerHost("lcls-dev3", 0)
 
 ## Configure asyn port driver
 # L2MPSASYNConfig(
