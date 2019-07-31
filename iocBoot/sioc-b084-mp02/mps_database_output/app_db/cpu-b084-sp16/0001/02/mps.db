@@ -1305,7 +1305,7 @@ record(ao,      "SOLN:GUNB:823:I0_SO") {
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
 }
-record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
+record(ai,      "SOLN:GUNB:823:I0_SO_RBV") {
     field(DESC, "Scale offset factor (readback)")
     field(SCAN, "I/O Intr")
     field(EGU,  "raw")
