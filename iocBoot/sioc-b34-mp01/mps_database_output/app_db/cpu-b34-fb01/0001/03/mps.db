@@ -1,0 +1,2951 @@
+record(longin, "MPLN:GUNB:MP01:4:APP_ID") {
+    field(DESC, "Application ID")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)APP_ID")
+}
+record(longin, "MPLN:GUNB:MP01:4:BYTE_COUNT") {
+    field(DESC, "Number of bytes in MPS message")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)BYTE_COUNT")
+}
+record(longin, "MPLN:GUNB:MP01:4:ROLL_OVER_EN") {
+    field(DESC, "Status Counter Roll Over Enable")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)ROLL_OVER_EN")
+}
+record(longin, "MPLN:GUNB:MP01:4:TX_LINK_UP_CNT") {
+    field(DESC, "MPS TX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)TX_LINK_UP_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_0") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_0")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_1") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_1")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_2") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_2")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_3") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_3")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_4") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_4")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_5") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_5")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_6") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_6")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_7") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_7")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_8") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_8")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_9") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_9")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_10") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_10")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_11") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_11")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_12") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_12")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_LINK_UP_CNT_13") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_13")
+}
+record(longin, "MPLN:GUNB:MP01:4:TX_PKT_SENT_CNT") {
+    field(DESC, "MPS TX Packet Sent Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)TX_PKT_SENT_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_0") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_0")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_1") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_1")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_2") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_2")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_3") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_3")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_4") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_4")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_5") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_5")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_6") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_6")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_7") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_7")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_8") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_8")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_9") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_9")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_10") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_10")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_11") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_11")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_12") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_12")
+}
+record(longin, "MPLN:GUNB:MP01:4:RX_PKT_RCV_CNT_13") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_13")
+}
+record(longin, "MPLN:GUNB:MP01:4:MSG_CNT") {
+    field(DESC, "Mps message counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)MSG_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_APP_ID") {
+    field(DESC, "Mps last message App ID")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_APPID")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_TMSTMP") {
+    field(DESC, "Mps last message timestamp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_TMSTMP")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_0") {
+    field(DESC, "Mps last message byte 0")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_0")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_1") {
+    field(DESC, "Mps last message byte 1")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_1")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_2") {
+    field(DESC, "Mps last message byte 2")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_2")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_3") {
+    field(DESC, "Mps last message byte 3")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_3")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_4") {
+    field(DESC, "Mps last message byte 4")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_4")
+}
+record(longin, "MPLN:GUNB:MP01:4:LAST_MSG_BYTE_5") {
+    field(DESC, "Mps last message byte 5")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_5")
+}
+record(bi, "MPLN:GUNB:MP01:4:DIGITAL_EN") {
+    field(DESC, "Application generates digital messages")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)DIGITAL_EN")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:4:MPS_SLOT") {
+    field(DESC, "MPS_SLOT_G")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)MPS_SLOT")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:4:PLL_LOCKED") {
+    field(DESC, "MPS PLL Lock Status")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)PLL_LOCKED")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:4:TX_LINK_UP") {
+    field(DESC, "MPS TX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)TX_LINK_UP")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_0") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_0")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_1") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_1")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_2") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_2")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_3") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_3")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_4") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_4")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_5") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_5")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_6") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_6")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_7") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_7")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_8") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_8")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_9") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_9")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_10") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_10")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_11") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_11")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_12") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_12")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:RX_LINK_UP_13") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_13")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:4:LAST_MSG_LC1_EN") {
+    field(DESC, "LCLS flag in the last message")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)LAST_MSG_LCLS")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bo, "MPLN:GUNB:MP01:4:SALT_RST_CNT") {
+    field(DESC, "Reset all the SALT status counters")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)SALT_RST_CNT")
+    field(ZNAM, "")
+    field(ONAM, "")
+}
+
+record(bo, "MPLN:GUNB:MP01:4:SALT_RST_PLL") {
+    field(DESC, "Reset the PLL")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)SALT_RST_PLL")
+    field(ZNAM, "")
+    field(ONAM, "")
+}
+
+record(longout, "MPLN:GUNB:MP01:4:BEAM_DEST_MASK") {
+    field(DESC, "One bit per dest for BPM or kicker")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)BEAM_DEST_MASK")
+}
+
+record(longin, "MPLN:GUNB:MP01:4:BEAM_DEST_MASK_RBV") {
+    field(DESC, "One bit per dest for BPM or kicker")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)BEAM_DEST_MASK")
+}
+
+record(longout, "MPLN:GUNB:MP01:4:ALT_DEST_MASK") {
+    field(DESC, "One bit per dest for alt table")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)ALT_DEST_MASK")
+}
+
+record(longin, "MPLN:GUNB:MP01:4:ALT_DEST_MASK_RBV") {
+    field(DESC, "One bit per dest for alt table")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)ALT_DEST_MASK")
+}
+
+record(longout, "MPLN:GUNB:MP01:4:MPS_VER") {
+    field(DESC, "MPS version")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)MPS_VER")
+}
+
+record(longin, "MPLN:GUNB:MP01:4:MPS_VER_RBV") {
+    field(DESC, "MPS version")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)MPS_VER")
+}
+
+record(bo, "MPLN:GUNB:MP01:4:MPS_EN") {
+    field(DESC, "MPS Enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)MPS_EN")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "MPLN:GUNB:MP01:4:MPS_EN_RBV") {
+    field(DESC, "MPS Enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)MPS_EN")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bo, "MPLN:GUNB:MP01:4:LC1_MODE") {
+    field(DESC, "LCLS operation mode")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)LCLS1_MODE")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "MPLN:GUNB:MP01:4:LC1_MODE_RBV") {
+    field(DESC, "LCLS operation mode")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)LCLS1_MODE")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(waveform, "MPLN:GUNB:MP01:4:APP_TYPE") {
+    field(DESC,    "Application type")
+    field(PINI,    "NO")
+    field(SCAN,    "I/O Intr")
+    field(DTYP,    "asynOctetRead")
+    field(NELM,    "40")
+    field(FTVL,    "CHAR")
+    field(INP,     "@asyn($(PORT,undefined),2)APP_TYPE")
+}
+
+record(longin, "BPMS:GUNB:314:X_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRNUM_0")
+}
+record(longin, "BPMS:GUNB:314:X_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRCNT_0")
+}
+record(longin, "BPMS:GUNB:314:X_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_BYTEMAP_0")
+}
+record(bo, "BPMS:GUNB:314:X_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:314:X_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:X_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_ALTEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:X_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_LCLS1EN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:X_T0_LC1_L") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_000")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_LC1_L_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_000")
+}
+
+record(ao, "BPMS:GUNB:314:X_T0_LC1_H") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_000")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_LC1_H_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_000")
+}
+
+record(bo, "BPMS:GUNB:314:X_T0_LC1_L_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:X_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:X_T0_LC1_H_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:X_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:X_T0_IDL_L") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_010")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_IDL_L_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_010")
+}
+
+record(ao, "BPMS:GUNB:314:X_T0_IDL_H") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_010")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_IDL_H_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_010")
+}
+
+record(bo, "BPMS:GUNB:314:X_T0_IDL_L_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:X_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:X_T0_IDL_H_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:X_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:314:X_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:314:X_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_SCALE_0")
+}
+
+record(ai,      "BPMS:GUNB:314:X_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_SCALE_0")
+}
+record(ao, "BPMS:GUNB:314:X_T0_L") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_020")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_L_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_020")
+}
+
+record(ao, "BPMS:GUNB:314:X_T0_H") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_020")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_H_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_020")
+}
+
+record(bo, "BPMS:GUNB:314:X_T0_L_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:X_T0_L_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:X_T0_H_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:X_T0_H_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:X_T0_ALT_L") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_030")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_ALT_L_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_030")
+}
+
+record(ao, "BPMS:GUNB:314:X_T0_ALT_H") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_030")
+}
+
+record(ai,  "BPMS:GUNB:314:X_T0_ALT_H_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_030")
+}
+
+record(bo, "BPMS:GUNB:314:X_T0_ALT_L_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:X_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:X_T0_ALT_H_EN") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:X_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM1B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(longin, "BPMS:GUNB:314:Y_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRNUM_1")
+}
+record(longin, "BPMS:GUNB:314:Y_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRCNT_1")
+}
+record(longin, "BPMS:GUNB:314:Y_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_BYTEMAP_1")
+}
+record(bo, "BPMS:GUNB:314:Y_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:314:Y_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:Y_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_ALTEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:Y_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_LCLS1EN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:Y_T0_LC1_L") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_100")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_LC1_L_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_100")
+}
+
+record(ao, "BPMS:GUNB:314:Y_T0_LC1_H") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_100")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_LC1_H_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_100")
+}
+
+record(bo, "BPMS:GUNB:314:Y_T0_LC1_L_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_100")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:Y_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_100")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:Y_T0_LC1_H_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_100")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:Y_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_100")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:Y_T0_IDL_L") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_110")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_IDL_L_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_110")
+}
+
+record(ao, "BPMS:GUNB:314:Y_T0_IDL_H") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_110")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_IDL_H_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_110")
+}
+
+record(bo, "BPMS:GUNB:314:Y_T0_IDL_L_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_110")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:Y_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_110")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:Y_T0_IDL_H_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_110")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:Y_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_110")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:314:Y_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:314:Y_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_SCALE_1")
+}
+
+record(ai,      "BPMS:GUNB:314:Y_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_SCALE_1")
+}
+record(ao, "BPMS:GUNB:314:Y_T0_L") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_120")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_L_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_120")
+}
+
+record(ao, "BPMS:GUNB:314:Y_T0_H") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_120")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_H_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_120")
+}
+
+record(bo, "BPMS:GUNB:314:Y_T0_L_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_120")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:Y_T0_L_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_120")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:Y_T0_H_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_120")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:Y_T0_H_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_120")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:Y_T0_ALT_L") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_130")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_ALT_L_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_130")
+}
+
+record(ao, "BPMS:GUNB:314:Y_T0_ALT_H") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_130")
+}
+
+record(ai,  "BPMS:GUNB:314:Y_T0_ALT_H_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_130")
+}
+
+record(bo, "BPMS:GUNB:314:Y_T0_ALT_L_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_130")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:Y_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_130")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:Y_T0_ALT_H_EN") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_130")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:Y_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM1B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_130")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(longin, "BPMS:GUNB:314:TMIT_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRNUM_2")
+}
+record(longin, "BPMS:GUNB:314:TMIT_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRCNT_2")
+}
+record(longin, "BPMS:GUNB:314:TMIT_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_BYTEMAP_2")
+}
+record(bo, "BPMS:GUNB:314:TMIT_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:314:TMIT_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_IDLEEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:TMIT_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_ALTEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:314:TMIT_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_LCLS1EN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:TMIT_T0_LC1_L") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_200")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_LC1_L_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_200")
+}
+
+record(ao, "BPMS:GUNB:314:TMIT_T0_LC1_H") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_200")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_LC1_H_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_200")
+}
+
+record(bo, "BPMS:GUNB:314:TMIT_T0_LC1_L_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_200")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:TMIT_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_200")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:TMIT_T0_LC1_H_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_200")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:TMIT_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_200")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:TMIT_T0_IDL_L") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_210")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_IDL_L_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_210")
+}
+
+record(ao, "BPMS:GUNB:314:TMIT_T0_IDL_H") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_210")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_IDL_H_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_210")
+}
+
+record(bo, "BPMS:GUNB:314:TMIT_T0_IDL_L_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_210")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:TMIT_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_210")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:TMIT_T0_IDL_H_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_210")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:TMIT_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_210")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:314:TMIT_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "Nel/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:314:TMIT_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_SCALE_2")
+}
+
+record(ai,      "BPMS:GUNB:314:TMIT_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "Nel/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_SCALE_2")
+}
+record(ao, "BPMS:GUNB:314:TMIT_T0_L") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_220")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_L_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_220")
+}
+
+record(ao, "BPMS:GUNB:314:TMIT_T0_H") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_220")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_H_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_220")
+}
+
+record(bo, "BPMS:GUNB:314:TMIT_T0_L_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_220")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:TMIT_T0_L_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_220")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:TMIT_T0_H_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_220")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:TMIT_T0_H_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_220")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:314:TMIT_T0_ALT_L") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMIN_230")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_ALT_L_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMIN_230")
+}
+
+record(ao, "BPMS:GUNB:314:TMIT_T0_ALT_H") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BPM_THRMAX_230")
+}
+
+record(ai,  "BPMS:GUNB:314:TMIT_T0_ALT_H_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BPM_THRMAX_230")
+}
+
+record(bo, "BPMS:GUNB:314:TMIT_T0_ALT_L_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_230")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:314:TMIT_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMINEN_230")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:314:TMIT_T0_ALT_H_EN") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_230")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:314:TMIT_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM1B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BPM_THRMAXEN_230")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(longin, "BPMS:GUNB:925:Y_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRNUM_1")
+}
+record(longin, "BPMS:GUNB:925:Y_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRCNT_1")
+}
+record(longin, "BPMS:GUNB:925:Y_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_BYTEMAP_1")
+}
+record(bo, "BPMS:GUNB:925:Y_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:925:Y_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:Y_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_ALTEN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:Y_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_LCLS1EN_1")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:Y_T0_LC1_L") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_100")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_LC1_L_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_100")
+}
+
+record(ao, "BPMS:GUNB:925:Y_T0_LC1_H") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_100")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_LC1_H_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_100")
+}
+
+record(bo, "BPMS:GUNB:925:Y_T0_LC1_L_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_100")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:Y_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_100")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:Y_T0_LC1_H_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_100")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:Y_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_100")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:Y_T0_IDL_L") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_110")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_IDL_L_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_110")
+}
+
+record(ao, "BPMS:GUNB:925:Y_T0_IDL_H") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_110")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_IDL_H_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_110")
+}
+
+record(bo, "BPMS:GUNB:925:Y_T0_IDL_L_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_110")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:Y_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_110")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:Y_T0_IDL_H_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_110")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:Y_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_110")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:925:Y_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:925:Y_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_SCALE_1")
+}
+
+record(ai,      "BPMS:GUNB:925:Y_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_SCALE_1")
+}
+record(ao, "BPMS:GUNB:925:Y_T0_L") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_120")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_L_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_120")
+}
+
+record(ao, "BPMS:GUNB:925:Y_T0_H") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_120")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_H_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_120")
+}
+
+record(bo, "BPMS:GUNB:925:Y_T0_L_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_120")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:Y_T0_L_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_120")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:Y_T0_H_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_120")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:Y_T0_H_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_120")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:Y_T0_ALT_L") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_130")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_ALT_L_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_130")
+}
+
+record(ao, "BPMS:GUNB:925:Y_T0_ALT_H") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_130")
+}
+
+record(ai,  "BPMS:GUNB:925:Y_T0_ALT_H_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_130")
+}
+
+record(bo, "BPMS:GUNB:925:Y_T0_ALT_L_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_130")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:Y_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_130")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:Y_T0_ALT_H_EN") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_130")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:Y_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM2B Y Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_130")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(longin, "BPMS:GUNB:925:TMIT_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRNUM_2")
+}
+record(longin, "BPMS:GUNB:925:TMIT_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRCNT_2")
+}
+record(longin, "BPMS:GUNB:925:TMIT_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_BYTEMAP_2")
+}
+record(bo, "BPMS:GUNB:925:TMIT_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:925:TMIT_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:TMIT_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_ALTEN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:TMIT_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_LCLS1EN_2")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:TMIT_T0_LC1_L") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_200")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_LC1_L_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_200")
+}
+
+record(ao, "BPMS:GUNB:925:TMIT_T0_LC1_H") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_200")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_LC1_H_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_200")
+}
+
+record(bo, "BPMS:GUNB:925:TMIT_T0_LC1_L_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_200")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:TMIT_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_200")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:TMIT_T0_LC1_H_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_200")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:TMIT_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_200")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:TMIT_T0_IDL_L") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_210")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_IDL_L_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_210")
+}
+
+record(ao, "BPMS:GUNB:925:TMIT_T0_IDL_H") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_210")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_IDL_H_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_210")
+}
+
+record(bo, "BPMS:GUNB:925:TMIT_T0_IDL_L_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_210")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:TMIT_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_210")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:TMIT_T0_IDL_H_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_210")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:TMIT_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_210")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:925:TMIT_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "Nel/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:925:TMIT_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_SCALE_2")
+}
+
+record(ai,      "BPMS:GUNB:925:TMIT_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "Nel/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_SCALE_2")
+}
+record(ao, "BPMS:GUNB:925:TMIT_T0_L") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_220")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_L_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_220")
+}
+
+record(ao, "BPMS:GUNB:925:TMIT_T0_H") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_220")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_H_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_220")
+}
+
+record(bo, "BPMS:GUNB:925:TMIT_T0_L_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_220")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:TMIT_T0_L_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_220")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:TMIT_T0_H_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_220")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:TMIT_T0_H_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_220")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:TMIT_T0_ALT_L") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_230")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_ALT_L_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_230")
+}
+
+record(ao, "BPMS:GUNB:925:TMIT_T0_ALT_H") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_230")
+}
+
+record(ai,  "BPMS:GUNB:925:TMIT_T0_ALT_H_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "Nel")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_230")
+}
+
+record(bo, "BPMS:GUNB:925:TMIT_T0_ALT_L_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_230")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:TMIT_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_230")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:TMIT_T0_ALT_H_EN") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_230")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:TMIT_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM2B TMIT Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_230")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(longin, "BPMS:GUNB:925:X_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRNUM_0")
+}
+record(longin, "BPMS:GUNB:925:X_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRCNT_0")
+}
+record(longin, "BPMS:GUNB:925:X_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_BYTEMAP_0")
+}
+record(bo, "BPMS:GUNB:925:X_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "BPMS:GUNB:925:X_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_IDLEEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:X_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_ALTEN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "BPMS:GUNB:925:X_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_LCLS1EN_0")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:X_T0_LC1_L") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_000")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_LC1_L_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_000")
+}
+
+record(ao, "BPMS:GUNB:925:X_T0_LC1_H") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_000")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_LC1_H_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_000")
+}
+
+record(bo, "BPMS:GUNB:925:X_T0_LC1_L_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:X_T0_LC1_L_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:X_T0_LC1_H_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:X_T0_LC1_H_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:X_T0_IDL_L") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_010")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_IDL_L_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_010")
+}
+
+record(ao, "BPMS:GUNB:925:X_T0_IDL_H") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_010")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_IDL_H_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_010")
+}
+
+record(bo, "BPMS:GUNB:925:X_T0_IDL_L_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:X_T0_IDL_L_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:X_T0_IDL_H_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:X_T0_IDL_H_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao,      "BPMS:GUNB:925:X_SF") {
+    field(DESC, "Scale factor")
+    field(SCAN, "1 second")
+    field(PINI, "YES")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "BPMS:GUNB:925:X_FWSCL")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_SCALE_0")
+}
+
+record(ai,      "BPMS:GUNB:925:X_SF_RBV") {
+    field(DESC, "Scale factor")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "mm/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_SCALE_0")
+}
+record(ao, "BPMS:GUNB:925:X_T0_L") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_020")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_L_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_020")
+}
+
+record(ao, "BPMS:GUNB:925:X_T0_H") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_020")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_H_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_020")
+}
+
+record(bo, "BPMS:GUNB:925:X_T0_L_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:X_T0_L_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:X_T0_H_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:X_T0_H_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "BPMS:GUNB:925:X_T0_ALT_L") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMIN_030")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_ALT_L_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMIN_030")
+}
+
+record(ao, "BPMS:GUNB:925:X_T0_ALT_H") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),1)BPM_THRMAX_030")
+}
+
+record(ai,  "BPMS:GUNB:925:X_T0_ALT_H_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "mm")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),1)BPM_THRMAX_030")
+}
+
+record(bo, "BPMS:GUNB:925:X_T0_ALT_L_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "BPMS:GUNB:925:X_T0_ALT_L_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMINEN_030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "BPMS:GUNB:925:X_T0_ALT_H_EN") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "BPMS:GUNB:925:X_T0_ALT_H_EN_RBV") {
+    field(DESC, "BPM2B X Threshold Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),1,0x01)BPM_THRMAXEN_030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
