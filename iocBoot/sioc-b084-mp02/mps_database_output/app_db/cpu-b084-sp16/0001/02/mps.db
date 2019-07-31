@@ -835,7 +835,7 @@ record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00)")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
 record(ao,      "SOLN:GUNB:212:I0_SO") {
     field(DESC, "Scale offset factor")
