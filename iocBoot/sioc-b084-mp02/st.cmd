@@ -57,8 +57,10 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
-# *****************************************
-# **** Driver setup for L2MPSASYNConfig ****
+## LCLS-II MPS
+# L2MPSASYNConfig(
+#    Port Name)            # the name given to this port driver
+L2MPSASYNConfig("${L2MPSASYN_PORT}")
 
 ## Set the MpsManager hostname and port number
 # L2MPSASYNSetManagerHost(
@@ -68,19 +70,14 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-dev3", 0)
 
-## Configure asyn port driver
-# L2MPSASYNConfig(
-#    Port Name                  # the name given to this port driver
-L2MPSASYNConfig("${L2MPSASYN_PORT}")
-
-## Configure asyn port driver
+## YCPSWAsyn module
 # YCPSWASYNConfig(
 #    Port Name,                 # the name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
 #    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
-#    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
-YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
+#    Load dictionary)           # Dictionary file path with registers to load. An empty string will disable this function
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}")
 
 # ==========================================
 # Load application specific configurations

@@ -9,11 +9,6 @@
 #            ENVIRONMENT VARIABLES
 # ===========================================
 
-# Location
-epicsEnvSet("LOCATION", "GUNB")
-epicsEnvSet("LOCATION_INDEX", "01")
-epicsEnvSet("CARD_INDEX", "1")
-
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
@@ -33,22 +28,9 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
-# PV nama prefix, for the MPS application
-epicsEnvSet("PREFIX_MPS_BASE","MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}")
-
-# PV nama prefix, for the application on Bay 0
-epicsEnvSet("PREFIX_MPS_BAY0","MPLN:GUNB:BAY0")
-
-# PV nama prefix, for the application on Bay 1
-epicsEnvSet("PREFIX_MPS_BAY1","MPLN:GUNB:BAY1")
-
-# Application ID
-epicsEnvSet("MPS_APP_ID", "0x01")
-
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Luciano Piccoli")
-epicsEnvSet("IOC_NAME","SIOC:${LOCATION}:MP${LOCATION_INDEX}")
 
 # ======================================
 # Start from TOP
@@ -72,8 +54,10 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
-# *****************************************
-# **** Driver setup for L2MPSASYNConfig ****
+## LCLS-II MPS
+# L2MPSASYNConfig(
+#    Port Name)            # the name given to this port driver
+L2MPSASYNConfig("${L2MPSASYN_PORT}")
 
 ## Set the MpsManager hostname and port number
 # L2MPSASYNSetManagerHost(
@@ -83,32 +67,21 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # In PROD, use the default hostname and por number.
 #L2MPSASYNSetManagerHost("", 0)
 
-## Configure asyn port driver
-# L2MPSASYNConfig(
-#    Port Name,                 # the name given to this port driver
-#    App ID,                    # Application ID
-#    Record name Prefix,        # Record name prefix
-#    AppType bay0,              # Bay 0 Application type (BPM, BLEN)
-#    AppType bay1,              # Bay 1 Application type (BPM, BLEN)
-#    MPS Root Path              # OPTIONAL: Root path to the MPS register area
-L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
-
-## Configure asyn port driver
+## YCPSWAsyn module
 # YCPSWASYNConfig(
 #    Port Name,                 # the name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
 #    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
-#    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
-YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
+#    Load dictionary)           # Dictionary file path with registers to load. An empty string will disable this function
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}")
 
 # ==========================================
 # Load application specific configurations
 # ==========================================
 # Load the defautl configuration
-cpswLoadConfigFile("iocBoot/${IOC}/configs/defaults.yaml", "mmio")
-# Set the digital application ID
-cpswLoadConfigFile("iocBoot/${IOC}/configs/digAppId.yaml", "mmio")
+cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+
 # ==========================================
 
 # ===========================================
@@ -121,18 +94,10 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 #               DB LOADING
 # ===========================================
 # Link Node database
-dbLoadRecords("db/mpsLN.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
-
-# BLM channels (IOC-spedific), and it scale factor PV
-dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:212, BAY=0, INP=0, PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:823, BAY=0, INP=1, PORT=${L2MPSASYN_PORT}")
-# Scale factor comes from all the analog and digital chain from the DCCT to the ADC: ( 1/1500 * 50 * 0.7 * 32768/0.425 )^-1.
-# and the scale offset comes from the ADC word format being in 16-bit binary offset.
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
-dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
+dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # Save/load configuration database
-dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
@@ -147,7 +112,7 @@ dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${PREFIX_MPS_BASE}:")
+dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -171,7 +136,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
+save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 
 ## Restore datasets
 set_pass0_restoreFile("info_positions.sav")
