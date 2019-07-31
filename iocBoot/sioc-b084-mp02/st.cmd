@@ -13,14 +13,14 @@
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 
-# Firmware project name
-epicsEnvSet("FW_PROJ_NAME", "AmcCarrierMpsAnalogLinkNode_project.yaml")
+# Location to download the YAML file from the FPGA
+epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
 # YAML file
-epicsEnvSet("YAML","firmware/${FW_PROJ_NAME}/000TopLevel.yaml")
+epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
 
 # Defaults Yaml file
-epicsEnvSet("DEFAULTS_FILE", "firmware/${FW_PROJ_NAME}/config/defaults.yaml")
+epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 
 # YCPSWASYN Dictionary file
 epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
@@ -51,11 +51,23 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 #              DRIVER SETUP
 # ===========================================
 
+## yamlDownloader
+DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
+
+## Set the MpsManager hostname and port number
+# L2MPSASYNSetManagerHost(
+#    MpsManagerHostName,   # Server hostname
+#    MpsManagerPortNumber) # Server port number
+#
+# In DEV, the MpsManager runs in lcls-dev3, default port number.
+L2MPSASYNSetManagerHost("lcls-dev3", 0)
+
 ## Configure asyn port driver
 # L2MPSASYNConfig(
 #    Port Name                  # the name given to this port driver
@@ -75,6 +87,7 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 # ==========================================
 # Load the defautl configuration
 cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+
 # ==========================================
 
 # ===========================================
@@ -132,7 +145,10 @@ save_restoreSet_UseStatusPVs(1)
 save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 
 ## Restore datasets
-set_pass1_restoreFile("defaults.sav")
+set_pass0_restoreFile("info_positions.sav")
+set_pass0_restoreFile("info_settings.sav")
+set_pass1_restoreFile("info_settings.sav")
+set_pass1_restoreFile("manual_settings.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -147,8 +163,26 @@ set_pass1_restoreFile("defaults.sav")
 # ===========================================
 iocInit()
 
+# ===========================================
+#           AUTOSAVE TASKS
+# ===========================================
+
+# Wait before building autosave files
+epicsThreadSleep(1)
+
+# Generate the autosave PV list
+# Note we need change directory to
+# where we are saving the restore
+# request file, and then we go back
+# ${TOP}.
+cd ${IOC_DATA}/${IOC}/autosave-req
+makeAutosaveFiles()
+cd ${TOP}
+
 # Start the save_restore task
 # save changes on change, but no faster
-# than every 30 seconds.
+# than every 5 seconds.
 # Note: the last arg cannot be set to 0
-create_monitor_set("defaults.req" , 30 )
+create_monitor_set("info_positions.req", 5 )
+create_monitor_set("info_settings.req" , 5 )
+create_monitor_set("manual_settings.req" , 5 )

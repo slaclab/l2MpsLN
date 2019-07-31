@@ -500,3 +500,33 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/Pgp2bAxi[3]/TxFrameCount                   PGP_TxFrameCnt_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/Pgp2bAxi[3]/TxFrameErrorCount              PGP_TxFrameErrCnt_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/Pgp2bAxi[3]/TxLinkReady                    PGP_TxLinkReady_3
+
+# =============================
+# LCLS-I Core
+# =============================
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/TimeoutEnable                 LC1_TimeoutEnable
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/TimeoutTime                   LC1_TimeoutTime
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/TimeoutMask                   LC1_TimeoutMask
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/NodeId                        LC1_NodeId
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/TimeoutStatusMask             LC1_TimeoutStatusMask
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/lcls1MessageError             LC1_lcls1MessageError
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/lcls2MessageError             LC1_lcls2MessageError
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/IpAddr                        LC1_IpAddr
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/MacAddr                       LC1_MacAddr
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/ClearTout                     LC1_ClearTout
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[0]                 LC1_appIdRemap_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[1]                 LC1_appIdRemap_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[2]                 LC1_appIdRemap_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[3]                 LC1_appIdRemap_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[4]                 LC1_appIdRemap_4
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[5]                 LC1_appIdRemap_5
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[6]                 LC1_appIdRemap_6
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[7]                 LC1_appIdRemap_7
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[8]                 LC1_appIdRemap_8
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[9]                 LC1_appIdRemap_9
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsLcls1Core/appIdRemap[10]                LC1_appIdRemap_10
+# These register are not defined inside the MpsLcls1Code module
+# But they are used for the LCLS-I operation.
+/mmio/AppTop/AppCore/MpsLinkNodeCore/UdpBroadcastIP                             LC1_UdpBroadcastIP
+/mmio/AppTop/AppCore/MpsLinkNodeCore/UdpDhcpIP                                  LC1_UdpDhcpIP
+/mmio/AppTop/AppCore/MpsLinkNodeCore/UdplocalMac                                LC1_UdplocalMac
