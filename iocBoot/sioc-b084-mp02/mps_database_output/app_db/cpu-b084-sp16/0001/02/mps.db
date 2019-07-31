@@ -836,6 +836,14 @@ record(ai,  "SOLN:GUNB:212:I0_T0_L_RBV") {
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0020")
 }
 
+record(longin, "SOLN:GUNB:212:I0_T0_L_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMINR_0020")
+}
+
 record(ao, "SOLN:GUNB:212:I0_T0_H") {
     field(DESC, "SOL1B Integrator #0 Fault")
     field(SCAN, "Passive")
@@ -854,6 +862,14 @@ record(ai,  "SOLN:GUNB:212:I0_T0_H_RBV") {
     field(EGU,  "uA")
     field(PREC, "2")
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0020")
+}
+
+record(longin, "SOLN:GUNB:212:I0_T0_H_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAXR_0020")
 }
 
 record(bo, "SOLN:GUNB:212:I0_T0_L_EN") {
