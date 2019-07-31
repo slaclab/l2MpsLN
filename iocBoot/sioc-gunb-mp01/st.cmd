@@ -54,6 +54,13 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
+## Set MPS Configuration location
+# setMpsConfigurationPath(
+#   Path)                   # Path to the MPS configuraton TOP directory
+#
+# In PROD, We use the default location
+#setMpsConfigurationPath("")
+
 ## LCLS-II MPS
 # L2MPSASYNConfig(
 #    Port Name)            # the name given to this port driver

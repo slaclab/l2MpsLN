@@ -28,9 +28,6 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
-# MPS Configuration location
-epicsEnvSet("MPS_CONFIGURATION_TOP", "iocBoot/${IOC}/mps_database_output")
-
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Luciano Piccoli")
@@ -56,6 +53,13 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
+
+## Set MPS Configuration location
+# setMpsConfigurationPath(
+#   Path)                   # Path to the MPS configuraton TOP directory
+#
+# In DEV, we temporary point to a local copy in this IOC application
+setMpsConfigurationPath("iocBoot/${IOC}/mps_database_output")
 
 ## LCLS-II MPS
 # L2MPSASYNConfig(
