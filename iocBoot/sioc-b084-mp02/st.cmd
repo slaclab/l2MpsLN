@@ -29,7 +29,7 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 epicsEnvSet("FPGA_IP","10.0.1.102")
 
 # MPS Configuration location
-epicsEnvSet("MPS_CONFIGURATION_TOP", "/afs/slac/g/lcls/epics/iocTop/users/jvasquez/github/mps_jesus/mps_database/results")
+epicsEnvSet("MPS_CONFIGURATION_TOP", "iocBoot/${IOC}/mps_database_output")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
