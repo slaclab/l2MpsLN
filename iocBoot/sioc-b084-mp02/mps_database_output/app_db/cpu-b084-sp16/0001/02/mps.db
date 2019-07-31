@@ -1270,27 +1270,50 @@ record(bi,      "SOLN:GUNB:823:I0_T0_IDL_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
-record(ao,      "SOLN:GUNB:823:I0_SF") {
-    field(DESC, "Scale factor")
+
+record(ao,      "SOLN:GUNB:823:I0_SS") {
+    field(DESC, "Scale slope factor")
     field(SCAN, "1 second")
+    field(PHAS, "1")
     field(PINI, "YES")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(OMSL, "closed_loop")
     field(OIF,  "Full")
-    field(DOL,  "SOLN:GUNB:823:I0_FWSCL")
+    field(DOL,  "SOLN:GUNB:823:I0_FWSLO")
     field(DTYP, "asynFloat64")
-    field(OUT,  "@asyn($(PORT,undefined),0)BLM_SCALE_10")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
-
-record(ai,      "SOLN:GUNB:823:I0_SF_RBV") {
-    field(DESC, "Scale factor")
+record(ai,      "SOLN:GUNB:823:I0_SS_RBV") {
+    field(DESC, "Scale slope factor (readback)")
     field(SCAN, "I/O Intr")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT,undefined),0)BLM_SCALE_10")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
+record(ao,      "SOLN:GUNB:823:I0_SO") {
+    field(DESC, "Scale offset factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:823:I0_FWOFF")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
+    field(DESC, "Scale offset factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+
 record(ao, "SOLN:GUNB:823:I0_T0_L") {
     field(DESC, "SOL2B Integrator #0 Fault")
     field(SCAN, "Passive")
