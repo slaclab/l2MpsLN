@@ -827,7 +827,7 @@ record(ao,      "SOLN:GUNB:212:I0_SS") {
     field(OIF,  "Full")
     field(DOL,  "SOLN:GUNB:212:I0_FWSLO")
     field(DTYP, "asynFloat64")
-    field(OUT,  "@asyn($(PORT),$(BAY))BLM_SCALESLOPE_00")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
 record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
     field(DESC, "Scale slope factor (readback)")
@@ -835,7 +835,7 @@ record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT),$(BAY))BLM_SCALESLOPE_00)")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00)")
 }
 record(ao,      "SOLN:GUNB:212:I0_SO") {
     field(DESC, "Scale offset factor")
@@ -848,7 +848,7 @@ record(ao,      "SOLN:GUNB:212:I0_SO") {
     field(OIF,  "Full")
     field(DOL,  "SOLN:GUNB:212:I0_FWOFF")
     field(DTYP, "asynFloat64")
-    field(OUT,  "@asyn($(PORT),$(BAY))BLM_SCALEOFFSET_00")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
 }
 record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
     field(DESC, "Scale offset factor (readback)")
@@ -856,7 +856,7 @@ record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
     field(EGU,  "raw")
     field(PREC, "0")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT),$(BAY))BLM_SCALEOFFSET_00")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
 }
 
 record(ao, "SOLN:GUNB:212:I0_T0_L") {
