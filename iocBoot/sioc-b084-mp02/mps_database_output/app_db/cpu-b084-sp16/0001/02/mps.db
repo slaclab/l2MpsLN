@@ -579,6 +579,26 @@ record(waveform, "MPLN:GUNB:MP01:1:APP_TYPE") {
     field(INP,     "@asyn($(PORT,undefined),2)APP_TYPE")
 }
 
+record(ao,      "SOLN:GUNB:212:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:212:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
 record(longin, "SOLN:GUNB:212:I0_THR_CH") {
     field(DESC, "Threshold channel")
     field(SCAN, "I/O Intr")
@@ -990,6 +1010,27 @@ record(bi,      "SOLN:GUNB:212:I0_T0_ALT_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
+
+record(ao,      "SOLN:GUNB:823:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:823:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
 record(longin, "SOLN:GUNB:823:I0_THR_CH") {
     field(DESC, "Threshold channel")
     field(SCAN, "I/O Intr")
