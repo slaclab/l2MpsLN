@@ -818,7 +818,7 @@ record(bi,      "SOLN:GUNB:212:I0_T0_IDL_H_EN_RBV") {
 
 record(ao,      "SOLN:GUNB:212:I0_SS") {
     field(DESC, "Scale slope factor")
-    field(SCAN, "$(SCAN)")
+    field(SCAN, "1 second")
     field(PHAS, "1")
     field(PINI, "YES")
     field(EGU,  "uA/raw")
@@ -839,7 +839,7 @@ record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
 }
 record(ao,      "SOLN:GUNB:212:I0_SO") {
     field(DESC, "Scale offset factor")
-    field(SCAN, "$(SCAN)")
+    field(SCAN, "1 second")
     field(PHAS, "1")
     field(PINI, "YES")
     field(EGU,  "raw")
