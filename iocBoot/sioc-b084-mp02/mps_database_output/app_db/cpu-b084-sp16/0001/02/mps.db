@@ -579,6 +579,26 @@ record(waveform, "MPLN:GUNB:MP01:1:APP_TYPE") {
     field(INP,     "@asyn($(PORT,undefined),2)APP_TYPE")
 }
 
+record(ao,      "SOLN:GUNB:212:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:212:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
 record(longin, "SOLN:GUNB:212:I0_THR_CH") {
     field(DESC, "Threshold channel")
     field(SCAN, "I/O Intr")
@@ -795,27 +815,50 @@ record(bi,      "SOLN:GUNB:212:I0_T0_IDL_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
-record(ao,      "SOLN:GUNB:212:I0_SF") {
-    field(DESC, "Scale factor")
+
+record(ao,      "SOLN:GUNB:212:I0_SS") {
+    field(DESC, "Scale slope factor")
     field(SCAN, "1 second")
+    field(PHAS, "1")
     field(PINI, "YES")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(OMSL, "closed_loop")
     field(OIF,  "Full")
-    field(DOL,  "SOLN:GUNB:212:I0_FWSCL")
+    field(DOL,  "SOLN:GUNB:212:I0_FWSLO")
     field(DTYP, "asynFloat64")
-    field(OUT,  "@asyn($(PORT,undefined),0)BLM_SCALE_00")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
-
-record(ai,      "SOLN:GUNB:212:I0_SF_RBV") {
-    field(DESC, "Scale factor")
+record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
+    field(DESC, "Scale slope factor (readback)")
     field(SCAN, "I/O Intr")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT,undefined),0)BLM_SCALE_00")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
 }
+record(ao,      "SOLN:GUNB:212:I0_SO") {
+    field(DESC, "Scale offset factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:212:I0_FWOFF")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
+    field(DESC, "Scale offset factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+
 record(ao, "SOLN:GUNB:212:I0_T0_L") {
     field(DESC, "SOL1B Integrator #0 Fault")
     field(SCAN, "Passive")
@@ -836,6 +879,14 @@ record(ai,  "SOLN:GUNB:212:I0_T0_L_RBV") {
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0020")
 }
 
+record(longin, "SOLN:GUNB:212:I0_T0_L_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMINR_0020")
+}
+
 record(ao, "SOLN:GUNB:212:I0_T0_H") {
     field(DESC, "SOL1B Integrator #0 Fault")
     field(SCAN, "Passive")
@@ -854,6 +905,14 @@ record(ai,  "SOLN:GUNB:212:I0_T0_H_RBV") {
     field(EGU,  "uA")
     field(PREC, "2")
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0020")
+}
+
+record(longin, "SOLN:GUNB:212:I0_T0_H_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAXR_0020")
 }
 
 record(bo, "SOLN:GUNB:212:I0_T0_L_EN") {
@@ -974,6 +1033,27 @@ record(bi,      "SOLN:GUNB:212:I0_T0_ALT_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
+
+record(ao,      "SOLN:GUNB:823:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:823:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
 record(longin, "SOLN:GUNB:823:I0_THR_CH") {
     field(DESC, "Threshold channel")
     field(SCAN, "I/O Intr")
@@ -1190,27 +1270,50 @@ record(bi,      "SOLN:GUNB:823:I0_T0_IDL_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
-record(ao,      "SOLN:GUNB:823:I0_SF") {
-    field(DESC, "Scale factor")
+
+record(ao,      "SOLN:GUNB:823:I0_SS") {
+    field(DESC, "Scale slope factor")
     field(SCAN, "1 second")
+    field(PHAS, "1")
     field(PINI, "YES")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(OMSL, "closed_loop")
     field(OIF,  "Full")
-    field(DOL,  "SOLN:GUNB:823:I0_FWSCL")
+    field(DOL,  "SOLN:GUNB:823:I0_FWSLO")
     field(DTYP, "asynFloat64")
-    field(OUT,  "@asyn($(PORT,undefined),0)BLM_SCALE_10")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_10")
 }
-
-record(ai,      "SOLN:GUNB:823:I0_SF_RBV") {
-    field(DESC, "Scale factor")
+record(ai,      "SOLN:GUNB:823:I0_SS_RBV") {
+    field(DESC, "Scale slope factor (readback)")
     field(SCAN, "I/O Intr")
     field(EGU,  "uA/raw")
     field(PREC, "4")
     field(DTYP, "asynFloat64")
-    field(INP,  "@asyn($(PORT,undefined),0)BLM_SCALE_10")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_10")
 }
+record(ao,      "SOLN:GUNB:823:I0_SO") {
+    field(DESC, "Scale offset factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:823:I0_FWOFF")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_10")
+}
+record(ai,      "SOLN:GUNB:823:I0_SO_RBV") {
+    field(DESC, "Scale offset factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_10")
+}
+
 record(ao, "SOLN:GUNB:823:I0_T0_L") {
     field(DESC, "SOL2B Integrator #0 Fault")
     field(SCAN, "Passive")
@@ -1231,6 +1334,14 @@ record(ai,  "SOLN:GUNB:823:I0_T0_L_RBV") {
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1020")
 }
 
+record(longin, "SOLN:GUNB:823:I0_T0_L_RAW") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMINR_1020")
+}
+
 record(ao, "SOLN:GUNB:823:I0_T0_H") {
     field(DESC, "SOL2B Integrator #0 Fault")
     field(SCAN, "Passive")
@@ -1249,6 +1360,14 @@ record(ai,  "SOLN:GUNB:823:I0_T0_H_RBV") {
     field(EGU,  "uA")
     field(PREC, "2")
     field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1020")
+}
+
+record(longin, "SOLN:GUNB:823:I0_T0_H_RAW") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAXR_1020")
 }
 
 record(bo, "SOLN:GUNB:823:I0_T0_L_EN") {
