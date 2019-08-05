@@ -3,6 +3,9 @@
 # Generic MPS Link Node Start Up 
 #
 
+# Loads generated mps environment variables for this SIOC
+< ${LN_CONFIG_TOP}/mps.env
+
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
@@ -22,22 +25,9 @@ epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 # FPGA IP Address
 epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 
-# PV name prefix, for the MPS application
-epicsEnvSet("PREFIX_MPS_BASE","MPLN:${IOC_AREA}:${IOC_LOCATION}:${IOC_CARD_INDEX}")
-
-# PV name prefix, for the application on Bay 0
-$(MPS_DIG_APP) epicsEnvSet("PREFIX_MPS_BAY0", "NO_APP_BAY0")
-$(MPS_ANA_APP) epicsEnvSet("PREFIX_MPS_BAY0","MPLN:${IOC_AREA}:${IOC_LOCATION}:BAY0")
-
-# PV name prefix, for the application on Bay 1
-$(MPS_DIG_APP) epicsEnvSet("PREFIX_MPS_BAY1", "NO_APP_BAY1")
-$(MPS_ANA_APP) epicsEnvSet("PREFIX_MPS_BAY1","MPLN:${IOC_AREA}:${IOC_LOCATION}:BAY1")
-
-
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Luciano Piccoli")
-epicsEnvSet("IOC_NAME","SIOC:${IOC_AREA}:${IOC_LOCATION}")
 
 # ===========================================
 # Start from TOP
@@ -61,24 +51,33 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
+## Set MPS Configuration location
+# setMpsConfigurationPath(
+#   Path)                   # Path to the MPS configuraton TOP directory
+setMpsConfigurationPath("/afs/slac/u/cd/lpiccoli/lcls2/mps_configuration/cu/link_node_db")
+L2MPSASYNSetApplicationInfo("cpu-unds-sp02", 0, 2)
+
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
 ## Configure asyn port driver
 # L2MPSASYNConfig(
-#    Port Name,                 # the name given to this port driver
-#    App ID,                    # Application ID
-#    Record name Prefix,        # Record name prefix
-#    AppType bay0,              # Bay 0 Application type (BPM, BLEN)
-#    AppType bay1,              # Bay 1 Application type (BPM, BLEN)
-#    MPS Root Path              # OPTIONAL: Root path to the MPS register area
-L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_ANA_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
+#    Port Name)                 # the name given to this port driver
+L2MPSASYNConfig("${L2MPSASYN_PORT}")
+
+## Set the MpsManager hostname and port number
+# L2MPSASYNSetManagerHost(
+#    MpsManagerHostName,   # Server hostname
+#    MpsManagerPortNumber) # Server port number
+#
+# In DEV, the MpsManager runs in lcls-dev3, default port number.
+L2MPSASYNSetManagerHost("lcls-dev3", 1975)
 
 ## Configure asyn port driverx
 # YCPSWASYNConfig(
 #    Port Name,                 # the name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
-#    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
+#    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable using maps, 2: Enabled using hash names.
 #    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
 YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 
@@ -87,9 +86,6 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 # ==========================================
 # Load the default configuration
 cpswLoadConfigFile("iocBoot/${IOC}/configs/defaults.yaml", "mmio")
-
-# Load link node specific configuration (e.g. digital app id)
-cpswLoadConfigFile("${LN_CONFIG_TOP}/config.yaml", "mmio")
 
 # ==========================================
 
@@ -102,15 +98,20 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               DB LOADING
 # ===========================================
-# Link Node database
-dbLoadRecords("${LN_CONFIG_TOP}/mps.db", "YCPSWASYN_PORT=${YCPSWASYN_PORT}, L2MPSASYN_PORT=${L2MPSASYN_PORT}")
+# Link Node database (from l2MpsLN)
+# Records that read/write FW data registers
+# defined in l2MpsLN/firmware/mpsLN.dict file)
+dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+
+# Load l2MpsAsyn records
+dbLoadRecords("db/mps.db", "P=${L2MPS_PREFIX}, PORT=${L2MPSASYN_PORT}")
 
 # Link Node specific databases for analog channels and scale factors
 < ${LN_CONFIG_TOP}/mps_analog_channels.cmd
 < ${LN_CONFIG_TOP}/mps_scale_factor.cmd
 
 # Save/load configuration database
-#dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
@@ -125,7 +126,7 @@ dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${PREFIX_MPS_BASE}:")
+dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -149,7 +150,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${PREFIX_MPS_BASE}:")
+save_restoreSet_status_prefix("${L2MPS_BASE}:")
 
 ## Restore datasets
 set_pass0_restoreFile("info_settings.sav")
@@ -168,8 +169,22 @@ set_pass1_restoreFile("info_settings.sav")
 # ===========================================
 iocInit()
 
-# Start the save_restore task
-# save changes on change, but no faster
+# ===========================================
+#           AUTOSAVE TASKS
+# ===========================================
+
+# Wait before building autosave files
+epicsThreadSleep(1)
+
+# Generate the autosave PV list. Note we need change directory to
+# where we are saving the restore request file, and then we go back ${TOP}.
+cd ${IOC_DATA}/${IOC}/autosave-req
+makeAutosaveFiles()
+cd ${TOP}
+
+# Start the save_restore task save changes on change, but no faster
 # than every 30 seconds.
 # Note: the last arg cannot be set to 0
 create_monitor_set("info_settings.req" , 30 )
+create_monitor_set("info_positions.req", 30 )
+create_monitor_set("manual_settings.req" , 30 )

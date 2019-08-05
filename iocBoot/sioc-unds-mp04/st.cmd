@@ -1,4 +1,4 @@
-#!../../bin/linuxRT-x86_64/l2MpsLN
+#!iocSpecificRelease/bin/linuxRT-x86_64/l2MpsLN
 #
 # SIOC:UNDS:MP04
 #
@@ -21,11 +21,7 @@ epicsEnvSet("CPU_NAME", "cpu-unds-sp02")
 epicsEnvSet("CRATE_ID", "0000")
 epicsEnvSet("SLOT_ID", "7")
 epicsEnvSet("LN_CONFIG_TOP", "${CONFIG_TOP}/${CPU_NAME}/${CRATE_ID}/0${SLOT_ID}")
-
-#
-# Loads generated mps environment variables for this SIOC, variables:
-#
-< ${LN_CONFIG_TOP}/mps.env
+epicsEnvSet("SLOT_ID", "6") # This is later used to set the LN card IP address (testing it in slot 6)
 
 #
 # Loads common Link Node startup
