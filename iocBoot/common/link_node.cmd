@@ -3,9 +3,6 @@
 # Generic MPS Link Node Start Up 
 #
 
-# Loads generated mps environment variables for this SIOC
-< ${LN_CONFIG_TOP}/mps.env
-
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
@@ -21,9 +18,6 @@ epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 
 # YCPSWASYN Dictionary file
 epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
-
-# FPGA IP Address
-epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
@@ -55,7 +49,6 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
 setMpsConfigurationPath("/afs/slac/u/cd/lpiccoli/lcls2/mps_configuration/cu/link_node_db")
-L2MPSASYNSetApplicationInfo("cpu-unds-sp02", 0, 2)
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
@@ -106,10 +99,6 @@ dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 # Load l2MpsAsyn records
 dbLoadRecords("db/mps.db", "P=${L2MPS_PREFIX}, PORT=${L2MPSASYN_PORT}")
 
-# Link Node specific databases for analog channels and scale factors
-< ${LN_CONFIG_TOP}/mps_analog_channels.cmd
-< ${LN_CONFIG_TOP}/mps_scale_factor.cmd
-
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
@@ -150,7 +139,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${L2MPS_BASE}:")
+save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 
 ## Restore datasets
 set_pass0_restoreFile("info_settings.sav")
