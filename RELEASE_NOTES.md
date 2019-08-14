@@ -4,6 +4,25 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* __l2MpsLN-R2-3-1__: 2019-08-13 J. Vasquez
+  * Update l2Mps top version R2.1.2 and l2MpsAsyn
+    to version R2.3.1. Those versions includes a
+    bug fix where an argument name was shadowing
+    the protected member name. This was causing
+    the polling thread to consume a lot of CPU.
+
+* __l2MpsLN-R2-3-0__: 2019-07-18 J. Vasquez
+  * Update the folllwing packages:
+    * cpsw/framework -> R4.1.2
+    * l2Mps -> R2.1.1
+    * yamlReader -> R1.1.0
+    * deviceLibrary -> R1.1.0
+  * Update the following EPICS modules:
+    * yamlLoader -> R1.1.3
+    * yamlDownloader -> R1.1.0
+    * YCpswAsyn -> R3.1.1
+    * l2MpsAsyn -> R2.3.0
+
 * __l2MpsLN-R2-2-0__: 2019-06-13 J. Vasquez
   * Add support for the LCLS-I operation related registers.
 
