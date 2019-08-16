@@ -3,6 +3,8 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R2-3-2__: 2019-08-16 J. Vasquez
+  * Update l2MpsAsyn top version R2.3.2.
 
 * __l2MpsLN-R2-3-1__: 2019-08-13 J. Vasquez
   * Update l2Mps top version R2.1.2 and l2MpsAsyn
