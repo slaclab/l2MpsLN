@@ -78,7 +78,6 @@ BOOST_INCLUDE      = $(BOOST_TOP)/$(PKG_ARCH)/include
 L2MPS_PACKAGE_NAME = l2Mps
 L2MPS_VERSION      = R3.0.0
 L2MPS_TOP          = $(PACKAGE_SITE_TOP)/$(L2MPS_PACKAGE_NAME)/$(L2MPS_VERSION)
-#L2MPS_TOP          = /u/cd/lpiccoli/lcls2/l2Mps
 L2MPS_LIB          = $(L2MPS_TOP)/$(PKG_ARCH)/lib
 L2MPS_INCLUDE      = $(L2MPS_TOP)/$(PKG_ARCH)/include
 
