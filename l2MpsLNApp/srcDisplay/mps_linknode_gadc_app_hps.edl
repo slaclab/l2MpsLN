@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 843
-y 185
+x 846
+y 214
 w 624
 h 506
 font "helvetica-medium-r-12.0"
@@ -155,7 +155,7 @@ fgColor index 14
 bgColor index 75
 useDisplayBg
 value {
-  "LCLS-II MPS Link Node"
+  "ATCA MPS Link Node"
 }
 endObjectProperties
 
@@ -563,14 +563,14 @@ minor 1
 release 1
 x 312
 y 189
-w 75
+w 54
 h 14
 font "helvetica-medium-r-12.0"
 fgColor index 14
 bgColor index 0
 useDisplayBg
 value {
-  "LCLS-I Mode"
+  "NC Mode"
 }
 autoSize
 endObjectProperties
@@ -818,47 +818,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 162
+x 164
 y 388
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH1),CH=I2,CH_NAME=$(B0_CH1_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 90
-y 388
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -896,7 +858,7 @@ minor 4
 release 0
 x 18
 y 388
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -914,44 +876,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B0_CH1),CH=I0,CH_NAME=$(B0_CH1_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 234
-y 388
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH1),CH=I3,CH_NAME=$(B0_CH1_NAME)"
 }
 replaceSymbols {
   0 1
@@ -1004,47 +928,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 162
+x 164
 y 330
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH0),CH=I2,CH_NAME=$(B0_CH0_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 90
-y 330
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1082,7 +968,7 @@ minor 4
 release 0
 x 18
 y 330
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1103,44 +989,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B0_CH0),CH=I0,CH_NAME=$(B0_CH0_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 234
-y 330
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH0),CH=I3,CH_NAME=$(B0_CH0_NAME)"
 }
 replaceSymbols {
   0 1
@@ -1193,47 +1041,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 162
+x 164
 y 452
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH2),CH=I2,CH_NAME=$(B0_CH2_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 90
-y 452
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1271,7 +1081,7 @@ minor 4
 release 0
 x 18
 y 452
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1292,44 +1102,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B0_CH2),CH=I0,CH_NAME=$(B0_CH2_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 234
-y 452
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B0_CH2),CH=I3,CH_NAME=$(B0_CH2_NAME)"
 }
 replaceSymbols {
   0 1
@@ -1484,47 +1256,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 462
+x 464
 y 388
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH1),CH=I2,CH_NAME=$(B1_CH1_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 390
-y 388
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1562,7 +1296,7 @@ minor 4
 release 0
 x 318
 y 388
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1580,44 +1314,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B1_CH1),CH=I0,CH_NAME=$(B1_CH1_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 534
-y 388
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH1),CH=I3,CH_NAME=$(B1_CH1_NAME)"
 }
 replaceSymbols {
   0 1
@@ -1670,47 +1366,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 462
+x 464
 y 330
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH0),CH=I2,CH_NAME=$(B1_CH0_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 390
-y 330
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1748,7 +1406,7 @@ minor 4
 release 0
 x 318
 y 330
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1769,44 +1427,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B1_CH0),CH=I0,CH_NAME=$(B1_CH0_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 534
-y 330
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH0),CH=I3,CH_NAME=$(B1_CH0_NAME)"
 }
 replaceSymbols {
   0 1
@@ -1859,47 +1479,9 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 462
+x 464
 y 452
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 2..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH2),CH=I2,CH_NAME=$(B1_CH2_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 390
-y 452
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1937,7 +1519,7 @@ minor 4
 release 0
 x 318
 y 452
-w 72
+w 140
 h 24
 fgColor index 14
 bgColor index 4
@@ -1958,44 +1540,6 @@ setPosition {
 }
 symbols {
   0 "P=$(P_B1_CH2),CH=I0,CH_NAME=$(B1_CH2_NAME)"
-}
-replaceSymbols {
-  0 1
-}
-propagateMacros {
-  0 0
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 534
-y 452
-w 72
-h 24
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-10.0"
-buttonLabel "Integrator 3..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_linknode_analog_thresholds_hps"
-}
-menuLabel {
-  0 "Integration 0"
-}
-setPosition {
-  0 "button"
-}
-symbols {
-  0 "P=$(P_B1_CH2),CH=I3,CH_NAME=$(B1_CH2_NAME)"
 }
 replaceSymbols {
   0 1

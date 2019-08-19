@@ -97,7 +97,7 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # Load l2MpsAsyn records
-dbLoadRecords("db/mps.db", "P=${L2MPS_PREFIX}, PORT=${L2MPSASYN_PORT}")
+#dbLoadRecords("db/mps.db", "P=${L2MPS_PREFIX}, PORT=${L2MPSASYN_PORT}")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
