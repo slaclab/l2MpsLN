@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 281
-y 586
+x 767
+y 176
 w 624
 h 390
 font "helvetica-medium-r-12.0"
@@ -234,58 +234,6 @@ fgColor index 14
 bgColor index 3
 value {
   "MPS application information"
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 168
-y 176
-w 120
-h 30
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "Tx message info..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_debug_hps"
-}
-setPosition {
-  0 "button"
-}
-endObjectProperties
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 16
-y 176
-w 120
-h 30
-fgColor index 14
-bgColor index 4
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-buttonLabel "SALT Registers..."
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "mps_salt_hps"
-}
-setPosition {
-  0 "button"
 }
 endObjectProperties
 
@@ -1025,5 +973,31 @@ useAlarmBorder
 newPos
 objType "monitors"
 id "FpgaVersion"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 20
+y 218
+w 140
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Expert..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_app_expert_hps"
+}
+setPosition {
+  0 "button"
+}
 endObjectProperties
 

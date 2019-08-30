@@ -340,7 +340,7 @@ x 180
 y 73
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_0_0_RBV"
+controlPv "$(P):ANA_INTCNT_0_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -363,7 +363,7 @@ x 100
 y 70
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_0_0"
+controlPv "$(P):ANA_INTCNT_0"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -401,7 +401,7 @@ x 180
 y 103
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_0_1_RBV"
+controlPv "$(P):ANA_INTCNT_1_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -424,7 +424,7 @@ x 100
 y 100
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_0_1"
+controlPv "$(P):ANA_INTCNT_1"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -442,7 +442,7 @@ x 180
 y 133
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_0_2_RBV"
+controlPv "$(P):ANA_INTCNT_2_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -465,7 +465,7 @@ x 100
 y 130
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_0_2"
+controlPv "$(P):ANA_INTCNT_2"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -483,7 +483,7 @@ x 180
 y 163
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_0_3_RBV"
+controlPv "$(P):ANA_INTCNT_3_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -506,7 +506,7 @@ x 100
 y 160
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_0_3"
+controlPv "$(P):ANA_INTCNT_3"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -524,7 +524,7 @@ x 380
 y 73
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_1_0_RBV"
+controlPv "$(P):ANA_INTCNT_4_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -547,7 +547,7 @@ x 300
 y 70
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_1_0"
+controlPv "$(P):ANA_INTCNT_4"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -565,7 +565,7 @@ x 380
 y 103
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_1_1_RBV"
+controlPv "$(P):ANA_INTCNT_5_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -588,7 +588,7 @@ x 300
 y 100
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_1_1"
+controlPv "$(P):ANA_INTCNT_5"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -606,7 +606,7 @@ x 380
 y 133
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_1_2_RBV"
+controlPv "$(P):ANA_INTCNT_6_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -629,7 +629,7 @@ x 300
 y 130
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_1_2"
+controlPv "$(P):ANA_INTCNT_6"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -647,7 +647,7 @@ x 380
 y 163
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_1_3_RBV"
+controlPv "$(P):ANA_INTCNT_7_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -670,7 +670,7 @@ x 300
 y 160
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_1_3"
+controlPv "$(P):ANA_INTCNT_7"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -688,7 +688,7 @@ x 580
 y 73
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_2_0_RBV"
+controlPv "$(P):ANA_INTCNT_8_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -711,7 +711,7 @@ x 500
 y 70
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_2_0"
+controlPv "$(P):ANA_INTCNT_8"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -729,7 +729,7 @@ x 580
 y 103
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_2_1_RBV"
+controlPv "$(P):ANA_INTCNT_9_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -752,7 +752,7 @@ x 500
 y 100
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_2_1"
+controlPv "$(P):ANA_INTCNT_9"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -770,7 +770,7 @@ x 580
 y 133
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_2_2_RBV"
+controlPv "$(P):ANA_INTCNT_10_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -793,7 +793,7 @@ x 500
 y 130
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_2_2"
+controlPv "$(P):ANA_INTCNT_10"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -811,7 +811,7 @@ x 580
 y 163
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_2_3_RBV"
+controlPv "$(P):ANA_INTCNT_11_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -834,7 +834,7 @@ x 500
 y 160
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_2_3"
+controlPv "$(P):ANA_INTCNT_11"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -852,7 +852,7 @@ x 180
 y 213
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_3_0_RBV"
+controlPv "$(P):ANA_INTCNT_12_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -875,7 +875,7 @@ x 100
 y 210
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_3_0"
+controlPv "$(P):ANA_INTCNT_12"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -893,7 +893,7 @@ x 180
 y 243
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_3_1_RBV"
+controlPv "$(P):ANA_INTCNT_13_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -916,7 +916,7 @@ x 100
 y 240
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_3_1"
+controlPv "$(P):ANA_INTCNT_13"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -934,7 +934,7 @@ x 180
 y 273
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_3_2_RBV"
+controlPv "$(P):ANA_INTCNT_14_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -957,7 +957,7 @@ x 100
 y 270
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_3_2"
+controlPv "$(P):ANA_INTCNT_14"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -975,7 +975,7 @@ x 180
 y 303
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_3_3_RBV"
+controlPv "$(P):ANA_INTCNT_15_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -998,7 +998,7 @@ x 100
 y 300
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_3_3"
+controlPv "$(P):ANA_INTCNT_15"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1016,7 +1016,7 @@ x 380
 y 213
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_4_1_RBV"
+controlPv "$(P):ANA_INTCNT_17_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1039,7 +1039,7 @@ x 300
 y 240
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_4_1"
+controlPv "$(P):ANA_INTCNT_17"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1057,7 +1057,7 @@ x 380
 y 243
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_4_0_RBV"
+controlPv "$(P):ANA_INTCNT_16_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1080,7 +1080,7 @@ x 300
 y 210
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_4_0"
+controlPv "$(P):ANA_INTCNT_16"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1098,7 +1098,7 @@ x 380
 y 273
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_4_2_RBV"
+controlPv "$(P):ANA_INTCNT_18_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1121,7 +1121,7 @@ x 300
 y 270
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_4_2"
+controlPv "$(P):ANA_INTCNT_18"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1139,7 +1139,7 @@ x 380
 y 303
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_4_3_RBV"
+controlPv "$(P):ANA_INTCNT_19_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1162,7 +1162,7 @@ x 300
 y 300
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_4_3"
+controlPv "$(P):ANA_INTCNT_19"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1180,7 +1180,7 @@ x 580
 y 213
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_5_0_RBV"
+controlPv "$(P):ANA_INTCNT_20_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1203,7 +1203,7 @@ x 500
 y 210
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_5_0"
+controlPv "$(P):ANA_INTCNT_20"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1221,7 +1221,7 @@ x 580
 y 243
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_5_1_RBV"
+controlPv "$(P):ANA_INTCNT_21_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1244,7 +1244,7 @@ x 500
 y 240
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_5_1"
+controlPv "$(P):ANA_INTCNT_21"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1262,7 +1262,7 @@ x 580
 y 273
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_5_2_RBV"
+controlPv "$(P):ANA_INTCNT_22_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1285,7 +1285,7 @@ x 500
 y 270
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_5_2"
+controlPv "$(P):ANA_INTCNT_22"
 fgColor index 14
 fgAlarm
 bgColor index 4
@@ -1303,7 +1303,7 @@ x 580
 y 303
 w 35
 h 28
-controlPv "$(P):ANA_INTCNT_5_3_RBV"
+controlPv "$(P):ANA_INTCNT_23_RBV"
 font "helvetica-medium-r-12.0"
 fgColor index 16
 fgAlarm
@@ -1326,7 +1326,7 @@ x 500
 y 300
 w 75
 h 32
-controlPv "$(P):ANA_INTCNT_5_3"
+controlPv "$(P):ANA_INTCNT_23"
 fgColor index 14
 fgAlarm
 bgColor index 4
