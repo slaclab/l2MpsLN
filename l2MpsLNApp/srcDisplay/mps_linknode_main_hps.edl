@@ -1,0 +1,2278 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1202
+y 87
+w 530
+h 350
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 16
+ctlFgColor2 index 14
+ctlBgColor1 index 4
+ctlBgColor2 index 12
+topShadowColor index 1
+botShadowColor index 11
+title "MPS Link Node"
+snapToGrid
+gridSize 2
+templateParams {
+  0 "PARAM1=PARAM1"
+}
+templateInfo {
+  "PARAM_INFO"
+}
+endScreenProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 428
+y 80
+w 88
+h 24
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):LC1_MODE"
+font "helvetica-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 16
+y 120
+w 240
+h 184
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 264
+y 120
+w 248
+h 184
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 144
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 144
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT2_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT2_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT2),P_B0_CH0=$(P_S2_B0_CH0),P_B0_CH1=$(P_S2_B0_CH1),P_B0_CH2=$(P_S2_B0_CH2),P_B1_CH0=$(P_S2_B1_CH0),P_B1_CH1=$(P_S2_B1_CH1),P_B1_CH2=$(P_S2_B1_CH2),B0_CH0_NAME=$(S2_B0_CH0_NAME),B0_CH1_NAME=$(S2_B0_CH1_NAME),B0_CH2_NAME=$(S2_B0_CH2_NAME),B1_CH0_NAME=$(S2_B1_CH0_NAME),B1_CH1_NAME=$(S2_B1_CH1_NAME),B1_CH2_NAME=$(S2_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 144
+w 72
+h 24
+controlPv "$(P):SLOT2_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT2_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 168
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 168
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT3_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT3_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT3),P_B0_CH0=$(P_S3_B0_CH0),P_B0_CH1=$(P_S3_B0_CH1),P_B0_CH2=$(P_S3_B0_CH2),P_B1_CH0=$(P_S3_B1_CH0),P_B1_CH1=$(P_S3_B1_CH1),P_B1_CH2=$(P_S3_B1_CH2),B0_CH0_NAME=$(S3_B0_CH0_NAME),B0_CH1_NAME=$(S3_B0_CH1_NAME),B0_CH2_NAME=$(S3_B0_CH2_NAME),B1_CH0_NAME=$(S3_B1_CH0_NAME),B1_CH1_NAME=$(S3_B1_CH1_NAME),B1_CH2_NAME=$(S3_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 168
+w 72
+h 24
+controlPv "$(P):SLOT3_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT3_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 192
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 192
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT4_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT4_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT4),P_B0_CH0=$(P_S4_B0_CH0),P_B0_CH1=$(P_S4_B0_CH1),P_B0_CH2=$(P_S4_B0_CH2),P_B1_CH0=$(P_S4_B1_CH0),P_B1_CH1=$(P_S4_B1_CH1),P_B1_CH2=$(P_S4_B1_CH2),B0_CH0_NAME=$(S4_B0_CH0_NAME),B0_CH1_NAME=$(S4_B0_CH1_NAME),B0_CH2_NAME=$(S4_B0_CH2_NAME),B1_CH0_NAME=$(S4_B1_CH0_NAME),B1_CH1_NAME=$(S4_B1_CH1_NAME),B1_CH2_NAME=$(S4_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 192
+w 72
+h 24
+controlPv "$(P):SLOT4_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT4_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 216
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 216
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT5_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT5_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT5),P_B0_CH0=$(P_S5_B0_CH0),P_B0_CH1=$(P_S5_B0_CH1),P_B0_CH2=$(P_S5_B0_CH2),P_B1_CH0=$(P_S5_B1_CH0),P_B1_CH1=$(P_S5_B1_CH1),P_B1_CH2=$(P_S5_B1_CH2),B0_CH0_NAME=$(S5_B0_CH0_NAME),B0_CH1_NAME=$(S5_B0_CH1_NAME),B0_CH2_NAME=$(S5_B0_CH2_NAME),B1_CH0_NAME=$(S5_B1_CH0_NAME),B1_CH1_NAME=$(S5_B1_CH1_NAME),B1_CH2_NAME=$(S5_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 216
+w 72
+h 24
+controlPv "$(P):SLOT5_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT5_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 240
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 240
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT6_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT6_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT6),P_B0_CH0=$(P_S6_B0_CH0),P_B0_CH1=$(P_S6_B0_CH1),P_B0_CH2=$(P_S6_B0_CH2),P_B1_CH0=$(P_S6_B1_CH0),P_B1_CH1=$(P_S6_B1_CH1),P_B1_CH2=$(P_S6_B1_CH2),B0_CH0_NAME=$(S6_B0_CH0_NAME),B0_CH1_NAME=$(S6_B0_CH1_NAME),B0_CH2_NAME=$(S6_B0_CH2_NAME),B1_CH0_NAME=$(S6_B1_CH0_NAME),B1_CH1_NAME=$(S6_B1_CH1_NAME),B1_CH2_NAME=$(S6_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 240
+w 72
+h 24
+controlPv "$(P):SLOT6_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT6_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 264
+w 200
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 376
+y 264
+w 128
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(SLOT7_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "$(SLOT7_FILE_NAME)"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "P=$(P_SLOT7),P_B0_CH0=$(P_S7_B0_CH0),P_B0_CH1=$(P_S7_B0_CH1),P_B0_CH2=$(P_S7_B0_CH2),P_B1_CH0=$(P_S7_B1_CH0),P_B1_CH1=$(P_S7_B1_CH1),P_B1_CH2=$(P_S7_B1_CH2),B0_CH0_NAME=$(S7_B0_CH0_NAME),B0_CH1_NAME=$(S7_B0_CH1_NAME),B0_CH2_NAME=$(S7_B0_CH2_NAME),B1_CH0_NAME=$(S7_B1_CH0_NAME),B1_CH1_NAME=$(S7_B1_CH1_NAME),B1_CH2_NAME=$(S7_B1_CH2_NAME)"
+}
+replaceSymbols {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 304
+y 264
+w 72
+h 24
+controlPv "$(P):SLOT7_NAME"
+fgColor index 15
+fgAlarm
+bgColor index 12
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT7_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 216
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 216
+w 176
+h 24
+lineColor index 14
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 222
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH3_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 192
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 192
+w 176
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 198
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH2_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 168
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 168
+w 176
+h 24
+lineColor index 12
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 174
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH1_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 144
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 144
+w 176
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 150
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH0_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 240
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 240
+w 176
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 246
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH4_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 264
+w 176
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 264
+w 176
+h 24
+lineColor index 14
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 270
+w 77
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "--- [ SPARE ] ---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH5_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 264
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 264
+w 72
+h 24
+lineColor index 12
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 272
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT7_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 240
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 240
+w 72
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 248
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT6_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 216
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 216
+w 72
+h 24
+lineColor index 12
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 224
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT5_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 192
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 192
+w 72
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 200
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT4_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 168
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 168
+w 72
+h 24
+lineColor index 12
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 176
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 12
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT3_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 144
+w 72
+h 24
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 304
+y 144
+w 72
+h 24
+lineColor index 14
+fill
+fillColor index 14
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 316
+y 152
+w 12
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 14
+visInvert
+visMin "0"
+visMax "1"
+value {
+  "---"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+visPv "$(P):SLOT2_SPARE"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 64
+y 80
+w 64
+h 24
+controlPv "$(P):LN_TYPE"
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 536
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "ATCA MPS Link Node"
+}
+endObjectProperties
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x 416
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Print..."
+numCmds 0
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 472
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 64
+w 12
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "ID"
+}
+autoSize
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 16
+y 80
+w 40
+h 24
+controlPv "$(P):LN_ID"
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 136
+y 64
+w 92
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "FPGA Heartbeat"
+}
+autoSize
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 136
+y 80
+w 96
+h 24
+controlPv "$(P):FPGA_UPTIMECNT"
+displayMode "decimal"
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 64
+y 64
+w 28
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Type"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 240
+y 64
+w 81
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "FPGA Version"
+}
+autoSize
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 240
+y 80
+w 80
+h 24
+controlPv "$(P):FPGA_VER"
+displayMode "hex"
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 328
+y 64
+w 83
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "Config Version"
+}
+autoSize
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 328
+y 80
+w 96
+h 24
+controlPv "$(P):CONFIG_VERSION"
+fgColor index 16
+fgAlarm
+bgColor index 14
+fill
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 188
+y 8
+w 160
+h 24
+controlPv "$(P):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 432
+y 64
+w 54
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "NC Mode"
+}
+autoSize
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 400
+y 314
+w 112
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Expert"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_expert_hps.edl"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 24
+y 112
+w 104
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Analog Channels"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 24
+y 128
+w 38
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel"
+}
+autoSize
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 144
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 144
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH0_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH0_NAME),P=$(P_CH0),P_LN=$(P),P_TYPE=$(P_TYPE0),CH_NUM=0"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH0_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 264
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 264
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH5_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+menuLabel {
+  0 "Integration 0"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH5_NAME),P=$(P_CH5),P_LN=$(P),P_TYPE=$(P_TYPE5),CH_NUM=5"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH5_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 240
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 240
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH4_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+menuLabel {
+  0 "Integration 0"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH4_NAME),P=$(P_CH4),P_LN=$(P),P_TYPE=$(P_TYPE4),CH_NUM=4"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH4_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 216
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 216
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH3_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+menuLabel {
+  0 "Integration 0"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH3_NAME),P=$(P_CH3),P_LN=$(P),P_TYPE=$(P_TYPE3),CH_NUM=3"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH3_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 192
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 192
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH2_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+menuLabel {
+  0 "Integration 0"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH2_NAME),P=$(P_CH2),P_LN=$(P),P_TYPE=$(P_TYPE2),CH_NUM=2"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH2_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 168
+w 176
+h 24
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 56
+y 168
+w 176
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-10.0"
+buttonLabel "$(CH1_NAME)..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_linknode_analog_channel_hps"
+}
+menuLabel {
+  0 "Integration 0"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "CH_NAME=$(CH1_NAME),P=$(P_CH1),P_LN=$(P),P_TYPE=$(P_TYPE1),CH_NUM=1"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+
+endGroup
+
+visPv "$(P):CH1_SPARE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 272
+y 112
+w 104
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Crate Applications"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 128
+w 19
+h 12
+font "helvetica-medium-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Slot"
+}
+autoSize
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 32
+y 144
+w 24
+h 144
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 32
+y 144
+w 24
+h 144
+lineColor index 14
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 176
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 152
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 200
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 224
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 248
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 272
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "5"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 280
+y 144
+w 24
+h 144
+
+beginGroup
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 280
+y 144
+w 24
+h 144
+lineColor index 14
+fill
+fillColor index 12
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 174
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 150
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 198
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 222
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "5"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 246
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "6"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 286
+y 270
+w 6
+h 12
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 15
+bgColor index 0
+useDisplayBg
+value {
+  "7"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
