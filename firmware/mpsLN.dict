@@ -630,7 +630,6 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[1]					ASMCORE_mpsAmcDest_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[2]					ASMCORE_mpsAmcDest_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[3]					ASMCORE_mpsAmcDest_3
-
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsOpenSrs						ASMCORE_mpsOpenSrs
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsCloseSrs						ASMCORE_mpsCloseSrs
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrSrs							ASMCORE_shtrSrs
@@ -640,5 +639,4 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shutter							ASMCORE_shutter
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrClose						ASMCORE_shtrClose
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrOpen						ASMCORE_shtrOpen
-
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/stateSM							ASMCORE_stateSM

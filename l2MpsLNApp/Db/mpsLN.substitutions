@@ -388,6 +388,18 @@ file "Reg2BitsRO.template" { pattern
 { ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Local",            "Permit",       "Undefined",    "1 second", ASMCORE_stateSM         }
 }
 
+
+#======================================
+# 3-bit Register with ScalVal interfaces
+#======================================
+file "Reg3BitsRW.template" { pattern
+{ R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,       PARAM                   }
+{ ASM_AMC_DEST_0,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_0    }
+{ ASM_AMC_DEST_1,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_1    }
+{ ASM_AMC_DEST_2,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_2    }
+{ ASM_AMC_DEST_3,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_3    }
+}
+
 #======================================
 # Char Array Registers with ScalVal_RO interfaces
 #======================================
