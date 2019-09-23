@@ -369,15 +369,15 @@ file "Reg1BitRO.template" { pattern
 # 2-bit Register with ScalVal interfaces
 #======================================
 file "Reg2BitsRW.template" { pattern
-{ R,                DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                     }
-{ ANA_AMCEN,        "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisable      }
-{ LC1_ANA_AMCEN,    "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisableL1    }
-{ PRC_VAL_SEL,      "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
-{ LC1_PRC_VAL_SEL,  "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelectL1  }
-{ TIM_SRC_RTM0,     "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_0              }
-{ TIM_SRC_FPGA,     "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
-{ TIM_SRC_BP,       "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
-{ TIM_SRC_RTM1,     "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                     }
+{ ANA_AMCEN,            "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisable      }
+{ LC1_ANA_AMCEN,        "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisableL1    }
+{ ANA_PRCVALSEL,        "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
+{ LC1_ANA_PRCVALSEL,    "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelectL1  }
+{ TIM_SRC_RTM0,         "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_0              }
+{ TIM_SRC_FPGA,         "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
+{ TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
+{ TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
 }
 
 #======================================
