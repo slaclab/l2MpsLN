@@ -157,7 +157,7 @@ file "RegRO.template" { pattern
 { ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second", "",         ANACORE_BsaData_21          }
 { ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second", "",         ANACORE_BsaData_22          }
 { ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second", "",         ANACORE_BsaData_23          }
-
+{ ASM_MPS_AMC_DOUT,         "State of the 4 AMC lines",                 "YES",  "1 second", "",         ASMCORE_mpsAmcDout          }
 }
 
 # Single register with on AI records
@@ -319,6 +319,9 @@ file "RegRW.template" { pattern
 { LC1_REMAP_ID_8,       "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_8                }
 { LC1_REMAP_ID_9,       "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_9                }
 { LC1_REMAP_ID_10,      "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_10               }
+{ ASM_MPS_OPEN_SRS,     "Open shutter signal selection",            "1 second", "",         ASMCORE_mpsOpenSrs              }
+{ ASM_MPS_CLOSE_SRS,    "Closed shutter signal selection",          "1 second", "",         ASMCORE_mpsCloseSrs             }
+{ ASM_SHTR_SRS,         "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                 }
 }
 
 #======================================
@@ -337,24 +340,29 @@ file "Reg1BitRW.template" { pattern
 # 1-bit Register with ScalVal_RO interfaces
 #======================================
 file "Reg1BitRO.template" { pattern
-{ R,                  DESC,                                     ZNAM,           ONAM,       SCAN,           PARAM                }
-{ TIM_LINK_STAT       "Timing Rx link status",                  "Non-locked",   "Locked",   "1 second",     TIM_RX_LINK          }
-{ PGP_RX_PHY_RDY_0    "Pgp2bAxi 0 RX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_0     }
-{ PGP_RX_LOC_RDY_0    "Pgp2bAxi 0 Rx Local Link Ready",         "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_0 }
-{ PGP_RX_PHY_RDY_1    "Pgp2bAxi 1 RX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_1     }
-{ PGP_RX_LOC_RDY_1    "Pgp2bAxi 1 Rx Local Link Ready",         "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_1 }
-{ PGP_RX_PHY_RDY_2    "Pgp2bAxi 2 RX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_2     }
-{ PGP_RX_LOC_RDY_2    "Pgp2bAxi 2 Rx Local Link Ready",         "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_2 }
-{ PGP_RX_PHY_RDY_3    "Pgp2bAxi 3 RX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_3     }
-{ PGP_RX_LOC_RDY_3    "Pgp2bAxi 3 Rx Local Link Ready",         "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_3 }
-{ PGP_TX_PHY_RDY_0    "Pgp2bAxi 0 TX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_0     }
-{ PGP_TX_LINK_RDY_0   "Pgp2bAxi 0 Tx Link Ready",               "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_0    }
-{ PGP_TX_PHY_RDY_1    "Pgp2bAxi 1 TX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_1     }
-{ PGP_TX_LINK_RDY_1   "Pgp2bAxi 1 Tx Link Ready",               "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_1    }
-{ PGP_TX_PHY_RDY_2    "Pgp2bAxi 2 TX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_2     }
-{ PGP_TX_LINK_RDY_2   "Pgp2bAxi 2 Tx Link Ready",               "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_2    }
-{ PGP_TX_PHY_RDY_3    "Pgp2bAxi 3 TX Phy is Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_3     }
-{ PGP_TX_LINK_RDY_3   "Pgp2bAxi 3 Tx Link Ready",               "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_3    }
+{ R,                    DESC,                                   ZNAM,           ONAM,       SCAN,           PARAM                }
+{ TIM_LINK_STAT,        "Timing Rx link status",                "Non-locked",   "Locked",   "1 second",     TIM_RX_LINK          }
+{ PGP_RX_PHY_RDY_0,     "Pgp2bAxi 0 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_0     }
+{ PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_0 }
+{ PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_1     }
+{ PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_1 }
+{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_2     }
+{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_2 }
+{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_3     }
+{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_3 }
+{ PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_0     }
+{ PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_0    }
+{ PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_1     }
+{ PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_1    }
+{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_2     }
+{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_2    }
+{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_3     }
+{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_3    }
+{ ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     ASMCORE_aomPermit    }
+{ ASM_AOM_PERMIT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     ASMCORE_trgSelect    }
+{ ASM_AOM_PERMIT,       "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     ASMCORE_shutter      }
+{ ASM_AOM_PERMIT,       "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     ASMCORE_shtrClose    }
+{ ASM_AOM_PERMIT,       "State of shutter open input line",     "Not open",     "Open",     "1 second",     ASMCORE_shtrOpen     }
 }
 
 #======================================
@@ -367,10 +375,17 @@ file "Reg2BitsRW.template" { pattern
 { TIM_SRC_FPGA,     "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
 { TIM_SRC_BP,       "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
 { TIM_SRC_RTM1,     "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
-{ LC2_PRC_VAL_SEL,  "LCLS2 Select value to be processed",   "Peak_Values",  "Forced_Values",    "Min_Values",   "Avg_Values",   "1 second", ANACORE_PrcValueSelect    }
-{ LC1_PRC_VAL_SEL,  "LCLS1 Select value to be processed",   "Peak_Values",  "Forced_Values",    "Min_Values",   "Avg_Values",   "1 second", ANACORE_PrcValueSelectL1  }
+{ LC2_PRC_VAL_SEL,  "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
+{ LC1_PRC_VAL_SEL,  "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelectL1  }
 { LC1_ANA_AMCEN,    "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisableL1    }
+}
 
+#======================================
+# 2-bit Register with ScalVal_RO interfaces
+#======================================
+file "Reg2BitsRO.template" { pattern
+{ R,                DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                   }
+{ ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Local",            "Permit",       "Undefined",    "1 second", ASMCORE_stateSM         }
 }
 
 #======================================

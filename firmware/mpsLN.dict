@@ -622,3 +622,23 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/UdpBroadcastIP                             LC1_UdpBroadcastIP
 /mmio/AppTop/AppCore/MpsLinkNodeCore/UdpDhcpIP                                  LC1_UdpDhcpIP
 /mmio/AppTop/AppCore/MpsLinkNodeCore/UdplocalMac                                LC1_UdplocalMac
+
+# =============================
+# Mps ASM Core
+# =============================
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[0]					ASMCORE_mpsAmcDest_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[1]					ASMCORE_mpsAmcDest_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[2]					ASMCORE_mpsAmcDest_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDest[3]					ASMCORE_mpsAmcDest_3
+
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsOpenSrs						ASMCORE_mpsOpenSrs
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsCloseSrs						ASMCORE_mpsCloseSrs
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrSrs							ASMCORE_shtrSrs
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/mpsAmcDout						ASMCORE_mpsAmcDout
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/aomPermit						ASMCORE_aomPermit
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/trgSelect						ASMCORE_trgSelect
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shutter							ASMCORE_shutter
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrClose						ASMCORE_shtrClose
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrOpen						ASMCORE_shtrOpen
+
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/stateSM							ASMCORE_stateSM
