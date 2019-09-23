@@ -191,54 +191,54 @@ file "RegCmd.template" { pattern
 #======================================
 file "RegRW.template" { pattern
 { R,                    DESC,                                       SCAN,       EGU,        PARAM                           }
-{ LC2_ANA_INTCNT_0,     "LCLS2 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCount_0      }
-{ LC2_ANA_INTCNT_1,     "LCLS2 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCount_1      }
-{ LC2_ANA_INTCNT_2,     "LCLS2 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCount_2      }
-{ LC2_ANA_INTCNT_3,     "LCLS2 Integration count (ch 3)",           "1 second", "counts",   ANACORE_IntegrationCount_3      }
-{ LC2_ANA_INTCNT_4,     "LCLS2 Integration count (ch 4)",           "1 second", "counts",   ANACORE_IntegrationCount_4      }
-{ LC2_ANA_INTCNT_5,     "LCLS2 Integration count (ch 5)",           "1 second", "counts",   ANACORE_IntegrationCount_5      }
-{ LC2_ANA_INTCNT_6,     "LCLS2 Integration count (ch 6)",           "1 second", "counts",   ANACORE_IntegrationCount_6      }
-{ LC2_ANA_INTCNT_7,     "LCLS2 Integration count (ch 7)",           "1 second", "counts",   ANACORE_IntegrationCount_7      }
-{ LC2_ANA_INTCNT_8,     "LCLS2 Integration count (ch 8)",           "1 second", "counts",   ANACORE_IntegrationCount_8      }
-{ LC2_ANA_INTCNT_9,     "LCLS2 Integration count (ch 9)",           "1 second", "counts",   ANACORE_IntegrationCount_9      }
-{ LC2_ANA_INTCNT_10,    "LCLS2 Integration count (ch 10)",          "1 second", "counts",   ANACORE_IntegrationCount_10     }
-{ LC2_ANA_INTCNT_11,    "LCLS2 Integration count (ch 11)",          "1 second", "counts",   ANACORE_IntegrationCount_11     }
-{ LC2_ANA_INTCNT_12,    "LCLS2 Integration count (ch 12)",          "1 second", "counts",   ANACORE_IntegrationCount_12     }
-{ LC2_ANA_INTCNT_13,    "LCLS2 Integration count (ch 13)",          "1 second", "counts",   ANACORE_IntegrationCount_13     }
-{ LC2_ANA_INTCNT_14,    "LCLS2 Integration count (ch 14)",          "1 second", "counts",   ANACORE_IntegrationCount_14     }
-{ LC2_ANA_INTCNT_15,    "LCLS2 Integration count (ch 15)",          "1 second", "counts",   ANACORE_IntegrationCount_15     }
-{ LC2_ANA_INTCNT_16,    "LCLS2 Integration count (ch 16)",          "1 second", "counts",   ANACORE_IntegrationCount_16     }
-{ LC2_ANA_INTCNT_17,    "LCLS2 Integration count (ch 17)",          "1 second", "counts",   ANACORE_IntegrationCount_17     }
-{ LC2_ANA_INTCNT_18,    "LCLS2 Integration count (ch 18)",          "1 second", "counts",   ANACORE_IntegrationCount_18     }
-{ LC2_ANA_INTCNT_19,    "LCLS2 Integration count (ch 19)",          "1 second", "counts",   ANACORE_IntegrationCount_19     }
-{ LC2_ANA_INTCNT_20,    "LCLS2 Integration count (ch 20)",          "1 second", "counts",   ANACORE_IntegrationCount_20     }
-{ LC2_ANA_INTCNT_21,    "LCLS2 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCount_21     }
-{ LC2_ANA_INTCNT_22,    "LCLS2 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCount_22     }
-{ LC2_ANA_INTCNT_23,    "LCLS2 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCount_23     }
-{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",        "1 second", "",         ANACORE_ProcessingSelect_0      }
-{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",        "1 second", "",         ANACORE_ProcessingSelect_1      }
-{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",        "1 second", "",         ANACORE_ProcessingSelect_2      }
-{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",        "1 second", "",         ANACORE_ProcessingSelect_3      }
-{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",        "1 second", "",         ANACORE_ProcessingSelect_4      }
-{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",        "1 second", "",         ANACORE_ProcessingSelect_5      }
-{ LC2_ANA_SLOPE_0,      "LCLS2 Equation slope (ch 0)",              "1 second", "",         ANACORE_Slope_0                 }
-{ LC2_ANA_SLOPE_1,      "LCLS2 Equation slope (ch 1)",              "1 second", "",         ANACORE_Slope_1                 }
-{ LC2_ANA_SLOPE_2,      "LCLS2 Equation slope (ch 2)",              "1 second", "",         ANACORE_Slope_2                 }
-{ LC2_ANA_SLOPE_3,      "LCLS2 Equation slope (ch 3)",              "1 second", "",         ANACORE_Slope_3                 }
-{ LC2_ANA_SLOPE_4,      "LCLS2 Equation slope (ch 4)",              "1 second", "",         ANACORE_Slope_4                 }
-{ LC2_ANA_SLOPE_5,      "LCLS2 Equation slope (ch 5)",              "1 second", "",         ANACORE_Slope_5                 }
-{ LC2_ANA_INTERCEPT_0,  "LCLS2 Equation intercept (ch 0)",          "1 second", "",         ANACORE_Intercept_0             }
-{ LC2_ANA_INTERCEPT_1,  "LCLS2 Equation intercept (ch 1)",          "1 second", "",         ANACORE_Intercept_1             }
-{ LC2_ANA_INTERCEPT_2,  "LCLS2 Equation intercept (ch 2)",          "1 second", "",         ANACORE_Intercept_2             }
-{ LC2_ANA_INTERCEPT_3,  "LCLS2 Equation intercept (ch 3)",          "1 second", "",         ANACORE_Intercept_3             }
-{ LC2_ANA_INTERCEPT_4,  "LCLS2 Equation intercept (ch 4)",          "1 second", "",         ANACORE_Intercept_4             }
-{ LC2_ANA_INTERCEPT_5,  "LCLS2 Equation intercept (ch 5)",          "1 second", "",         ANACORE_Intercept_5             }
-{ LC2_ANA_FPRCVAL_0,    "LCLS2 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcVals_0          }
-{ LC2_ANA_FPRCVAL_1,    "LCLS2 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcVals_1          }
-{ LC2_ANA_FPRCVAL_2,    "LCLS2 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcVals_2          }
-{ LC2_ANA_FPRCVAL_3,    "LCLS2 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcVals_3          }
-{ LC2_ANA_FPRCVAL_4,    "LCLS2 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcVals_4          }
-{ LC2_ANA_FPRCVAL_5,    "LCLS2 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcVals_5          }
+{ ANA_INTCNT_0,         "LCLS2 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCount_0      }
+{ ANA_INTCNT_1,         "LCLS2 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCount_1      }
+{ ANA_INTCNT_2,         "LCLS2 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCount_2      }
+{ ANA_INTCNT_3,         "LCLS2 Integration count (ch 3)",           "1 second", "counts",   ANACORE_IntegrationCount_3      }
+{ ANA_INTCNT_4,         "LCLS2 Integration count (ch 4)",           "1 second", "counts",   ANACORE_IntegrationCount_4      }
+{ ANA_INTCNT_5,         "LCLS2 Integration count (ch 5)",           "1 second", "counts",   ANACORE_IntegrationCount_5      }
+{ ANA_INTCNT_6,         "LCLS2 Integration count (ch 6)",           "1 second", "counts",   ANACORE_IntegrationCount_6      }
+{ ANA_INTCNT_7,         "LCLS2 Integration count (ch 7)",           "1 second", "counts",   ANACORE_IntegrationCount_7      }
+{ ANA_INTCNT_8,         "LCLS2 Integration count (ch 8)",           "1 second", "counts",   ANACORE_IntegrationCount_8      }
+{ ANA_INTCNT_9,         "LCLS2 Integration count (ch 9)",           "1 second", "counts",   ANACORE_IntegrationCount_9      }
+{ ANA_INTCNT_10,        "LCLS2 Integration count (ch 10)",          "1 second", "counts",   ANACORE_IntegrationCount_10     }
+{ ANA_INTCNT_11,        "LCLS2 Integration count (ch 11)",          "1 second", "counts",   ANACORE_IntegrationCount_11     }
+{ ANA_INTCNT_12,        "LCLS2 Integration count (ch 12)",          "1 second", "counts",   ANACORE_IntegrationCount_12     }
+{ ANA_INTCNT_13,        "LCLS2 Integration count (ch 13)",          "1 second", "counts",   ANACORE_IntegrationCount_13     }
+{ ANA_INTCNT_14,        "LCLS2 Integration count (ch 14)",          "1 second", "counts",   ANACORE_IntegrationCount_14     }
+{ ANA_INTCNT_15,        "LCLS2 Integration count (ch 15)",          "1 second", "counts",   ANACORE_IntegrationCount_15     }
+{ ANA_INTCNT_16,        "LCLS2 Integration count (ch 16)",          "1 second", "counts",   ANACORE_IntegrationCount_16     }
+{ ANA_INTCNT_17,        "LCLS2 Integration count (ch 17)",          "1 second", "counts",   ANACORE_IntegrationCount_17     }
+{ ANA_INTCNT_18,        "LCLS2 Integration count (ch 18)",          "1 second", "counts",   ANACORE_IntegrationCount_18     }
+{ ANA_INTCNT_19,        "LCLS2 Integration count (ch 19)",          "1 second", "counts",   ANACORE_IntegrationCount_19     }
+{ ANA_INTCNT_20,        "LCLS2 Integration count (ch 20)",          "1 second", "counts",   ANACORE_IntegrationCount_20     }
+{ ANA_INTCNT_21,        "LCLS2 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCount_21     }
+{ ANA_INTCNT_22,        "LCLS2 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCount_22     }
+{ ANA_INTCNT_23,        "LCLS2 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCount_23     }
+{ ANA_PROCSEL_0,        "LCLS2 Processing Selection (ch 0)",        "1 second", "",         ANACORE_ProcessingSelect_0      }
+{ ANA_PROCSEL_1,        "LCLS2 Processing Selection (ch 1)",        "1 second", "",         ANACORE_ProcessingSelect_1      }
+{ ANA_PROCSEL_2,        "LCLS2 Processing Selection (ch 2)",        "1 second", "",         ANACORE_ProcessingSelect_2      }
+{ ANA_PROCSEL_3,        "LCLS2 Processing Selection (ch 3)",        "1 second", "",         ANACORE_ProcessingSelect_3      }
+{ ANA_PROCSEL_4,        "LCLS2 Processing Selection (ch 4)",        "1 second", "",         ANACORE_ProcessingSelect_4      }
+{ ANA_PROCSEL_5,        "LCLS2 Processing Selection (ch 5)",        "1 second", "",         ANACORE_ProcessingSelect_5      }
+{ ANA_SLOPE_0,          "LCLS2 Equation slope (ch 0)",              "1 second", "",         ANACORE_Slope_0                 }
+{ ANA_SLOPE_1,          "LCLS2 Equation slope (ch 1)",              "1 second", "",         ANACORE_Slope_1                 }
+{ ANA_SLOPE_2,          "LCLS2 Equation slope (ch 2)",              "1 second", "",         ANACORE_Slope_2                 }
+{ ANA_SLOPE_3,          "LCLS2 Equation slope (ch 3)",              "1 second", "",         ANACORE_Slope_3                 }
+{ ANA_SLOPE_4,          "LCLS2 Equation slope (ch 4)",              "1 second", "",         ANACORE_Slope_4                 }
+{ ANA_SLOPE_5,          "LCLS2 Equation slope (ch 5)",              "1 second", "",         ANACORE_Slope_5                 }
+{ ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "1 second", "",         ANACORE_Intercept_0             }
+{ ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "1 second", "",         ANACORE_Intercept_1             }
+{ ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "1 second", "",         ANACORE_Intercept_2             }
+{ ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second", "",         ANACORE_Intercept_3             }
+{ ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second", "",         ANACORE_Intercept_4             }
+{ ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second", "",         ANACORE_Intercept_5             }
+{ ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcVals_0          }
+{ ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcVals_1          }
+{ ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcVals_2          }
+{ ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcVals_3          }
+{ ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcVals_4          }
+{ ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcVals_5          }
 { LC1_ANA_INTCNT_0,     "LCLS1 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_0   }
 { LC1_ANA_INTCNT_1,     "LCLS1 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_1   }
 { LC1_ANA_INTCNT_2,     "LCLS1 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_2   }
@@ -370,12 +370,12 @@ file "Reg1BitRO.template" { pattern
 #======================================
 file "Reg2BitsRW.template" { pattern
 { R,                DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                     }
-{ LC2_ANA_AMCEN,    "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisable      }
+{ ANA_AMCEN,        "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisable      }
 { TIM_SRC_RTM0,     "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_0              }
 { TIM_SRC_FPGA,     "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
 { TIM_SRC_BP,       "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
 { TIM_SRC_RTM1,     "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
-{ LC2_PRC_VAL_SEL,  "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
+{ PRC_VAL_SEL,      "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
 { LC1_PRC_VAL_SEL,  "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelectL1  }
 { LC1_ANA_AMCEN,    "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisableL1    }
 }
