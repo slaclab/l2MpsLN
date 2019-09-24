@@ -359,10 +359,10 @@ file "Reg1BitRO.template" { pattern
 { PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_3     }
 { PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_3    }
 { ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     ASMCORE_aomPermit    }
-{ ASM_AOM_PERMIT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     ASMCORE_trgSelect    }
-{ ASM_AOM_PERMIT,       "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     ASMCORE_shutter      }
-{ ASM_AOM_PERMIT,       "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     ASMCORE_shtrClose    }
-{ ASM_AOM_PERMIT,       "State of shutter open input line",     "Not open",     "Open",     "1 second",     ASMCORE_shtrOpen     }
+{ ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     ASMCORE_trgSelect    }
+{ ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     ASMCORE_shutter      }
+{ ASM_SHUTTER_CLOSE,    "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     ASMCORE_shtrClose    }
+{ ASM_SHUTTER_OPEN,     "State of shutter open input line",     "Not open",     "Open",     "1 second",     ASMCORE_shtrOpen     }
 }
 
 #======================================
