@@ -12,6 +12,16 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * The IOC now contacts the MPS manager at boot to request for its
     thresholds PVs to be set.
 
+* __l2MpsLN-R2-5-0__: 2019-09-24 J. Vasquez
+  * Update CPSW framework to version R4.2.0, and all the dependent modules:
+    * l2Mps to R2.2.0,
+    * yamlReader to R1.1.1,
+    * deviceLibrary to R1.1.1,
+    * yamlLoader to R1.1.4,
+    * yamlDownloader to R1.1.1,
+    * yCPSWAsyn to R3.1.2, and
+    * l2MpsAsyn to R2.4.0
+
 * __l2MpsLN-R2-4-0__: 2019-09-23 J. Vasquez
   * Add PVs for new FW register related to LCLS1
     operation: Analog core register used on LCLS1
