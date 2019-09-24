@@ -12,6 +12,16 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * The IOC now contacts the MPS manager at boot to request for its
     thresholds PVs to be set.
 
+* __l2MpsLN-R2-3-2__: 2019-08-16 J. Vasquez
+  * Update l2MpsAsyn top version R2.3.2.
+
+* __l2MpsLN-R2-3-1__: 2019-08-13 J. Vasquez
+  * Update l2Mps top version R2.1.2 and l2MpsAsyn
+    to version R2.3.1. Those versions includes a
+    bug fix where an argument name was shadowing
+    the protected member name. This was causing
+    the polling thread to consume a lot of CPU.
+
 * __l2MpsLN-R2-3-0__: 2019-07-18 J. Vasquez
   * Update the folllwing packages:
       cpsw/framework -> R4.1.2
