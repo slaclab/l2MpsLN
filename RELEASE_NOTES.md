@@ -12,6 +12,15 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * The IOC now contacts the MPS manager at boot to request for its
     thresholds PVs to be set.
 
+* __l2MpsLN-R2-4-0__: 2019-09-23 J. Vasquez
+  * Add PVs for new FW register related to LCLS1
+    operation: Analog core register used on LCLS1
+    mode.
+  * Add PVs for the new FW module ASM Core.
+  * Removed deprecated PVs for the Analog core
+    peak detect enable and values, and add PVs for
+    the new PrcValueSelect and ForcePrcVals registers.
+
 * __l2MpsLN-R2-3-2__: 2019-08-16 J. Vasquez
   * Update l2MpsAsyn top version R2.3.2.
 
