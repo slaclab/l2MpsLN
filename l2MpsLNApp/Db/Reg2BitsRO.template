@@ -1,0 +1,16 @@
+record(mbbi,    "$(P):$(R)") {
+    field(DTYP, "asynUInt32Digital")
+    field(DESC, "$(DESC)")
+    field(PINI, "YES")
+    field(SCAN, "$(SCAN)")
+    field(INP,  "@asynMask($(PORT),0,3)$(PARAM)")
+    field(NOBT, "2")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(ZRST, "$(ZRST)")
+    field(ONST, "$(ONST)")
+    field(TWST, "$(TWST)")
+    field(THST, "$(THST)")
+}
