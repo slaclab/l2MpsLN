@@ -3,6 +3,23 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-1-0__: 2019-09-24 J. Vasquez
+  * Add PVs for new FW register related to LCLS1
+    operation: Analog core register used on LCLS1
+    mode.
+  * Add PVs for the new FW module ASM Core.
+  * Removed deprecated PVs for the Analog core
+    peak detect enable and values, and add PVs for
+    the new PrcValueSelect and ForcePrcVals registers.
+  *  Update CPSW framework to version R4.2.0, and all the dependent modules:
+    * l2Mps to R3.1.0,
+    * yamlReader to R1.1.1,
+    * deviceLibrary to R1.1.1,
+    * yamlLoader to R1.1.4,
+    * yamlDownloader to R1.1.1,
+    * yCPSWAsyn to R3.1.2, and
+    * l2MpsAsyn to R3.1.1
+
 * __l2MpsLN-R3-0-0__: 2019-07-31 J. Vasquez
   * Update l2Mps to version R3.0.0 and l2MpsAsyn to version
     R3.0.0.
