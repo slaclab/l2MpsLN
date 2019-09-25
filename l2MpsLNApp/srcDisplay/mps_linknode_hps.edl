@@ -1,0 +1,604 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1077
+y 662
+w 784
+h 592
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 4
+ctlBgColor2 index 4
+topShadowColor index 1
+botShadowColor index 11
+showGrid
+snapToGrid
+gridSize 8
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 328
+w 288
+h 256
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 216
+w 608
+h 88
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 144
+y 280
+w 456
+h 16
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-18.0"
+buttonLabel "..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_fpga_buildstamp_hps"
+}
+menuLabel {
+  0 "..."
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "PV=$(P):FPGA_BUILDSTAMP"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 208
+w 120
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "FPGA Information"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 320
+w 136
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Link Node application"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 144
+y 232
+w 160
+h 16
+controlPv "$(P):FPGA_UPTIMECNT"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 144
+y 256
+w 160
+h 16
+controlPv "$(P):FPGA_VER"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 144
+y 280
+w 456
+h 16
+controlPv "$(P):FPGA_BUILDSTAMP"
+format "string"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 280
+w 61
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Build stamp"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 256
+w 41
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Version"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 232
+w 86
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Up time counter"
+}
+autoSize
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 24
+w 608
+h 168
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "mps_info_hps"
+sizeOfs 5
+numDsps 0
+noScroll
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 504
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Mitigation message..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_mit_msg_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 544
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Save/Load Config..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_saveLoadConfig_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 464
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Lcls1 Core..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_lcls1_core_hps.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 424
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Digital Message..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_digital_msg_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 544
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Timing..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_timing_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 464
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "RTM Digital IO..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_rtm_dio_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 384
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Analog Core..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_core_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 24
+y 344
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Concentrator..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_concentrator_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 424
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Analog AMCs..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_amc_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 344
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "PGP Links..."
+numPvs 4
+numDsps 4
+displayFileName {
+  0 "mps_pgp_port_hps"
+  1 "mps_pgp_port_hps"
+  2 "mps_pgp_port_hps"
+  3 "mps_pgp_port_hps"
+}
+menuLabel {
+  0 "Port 0"
+  1 "Port 1"
+  2 "Port 2"
+  3 "Port 3"
+}
+setPosition {
+  0 "button"
+  1 "button"
+  2 "button"
+  3 "button"
+}
+symbols {
+  0 "N=0"
+  1 "N=1"
+  2 "N=2"
+  3 "N=3"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 384
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "Lcls1 Analog Core..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_analog_core_lc1_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 160
+y 504
+w 120
+h 30
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+buttonLabel "ASM Core..."
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "mps_asm_core_hps"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
