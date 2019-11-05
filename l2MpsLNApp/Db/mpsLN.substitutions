@@ -158,6 +158,13 @@ file "RegRO.template" { pattern
 { ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second", "",         ANACORE_BsaData_22          }
 { ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second", "",         ANACORE_BsaData_23          }
 { ASM_MPS_AMC_DOUT,         "State of the 4 AMC lines",                 "YES",  "1 second", "",         ASMCORE_mpsAmcDout          }
+{ ANA_OVERTHR_CNT_0         "Over threshold for ADC input 0",			"YES",  "1 second", "",         ANACORE_overThreshCnt_0     }
+{ ANA_OVERTHR_CNT_1         "Over threshold for ADC input 1",			"YES",  "1 second", "",         ANACORE_overThreshCnt_1     }
+{ ANA_OVERTHR_CNT_2         "Over threshold for ADC input 2",			"YES",  "1 second", "",         ANACORE_overThreshCnt_2     }
+{ ANA_OVERTHR_CNT_3         "Over threshold for ADC input 3",			"YES",  "1 second", "",         ANACORE_overThreshCnt_3     }
+{ ANA_OVERTHR_CNT_4         "Over threshold for ADC input 4",			"YES",  "1 second", "",         ANACORE_overThreshCnt_4     }
+{ ANA_OVERTHR_CNT_5         "Over threshold for ADC input 5",			"YES",  "1 second", "",         ANACORE_overThreshCnt_5     }
+{ ANA_BUNCH_CNT,			"Bunch present counter", 					"YES",	"1 second",	"",			ANACORE_bunchPresentCnt     }
 }
 
 # Single register with on AI records
@@ -175,15 +182,16 @@ file "RegAI.template" { pattern
 # Register with Command interfaces
 #======================================
 file "RegCmd.template" { pattern
-{ R,                    DESC,                                   PINI,   SCAN,       PARAM               }
-{ CON_USRRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetUser    }
-{ CON_CNTRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetCount   }
-{ MITMSG_CLRTIMEOUT,    "Clear Timeout",                        "NO",   "Passive",  MITIG_clrTimeout    }
-{ PGP_CNTRST_0,         "Pgp2bAxi 0 reset counters",            "NO",   "Passive",  PGP_RstCnt_0        }
-{ PGP_CNTRST_1,         "Pgp2bAxi 1 reset counters",            "NO",   "Passive",  PGP_RstCnt_1        }
-{ PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2        }
-{ PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3        }
-{ LC1_CLRTIMEOUT,       "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout       }
+{ R,                    DESC,                                   PINI,   SCAN,       PARAM               	 }
+{ CON_USRRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetUser    	 }
+{ CON_CNTRST,           "Counter Reset",                        "NO",   "Passive",  CONCEN_ResetCount   	 }
+{ MITMSG_CLRTIMEOUT,    "Clear Timeout",                        "NO",   "Passive",  MITIG_clrTimeout    	 }
+{ PGP_CNTRST_0,         "Pgp2bAxi 0 reset counters",            "NO",   "Passive",  PGP_RstCnt_0        	 }
+{ PGP_CNTRST_1,         "Pgp2bAxi 1 reset counters",            "NO",   "Passive",  PGP_RstCnt_1        	 }
+{ PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2        	 }
+{ PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3        	 }
+{ LC1_CLRTIMEOUT,       "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout       	 }
+{ ANA_OVERTHR_CNTRST,	"Clear over threshold and bunch cnts",	"NO,	"Passive",  ANACORE_clrOverThreshCnt }
 }
 
 #======================================
@@ -322,6 +330,70 @@ file "RegRW.template" { pattern
 { ASM_MPS_OPEN_SRS,     "Open shutter signal selection",            "1 second", "",         ASMCORE_mpsOpenSrs              }
 { ASM_MPS_CLOSE_SRS,    "Closed shutter signal selection",          "1 second", "",         ASMCORE_mpsCloseSrs             }
 { ASM_SHTR_SRS,         "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                 }
+{ ANA_BOX_INT_EN 		"Enable Boxcar int. on bunch",				"1 second", "",			ANACORE_bunchPresentIntEn		}
+{ ANA_OFF_POL 			"Offset subtraction polarity",				"1 second", "",			ANACORE_offsetPolarity			}
+{ ANA_BLM_THR_0			"BLM 0 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_0				}
+{ ANA_BLM_THR_1			"BLM 1 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_1				}
+{ ANA_BLM_THR_2			"BLM 2 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_2				}
+{ ANA_BLM_THR_3			"BLM 3 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_3				}
+{ ANA_BLM_THR_4			"BLM 4 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_4				}
+{ ANA_BLM_THR_5			"BLM 5 pulse diff threshold",				"1 second", "",			ANACORE_treshBlm_5				}
+{ ANA_ANA_PK_DEL_TRG_0 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_0		}
+{ ANA_ANA_PK_DEL_TRG_1 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_1		}
+{ ANA_ANA_PK_DEL_TRG_2 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_2		}
+{ ANA_ANA_PK_DEL_TRG_3 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_3		}
+{ ANA_ANA_PK_DEL_TRG_4 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_4		}
+{ ANA_ANA_PK_DEL_TRG_5 	"Peak window trig. delay",					"1 second", "",			ANACORE_triggerDelayPeak_5		}
+{ ANA_ANA_PK_WDT_TRG_0 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_0		}
+{ ANA_ANA_PK_WDT_TRG_1 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_1		}
+{ ANA_ANA_PK_WDT_TRG_2 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_2		}
+{ ANA_ANA_PK_WDT_TRG_3 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_3		}
+{ ANA_ANA_PK_WDT_TRG_4 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_4		}
+{ ANA_ANA_PK_WDT_TRG_5 	"Peak window trig. width",					"1 second", "",			ANACORE_triggerWidthPeak_5		}
+{ ANA_ANA_PD_DEL_TRG_0 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_0	}
+{ ANA_ANA_PD_DEL_TRG_1 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_1	}
+{ ANA_ANA_PD_DEL_TRG_2 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_2	}
+{ ANA_ANA_PD_DEL_TRG_3 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_3	}
+{ ANA_ANA_PD_DEL_TRG_4 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_4	}
+{ ANA_ANA_PD_DEL_TRG_5 	"Pedestal window trig delay",				"1 second", "",			ANACORE_triggerDelayPedestal_5	}
+{ ANA_ANA_PD_WDT_TRG_0	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_0	}
+{ ANA_ANA_PD_WDT_TRG_1	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_1	}
+{ ANA_ANA_PD_WDT_TRG_2	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_2	}
+{ ANA_ANA_PD_WDT_TRG_3	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_3	}
+{ ANA_ANA_PD_WDT_TRG_4	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_4	}
+{ ANA_ANA_PD_WDT_TRG_5	"Pedestal windows trig. width",				"1 second", "",			ANACORE_triggerWidthPedestal_5	}
+{ LC1_ANA_BOX_INT_EN 	"LCLS-I Enable Boxcar int. on bunch",		"1 second", "",			ANACORE_bunchPresentIntEnL1			}
+{ LC1_ANA_OFF_POL 		"LCLS-I Offset subtraction polarity",		"1 second", "",			ANACORE_offsetPolarityL1			}
+{ LC1_ANA_BLM_THR_0		"LCLS-I BLM 0 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_0				}
+{ LC1_ANA_BLM_THR_1		"LCLS-I BLM 1 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_1				}
+{ LC1_ANA_BLM_THR_2		"LCLS-I BLM 2 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_2				}
+{ LC1_ANA_BLM_THR_3		"LCLS-I BLM 3 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_3				}
+{ LC1_ANA_BLM_THR_4		"LCLS-I BLM 4 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_4				}
+{ LC1_ANA_BLM_THR_5		"LCLS-I BLM 5 pulse diff threshold",		"1 second", "",			ANACORE_treshBlmL1_5				}
+{ LC1_ANA_PK_DEL_TRG_0 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_0		}
+{ LC1_ANA_PK_DEL_TRG_1 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_1		}
+{ LC1_ANA_PK_DEL_TRG_2 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_2		}
+{ LC1_ANA_PK_DEL_TRG_3 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_3		}
+{ LC1_ANA_PK_DEL_TRG_4 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_4		}
+{ LC1_ANA_PK_DEL_TRG_5 	"LCLS-I peak window trig. delay",			"1 second", "",			ANACORE_triggerDelayPeakL1_5		}
+{ LC1_ANA_PK_WDT_TRG_0 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_0		}
+{ LC1_ANA_PK_WDT_TRG_1 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_1		}
+{ LC1_ANA_PK_WDT_TRG_2 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_2		}
+{ LC1_ANA_PK_WDT_TRG_3 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_3		}
+{ LC1_ANA_PK_WDT_TRG_4 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_4		}
+{ LC1_ANA_PK_WDT_TRG_5 	"LCLS-I peak window trig. width",			"1 second", "",			ANACORE_triggerWidthPeakL1_5		}
+{ LC1_ANA_PD_DEL_TRG_0 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_0	}
+{ LC1_ANA_PD_DEL_TRG_1 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_1	}
+{ LC1_ANA_PD_DEL_TRG_2 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_2	}
+{ LC1_ANA_PD_DEL_TRG_3 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_3	}
+{ LC1_ANA_PD_DEL_TRG_4 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_4	}
+{ LC1_ANA_PD_DEL_TRG_5 	"LCLS-I pedestal window trig delay",		"1 second", "",			ANACORE_triggerDelayPedestalL1_5	}
+{ LC1_ANA_PD_WDT_TRG_0	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_0	}
+{ LC1_ANA_PD_WDT_TRG_1	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_1	}
+{ LC1_ANA_PD_WDT_TRG_2	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_2	}
+{ LC1_ANA_PD_WDT_TRG_3	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_3	}
+{ LC1_ANA_PD_WDT_TRG_4	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_4	}
+{ LC1_ANA_PD_WDT_TRG_5	"LCLS-I pedestal windows trig. width",		"1 second", "",			ANACORE_triggerWidthPedestalL1_5	}
 }
 
 #======================================
@@ -334,6 +406,7 @@ file "Reg1BitRW.template" { pattern
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
 { TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    LC1_TimeoutEnable        }
+{ }
 }
 
 #======================================
