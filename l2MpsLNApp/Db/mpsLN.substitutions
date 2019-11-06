@@ -191,7 +191,7 @@ file "RegCmd.template" { pattern
 { PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2             }
 { PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3             }
 { LC1_CLRTIMEOUT,       "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout            }
-{ ANA_OVERTHR_CNTRST,   "Clear over threshold and bunch cnts",  "NO,    "Passive",  ANACORE_clrOverThreshCnt }
+{ ANA_OVERTHR_CNTRST,   "Clear over threshold and bunch cnts",  "NO",   "Passive",  ANACORE_clrOverThreshCnt }
 }
 
 #======================================
