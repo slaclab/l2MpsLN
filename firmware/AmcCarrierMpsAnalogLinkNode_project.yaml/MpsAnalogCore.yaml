@@ -108,7 +108,7 @@ MpsAnalogCore: &MpsAnalogCore
         offset: 0x0
       description: "Command to clear overthreshold conters and bunch present counter"
       sequence:
-        - entry: clrOverThreshCnt
+        - entry: overThreshCntClear
           value: 0x01
-        - entry: clrOverThreshCnt
+        - entry: overThreshCntClear
           value: 0x00
