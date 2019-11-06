@@ -18,6 +18,9 @@ epicsEnvSet("CARD_INDEX", "1")
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 
+# Point 'YAML_PATH' to the yaml_fixes directory
+epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
+
 # Location to download the YAML file from the FPGA
 epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
