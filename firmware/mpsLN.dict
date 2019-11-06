@@ -53,18 +53,18 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PauseDetCnt[11]                        CONCEN_PauseDetCnt_11
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtRxPolarity        CONCEN_GtRxPolarity
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPolarity        CONCEN_GtTxPolarity
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor_0     CONCEN_GtTxPreCursor_0
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor_1     CONCEN_GtTxPreCursor_1
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor_2     CONCEN_GtTxPreCursor_2
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor_3     CONCEN_GtTxPreCursor_3
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor_0    CONCEN_GtTxPostCursor_0
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor_1    CONCEN_GtTxPostCursor_1
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor_2    CONCEN_GtTxPostCursor_2
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor_3    CONCEN_GtTxPostCursor_3
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl_0      CONCEN_GtTxDiffCtrl_0
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl_1      CONCEN_GtTxDiffCtrl_1
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl_2      CONCEN_GtTxDiffCtrl_2
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl_3      CONCEN_GtTxDiffCtrl_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor[0]    CONCEN_GtTxPreCursor_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor[1]    CONCEN_GtTxPreCursor_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor[2]    CONCEN_GtTxPreCursor_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPreCursor[3]    CONCEN_GtTxPreCursor_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor[0]   CONCEN_GtTxPostCursor_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor[1]   CONCEN_GtTxPostCursor_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor[2]   CONCEN_GtTxPostCursor_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxPostCursor[3]   CONCEN_GtTxPostCursor_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl[0]     CONCEN_GtTxDiffCtrl_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl[1]     CONCEN_GtTxDiffCtrl_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl[2]     CONCEN_GtTxDiffCtrl_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/MpsConcentratorReg/GtTxDiffCtrl[3]     CONCEN_GtTxDiffCtrl_3
 
 # =============================
 # Analog Core
