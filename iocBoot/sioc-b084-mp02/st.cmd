@@ -19,8 +19,8 @@ epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 
 # Location to download the YAML file from the FPGA
-#epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
-epicsEnvSet("YAML_DIR","firmware/AmcCarrierMpsAnalogLinkNode_project.yaml/")
+epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
+#epicsEnvSet("YAML_DIR","firmware/AmcCarrierMpsAnalogLinkNode_project.yaml/")
 
 # YAML file
 epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
@@ -68,7 +68,7 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
