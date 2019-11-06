@@ -86,3 +86,8 @@ MpsLinkNodeCore: &MpsLinkNodeCore
        at:
           offset: 0x900000
     #########################################################
+    MpsAsmCore:
+       <<: *MpsAsmCore
+       at:
+          offset: 0xA00000
+    #########################################################
