@@ -394,6 +394,20 @@ file "RegRW.template" { pattern
 { LC1_ANA_PD_WDT_TRG_3  "LCLS-I pedestal windows trig. width",      "1 second", "jesd clk", ANACORE_triggerWidthPedestalL1_3    }
 { LC1_ANA_PD_WDT_TRG_4  "LCLS-I pedestal windows trig. width",      "1 second", "jesd clk", ANACORE_triggerWidthPedestalL1_4    }
 { LC1_ANA_PD_WDT_TRG_5  "LCLS-I pedestal windows trig. width",      "1 second", "jesd clk", ANACORE_triggerWidthPedestalL1_5    }
+{ CON_GT_RX_POL,         "GT RX polarity",                          "1 second", "",         CONCEN_GtRxPolarity                 }
+{ CON_GT_TX_POL,         "Gt TX polarity",                          "1 second", "",         CONCEN_GtTxPolarity                 }
+{ CON_GT_TX_PRE_CUR_0,   "GT TX pre-cursor (port 0)",               "1 second", "",         CONCEN_GtTxPreCursor_0              }
+{ CON_GT_TX_PRE_CUR_1,   "GT TX pre-cursor (port 1)",               "1 second", "",         CONCEN_GtTxPreCursor_1              }
+{ CON_GT_TX_PRE_CUR_2,   "GT TX pre-cursor (port 2)",               "1 second", "",         CONCEN_GtTxPreCursor_2              }
+{ CON_GT_TX_PRE_CUR_3,   "GT TX pre-cursor (port 3)",               "1 second", "",         CONCEN_GtTxPreCursor_3              }
+{ CON_GT_TX_POST_CUR_0,  "GT TX post-cursor (port 0)",              "1 second", "",         CONCEN_GtTxPostCursor_0             }
+{ CON_GT_TX_POST_CUR_1,  "GT TX post-cursor (port 1)",              "1 second", "",         CONCEN_GtTxPostCursor_1             }
+{ CON_GT_TX_POST_CUR_2,  "GT TX post-cursor (port 2)",              "1 second", "",         CONCEN_GtTxPostCursor_2             }
+{ CON_GT_TX_POST_CUR_3,  "GT TX post-cursor (port 3)",              "1 second", "",         CONCEN_GtTxPostCursor_3             }
+{ CON_GT_TX_DIFF_CTRL_0, "GT TX difference control (port 0)",       "1 second", "",         CONCEN_GtTxDiffCtrl_0               }
+{ CON_GT_TX_DIFF_CTRL_1, "GT TX difference control (port 1)",       "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
+{ CON_GT_TX_DIFF_CTRL_2, "GT TX difference control (port 2)",       "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
+{ CON_GT_TX_DIFF_CTRL_3, "GT TX difference control (port 3)",       "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
 }
 
 #======================================
