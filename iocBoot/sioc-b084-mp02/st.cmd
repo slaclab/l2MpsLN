@@ -143,8 +143,6 @@ dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=A,PREC=
 
 # tprTrigger database
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
-#dbLoadRecords("db/tprDeviceNamePV.db", "LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0,SYS=SYS0,NN=00,DEV_PREFIX=MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:")
-
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
