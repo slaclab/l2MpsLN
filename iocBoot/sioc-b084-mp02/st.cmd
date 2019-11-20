@@ -17,6 +17,7 @@ epicsEnvSet("CARD_INDEX", "1")
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
+epicsEnvSet("TPRTRIGGER_PORT","TPRTRIGGER_PORT")
 
 # Point 'YAML_PATH' to the yaml_fixes directory
 epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
@@ -86,9 +87,9 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-dev3", 0)
 
-## Configure asyn port driver
+## Configure the l2MpsAsyn driver
 # L2MPSASYNConfig(
-#    Port Name,                 # the name given to this port driver
+#    Port Name,                 # The name given to this port driver
 #    App ID,                    # Application ID
 #    Record name Prefix,        # Record name prefix
 #    AppType bay0,              # Bay 0 Application type (BPM, BLEN)
@@ -96,14 +97,20 @@ L2MPSASYNSetManagerHost("lcls-dev3", 0)
 #    MPS Root Path              # OPTIONAL: Root path to the MPS register area
 L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
 
-## Configure asyn port driver
+## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
-#    Port Name,                 # the name given to this port driver
+#    Port Name,                 # The name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
 #    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
 #    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
 YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
+
+## Configure the tprTrigger driver
+# tprTriggerAsynDriverConfigure(
+#    Port name,                 # The name given to this port driver
+#    Root path)                 # Root path to the AmcCarrierCore register area
+tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierEmpty/AmcCarrierCore")
 
 # ==========================================
 # Load application specific configurations
@@ -133,6 +140,11 @@ dbLoadRecords("db/mps_blm.db",   "P=SOLN:GUNB:823, BAY=0, INP=1, PORT=${L2MPSASY
 # and the scale offset comes from the ADC word format being in 16-bit binary offset.
 dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:212,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
 dbLoadRecords("db/mps_scale_factor.db", "P=SOLN:GUNB:823,PROPERTY=I0,EGU=A,PREC=4,SLOPE=555.86e-6,OFFSET=32768")
+
+# tprTrigger database
+dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
+#dbLoadRecords("db/tprDeviceNamePV.db", "LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0,SYS=SYS0,NN=00,DEV_PREFIX=MPLN:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:")
+
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${PREFIX_MPS_BASE}, PORT=${YCPSWASYN_PORT}")
