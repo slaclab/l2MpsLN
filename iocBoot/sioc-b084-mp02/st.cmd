@@ -110,7 +110,7 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 # tprTriggerAsynDriverConfigure(
 #    Port name,                 # The name given to this port driver
 #    Root path)                 # Root path to the AmcCarrierCore register area
-tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierEmpty/AmcCarrierCore")
+tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
 
 # ==========================================
 # Load application specific configurations
