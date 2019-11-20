@@ -19,12 +19,14 @@ yaml-cpp_DIR = $(YAML_LIB)
 l2Mps_DIR = $(L2MPS_LIB)
 deviceLib_DIR = $(DEVICELIB_LIB)
 yamlReader_DIR  = $(YAMLREADER_LIB)
+hpstpr_DIR = $(HPSTPR_LIB)
+
 # =====================================================
 
 # ======================================================
 # LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
 # =======================================================
-USR_LIBS_Linux += l2Mps yamlReader deviceLib cpsw yaml-cpp
+USR_LIBS_Linux += l2Mps yamlReader deviceLib hpstpr cpsw yaml-cpp
 # ======================================================
 
 #=============================
@@ -45,6 +47,7 @@ l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
 l2MpsLN_DBD += yamlDownloader.dbd
+l2MpsLN_DBD += tprTriggerAsynDriver.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -53,6 +56,7 @@ l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
 l2MpsLN_LIBS += yamlDownloader
 l2MpsLN_LIBS += ycpswasyn
+l2MpsLN_LIBS += tprTrigger
 l2MpsLN_LIBS += asyn
 
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd

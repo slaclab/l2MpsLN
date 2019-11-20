@@ -22,6 +22,7 @@ YAMLLOADER_MODULE_VERSION=R1.1.5
 L2MPSASYN_MODULE_VERSION=R2.5.0
 YCPSWASYN_MODULE_VERSION=R3.2.0
 YAMLDOWNLOADER_MODULE_VERSION=R1.1.2
+TPRTRIGGER_MODULE_VERSION=R1.3.4
 
 # ==========================================================
 # Define module paths using pattern
@@ -36,6 +37,7 @@ YAMLLOADER=$(EPICS_MODULES)/yamlLoader/$(YAMLLOADER_MODULE_VERSION)
 L2MPSASYN=$(EPICS_MODULES)/l2MpsAsyn/$(L2MPSASYN_MODULE_VERSION)
 YCPSWASYN=$(EPICS_MODULES)/ycpswasyn/$(YCPSWASYN_MODULE_VERSION)
 YAMLDOWNLOADER=$(EPICS_MODULES)/yamlDownloader/$(YAMLDOWNLOADER_MODULE_VERSION)
+TPRTRIGGER=$(EPICS_MODULES)/tprTrigger/$(TPRTRIGGER_MODULE_VERSION)
 
 # =====================================================================
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
