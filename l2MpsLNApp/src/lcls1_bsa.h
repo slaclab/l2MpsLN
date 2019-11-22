@@ -14,6 +14,24 @@
 #include <cpsw_api_user.h>
 #include <BsaApi.h>
 
+// Class to manage BSA Channels
+class BsaChannels
+{
+public:
+    BsaChannels(const std::string& prefix, const std::vector<std::string>& names);
+    ~BsaChannels();
+
+    // Get an specific BSA channel
+    BsaChannel at(std::size_t i) const;
+
+    // Print a list of the BSA channels created
+    void printChannelIds() const;
+
+private:
+    // BSA channels
+    std::vector<BsaChannel> channels_;
+};
+
 class ReadStream
 {
 public:
@@ -22,7 +40,7 @@ public:
 
 private:
     // Factory method to crete all the vector of BSA channels based on the vector of channel names.
-    static std::vector<BsaChannel> createBsaChannels(const std::string& prefix, const std::vector<std::string>& names);
+    //static std::vector<BsaChannel> createBsaChannels(const std::string& prefix, const std::vector<std::string>& names);
 
     // Structure of the stream data.
     // This structure must be packed and byte
@@ -50,7 +68,7 @@ private:
     void streamTask();
 
     const std::vector<std::string> bsaChannelNames; // BSA channel names
-    std::vector<BsaChannel>        bsaChannels;     // BSA channels
+    BsaChannels                    bsaChannels;     // BSA channels
     Stream                         strm_;           // Firmware data stream interface
     boost::atomic<bool>            run;             // Flag to stop the thread
     std::thread                    streamThread_;   // Stream receiver thread

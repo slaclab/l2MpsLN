@@ -1,13 +1,45 @@
 
 #include "lcls1_bsa.h"
 
+BsaChannels::BsaChannels(const std::string& prefix, const std::vector<std::string>& names)
+{
+    for (auto it ( names.begin() ) ; it != names.end(); ++it)
+    {
+        std::string id ( prefix + ":" + *it );
+        channels_.push_back(BSA_CreateChannel(id.c_str()));
+    }
+}
+
+BsaChannels::~BsaChannels()
+{
+    for (auto it ( channels_.begin() ); it != channels_.end(); ++it )
+        BSA_ReleaseChannel(*it);
+}
+
+BsaChannel BsaChannels::at(std::size_t i) const
+{
+    // Do not check if the index is valid here.
+    // The std::vector's "at" will do it.
+    return channels_.at(i);
+}
+
+void BsaChannels::printChannelIds() const
+{
+    std::cout << "LCLS1 BSA channels:" << std::endl;
+    std::cout << "======================" << std::endl;
+    std::cout << "Total number of channels: " << channels_.size() << std::endl;
+    for (auto it ( channels_.begin() ); it != channels_.end(); ++it )
+    std::cout << "  - " << BSA_GetChannelId(*it) << std::endl;
+    std::cout << "======================" << std::endl;
+}
+
 ReadStream::ReadStream(const std::string& streamName, const std::string& recordPrefix)
 :
     // This are the parameters names for each of the 24 data words in the data stream.
     // The order here should match the order of the data words in the stream, as defined 
     // in the FW application.
     // The BSA PV name will be '${recordPrefix}:' followed by this parameter name.
-    bsaChannelNames{
+    bsaChannelNames {
         "LC1_BSA_00",
         "LC1_BSA_01", 
         "LC1_BSA_02", 
@@ -33,7 +65,8 @@ ReadStream::ReadStream(const std::string& streamName, const std::string& recordP
         "LC1_BSA_22", 
         "LC1_BSA_23", 
     },
-    bsaChannels(createBsaChannels(recordPrefix, bsaChannelNames)),
+    //bsaChannels(createBsaChannels(recordPrefix, bsaChannelNames)),
+    bsaChannels(recordPrefix, bsaChannelNames),
     strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
     run(true),
     streamThread_( std::thread( &ReadStream::streamTask, this) )
@@ -41,6 +74,8 @@ ReadStream::ReadStream(const std::string& streamName, const std::string& recordP
     // Set the name for the 'streamThread_' thread
     if( pthread_setname_np( streamThread_.native_handle(), "L2MpsLcls1Bsa" ) )
         std::cerr <<  "pthread_setname_np failed for L2MpsL1Bsa thread" << std::endl;
+
+    bsaChannels.printChannelIds();
 }
 
 ReadStream::~ReadStream()
@@ -121,19 +156,6 @@ void ReadStream::streamTask()
         //    std::cout << std::endl;
         //}
     }
-}
-
-std::vector<BsaChannel> ReadStream::createBsaChannels(const std::string& prefix, const std::vector<std::string>& names)
-{
-    std::vector<BsaChannel> temp;
-    for (auto it = names.begin(); it != names.end(); ++it)
-    {
-        std::string id ( prefix + ":" + *it );
-        std::cout << "  Creating BSA channel for: " << id << std::endl;
-        temp.push_back(BSA_CreateChannel(id.c_str()));
-    }
-
-    return temp;
 }
 
 extern "C" int Lcls1BsaConfig(const char* streamName, const char* recordPrefix)
