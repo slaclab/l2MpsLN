@@ -9,6 +9,7 @@
 #include <epicsExport.h>
 #include <alarm.h>
 #include <errlog.h>
+#include <boost/atomic.hpp>
 #include <yamlLoader.h>
 #include <cpsw_api_user.h>
 #include <BsaApi.h>
@@ -51,6 +52,7 @@ private:
     const std::vector<std::string> bsaChannelNames; // BSA channel names
     std::vector<BsaChannel>        bsaChannels;     // BSA channels
     Stream                         strm_;           // Firmware data stream interface
+    boost::atomic<bool>            run;             // Flag to stop the thread
     std::thread                    streamThread_;   // Stream receiver thread
 };
 

@@ -35,6 +35,7 @@ ReadStream::ReadStream(const std::string& streamName, const std::string& recordP
     },
     bsaChannels(createBsaChannels(recordPrefix, bsaChannelNames)),
     strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
+    run(true),
     streamThread_( std::thread( &ReadStream::streamTask, this) )
 {
     // Set the name for the 'streamThread_' thread
@@ -44,6 +45,9 @@ ReadStream::ReadStream(const std::string& streamName, const std::string& recordP
 
 ReadStream::~ReadStream()
 {
+    // Stop the thread
+    run = false;
+    streamThread_.join();
 }
 
 void ReadStream::streamTask()
@@ -54,6 +58,10 @@ void ReadStream::streamTask()
     //std::size_t count {0};
     for(;;)
     {
+        // Check if we should break the loop
+        if (!run)
+            break;
+
         // Read the data stream. This call is blocking with a 1s timeout
         got = strm_->read( buf, 10000, CTimeout(1000000) );
         
