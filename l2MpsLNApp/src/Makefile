@@ -41,7 +41,7 @@ DBD += l2MpsLN.dbd
 l2MpsLN_DBD += base.dbd
 l2MpsLN_DBD += devIocStats.dbd 
 l2MpsLN_DBD += asSupport.dbd
-l2MpsLN_DBD += lcls1_bsa.dbd
+l2MpsLN_DBD += l2mps_l1bsa.dbd
 
 # Include dbd files from all support applications:
 l2MpsLN_DBD += asyn.dbd
@@ -65,7 +65,7 @@ l2MpsLN_LIBS += asyn
 
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
 l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
-l2MpsLN_SRCS += lcls1_bsa
+l2MpsLN_SRCS += l2mps_l1bsa l2mps_l1bsa_channels
 
 # Build the main IOC entry point on workstation OSs.
 l2MpsLN_SRCS_DEFAULT += l2MpsLNMain.cpp

@@ -71,7 +71,7 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
@@ -98,10 +98,10 @@ L2MPSASYNSetManagerHost("lcls-dev3", 0)
 L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
 
 ## Configure the LCLS1 BSA driver
-# Lcls1BsaConfig(
+# L2MpsL1BsaConfig(
 #    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
 #    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
-Lcls1BsaConfig("Lcls1BsaStream", "${PREFIX_MPS_BASE}")
+L2MpsL1BsaConfig("Lcls1BsaStream", "${PREFIX_MPS_BASE}")
 
 ## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
