@@ -1,5 +1,25 @@
-#ifndef LCLS1_BSA_H
-#define LCLS1_BSA_H
+#ifndef L2MPS_L1BSA_H
+#define L2MPS_L1BSA_H
+
+/**
+ *-----------------------------------------------------------------------------
+ * Title         : L2MPS - LCLS1 BSA
+ * ----------------------------------------------------------------------------
+ * File          : l2mps_l1bsa.h
+ * Created       : 2019-11-22
+ *-----------------------------------------------------------------------------
+ * Description :
+ *    LCLS1 BSA support for the  LCLS2 MPS Link Node
+ *-----------------------------------------------------------------------------
+ * This file is part of l2MpsLN. It is subject to
+ * the license terms in the LICENSE.txt file found in the top-level directory
+ * of this distribution and at:
+    * https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+ * No part of l2MpsLN, including this file, may be
+ * copied, modified, propagated, or distributed except according to the terms
+ * contained in the LICENSE.txt file.
+ *-----------------------------------------------------------------------------
+**/
 
 #include <iostream>
 #include <string>
@@ -13,35 +33,15 @@
 #include <yamlLoader.h>
 #include <cpsw_api_user.h>
 #include <BsaApi.h>
+#include "l2mps_l1bsa_channels.h"
 
-// Class to manage BSA Channels
-class BsaChannels
+class L2MpsL1Bsa
 {
 public:
-    BsaChannels(const std::string& prefix, const std::vector<std::string>& names);
-    ~BsaChannels();
-
-    // Get an specific BSA channel
-    BsaChannel at(std::size_t i) const;
-
-    // Print a list of the BSA channels created
-    void printChannelIds() const;
+    L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix);
+    ~L2MpsL1Bsa();
 
 private:
-    // BSA channels
-    std::vector<BsaChannel> channels_;
-};
-
-class ReadStream
-{
-public:
-    ReadStream(const std::string& streamName, const std::string& recordPrefix);
-    ~ReadStream();
-
-private:
-    // Factory method to crete all the vector of BSA channels based on the vector of channel names.
-    //static std::vector<BsaChannel> createBsaChannels(const std::string& prefix, const std::vector<std::string>& names);
-
     // Structure of the stream data.
     // This structure must be packed and byte
     // aligned to match the firmware stream
@@ -68,7 +68,7 @@ private:
     void streamTask();
 
     const std::vector<std::string> bsaChannelNames; // BSA channel names
-    BsaChannels                    bsaChannels;     // BSA channels
+    L2MpsL1BsaChannels             bsaChannels;     // BSA channels
     Stream                         strm_;           // Firmware data stream interface
     boost::atomic<bool>            run;             // Flag to stop the thread
     std::thread                    streamThread_;   // Stream receiver thread
