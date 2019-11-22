@@ -92,9 +92,9 @@ void ReadStream::streamTask()
             BSA_StoreData(
                 bsaChannels.at(i), 
                 etimeStamp, //pSD->timeStamp, 
-                pSD->data[i],
-                epicsAlarmNone,  // For now, we don't support alarm
-                epicsSevNone);   // nor severity.
+                static_cast<double>(pSD->data[i]),
+                static_cast<BsaStat>(epicsAlarmNone),  // For now, we don't support alarm
+                static_cast<BsaSevr>(epicsSevNone));   // nor severity.
         }
 
         // This is temporal debug feature. It prints out 
