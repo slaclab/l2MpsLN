@@ -470,10 +470,6 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[1]                        MITIG_mpsRtmDest_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[2]                        MITIG_mpsRtmDest_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[3]                        MITIG_mpsRtmDest_3
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[4]                        MITIG_mpsRtmDest_4
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[5]                        MITIG_mpsRtmDest_5
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[6]                        MITIG_mpsRtmDest_6
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[7]                        MITIG_mpsRtmDest_7
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsTimeoutCnt                        MITIG_mpsTimeoutCnt
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/clrTimeout                           MITIG_clrTimeout
 

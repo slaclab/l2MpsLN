@@ -307,10 +307,6 @@ file "RegRW.template" { pattern
 { MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second", "",         MITIG_mpsRtmDest_1                  }
 { MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second", "",         MITIG_mpsRtmDest_2                  }
 { MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second", "",         MITIG_mpsRtmDest_3                  }
-{ MITMSG_RTMDEST_4,         "Destination for RTM channel 4",            "1 second", "",         MITIG_mpsRtmDest_4                  }
-{ MITMSG_RTMDEST_5,         "Destination for RTM channel 5",            "1 second", "",         MITIG_mpsRtmDest_5                  }
-{ MITMSG_RTMDEST_6,         "Destination for RTM channel 6",            "1 second", "",         MITIG_mpsRtmDest_6                  }
-{ MITMSG_RTMDEST_7,         "Destination for RTM channel 7",            "1 second", "",         MITIG_mpsRtmDest_7                  }
 { LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "1 second", "",         LC1_UdpBroadcastIP                  }
 { LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "1 second", "us",       LC1_TimeoutTime                     }
 { LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "1 second", "",         LC1_TimeoutMask                     }
