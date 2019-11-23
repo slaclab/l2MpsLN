@@ -113,19 +113,12 @@ void L2MpsL1Bsa::streamTask()
         // Create a stream data pointer on the received data buffer
         stream_data_t* pSD{ (stream_data_t*)buf };
 
-        // Temporal fix: the FW app is swapping the word
-        // order of the timestamp, so let do a swap in SW
-        // for now
-        epicsTimeStamp etimeStamp;
-        etimeStamp.secPastEpoch = pSD->timeStamp_H;
-        etimeStamp.nsec = pSD->timeStamp_L;
-
         // Copy the LCLS1 BSA data from the stream into the BsaCore facility
         for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
         {
             BSA_StoreData(
                 bsaChannels_.at(i),
-                etimeStamp, //pSD->timeStamp,
+                pSD->timeStamp,
                 static_cast<double>(pSD->data[i]),
                 static_cast<BsaStat>(epicsAlarmNone),  // For now, we don't support alarm
                 static_cast<BsaSevr>(epicsSevNone));   // nor severity.
@@ -141,7 +134,7 @@ void L2MpsL1Bsa::streamTask()
                 std::cout << "===================" << std::endl;
                 std::cout << std::hex;
                 std::cout << "Header     = 0x" <<  pSD->header    << std::endl;
-                std::cout << "Time stamp = 0x" <<  etimeStamp.secPastEpoch << ", " << etimeStamp.nsec << std::endl;
+                std::cout << "Time stamp = 0x" <<  pSD->timeStamp.secPastEpoch << ", " << pSD->timeStamp.nsec << std::endl;
                 for (std::size_t i{0}; i < 6; ++i)
                     std::cout << "DMOD       = 0x" <<  pSD->dmod[i] << std::endl;
                 std::cout << "edefInit   = 0x" <<  pSD->edefInit  << std::endl;
