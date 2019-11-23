@@ -57,8 +57,7 @@ private:
         // Temporal fix: the FW app is swapping the word
         // order of the timestamp, so let do a swap in SW
         // for now
-        uint32_t timeStamp_L; //epicsTimeStamp timeStamp;
-        uint32_t timeStamp_H;
+        epicsTimeStamp timeStamp;
         uint32_t dmod[6];
         uint32_t edefInit;
         uint32_t edefMajor;
