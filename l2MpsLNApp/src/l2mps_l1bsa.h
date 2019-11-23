@@ -53,17 +53,14 @@ private:
     // aligned to match the firmware stream
     typedef struct
     {
-        uint32_t header;
-        // Temporal fix: the FW app is swapping the word
-        // order of the timestamp, so let do a swap in SW
-        // for now
+        uint32_t       header;
         epicsTimeStamp timeStamp;
-        uint32_t dmod[6];
-        uint32_t edefInit;
-        uint32_t edefMajor;
-        uint32_t edefMinor;
-        uint32_t edefAvgDn;
-        uint32_t data[24];
+        uint32_t       dmod[6];
+        uint32_t       edefInit;
+        uint32_t       edefMajor;
+        uint32_t       edefMinor;
+        uint32_t       edefAvgDn;
+        uint32_t       data[24];
     }
     __attribute__((packed, aligned(1)))
     stream_data_t;
