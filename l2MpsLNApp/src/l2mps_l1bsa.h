@@ -41,21 +41,21 @@ class L2MpsL1Bsa
 public:
     L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix);
     ~L2MpsL1Bsa();
-    
-    // Flags iand variables accessible from iocShell
+
+    // Flags and variables accessible from iocShell
     static bool        enable_;      // Flag to enable/disable the processing of BSA data
-    static bool        debug_;       // Flag to enable/dosable debug mode
+    static bool        debug_;       // Flag to enable/disable debug mode
     static std::size_t strmCounter_; // Number of streams received
 
 private:
     // Structure of the stream data.
     // This structure must be packed and byte
     // aligned to match the firmware stream
-    typedef struct 
+    typedef struct
     {
         uint32_t header;
-        // Temporal fix: the FW app is swapping the word 
-        // order of the timestamp, so let do a swap in SW 
+        // Temporal fix: the FW app is swapping the word
+        // order of the timestamp, so let do a swap in SW
         // for now
         uint32_t timeStamp_L; //epicsTimeStamp timeStamp;
         uint32_t timeStamp_H;
@@ -65,11 +65,11 @@ private:
         uint32_t edefMinor;
         uint32_t edefAvgDn;
         uint32_t data[24];
-    } 
+    }
     __attribute__((packed, aligned(1)))
     stream_data_t;
 
-    // This method receive the dat stream, process it, and move the data
+    // This method receive the data stream, process it, and move the data
     // to BsaCore. It runs in the streamThread_ thread.
     void streamTask();
 

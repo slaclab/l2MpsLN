@@ -20,7 +20,7 @@
 
 #include "l2mps_l1bsa.h"
 
-// Initilize static members
+// Initialize static members
 bool        L2MpsL1Bsa::enable_      = true;
 bool        L2MpsL1Bsa::debug_       = false;
 std::size_t L2MpsL1Bsa::strmCounter_ = 0;
@@ -28,34 +28,34 @@ std::size_t L2MpsL1Bsa::strmCounter_ = 0;
 L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix)
 :
     // This are the parameters names for each of the 24 data words in the data stream.
-    // The order here should match the order of the data words in the stream, as defined 
+    // The order here should match the order of the data words in the stream, as defined
     // in the FW application.
     // The BSA PV name will be '${recordPrefix}:' followed by this parameter name.
     bsaChannelNames_ {
         "LC1_BSA_00",
-        "LC1_BSA_01", 
-        "LC1_BSA_02", 
-        "LC1_BSA_03", 
-        "LC1_BSA_04", 
-        "LC1_BSA_05", 
-        "LC1_BSA_06", 
-        "LC1_BSA_07", 
-        "LC1_BSA_08", 
-        "LC1_BSA_09", 
-        "LC1_BSA_10", 
-        "LC1_BSA_11", 
-        "LC1_BSA_12", 
-        "LC1_BSA_13", 
-        "LC1_BSA_14", 
-        "LC1_BSA_15", 
-        "LC1_BSA_16", 
-        "LC1_BSA_17", 
-        "LC1_BSA_18", 
-        "LC1_BSA_19", 
-        "LC1_BSA_20", 
-        "LC1_BSA_21", 
-        "LC1_BSA_22", 
-        "LC1_BSA_23", 
+        "LC1_BSA_01",
+        "LC1_BSA_02",
+        "LC1_BSA_03",
+        "LC1_BSA_04",
+        "LC1_BSA_05",
+        "LC1_BSA_06",
+        "LC1_BSA_07",
+        "LC1_BSA_08",
+        "LC1_BSA_09",
+        "LC1_BSA_10",
+        "LC1_BSA_11",
+        "LC1_BSA_12",
+        "LC1_BSA_13",
+        "LC1_BSA_14",
+        "LC1_BSA_15",
+        "LC1_BSA_16",
+        "LC1_BSA_17",
+        "LC1_BSA_18",
+        "LC1_BSA_19",
+        "LC1_BSA_20",
+        "LC1_BSA_21",
+        "LC1_BSA_22",
+        "LC1_BSA_23",
     },
     bsaChannels_(recordPrefix, bsaChannelNames_),
     strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
@@ -90,9 +90,9 @@ void L2MpsL1Bsa::streamTask()
 
         // Read the data stream. This call is blocking with a 1s timeout
         got = strm_->read( buf, sizeof(stream_data_t), CTimeout(1000000) );
-        
-        // If BSA processing is disable, just discard the strema data
-        // We still need to read the buffer to avoid back-preasuring the FW
+
+        // If BSA processing is disable, just discard the stream data
+        // We still need to read the buffer to avoid back-pressuring the FW
         if ( !enable_ )
             continue;
 
@@ -124,14 +124,14 @@ void L2MpsL1Bsa::streamTask()
         for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
         {
             BSA_StoreData(
-                bsaChannels_.at(i), 
-                etimeStamp, //pSD->timeStamp, 
+                bsaChannels_.at(i),
+                etimeStamp, //pSD->timeStamp,
                 static_cast<double>(pSD->data[i]),
                 static_cast<BsaStat>(epicsAlarmNone),  // For now, we don't support alarm
                 static_cast<BsaSevr>(epicsSevNone));   // nor severity.
         }
 
-        // If debug mode is enabled, print out 
+        // If debug mode is enabled, print out
         // 1/360 frames into the IOC shell
         if ( debug_ )
         {

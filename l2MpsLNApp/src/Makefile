@@ -39,7 +39,7 @@ DBD += l2MpsLN.dbd
 
 # l2MpsLN.dbd will be made up from these files:
 l2MpsLN_DBD += base.dbd
-l2MpsLN_DBD += devIocStats.dbd 
+l2MpsLN_DBD += devIocStats.dbd
 l2MpsLN_DBD += asSupport.dbd
 l2MpsLN_DBD += l2mps_l1bsa.dbd
 
