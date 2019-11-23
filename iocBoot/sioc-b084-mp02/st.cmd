@@ -97,6 +97,12 @@ L2MPSASYNSetManagerHost("lcls-dev3", 0)
 #    MPS Root Path              # OPTIONAL: Root path to the MPS register area
 L2MPSASYNConfig("${L2MPSASYN_PORT}","${MPS_APP_ID}", "${PREFIX_MPS_BASE}", "${PREFIX_MPS_BAY0}", "${PREFIX_MPS_BAY1}", "")
 
+## Configure the LCLS1 BSA driver
+# L2MpsL1BsaConfig(
+#    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
+#    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
+L2MpsL1BsaConfig("Lcls1BsaStream", "${PREFIX_MPS_BASE}")
+
 ## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
 #    Port Name,                 # The name given to this port driver
