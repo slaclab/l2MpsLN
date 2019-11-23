@@ -22,6 +22,7 @@
 **/
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <inttypes.h>
 #include <thread>
@@ -40,6 +41,11 @@ class L2MpsL1Bsa
 public:
     L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix);
     ~L2MpsL1Bsa();
+    
+    // Flags iand variables accessible from iocShell
+    static bool        enable_;      // Flag to enable/disable the processing of BSA data
+    static bool        debug_;       // Flag to enable/dosable debug mode
+    static std::size_t strmCounter_; // Number of streams received
 
 private:
     // Structure of the stream data.
@@ -67,11 +73,11 @@ private:
     // to BsaCore. It runs in the streamThread_ thread.
     void streamTask();
 
-    const std::vector<std::string> bsaChannelNames; // BSA channel names
-    L2MpsL1BsaChannels             bsaChannels;     // BSA channels
-    Stream                         strm_;           // Firmware data stream interface
-    boost::atomic<bool>            run;             // Flag to stop the thread
-    std::thread                    streamThread_;   // Stream receiver thread
+    const std::vector<std::string> bsaChannelNames_; // BSA channel names
+    L2MpsL1BsaChannels             bsaChannels_;     // BSA channels
+    Stream                         strm_;            // Firmware data stream interface
+    boost::atomic<bool>            run_;             // Flag to stop the thread
+    std::thread                    streamThread_;    // Stream receiver thread
 };
 
 #endif
