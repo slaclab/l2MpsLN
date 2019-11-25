@@ -223,12 +223,6 @@ file "RegRW.template" { pattern
 { LC2_ANA_INTCNT_21,        "LCLS2 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCount_21         }
 { LC2_ANA_INTCNT_22,        "LCLS2 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCount_22         }
 { LC2_ANA_INTCNT_23,        "LCLS2 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCount_23         }
-{ LC2_ANA_PROCSEL_0,        "LCLS2 Processing Selection (ch 0)",        "1 second", "",         ANACORE_ProcessingSelect_0          }
-{ LC2_ANA_PROCSEL_1,        "LCLS2 Processing Selection (ch 1)",        "1 second", "",         ANACORE_ProcessingSelect_1          }
-{ LC2_ANA_PROCSEL_2,        "LCLS2 Processing Selection (ch 2)",        "1 second", "",         ANACORE_ProcessingSelect_2          }
-{ LC2_ANA_PROCSEL_3,        "LCLS2 Processing Selection (ch 3)",        "1 second", "",         ANACORE_ProcessingSelect_3          }
-{ LC2_ANA_PROCSEL_4,        "LCLS2 Processing Selection (ch 4)",        "1 second", "",         ANACORE_ProcessingSelect_4          }
-{ LC2_ANA_PROCSEL_5,        "LCLS2 Processing Selection (ch 5)",        "1 second", "",         ANACORE_ProcessingSelect_5          }
 { LC2_ANA_SLOPE_0,          "LCLS2 Equation slope (ch 0)",              "1 second", "",         ANACORE_Slope_0                     }
 { LC2_ANA_SLOPE_1,          "LCLS2 Equation slope (ch 1)",              "1 second", "",         ANACORE_Slope_1                     }
 { LC2_ANA_SLOPE_2,          "LCLS2 Equation slope (ch 2)",              "1 second", "",         ANACORE_Slope_2                     }
@@ -271,12 +265,6 @@ file "RegRW.template" { pattern
 { LC1_ANA_INTCNT_21,        "LCLS1 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_21      }
 { LC1_ANA_INTCNT_22,        "LCLS1 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_22      }
 { LC1_ANA_INTCNT_23,        "LCLS1 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_23      }
-{ LC1_ANA_PROCSEL_0,        "LCLS1 Processing Selection (ch 0)",        "1 second", "",         ANACORE_ProcessingSelectL1_0        }
-{ LC1_ANA_PROCSEL_1,        "LCLS1 Processing Selection (ch 1)",        "1 second", "",         ANACORE_ProcessingSelectL1_1        }
-{ LC1_ANA_PROCSEL_2,        "LCLS1 Processing Selection (ch 2)",        "1 second", "",         ANACORE_ProcessingSelectL1_2        }
-{ LC1_ANA_PROCSEL_3,        "LCLS1 Processing Selection (ch 3)",        "1 second", "",         ANACORE_ProcessingSelectL1_3        }
-{ LC1_ANA_PROCSEL_4,        "LCLS1 Processing Selection (ch 4)",        "1 second", "",         ANACORE_ProcessingSelectL1_4        }
-{ LC1_ANA_PROCSEL_5,        "LCLS1 Processing Selection (ch 5)",        "1 second", "",         ANACORE_ProcessingSelectL1_5        }
 { LC1_ANA_SLOPE_0,          "LCLS1 Equation slope (ch 0)",              "1 second", "",         ANACORE_SlopeL1_0                   }
 { LC1_ANA_SLOPE_1,          "LCLS1 Equation slope (ch 1)",              "1 second", "",         ANACORE_SlopeL1_1                   }
 { LC1_ANA_SLOPE_2,          "LCLS1 Equation slope (ch 2)",              "1 second", "",         ANACORE_SlopeL1_2                   }
@@ -451,16 +439,28 @@ file "Reg1BitRO.template" { pattern
 # 2-bit Register with ScalVal interfaces
 #======================================
 file "Reg2BitsRW.template" { pattern
-{ R,                    DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                     }
-{ LC2_ANA_AMCEN,        "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisable      }
-{ LC1_ANA_AMCEN,        "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",      "None",         "1 second", ANACORE_InputDisableL1    }
-{ LC2_ANA_PRCVALSEL,    "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelect    }
-{ LC1_ANA_PRCVALSEL,    "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",   "Avg Values",   "1 second", ANACORE_PrcValueSelectL1  }
-{ TIM_SRC_RTM0,         "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_0              }
-{ TIM_SRC_FPGA,         "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
-{ TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
-{ TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
-{ MIT_KICK_TYPE,        "Type of mitigation kicker",            "None",         "BKRCUS",           "ByKIK",        "ByKIKS",       "1 second", MITIG_mpsConfig           }
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           SCAN,       PARAM                           }
+{ LC2_ANA_AMCEN,        "LCLS2 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",          "None",         "1 second", ANACORE_InputDisable            }
+{ LC1_ANA_AMCEN,        "LCLS1 Disable analog AMC card",        "Both",         "B1 Only",          "B0 Only",          "None",         "1 second", ANACORE_InputDisableL1          }
+{ LC2_ANA_PRCVALSEL,    "LCLS2 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",       "Avg Values",   "1 second", ANACORE_PrcValueSelect          }
+{ LC1_ANA_PRCVALSEL,    "LCLS1 Select value to be processed",   "Peak Values",  "Forced Values",    "Min Values",       "Avg Values",   "1 second", ANACORE_PrcValueSelectL1        }
+{ TIM_SRC_RTM0,         "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_0                    }
+{ TIM_SRC_FPGA,         "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_1                    }
+{ TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_2                    }
+{ TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_3                    }
+{ MIT_KICK_TYPE,        "Type of mitigation kicker",            "None",         "BKRCUS",           "ByKIK",            "ByKIKS",       "1 second", MITIG_mpsConfig                 }
+{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_0      }
+{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_1      }
+{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_2      }
+{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_3      }
+{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_4      }
+{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_5      }
+{ LC1_ANA_PROCSEL_0,    "LCLS1 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_0    }
+{ LC1_ANA_PROCSEL_1,    "LCLS1 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_1    }
+{ LC1_ANA_PROCSEL_2,    "LCLS1 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_2    }
+{ LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_3    }
+{ LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_4    }
+{ LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_5    }
 }
 
 #======================================
