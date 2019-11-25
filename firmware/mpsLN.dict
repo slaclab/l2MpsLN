@@ -472,6 +472,7 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[3]                        MITIG_mpsRtmDest_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsTimeoutCnt                        MITIG_mpsTimeoutCnt
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/clrTimeout                           MITIG_clrTimeout
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsConfig                            MITIG_mpsConfig
 
 # =============================
 # RTM Digital I/O
