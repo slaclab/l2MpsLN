@@ -442,7 +442,7 @@
 /mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcValid                  AMCADC_AdcValid_1
 
 # =============================
-# Mitigation Node
+# Mitigation Core
 # =============================
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mitMsgClass[0]                       MITIG_mitMsgClass_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mitMsgClass[1]                       MITIG_mitMsgClass_1
@@ -472,6 +472,7 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsRtmDest[3]                        MITIG_mpsRtmDest_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsTimeoutCnt                        MITIG_mpsTimeoutCnt
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/clrTimeout                           MITIG_clrTimeout
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsMitigationCore/mpsConfig                            MITIG_mpsConfig
 
 # =============================
 # RTM Digital I/O

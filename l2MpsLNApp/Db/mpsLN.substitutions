@@ -460,6 +460,7 @@ file "Reg2BitsRW.template" { pattern
 { TIM_SRC_FPGA,         "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1              }
 { TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2              }
 { TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3              }
+{ MIT_KICK_TYPE,        "Type of mitigation kicker",            "None",         "BKRCUS",           "ByKIK",        "ByKIKS",       "1 second", MITIG_mpsConfig           }
 }
 
 #======================================
