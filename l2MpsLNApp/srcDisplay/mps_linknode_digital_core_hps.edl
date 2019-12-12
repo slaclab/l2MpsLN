@@ -1,0 +1,607 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 339
+y 231
+w 320
+h 400
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+snapToGrid
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 60
+w 300
+h 210
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 320
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 290
+w 300
+h 90
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 50
+y 240
+w 120
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Debounced in values"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 101
+y 205
+w 69
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Sw bit value"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 100
+y 175
+w 70
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Sw bit errors"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 230
+y 80
+w 50
+h 24
+controlPv "$(P):DIG_APPID_RBV"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 180
+y 80
+w 50
+h 32
+controlPv "$(P):DIG_APPID"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 110
+w 100
+h 24
+controlPv "$(P):BYTE_COUNT"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 340
+w 80
+h 32
+controlPv "$(P):DIG_FORCEBITS"
+displayMode "hex"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 347
+w 80
+h 20
+controlPv "$(P):DIG_FORCEBITS_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 280
+w 80
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Force Bits "
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 350
+w 59
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Digital Bits"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 310
+w 80
+h 24
+controlPv "$(P):DIG_FORCEBITSEN_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 100
+y 310
+w 80
+h 24
+fgColor index 14
+onColor index 4
+offColor index 4
+inconsistentColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P):DIG_FORCEBITSEN"
+indicatorPv "$(P):DIG_FORCEBITSEN_RBV"
+3d
+font "helvetica-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 50
+y 310
+w 39
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 10
+y 20
+w 136
+h 16
+controlPv "$(P):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 260
+y 10
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 50
+w 130
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Digital Message Core"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 119
+y 145
+w 51
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Sw bytes"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 101
+y 115
+w 69
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Digital bytes"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 91
+y 85
+w 79
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Application ID"
+}
+autoSize
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 180
+y 164
+w 50
+h 32
+controlPv "$(P):DIG_SWBITERR"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 180
+y 196
+w 50
+h 32
+controlPv "$(P):DIG_SWBIT"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 230
+w 100
+h 24
+controlPv "$(P):DIG_DBIN"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 230
+y 200
+w 50
+h 24
+controlPv "$(P):DIG_SWBIT_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 230
+y 170
+w 50
+h 24
+controlPv "$(P):DIG_SWBITERR_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 140
+w 100
+h 24
+controlPv "$(P):DIG_SWBYTECNT"
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+

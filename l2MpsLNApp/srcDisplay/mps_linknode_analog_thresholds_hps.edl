@@ -1,0 +1,5094 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 505
+y 263
+w 800
+h 530
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 4
+ctlBgColor2 index 4
+topShadowColor index 1
+botShadowColor index 11
+snapToGrid
+gridSize 8
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 536
+y 56
+w 256
+h 96
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 800
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 272
+y 56
+w 256
+h 376
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 88
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 384
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 384
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 384
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T7_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 56
+w 256
+h 376
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 160
+y 8
+w 448
+h 24
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 7
+useDisplayBg
+value {
+  "$(CH_NAME) - $(P):$(CH)"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 752
+y 8
+w 40
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 408
+w 80
+h 16
+controlPv "$(P):$(CH)_THR_CNT"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 72
+y 408
+w 90
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Threshold count"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 48
+w 144
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Standard (SC) "
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 88
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 104
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Set"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 168
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Readback"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 96
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 0"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 136
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 1"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 176
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 2"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 216
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 3"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 256
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 4"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 296
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 5"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 336
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 6"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 376
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 7"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 448
+w 520
+h 64
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 440
+w 136
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Channel information"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 32
+y 462
+w 110
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Threshold channel"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 32
+y 486
+w 52
+h 14
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Byte map"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 216
+y 460
+w 66
+h 14
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Scale slope"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 304
+y 464
+w 160
+h 16
+controlPv "$(P):$(CH)_SS_RBV"
+format "exponential"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+id "ScaleFactor"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 152
+y 488
+w 56
+h 16
+controlPv "$(P):$(CH)_THR_BYTEMAP"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 152
+y 464
+w 56
+h 16
+controlPv "$(P):$(CH)_THR_CH"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 304
+y 488
+w 160
+h 16
+controlPv "$(P):$(CH)_SO_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+id "ScaleFactor"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 216
+y 484
+w 65
+h 14
+font "helvetica-medium-r-12.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Scale offset"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 88
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 88
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 104
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 104
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 128
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 144
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 128
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T1_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 128
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 128
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 128
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T1_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 144
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 144
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 144
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T1_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 144
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T1_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 168
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 184
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 168
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T2_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 168
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 168
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 168
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T2_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 184
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 184
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 184
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T2_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 184
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T2_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 208
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 224
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 208
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T3_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 208
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 208
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 208
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T3_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 224
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 224
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 224
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T3_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 224
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T3_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 264
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T4_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 264
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 264
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 264
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T4_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 248
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 248
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 248
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T4_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 248
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T4_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 264
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 248
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 304
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T5_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 304
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 304
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 304
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T5_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 288
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 288
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 288
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T5_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 288
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T5_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 304
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 288
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 328
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 344
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 328
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T6_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 328
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 328
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 328
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T6_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 344
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 344
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 344
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T6_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 344
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T6_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 384
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T7_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 384
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 384
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 384
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T7_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 88
+y 368
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 168
+y 368
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 88
+y 368
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T7_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 88
+y 368
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T7_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 384
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 56
+y 368
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 384
+y 408
+w 39
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 408
+w 80
+h 16
+controlPv "$(P):$(CH)_ALT_EN"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 272
+y 48
+w 168
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  " Alternative table (SC) "
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 88
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 104
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Set"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 432
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Readback"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 96
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 0"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 136
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 1"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 176
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 2"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 216
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 3"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 256
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 4"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 296
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 5"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 336
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 6"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 376
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 7"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 88
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 104
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 104
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 128
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 144
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 128
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T1_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 128
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 128
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 128
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T1_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 144
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 144
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 144
+w 80
+h 16
+controlPv "$(P):$(CH)_T1_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T1_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 144
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T1_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 168
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 184
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 168
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T2_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 168
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 168
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 168
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T2_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 184
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 184
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 184
+w 80
+h 16
+controlPv "$(P):$(CH)_T2_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T2_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 184
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T2_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 208
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 224
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 208
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T3_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 208
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 208
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 208
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T3_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 224
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 224
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 224
+w 80
+h 16
+controlPv "$(P):$(CH)_T3_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T3_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 224
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T3_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 264
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T4_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 264
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 264
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 264
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T4_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 248
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 248
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 248
+w 80
+h 16
+controlPv "$(P):$(CH)_T4_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T4_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 248
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T4_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 264
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 248
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 304
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T5_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 304
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 304
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 304
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T5_ALT_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 288
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 288
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 288
+w 80
+h 16
+controlPv "$(P):$(CH)_T5_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T5_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 288
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T5_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 304
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 288
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 328
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 344
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 328
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T6_ALT_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 328
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 328
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 328
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T6_ALT_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 344
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 344
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_ALT_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 344
+w 80
+h 16
+controlPv "$(P):$(CH)_T6_ALT_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T6_ALTS_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 344
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T6_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 384
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T7_ALT_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 352
+y 368
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 432
+y 368
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_ALT_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 352
+y 368
+w 80
+h 16
+controlPv "$(P):$(CH)_T7_ALT_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_ALT_T7_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 352
+y 368
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T7_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 384
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 368
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 8
+y 16
+w 136
+h 16
+controlPv "$(P_LN):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 616
+y 88
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_LC1_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 616
+y 88
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_LC1_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_LC1_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 536
+y 48
+w 88
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  " NC table "
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 584
+y 88
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 584
+y 104
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Set"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 696
+y 72
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Readback"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 544
+y 96
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 0"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 88
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_LC1_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 616
+y 104
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_LC1_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 616
+y 104
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_LC1_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_LC1_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 104
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_LC1_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 536
+y 168
+w 256
+h 96
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 616
+y 200
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 200
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_IDL_L_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 616
+y 200
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_IDL_L"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_IDL_L_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 536
+y 160
+w 160
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  " Idle table (SC - no beam)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 584
+y 200
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Min"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 584
+y 216
+w 32
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Max"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 184
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Set"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 696
+y 184
+w 80
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Readback"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 544
+y 208
+w 40
+h 16
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Thr 0"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 200
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_IDL_L_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 616
+y 216
+w 160
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 216
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_IDL_H_RBV"
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 616
+y 216
+w 80
+h 16
+controlPv "$(P):$(CH)_T0_IDL_H"
+font "helvetica-medium-r-10.0"
+fontAlign "right"
+fgColor index 14
+bgColor index 3
+motifWidget
+limitsFromDb
+nullColor index 0
+showUnits
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+endGroup
+
+visPv "$(P):$(CH)_T0_IDL_H_EN_RBV"
+visInvert
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 616
+y 216
+w 64
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+visPv "$(P):$(CH)_T0_IDL_H_EN_RBV"
+visMin "0"
+visMax "1"
+value {
+  "Disabled"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 128
+w 80
+h 16
+controlPv "$(P):$(CH)_LC1_EN"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 648
+y 128
+w 39
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 648
+y 240
+w 39
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 696
+y 240
+w 80
+h 16
+controlPv "$(P):$(CH)_IDL_EN"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+

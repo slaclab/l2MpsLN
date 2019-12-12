@@ -1,0 +1,3385 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 872
+y 161
+w 644
+h 800
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+snapToGrid
+gridSize 2
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 490
+w 630
+h 30
+lineColor index 3
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 430
+w 630
+h 30
+lineColor index 3
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 370
+w 630
+h 30
+lineColor index 3
+fill
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 346
+w 630
+h 206
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 60
+w 630
+h 278
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 570
+w 630
+h 220
+lineColor index 14
+fillColor index 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 420
+y 600
+w 210
+h 30
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 420
+y 660
+w 210
+h 30
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 610
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 670
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 640
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 700
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 3"
+}
+autoSize
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 420
+y 720
+w 210
+h 30
+lineColor index 3
+fill
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 760
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 5"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 430
+y 730
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 4"
+}
+autoSize
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 650
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y -100
+w 147
+h 16
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "MPS LN Analog Core"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 560
+w 100
+h 20
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+value {
+  " Expert Section"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 73
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 70
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 80
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 0"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 103
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 100
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 133
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 130
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 163
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 160
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 73
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 70
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 103
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_5_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 100
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_5"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 133
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_6_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 130
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_6"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 163
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_7_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 160
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_7"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 73
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_8_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 70
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_8"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 103
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_9_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 100
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_9"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 133
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_10_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 130
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_10"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 163
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_11_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 160
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_11"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 213
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_12_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 210
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_12"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 243
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_13_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 240
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_13"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 273
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_14_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 270
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_14"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 180
+y 303
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_15_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 100
+y 300
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_15"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 213
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_17_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 240
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_17"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 243
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_16_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 210
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_16"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 273
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_18_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 270
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_18"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 380
+y 303
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_19_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 300
+y 300
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_19"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 213
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_20_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 210
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_20"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 243
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_21_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 240
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_21"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 273
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_22_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 270
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_22"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 580
+y 303
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTCNT_23_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 500
+y 300
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTCNT_23"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 80
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 110
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 140
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 170
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 80
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 110
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 140
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 170
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 240
+y 80
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 80
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 110
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 140
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 170
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 440
+y 80
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 220
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 250
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 280
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 80
+y 310
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 40
+y 220
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 220
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 250
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 280
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 280
+y 310
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 240
+y 220
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 220
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 250
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 280
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 480
+y 310
+w 10
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 440
+y 220
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 5"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 18
+y 50
+w 124
+h 16
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  " Integration Counts  "
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 10
+y 20
+w 136
+h 16
+controlPv "$(P):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 50
+y 350
+w 150
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Processing Select"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 380
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 470
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 500
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 530
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 5"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 440
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 410
+w 26
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 270
+y 350
+w 90
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Slopes"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 470
+y 350
+w 100
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Intercepts"
+}
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 520
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_5"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 523
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_5_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 490
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 493
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 460
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 463
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 430
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 433
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 400
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 403
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 80
+y 370
+w 75
+h 32
+controlPv "$(P):LC1_ANA_PROCSEL_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 160
+y 373
+w 35
+h 28
+controlPv "$(P):LC1_ANA_PROCSEL_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 523
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_5_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 520
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_5"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 493
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 490
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 463
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 460
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 433
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 430
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 403
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 400
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 360
+y 373
+w 35
+h 28
+controlPv "$(P):LC1_ANA_SLOPE_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 280
+y 370
+w 75
+h 32
+controlPv "$(P):LC1_ANA_SLOPE_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 523
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 520
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 493
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 490
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 463
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 460
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 433
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 430
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 403
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 400
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 373
+w 35
+h 28
+controlPv "$(P):LC1_ANA_INTERCEPT_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 370
+w 75
+h 32
+controlPv "$(P):LC1_ANA_INTERCEPT_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 450
+y 580
+w 130
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Force Peaks"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 310
+y 630
+w 80
+h 20
+controlPv "$(P):LC1_ANA_PRCVALSEL_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 310
+y 600
+w 80
+h 24
+fgColor index 14
+onColor index 4
+offColor index 4
+inconsistentColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P):LC1_ANA_PRCVALSEL"
+indicatorPv "$(P):LC1_ANA_PRCVALSEL_RBV"
+3d
+font "helvetica-medium-r-10.0"
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 603
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 600
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 300
+y 583
+w 119
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Enable Force Values"
+}
+autoSize
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 20
+y 570
+w 0
+h 0
+lineColor index 14
+fillColor index 0
+numPoints 1
+xPoints {
+  0 20
+}
+yPoints {
+  0 570
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 630
+y 520
+w 0
+h 0
+lineColor index 14
+fillColor index 0
+lineWidth 2
+numPoints 1
+xPoints {
+  0 630
+}
+yPoints {
+  0 520
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 10
+y 520
+w 0
+h 0
+lineColor index 14
+fillColor index 0
+numPoints 1
+xPoints {
+  0 10
+}
+yPoints {
+  0 520
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 633
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 630
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 663
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 660
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 690
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 693
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 753
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_5_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 560
+y 723
+w 35
+h 28
+controlPv "$(P):LC1_ANA_FPRCVAL_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 720
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 480
+y 750
+w 75
+h 32
+controlPv "$(P):LC1_ANA_FPRCVAL_5"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 25
+y 590
+w 130
+h 20
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Disable Analog Cards"
+}
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 30
+y 610
+w 120
+h 70
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):LC1_ANA_AMCEN"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 30
+y 690
+w 120
+h 20
+controlPv "$(P):LC1_ANA_AMCEN_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 101
+y 8
+w 448
+h 24
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 7
+useDisplayBg
+value {
+  "MPS NC Analog Core - $(P)"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 590
+y 10
+w 40
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+

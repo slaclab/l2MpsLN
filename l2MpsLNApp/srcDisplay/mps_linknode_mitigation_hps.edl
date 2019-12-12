@@ -1,0 +1,2050 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 484
+y 322
+w 535
+h 565
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+snapToGrid
+gridSize 2
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 330
+y 54
+w 198
+h 158
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 186
+y 54
+w 136
+h 502
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 6
+y 54
+w 172
+h 502
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 442
+y 164
+w 68
+h 28
+fgColor index 14
+onColor index 3
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P):MITMSG_CLRTIMEOUT"
+onLabel "Clear"
+offLabel "Clear"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-medium-r-12.0"
+objType "controls"
+controlBitPos 0
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 538
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 482
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 10
+y 20
+w 136
+h 16
+controlPv "$(P):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 45
+y 8
+w 448
+h 24
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 7
+useDisplayBg
+value {
+  "Mitigation - $(P)"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 70
+w 124
+h 20
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "AMC channels"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 92
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 94
+w 50
+h 28
+controlPv "$(P):MITMSG_AMCDEST_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 92
+w 50
+h 32
+controlPv "$(P):MITMSG_AMCDEST_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 101
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 0"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 122
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 124
+w 50
+h 28
+controlPv "$(P):MITMSG_AMCDEST_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 122
+w 50
+h 32
+controlPv "$(P):MITMSG_AMCDEST_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 131
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 1"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 152
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 154
+w 50
+h 28
+controlPv "$(P):MITMSG_AMCDEST_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 152
+w 50
+h 32
+controlPv "$(P):MITMSG_AMCDEST_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 161
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 2"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 182
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 184
+w 50
+h 28
+controlPv "$(P):MITMSG_AMCDEST_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 182
+w 50
+h 32
+controlPv "$(P):MITMSG_AMCDEST_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 191
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 3"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 44
+w 78
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Destinations"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 234
+w 142
+h 20
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "RTM channels"
+}
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 286
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 288
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 286
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_1"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 295
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 1"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 316
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 318
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_2_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 316
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_2"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 325
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 2"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 346
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 348
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_3_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 346
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_3"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 355
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 3"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 376
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 378
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_4_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 376
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_4"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 385
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 4"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 406
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 408
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_5_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 406
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_5"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 415
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 5"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 436
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 438
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_6_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 436
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_6"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 445
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 6"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 14
+y 466
+w 134
+h 32
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 468
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_7_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 466
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_7"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 475
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 7"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 194
+y 44
+w 94
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Power Classes"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 98
+y 258
+w 50
+h 28
+controlPv "$(P):MITMSG_RTMDEST_0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Entry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 256
+w 50
+h 32
+controlPv "$(P):MITMSG_RTMDEST_0"
+fgColor index 14
+fgAlarm
+bgColor index 4
+fill
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 14
+y 266
+w 27
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ch 0"
+}
+autoSize
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 202
+y 68
+w 100
+h 478
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 68
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_0"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 98
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_1"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 128
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_2"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 158
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_3"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 188
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_4"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 218
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_5"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 248
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_6"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 278
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_7"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 308
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_8"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 338
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_9"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 368
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_10"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 398
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_11"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 428
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_12"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 458
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_13"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 488
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_14"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 252
+y 518
+w 50
+h 28
+controlPv "$(P):MITMSG_CLASS_15"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 75
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 0"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 105
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 1"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 135
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 2"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 165
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 3"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 195
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 4"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 225
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 5"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 255
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 6"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 285
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 7"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 315
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 8"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 345
+w 36
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 9"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 375
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 10"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 405
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 11"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 435
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 12"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 465
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 13"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 495
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 14"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 202
+y 525
+w 43
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Dest 15"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 338
+y 44
+w 128
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Mitigation Messages"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 442
+y 102
+w 68
+h 28
+controlPv "$(P):MITMSG_ERRORCNT"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 364
+y 110
+w 74
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Error counter"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 442
+y 72
+w 68
+h 28
+controlPv "$(P):MITMSG_TMSTMP"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 380
+y 80
+w 58
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Timestamp"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 442
+y 132
+w 68
+h 28
+controlPv "$(P):MITMSG_TIMEOUTCNT"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 348
+y 140
+w 90
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Timeout counter"
+}
+autoSize
+endObjectProperties
+

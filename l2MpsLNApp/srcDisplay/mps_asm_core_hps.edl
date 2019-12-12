@@ -1,0 +1,1178 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1501
+y 602
+w 540
+h 260
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 4
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+snapToGrid
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 10
+w 131
+h 16
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "MPS LN ASM Core"
+}
+autoSize
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 40
+w 210
+h 166
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 190
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 190
+w 116
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "State Machine Status"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 190
+w 75
+h 16
+controlPv "$(P):ASM_STATE_SM"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 170
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 170
+w 74
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Shutter Open"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 170
+w 75
+h 16
+controlPv "$(P):ASM_SHUTTER_OPEN"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 150
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 150
+w 75
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Shutter Close"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 150
+w 75
+h 16
+controlPv "$(P):ASM_SHUTTER_CLOSE"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 130
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 130
+w 42
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Shutter"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 130
+w 75
+h 16
+controlPv "$(P):ASM_SHUTTER"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 110
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 110
+w 74
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Trigger Select"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 110
+w 75
+h 16
+controlPv "$(P):ASM_TRG_SELECT"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 90
+w 205
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 90
+w 75
+h 16
+controlPv "$(P):ASM_AOM_PERMIT"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 90
+w 65
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "AOM Permit"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 320
+y 70
+w 205
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 70
+w 86
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "MPS AMC Dout"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 450
+y 70
+w 75
+h 16
+controlPv "$(P):ASM_MPS_AMC_DOUT"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 320
+y 40
+w 210
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Status"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 140
+w 300
+h 106
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 230
+w 285
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 230
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_3_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 230
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_3"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 230
+w 54
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 3"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 210
+w 285
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 210
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_2_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 210
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_2"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 210
+w 54
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 2"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 190
+w 285
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 190
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_1_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 190
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_1"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 190
+w 54
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 1"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 170
+w 285
+h 16
+
+beginGroup
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 170
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_0_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 170
+w 75
+h 16
+controlPv "$(P):ASM_AMC_DEST_0"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 170
+w 54
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Channel 0"
+}
+autoSize
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 140
+w 300
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "AMC Destination"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 40
+w 300
+h 86
+
+beginGroup
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 110
+w 285
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 110
+w 64
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Shutter Srs"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 110
+w 75
+h 16
+controlPv "$(P):ASM_SHTR_SRS"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 110
+w 75
+h 16
+controlPv "$(P):ASM_SHTR_SRS_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 90
+w 285
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 90
+w 81
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "MPS Close Srs"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 90
+w 75
+h 16
+controlPv "$(P):ASM_MPS_CLOSE_SRS"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 90
+w 75
+h 16
+controlPv "$(P):ASM_MPS_CLOSE_SRS_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 70
+w 285
+h 16
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 70
+w 80
+h 13
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "MPS Open Srs"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 140
+y 70
+w 75
+h 16
+controlPv "$(P):ASM_MPS_OPEN_SRS"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 30
+bgColor index 12
+editable
+limitsFromDb
+nullColor index 0
+useHexPrefix
+useAlarmBorder
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 220
+y 70
+w 75
+h 16
+controlPv "$(P):ASM_MPS_OPEN_SRS_RBV"
+format "hex"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 40
+w 300
+h 20
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Settings"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+

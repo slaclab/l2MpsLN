@@ -1,0 +1,122 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 2790
+y 862
+w 784
+h 632
+font "helvetica-medium-r-12.0"
+ctlFont "helvetica-medium-r-12.0"
+btnFont "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 4
+ctlBgColor2 index 4
+topShadowColor index 1
+botShadowColor index 11
+showGrid
+snapToGrid
+gridSize 8
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 824
+h 40
+lineColor index 71
+fill
+fillColor index 65
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 8
+y 8
+w 241
+h 21
+font "helvetica-bold-i-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "LCLS2 MPS Link Node: $(P)"
+}
+autoSize
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 736
+y 8
+w 40
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 8
+y 48
+w 768
+h 576
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "mps_linknode_hps"
+sizeOfs 5
+numDsps 0
+noScroll
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 328
+y 360
+w 448
+h 224
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "mps_gunb_linknode_apps_hps"
+sizeOfs 5
+numDsps 0
+noScroll
+endObjectProperties
+

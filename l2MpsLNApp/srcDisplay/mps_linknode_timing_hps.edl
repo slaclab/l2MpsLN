@@ -1,0 +1,540 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 255
+y 124
+w 408
+h 330
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+snapToGrid
+gridSize 2
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 6
+y 144
+w 394
+h 176
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 6
+y 58
+w 394
+h 70
+lineColor index 14
+fillColor index 4
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 96
+y 102
+w 61
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Link Status"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 164
+y 96
+w 88
+h 24
+controlPv "$(P):TIM_LINK_STAT"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 82
+y 74
+w 74
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Clock source"
+}
+autoSize
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 412
+h 40
+lineColor index 75
+fill
+fillColor index 75
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 6
+y 0
+w 136
+h 24
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 75
+useDisplayBg
+value {
+  "LCLS-II MPS Link Node"
+}
+endObjectProperties
+
+# (Text Update)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 6
+y 20
+w 136
+h 16
+controlPv "$(P):LN_SIOC"
+fgColor index 14
+bgColor index 4
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 348
+y 8
+w 48
+h 24
+fgColor index 14
+bgColor index 4
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "helvetica-medium-r-12.0"
+3d
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 254
+y 68
+w 88
+h 24
+controlPv "$(P):TIM_CLK_SRC_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 164
+y 68
+w 88
+h 24
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):TIM_CLK_SRC"
+font "helvetica-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 48
+w 60
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Timing"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 16
+y 134
+w 60
+h 20
+font "helvetica-medium-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+value {
+  "Crossbar"
+}
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 16
+y 278
+w 88
+h 28
+controlPv "$(P):TIM_SRC_RTM0_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 20
+y 160
+w 82
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "RTM#0 source"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 210
+y 160
+w 76
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "FPGA source"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 291
+y 160
+w 102
+h 16
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Backplane source"
+}
+autoSize
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 16
+y 182
+w 88
+h 92
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):TIM_SRC_RTM0"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 110
+y 278
+w 88
+h 28
+controlPv "$(P):TIM_SRC_RTM1_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 110
+y 182
+w 88
+h 92
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):TIM_SRC_RTM1"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 114
+y 161
+w 82
+h 14
+font "helvetica-medium-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "RTM#1 source"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 204
+y 278
+w 88
+h 28
+controlPv "$(P):TIM_SRC_FPGA_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 204
+y 182
+w 88
+h 92
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):TIM_SRC_FPGA"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 7
+release 0
+x 298
+y 278
+w 88
+h 28
+controlPv "$(P):TIM_SRC_BP_RBV"
+font "helvetica-medium-r-12.0"
+fgColor index 16
+fgAlarm
+bgColor index 12
+limitsFromDb
+nullColor index 18
+useHexPrefix
+newPos
+objType "monitors"
+id "FpgaVersion"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 298
+y 182
+w 88
+h 92
+fgColor index 14
+bgColor index 3
+selectColor index 6
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 14
+controlPv "$(P):TIM_SRC_BP"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 100
+y 14
+w 236
+h 24
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 7
+useDisplayBg
+value {
+  "Timing - $(P)"
+}
+endObjectProperties
+

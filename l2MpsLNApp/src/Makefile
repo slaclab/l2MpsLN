@@ -44,6 +44,7 @@ l2MpsLN_DBD += asSupport.dbd
 l2MpsLN_DBD += l2mps_l1bsa.dbd
 
 # Include dbd files from all support applications:
+l2MpsLN_DBD += system.dbd
 l2MpsLN_DBD += asyn.dbd
 l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
@@ -51,6 +52,7 @@ l2MpsLN_DBD += ycpswasyn.dbd
 l2MpsLN_DBD += yamlDownloader.dbd
 l2MpsLN_DBD += tprTriggerAsynDriver.dbd
 l2MpsLN_DBD += bsaCore.dbd
+l2MpsLN_DBD += iocAdmin.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats

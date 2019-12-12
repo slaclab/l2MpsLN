@@ -1,0 +1,1490 @@
+record(longin, "MPLN:GUNB:MP01:1:APP_ID") {
+    field(DESC, "Application ID")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)APP_ID")
+}
+record(longin, "MPLN:GUNB:MP01:1:BYTE_COUNT") {
+    field(DESC, "Number of bytes in MPS message")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)BYTE_COUNT")
+}
+record(longin, "MPLN:GUNB:MP01:1:ROLL_OVER_EN") {
+    field(DESC, "Status Counter Roll Over Enable")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)ROLL_OVER_EN")
+}
+record(longin, "MPLN:GUNB:MP01:1:TX_LINK_UP_CNT") {
+    field(DESC, "MPS TX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)TX_LINK_UP_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_0") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_0")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_1") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_1")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_2") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_2")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_3") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_3")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_4") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_4")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_5") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_5")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_6") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_6")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_7") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_7")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_8") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_8")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_9") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_9")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_10") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_10")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_11") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_11")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_12") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_12")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_LINK_UP_CNT_13") {
+    field(DESC, "MPS RX LinkUp Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_LINK_UP_CNT_13")
+}
+record(longin, "MPLN:GUNB:MP01:1:TX_PKT_SENT_CNT") {
+    field(DESC, "MPS TX Packet Sent Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)TX_PKT_SENT_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_0") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_0")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_1") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_1")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_2") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_2")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_3") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_3")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_4") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_4")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_5") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_5")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_6") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_6")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_7") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_7")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_8") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_8")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_9") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_9")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_10") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_10")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_11") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_11")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_12") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_12")
+}
+record(longin, "MPLN:GUNB:MP01:1:RX_PKT_RCV_CNT_13") {
+    field(DESC, "MPS RX Packet Received Counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)RX_PKT_RCV_CNT_13")
+}
+record(longin, "MPLN:GUNB:MP01:1:MSG_CNT") {
+    field(DESC, "Mps message counter")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)MSG_CNT")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_APP_ID") {
+    field(DESC, "Mps last message App ID")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_APPID")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_TMSTMP") {
+    field(DESC, "Mps last message timestamp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_TMSTMP")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_0") {
+    field(DESC, "Mps last message byte 0")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_0")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_1") {
+    field(DESC, "Mps last message byte 1")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_1")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_2") {
+    field(DESC, "Mps last message byte 2")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_2")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_3") {
+    field(DESC, "Mps last message byte 3")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_3")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_4") {
+    field(DESC, "Mps last message byte 4")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_4")
+}
+record(longin, "MPLN:GUNB:MP01:1:LAST_MSG_BYTE_5") {
+    field(DESC, "Mps last message byte 5")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)LAST_MSG_BYTE_5")
+}
+record(bi, "MPLN:GUNB:MP01:1:DIGITAL_EN") {
+    field(DESC, "Application generates digital messages")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)DIGITAL_EN")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:1:MPS_SLOT") {
+    field(DESC, "MPS_SLOT_G")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)MPS_SLOT")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:1:PLL_LOCKED") {
+    field(DESC, "MPS PLL Lock Status")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)PLL_LOCKED")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+record(bi, "MPLN:GUNB:MP01:1:TX_LINK_UP") {
+    field(DESC, "MPS TX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)TX_LINK_UP")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_0") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_0")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_1") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_1")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_2") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_2")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_3") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_3")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_4") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_4")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_5") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_5")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_6") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_6")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_7") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_7")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_8") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_8")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_9") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_9")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_10") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_10")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_11") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_11")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_12") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_12")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:RX_LINK_UP_13") {
+    field(DESC, "MPS RX LinkUp")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)RX_LINK_UP_13")
+    field(ZNAM, "Down")
+    field(ONAM, "Up")
+}
+record(bi, "MPLN:GUNB:MP01:1:LAST_MSG_LC1_EN") {
+    field(DESC, "LCLS flag in the last message")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)LAST_MSG_LCLS")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bo, "MPLN:GUNB:MP01:1:SALT_RST_CNT") {
+    field(DESC, "Reset all the SALT status counters")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)SALT_RST_CNT")
+    field(ZNAM, "")
+    field(ONAM, "")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SALT_RST_PLL") {
+    field(DESC, "Reset the PLL")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)SALT_RST_PLL")
+    field(ZNAM, "")
+    field(ONAM, "")
+}
+
+record(longout, "MPLN:GUNB:MP01:1:BEAM_DEST_MASK") {
+    field(DESC, "One bit per dest for BPM or kicker")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)BEAM_DEST_MASK")
+}
+
+record(longin, "MPLN:GUNB:MP01:1:BEAM_DEST_MASK_RBV") {
+    field(DESC, "One bit per dest for BPM or kicker")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)BEAM_DEST_MASK")
+}
+
+record(longout, "MPLN:GUNB:MP01:1:ALT_DEST_MASK") {
+    field(DESC, "One bit per dest for alt table")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)ALT_DEST_MASK")
+}
+
+record(longin, "MPLN:GUNB:MP01:1:ALT_DEST_MASK_RBV") {
+    field(DESC, "One bit per dest for alt table")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)ALT_DEST_MASK")
+}
+
+record(longout, "MPLN:GUNB:MP01:1:MPS_VER") {
+    field(DESC, "MPS version")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT,undefined),2)MPS_VER")
+}
+
+record(longin, "MPLN:GUNB:MP01:1:MPS_VER_RBV") {
+    field(DESC, "MPS version")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),2)MPS_VER")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:MPS_EN") {
+    field(DESC, "MPS Enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)MPS_EN")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:MPS_EN_RBV") {
+    field(DESC, "MPS Enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)MPS_EN")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bo, "MPLN:GUNB:MP01:1:LC1_MODE") {
+    field(DESC, "LCLS operation mode")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),2,0x01)LCLS1_MODE")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:LC1_MODE_RBV") {
+    field(DESC, "LCLS operation mode")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),2,0x01)LCLS1_MODE")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(waveform, "MPLN:GUNB:MP01:1:APP_TYPE") {
+    field(DESC,    "Application type")
+    field(PINI,    "NO")
+    field(SCAN,    "I/O Intr")
+    field(DTYP,    "asynOctetRead")
+    field(NELM,    "40")
+    field(FTVL,    "CHAR")
+    field(INP,     "@asyn($(PORT,undefined),2)APP_TYPE")
+}
+
+record(ao,      "SOLN:GUNB:212:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:212:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
+record(longin, "SOLN:GUNB:212:I0_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRNUM_00")
+}
+record(longin, "SOLN:GUNB:212:I0_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRCNT_00")
+}
+record(longin, "SOLN:GUNB:212:I0_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_BYTEMAP_00")
+}
+record(bo, "SOLN:GUNB:212:I0_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_IDLEEN_00")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "SOLN:GUNB:212:I0_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_IDLEEN_00")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "SOLN:GUNB:212:I0_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_ALTEN_00")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "SOLN:GUNB:212:I0_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_LCLS1EN_00")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:212:I0_T0_LC1_L") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0000")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_LC1_L_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0000")
+}
+
+record(ao, "SOLN:GUNB:212:I0_T0_LC1_H") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0000")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_LC1_H_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0000")
+}
+
+record(bo, "SOLN:GUNB:212:I0_T0_LC1_L_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:212:I0_T0_LC1_L_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:212:I0_T0_LC1_H_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:212:I0_T0_LC1_H_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:212:I0_T0_IDL_L") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0010")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_IDL_L_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0010")
+}
+
+record(ao, "SOLN:GUNB:212:I0_T0_IDL_H") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0010")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_IDL_H_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0010")
+}
+
+record(bo, "SOLN:GUNB:212:I0_T0_IDL_L_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:212:I0_T0_IDL_L_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:212:I0_T0_IDL_H_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:212:I0_T0_IDL_H_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(ao,      "SOLN:GUNB:212:I0_SS") {
+    field(DESC, "Scale slope factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "uA/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:212:I0_FWSLO")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
+}
+record(ai,      "SOLN:GUNB:212:I0_SS_RBV") {
+    field(DESC, "Scale slope factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "uA/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_00")
+}
+record(ao,      "SOLN:GUNB:212:I0_SO") {
+    field(DESC, "Scale offset factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:212:I0_FWOFF")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+record(ai,      "SOLN:GUNB:212:I0_SO_RBV") {
+    field(DESC, "Scale offset factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_00")
+}
+
+record(ao, "SOLN:GUNB:212:I0_T0_L") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0020")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_L_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0020")
+}
+
+record(longin, "SOLN:GUNB:212:I0_T0_L_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMINR_0020")
+}
+
+record(ao, "SOLN:GUNB:212:I0_T0_H") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0020")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_H_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0020")
+}
+
+record(longin, "SOLN:GUNB:212:I0_T0_H_RAW") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAXR_0020")
+}
+
+record(bo, "SOLN:GUNB:212:I0_T0_L_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:212:I0_T0_L_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:212:I0_T0_H_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:212:I0_T0_H_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:212:I0_T0_ALT_L") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0030")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_ALT_L_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_0030")
+}
+
+record(ao, "SOLN:GUNB:212:I0_T0_ALT_H") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0030")
+}
+
+record(ai,  "SOLN:GUNB:212:I0_T0_ALT_H_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_0030")
+}
+
+record(bo, "SOLN:GUNB:212:I0_T0_ALT_L_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:212:I0_T0_ALT_L_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_0030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:212:I0_T0_ALT_H_EN") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:212:I0_T0_ALT_H_EN_RBV") {
+    field(DESC, "SOL1B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_0030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(ao,      "SOLN:GUNB:823:I0_FWSLO") {
+    field(DESC, "Scale factor")
+    field(EGU,  "A/raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "555.86e-6")
+}
+
+record(ao,      "SOLN:GUNB:823:I0_FWOFF") {
+    field(DESC, "Scale factor")
+    field(EGU,  "raw")
+    field(PREC, "4")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(PINI, "YES")
+    field(VAL,  "32768")
+}
+
+record(longin, "SOLN:GUNB:823:I0_THR_CH") {
+    field(DESC, "Threshold channel")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRNUM_10")
+}
+record(longin, "SOLN:GUNB:823:I0_THR_CNT") {
+    field(DESC, "Threshold count")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRCNT_10")
+}
+record(longin, "SOLN:GUNB:823:I0_THR_BYTEMAP") {
+    field(DESC, "Threshold byte map")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_BYTEMAP_10")
+}
+record(bo, "SOLN:GUNB:823:I0_IDL_EN") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_IDLEEN_10")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bi, "SOLN:GUNB:823:I0_IDL_EN_RBV") {
+    field(DESC, "IDLE table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_IDLEEN_10")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "SOLN:GUNB:823:I0_ALT_EN") {
+    field(DESC, "ALT table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_ALTEN_10")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(bi, "SOLN:GUNB:823:I0_LC1_EN") {
+    field(DESC, "LCLS1 table enabled")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_LCLS1EN_10")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:823:I0_T0_LC1_L") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1000")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_LC1_L_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1000")
+}
+
+record(ao, "SOLN:GUNB:823:I0_T0_LC1_H") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1000")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_LC1_H_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1000")
+}
+
+record(bo, "SOLN:GUNB:823:I0_T0_LC1_L_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:823:I0_T0_LC1_L_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:823:I0_T0_LC1_H_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1000")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:823:I0_T0_LC1_H_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1000")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:823:I0_T0_IDL_L") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1010")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_IDL_L_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1010")
+}
+
+record(ao, "SOLN:GUNB:823:I0_T0_IDL_H") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1010")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_IDL_H_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1010")
+}
+
+record(bo, "SOLN:GUNB:823:I0_T0_IDL_L_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:823:I0_T0_IDL_L_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:823:I0_T0_IDL_H_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1010")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:823:I0_T0_IDL_H_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1010")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(ao,      "SOLN:GUNB:823:I0_SS") {
+    field(DESC, "Scale slope factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "uA/raw")
+    field(PREC, "4")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:823:I0_FWSLO")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALESLOPE_10")
+}
+record(ai,      "SOLN:GUNB:823:I0_SS_RBV") {
+    field(DESC, "Scale slope factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "uA/raw")
+    field(PREC, "4")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALESLOPE_10")
+}
+record(ao,      "SOLN:GUNB:823:I0_SO") {
+    field(DESC, "Scale offset factor")
+    field(SCAN, "1 second")
+    field(PHAS, "1")
+    field(PINI, "YES")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(OMSL, "closed_loop")
+    field(OIF,  "Full")
+    field(DOL,  "SOLN:GUNB:823:I0_FWOFF")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT),0)BLM_SCALEOFFSET_10")
+}
+record(ai,      "SOLN:GUNB:823:I0_SO_RBV") {
+    field(DESC, "Scale offset factor (readback)")
+    field(SCAN, "I/O Intr")
+    field(EGU,  "raw")
+    field(PREC, "0")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT),0)BLM_SCALEOFFSET_10")
+}
+
+record(ao, "SOLN:GUNB:823:I0_T0_L") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1020")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_L_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1020")
+}
+
+record(longin, "SOLN:GUNB:823:I0_T0_L_RAW") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMINR_1020")
+}
+
+record(ao, "SOLN:GUNB:823:I0_T0_H") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1020")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_H_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1020")
+}
+
+record(longin, "SOLN:GUNB:823:I0_T0_H_RAW") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAXR_1020")
+}
+
+record(bo, "SOLN:GUNB:823:I0_T0_L_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:823:I0_T0_L_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:823:I0_T0_H_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1020")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:823:I0_T0_H_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1020")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+record(ao, "SOLN:GUNB:823:I0_T0_ALT_L") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1030")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_ALT_L_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMIN_1030")
+}
+
+record(ao, "SOLN:GUNB:823:I0_T0_ALT_H") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(OUT,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1030")
+}
+
+record(ai,  "SOLN:GUNB:823:I0_T0_ALT_H_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynFloat64")
+    field(EGU,  "uA")
+    field(PREC, "2")
+    field(INP,  "@asyn($(PORT,undefined),0)BLM_THRMAX_1030")
+}
+
+record(bo, "SOLN:GUNB:823:I0_T0_ALT_L_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi, "SOLN:GUNB:823:I0_T0_ALT_L_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMINEN_1030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
+
+record(bo,      "SOLN:GUNB:823:I0_T0_ALT_H_EN") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1030")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(bi,      "SOLN:GUNB:823:I0_T0_ALT_H_EN_RBV") {
+    field(DESC, "SOL2B Integrator #0 Fault")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT,undefined),0,0x01)BLM_THRMAXEN_1030")
+    field(ZNAM, "Disabled")
+    field(ONAM, "Enabled")
+}
