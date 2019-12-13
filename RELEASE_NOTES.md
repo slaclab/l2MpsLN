@@ -29,6 +29,24 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * The IOC now contacts the MPS manager at boot to request for its
     thresholds PVs to be set.
 
+* __l2MpsLN-R2-6-0__: 2019-11-25 J. Vasquez
+  * Update cpsw/framework to version R4.3.1.
+  * Add the directory 'firmware/yaml_fixes' and add it to the CPSW's
+    "YAML_PATH" environmental variable, to override YAML files coming
+    from the FPGA.
+  * Update PVs for the AnaloCore device.
+  * Rename PV related to the LCLS2 Analog core. Added "LC2_" to be
+    consistent with the LCLS1 Analog core PVs.
+  * Update MCS file to current version.
+  * Add new PVs for the Concentrator device.
+  * Add support for the tprTrigger EPICS module.
+  * Add support for the BsaCore module.
+  * Process the firmware data stream with LCLS1 BSA data, and send it
+    to BsaCore.
+  * Update PVs for the mitigation core device, including adding a new PV
+    for selection the type of mitigation kicker.
+  * Minor bug fixes.
+
 * __l2MpsLN-R2-5-0__: 2019-09-24 J. Vasquez
   * Update CPSW framework to version R4.2.0, and all the dependent modules:
     * l2Mps to R2.2.0,
@@ -60,15 +78,15 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 * __l2MpsLN-R2-3-0__: 2019-07-18 J. Vasquez
   * Update the folllwing packages:
-      cpsw/framework -> R4.1.2
-      l2Mps -> R2.1.1
-      yamlReader -> R1.1.0
-      deviceLibrary -> R1.1.0
+    * cpsw/framework -> R4.1.2
+    * l2Mps -> R2.1.1
+    * yamlReader -> R1.1.0
+    * deviceLibrary -> R1.1.0
   * Update the following EPICS modules:
-      yamlLoader -> R1.1.3
-      yamlDownloader -> R1.1.0
-      YCpswAsyn -> R3.1.1
-      l2MpsAsyn -> R2.3.0
+    * yamlLoader -> R1.1.3
+    * yamlDownloader -> R1.1.0
+    * YCpswAsyn -> R3.1.1
+    * l2MpsAsyn -> R2.3.0
 
 * __l2MpsLN-R2-2-0__: 2019-06-13 J. Vasquez
   * Add support for the LCLS-I operation related registers.

@@ -12,6 +12,10 @@
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
+epicsEnvSet("TPRTRIGGER_PORT","TPRTRIGGER_PORT")
+
+# Point 'YAML_PATH' to the yaml_fixes directory
+epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
 
 # Location to download the YAML file from the FPGA
 epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
@@ -74,14 +78,26 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-dev3", 0)
 
-## YCPSWAsyn module
+## Configure the LCLS1 BSA driver
+# L2MpsL1BsaConfig(
+#    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
+#    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
+L2MpsL1BsaConfig("Lcls1BsaStream", "${PREFIX_MPS_BASE}")
+
+## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
-#    Port Name,                 # the name given to this port driver
+#    Port Name,                 # The name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
 #    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
 #    Load dictionary)           # Dictionary file path with registers to load. An empty string will disable this function
 YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}")
+
+## Configure the tprTrigger driver
+# tprTriggerAsynDriverConfigure(
+#    Port name,                 # The name given to this port driver
+#    Root path)                 # Root path to the AmcCarrierCore register area
+tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
 
 # ==========================================
 # Load application specific configurations
@@ -102,6 +118,9 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 # Link Node database
 dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+
+# tprTrigger database
+dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
