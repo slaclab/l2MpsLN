@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-2-0__: 2019-12-17 J. Vasquez
+  * Merge `R2-branch` back into master.
+  * Update both l2Mps and l2MpsAsyn to version `R3.2.0`.
+  * Re-enable the `DownloadYamlFile` module.
+  * Migrate application to EPICS v7.
+
 * __l2MpsLN-R3-1-0__: 2019-09-24 J. Vasquez
   * Add PVs for new FW register related to LCLS1
     operation: Analog core register used on LCLS1
