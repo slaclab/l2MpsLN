@@ -65,6 +65,14 @@ l2MpsLN_LIBS += tprTrigger
 l2MpsLN_LIBS += BsaCore
 l2MpsLN_LIBS += asyn
 
+# Link QSRV (pvAccess Server) if available
+ifdef EPICS_QSRV_MAJOR_VERSION
+   l2MpsLN_LIBS += qsrv
+   l2MpsLN_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
+   l2MpsLN_DBD  += PVAServerRegister.dbd
+   l2MpsLN_DBD  += qsrv.dbd
+endif
+
 # l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
 l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
 l2MpsLN_SRCS += l2mps_l1bsa l2mps_l1bsa_channels
