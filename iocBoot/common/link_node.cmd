@@ -48,7 +48,7 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
-setMpsConfigurationPath("/afs/slac/u/cd/lpiccoli/lcls2/mps_configuration/cu/link_node_db")
+setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/cu/link_node_db")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
@@ -63,7 +63,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #    MpsManagerPortNumber) # Server port number
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
-L2MPSASYNSetManagerHost("lcls-dev3", 1975)
+L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
 
 ## Configure asyn port driverx
 # YCPSWASYNConfig(
