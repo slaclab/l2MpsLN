@@ -82,7 +82,7 @@ L2MPSASYNSetManagerHost("lcls-dev3", 0)
 # L2MpsL1BsaConfig(
 #    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
 #    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
-L2MpsL1BsaConfig("Lcls1BsaStream", "${PREFIX_MPS_BASE}")
+L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
 
 ## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
