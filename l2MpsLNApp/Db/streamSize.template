@@ -68,7 +68,7 @@ record(longout, "$(P):$(R)-DO1") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO3") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI3 PP")
+  field(INPB, "$(P):$(R)-DI3.VAL PP")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO3 PP")
   field(ASG,  "Internal")
@@ -96,7 +96,7 @@ record(longout, "$(P):$(R)-DO3") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO4") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI4 PP")
+  field(INPB, "$(P):$(R)-DI4.VAL PP")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO4 PP")
   field(ASG,  "Internal")
@@ -124,7 +124,7 @@ record(longout, "$(P):$(R)-DO4") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO5") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI5 PP")
+  field(INPB, "$(P):$(R)-DI5.VAL PP")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO5 PP")
   field(ASG,  "Internal")
