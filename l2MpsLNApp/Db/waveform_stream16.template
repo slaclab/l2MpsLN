@@ -16,7 +16,7 @@ record(subArray, "$(P):$(R)") {
   field(DESC,    "$(DESC) Subarray")
   field(INP,     "$(P):$(R)_BUF")
   field(FTVL,    "SHORT")
-  field(MALM,    "65536")
-  field(NELM,    "4096")
+  field(MALM,    "10000000")
+  field(NELM,    "10000")
   field(INDX,    "0")
 }
