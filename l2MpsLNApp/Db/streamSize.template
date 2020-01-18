@@ -68,7 +68,7 @@ record(longout, "$(P):$(R)-DO1") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO3") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI3.VAL PP")
+  field(INPB, "$(P):$(R)-DI3.VAL")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO3 PP")
   field(ASG,  "Internal")
@@ -77,7 +77,8 @@ record(calcout, "$(P):$(R)-CO3") {
 # Read the buffer begin address
 record(longin, "$(P):$(R)-DI3") {
   field(DTYP, "asynInt32")
-  field(SCAN, "Passive")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
   field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_0")
   field(ASG,  "Internal")
 }
@@ -96,7 +97,7 @@ record(longout, "$(P):$(R)-DO3") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO4") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI4.VAL PP")
+  field(INPB, "$(P):$(R)-DI4.VAL")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO4 PP")
   field(ASG,  "Internal")
@@ -105,7 +106,8 @@ record(calcout, "$(P):$(R)-CO4") {
 # Read the buffer begin address
 record(longin, "$(P):$(R)-DI4") {
   field(DTYP, "asynInt32")
-  field(SCAN, "Passive")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
   field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_1")
   field(ASG,  "Internal")
 }
@@ -124,7 +126,7 @@ record(longout, "$(P):$(R)-DO4") {
 # the buffer begin address + 2*N
 record(calcout, "$(P):$(R)-CO5") {
   field(SCAN, "Passive")
-  field(INPB, "$(P):$(R)-DI5.VAL PP")
+  field(INPB, "$(P):$(R)-DI5.VAL")
   field(CALC, "B + 2*A")
   field(OUT, "$(P):$(R)-DO5 PP")
   field(ASG,  "Internal")
@@ -133,7 +135,8 @@ record(calcout, "$(P):$(R)-CO5") {
 # Read the buffer begin address
 record(longin, "$(P):$(R)-DI5") {
   field(DTYP, "asynInt32")
-  field(SCAN, "Passive")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
   field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_2")
   field(ASG,  "Internal")
 }
