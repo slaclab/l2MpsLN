@@ -1,0 +1,22 @@
+# Buffer PV, to hold all the stream data
+# up to 10e6 points
+record(waveform, "$(P):$(R)_BUF") {
+  field(DESC,    "$(DESC)")
+  field(DTYP,    "asynInt16ArrayIn")
+  field(NELM,    "10000000")
+  field(FTVL,    "SHORT")
+  field(SCAN,    "I/O Intr")
+  field(INP,     "@asyn($(PORT),5)$(PARAM)")
+  field(FLNK,    "$(P):$(R) PP")
+}
+
+# Interface PV, to display only the necessary data
+# range from the data received in the buffer
+record(subArray, "$(P):$(R)") {
+  field(DESC,    "$(DESC) Subarray")
+  field(INP,     "$(P):$(R)_BUF")
+  field(FTVL,    "SHORT")
+  field(MALM,    "65536")
+  field(NELM,    "4096")
+  field(INDX,    "0")
+}
