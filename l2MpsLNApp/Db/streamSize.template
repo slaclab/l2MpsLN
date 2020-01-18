@@ -8,6 +8,10 @@
 # - Set the WaveformEngineBuffer to N*2 (as this is
 #   expressed in bytes
 #
+# Macros:
+# -P,R        : Register name as $(P):$(R)
+# - BAY       : Bay number (0 or 1)
+# - INIT_SIZE : Initial buffer size
 # The macro BAY is used to specify the bay number (0 or 1)
 
 ## This in the number of words from the user (N) ##
@@ -16,7 +20,7 @@ record(ao, "$(P):$(R)") {
   field(SCAN, "Passive")
   field(DESC, "Bay $(BAY) buffer size (16-bit words)")
   field(EGU,  "words")
-  field(VAL,  "$(INIT_VAL)")
+  field(VAL,  "$(INIT_SIZE)")
   field(PINI, "NO")
   field(OUT,  "$(P):$(R)-DF01 PP")
 }
