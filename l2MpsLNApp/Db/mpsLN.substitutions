@@ -513,7 +513,7 @@ file "waveform_stream16.template" { pattern
 # Stream waveform size
 #======================================
 file "streamSize.template" { pattern
-{ R,                    BAY,    INIT_SIZE   }
-{ DM0_BUFFER_SIZE,      "0",    "1000000"   }
-{ DM1_BUFFER_SIZE,      "1",    "1000000"   }
+{ R,                    BAY,    }
+{ DM0_BUFFER_SIZE,      "0",    }
+{ DM1_BUFFER_SIZE,      "1",    }
 }
