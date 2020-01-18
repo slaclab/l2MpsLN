@@ -9,7 +9,7 @@
 #   expressed in bytes
 #
 # Macros:
-# -P,R        : Register name as $(P):$(R)
+# - P,R       : Register name as $(P):$(R)
 # - BAY       : Bay number (0 or 1)
 # - INIT_SIZE : Initial buffer size
 # The macro BAY is used to specify the bay number (0 or 1)
@@ -22,7 +22,7 @@ record(ao, "$(P):$(R)") {
   field(EGU,  "words")
   field(VAL,  "$(INIT_SIZE)")
   field(PINI, "NO")
-  field(OUT,  "$(P):$(R)-DF01 PP")
+  field(OUT,  "$(P):$(R)-DFO1 PP")
 }
 
 # Propagate the value
