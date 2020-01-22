@@ -15,16 +15,27 @@
 # The macro BAY is used to specify the bay number (0 or 1)
 
 ## This in the number of words from the user (N) ##
-
 record(ao, "$(P):$(R)") {
   field(SCAN, "Passive")
   field(DESC, "Bay $(BAY) buffer size (16-bit words)")
   field(EGU,  "words")
   field(PINI, "NO")
-  field(OUT,  "$(P):$(R)-DFO1 PP")
+  field(OUT,  "$(P):$(R)-S1 PP")
 }
 
-# Propagate the value
+# Sequence: set the buffer size first, and then initialize them
+record(seq,   "$(P):$(R)-S1") {
+  field(SCAN, "Passive")
+  field(DOL1, "$(P):$(R)")         # First, set the buffer sizes
+  field(LNK1, "$(P):$(R)-DFO1 PP")
+  field(DO2,  "1")                 # Then, call the Initialize command
+  field(LNK2, "$(P):$(R)-BO6 PP")
+  field(DLY2, "0.1")
+  field(SELM, "All")
+  field(ASG,  "Internal")
+}
+
+# Propagate the data buffer size value
 record(dfanout, "$(P):$(R)-DFO1") {
   field(SCAN, "Passive")
   field(OUTA, "$(P):$(R)_RBV PP")    # Readback value
@@ -145,5 +156,16 @@ record(longout, "$(P):$(R)-DO5") {
   field(DTYP, "asynInt32")
   field(SCAN, "Passive")
   field(OUT,  "@asyn($(PORT),1)WEB$(BAY)_EndAddr_2")
+  field(ASG,  "Internal")
+}
+
+## WaveformEngineBuffer Initialize command ##
+
+# This write to the WaveformEngineBuffers/Initialize register
+record(bo,    "$(P):$(R)-BO6") {
+  field(DTYP, "asynUInt32Digital")
+  field(DESC, "Bay $(BAY) buffer initialize")
+  field(SCAN, "Passive")
+  field(OUT,  "@asynMask($(PORT),4,1)WEB$(BAY)_Initialize")
   field(ASG,  "Internal")
 }

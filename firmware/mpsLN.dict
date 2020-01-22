@@ -619,12 +619,14 @@
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[0]    WEB0_EndAddr_0
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[1]    WEB0_EndAddr_1
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[2]    WEB0_EndAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/Initialize    WEB0_Initialize
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[0]  WEB1_StartAddr_0
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[1]  WEB1_StartAddr_1
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[2]  WEB1_StartAddr_2
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[0]    WEB1_EndAddr_0
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[1]    WEB1_EndAddr_1
 /mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[2]    WEB1_EndAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/Initialize    WEB1_Initialize
 
 # =============================
 # DaqMuxV2 Streams
