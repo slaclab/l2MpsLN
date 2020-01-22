@@ -406,8 +406,8 @@ file "Reg1BitRW.template" { pattern
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
 { TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    LC1_TimeoutEnable        }
-{ DM0_AutoRearm,      "DaqMux, bay0, trigger hw auto rearm",    "Disabled", "Enabled",  "1 second",    DM0_TrigHwAutoReArm      }
-{ DM1_AutoRearm,      "DaqMux, bay1, trigger hw auto rearm",    "Disabled", "Enabled",  "1 second",    DM1_TrigHwAutoReArm      }
+{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM0_TrigHwAutoReArm      }
+{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM1_TrigHwAutoReArm      }
 }
 
 #======================================
