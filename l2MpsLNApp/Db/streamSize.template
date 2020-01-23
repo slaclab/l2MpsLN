@@ -1,0 +1,171 @@
+# This database is used to set all the necessary FW registers
+# depending on the requested number of 16-bit words to be
+# acquired with the DaqMux device.
+#
+# From the number of requested point, N, we must:
+# - Set the DaqMuxV2/DataBufferSize to N/2 (as this
+#   is expressed in 32-bit words,
+# - Set the WaveformEngineBuffer to N*2 (as this is
+#   expressed in bytes
+#
+# Macros:
+# - P,R       : Register name as $(P):$(R)
+# - BAY       : Bay number (0 or 1)
+# - INIT_SIZE : Initial buffer size
+# The macro BAY is used to specify the bay number (0 or 1)
+
+## This in the number of words from the user (N) ##
+record(ao, "$(P):$(R)") {
+  field(SCAN, "Passive")
+  field(DESC, "Bay $(BAY) buffer size (16-bit words)")
+  field(EGU,  "words")
+  field(PINI, "NO")
+  field(OUT,  "$(P):$(R)-S1 PP")
+}
+
+# Sequence: set the buffer size first, and then initialize them
+record(seq,   "$(P):$(R)-S1") {
+  field(SCAN, "Passive")
+  field(DOL1, "$(P):$(R)")         # First, set the buffer sizes
+  field(LNK1, "$(P):$(R)-DFO1 PP")
+  field(DO2,  "1")                 # Then, call the Initialize command
+  field(LNK2, "$(P):$(R)-BO6 PP")
+  field(DLY2, "0.1")
+  field(SELM, "All")
+  field(ASG,  "Internal")
+}
+
+# Propagate the data buffer size value
+record(dfanout, "$(P):$(R)-DFO1") {
+  field(SCAN, "Passive")
+  field(OUTA, "$(P):$(R)_RBV PP")    # Readback value
+  field(OUTB, "$(P):$(R)-CO2.A PP")  # DaqMux data size
+  field(OUTC, "$(P):$(R)-CO3.A PP")  # WaveformEngineBuffer 0
+  field(OUTD, "$(P):$(R)-CO4.A PP")  # WaveformEngineBuffer 1
+  field(OUTE, "$(P):$(R)-CO5.A PP")  # WaveformEngineBuffer 2
+  field(ASG,  "Internal")
+}
+
+## Readback value ##
+
+record(ai, "$(P):$(R)_RBV") {
+  field(SCAN, "Passive")
+  field(DESC, "Bay $(BAY) buffer size (16-bit words)")
+  field(EGU,  "words")
+}
+
+## DaqMux Data buffer size ##
+
+# Calculate the DaqMux Data Buffer Size (N/2)
+record(calcout, "$(P):$(R)-CO2") {
+  field(SCAN, "Passive")
+  field(CALC, "A/2")
+  field(OUT, "$(P):$(R)-DO1 PP")
+  field(ASG,  "Internal")
+}
+
+# This writes to the DaqMuxV2/DataBufferSize register
+record(longout, "$(P):$(R)-DO1") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "Passive")
+  field(OUT,  "@asyn($(PORT),1)DM$(BAY)_DataBufferSize")
+  field(ASG,  "Internal")
+}
+
+## WaveformEngineBuffer 0 size ##
+
+# Calculate the buffer end address, which is
+# the buffer begin address + 2*N
+record(calcout, "$(P):$(R)-CO3") {
+  field(SCAN, "Passive")
+  field(INPB, "$(P):$(R)-DI3.VAL")
+  field(CALC, "B + 2*A")
+  field(OUT, "$(P):$(R)-DO3 PP")
+  field(ASG,  "Internal")
+}
+
+# Read the buffer begin address
+record(longin, "$(P):$(R)-DI3") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_0")
+  field(ASG,  "Internal")
+}
+
+# This writes to the WaveformEngineBuffers/EndAddr register
+record(longout, "$(P):$(R)-DO3") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "Passive")
+  field(OUT,  "@asyn($(PORT),1)WEB$(BAY)_EndAddr_0")
+  field(ASG,  "Internal")
+}
+
+## WaveformEngineBuffer 1 size ##
+
+# Calculate the buffer end address, which is
+# the buffer begin address + 2*N
+record(calcout, "$(P):$(R)-CO4") {
+  field(SCAN, "Passive")
+  field(INPB, "$(P):$(R)-DI4.VAL")
+  field(CALC, "B + 2*A")
+  field(OUT, "$(P):$(R)-DO4 PP")
+  field(ASG,  "Internal")
+}
+
+# Read the buffer begin address
+record(longin, "$(P):$(R)-DI4") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_1")
+  field(ASG,  "Internal")
+}
+
+# This writes to the WaveformEngineBuffers/EndAddr register
+record(longout, "$(P):$(R)-DO4") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "Passive")
+  field(OUT,  "@asyn($(PORT),1)WEB$(BAY)_EndAddr_1")
+  field(ASG,  "Internal")
+}
+
+## WaveformEngineBuffer 2 size ##
+
+# Calculate the buffer end address, which is
+# the buffer begin address + 2*N
+record(calcout, "$(P):$(R)-CO5") {
+  field(SCAN, "Passive")
+  field(INPB, "$(P):$(R)-DI5.VAL")
+  field(CALC, "B + 2*A")
+  field(OUT, "$(P):$(R)-DO5 PP")
+  field(ASG,  "Internal")
+}
+
+# Read the buffer begin address
+record(longin, "$(P):$(R)-DI5") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  field(INP,  "@asyn($(PORT),1)WEB$(BAY)_StartAddr_2")
+  field(ASG,  "Internal")
+}
+
+# This writes to the WaveformEngineBuffers/EndAddr register
+record(longout, "$(P):$(R)-DO5") {
+  field(DTYP, "asynInt32")
+  field(SCAN, "Passive")
+  field(OUT,  "@asyn($(PORT),1)WEB$(BAY)_EndAddr_2")
+  field(ASG,  "Internal")
+}
+
+## WaveformEngineBuffer Initialize command ##
+
+# This write to the WaveformEngineBuffers/Initialize register
+record(bo,    "$(P):$(R)-BO6") {
+  field(DTYP, "asynUInt32Digital")
+  field(DESC, "Bay $(BAY) buffer initialize")
+  field(SCAN, "Passive")
+  field(OUT,  "@asynMask($(PORT),4,1)WEB$(BAY)_Initialize")
+  field(ASG,  "Internal")
+}

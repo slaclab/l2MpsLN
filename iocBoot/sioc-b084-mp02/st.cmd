@@ -206,3 +206,11 @@ cd ${TOP}
 create_monitor_set("info_positions.req", 5 )
 create_monitor_set("info_settings.req" , 5 )
 create_monitor_set("manual_settings.req" , 5 )
+
+# - FIXME -
+# Workaround: Adding this value and setting PINI=YES
+# in the record doesn't work properly with input
+# buffer start addresses. Setting the initial value
+# here for now.
+dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
+dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000

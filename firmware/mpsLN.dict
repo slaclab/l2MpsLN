@@ -600,3 +600,42 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrClose                                   ASMCORE_shtrClose
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/shtrOpen                                    ASMCORE_shtrOpen
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsAsmCore/stateSM                                     ASMCORE_stateSM
+
+# =============================
+# DaqMuxV2
+# =============================
+# Bay 0
+/mmio/AppTop/DaqMuxV2[0]/TriggerHwAutoRearm                                                 DM0_TrigHwAutoReArm
+/mmio/AppTop/DaqMuxV2[0]/DataBufferSize                                                     DM0_DataBufferSize
+/mmio/AppTop/DaqMuxV2[0]/TrigCount                                                          DM0_TrigCnt
+# Bay 1
+/mmio/AppTop/DaqMuxV2[1]/TriggerHwAutoRearm                                                 DM1_TrigHwAutoReArm
+/mmio/AppTop/DaqMuxV2[1]/DataBufferSize                                                     DM1_DataBufferSize
+/mmio/AppTop/DaqMuxV2[1]/TrigCount                                                          DM1_TrigCnt
+# Waveform engines, which buffers need to be configured
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/StartAddr[0]  WEB0_StartAddr_0
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/StartAddr[1]  WEB0_StartAddr_1
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/StartAddr[2]  WEB0_StartAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[0]    WEB0_EndAddr_0
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[1]    WEB0_EndAddr_1
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/EndAddr[2]    WEB0_EndAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[0]/WaveformEngineBuffers/Initialize    WEB0_Initialize
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[0]  WEB1_StartAddr_0
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[1]  WEB1_StartAddr_1
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/StartAddr[2]  WEB1_StartAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[0]    WEB1_EndAddr_0
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[1]    WEB1_EndAddr_1
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/EndAddr[2]    WEB1_EndAddr_2
+/mmio/AmcCarrierCore/AmcCarrierBsa/BsaWaveformEngine[1]/WaveformEngineBuffers/Initialize    WEB1_Initialize
+
+# =============================
+# DaqMuxV2 Streams
+# =============================
+# Bay 0, ADC channels
+/Stream0                                                                                    Stream0
+/Stream1                                                                                    Stream1
+/Stream2                                                                                    Stream2
+# Bay 1, ADC channels
+/Stream4                                                                                    Stream4
+/Stream5                                                                                    Stream5
+/Stream6                                                                                    Stream6

@@ -165,6 +165,8 @@ file "RegRO.template" { pattern
 { ANA_OVERTHR_CNT_4         "Over threshold for ADC input 4",           "YES",  "1 second", "",         ANACORE_overThreshCnt_4     }
 { ANA_OVERTHR_CNT_5         "Over threshold for ADC input 5",           "YES",  "1 second", "",         ANACORE_overThreshCnt_5     }
 { ANA_BUNCH_CNT,            "Bunch present counter",                    "YES",  "1 second", "",         ANACORE_bunchPresentCnt     }
+{ DM0_TRIGGER_CNT,          "DaqMux, bay0, trigger counter",            "YES",  "1 second", "triggers", DM0_TrigCnt                 }
+{ DM1_TRIGGER_CNT,          "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers", DM1_TrigCnt                 }
 }
 
 # Single register with on AI records
@@ -404,6 +406,8 @@ file "Reg1BitRW.template" { pattern
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
 { TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    LC1_TimeoutEnable        }
+{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM0_TrigHwAutoReArm      }
+{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM1_TrigHwAutoReArm      }
 }
 
 #======================================
@@ -489,4 +493,27 @@ file "Reg3BitsRW.template" { pattern
 file "RegCharArrayRO.template" { pattern
 { R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
 { FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
+}
+
+
+#======================================
+# Stream waveforms (16-bit data)
+#======================================
+file "waveform_stream16.template" { pattern
+{ R,                    DESC,                                   PARAM      }
+{ BAY0_ADC0_WF,         "Raw ADC waveform (Bay 0, ch 0)",       Stream0:16 }
+{ BAY0_ADC1_WF,         "Raw ADC waveform (Bay 0, ch 1)",       Stream1:16 }
+{ BAY0_ADC2_WF,         "Raw ADC waveform (Bay 0, ch 2)",       Stream2:16 }
+{ BAY1_ADC0_WF,         "Raw ADC waveform (Bay 1, ch 0)",       Stream4:16 }
+{ BAY1_ADC1_WF,         "Raw ADC waveform (Bay 1, ch 1)",       Stream5:16 }
+{ BAY1_ADC2_WF,         "Raw ADC waveform (Bay 1, ch 2)",       Stream6:16 }
+}
+
+#======================================
+# Stream waveform size
+#======================================
+file "streamSize.template" { pattern
+{ R,                    BAY,    }
+{ DM0_BUFFER_SIZE,      "0",    }
+{ DM1_BUFFER_SIZE,      "1",    }
 }
