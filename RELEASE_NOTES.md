@@ -3,6 +3,13 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-3-0__: 2020-02-07 J. Vasquez
+  * Add support to read raw waveforms from all ADC channels.
+  * Bug fix: Add missing env vars to the local database `mps.env` file.
+  * Update st.mcd for correct slot and crate for cu area.
+  * Update default configuration files.
+  * Update MCS file with current version `1cd2cbf`.
+
 * __l2MpsLN-R3-2-0__: 2019-12-17 J. Vasquez
   * Merge `R2-branch` back into master.
   * Update both l2Mps and l2MpsAsyn to version `R3.2.0`.
