@@ -68,6 +68,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
+#L2MPSASYNSetManagerHost("lcls-dev3", 1975)
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -84,11 +85,18 @@ L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
 #    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
 YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 
+## Configure the tprTrigger driver
+# tprTriggerAsynDriverConfigure(
+#    Port name,                 # The name given to this port driver
+#    Root path)                 # Root path to the AmcCarrierCore register area
+tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
+
 # ==========================================
 # Load application specific configurations
 # ==========================================
 # Load the default configuration
-cpswLoadConfigFile("iocBoot/${IOC}/configs/defaults.yaml", "mmio")
+cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+cpswLoadConfigFile("iocBoot/common/configs/specifics.yaml", "mmio")
 
 # ==========================================
 
@@ -187,3 +195,6 @@ cd ${TOP}
 create_monitor_set("info_settings.req" , 30 )
 create_monitor_set("info_positions.req", 30 )
 create_monitor_set("manual_settings.req" , 30 )
+
+# After call to restore thresholds, clear lcls1 timeout so MPS is functional
+dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT

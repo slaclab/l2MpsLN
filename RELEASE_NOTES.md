@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-4-0__: 2020-03-06 J. Mock
+  * general ioc cleanup
+  * change default yaml load to be from FW
+  * add common/configs/specifics.yaml to set timing settings
+  * add ${IOC}/configs/specifics.yaml to set LC1 kicker magnet type
+
 * __l2MpsLN-R3-4-0__: 2020-02-07 J. Vasquez
   * Update versions:
   * buildroot to 2019.08

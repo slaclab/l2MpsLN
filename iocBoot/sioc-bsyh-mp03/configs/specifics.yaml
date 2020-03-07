@@ -1,0 +1,6 @@
+## Load configurations
+- AppTop:
+    - AppCore:
+        - MpsLinkNodeCore:
+            - MpsMitigationCore:
+                - mpsConfig: !<value> 0x2
