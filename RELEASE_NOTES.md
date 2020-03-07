@@ -3,7 +3,7 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R3-4-0__: 2020-03-06 J. Mock
+* __l2MpsLN-R3-5-0__: 2020-03-06 J. Mock
   * general ioc cleanup
   * change default yaml load to be from FW
   * add common/configs/specifics.yaml to set timing settings
