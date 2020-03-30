@@ -1,0 +1,138 @@
+#record to hold coarse delay in samples
+record(ao, "$(P):$(R)_COARSE_DLY_SAM") {
+  field(DESC, "$(DESC) COARSE SAM")
+  field(OMSL, "supervisory")
+  field(DRVL, "0")
+  field(DRVH, "3000000")
+  field(DTYP, "Soft Channel")
+  field(LINR, "NO CONVERSION")
+  field(EGU, "SAMPLES")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(FLNK, "$(P):$(R)_COARSE_DLY_CALC")
+  info(autosaveFields, "VAL")
+}
+
+record(calcout, "$(P):$(R)_COARSE_DLY_CALC") {
+  field(DESC, "$(DESC) COARSE CALC")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(CALC, "a*b+c")
+  field(INPA, "$(P):$(R)_COARSE_DLY_SAM")
+  field(INPB, "$(P):$(R)_ADC_RATE")
+  field(INPC, "$(P):$(R)_SAM_OFF")
+  field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):TRG1$(CH)_SYS0_TDES")
+  field(FLINK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):TRG1$(CH)_SYS0_TDES.PROC")
+  field(OOPT, "Every Time")
+  field(DOPT, "Use CALC")
+}
+
+record(ai, "$(P):$(R)_ADC_RATE") {
+  field(DESC, "$(DESC) ns/sam")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(VAL, "3.74")
+  info(autosaveFields, "VAL")
+}
+
+record(ai, "$(P):$(R)_SAM_OFF") {
+  field(DESC, "$(DESC) Sam Off")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(VAL, "337")
+  info(autosaveFields, "VAL")
+}
+
+record(ai, "$(P):$(R)_SIG_ST_SAM") {
+  field(DESC, "$(DESC) SIG SAM")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(FLNK, "$(P):$(R)_SIG_ST_CALC")
+  field(VAL, "0")
+  info(autosaveFields, "VAL")
+}
+
+record(calcout, "$(P):$(R)_SIG_ST_CALC") {
+  field(DESC, "$(DESC) SIG ST CALC")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(CALC, "Floor(a/2)")
+  field(INPA, "$(P):$(R)_SIG_ST_SAM")
+  field(OUT, "$(P):LC1_ANA_PK_DEL_TRG_$(CH)")
+  field(FLNK, "$(P):LC1_ANA_PK_DEL_TRG_$(CH).PROC")
+  field(OOPT, "Every Time")
+  field(DOPT, "Use CALC")
+}
+
+record(ai, "$(P):$(R)_SIG_WD_SAM") {
+  field(DESC, "$(DESC) SIG SAM Width")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(FLNK, "$(P):$(R)_SIG_WD_CALC")
+  field(VAL, "131070")
+  info(autosaveFields, "VAL")
+}
+
+record(calcout, "$(P):$(R)_SIG_WD_CALC") {
+  field(DESC, "$(DESC) SIG WD CALC")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(CALC, "Floor(a/2)")
+  field(INPA, "$(P):$(R)_SIG_WD_SAM")
+  field(OUT, "$(P):LC1_ANA_PK_WDT_TRG_$(CH)")
+  field(FLNK, "$(P):LC1_ANA_PK_WDT_TRG_$(CH).PROC")
+  field(OOPT, "Every Time")
+  field(DOPT, "Use CALC")
+}
+
+record(ai, "$(P):$(R)_PED_ST_SAM") {
+  field(DESC, "$(DESC) PED SAM")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(FLNK, "$(P):$(R)_PED_ST_CALC")
+  field(VAL, "0")
+  info(autosaveFields, "VAL")
+}
+
+record(calcout, "$(P):$(R)_PED_ST_CALC") {
+  field(DESC, "$(DESC) PED ST CALC")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(CALC, "Floor(a/2)")
+  field(INPA, "$(P):$(R)_PED_ST_SAM")
+  field(OUT, "$(P):LC1_ANA_PD_DEL_TRG_$(CH)")
+  field(FLNK, "$(P):LC1_ANA_PD_DEL_TRG_$(CH).PROC")
+  field(OOPT, "Every Time")
+  field(DOPT, "Use CALC")
+}
+
+record(ai, "$(P):$(R)_PED_WD_SAM") {
+  field(DESC, "$(DESC) PED SAM Width")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(FLNK, "$(P):$(R)_PED_WD_CALC")
+  field(VAL, "0")
+  info(autosaveFields, "VAL")
+}
+
+record(calcout, "$(P):$(R)_PED_WD_CALC") {
+  field(DESC, "$(DESC) PED WD CALC")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(DTYP, "Soft Channel")
+  field(CALC, "Floor(a/2)")
+  field(INPA, "$(P):$(R)_PED_WD_SAM")
+  field(OUT, "$(P):LC1_ANA_PD_WDT_TRG_$(CH)")
+  field(FLNK, "$(P):LC1_ANA_PD_WDT_TRG_$(CH).PROC")
+  field(OOPT, "Every Time")
+  field(DOPT, "Use CALC")
+}
