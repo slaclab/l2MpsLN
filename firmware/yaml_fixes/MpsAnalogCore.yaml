@@ -36,6 +36,7 @@ MpsAnalogCore: &MpsAnalogCore
         stride: 8
         nelms: 6
       sizeBits: 16
+      isSigned: true
       lsBit: 0
       mode: RO
       description: "Minimum value per channel"
@@ -47,6 +48,7 @@ MpsAnalogCore: &MpsAnalogCore
         stride: 8
         nelms: 6
       sizeBits: 16
+      isSigned: true
       lsBit: 0
       mode: RO
       description: "Maximum value per channel"
@@ -58,6 +60,7 @@ MpsAnalogCore: &MpsAnalogCore
         stride: 8
         nelms: 6
       sizeBits: 16
+      isSigned: true
       lsBit: 0
       mode: RO
       description: "Average value per channel"
