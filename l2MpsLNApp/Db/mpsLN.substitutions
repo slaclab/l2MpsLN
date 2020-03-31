@@ -115,24 +115,6 @@ file "RegRO.template" { pattern
 { LC1_MSG_ERROR_CNT,        "LCLS-I Message Error Counter",             "YES",  "1 second", "",         LC1_lcls1MessageError       }
 { LC2_MSG_ERROR_CNT,        "LCLS-II Message Error Counter",            "YES",  "1 second", "",         LC1_lcls2MessageError       }
 { LC1_MAC_ADDR,             "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",         LC1_MacAddr                 }
-{ ANA_MIN_VAL_0,            "Minimum value (ch 0)",                     "YES",  "1 second", "",         ANACORE_MinValue_0          }
-{ ANA_MIN_VAL_1,            "Minimum value (ch 1)",                     "YES",  "1 second", "",         ANACORE_MinValue_1          }
-{ ANA_MIN_VAL_2,            "Minimum value (ch 2)",                     "YES",  "1 second", "",         ANACORE_MinValue_2          }
-{ ANA_MIN_VAL_3,            "Minimum value (ch 3)",                     "YES",  "1 second", "",         ANACORE_MinValue_3          }
-{ ANA_MIN_VAL_4,            "Minimum value (ch 4)",                     "YES",  "1 second", "",         ANACORE_MinValue_4          }
-{ ANA_MIN_VAL_5,            "Minimum value (ch 5)",                     "YES",  "1 second", "",         ANACORE_MinValue_5          }
-{ ANA_MAX_VAL_0,            "Maximum value (ch 0)",                     "YES",  "1 second", "",         ANACORE_MaxValue_0          }
-{ ANA_MAX_VAL_1,            "Maximum value (ch 1)",                     "YES",  "1 second", "",         ANACORE_MaxValue_1          }
-{ ANA_MAX_VAL_2,            "Maximum value (ch 2)",                     "YES",  "1 second", "",         ANACORE_MaxValue_2          }
-{ ANA_MAX_VAL_3,            "Maximum value (ch 3)",                     "YES",  "1 second", "",         ANACORE_MaxValue_3          }
-{ ANA_MAX_VAL_4,            "Maximum value (ch 4)",                     "YES",  "1 second", "",         ANACORE_MaxValue_4          }
-{ ANA_MAX_VAL_5,            "Maximum value (ch 5)",                     "YES",  "1 second", "",         ANACORE_MaxValue_5          }
-{ ANA_AVG_VAL_0,            "Average value (ch 0)",                     "YES",  "1 second", "",         ANACORE_AvgValue_0          }
-{ ANA_AVG_VAL_1,            "Average value (ch 1)",                     "YES",  "1 second", "",         ANACORE_AvgValue_1          }
-{ ANA_AVG_VAL_2,            "Average value (ch 2)",                     "YES",  "1 second", "",         ANACORE_AvgValue_2          }
-{ ANA_AVG_VAL_3,            "Average value (ch 3)",                     "YES",  "1 second", "",         ANACORE_AvgValue_3          }
-{ ANA_AVG_VAL_4,            "Average value (ch 4)",                     "YES",  "1 second", "",         ANACORE_AvgValue_4          }
-{ ANA_AVG_VAL_5,            "Average value (ch 5)",                     "YES",  "1 second", "",         ANACORE_AvgValue_5          }
 { ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  "1 second", "",         ANACORE_BsaData_0           }
 { ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  "1 second", "",         ANACORE_BsaData_1           }
 { ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  "1 second", "",         ANACORE_BsaData_2           }
@@ -178,6 +160,25 @@ file "RegAI.template" { pattern
 { ADC_DATA_3,               "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_10   }
 { ADC_DATA_4,               "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_11   }
 { ADC_DATA_5,               "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_12   }
+{ ANA_MIN_VAL_0,            "Analog core: Minimum value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_0  }
+{ ANA_MIN_VAL_1,            "Analog core: Minimum value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_1  }
+{ ANA_MIN_VAL_2,            "Analog core: Minimum value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_2  }
+{ ANA_MIN_VAL_3,            "Analog core: Minimum value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_3  }
+{ ANA_MIN_VAL_4,            "Analog core: Minimum value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_4  }
+{ ANA_MIN_VAL_5,            "Analog core: Minimum value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_5  }
+{ ANA_MAX_VAL_0,            "Analog core: Maximum value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_0  }
+{ ANA_MAX_VAL_1,            "Analog core: Maximum value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_1  }
+{ ANA_MAX_VAL_2,            "Analog core: Maximum value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_2  }
+{ ANA_MAX_VAL_3,            "Analog core: Maximum value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_3  }
+{ ANA_MAX_VAL_4,            "Analog core: Maximum value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_4  }
+{ ANA_MAX_VAL_5,            "Analog core: Maximum value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_5  }
+{ ANA_AVG_VAL_0,            "Analog core: Average value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_0  }
+{ ANA_AVG_VAL_1,            "Analog core: Average value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_1  }
+{ ANA_AVG_VAL_2,            "Analog core: Average value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_2  }
+{ ANA_AVG_VAL_3,            "Analog core: Average value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_3  }
+{ ANA_AVG_VAL_4,            "Analog core: Average value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_4  }
+{ ANA_AVG_VAL_5,            "Analog core: Average value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_5  }
+
 }
 
 #======================================
