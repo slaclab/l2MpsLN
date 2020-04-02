@@ -71,7 +71,8 @@ MpsAnalogCore: &MpsAnalogCore
         offset: 0x0030
         stride: 4
         nelms: 24
-      sizeBits: 32
+      sizeBits: 16
+      isSigned: true
       lsBit: 0
       mode: RO
       description: "BSA data, depending on selection in 0x60-0x74 of MpsAnalogLcllsReg of LCLS1 or LCLS2  select  nop , integration, or linear value."
