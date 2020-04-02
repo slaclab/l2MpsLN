@@ -83,6 +83,7 @@ MpsAnalogLclsReg: &MpsAnalogLclsReg
         stride: 4
         nelms: 6
       sizeBits: 16
+      isSigned: true
       lsBit: 0
       mode: RW
       description: "LCLS Force values to be processed."
