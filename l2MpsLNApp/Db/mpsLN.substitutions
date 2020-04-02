@@ -2,7 +2,7 @@
 # Registers with ScalVal_RO interfaces
 # ======================================
 
-# Single register
+# Single register with longin records
 file "RegRO.template" { pattern
 { R,                        DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
 { CON_LOCSIZE,              "Number Of Local Channels",                 "YES",  "Passive",  "",         CONCEN_LocSize              }
@@ -127,7 +127,7 @@ file "RegRO.template" { pattern
 { DM1_TRIGGER_CNT,          "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers", DM1_TrigCnt                 }
 }
 
-# Single register with on AI records
+# Single register with AI records
 file "RegAI.template" { pattern
 { R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM               }
 { ADC_DATA_0,               "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_00   }
@@ -199,6 +199,8 @@ file "RegCmd.template" { pattern
 #======================================
 # Register with ScalVal interfaces
 #======================================
+
+# Single register with longout records
 file "RegRW.template" { pattern
 { R,                        DESC,                                       SCAN,       EGU,        PARAM                               }
 { LC2_ANA_INTCNT_0,         "LCLS2 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCount_0          }
@@ -237,12 +239,6 @@ file "RegRW.template" { pattern
 { LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second", "",         ANACORE_Intercept_3                 }
 { LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second", "",         ANACORE_Intercept_4                 }
 { LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second", "",         ANACORE_Intercept_5                 }
-{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcVals_0              }
-{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcVals_1              }
-{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcVals_2              }
-{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcVals_3              }
-{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcVals_4              }
-{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcVals_5              }
 { LC1_ANA_INTCNT_0,         "LCLS1 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_0       }
 { LC1_ANA_INTCNT_1,         "LCLS1 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_1       }
 { LC1_ANA_INTCNT_2,         "LCLS1 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_2       }
@@ -279,12 +275,6 @@ file "RegRW.template" { pattern
 { LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "1 second", "",         ANACORE_InterceptL1_3               }
 { LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "1 second", "",         ANACORE_InterceptL1_4               }
 { LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "1 second", "",         ANACORE_InterceptL1_5               }
-{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcValsL1_0            }
-{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcValsL1_1            }
-{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcValsL1_2            }
-{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcValsL1_3            }
-{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcValsL1_4            }
-{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcValsL1_5            }
 { DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
 { DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
 { DIG_SWBITERR,             "Value to set for sw bits when timeout",    "1 second", "",         DIGMES_SwBitError                   }
@@ -394,6 +384,23 @@ file "RegRW.template" { pattern
 { CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
 { CON_GT_TX_DIFF_CTRL_2,    "GT TX difference control (port 2)",        "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
 { CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
+}
+
+# Single register with AO records
+file "RegAO.template" { pattern
+{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM                     }
+{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_0    }
+{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_1    }
+{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_2    }
+{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_3    }
+{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_4    }
+{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_5    }
+{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_0  }
+{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_1  }
+{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_2  }
+{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_3  }
+{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_4  }
+{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_5  }
 }
 
 #======================================
