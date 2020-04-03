@@ -71,7 +71,7 @@ MpsAnalogCore: &MpsAnalogCore
         offset: 0x0030
         stride: 4
         nelms: 24
-      sizeBits: 16
+      sizeBits: 32
       isSigned: true
       lsBit: 0
       mode: RO
