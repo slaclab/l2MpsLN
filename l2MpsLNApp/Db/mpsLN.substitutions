@@ -233,12 +233,6 @@ file "RegRW.template" { pattern
 { LC2_ANA_SLOPE_3,          "LCLS2 Equation slope (ch 3)",              "1 second", "",         ANACORE_Slope_3                     }
 { LC2_ANA_SLOPE_4,          "LCLS2 Equation slope (ch 4)",              "1 second", "",         ANACORE_Slope_4                     }
 { LC2_ANA_SLOPE_5,          "LCLS2 Equation slope (ch 5)",              "1 second", "",         ANACORE_Slope_5                     }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "1 second", "",         ANACORE_Intercept_0                 }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "1 second", "",         ANACORE_Intercept_1                 }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "1 second", "",         ANACORE_Intercept_2                 }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second", "",         ANACORE_Intercept_3                 }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second", "",         ANACORE_Intercept_4                 }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second", "",         ANACORE_Intercept_5                 }
 { LC1_ANA_INTCNT_0,         "LCLS1 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_0       }
 { LC1_ANA_INTCNT_1,         "LCLS1 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_1       }
 { LC1_ANA_INTCNT_2,         "LCLS1 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_2       }
@@ -269,12 +263,6 @@ file "RegRW.template" { pattern
 { LC1_ANA_SLOPE_3,          "LCLS1 Equation slope (ch 3)",              "1 second", "",         ANACORE_SlopeL1_3                   }
 { LC1_ANA_SLOPE_4,          "LCLS1 Equation slope (ch 4)",              "1 second", "",         ANACORE_SlopeL1_4                   }
 { LC1_ANA_SLOPE_5,          "LCLS1 Equation slope (ch 5)",              "1 second", "",         ANACORE_SlopeL1_5                   }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "1 second", "",         ANACORE_InterceptL1_0               }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "1 second", "",         ANACORE_InterceptL1_1               }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "1 second", "",         ANACORE_InterceptL1_2               }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "1 second", "",         ANACORE_InterceptL1_3               }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "1 second", "",         ANACORE_InterceptL1_4               }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "1 second", "",         ANACORE_InterceptL1_5               }
 { DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
 { DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
 { DIG_SWBITERR,             "Value to set for sw bits when timeout",    "1 second", "",         DIGMES_SwBitError                   }
@@ -401,6 +389,18 @@ file "RegAO.template" { pattern
 { LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_3      }
 { LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_4      }
 { LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_5      }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_0       }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_1       }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_2       }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_3       }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_4       }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_5       }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_0     }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_1     }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_2     }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_3     }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_4     }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_5     }
 }
 
 #======================================
