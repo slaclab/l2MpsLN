@@ -38,6 +38,10 @@ MpsAnalogLclsReg: &MpsAnalogLclsReg
       sizeBits: 4
       lsBit: 0
       mode: RW
+      enums:
+        - { name: "None",            value: 0 }
+        - { name: "Integration",     value: 1 }
+        - { name: "Linear Equation", value: 2 }
       description: "LCLS Processing Selection."
     #########################################################
     Slope:
