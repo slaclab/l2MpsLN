@@ -76,10 +76,10 @@ MpsAnalogLclsReg: &MpsAnalogLclsReg
       lsBit: 0
       mode: RW
       enums:
-        - { name: Peak_Values,   value: 0 }
-        - { name: Forced_Values, value: 1 }
-        - { name: Min_Values,    value: 2 }
-        - { name: Avg_Values,    value: 3 }
+        - { name: "Peak",    value: 0 }
+        - { name: "Forced",  value: 1 }
+        - { name: "Minimum", value: 2 }
+        - { name: "Average", value: 3 }
       description: "LCLS Select value to be processed."
     #########################################################
     ForcePrcVals:
