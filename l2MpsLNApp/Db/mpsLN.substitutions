@@ -421,29 +421,29 @@ file "Reg1BitRW.template" { pattern
 # 1-bit Register with ScalVal_RO interfaces
 #======================================
 file "Reg1BitRO.template" { pattern
-{ R,                    DESC,                                   ZNAM,           ONAM,       SCAN,           PARAM                }
-{ TIM_LINK_STAT,        "Timing Rx link status",                "Non-locked",   "Locked",   "1 second",     TIM_RX_LINK          }
-{ PGP_RX_PHY_RDY_0,     "Pgp2bAxi 0 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_0     }
-{ PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_0 }
-{ PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_1     }
-{ PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_1 }
-{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_2     }
-{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_2 }
-{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_3     }
-{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_3 }
-{ PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_0     }
-{ PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_0    }
-{ PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_1     }
-{ PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_1    }
-{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_2     }
-{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_2    }
-{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_3     }
-{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_3    }
-{ ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     ASMCORE_aomPermit    }
-{ ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     ASMCORE_trgSelect    }
-{ ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     ASMCORE_shutter      }
-{ ASM_SHUTTER_CLOSE,    "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     ASMCORE_shtrClose    }
-{ ASM_SHUTTER_OPEN,     "State of shutter open input line",     "Not open",     "Open",     "1 second",     ASMCORE_shtrOpen     }
+{ R,                    DESC,                                   ZNAM,           ONAM,       SCAN,           DTYP,                   PARAM                }
+{ TIM_LINK_STAT,        "Timing Rx link status",                "Non-locked",   "Locked",   "1 second",     "asynInt32",            TIM_RX_LINK          }
+{ PGP_RX_PHY_RDY_0,     "Pgp2bAxi 0 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_0     }
+{ PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_0 }
+{ PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_1     }
+{ PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_1 }
+{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_2     }
+{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_2 }
+{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_3     }
+{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_3 }
+{ PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_0     }
+{ PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_0    }
+{ PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_1     }
+{ PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_1    }
+{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_2     }
+{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_2    }
+{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_3     }
+{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_3    }
+{ ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_aomPermit    }
+{ ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_trgSelect    }
+{ ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_shutter      }
+{ ASM_SHUTTER_CLOSE,    "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     "asynUInt32Digital",    ASMCORE_shtrClose    }
+{ ASM_SHUTTER_OPEN,     "State of shutter open input line",     "Not open",     "Open",     "1 second",     "asynUInt32Digital",    ASMCORE_shtrOpen     }
 }
 
 #======================================
