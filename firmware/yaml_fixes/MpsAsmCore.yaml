@@ -77,6 +77,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 1
       lsBit: 4
       mode: RO
+      enums:
+        - { name: "Disabled", value: 0 }
+        - { name: "Enabled",  value: 1 }
       description: "State of AOM permit line"
     #########################################################
     trgSelect:
@@ -86,6 +89,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 1
       lsBit: 5
       mode: RO
+      enums:
+        - { name: "Disabled", value: 0 }
+        - { name: "Enabled",  value: 1 }
       description: "State of trigger select line"
     #########################################################
     shutter:
@@ -95,6 +101,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 1
       lsBit: 6
       mode: RO
+      enums:
+        - { name: "Disabled", value: 0 }
+        - { name: "Enabled",  value: 1 }
       description: "State of shutter input line"
     #########################################################
     shtrClose:
@@ -104,6 +113,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 1
       lsBit: 7
       mode: RO
+      enums:
+        - { name: "Not closed", value: 0 }
+        - { name: "Closed",     value: 1 }
       description: "State of shutter closed input line"
     ########################################################
     shtrOpen:
@@ -113,6 +125,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 1
       lsBit: 0
       mode: RO
+      enums:
+        - { name: "Not opened", value: 0 }
+        - { name: "Opened",     value: 1 }
       description: "State of shutter open input line"
     ########################################################
     stateSM:
@@ -122,5 +137,9 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 2
       lsBit: 1
       mode: RO
+      enums:
+        - { name: "Block",  value: 0 }
+        - { name: "Local",  value: 1 }
+        - { name: "Permit", value: 2 }
       description: "State of SM"
     ########################################################
