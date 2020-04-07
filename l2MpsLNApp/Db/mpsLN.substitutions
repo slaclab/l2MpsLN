@@ -2,7 +2,7 @@
 # Registers with ScalVal_RO interfaces
 # ======================================
 
-# Single register
+# Single register with longin records
 file "RegRO.template" { pattern
 { R,                        DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
 { CON_LOCSIZE,              "Number Of Local Channels",                 "YES",  "Passive",  "",         CONCEN_LocSize              }
@@ -115,48 +115,6 @@ file "RegRO.template" { pattern
 { LC1_MSG_ERROR_CNT,        "LCLS-I Message Error Counter",             "YES",  "1 second", "",         LC1_lcls1MessageError       }
 { LC2_MSG_ERROR_CNT,        "LCLS-II Message Error Counter",            "YES",  "1 second", "",         LC1_lcls2MessageError       }
 { LC1_MAC_ADDR,             "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",         LC1_MacAddr                 }
-{ ANA_MIN_VAL_0,            "Minimum value (ch 0)",                     "YES",  "1 second", "",         ANACORE_MinValue_0          }
-{ ANA_MIN_VAL_1,            "Minimum value (ch 1)",                     "YES",  "1 second", "",         ANACORE_MinValue_1          }
-{ ANA_MIN_VAL_2,            "Minimum value (ch 2)",                     "YES",  "1 second", "",         ANACORE_MinValue_2          }
-{ ANA_MIN_VAL_3,            "Minimum value (ch 3)",                     "YES",  "1 second", "",         ANACORE_MinValue_3          }
-{ ANA_MIN_VAL_4,            "Minimum value (ch 4)",                     "YES",  "1 second", "",         ANACORE_MinValue_4          }
-{ ANA_MIN_VAL_5,            "Minimum value (ch 5)",                     "YES",  "1 second", "",         ANACORE_MinValue_5          }
-{ ANA_MAX_VAL_0,            "Maximum value (ch 0)",                     "YES",  "1 second", "",         ANACORE_MaxValue_0          }
-{ ANA_MAX_VAL_1,            "Maximum value (ch 1)",                     "YES",  "1 second", "",         ANACORE_MaxValue_1          }
-{ ANA_MAX_VAL_2,            "Maximum value (ch 2)",                     "YES",  "1 second", "",         ANACORE_MaxValue_2          }
-{ ANA_MAX_VAL_3,            "Maximum value (ch 3)",                     "YES",  "1 second", "",         ANACORE_MaxValue_3          }
-{ ANA_MAX_VAL_4,            "Maximum value (ch 4)",                     "YES",  "1 second", "",         ANACORE_MaxValue_4          }
-{ ANA_MAX_VAL_5,            "Maximum value (ch 5)",                     "YES",  "1 second", "",         ANACORE_MaxValue_5          }
-{ ANA_AVG_VAL_0,            "Average value (ch 0)",                     "YES",  "1 second", "",         ANACORE_AvgValue_0          }
-{ ANA_AVG_VAL_1,            "Average value (ch 1)",                     "YES",  "1 second", "",         ANACORE_AvgValue_1          }
-{ ANA_AVG_VAL_2,            "Average value (ch 2)",                     "YES",  "1 second", "",         ANACORE_AvgValue_2          }
-{ ANA_AVG_VAL_3,            "Average value (ch 3)",                     "YES",  "1 second", "",         ANACORE_AvgValue_3          }
-{ ANA_AVG_VAL_4,            "Average value (ch 4)",                     "YES",  "1 second", "",         ANACORE_AvgValue_4          }
-{ ANA_AVG_VAL_5,            "Average value (ch 5)",                     "YES",  "1 second", "",         ANACORE_AvgValue_5          }
-{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  "1 second", "",         ANACORE_BsaData_0           }
-{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  "1 second", "",         ANACORE_BsaData_1           }
-{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  "1 second", "",         ANACORE_BsaData_2           }
-{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  "1 second", "",         ANACORE_BsaData_3           }
-{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  "1 second", "",         ANACORE_BsaData_4           }
-{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  "1 second", "",         ANACORE_BsaData_5           }
-{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  "1 second", "",         ANACORE_BsaData_6           }
-{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  "1 second", "",         ANACORE_BsaData_7           }
-{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  "1 second", "",         ANACORE_BsaData_8           }
-{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  "1 second", "",         ANACORE_BsaData_9           }
-{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  "1 second", "",         ANACORE_BsaData_10          }
-{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  "1 second", "",         ANACORE_BsaData_11          }
-{ ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second", "",         ANACORE_BsaData_12          }
-{ ANA_BSA_DATA_13,          "BSA data (ch 13)",                         "YES",  "1 second", "",         ANACORE_BsaData_13          }
-{ ANA_BSA_DATA_14,          "BSA data (ch 14)",                         "YES",  "1 second", "",         ANACORE_BsaData_14          }
-{ ANA_BSA_DATA_15,          "BSA data (ch 15)",                         "YES",  "1 second", "",         ANACORE_BsaData_15          }
-{ ANA_BSA_DATA_16,          "BSA data (ch 16)",                         "YES",  "1 second", "",         ANACORE_BsaData_16          }
-{ ANA_BSA_DATA_17,          "BSA data (ch 17)",                         "YES",  "1 second", "",         ANACORE_BsaData_17          }
-{ ANA_BSA_DATA_18,          "BSA data (ch 18)",                         "YES",  "1 second", "",         ANACORE_BsaData_18          }
-{ ANA_BSA_DATA_19,          "BSA data (ch 19)",                         "YES",  "1 second", "",         ANACORE_BsaData_19          }
-{ ANA_BSA_DATA_20,          "BSA data (ch 20)",                         "YES",  "1 second", "",         ANACORE_BsaData_20          }
-{ ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second", "",         ANACORE_BsaData_21          }
-{ ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second", "",         ANACORE_BsaData_22          }
-{ ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second", "",         ANACORE_BsaData_23          }
 { ASM_MPS_AMC_DOUT,         "State of the 4 AMC lines",                 "YES",  "1 second", "",         ASMCORE_mpsAmcDout          }
 { ANA_OVERTHR_CNT_0         "Over threshold for ADC input 0",           "YES",  "1 second", "",         ANACORE_overThreshCnt_0     }
 { ANA_OVERTHR_CNT_1         "Over threshold for ADC input 1",           "YES",  "1 second", "",         ANACORE_overThreshCnt_1     }
@@ -169,15 +127,57 @@ file "RegRO.template" { pattern
 { DM1_TRIGGER_CNT,          "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers", DM1_TrigCnt                 }
 }
 
-# Single register with on AI records
-file "RegAI.template" { pattern
-{ R,                        DESC,                                       PINI,   SCAN,       EGU,    LINR,       EGUF,           EGUL,           PREC,       PARAM               }
-{ ADC_DATA_0,               "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_00   }
-{ ADC_DATA_1,               "Adc raw data (slow rate), Bay 0, ch 1",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_01   }
-{ ADC_DATA_2,               "Adc raw data (slow rate), Bay 0, ch 2",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_02   }
-{ ADC_DATA_3,               "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_10   }
-{ ADC_DATA_4,               "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_11   }
-{ ADC_DATA_5,               "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second", "V",    "LINEAR",   "607.14e-3",    "-607.14e-3",   3,          AMCADC_AdcData_12   }
+# Single register with AI records
+file "RegRO_Analog.template" { pattern
+{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM               }
+{ ADC_DATA_0,               "Adc raw data (slow rate), Bay 0, ch 0",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_00   }
+{ ADC_DATA_1,               "Adc raw data (slow rate), Bay 0, ch 1",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_01   }
+{ ADC_DATA_2,               "Adc raw data (slow rate), Bay 0, ch 2",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_02   }
+{ ADC_DATA_3,               "Adc raw data (slow rate), Bay 1, ch 0",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_10   }
+{ ADC_DATA_4,               "Adc raw data (slow rate), Bay 1, ch 1",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_11   }
+{ ADC_DATA_5,               "Adc raw data (slow rate), Bay 1, ch 2",    "YES",  "1 second",     "mV",   "LINEAR",   "0",        "1200",     3,      AMCADC_AdcData_12   }
+{ ANA_MIN_VAL_0,            "Analog core: Minimum value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_0  }
+{ ANA_MIN_VAL_1,            "Analog core: Minimum value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_1  }
+{ ANA_MIN_VAL_2,            "Analog core: Minimum value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_2  }
+{ ANA_MIN_VAL_3,            "Analog core: Minimum value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_3  }
+{ ANA_MIN_VAL_4,            "Analog core: Minimum value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_4  }
+{ ANA_MIN_VAL_5,            "Analog core: Minimum value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MinValue_5  }
+{ ANA_MAX_VAL_0,            "Analog core: Maximum value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_0  }
+{ ANA_MAX_VAL_1,            "Analog core: Maximum value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_1  }
+{ ANA_MAX_VAL_2,            "Analog core: Maximum value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_2  }
+{ ANA_MAX_VAL_3,            "Analog core: Maximum value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_3  }
+{ ANA_MAX_VAL_4,            "Analog core: Maximum value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_4  }
+{ ANA_MAX_VAL_5,            "Analog core: Maximum value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_MaxValue_5  }
+{ ANA_AVG_VAL_0,            "Analog core: Average value (ch 0)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_0  }
+{ ANA_AVG_VAL_1,            "Analog core: Average value (ch 1)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_1  }
+{ ANA_AVG_VAL_2,            "Analog core: Average value (ch 2)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_2  }
+{ ANA_AVG_VAL_3,            "Analog core: Average value (ch 3)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_3  }
+{ ANA_AVG_VAL_4,            "Analog core: Average value (ch 4)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_4  }
+{ ANA_AVG_VAL_5,            "Analog core: Average value (ch 5)",        "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_AvgValue_5  }
+{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_0   }
+{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_1   }
+{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_2   }
+{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_3   }
+{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_4   }
+{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_5   }
+{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_6   }
+{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_7   }
+{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_8   }
+{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_9   }
+{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_10  }
+{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_11  }
+{ ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_12  }
+{ ANA_BSA_DATA_13,          "BSA data (ch 13)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_13  }
+{ ANA_BSA_DATA_14,          "BSA data (ch 14)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_14  }
+{ ANA_BSA_DATA_15,          "BSA data (ch 15)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_15  }
+{ ANA_BSA_DATA_16,          "BSA data (ch 16)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_16  }
+{ ANA_BSA_DATA_17,          "BSA data (ch 17)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_17  }
+{ ANA_BSA_DATA_18,          "BSA data (ch 18)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_18  }
+{ ANA_BSA_DATA_19,          "BSA data (ch 19)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_19  }
+{ ANA_BSA_DATA_20,          "BSA data (ch 20)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_20  }
+{ ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_21  }
+{ ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_22  }
+{ ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_23  }
 }
 
 #======================================
@@ -199,6 +199,8 @@ file "RegCmd.template" { pattern
 #======================================
 # Register with ScalVal interfaces
 #======================================
+
+# Single register with longout records
 file "RegRW.template" { pattern
 { R,                        DESC,                                       SCAN,       EGU,        PARAM                               }
 { LC2_ANA_INTCNT_0,         "LCLS2 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCount_0          }
@@ -231,18 +233,6 @@ file "RegRW.template" { pattern
 { LC2_ANA_SLOPE_3,          "LCLS2 Equation slope (ch 3)",              "1 second", "",         ANACORE_Slope_3                     }
 { LC2_ANA_SLOPE_4,          "LCLS2 Equation slope (ch 4)",              "1 second", "",         ANACORE_Slope_4                     }
 { LC2_ANA_SLOPE_5,          "LCLS2 Equation slope (ch 5)",              "1 second", "",         ANACORE_Slope_5                     }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "1 second", "",         ANACORE_Intercept_0                 }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "1 second", "",         ANACORE_Intercept_1                 }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "1 second", "",         ANACORE_Intercept_2                 }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second", "",         ANACORE_Intercept_3                 }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second", "",         ANACORE_Intercept_4                 }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second", "",         ANACORE_Intercept_5                 }
-{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcVals_0              }
-{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcVals_1              }
-{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcVals_2              }
-{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcVals_3              }
-{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcVals_4              }
-{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcVals_5              }
 { LC1_ANA_INTCNT_0,         "LCLS1 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_0       }
 { LC1_ANA_INTCNT_1,         "LCLS1 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_1       }
 { LC1_ANA_INTCNT_2,         "LCLS1 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_2       }
@@ -273,18 +263,6 @@ file "RegRW.template" { pattern
 { LC1_ANA_SLOPE_3,          "LCLS1 Equation slope (ch 3)",              "1 second", "",         ANACORE_SlopeL1_3                   }
 { LC1_ANA_SLOPE_4,          "LCLS1 Equation slope (ch 4)",              "1 second", "",         ANACORE_SlopeL1_4                   }
 { LC1_ANA_SLOPE_5,          "LCLS1 Equation slope (ch 5)",              "1 second", "",         ANACORE_SlopeL1_5                   }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "1 second", "",         ANACORE_InterceptL1_0               }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "1 second", "",         ANACORE_InterceptL1_1               }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "1 second", "",         ANACORE_InterceptL1_2               }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "1 second", "",         ANACORE_InterceptL1_3               }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "1 second", "",         ANACORE_InterceptL1_4               }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "1 second", "",         ANACORE_InterceptL1_5               }
-{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "1 second", "",         ANACORE_ForcePrcValsL1_0            }
-{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "1 second", "",         ANACORE_ForcePrcValsL1_1            }
-{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "1 second", "",         ANACORE_ForcePrcValsL1_2            }
-{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "1 second", "",         ANACORE_ForcePrcValsL1_3            }
-{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "1 second", "",         ANACORE_ForcePrcValsL1_4            }
-{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "1 second", "",         ANACORE_ForcePrcValsL1_5            }
 { DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
 { DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
 { DIG_SWBITERR,             "Value to set for sw bits when timeout",    "1 second", "",         DIGMES_SwBitError                   }
@@ -318,12 +296,6 @@ file "RegRW.template" { pattern
 { ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                     }
 { LC2_ANA_BOX_INT_EN        "LCLS2 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEn           }
 { LC2_ANA_OFF_POL           "LCLS2 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarity              }
-{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_0                  }
-{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_1                  }
-{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_2                  }
-{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_3                  }
-{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_4                  }
-{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlm_5                  }
 { LC2_ANA_PK_DEL_TRG_0      "LCLS2 Peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeak_0          }
 { LC2_ANA_PK_DEL_TRG_1      "LCLS2 Peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeak_1          }
 { LC2_ANA_PK_DEL_TRG_2      "LCLS2 Peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeak_2          }
@@ -350,12 +322,6 @@ file "RegRW.template" { pattern
 { LC2_ANA_PD_WDT_TRG_5      "LCLS2 Pedestal windows trig. width",       "1 second", "jesd clk", ANACORE_triggerWidthPedestal_5      }
 { LC1_ANA_BOX_INT_EN        "LCLS1 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEnL1         }
 { LC1_ANA_OFF_POL           "LCLS1 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarityL1            }
-{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_0                }
-{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_1                }
-{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_2                }
-{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_3                }
-{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_4                }
-{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "1 second", "counts",   ANACORE_treshBlmL1_5                }
 { LC1_ANA_PK_DEL_TRG_0      "LCLS1 peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeakL1_0        }
 { LC1_ANA_PK_DEL_TRG_1      "LCLS1 peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeakL1_1        }
 { LC1_ANA_PK_DEL_TRG_2      "LCLS1 peak window trig. delay",            "1 second", "jesd clk", ANACORE_triggerDelayPeakL1_2        }
@@ -394,6 +360,47 @@ file "RegRW.template" { pattern
 { CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
 { CON_GT_TX_DIFF_CTRL_2,    "GT TX difference control (port 2)",        "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
 { CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
+}
+
+# Single register with AO records
+file "RegRW_Analog.template" { pattern
+{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM                     }
+{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_0    }
+{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_1    }
+{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_2    }
+{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_3    }
+{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_4    }
+{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_5    }
+{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_0  }
+{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_1  }
+{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_2  }
+{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_3  }
+{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_4  }
+{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_5  }
+{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_0        }
+{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_1        }
+{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_2        }
+{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_3        }
+{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_4        }
+{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_5        }
+{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_0      }
+{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_1      }
+{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_2      }
+{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_3      }
+{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_4      }
+{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_5      }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_0       }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_1       }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_2       }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_3       }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_4       }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_5       }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_0     }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_1     }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_2     }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_3     }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_4     }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_5     }
 }
 
 #======================================
