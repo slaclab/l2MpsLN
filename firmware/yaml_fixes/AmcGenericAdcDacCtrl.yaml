@@ -136,6 +136,7 @@ AmcGenericAdcDacCtrl: &AmcGenericAdcDacCtrl
       class: IntField
       name: AdcData
       sizeBits: 16
+      isSigned: true
       mode: RO
       description: ADC Data[3:0]
     #########################################################
