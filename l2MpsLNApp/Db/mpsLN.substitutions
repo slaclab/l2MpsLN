@@ -475,10 +475,6 @@ file "Reg2BitsRO.template" { pattern
 #======================================
 file "Reg3BitsRW.template" { pattern
 { R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,       PARAM                   }
-{ ASM_AMC_DEST_0,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trig select",  "",         "",             "1 second", ASMCORE_mpsAmcDest_0    }
-{ ASM_AMC_DEST_1,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trig select",  "",         "",             "1 second", ASMCORE_mpsAmcDest_1    }
-{ ASM_AMC_DEST_2,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trig select",  "",         "",             "1 second", ASMCORE_mpsAmcDest_2    }
-{ ASM_AMC_DEST_3,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trig select",  "",         "",             "1 second", ASMCORE_mpsAmcDest_3    }
 { MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "1 second", MITIG_mpsConfig         }
 }
 
@@ -499,6 +495,10 @@ file "Reg4BitsRW.template" { pattern
 { LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_3    }
 { LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_4    }
 { LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_5    }
+{ ASM_AMC_DEST_0,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_0            }
+{ ASM_AMC_DEST_1,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_1            }
+{ ASM_AMC_DEST_2,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_2            }
+{ ASM_AMC_DEST_3,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_3            }
 }
 
 #======================================
