@@ -32,7 +32,7 @@ MpsAsmCore: &MpsAsmCore
         - { name: AMC11,         value: 3 }
         - { name: AOM_Permit,    value: 4 }
         - { name: Trg)Select,    value: 5 }
-      description: "AMC desctination out of 6 option"
+      description: "AMC destination out of 6 option"
     #########################################################
     mpsOpenSrs:
       class: IntField
@@ -41,7 +41,7 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 6
       lsBit: 0
       mode: RW
-      description: "Open shutter signal selectionout of 64 inputs"
+      description: "Open shutter signal selection out of 64 inputs"
     #########################################################
     mpsCloseSrs:
       class: IntField
@@ -50,7 +50,7 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 6
       lsBit: 0
       mode: RW
-      description: "Closed shutter signal selectionout of 64 inputs"
+      description: "Closed shutter signal selection out of 64 inputs"
     #########################################################
     shtrSrs:
       class: IntField
@@ -59,7 +59,7 @@ MpsAsmCore: &MpsAsmCore
       sizeBits: 4
       lsBit: 0
       mode: RW
-      description: "Shutter signal selectionout of 8 possible"
+      description: "Shutter signal selection out of 8 possible"
     #########################################################
     mpsAmcDout:
       class: IntField
