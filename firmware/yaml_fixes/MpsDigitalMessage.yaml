@@ -58,6 +58,9 @@ MpsDigitalMsg: &MpsDigitalMessage
       sizeBits: 1
       lsBit: 0
       mode: RW
+      enums:
+        - { name: "Inverse", value: 0 }
+        - { name: "Direct",  value: 1 }
       description: "Digital Bit Polarity for LCLS1."
     #########################################################
     L2Polarity:
@@ -69,6 +72,9 @@ MpsDigitalMsg: &MpsDigitalMessage
       sizeBits: 1
       lsBit: 0
       mode: RW
+      enums:
+        - { name: "Inverse", value: 0 }
+        - { name: "Direct",  value: 1 }
       description: "Digital Bit Polarity for LCLS2."
     #########################################################
     L1DebounceValue:
