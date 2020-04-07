@@ -103,6 +103,9 @@ Pgp2bAxi: &Pgp2bAxi
       sizeBits: 1
       lsBit: 0
       mode: RO
+      enums:
+        - { name: "Not ready", value: 0 }
+        - { name: "Ready",     value: 1 }
       description: "RX Phy is Ready"
     #########################################################
     TxPhyReady:
@@ -112,6 +115,9 @@ Pgp2bAxi: &Pgp2bAxi
       sizeBits: 1
       lsBit: 1
       mode: RO
+      enums:
+        - { name: "Not ready", value: 0 }
+        - { name: "Ready",     value: 1 }
       description: "TX Phy is Ready"
     #########################################################
     RxLocalLinkReady:
@@ -121,6 +127,9 @@ Pgp2bAxi: &Pgp2bAxi
       sizeBits: 1
       lsBit: 2
       mode: RO
+      enums:
+        - { name: "Not ready", value: 0 }
+        - { name: "Ready",     value: 1 }
       description: "Rx Local Link Ready"
     #########################################################
     RxRemLinkReady:
@@ -139,6 +148,9 @@ Pgp2bAxi: &Pgp2bAxi
       sizeBits: 1
       lsBit: 4
       mode: RO
+      enums:
+        - { name: "Not ready", value: 0 }
+        - { name: "Ready",     value: 1 }
       description: "Tx Link Ready"
     #########################################################
     RxLinkPolarity:
