@@ -26,12 +26,12 @@ MpsAsmCore: &MpsAsmCore
       lsBit:       0
       mode:        RW
       enums:
-        - { name: AMC00,         value: 0 }
-        - { name: AMC01,         value: 1 }
-        - { name: AMC10,         value: 2 }
-        - { name: AMC11,         value: 3 }
-        - { name: AOM_Permit,    value: 4 }
-        - { name: Trg)Select,    value: 5 }
+        - { name: "AMC00",          value: 0 }
+        - { name: "AMC01",          value: 1 }
+        - { name: "AMC10",          value: 2 }
+        - { name: "AMC11",          value: 3 }
+        - { name: "AOM permit",     value: 4 }
+        - { name: "Trigger select", value: 5 }
       description: "AMC destination out of 6 option"
     #########################################################
     mpsOpenSrs:
