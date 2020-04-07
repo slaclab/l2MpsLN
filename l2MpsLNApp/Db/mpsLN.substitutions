@@ -460,18 +460,6 @@ file "Reg2BitsRW.template" { pattern
 { TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_2                    }
 { TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_3                    }
 { MIT_KICK_TYPE,        "Type of mitigation kicker",            "None",         "BKRCUS",           "ByKIK",            "ByKIKS",       "1 second", MITIG_mpsConfig                 }
-{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_0      }
-{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_1      }
-{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_2      }
-{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_3      }
-{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_4      }
-{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_5      }
-{ LC1_ANA_PROCSEL_0,    "LCLS1 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_0    }
-{ LC1_ANA_PROCSEL_1,    "LCLS1 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_1    }
-{ LC1_ANA_PROCSEL_2,    "LCLS1 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_2    }
-{ LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_3    }
-{ LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_4    }
-{ LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_5    }
 }
 
 #======================================
@@ -492,6 +480,25 @@ file "Reg3BitsRW.template" { pattern
 { ASM_AMC_DEST_1,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_1    }
 { ASM_AMC_DEST_2,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_2    }
 { ASM_AMC_DEST_3,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_3    }
+}
+
+#======================================
+# 4-bit Register with ScalVal interfaces
+#======================================
+file "Reg4BitsRW.template" { pattern
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           FRST,          FVST,          SXST,          SVST,          EIST,          NIST,          TEST,          ELST,          TVST,          TTST,          FTST,          FFST,        SCAN,       PARAM                           }
+{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_0      }
+{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_1      }
+{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_2      }
+{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_3      }
+{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_4      }
+{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_5      }
+{ LC1_ANA_PROCSEL_0,    "LCLS1 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_0    }
+{ LC1_ANA_PROCSEL_1,    "LCLS1 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_1    }
+{ LC1_ANA_PROCSEL_2,    "LCLS1 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_2    }
+{ LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_3    }
+{ LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_4    }
+{ LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_5    }
 }
 
 #======================================
