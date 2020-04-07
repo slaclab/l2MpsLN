@@ -1,5 +1,5 @@
 record(bo,      "$(P):$(R)") {
-    field(DTYP, "asynUInt32Digital")
+    field(DTYP, "$(DTYP)")
     field(DESC, "$(DESC)")
     field(PINI, "YES")
     field(SCAN, "Passive")
@@ -10,7 +10,7 @@ record(bo,      "$(P):$(R)") {
 }
 
 record(bi,      "$(P):$(R)_RBV") {
-    field(DTYP, "asynUInt32Digital")
+    field(DTYP, "$(DTYP)")
     field(DESC, "$(DESC)")
     field(PINI, "YES")
     field(SCAN, "$(SCAN)")
