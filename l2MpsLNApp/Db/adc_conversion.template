@@ -22,7 +22,7 @@ record(calcout, "$(P):$(R)_COARSE_DLY_CALC") {
   field(INPB, "$(P):$(R)_ADC_RATE")
   field(INPC, "$(P):$(R)_SAM_OFF")
   field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):TRG1$(CH)_SYS0_TDES")
-  field(FLINK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):TRG1$(CH)_SYS0_TDES.PROC")
+  field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):TRG1$(CH)_SYS0_TDES.PROC")
   field(OOPT, "Every Time")
   field(DOPT, "Use CALC")
 }
