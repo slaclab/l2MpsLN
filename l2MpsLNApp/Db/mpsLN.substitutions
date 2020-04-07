@@ -408,8 +408,8 @@ file "RegRW_Analog.template" { pattern
 #======================================
 file "Reg1BitRW.template" { pattern
 { R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   PARAM                    }
-{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "INVERSE",  "DIRECT",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
-{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "INVERSE",  "DIRECT",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
+{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
+{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
 { DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    DIGMES_DigitalForceEn    }
 { TIM_CLK_SRC,        "Timing source",                          "LCLS-1",   "LCLS-2",   "1 second",    "asynInt32",            TIM_CLK_SEL              }
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
@@ -469,7 +469,6 @@ file "Reg2BitsRO.template" { pattern
 { ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Local",            "Permit",       "Undefined",    "1 second", ASMCORE_stateSM         }
 }
 
-
 #======================================
 # 3-bit Register with ScalVal interfaces
 #======================================
@@ -508,7 +507,6 @@ file "RegCharArrayRO.template" { pattern
 { R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
 { FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
 }
-
 
 #======================================
 # Stream waveforms (16-bit data)
