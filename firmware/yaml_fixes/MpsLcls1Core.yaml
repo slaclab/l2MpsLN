@@ -28,6 +28,9 @@ MpsLcls1Core: &MpsLcls1Core
       sizeBits: 1
       lsBit: 0
       mode: RW
+      enums:
+        - { name: "Disable", value: 0 }
+        - { name: "Enable",  value: 1 }
       description: "Enable Application Timeout Engine. "
     #########################################################
     TimeoutClear:
