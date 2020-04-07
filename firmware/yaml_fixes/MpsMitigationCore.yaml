@@ -55,6 +55,11 @@ MpsMitigationCore: &MpsMitigationCore
       sizeBits:    3
       lsBit:       0
       mode:        RW
+      enums:
+        - { name: "None",   value: 0 }
+        - { name: "BKRCUS", value: 1 }
+        - { name: "ByKIK",  value: 2 }
+        - { name: "ByKIKS", value: 3 }
       description: Kicker configuration
     mpsRtmDest:
       at:
