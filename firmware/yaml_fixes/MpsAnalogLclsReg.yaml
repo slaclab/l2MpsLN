@@ -101,6 +101,11 @@ MpsAnalogLclsReg: &MpsAnalogLclsReg
       sizeBits: 2
       lsBit: 0
       mode: RW
+      enums:
+        - { name: "None", value: 0 }
+        - { name: "Bay0", value: 1 }
+        - { name: "Bay1", value: 2 }
+        - { name: "Both", value: 3 }
       description: "LCLS Disable analog AMC card."
     #########################################################
     bunchPresentIntEn:
