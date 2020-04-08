@@ -522,11 +522,11 @@ file "waveform_stream16.template" { pattern
 file "adc_conversion.template" { pattern
 { R,                    DESC,             CH }
 { B0_C0,         "ADC Timing B0_C0",       0 }
-{ B0_C1,         "ADC Timing B0_C0",       1 }
-{ B0_C2,         "ADC Timing B0_C0",       2 }
-{ B1_C0,         "ADC Timing B0_C0",       3 }
-{ B1_C1,         "ADC Timing B0_C0",       4 }
-{ B1_C2,         "ADC Timing B0_C0",       5 }
+{ B0_C1,         "ADC Timing B0_C1",       1 }
+{ B0_C2,         "ADC Timing B0_C2",       2 }
+{ B1_C0,         "ADC Timing B1_C0",       3 }
+{ B1_C1,         "ADC Timing B1_C1",       4 }
+{ B1_C2,         "ADC Timing B1_C2",       5 }
 }
 
 #======================================
