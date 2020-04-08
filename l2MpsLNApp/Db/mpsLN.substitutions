@@ -517,19 +517,6 @@ file "waveform_stream16.template" { pattern
 }
 
 #======================================
-# WINDOW PROPERTIES
-#======================================
-file "adc_conversion.template" { pattern
-{ R,                    DESC,                           CH }
-{ B0_C0,         "ADC Timing Setup (Bay 0, ch 0)",       0 }
-{ B0_C1,         "ADC Timing Setup (Bay 0, ch 1)",       1 }
-{ B0_C2,         "ADC Timing Setup (Bay 0, ch 2)",       2 }
-{ B1_C0,         "ADC Timing Setup (Bay 1, ch 0)",       3 }
-{ B1_C1,         "ADC Timing Setup (Bay 1, ch 1)",       4 }
-{ B1_C2,         "ADC Timing Setup (Bay 1, ch 2)",       5 }
-}
-
-#======================================
 # Stream waveform size
 #======================================
 file "streamSize.template" { pattern
