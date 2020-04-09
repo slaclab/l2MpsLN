@@ -46,6 +46,9 @@ DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprTrig.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprDeviceNamePV.db
 
+# Install Databse for tprPattern module
+DB_INSTALLS += $(TPRPATTERN)/db/tprPattern.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>
