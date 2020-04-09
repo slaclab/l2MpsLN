@@ -294,10 +294,10 @@ file "RegRW.template" { pattern
 { ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second", "",         ASMCORE_mpsOpenSrs                  }
 { ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second", "",         ASMCORE_mpsCloseSrs                 }
 { ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                     }
-{ LC2_ANA_BOX_INT_EN        "LCLS2 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEn           }
-{ LC2_ANA_OFF_POL           "LCLS2 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarity              }
-{ LC1_ANA_BOX_INT_EN        "LCLS1 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEnL1         }
-{ LC1_ANA_OFF_POL           "LCLS1 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarityL1            }
+{ LC2_ANA_BOX_INT_EN,       "LCLS2 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEn           }
+{ LC2_ANA_OFF_POL,          "LCLS2 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarity              }
+{ LC1_ANA_BOX_INT_EN,       "LCLS1 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEnL1         }
+{ LC1_ANA_OFF_POL,          "LCLS1 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarityL1            }
 { CON_GT_RX_POL,            "GT RX polarity",                           "1 second", "",         CONCEN_GtRxPolarity                 }
 { CON_GT_TX_POL,            "Gt TX polarity",                           "1 second", "",         CONCEN_GtTxPolarity                 }
 { CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "1 second", "",         CONCEN_GtTxPreCursor_0              }
@@ -341,18 +341,18 @@ file "RegRW_Analog.template" { pattern
 { LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_3      }
 { LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_4      }
 { LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_5      }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_0       }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_1       }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_2       }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_3       }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_4       }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_Intercept_5       }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_0     }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_1     }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_2     }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_3     }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_4     }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3       ANACORE_InterceptL1_5     }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_0       }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_1       }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_2       }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_3       }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_4       }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_5       }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_0     }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_1     }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_2     }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_3     }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_4     }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_5     }
 { LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_0       }
 { LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_1       }
 { LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_2       }
