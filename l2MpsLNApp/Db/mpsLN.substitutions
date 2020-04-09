@@ -316,43 +316,43 @@ file "RegRW.template" { pattern
 
 # Single register with AO records
 file "RegRW_Analog.template" { pattern
-{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM                     }
-{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_0    }
-{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_1    }
-{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_2    }
-{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_3    }
-{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_4    }
-{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_5    }
-{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_0  }
-{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_1  }
-{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_2  }
-{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_3  }
-{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_4  }
-{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_5  }
-{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_0        }
-{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_1        }
-{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_2        }
-{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_3        }
-{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_4        }
-{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_5        }
-{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_0      }
-{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_1      }
-{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_2      }
-{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_3      }
-{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_4      }
-{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_5      }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_0       }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_1       }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_2       }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_3       }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_4       }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_5       }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_0     }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_1     }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_2     }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_3     }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_4     }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_5     }
+{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,       PREC,   PARAM                            }
+{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_0           }
+{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_1           }
+{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_2           }
+{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_3           }
+{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_4           }
+{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcVals_5           }
+{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_0         }
+{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_1         }
+{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_2         }
+{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_3         }
+{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_4         }
+{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_ForcePrcValsL1_5         }
+{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_0               }
+{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_1               }
+{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_2               }
+{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_3               }
+{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_4               }
+{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlm_5               }
+{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_0             }
+{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_1             }
+{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_2             }
+{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_3             }
+{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_4             }
+{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_treshBlmL1_5             }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_0              }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_1              }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_2              }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_3              }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_4              }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_Intercept_5              }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_0            }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_1            }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_2            }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_3            }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_4            }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_InterceptL1_5            }
 { LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_0       }
 { LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_1       }
 { LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243",   3,      ANACORE_triggerDelayPeak_2       }
