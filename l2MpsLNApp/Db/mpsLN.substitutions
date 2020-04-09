@@ -407,43 +407,43 @@ file "RegRW_Analog.template" { pattern
 # 1-bit Register with ScalVal interfaces
 #======================================
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          PARAM                    }
-{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "INVERSE",  "DIRECT",   "1 second",    DIGMES_L1Polarity_0      }
-{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "INVERSE",  "DIRECT",   "1 second",    DIGMES_L2Polarity_0      }
-{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    DIGMES_DigitalForceEn    }
-{ TIM_CLK_SRC,        "Timinig source",                         "LCLS-1",   "LCLS-2",   "1 second",    TIM_CLK_SEL              }
-{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    LC1_TimeoutEnable        }
-{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM0_TrigHwAutoReArm      }
-{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    DM1_TrigHwAutoReArm      }
+{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   PARAM                    }
+{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
+{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
+{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    DIGMES_DigitalForceEn    }
+{ TIM_CLK_SRC,        "Timing source",                          "LCLS-1",   "LCLS-2",   "1 second",    "asynInt32",            TIM_CLK_SEL              }
+{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
+{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",    "asynUInt32Digital",    DM0_TrigHwAutoReArm      }
+{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    "asynUInt32Digital",    DM1_TrigHwAutoReArm      }
 }
 
 #======================================
 # 1-bit Register with ScalVal_RO interfaces
 #======================================
 file "Reg1BitRO.template" { pattern
-{ R,                    DESC,                                   ZNAM,           ONAM,       SCAN,           PARAM                }
-{ TIM_LINK_STAT,        "Timing Rx link status",                "Non-locked",   "Locked",   "1 second",     TIM_RX_LINK          }
-{ PGP_RX_PHY_RDY_0,     "Pgp2bAxi 0 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_0     }
-{ PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_0 }
-{ PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_1     }
-{ PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_1 }
-{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_2     }
-{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_2 }
-{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_RxPhyReady_3     }
-{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     PGP_RxLocLinkReady_3 }
-{ PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_0     }
-{ PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_0    }
-{ PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_1     }
-{ PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_1    }
-{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_2     }
-{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_2    }
-{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     PGP_TxPhyReady_3     }
-{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     PGP_TxLinkReady_3    }
-{ ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     ASMCORE_aomPermit    }
-{ ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     ASMCORE_trgSelect    }
-{ ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     ASMCORE_shutter      }
-{ ASM_SHUTTER_CLOSE,    "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     ASMCORE_shtrClose    }
-{ ASM_SHUTTER_OPEN,     "State of shutter open input line",     "Not open",     "Open",     "1 second",     ASMCORE_shtrOpen     }
+{ R,                    DESC,                                   ZNAM,           ONAM,       SCAN,           DTYP,                   PARAM                }
+{ TIM_LINK_STAT,        "Timing Rx link status",                "Non-locked",   "Locked",   "1 second",     "asynInt32",            TIM_RX_LINK          }
+{ PGP_RX_PHY_RDY_0,     "Pgp2bAxi 0 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_0     }
+{ PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_0 }
+{ PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_1     }
+{ PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_1 }
+{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_2     }
+{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_2 }
+{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_3     }
+{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_3 }
+{ PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_0     }
+{ PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_0    }
+{ PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_1     }
+{ PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_1    }
+{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_2     }
+{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_2    }
+{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_3     }
+{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_3    }
+{ ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_aomPermit    }
+{ ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_trgSelect    }
+{ ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_shutter      }
+{ ASM_SHUTTER_CLOSE,    "State of shutter closed input line",   "Not closed",   "Closed" ,  "1 second",     "asynUInt32Digital",    ASMCORE_shtrClose    }
+{ ASM_SHUTTER_OPEN,     "State of shutter open input line",     "Not open",     "Open",     "1 second",     "asynUInt32Digital",    ASMCORE_shtrOpen     }
 }
 
 #======================================
@@ -459,19 +459,6 @@ file "Reg2BitsRW.template" { pattern
 { TIM_SRC_FPGA,         "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_1                    }
 { TIM_SRC_BP,           "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_2                    }
 { TIM_SRC_RTM1,         "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",        "RTM_1",        "1 second", TIM_CB_OUT_3                    }
-{ MIT_KICK_TYPE,        "Type of mitigation kicker",            "None",         "BKRCUS",           "ByKIK",            "ByKIKS",       "1 second", MITIG_mpsConfig                 }
-{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_0      }
-{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_1      }
-{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_2      }
-{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_3      }
-{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_4      }
-{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelect_5      }
-{ LC1_ANA_PROCSEL_0,    "LCLS1 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_0    }
-{ LC1_ANA_PROCSEL_1,    "LCLS1 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_1    }
-{ LC1_ANA_PROCSEL_2,    "LCLS1 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_2    }
-{ LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_3    }
-{ LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_4    }
-{ LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "-INVALID-",    "1 second", ANACORE_ProcessingSelectL1_5    }
 }
 
 #======================================
@@ -482,16 +469,35 @@ file "Reg2BitsRO.template" { pattern
 { ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Local",            "Permit",       "Undefined",    "1 second", ASMCORE_stateSM         }
 }
 
-
 #======================================
 # 3-bit Register with ScalVal interfaces
 #======================================
 file "Reg3BitsRW.template" { pattern
 { R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,       PARAM                   }
-{ ASM_AMC_DEST_0,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_0    }
-{ ASM_AMC_DEST_1,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_1    }
-{ ASM_AMC_DEST_2,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_2    }
-{ ASM_AMC_DEST_3,   "AMC destination",          "AMC00",        "AMC01",            "AMC10",        "AMC11",    "AOM Permit",   "Trg select",   "Invalid",  "Invalid",      "1 second", ASMCORE_mpsAmcDest_3    }
+{ MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "1 second", MITIG_mpsConfig         }
+}
+
+#======================================
+# 4-bit Register with ScalVal interfaces
+#======================================
+file "Reg4BitsRW.template" { pattern
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           FRST,          FVST,          SXST,          SVST,          EIST,          NIST,          TEST,          ELST,          TVST,          TTST,          FTST,          FFST,        SCAN,       PARAM                           }
+{ LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_0      }
+{ LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_1      }
+{ LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_2      }
+{ LC2_ANA_PROCSEL_3,    "LCLS2 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_3      }
+{ LC2_ANA_PROCSEL_4,    "LCLS2 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_4      }
+{ LC2_ANA_PROCSEL_5,    "LCLS2 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_5      }
+{ LC1_ANA_PROCSEL_0,    "LCLS1 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_0    }
+{ LC1_ANA_PROCSEL_1,    "LCLS1 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_1    }
+{ LC1_ANA_PROCSEL_2,    "LCLS1 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_2    }
+{ LC1_ANA_PROCSEL_3,    "LCLS1 Processing Selection (ch 3)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_3    }
+{ LC1_ANA_PROCSEL_4,    "LCLS1 Processing Selection (ch 4)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_4    }
+{ LC1_ANA_PROCSEL_5,    "LCLS1 Processing Selection (ch 5)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelectL1_5    }
+{ ASM_AMC_DEST_0,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_0            }
+{ ASM_AMC_DEST_1,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_1            }
+{ ASM_AMC_DEST_2,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_2            }
+{ ASM_AMC_DEST_3,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_3            }
 }
 
 #======================================
@@ -501,7 +507,6 @@ file "RegCharArrayRO.template" { pattern
 { R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
 { FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
 }
-
 
 #======================================
 # Stream waveforms (16-bit data)
