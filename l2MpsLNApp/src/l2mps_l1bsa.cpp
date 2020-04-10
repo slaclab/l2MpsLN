@@ -32,30 +32,30 @@ L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordP
     // in the FW application.
     // The BSA PV name will be '${recordPrefix}:' followed by this parameter name.
     bsaChannelNames_ {
-        "LC1_BSA_00",
-        "LC1_BSA_01",
-        "LC1_BSA_02",
-        "LC1_BSA_03",
-        "LC1_BSA_04",
-        "LC1_BSA_05",
-        "LC1_BSA_06",
-        "LC1_BSA_07",
-        "LC1_BSA_08",
-        "LC1_BSA_09",
-        "LC1_BSA_10",
-        "LC1_BSA_11",
-        "LC1_BSA_12",
-        "LC1_BSA_13",
-        "LC1_BSA_14",
-        "LC1_BSA_15",
-        "LC1_BSA_16",
-        "LC1_BSA_17",
-        "LC1_BSA_18",
-        "LC1_BSA_19",
-        "LC1_BSA_20",
-        "LC1_BSA_21",
-        "LC1_BSA_22",
-        "LC1_BSA_23",
+        "LC1_BSA_B0_C0_I0",
+        "LC1_BSA_B0_C1_I0",
+        "LC1_BSA_B0_C2_I0",
+        "LC1_BSA_B1_C0_I0",
+        "LC1_BSA_B1_C1_I0",
+        "LC1_BSA_B1_C2_I0",
+        "LC1_BSA_B0_C0_I1",
+        "LC1_BSA_B0_C1_I1",
+        "LC1_BSA_B0_C2_I1",
+        "LC1_BSA_B1_C0_I1",
+        "LC1_BSA_B1_C1_I1",
+        "LC1_BSA_B1_C2_I1",
+        "LC1_BSA_B0_C0_I2",
+        "LC1_BSA_B0_C1_I2",
+        "LC1_BSA_B0_C2_I2",
+        "LC1_BSA_B1_C0_I2",
+        "LC1_BSA_B1_C1_I2",
+        "LC1_BSA_B1_C2_I2",
+        "LC1_BSA_B0_C0_I3",
+        "LC1_BSA_B0_C1_I3",
+        "LC1_BSA_B0_C2_I3",
+        "LC1_BSA_B1_C0_I3",
+        "LC1_BSA_B1_C1_I3",
+        "LC1_BSA_B1_C2_I3",
     },
     bsaChannels_(recordPrefix, bsaChannelNames_),
     strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
@@ -144,8 +144,8 @@ void L2MpsL1Bsa::streamTask()
                 std::cout << "edefMinor  = 0x" <<  pSD->edefMinor << std::endl;
                 std::cout << "edefAvgDn  = 0x" <<  pSD->edefAvgDn << std::endl;
                 std::cout << std::dec;
-                for (std::size_t i{0}; i < 24; ++i)
-                    std::cout << "DATA[" << std::setw(2) << i << "]   = " <<  pSD->data[i] << std::endl;
+                for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
+                    std::cout << bsaChannelNames_.at(i) << " = " <<  pSD->data[i] << std::endl;
                 std::cout << "===================" << std::endl;
                 std::cout << "Stream received counter = " << strmCounter_ << std::endl;
                 std::cout << std::endl;

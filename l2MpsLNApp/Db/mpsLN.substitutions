@@ -531,30 +531,30 @@ file "streamSize.template" { pattern
 }
 
 file bsaATTREdef.db { pattern
-{ D,                ATTR,        I,                            EG,  HO,   LO,  PR,  AD,  LNK }
-# Device            Attribute    Input                         EGU  HOPR  LOPR PREC ADEL Link
-{ MPLN:GUNB:MP01:1, LC1_BSA_00,  MPLN:GUNB:MP01:1:LC1_BSA_00,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_01,  MPLN:GUNB:MP01:1:LC1_BSA_01,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_02,  MPLN:GUNB:MP01:1:LC1_BSA_02,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_03,  MPLN:GUNB:MP01:1:LC1_BSA_03,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_04,  MPLN:GUNB:MP01:1:LC1_BSA_04,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_05,  MPLN:GUNB:MP01:1:LC1_BSA_05,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_06,  MPLN:GUNB:MP01:1:LC1_BSA_06,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_07,  MPLN:GUNB:MP01:1:LC1_BSA_07,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_08,  MPLN:GUNB:MP01:1:LC1_BSA_08,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_09,  MPLN:GUNB:MP01:1:LC1_BSA_09,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_10,  MPLN:GUNB:MP01:1:LC1_BSA_10,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_11,  MPLN:GUNB:MP01:1:LC1_BSA_11,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_12,  MPLN:GUNB:MP01:1:LC1_BSA_12,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_13,  MPLN:GUNB:MP01:1:LC1_BSA_13,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_14,  MPLN:GUNB:MP01:1:LC1_BSA_14,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_15,  MPLN:GUNB:MP01:1:LC1_BSA_15,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_16,  MPLN:GUNB:MP01:1:LC1_BSA_16,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_17,  MPLN:GUNB:MP01:1:LC1_BSA_17,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_18,  MPLN:GUNB:MP01:1:LC1_BSA_18,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_19,  MPLN:GUNB:MP01:1:LC1_BSA_19,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_20,  MPLN:GUNB:MP01:1:LC1_BSA_20,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_21,  MPLN:GUNB:MP01:1:LC1_BSA_21,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_22,  MPLN:GUNB:MP01:1:LC1_BSA_22,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_23,  MPLN:GUNB:MP01:1:LC1_BSA_23,  raw, 0,    0,   0,   0,   ""  }
+{ D,                ATTR,              I,                                  EG,  HO,   LO,  PR,  AD,  LNK }
+# Device            Attribute          Input                               EGU  HOPR  LOPR PREC ADEL Link
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I0,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I1,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I2,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I3,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I3,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I3,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I3,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I3,  raw, 0,    0,   0,   0,   ""  }
+{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I3,  raw, 0,    0,   0,   0,   ""  }
 }
