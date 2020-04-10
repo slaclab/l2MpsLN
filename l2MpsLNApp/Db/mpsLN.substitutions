@@ -125,6 +125,8 @@ file "RegRO.template" { pattern
 { ANA_BUNCH_CNT,            "Bunch present counter",                    "YES",  "1 second", "",         ANACORE_bunchPresentCnt     }
 { DM0_TRIGGER_CNT,          "DaqMux, bay0, trigger counter",            "YES",  "1 second", "triggers", DM0_TrigCnt                 }
 { DM1_TRIGGER_CNT,          "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers", DM1_TrigCnt                 }
+{ AMC_CLK_FREQ_0,           "Bay0 AMC Clock frequency",                 "YES",  "1 second", "Hz",       AMCADC_AmcClkFreq_0         }
+{ AMC_CLK_FREQ_1,           "Bay1 AMC Clock frequency",                 "YES",  "1 second", "Hz",       AMCADC_AmcClkFreq_1         }
 }
 
 # Single register with AI records
