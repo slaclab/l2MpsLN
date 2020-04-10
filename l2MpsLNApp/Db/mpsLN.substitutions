@@ -178,6 +178,11 @@ file "RegRO_Analog.template" { pattern
 { ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_21  }
 { ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_22  }
 { ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_23  }
+# NOTE: These FW registers contain unsigned 32-bit values. But ycpswasyn doesn't implement at the moment a getBounds() method based on the register number of bits.
+# Therefore, getBounds() return the default values low=0, high=65535. So, we defined here the EGUL and EGUH values based on this bounds.
+# Even if YCPSWASYN would have implemented the getBounds() method, that method does not support unsigned 32-bit values (i.e. low=0, high=2^32-1), as high is a int32 value.
+{ AMC_CLK_FREQ_0,           "Bay0 AMC Clock frequency",                 "YES",  "1 second",     "MHz",  "LINEAR",   "0",        "0.065535", 2,      AMCADC_AmcClkFreq_0 }
+{ AMC_CLK_FREQ_1,           "Bay1 AMC Clock frequency",                 "YES",  "1 second",     "MHz",  "LINEAR",   "0",        "0.065535", 2,      AMCADC_AmcClkFreq_1 }
 }
 
 #======================================
@@ -353,54 +358,54 @@ file "RegRW_Analog.template" { pattern
 { LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",            3,      ANACORE_InterceptL1_3            }
 { LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",            3,      ANACORE_InterceptL1_4            }
 { LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",            3,      ANACORE_InterceptL1_5            }
-{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_0       }
-{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_1       }
-{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_2       }
-{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_3       }
-{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_4       }
-{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeak_5       }
-{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_0       }
-{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_1       }
-{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_2       }
-{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_3       }
-{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_4       }
-{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeak_5       }
-{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_0   }
-{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_1   }
-{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_2   }
-{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_3   }
-{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_4   }
-{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestal_5   }
-{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_0   }
-{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_1   }
-{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_2   }
-{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_3   }
-{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_4   }
-{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestal_5   }
-{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_0     }
-{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_1     }
-{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_2     }
-{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_3     }
-{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_4     }
-{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPeakL1_5     }
-{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_0     }
-{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_1     }
-{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_2     }
-{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_3     }
-{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_4     }
-{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPeakL1_5     }
-{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_0 }
-{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_1 }
-{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_2 }
-{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_3 }
-{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_4 }
-{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerDelayPedestalL1_5 }
-{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_0 }
-{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_1 }
-{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_2 }
-{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_3 }
-{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_4 }
-{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "ns",   "LINEAR",   "0",        "354243.243243",   3,      ANACORE_triggerWidthPedestalL1_5 }
+{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_0       }
+{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_1       }
+{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_2       }
+{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_3       }
+{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_4       }
+{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_5       }
+{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_0       }
+{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_1       }
+{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_2       }
+{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_3       }
+{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_4       }
+{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_5       }
+{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_0   }
+{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_1   }
+{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_2   }
+{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_3   }
+{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_4   }
+{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_5   }
+{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_0   }
+{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_1   }
+{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_2   }
+{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_3   }
+{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_4   }
+{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_5   }
+{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_0     }
+{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_1     }
+{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_2     }
+{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_3     }
+{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_4     }
+{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_5     }
+{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_0     }
+{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_1     }
+{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_2     }
+{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_3     }
+{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_4     }
+{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_5     }
+{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_0 }
+{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_1 }
+{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_2 }
+{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_3 }
+{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_4 }
+{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_5 }
+{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_0 }
+{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_1 }
+{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_2 }
+{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_3 }
+{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_4 }
+{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_5 }
 }
 
 #======================================

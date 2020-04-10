@@ -440,6 +440,8 @@
 /mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcData[2]                AMCADC_AdcData_12
 /mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AdcValid                  AMCADC_AdcValid_0
 /mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AdcValid                  AMCADC_AdcValid_1
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[0]/AmcGenericAdcDacCtrl/AmcClkFreq                AMCADC_AmcClkFreq_0
+/mmio/AppTop/AppCore/AmcGenericAdcDacCore[1]/AmcGenericAdcDacCtrl/AmcClkFreq                AMCADC_AmcClkFreq_1
 
 # =============================
 # Mitigation Core
