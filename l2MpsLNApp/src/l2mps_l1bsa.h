@@ -60,7 +60,7 @@ private:
         uint32_t       edefMajor;
         uint32_t       edefMinor;
         uint32_t       edefAvgDn;
-        uint32_t       data[24];
+        int32_t        data[24];
     }
     __attribute__((packed, aligned(1)))
     stream_data_t;
