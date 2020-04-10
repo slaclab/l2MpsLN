@@ -78,7 +78,9 @@ L2MpsL1Bsa::~L2MpsL1Bsa()
 
 void L2MpsL1Bsa::streamTask()
 {
-    uint8_t *buf = new uint8_t[sizeof(stream_data_t)];
+    // The stream contains: an 8-byte header, the stream_data_t structure, and a 1-byte footer
+    std::size_t stream_data_size {sizeof(stream_data_t) + 9};
+    uint8_t *buf = new uint8_t[stream_data_size];
     std::size_t got;
 
     //std::size_t count {0};
@@ -89,7 +91,7 @@ void L2MpsL1Bsa::streamTask()
             break;
 
         // Read the data stream. This call is blocking with a 1s timeout
-        got = strm_->read( buf, sizeof(stream_data_t), CTimeout(1000000) );
+        got = strm_->read( buf, stream_data_size, CTimeout(1000000) );
 
         // If BSA processing is disable, just discard the stream data
         // We still need to read the buffer to avoid back-pressuring the FW
@@ -101,17 +103,17 @@ void L2MpsL1Bsa::streamTask()
             continue;
 
         // If we received data, check that we received the correct number of bytes
-        if ( sizeof(stream_data_t) != got )
+        if ( stream_data_size != got )
         {
-            std::cerr << "ERROR: LCLS1 BSA Stream: bad size. Received " << got << ", instead of " << sizeof(stream_data_t) << " bytes" << std::endl;
+            std::cerr << "ERROR: LCLS1 BSA Stream: bad size. Received " << got << ", instead of " << stream_data_size << " bytes" << std::endl;
             continue;
         }
 
         // Increment the stream counter
         ++strmCounter_;
 
-        // Create a stream data pointer on the received data buffer
-        stream_data_t* pSD{ (stream_data_t*)buf };
+        // Create a stream data pointer on the received data buffer payload, after the 8-byte header
+        stream_data_t* pSD{ (stream_data_t*)(buf + 8) };
 
         // Copy the LCLS1 BSA data from the stream into the BsaCore facility
         for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
