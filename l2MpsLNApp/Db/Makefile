@@ -46,6 +46,17 @@ DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprTrig.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprDeviceNamePV.db
 
+# Install Databse for tprPattern module
+DB_INSTALLS += $(TPRPATTERN)/db/tprPattern.db
+
+# Install Database for the evrClient module
+DB_INSTALLS += $(EVRCLIENT)/db/evr.db
+DB_INSTALLS += $(EVRCLIENT)/db/evrEventCtrl.db
+DB_INSTALLS += $(EVRCLIENT)/db/evrPatternAll.db
+DB_INSTALLS += $(EVRCLIENT)/db/evrEventAll.db
+DB_INSTALLS += $(EVRCLIENT)/db/evrDevTrig.db
+DB_INSTALLS += $(EVRCLIENT)/db/bsaATTREdef.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

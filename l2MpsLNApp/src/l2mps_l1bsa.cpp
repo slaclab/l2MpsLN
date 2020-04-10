@@ -32,30 +32,30 @@ L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordP
     // in the FW application.
     // The BSA PV name will be '${recordPrefix}:' followed by this parameter name.
     bsaChannelNames_ {
-        "LC1_BSA_00",
-        "LC1_BSA_01",
-        "LC1_BSA_02",
-        "LC1_BSA_03",
-        "LC1_BSA_04",
-        "LC1_BSA_05",
-        "LC1_BSA_06",
-        "LC1_BSA_07",
-        "LC1_BSA_08",
-        "LC1_BSA_09",
-        "LC1_BSA_10",
-        "LC1_BSA_11",
-        "LC1_BSA_12",
-        "LC1_BSA_13",
-        "LC1_BSA_14",
-        "LC1_BSA_15",
-        "LC1_BSA_16",
-        "LC1_BSA_17",
-        "LC1_BSA_18",
-        "LC1_BSA_19",
-        "LC1_BSA_20",
-        "LC1_BSA_21",
-        "LC1_BSA_22",
-        "LC1_BSA_23",
+        "LC1_BSA_B0_C0_I0",
+        "LC1_BSA_B0_C1_I0",
+        "LC1_BSA_B0_C2_I0",
+        "LC1_BSA_B1_C0_I0",
+        "LC1_BSA_B1_C1_I0",
+        "LC1_BSA_B1_C2_I0",
+        "LC1_BSA_B0_C0_I1",
+        "LC1_BSA_B0_C1_I1",
+        "LC1_BSA_B0_C2_I1",
+        "LC1_BSA_B1_C0_I1",
+        "LC1_BSA_B1_C1_I1",
+        "LC1_BSA_B1_C2_I1",
+        "LC1_BSA_B0_C0_I2",
+        "LC1_BSA_B0_C1_I2",
+        "LC1_BSA_B0_C2_I2",
+        "LC1_BSA_B1_C0_I2",
+        "LC1_BSA_B1_C1_I2",
+        "LC1_BSA_B1_C2_I2",
+        "LC1_BSA_B0_C0_I3",
+        "LC1_BSA_B0_C1_I3",
+        "LC1_BSA_B0_C2_I3",
+        "LC1_BSA_B1_C0_I3",
+        "LC1_BSA_B1_C1_I3",
+        "LC1_BSA_B1_C2_I3",
     },
     bsaChannels_(recordPrefix, bsaChannelNames_),
     strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
@@ -78,7 +78,9 @@ L2MpsL1Bsa::~L2MpsL1Bsa()
 
 void L2MpsL1Bsa::streamTask()
 {
-    uint8_t *buf = new uint8_t[sizeof(stream_data_t)];
+    // The stream contains: an 8-byte header, the stream_data_t structure, and a 1-byte footer
+    std::size_t stream_data_size {sizeof(stream_data_t) + 9};
+    uint8_t *buf = new uint8_t[stream_data_size];
     std::size_t got;
 
     //std::size_t count {0};
@@ -89,7 +91,7 @@ void L2MpsL1Bsa::streamTask()
             break;
 
         // Read the data stream. This call is blocking with a 1s timeout
-        got = strm_->read( buf, sizeof(stream_data_t), CTimeout(1000000) );
+        got = strm_->read( buf, stream_data_size, CTimeout(1000000) );
 
         // If BSA processing is disable, just discard the stream data
         // We still need to read the buffer to avoid back-pressuring the FW
@@ -101,17 +103,17 @@ void L2MpsL1Bsa::streamTask()
             continue;
 
         // If we received data, check that we received the correct number of bytes
-        if ( sizeof(stream_data_t) != got )
+        if ( stream_data_size != got )
         {
-            std::cerr << "ERROR: LCLS1 BSA Stream: bad size. Received " << got << ", instead of " << sizeof(stream_data_t) << " bytes" << std::endl;
+            std::cerr << "ERROR: LCLS1 BSA Stream: bad size. Received " << got << ", instead of " << stream_data_size << " bytes" << std::endl;
             continue;
         }
 
         // Increment the stream counter
         ++strmCounter_;
 
-        // Create a stream data pointer on the received data buffer
-        stream_data_t* pSD{ (stream_data_t*)buf };
+        // Create a stream data pointer on the received data buffer payload, after the 8-byte header
+        stream_data_t* pSD{ (stream_data_t*)(buf + 8) };
 
         // Copy the LCLS1 BSA data from the stream into the BsaCore facility
         for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
@@ -142,8 +144,8 @@ void L2MpsL1Bsa::streamTask()
                 std::cout << "edefMinor  = 0x" <<  pSD->edefMinor << std::endl;
                 std::cout << "edefAvgDn  = 0x" <<  pSD->edefAvgDn << std::endl;
                 std::cout << std::dec;
-                for (std::size_t i{0}; i < 24; ++i)
-                    std::cout << "DATA[" << std::setw(2) << i << "]   = " <<  pSD->data[i] << std::endl;
+                for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
+                    std::cout << bsaChannelNames_.at(i) << " = " <<  pSD->data[i] << std::endl;
                 std::cout << "===================" << std::endl;
                 std::cout << "Stream received counter = " << strmCounter_ << std::endl;
                 std::cout << std::endl;
