@@ -53,6 +53,7 @@ l2MpsLN_DBD += yamlDownloader.dbd
 l2MpsLN_DBD += tprTriggerAsynDriver.dbd
 l2MpsLN_DBD += tprPatternAsynDriver.dbd
 l2MpsLN_DBD += bsaCore.dbd
+l2MpsLN_DBD += bsa.dbd
 l2MpsLN_DBD += iocAdmin.dbd
 
 # Add all the support libraries needed by this IOC
@@ -62,6 +63,7 @@ l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
 l2MpsLN_LIBS += yamlDownloader
 l2MpsLN_LIBS += ycpswasyn
+l2MpsLN_LIBS += eventBsaSupport
 l2MpsLN_LIBS += tprPattern
 l2MpsLN_LIBS += tprTrigger
 l2MpsLN_LIBS += BsaCore

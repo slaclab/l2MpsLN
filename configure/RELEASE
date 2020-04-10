@@ -26,6 +26,7 @@ TPRTRIGGER_MODULE_VERSION=R1.5.0
 BSACORE_MODULE_VERSION=R1.5.3
 TIMINGAPI_MODULE_VERSION=R0.6
 TPRPATTERN_MODULE_VERSION=R1.4.0
+EVRCLIENT_MODULE_VERSION=R1.5.0
 
 # ==========================================================
 # Define module paths using pattern
@@ -44,6 +45,7 @@ TPRTRIGGER=$(EPICS_MODULES)/tprTrigger/$(TPRTRIGGER_MODULE_VERSION)
 BSACORE=$(EPICS_MODULES)/BsaCore/$(BSACORE_MODULE_VERSION)
 TIMINGAPI=$(EPICS_MODULES)/timingApi/$(TIMINGAPI_MODULE_VERSION)
 TPRPATTERN=$(EPICS_MODULES)/tprPattern/$(TPRPATTERN_MODULE_VERSION)
+EVRCLIENT=$(EPICS_MODULES)/evrClient/$(EVRCLIENT_MODULE_VERSION)
 
 # =====================================================================
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
