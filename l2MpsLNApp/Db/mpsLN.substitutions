@@ -178,6 +178,9 @@ file "RegRO_Analog.template" { pattern
 { ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_21  }
 { ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_22  }
 { ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second",     "mV",   "LINEAR",   "0",        "2400",     3,      ANACORE_BsaData_23  }
+# NOTE: These FW registers contain unsigned 32-bit values. But ycpswasyn doesn't implement at the moment a getBounds() method based on the register number of bits.
+# Therefore, getBounds() return the default values low=0, high=65535. So, we defined here the EGUL and EGUH values based on this bounds.
+# Even if YCPSWASYN would have implemented the getBounds() method, that method does not support unsigned 32-bit values (i.e. low=0, high=2^32-1), as high is a int32 value.
 { AMC_CLK_FREQ_0,           "Bay0 AMC Clock frequency",                 "YES",  "1 second",     "MHz",  "LINEAR",   "0",        "0.065535", 2,      AMCADC_AmcClkFreq_0 }
 { AMC_CLK_FREQ_1,           "Bay1 AMC Clock frequency",                 "YES",  "1 second",     "MHz",  "LINEAR",   "0",        "0.065535", 2,      AMCADC_AmcClkFreq_1 }
 }
