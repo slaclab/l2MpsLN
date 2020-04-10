@@ -536,30 +536,30 @@ file "streamSize.template" { pattern
 }
 
 file bsaATTREdef.db { pattern
-{ D,                ATTR,              I,                                  EG,  HO,   LO,  PR,  AD,  LNK }
-# Device            Attribute          Input                               EGU  HOPR  LOPR PREC ADEL Link
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I0,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I1,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I2,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I3,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I3,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B0_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I3,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I3,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I3,  raw, 0,    0,   0,   0,   ""  }
-{ MPLN:GUNB:MP01:1, LC1_BSA_B1_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I3,  raw, 0,    0,   0,   0,   ""  }
+{ D,      ATTR,              I,                                  EG,  HO,   LO,  PR,  AD,  LNK }
+# Device  Attribute          Input                               EGU  HOPR  LOPR PREC ADEL Link
+{ $(P),   LC1_BSA_B0_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C0_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C1_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C2_I0,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I0,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C0_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C1_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C2_I1,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I1,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C0_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C1_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C2_I2,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I2,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C0_I3,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C1_I3,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B0_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B0_C2_I3,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C0_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C0_I3,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C1_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C1_I3,  raw, 0,    0,   0,   0,   ""  }
+{ $(P),   LC1_BSA_B1_C2_I3,  MPLN:GUNB:MP01:1:LC1_BSA_B1_C2_I3,  raw, 0,    0,   0,   0,   ""  }
 }
