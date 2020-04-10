@@ -7,6 +7,7 @@
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 epicsEnvSet("TPRTRIGGER_PORT","TPRTRIGGER_PORT")
+epicsEnvSet("TPRPATTERN_PORT","TPRPATTERN_PORT")
 
 # Point 'YAML_PATH' to the yaml_fixes directory
 epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
@@ -68,7 +69,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-#L2MPSASYNSetManagerHost("lcls-dev3", 1975)
+L2MPSASYNSetManagerHost("lcls-dev3", 1975)
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -90,6 +91,13 @@ YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
 #    Port name,                 # The name given to this port driver
 #    Root path)                 # Root path to the AmcCarrierCore register area
 tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
+
+## Configure the tprPattern driver
+# tprPatternAsynDriverConfigure(
+#    Port name,                 # The name given to this port driver
+#    Root path,                 # Root path to the AmcCarrierCore register area
+#    Stream name)               # Name of the timing stream
+tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstream")
 
 # ==========================================
 # Load application specific configurations
@@ -116,6 +124,9 @@ dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # tprTrigger database
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+
+# tprPattern database
+dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
