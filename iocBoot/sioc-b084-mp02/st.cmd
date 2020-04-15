@@ -166,6 +166,7 @@ save_restoreSet_DatedBackupFiles(1)
 # Where "/data" is an NFS mount point setup when linuxRT target
 # boots up.
 set_requestfile_path("${IOC_DATA}/${IOC}/autosave-req")
+set_requestfile_path("${TOP}/iocBoot/common")
 
 # Where to write the save files that will be used to restore
 set_savefile_path("${IOC_DATA}/${IOC}/autosave")
@@ -180,6 +181,7 @@ set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
 set_pass1_restoreFile("manual_settings.sav")
+set_pass0_restoreFile("ana_units.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -217,6 +219,7 @@ cd ${TOP}
 create_monitor_set("info_positions.req", 5 )
 create_monitor_set("info_settings.req" , 5 )
 create_monitor_set("manual_settings.req" , 5 )
+create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # - FIXME -
 # Workaround: Adding this value and setting PINI=YES
