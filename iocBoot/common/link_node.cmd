@@ -69,7 +69,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-L2MPSASYNSetManagerHost("lcls-dev3", 1975)
+#L2MPSASYNSetManagerHost("lcls-dev3", 1975)
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -161,6 +161,7 @@ save_restoreSet_DatedBackupFiles(1)
 # Where "/data" is an NFS mount point setup when linuxRT target
 # boots up.
 set_requestfile_path("${IOC_DATA}/${IOC}/autosave-req")
+set_requestfile_path("${TOP}/iocBoot/common")
 
 # Where to write the save files that will be used to restore
 set_savefile_path("${IOC_DATA}/${IOC}/autosave")
@@ -173,6 +174,10 @@ save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 ## Restore datasets
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
+set_pass0_restoreFile("info_positions.sav")
+set_pass1_restoreFile("info_positions.sav")
+set_pass0_restoreFile("ana_units.sav")
+set_pass1_restoreFile("ana_units.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -206,6 +211,9 @@ cd ${TOP}
 create_monitor_set("info_settings.req" , 30 )
 create_monitor_set("info_positions.req", 30 )
 create_monitor_set("manual_settings.req" , 30 )
+create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
-dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT
+dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
+dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
+dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
