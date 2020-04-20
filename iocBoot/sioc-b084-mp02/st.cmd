@@ -226,5 +226,7 @@ create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 # in the record doesn't work properly with input
 # buffer start addresses. Setting the initial value
 # here for now.
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000

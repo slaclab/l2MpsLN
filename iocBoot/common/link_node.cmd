@@ -214,6 +214,8 @@ create_monitor_set("manual_settings.req" , 30 )
 create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
