@@ -297,8 +297,6 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/DigitalForceBits                     DIGMES_DigitalForceBits
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/DigitalForceEn                       DIGMES_DigitalForceEn
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/RegInputBits                         DIGMES_RegInputBits
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/SwBitError                           DIGMES_SwBitError
-/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/SwBitValue                           DIGMES_SwBitValue
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/SwBytes                              DIGMES_SwBytes
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/L1DebounceValue[0]                   DIGMES_L1DebounceValue_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsDigitalMessage/L1DebounceValue[1]                   DIGMES_L1DebounceValue_1

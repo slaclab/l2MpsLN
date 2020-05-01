@@ -270,8 +270,6 @@ file "RegRW.template" { pattern
 { LC1_ANA_SLOPE_5,          "LCLS1 Equation slope (ch 5)",              "1 second", "",         ANACORE_SlopeL1_5                   }
 { DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
 { DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
-{ DIG_SWBITERR,             "Value to set for sw bits when timeout",    "1 second", "",         DIGMES_SwBitError                   }
-{ DIG_SWBIT,                "Value to set for sw bits",                 "1 second", "",         DIGMES_SwBitValue                   }
 { MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second", "",         MITIG_mpsAmcDest_0                  }
 { MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second", "",         MITIG_mpsAmcDest_1                  }
 { MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second", "",         MITIG_mpsAmcDest_2                  }
