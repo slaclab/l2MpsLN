@@ -1488,3 +1488,659 @@ record(bi,      "SOLN:GUNB:823:I0_T0_ALT_H_EN_RBV") {
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
+
+record(longin, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_WORD") {
+    field(DESC, "Soft input word")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),3)SOFT_CH_VALUE_WORD")
+}
+
+record(longin, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_WORD") {
+    field(DESC, "Soft input word")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT,undefined),3)SOFT_CH_ERROR_WORD")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_00") {
+    field(DESC, "Soft input value, channel 0")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_00")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_00_RBV") {
+    field(DESC, "Soft input value, channel 0")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_00")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_01") {
+    field(DESC, "Soft input value, channel 1")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_01")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_01_RBV") {
+    field(DESC, "Soft input value, channel 1")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_01")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_02") {
+    field(DESC, "Soft input value, channel 2")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_02")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_02_RBV") {
+    field(DESC, "Soft input value, channel 2")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_02")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_03") {
+    field(DESC, "Soft input value, channel 3")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_03")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_03_RBV") {
+    field(DESC, "Soft input value, channel 3")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_03")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_04") {
+    field(DESC, "Soft input value, channel 4")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_04")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_04_RBV") {
+    field(DESC, "Soft input value, channel 4")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_04")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_05") {
+    field(DESC, "Soft input value, channel 5")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_05")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_05_RBV") {
+    field(DESC, "Soft input value, channel 5")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_05")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_06") {
+    field(DESC, "Soft input value, channel 6")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_06")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_06_RBV") {
+    field(DESC, "Soft input value, channel 6")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_06")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_07") {
+    field(DESC, "Soft input value, channel 7")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_07")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_07_RBV") {
+    field(DESC, "Soft input value, channel 7")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_07")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_08") {
+    field(DESC, "Soft input value, channel 8")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_08")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_08_RBV") {
+    field(DESC, "Soft input value, channel 8")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_08")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_09") {
+    field(DESC, "Soft input value, channel 9")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_09")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_09_RBV") {
+    field(DESC, "Soft input value, channel 9")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_09")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_10") {
+    field(DESC, "Soft input value, channel 10")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_10")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_10_RBV") {
+    field(DESC, "Soft input value, channel 10")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_10")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_11") {
+    field(DESC, "Soft input value, channel 11")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_11")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_11_RBV") {
+    field(DESC, "Soft input value, channel 11")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_11")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_12") {
+    field(DESC, "Soft input value, channel 12")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_12")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_12_RBV") {
+    field(DESC, "Soft input value, channel 12")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_12")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_13") {
+    field(DESC, "Soft input value, channel 13")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_13")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_13_RBV") {
+    field(DESC, "Soft input value, channel 13")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_13")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_14") {
+    field(DESC, "Soft input value, channel 14")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_14")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_14_RBV") {
+    field(DESC, "Soft input value, channel 14")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_14")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_15") {
+    field(DESC, "Soft input value, channel 15")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_15")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_VALUE_15_RBV") {
+    field(DESC, "Soft input value, channel 15")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_VALUE_15")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_00") {
+    field(DESC, "Soft input error, channel 0")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_00")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_00_RBV") {
+    field(DESC, "Soft input error, channel 0")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_00")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_01") {
+    field(DESC, "Soft input error, channel 1")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_01")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_01_RBV") {
+    field(DESC, "Soft input error, channel 1")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_01")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_02") {
+    field(DESC, "Soft input error, channel 2")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_02")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_02_RBV") {
+    field(DESC, "Soft input error, channel 2")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_02")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_03") {
+    field(DESC, "Soft input error, channel 3")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_03")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_03_RBV") {
+    field(DESC, "Soft input error, channel 3")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_03")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_04") {
+    field(DESC, "Soft input error, channel 4")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_04")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_04_RBV") {
+    field(DESC, "Soft input error, channel 4")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_04")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_05") {
+    field(DESC, "Soft input error, channel 5")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_05")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_05_RBV") {
+    field(DESC, "Soft input error, channel 5")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_05")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_06") {
+    field(DESC, "Soft input error, channel 6")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_06")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_06_RBV") {
+    field(DESC, "Soft input error, channel 6")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_06")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_07") {
+    field(DESC, "Soft input error, channel 7")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_07")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_07_RBV") {
+    field(DESC, "Soft input error, channel 7")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_07")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_08") {
+    field(DESC, "Soft input error, channel 8")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_08")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_08_RBV") {
+    field(DESC, "Soft input error, channel 8")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_08")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_09") {
+    field(DESC, "Soft input error, channel 9")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_09")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_09_RBV") {
+    field(DESC, "Soft input error, channel 9")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_09")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_10") {
+    field(DESC, "Soft input error, channel 10")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_10")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_10_RBV") {
+    field(DESC, "Soft input error, channel 10")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_10")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_11") {
+    field(DESC, "Soft input error, channel 11")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_11")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_11_RBV") {
+    field(DESC, "Soft input error, channel 11")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_11")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_12") {
+    field(DESC, "Soft input error, channel 12")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_12")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_12_RBV") {
+    field(DESC, "Soft input error, channel 12")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_12")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_13") {
+    field(DESC, "Soft input error, channel 13")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_13")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_13_RBV") {
+    field(DESC, "Soft input error, channel 13")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_13")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_14") {
+    field(DESC, "Soft input error, channel 14")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_14")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_14_RBV") {
+    field(DESC, "Soft input error, channel 14")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_14")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bo, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_15") {
+    field(DESC, "Soft input error, channel 15")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_15")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
+
+record(bi, "MPLN:GUNB:MP01:1:SOFT_CH_ERROR_15_RBV") {
+    field(DESC, "Soft input error, channel 15")
+    field(SCAN, "I/O Intr")
+    field(PINI, "NO")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(PORT),3,0x01)SOFT_CH_ERROR_15")
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")
+}
