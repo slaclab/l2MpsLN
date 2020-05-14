@@ -3,8 +3,8 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R3-6-0__: 2020-05-13 J. Mock
-  * Add support for PV inputs to MPS Digital APP
+* __l2MpsLN-R3-6-0__: 2020-05-14 J. Mock
+  * Add support for PV inputs to MPS Digital APP (i.e. soft inputs) (#37, #38)
     * Update l2Mps to version R3.4.1
     * Update l2MpsAsyn to version R3.4.1
   * Merge Application Node support into this App
@@ -18,6 +18,25 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * Update firmware to latest release
     * LN - AmcCarrierMpsAnalogLinkNode-0x00000049-20200423162244-leosap-fba853c.mcs
     * AN - AmcCarrierMpsApplicationNode-0x00000001-20200423162251-leosap-fba853c.mcs
+  * Convert all the analog core PVs to mV units (#25)
+  * Convert the processing window PVs to ns (#28, #31)
+  * Fix parameter types used with YCPSWASYN (#29)
+    Update YCPSWASYN to version R3.3.3 which includes bug fixes needed related to
+    wrong parameter types. Also, fix some parameters types which didn't match the
+    register type they were connected to.
+  * Fix LCLS1 BSA implementation (#30).
+    Fix several issues with the LCLS1 BSA implementation:
+    * It was missing the tprPattern, and the evrClient EPICS modules,
+    * There was also a bug in the stream data processing, as it was not considering the
+      packetizer header and footer which were added since the initial BSA driver
+      implementation.
+    I also rename the BSA PV for more clarity. Instead of using index (0..23), use Bay
+    number, channel number, and integration number.
+  * Bring TPR BSA drivers into link_node.cmd (#32)
+  * Analog Values Autosave (#34)
+    Add autosave of EGU, EGUF, and EGUL for analog core values associated with analog
+    inputs. Add script to iocBoot/common to change these values.
+  * Bug fix: remove hard-coded name used to load the `bsaATTREdef.db` (#33, #35)
 
 * __l2MpsLN-R3-5-0__: 2020-03-06 J. Mock
   * general ioc cleanup
