@@ -69,7 +69,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-#L2MPSASYNSetManagerHost("lcls-dev3", 1975)
+#L2MPSASYNSetManagerHost("lcls-dev1", 1975) #- for development
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -104,7 +104,7 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 # ==========================================
 # Load the default configuration
 cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
-cpswLoadConfigFile("iocBoot/common/configs/specifics.yaml", "mmio")
+cpswLoadConfigFile("iocBoot/common/configs/specificsLN.yaml", "mmio")
 
 # ==========================================
 
@@ -217,3 +217,5 @@ create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
