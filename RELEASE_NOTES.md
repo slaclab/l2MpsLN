@@ -3,6 +3,22 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-6-0__: 2020-05-13 J. Mock
+  * Add support for PV inputs to MPS Digital APP
+    * Update l2Mps to version R3.4.1
+    * Update l2MpsAsyn to version R3.4.1
+  * Merge Application Node support into this App
+    * Add firmware/mpsAN.dict
+    * Add l2MpsLNApp/Db/mpsAN.substitutions
+    * Add iocBoot/common/application_node.cmd
+  * Create directory for useful MPS LN scripts
+    * Add init_lcls1_timins.sh which sets up the TPR for NC operation
+    * Add mps_link_node_change_units.py which changes the units of an analog input
+    * Add setupBPClock.sh which initializes the SALT settings for the crate
+  * Update firmware to latest release
+    * LN - AmcCarrierMpsAnalogLinkNode-0x00000049-20200423162244-leosap-fba853c.mcs
+    * AN - AmcCarrierMpsApplicationNode-0x00000001-20200423162251-leosap-fba853c.mcs
+
 * __l2MpsLN-R3-5-0__: 2020-03-06 J. Mock
   * general ioc cleanup
   * change default yaml load to be from FW
