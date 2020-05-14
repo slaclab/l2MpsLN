@@ -1,6 +1,0 @@
-# Digital Application ID configuration
-- AppTop:
-  - AppCore:
-    - MpsLinkNodeCore:
-      - MpsDigitalMessage:
-        - AppId: !<value> 0x02

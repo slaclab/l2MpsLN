@@ -11,4 +11,4 @@ epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 #
 # Loads common Link Node startup
 #
-< ${TOP}/iocBoot/common/link_node.cmd
+< ${TOP}/iocBoot/common/application_node.cmd
