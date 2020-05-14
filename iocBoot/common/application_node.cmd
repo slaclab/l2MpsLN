@@ -54,6 +54,7 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
 setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/cu/link_node_db")
+setMpsConfigurationPath("/afs/slac/u/ld/jmock/Cosylab/workspace/mps_database/mps_database/temporary_testing/database/")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
@@ -69,7 +70,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-#L2MPSASYNSetManagerHost("lcls-dev3", 1975)
+L2MPSASYNSetManagerHost("lcls-dev3", 1975)
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -215,3 +216,5 @@ create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
+dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
