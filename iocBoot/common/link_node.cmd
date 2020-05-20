@@ -140,7 +140,7 @@ dbLoadRecords("db/iocAdminScanMon.db","IOC=${IOC_NAME}")
 # which looks at RELEASE_SITE and RELEASE to discover
 # versions of software your IOC is referencing
 # The python parser is part of iocAdmin
-dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
+dbLoadRecords("db/iocRelease.db","IOC=${IOC_NAME}")
 
 # *******************************************
 # **** Load database for autosave status ****
