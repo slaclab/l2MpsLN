@@ -97,7 +97,7 @@ tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
 #    Port name,                 # The name given to this port driver
 #    Root path,                 # Root path to the AmcCarrierCore register area
 #    Stream name)               # Name of the timing stream
-#tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstream")
+tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstream")
 
 # ==========================================
 # Load application specific configurations
@@ -125,7 +125,7 @@ dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # tprPattern database
-#dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
@@ -143,7 +143,11 @@ dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
+dbLoadRecords("db/save_restoreStatus.db", "P=${IOC_NAME}:")
+
+# *******************************************
+# **** Load database for seqCar status ****
+dbLoadRecords("db/devSeqCar.db"    ,"SIOC=${IOC_NAME}")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -168,7 +172,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
+save_restoreSet_status_prefix("${IOC_NAME}:")
 
 ## Restore datasets
 set_pass0_restoreFile("info_settings.sav")
