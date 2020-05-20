@@ -3,6 +3,14 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-7-0__: 2020-05-20 J. Mock
+  * Upgrade iocAdmin to version R3.1.16-1.3.0 to deal with timezone PV problem
+  * Add seq version R2.2.4-1.2 to RELEASE. Load devSeqCar.dbd and lib devSeqCar seq pv 
+      in the src/Makefile to load the devSeqCar.db file for Accelerator network screens
+  * Change the macro for autosave from ${L2MPS_PREFIX} to ${IOC_NAME} to conform with
+      Accelerator Network common screens.  Changed in link_node.cmd and application_node.cmd
+  * Comment in TPR Pattern load in application_node.cmd - this was a mistake in R3-6-0
+  * Add sioc-b084-mp03 to run on shm-b084-hp04 slot 2 on cpu-b084-hp03 - BLEN/BCM test stand
 * __l2MpsLN-R3-6-0__: 2020-05-14 J. Mock
   * Add support for PV inputs to MPS Digital APP (i.e. soft inputs) (#37, #38)
     * Update l2Mps to version R3.4.1
