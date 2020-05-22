@@ -55,6 +55,7 @@ l2MpsLN_DBD += tprPatternAsynDriver.dbd
 l2MpsLN_DBD += bsaCore.dbd
 l2MpsLN_DBD += bsa.dbd
 l2MpsLN_DBD += iocAdmin.dbd
+l2MpsLN_DBD += devSeqCar.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -68,6 +69,7 @@ l2MpsLN_LIBS += tprPattern
 l2MpsLN_LIBS += tprTrigger
 l2MpsLN_LIBS += BsaCore
 l2MpsLN_LIBS += asyn
+l2MpsLN_LIBS += seqCar seq pv
 
 # Link QSRV (pvAccess Server) if available
 ifdef EPICS_QSRV_MAJOR_VERSION

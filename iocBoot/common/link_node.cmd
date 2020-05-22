@@ -140,11 +140,15 @@ dbLoadRecords("db/iocAdminScanMon.db","IOC=${IOC_NAME}")
 # which looks at RELEASE_SITE and RELEASE to discover
 # versions of software your IOC is referencing
 # The python parser is part of iocAdmin
-dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
+dbLoadRecords("db/iocRelease.db","IOC=${IOC_NAME}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
+dbLoadRecords("db/save_restoreStatus.db", "P=${IOC_NAME}:")
+
+# *******************************************
+# **** Load database for seqCar status ****
+dbLoadRecords("db/devSeqCar.db"    ,"SIOC=${IOC_NAME}")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -169,7 +173,7 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
+save_restoreSet_status_prefix("${IOC_NAME}:")
 
 ## Restore datasets
 set_pass0_restoreFile("info_settings.sav")

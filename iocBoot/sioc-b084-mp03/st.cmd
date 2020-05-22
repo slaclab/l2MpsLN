@@ -1,7 +1,13 @@
-#================================================================
-#
-# Generic MPS Link Node Start Up 
-#
+#!../../bin/linuxRT-x86_64/l2MpsLN
+
+## You may have to change l2MpsLN to something else
+## everywhere it appears in this file
+
+< envPaths
+
+# ===========================================
+#            ENVIRONMENT VARIABLES
+# ===========================================
 
 # CPSW Port names
 epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
@@ -22,15 +28,18 @@ epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 
 # YCPSWASYN Dictionary file
-epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsAN.dict")
+epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
+
+# FPGA IP Address
+epicsEnvSet("FPGA_IP","10.0.1.102")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
 epicsEnvSet("ENGINEER","Jeremy Mock")
 
-# ===========================================
+# ======================================
 # Start from TOP
-# ===========================================
+# ======================================
 cd ${TOP}
 
 # ===========================================
@@ -53,13 +62,13 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
-setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/cu/link_node_db")
+#
+# In DEV, we temporary point to a local copy in this IOC application
+setMpsConfigurationPath("iocBoot/${IOC}/mps_database_output")
 
-# *****************************************
-# **** Driver setup for L2MPSASYNConfig ****
-## Configure asyn port driver
+## LCLS-II MPS
 # L2MPSASYNConfig(
-#    Port Name)                 # the name given to this port driver
+#    Port Name)            # the name given to this port driver
 L2MPSASYNConfig("${L2MPSASYN_PORT}")
 
 ## Set the MpsManager hostname and port number
@@ -68,8 +77,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #    MpsManagerPortNumber) # Server port number
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
-L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-#L2MPSASYNSetManagerHost("lcls-dev1", 1975) # - for development
+L2MPSASYNSetManagerHost("lcls-dev3", 0)
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(
@@ -77,14 +85,14 @@ L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
 #    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
 L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
 
-## Configure asyn port driverx
+## Configure the YCPSWASYN driver
 # YCPSWASYNConfig(
-#    Port Name,                 # the name given to this port driver
+#    Port Name,                 # The name given to this port driver
 #    Root Path                  # OPTIONAL: Root path to start the generation. If empty, the Yaml root will be used
 #    Record name Prefix,        # Record name prefix
-#    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable using maps, 2: Enabled using hash names.
-#    Load dictionary,           # Dictionary file path with registers to load. An empty string will disable this function
-YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}", "")
+#    DB Autogeneration mode,    # Set autogeneration of records. 0: disabled, 1: Enable usig maps, 2: Enabled using hash names.
+#    Load dictionary)           # Dictionary file path with registers to load. An empty string will disable this function
+YCPSWASYNConfig("${YCPSWASYN_PORT}", "", "", "0", "${YCPSWASYN_DICT_FILE}")
 
 ## Configure the tprTrigger driver
 # tprTriggerAsynDriverConfigure(
@@ -102,7 +110,7 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 # ==========================================
 # Load application specific configurations
 # ==========================================
-# Load the default configuration
+# Load the defautl configuration
 cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 
 # ==========================================
@@ -116,16 +124,14 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               DB LOADING
 # ===========================================
-# Link Node database (from l2MpsLN)
-# Records that read/write FW data registers
-# defined in l2MpsLN/firmware/mpsLN.dict file)
-dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+# Link Node database
+dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # tprTrigger database
-dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
 
 # tprPattern database
-dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
@@ -139,15 +145,11 @@ dbLoadRecords("db/iocAdminScanMon.db","IOC=${IOC_NAME}")
 # which looks at RELEASE_SITE and RELEASE to discover
 # versions of software your IOC is referencing
 # The python parser is part of iocAdmin
-dbLoadRecords("db/iocRelease.db","IOC=${IOC_NAME}")
+dbLoadRecords("db/iocRelease.db","IOC=${IOC}")
 
 # *******************************************
 # **** Load database for autosave status ****
-dbLoadRecords("db/save_restoreStatus.db", "P=${IOC_NAME}:")
-
-# *******************************************
-# **** Load database for seqCar status ****
-dbLoadRecords("db/devSeqCar.db"    ,"SIOC=${IOC_NAME}")
+dbLoadRecords("db/save_restoreStatus.db", "P=${L2MPS_PREFIX}:")
 
 # ===========================================
 #           SETUP AUTOSAVE/RESTORE
@@ -172,15 +174,14 @@ set_savefile_path("${IOC_DATA}/${IOC}/autosave")
 # Prefix that is use to update save/restore status database
 # records
 save_restoreSet_UseStatusPVs(1)
-save_restoreSet_status_prefix("${IOC_NAME}:")
+save_restoreSet_status_prefix("${L2MPS_PREFIX}:")
 
 ## Restore datasets
+set_pass0_restoreFile("info_positions.sav")
 set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
-set_pass0_restoreFile("info_positions.sav")
-set_pass1_restoreFile("info_positions.sav")
+set_pass1_restoreFile("manual_settings.sav")
 set_pass0_restoreFile("ana_units.sav")
-set_pass1_restoreFile("ana_units.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -188,7 +189,7 @@ set_pass1_restoreFile("ana_units.sav")
 # This is required if you use caPutLog.
 # Set access security filea
 # Load common LCLS Access Configuration File
-#< ${ACF_INIT}
+< ${ACF_INIT}
 
 # ===========================================
 #               IOC INIT
@@ -202,22 +203,28 @@ iocInit()
 # Wait before building autosave files
 epicsThreadSleep(1)
 
-# Generate the autosave PV list. Note we need change directory to
-# where we are saving the restore request file, and then we go back ${TOP}.
+# Generate the autosave PV list
+# Note we need change directory to
+# where we are saving the restore
+# request file, and then we go back
+# ${TOP}.
 cd ${IOC_DATA}/${IOC}/autosave-req
 makeAutosaveFiles()
 cd ${TOP}
 
-# Start the save_restore task save changes on change, but no faster
-# than every 30 seconds.
+# Start the save_restore task
+# save changes on change, but no faster
+# than every 5 seconds.
 # Note: the last arg cannot be set to 0
-create_monitor_set("info_settings.req" , 30 )
-create_monitor_set("info_positions.req", 30 )
-create_monitor_set("manual_settings.req" , 30 )
+create_monitor_set("info_positions.req", 5 )
+create_monitor_set("info_settings.req" , 5 )
+create_monitor_set("manual_settings.req" , 5 )
 create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
-# After call to restore thresholds, clear lcls1 timeout so MPS is functional
+# - FIXME -
+# Workaround: Adding this value and setting PINI=YES
+# in the record doesn't work properly with input
+# buffer start addresses. Setting the initial value
+# here for now.
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
-dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
-dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
