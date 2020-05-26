@@ -3,6 +3,27 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R2-3-3__: 2020-05-26 J. Vasquez
+  * Udate the LN used in EIC to buildroot 2019.08.
+    This includes update the following:
+    * Packages:
+      * cpsw/framework -> R4.4.1
+      * l2Mps -> R2.4.0
+      * yamlReader -> R1.2.0
+      * deviceLibrary -> R1.2.0
+    * EPICS modules:
+      * asyn -> R4.32-1.0.0
+      * yamlLoader -> R2.1.0
+      * yamlDownloader -> R1.2.0
+      * ycpswssyn -> R3.3.1
+      * l2MpsAsyn -> R2.6.0
+  * Added a local copy of the FW YAML files, as this
+    old version has some bugs which are catch by the
+    new CPSW version. The bugs in the local copy were
+    manually fixed.
+  * Disabled the yamlDownloader, and use the local
+    copy of the YAML files.
+
 * __l2MpsLN-R2-3-2__: 2019-08-16 J. Vasquez
   * Update l2MpsAsyn top version R2.3.2.
 
