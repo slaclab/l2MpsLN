@@ -21,8 +21,8 @@ mmio: &mmio
   children:
   ########
     AmcCarrierCore:
-        <<: *AmcCarrierCore
-        at:
+      <<: *AmcCarrierCore
+      at:
         offset: 0x00000000  
     ##################################################     
     AppTop:
