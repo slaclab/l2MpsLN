@@ -1,0 +1,47 @@
+############################################################################
+# This file is part of 'LCLS2 MPS Core'.
+# It is subject to the license terms in the LICENSE.txt file found in the
+# top-level directory of this distribution and at:
+#    https://confluence.slac.stanford.edu/display/ppareg/LICENSE.html.
+# No part of 'LCLS2 MPS Core', including this file,
+# may be copied, modified, propagated, or distributed except according to
+# the terms contained in the LICENSE.txt file.
+#############################################################################
+#schemaversion 3.0.0
+#once AppCore.yaml
+#include AmcGenericAdcDacCore.yaml
+#include RtmMpsLinkNode.yaml
+#include MpsAnalogCore.yaml
+#include MpsLinkNodeCore.yaml
+
+AppCore: &AppCore 
+  name: AppCore
+  description: AMC Carrier Application Core
+  size: 0x10000000
+  class: MMIODev
+  configPrio: 1
+  ########
+  children:
+  ########
+    ##################################################     
+    AmcGenericAdcDacCore:
+      <<: *AmcGenericAdcDacCore
+      at:
+        offset: 0x00000000      
+        stride: 0x00080000
+        nelms: 2
+    ################################################## 
+    RtmMpsLinkNode:
+      <<: *RtmMpsLinkNode
+      at:
+        offset: 0x01000000
+    ################################################## 
+    MpsAnalogCore:
+      <<: *MpsAnalogCore
+      at:
+        offset: 0x02000000
+    ################################################## 
+    MpsLinkNodeCore:
+      <<: *MpsLinkNodeCore
+      at:
+        offset: 0x03000000
