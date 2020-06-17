@@ -3,6 +3,8 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-6-2__: 2020-06-17 J. Mock
+  * Add PK and PD WTH and DEL PVs to autosave so the calibrated values don't get lost
 * __l2MpsLN-R3-6-1__: 2020-05-20 J. Mock
   * Upgrade iocAdmin to version R3.1.16-1.3.0 to deal with timezone PV problem
   * Add seq version R2.2.4-1.2 to RELEASE. Load devSeqCar.dbd and lib devSeqCar seq pv 
