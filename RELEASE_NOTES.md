@@ -3,8 +3,16 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-7-0__: 2020-07-09 J. Vasquez
+  * Remove BSA PVs as they will be generated from the mps database
+  * Update tprPattern to version R1.4.1 which solve an issue when the IOC crashes when BsaCore 
+    throws an exception due to pattern buffer overruns.
+  * Update LN and AN firmware images which allow to control the BSA data rate using TPG5. This
+    help to prevent BsaCore pattern buffer overruns.
+
 * __l2MpsLN-R3-6-2__: 2020-06-17 J. Mock
   * Add PK and PD WTH and DEL PVs to autosave so the calibrated values don't get lost
+
 * __l2MpsLN-R3-6-1__: 2020-05-20 J. Mock
   * Upgrade iocAdmin to version R3.1.16-1.3.0 to deal with timezone PV problem
   * Add seq version R2.2.4-1.2 to RELEASE. Load devSeqCar.dbd and lib devSeqCar seq pv
