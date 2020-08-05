@@ -74,6 +74,8 @@ private:
     Stream                         strm_;            // Firmware data stream interface
     boost::atomic<bool>            run_;             // Flag to stop the thread
     std::thread                    streamThread_;    // Stream receiver thread
+    sched_param                    schParams_;       // Stream receiver thread scheduling parameters
+    static unsigned                strmThrPrio_;     // Stream receiver thread RT priority
 };
 
 #endif
