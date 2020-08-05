@@ -20,8 +20,16 @@
 
 #include "l2mps_l1bsa_channels.h"
 
+// We use 90 as thr RT priority for the BsaCore thread pool
+const unsigned L2MpsL1BsaChannels::BsaPrio = 90;
+
 L2MpsL1BsaChannels::L2MpsL1BsaChannels(const std::string& prefix, const std::vector<std::string>& names)
 {
+    // Try to set the BsaCore thread pool RT priority
+    if (BSA_ConfigSetAllPriorites(BsaPrio))
+        std::cerr <<  "Failed to set BsaCore threads RT priorities to " << BsaPrio << " using BSA_ConfigSetAllPriorites()!" << std::endl;
+
+
     for (auto it ( names.begin() ) ; it != names.end(); ++it)
     {
         std::string id ( prefix + ":" + *it );

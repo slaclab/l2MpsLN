@@ -41,6 +41,9 @@ public:
 private:
     // BSA channels
     std::vector<BsaChannel> channels_;
+
+    // RT priority for BsaCore thread pool
+    static const unsigned BsaPrio;
 };
 
 #endif
