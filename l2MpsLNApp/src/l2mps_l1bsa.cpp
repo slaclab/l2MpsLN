@@ -24,6 +24,7 @@
 bool        L2MpsL1Bsa::enable_      = true;
 bool        L2MpsL1Bsa::debug_       = false;
 std::size_t L2MpsL1Bsa::strmCounter_ = 0;
+unsigned    L2MpsL1Bsa::strmThrPrio_ = 80; // Use RT priority 80 for the Stream receiver thread
 
 L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix)
 :
@@ -65,6 +66,11 @@ L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordP
     // Set the name for the 'streamThread_' thread
     if( pthread_setname_np( streamThread_.native_handle(), "L2MpsLcls1Bsa" ) )
         std::cerr <<  "pthread_setname_np failed for L2MpsL1Bsa thread" << std::endl;
+
+    // Set the RT priority and policy for the 'streamThread_' thread
+    schParams_.sched_priority = strmThrPrio_;
+    if( pthread_setschedparam( streamThread_.native_handle(), SCHED_FIFO, &schParams_) )
+        std::cerr << "Failed to set Thread RT priority to " << strmThrPrio_ << std::endl;
 
     bsaChannels_.printChannelIds();
 }
