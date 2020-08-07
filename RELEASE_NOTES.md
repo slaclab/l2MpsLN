@@ -3,9 +3,13 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-7-1__: 2020-07-09 J. Vasquez
+  * Set BsaCore threads RT priority to 90 and the LCLS1 BSA stream receiver thread RT priority
+  to 80, and its policy to SCHED_FIFO.
+
 * __l2MpsLN-R3-7-0__: 2020-07-09 J. Vasquez
   * Remove BSA PVs as they will be generated from the mps database
-  * Update tprPattern to version R1.4.1 which solve an issue when the IOC crashes when BsaCore 
+  * Update tprPattern to version R1.4.1 which solve an issue when the IOC crashes when BsaCore
     throws an exception due to pattern buffer overruns.
   * Update LN and AN firmware images which allow to control the BSA data rate using TPG5. This
     help to prevent BsaCore pattern buffer overruns.
