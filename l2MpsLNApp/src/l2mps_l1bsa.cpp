@@ -67,10 +67,12 @@ L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordP
     if( pthread_setname_np( streamThread_.native_handle(), "L2MpsLcls1Bsa" ) )
         std::cerr <<  "pthread_setname_np failed for L2MpsL1Bsa thread" << std::endl;
 
+    /* Temporary remove this RT priority setting
     // Set the RT priority and policy for the 'streamThread_' thread
     schParams_.sched_priority = strmThrPrio_;
     if( pthread_setschedparam( streamThread_.native_handle(), SCHED_FIFO, &schParams_) )
         std::cerr << "Failed to set Thread RT priority to " << strmThrPrio_ << std::endl;
+    */
 
     bsaChannels_.printChannelIds();
 }
