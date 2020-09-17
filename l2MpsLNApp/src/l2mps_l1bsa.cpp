@@ -69,8 +69,9 @@ L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordP
 
     /* Temporary remove this RT priority setting
     // Set the RT priority and policy for the 'streamThread_' thread
-    schParams_.sched_priority = strmThrPrio_;
-    if( pthread_setschedparam( streamThread_.native_handle(), SCHED_FIFO, &schParams_) )
+    struct sched_param schParams;
+    schParams.sched_priority = strmThrPrio_;
+    if( pthread_setschedparam( streamThread_.native_handle(), SCHED_FIFO, &schParams) )
         std::cerr << "Failed to set Thread RT priority to " << strmThrPrio_ << std::endl;
     */
 
