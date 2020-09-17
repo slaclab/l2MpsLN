@@ -25,10 +25,11 @@ const unsigned L2MpsL1BsaChannels::BsaPrio = 90;
 
 L2MpsL1BsaChannels::L2MpsL1BsaChannels(const std::string& prefix, const std::vector<std::string>& names)
 {
+    /* Temporary remove this RT priority setting
     // Try to set the BsaCore thread pool RT priority
     if (BSA_ConfigSetAllPriorites(BsaPrio))
         std::cerr <<  "Failed to set BsaCore threads RT priorities to " << BsaPrio << " using BSA_ConfigSetAllPriorites()!" << std::endl;
-
+    */
 
     for (auto it ( names.begin() ) ; it != names.end(); ++it)
     {
