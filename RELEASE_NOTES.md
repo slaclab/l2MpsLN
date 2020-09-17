@@ -3,9 +3,17 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-7-2__: 2020-09-17 J. Vasquez
+  * Update firmware images to version `7bec288`, which solves the raw ADC data sign jump when
+    in positive saturation. 
+  * Revert RT priorities for BSA related threads, which was introduced in the previous release.
+    This was affecting BPM systems in production.
+  * Remove local patched YAML file AmcGenericAdcDacCtrl.yaml. This file was used to fix an issue 
+    which is now fixed in the firmware repository, so this local fix is not longer necessary.
+
 * __l2MpsLN-R3-7-1__: 2020-07-09 J. Vasquez
   * Set BsaCore threads RT priority to 90 and the LCLS1 BSA stream receiver thread RT priority
-  to 80, and its policy to SCHED_FIFO.
+    to 80, and its policy to SCHED_FIFO.
 
 * __l2MpsLN-R3-7-0__: 2020-07-09 J. Vasquez
   * Remove BSA PVs as they will be generated from the mps database
