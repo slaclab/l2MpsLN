@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-7-3__: 2020-09-28 J. Mock
+  * Fix mps_link_node_change_units.py to handle the HXR and SXR PVs for each analog device
+  * Add scripts to write FW to all LN and AN (update_mps_an_fw.sh and update_mps_ln_fw.sh)
+  * Fix mistake in iocBoot/common/ana_units.req - the values for pedestal start time were not autosaved
+  * Fix mistake in sioc-fees-mp01 and sioc-feeh-mp01 so they no longer look for payload in slot 6. Should
+      be slot 2
 * __l2MpsLN-R3-7-2__: 2020-09-17 J. Vasquez
   * Update firmware images to version `7bec288`, which solves the raw ADC data sign jump when
     in positive saturation. 
