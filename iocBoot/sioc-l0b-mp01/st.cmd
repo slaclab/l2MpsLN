@@ -1,12 +1,12 @@
 #!iocSpecificRelease/bin/linuxRT-x86_64/l2MpsLN
 #
-# SIOC:SLTD:MP01
+# SIOC:L0B:MP01
 #
 
 < envPaths
 
 epicsEnvSet("SLOT_ID", "2")
-epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
+epicsEnvSet("FPGA_IP","10.1.1.10${SLOT_ID}")
 
 #
 # Loads common Link Node startup

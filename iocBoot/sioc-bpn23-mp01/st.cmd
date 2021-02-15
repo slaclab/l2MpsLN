@@ -1,6 +1,6 @@
 #!iocSpecificRelease/bin/linuxRT-x86_64/l2MpsLN
 #
-# SIOC:SLTD:MP01
+# SIOC:BPN23:MP01
 #
 
 < envPaths
