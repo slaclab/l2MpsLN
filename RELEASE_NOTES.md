@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-9-0__: 2021-02-16 J. Vasquez
+  * Add new IOCs for SC and bypass areas.
+  * Change GUNB IOC to boot using the standard script.
+
 * __l2MpsLN-R3-8-0__: 2021-02-05 J. Vasquez
   * Update l2Mps to version R3.5.0.
   * Update l2MpsAsyn to version R3.5.0.
