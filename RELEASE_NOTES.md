@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-9-1__: 2021-03-04 J. Vasquez
+  * Move `sioc-undh-mp03` and `sioc-undh-mp04` to different CPUs.
+
 * __l2MpsLN-R3-9-0__: 2021-02-16 J. Vasquez
   * Add new IOCs for SC and bypass areas.
   * Change GUNB IOC to boot using the standard script.
