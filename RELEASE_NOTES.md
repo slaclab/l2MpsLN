@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-9-2__: 2021-03-16 J. Mock
+  * Remove crossbar configuration from iocBoot/common/configs/specificsLN.yaml
+      This has been moved to the configs.yaml created by the mps_configuration
+        to allow different link nodes to configure crossbars differently, depending on
+        location
+
 * __l2MpsLN-R3-9-1__: 2021-03-04 J. Vasquez
   * Move `sioc-undh-mp03` and `sioc-undh-mp04` to different CPUs.
 
