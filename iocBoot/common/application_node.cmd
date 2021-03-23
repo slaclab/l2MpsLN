@@ -50,6 +50,12 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 
+# ==========================================
+# Load default configurations
+# ==========================================
+# Load the default configuration
+cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
@@ -102,8 +108,7 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 # ==========================================
 # Load application specific configurations
 # ==========================================
-# Load the default configuration
-cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+
 
 # ==========================================
 

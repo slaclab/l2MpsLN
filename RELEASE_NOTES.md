@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-10-1__: 2021-03-23 J. Mock
+  * Change boot order in link node and application node so default.yaml
+    is loaded before config.yaml.
+
+
 * __l2MpsLN-R3-10-0__: 2021-03-16 J. Mock
   * Remove crossbar configuration from `iocBoot/common/configs/specificsLN.yaml`.
     This has been moved to the `configs.yaml` created by the `mps_configuration`
