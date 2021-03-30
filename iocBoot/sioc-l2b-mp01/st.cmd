@@ -1,4 +1,4 @@
-d#!iocSpecificRelease/bin/linuxRT-x86_64/l2MpsLN
+#!iocSpecificRelease/bin/linuxRT-x86_64/l2MpsLN
 #
 # SIOC:L2B:MP01
 #
