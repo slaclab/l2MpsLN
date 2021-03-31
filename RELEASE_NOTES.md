@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-10-2__: 2021-03-30 J. Mock
+  * Fix typo in sioc-l2b-mp01/st.cmd
+  * Set .PROC field to 1 for $(P):TIM_CLK_SRC so crossbar
+    configure properly upon boot
+
 * __l2MpsLN-R3-10-1__: 2021-03-23 J. Mock
   * Change boot order in link node and application node so default.yaml
     is loaded before config.yaml.
