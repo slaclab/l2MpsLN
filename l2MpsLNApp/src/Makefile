@@ -56,6 +56,7 @@ l2MpsLN_DBD += bsaCore.dbd
 l2MpsLN_DBD += bsa.dbd
 l2MpsLN_DBD += iocAdmin.dbd
 l2MpsLN_DBD += devSeqCar.dbd
+l2MpsLN_DBD += crossbarControl.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -64,6 +65,7 @@ l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
 l2MpsLN_LIBS += yamlDownloader
 l2MpsLN_LIBS += ycpswasyn
+l2MpsLN_LIBS += crossbarControl
 l2MpsLN_LIBS += eventBsaSupport
 l2MpsLN_LIBS += tprPattern
 l2MpsLN_LIBS += tprTrigger
