@@ -50,8 +50,11 @@ DB_INSTALLS += $(SEQ)/db/devSeqCar.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprTrig.db
 DB_INSTALLS += $(TPRTRIGGER)/db/tprDeviceNamePV.db
 
-# Install Databse for tprPattern module
+# Install Database for tprPattern module
 DB_INSTALLS += $(TPRPATTERN)/db/tprPattern.db
+
+# Install Database for crossbarControl module
+DB_INSTALLS += $(CROSSBARCONTROL)/db/crossbarCtrl.db
 
 # Install Database for the evrClient module
 DB_INSTALLS += $(EVRCLIENT)/db/evr.db
