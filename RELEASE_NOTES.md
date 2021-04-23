@@ -3,7 +3,7 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* 
+* __l2MpsLN-R3-11-0__: 2021-04-22 J. Vasquez
   * Add crossbarControl module
   * Remove l2MpsLN specific control of crossbar
   * Change l2MpsLN crossbar PVs to monitor only.
