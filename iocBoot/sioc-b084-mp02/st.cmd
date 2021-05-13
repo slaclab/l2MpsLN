@@ -14,6 +14,7 @@ epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 epicsEnvSet("TPRTRIGGER_PORT","TPRTRIGGER_PORT")
 epicsEnvSet("TPRPATTERN_PORT","TPRPATTERN_PORT")
+epicsEnvSet("CROSSBARCTRL_PORT","CROSSBARCTRL_PORT")
 
 # Point 'YAML_PATH' to the yaml_fixes directory
 epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
@@ -107,6 +108,12 @@ tprTriggerAsynDriverConfigure("${TPRTRIGGER_PORT}", "mmio/AmcCarrierCore")
 #    Stream name)               # Name of the timing stream
 tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstream")
 
+## Configure the crossbar driver
+# crossbarControlAsynDriverConfigure(
+#    Port name,                 # The name given to this port driver
+#    Root path,                 # Root path to the AxiSy56040 register area
+crossbarControlAsynDriverConfigure("${CROSSBARCTRL_PORT}", "mmio/AmcCarrierCore/AxiSy56040")
+
 # ==========================================
 # Load application specific configurations
 # ==========================================
@@ -132,6 +139,9 @@ dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNI
 
 # tprPattern database
 dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
+
+#  crossbarControl database
+dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX}, PORT=${CROSSBARCTRL_PORT}")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
