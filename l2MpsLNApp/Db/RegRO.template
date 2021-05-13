@@ -4,5 +4,5 @@ record(longin,  "$(P):$(R)") {
     field(EGU,  "$(EGU)")
     field(PINI, "$(PINI)")
     field(SCAN, "$(SCAN)")
-    field(INP,  "@asyn($(PORT),0)$(PARAM)")
+    field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
 }
