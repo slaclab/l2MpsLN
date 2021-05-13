@@ -5,5 +5,5 @@ record(waveform,  "$(P):$(R)") {
     field(PINI,   "$(PINI)")
     field(SCAN,   "$(SCAN)")
     field(NELM,   "$(NELM)")
-    field(INP,    "@asyn($(PORT),0)$(PARAM)")
+    field(INP,    "@asyn($(PORT),$(ADDR=0))$(PARAM)")
 }

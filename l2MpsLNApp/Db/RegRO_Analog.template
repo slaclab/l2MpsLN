@@ -8,5 +8,5 @@ record(ai,  "$(P):$(R)") {
     field(EGUL, "$(EGUL)")
     field(EGUF, "$(EGUF)")
     field(PREC, "$(PREC)")
-    field(INP,  "@asyn($(PORT),0)$(PARAM)")
+    field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
 }
