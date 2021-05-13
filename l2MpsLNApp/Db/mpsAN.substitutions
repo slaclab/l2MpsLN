@@ -291,11 +291,11 @@ file "Reg4BitsRW.template" { pattern
 # 2-bit Register with ScalVal_RO interfaces
 #======================================
 file "Reg2BitsRO.template" { pattern
-{ R,                DESC,                                   ZRST,           ONST,               TWST,           THST,           SCAN,       PARAM                   }
-{ TIM_SRC_RTM0_RBV,     "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_0            }
-{ TIM_SRC_FPGA_RBV,     "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_1            }
-{ TIM_SRC_BP_RBV,       "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_2            }
-{ TIM_SRC_RTM1_RBV,     "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1 second", TIM_CB_OUT_3            }
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,           THST,           ADDR,   SCAN,       PARAM                   }
+{ TIM_SRC_RTM0_RBV,     "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "0",    "1 second", TIM_CB_OUT_0            }
+{ TIM_SRC_FPGA_RBV,     "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_1            }
+{ TIM_SRC_BP_RBV,       "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_2            }
+{ TIM_SRC_RTM1_RBV,     "Timing source for RTM #1",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_3            }
 }
 
 

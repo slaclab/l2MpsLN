@@ -3,7 +3,7 @@ record(mbbi,    "$(P):$(R)") {
     field(DESC, "$(DESC)")
     field(PINI, "YES")
     field(SCAN, "$(SCAN)")
-    field(INP,  "@asynMask($(PORT),0,3)$(PARAM)")
+    field(INP,  "@asynMask($(PORT),$(ADDR=0),3)$(PARAM)")
     field(NOBT, "2")
     field(ZRVL, "0")
     field(ONVL, "1")
