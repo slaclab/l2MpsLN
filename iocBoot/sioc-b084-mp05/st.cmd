@@ -65,7 +65,7 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 #   Path)                   # Path to the MPS configuraton TOP directory
 #
 # In DEV, we temporary point to a local copy in this IOC application
-setMpsConfigurationPath("iocBoot/${IOC}/mps_database_output")
+setMpsConfigurationPath("/afs/slac/g/lcls/physics/mps_configuration/dual-core-test-v1/link_node_db")
 
 ## LCLS-II MPS
 # L2MPSASYNConfig(
