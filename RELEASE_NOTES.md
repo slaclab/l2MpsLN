@@ -3,6 +3,13 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-12-0__: 2021-06-29 J. Vasquez
+  * Fix the crossbar read-back PV YCPSWASYN `ADDR` parameter.
+  * Update `BsaCore` and `evrClient` modules. This includes a fix to handle an
+    exception for the `process()` in `RingBufferSync`.
+  * Timing mode: added database to support setting and monitoring the operating
+    mode(SC/NC).
+
 * __l2MpsLN-R3-11-0__: 2021-04-22 J. Vasquez
   * Add crossbarControl module
   * Remove l2MpsLN specific control of crossbar
