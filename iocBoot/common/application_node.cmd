@@ -131,6 +131,8 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # defined in l2MpsLN/firmware/mpsLN.dict file)
 dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
+dbLoadRecords("db/modeManagerAN.db", "P=${L2MPS_PREFIX}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX}")
+
 # tprTrigger database
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=00,DEV_PREFIX=${L2MPS_PREFIX}:TRG00_,PORT=${TPRTRIGGER_PORT}")
