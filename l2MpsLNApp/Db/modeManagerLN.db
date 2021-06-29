@@ -73,7 +73,3 @@ record(calcout, "$(P):SET_CROSSBAR2"){
     field(OUT, "$(P):TCRB2:OUTPUTCONFIG") #0 RTM_IN0 (LCLS1), 1 FPGA, 2 BP, 3 RTM_IN1 (LCLS2)
     field(FLNK, "$(P):TCRB2:OUTPUTCONFIG")
 }
-
-
-
-
