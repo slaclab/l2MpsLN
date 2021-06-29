@@ -26,6 +26,8 @@ DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
 # ==========================================
 DB += mpsLN.db
 DB += mpsAN.db
+DB += modeManagerLN.db
+DB += modeManagerAN.db
 # ==========================================
 
 # For saving and loading yaml configuration

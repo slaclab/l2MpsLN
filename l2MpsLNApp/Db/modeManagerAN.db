@@ -1,0 +1,55 @@
+#This database handles montoring the link node for mode(SC/NC)
+#faults and provides functionality to correct them
+
+record(mbbi, "$(P):TIMING_MODE_RBV"){
+    field(DESC, "Node Timing Mode Readback")
+    field(INP, "$(P):TIMING_MODE_CALC")
+    field(SCAN, "1 second")
+    field(ZRST, "NC")
+    field(ONST, "SC")
+    field(TWST, "Misconfigured")
+    field(ZRSV, "NO_ALARM")
+    field(ONSV, "NO_ALARM")
+    field(TWSV, "MAJOR")
+}
+
+record(mbbi, "$(P):TIMING_MODE"){
+    field(DESC, "Node Timing Mode Set")
+    field(ZRST, "NC")
+    field(ONST, "SC")
+    field(FLNK, "$(P):SET_TIMING_MODE")
+}
+
+record(calc, $(P):TIMING_MODE_CALC){
+    field(DESC, "Timing Mode Cacluation")
+    field(SCAN, "1 second")
+    field(INPA, "TPR:$(LOCA):$(IOC_UNIT):1:MODE") #0 lcls1 1 lcls 2
+    field(INPB, "TPR:$(LOCA):$(IOC_UNIT):1:RXLNKSTATUS")# 0 down 1 up
+    field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
+    field(CALC, "(!A)&B&C ? 0 : A&B&(!C) ? 1 : 2")
+}
+
+record(fanout, "$(P):SET_TIMING_MODE"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(LNK0, "$(P):SET_TPRMODE")
+    field(LNK1, "$(P):SET_LC1_MODE")
+}
+
+record(calcout, "$(P):SET_TPRMODE"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(P):TIMING_MODE")
+    field(CALC, "!A ? 0 : 1")
+    field(OUT, "TPR:$(LOCA):$(IOC_UNIT):1:MODE")
+    field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):1:MODE")
+}
+
+record(calcout, "$(P):SET_LC1_MODE"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(P):TIMING_MODE")
+    field(CALC, "!A ? 1 : 0")
+    field(OUT, "$(P):LC1_MODE")
+    field(FLNK, "$(P):LC1_MODE")
+}
