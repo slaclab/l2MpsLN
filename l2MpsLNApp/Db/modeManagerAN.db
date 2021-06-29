@@ -53,7 +53,3 @@ record(calcout, "$(P):SET_LC1_MODE"){
     field(OUT, "$(P):LC1_MODE")
     field(FLNK, "$(P):LC1_MODE")
 }
-
-
-
-
