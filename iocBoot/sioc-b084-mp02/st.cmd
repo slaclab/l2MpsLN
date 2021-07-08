@@ -65,7 +65,7 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 #   Path)                   # Path to the MPS configuraton TOP directory
 #
 # In DEV, we temporary point to a local copy in this IOC application
-setMpsConfigurationPath("/afs/slac/g/lcls/physics/mps_configuration/dual-core-test-v1/link_node_db")
+setMpsConfigurationPath("/afs/slac/g/lcls/physics/mps_configuration/current/link_node_db")
 
 ## LCLS-II MPS
 # L2MPSASYNConfig(
@@ -135,10 +135,10 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
 # tprTrigger database
-dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
+dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=1")
 
 # tprPattern database
-dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=0")
+dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=1")
 
 #  crossbarControl database
 dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX}, PORT=${CROSSBARCTRL_PORT}")
@@ -199,7 +199,7 @@ set_pass0_restoreFile("ana_units.sav")
 # This is required if you use caPutLog.
 # Set access security filea
 # Load common LCLS Access Configuration File
-< ${ACF_INIT}
+#< ${ACF_INIT}
 
 # ===========================================
 #               IOC INIT
