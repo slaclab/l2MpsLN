@@ -14,7 +14,7 @@ epicsEnvSet("L2MPSASYN_PORT","L2MPSASYN_PORT")
 epicsEnvSet("YCPSWASYN_PORT","YCPSWASYN_PORT")
 epicsEnvSet("TPRTRIGGER_PORT","TPRTRIGGER_PORT")
 epicsEnvSet("TPRPATTERN_PORT","TPRPATTERN_PORT")
-epicsEnvSet("CROSSBARCTRL_PORT","CROSSBARCTRL_PORT")
+epicsEnvSet("CROSSBARCTRL_PORT", "CROSSBARCTRL_PORT")
 
 # Point 'YAML_PATH' to the yaml_fixes directory
 epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
@@ -32,7 +32,7 @@ epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsLN.dict")
 
 # FPGA IP Address
-epicsEnvSet("FPGA_IP","10.0.1.102")
+epicsEnvSet("FPGA_IP","10.0.1.104")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
