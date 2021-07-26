@@ -75,7 +75,7 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 #
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("lcls-daemon2", 1975)
-L2MPSASYNSetManagerHost("lcls-dev1", 1975) #- for development
+#L2MPSASYNSetManagerHost("lcls-dev1", 1975) #- for development
 
 ## Configure the LCLS1 BSA driver
 # L2MpsL1BsaConfig(

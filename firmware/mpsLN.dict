@@ -561,6 +561,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/FrameSize      PGP_RxMonFrameSize_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/FrameSizeMax   PGP_RxMonFrameSizeMax_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/FrameSizeMin   PGP_RxMonFrameSizeMin_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/Bandwidth      PGP_RxMonBandwidth_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/BandwidthMax   PGP_RxMonBandwidthMax_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[0]/BandwidthMin   PGP_RxMonBandwidthMin_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameCnt       PGP_RxMonFrameCnt_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameRate      PGP_RxMonFrameRate_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameRateMax   PGP_RxMonFrameRateMax_1
@@ -568,6 +571,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameSize      PGP_RxMonFrameSize_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameSizeMax   PGP_RxMonFrameSizeMax_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/FrameSizeMin   PGP_RxMonFrameSizeMin_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/Bandwidth      PGP_RxMonBandwidth_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/BandwidthMax   PGP_RxMonBandwidthMax_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[1]/BandwidthMin   PGP_RxMonBandwidthMin_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameCnt       PGP_RxMonFrameCnt_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameRate      PGP_RxMonFrameRate_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameRateMax   PGP_RxMonFrameRateMax_2
@@ -575,6 +581,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameSize      PGP_RxMonFrameSize_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameSizeMax   PGP_RxMonFrameSizeMax_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/FrameSizeMin   PGP_RxMonFrameSizeMin_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/Bandwidth      PGP_RxMonBandwidth_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/BandwidthMax   PGP_RxMonBandwidthMax_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[2]/BandwidthMin   PGP_RxMonBandwidthMin_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameCnt       PGP_RxMonFrameCnt_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameRate      PGP_RxMonFrameRate_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameRateMax   PGP_RxMonFrameRateMax_3
@@ -582,6 +591,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameSize      PGP_RxMonFrameSize_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameSizeMax   PGP_RxMonFrameSizeMax_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/FrameSizeMin   PGP_RxMonFrameSizeMin_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/Bandwidth      PGP_RxMonBandwidth_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/BandwidthMax   PGP_RxMonBandwidthMax_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpRxStreamMon/AxiStreamMonChannel[3]/BandwidthMin   PGP_RxMonBandwidthMin_3
 
 # =============================
 # PgpTxStreamMon (bandwidth monitoring)
@@ -593,6 +605,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/FrameSize      PGP_TxMonFrameSize_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/FrameSizeMax   PGP_TxMonFrameSizeMax_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/FrameSizeMin   PGP_TxMonFrameSizeMin_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/Bandwidth      PGP_TxMonBandwidth_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/BandwidthMax   PGP_TxMonBandwidthMax_0
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[0]/BandwidthMin   PGP_TxMonBandwidthMin_0
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameCnt       PGP_TxMonFrameCnt_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameRate      PGP_TxMonFrameRate_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameRateMax   PGP_TxMonFrameRateMax_1
@@ -600,6 +615,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameSize      PGP_TxMonFrameSize_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameSizeMax   PGP_TxMonFrameSizeMax_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/FrameSizeMin   PGP_TxMonFrameSizeMin_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/Bandwidth      PGP_TxMonBandwidth_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/BandwidthMax   PGP_TxMonBandwidthMax_1
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[1]/BandwidthMin   PGP_TxMonBandwidthMin_1
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameCnt       PGP_TxMonFrameCnt_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameRate      PGP_TxMonFrameRate_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameRateMax   PGP_TxMonFrameRateMax_2
@@ -607,6 +625,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameSize      PGP_TxMonFrameSize_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameSizeMax   PGP_TxMonFrameSizeMax_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/FrameSizeMin   PGP_TxMonFrameSizeMin_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/Bandwidth      PGP_TxMonBandwidth_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/BandwidthMax   PGP_TxMonBandwidthMax_2
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[2]/BandwidthMin   PGP_TxMonBandwidthMin_2
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameCnt       PGP_TxMonFrameCnt_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameRate      PGP_TxMonFrameRate_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameRateMax   PGP_TxMonFrameRateMax_3
@@ -614,6 +635,9 @@
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameSize      PGP_TxMonFrameSize_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameSizeMax   PGP_TxMonFrameSizeMax_3
 /mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/FrameSizeMin   PGP_TxMonFrameSizeMin_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/Bandwidth      PGP_TxMonBandwidth_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/BandwidthMax   PGP_TxMonBandwidthMax_3
+/mmio/AppTop/AppCore/MpsLinkNodeCore/MpsConcentrator/PgpTxStreamMon/AxiStreamMonChannel[3]/BandwidthMin   PGP_TxMonBandwidthMin_3
 
 # =============================
 # LCLS-I Core
