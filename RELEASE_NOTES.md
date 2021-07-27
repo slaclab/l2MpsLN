@@ -3,6 +3,15 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+
+* __l2MpsLN-R3-13-0__: 2021-07-27 J. Mock
+  * Add PV support for PGP Tx and Rx bandwidth monitoring and frame statistics
+    as added to MpsConcentrator
+  * Update FW to lcls2-mps `v4.6.0`:
+    * Increase number of active analog thresholds from 7 to 8
+    * Change analog threshold counter to roll over when it reaches its max value
+    * Add registers for bandwidth monitoring on PGP lanes
+
 * __l2MpsLN-R3-12-0__: 2021-06-29 J. Vasquez
   * Fix the crossbar read-back PV YCPSWASYN `ADDR` parameter.
   * Update `BsaCore` and `evrClient` modules. This includes a fix to handle an
