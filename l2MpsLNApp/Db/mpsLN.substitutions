@@ -611,5 +611,3 @@ file "streamSize.template" { pattern
 { DM0_BUFFER_SIZE,      "0",    }
 { DM1_BUFFER_SIZE,      "1",    }
 }
-
-
