@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-14-0__: 2021-08-17 J. Vasquez
+  * Update `l2Mps` to version `R3.6.0`.
+  * Update `l2MpsAsyn` to version `R3.6.0`.
 
 * __l2MpsLN-R3-13-0__: 2021-07-27 J. Mock
   * Add PV support for PGP Tx and Rx bandwidth monitoring and frame statistics
