@@ -1,9 +1,9 @@
 #This database handles montoring the link node for mode(SC/NC)
 #faults and provides functionality to correct them
 
-record(mbbi, "$(P):TIMING_MODE_RBV"){
+record(mbbi, "$(P):LCLSMODE_RBV"){
     field(DESC, "Node Timing Mode Readback")
-    field(INP, "$(P):TIMING_MODE_CALC")
+    field(INP, "$(P):LCLSMODE_CALC")
     field(SCAN, "1 second")
     field(ZRST, "NC")
     field(ONST, "SC")
@@ -13,23 +13,23 @@ record(mbbi, "$(P):TIMING_MODE_RBV"){
     field(TWSV, "MAJOR")
 }
 
-record(mbbi, "$(P):TIMING_MODE"){
+record(mbbi, "$(P):LCLSMODE"){
     field(DESC, "Node Timing Mode Set")
     field(ZRST, "NC")
     field(ONST, "SC")
-    field(FLNK, "$(P):SET_TIMING_MODE")
+    field(FLNK, "$(P):SET_LCLSMODE")
 }
 
-record(calc, $(P):TIMING_MODE_CALC){
+record(calc, $(P):LCLSMODE_CALC){
     field(DESC, "Timing Mode Cacluation")
     field(SCAN, "1 second")
-    field(INPA, "TPR:$(LOCA):$(IOC_UNIT):1:MODE") #0 lcls1 1 lcls 2
-    field(INPB, "TPR:$(LOCA):$(IOC_UNIT):1:RXLNKSTATUS")# 0 down 1 up
+    field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
+    field(INPB, "TPR:$(LOCA):$(IOC_UNIT):$(INST):RXLNKSTATUS")# 0 down 1 up
     field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
     field(CALC, "(!A)&B&C ? 0 : A&B&(!C) ? 1 : 2")
 }
 
-record(fanout, "$(P):SET_TIMING_MODE"){
+record(fanout, "$(P):SET_LCLSMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
     field(LNK0, "$(P):SET_TPRMODE")
@@ -41,16 +41,16 @@ record(fanout, "$(P):SET_TIMING_MODE"){
 record(calcout, "$(P):SET_TPRMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):TIMING_MODE")
+    field(INPA, "$(P):LCLSMODE")
     field(CALC, "!A ? 0 : 1")
-    field(OUT, "TPR:$(LOCA):$(IOC_UNIT):1:MODE")
-    field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):1:MODE")
+    field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
+    field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
 }
 
 record(calcout, "$(P):SET_LC1_MODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):TIMING_MODE")
+    field(INPA, "$(P):LCLSMODE")
     field(CALC, "!A ? 1 : 0")
     field(OUT, "$(P):LC1_MODE")
     field(FLNK, "$(P):LC1_MODE")
@@ -59,7 +59,7 @@ record(calcout, "$(P):SET_LC1_MODE"){
 record(calcout, "$(P):SET_CROSSBAR1"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):TIMING_MODE")
+    field(INPA, "$(P):LCLSMODE")
     field(CALC, "!A ? 0 : 3")
     field(OUT, "$(P):TCRB1:OUTPUTCONFIG") #0 RTM_IN0 (LCLS1), 1 FPGA, 2 BP, 3 RTM_IN1 (LCLS2)
     field(FLNK, "$(P):TCRB1:OUTPUTCONFIG")
@@ -68,7 +68,7 @@ record(calcout, "$(P):SET_CROSSBAR1"){
 record(calcout, "$(P):SET_CROSSBAR2"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):TIMING_MODE")
+    field(INPA, "$(P):LCLSMODE")
     field(CALC, "!A ? 0 : 3")
     field(OUT, "$(P):TCRB2:OUTPUTCONFIG") #0 RTM_IN0 (LCLS1), 1 FPGA, 2 BP, 3 RTM_IN1 (LCLS2)
     field(FLNK, "$(P):TCRB2:OUTPUTCONFIG")
