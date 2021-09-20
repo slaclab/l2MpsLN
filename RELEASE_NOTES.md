@@ -3,6 +3,13 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-16-0__: 2021-09-19 J. Mock
+  * Add new IOCs to support additional analog inputs
+  * Update boot scripts to point to current configuration
+  * Temporarily enable MPS at boot until mps_manager fixed
+  * Update TIMING_MODE PV to LCLSMODE
+  * Add support for new LN type: Digital Node.  Used in FEES/H
+
 * __l2MpsLN-R3-15-0__: 2021-08-18 J. Vasquez
   * Update `l2Mps` to version `R3.7.0`.
   * Update `l2MpsAsyn` to version `R3.7.0`.
