@@ -59,7 +59,7 @@ cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
-setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/cu/link_node_db")
+setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/current/link_node_db")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
@@ -131,7 +131,7 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # defined in l2MpsLN/firmware/mpsLN.dict file)
 dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
-dbLoadRecords("db/modeManagerLN.db", "P=${L2MPS_PREFIX}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX}")
+dbLoadRecords("db/modeManagerLN.db", "P=${L2MPS_PREFIX}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # tprTrigger database
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
@@ -211,8 +211,8 @@ set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
 set_pass0_restoreFile("info_positions.sav")
 set_pass1_restoreFile("info_positions.sav")
-set_pass0_restoreFile("ana_units.sav")
-set_pass1_restoreFile("ana_units.sav")
+#set_pass0_restoreFile("ana_units.sav")
+#set_pass1_restoreFile("ana_units.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -246,7 +246,7 @@ cd ${TOP}
 create_monitor_set("info_settings.req" , 30 )
 create_monitor_set("info_positions.req", 30 )
 create_monitor_set("manual_settings.req" , 30 )
-create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
+#create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
@@ -255,3 +255,6 @@ dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
 dbpf ${L2MPS_PREFIX}:TIM_CLK_SRC.PROC 1
+dbpf ${L2MPS_PREFIX}:THR_LOADED 1
+dbpf ${L2MPS_PREFIX}:MPS_EN 1
+dbpf ${L2MPS_PREFIX}:SALT_RST_PLL.PROC 1

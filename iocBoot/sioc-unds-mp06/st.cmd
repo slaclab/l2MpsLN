@@ -11,3 +11,5 @@ epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 # Loads common Link Node startup
 #
 < ${TOP}/iocBoot/common/link_node.cmd
+
+system("scripts/setupBPClockRT.sh shm-unds-sp03-1")
