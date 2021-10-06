@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-17-0__: 2021-10-6 J. Mock
+  * Restore ana_units.req to autosave facility for all analog link nodes
+
 * __l2MpsLN-R3-16-0__: 2021-09-19 J. Mock
   * Add new IOCs to support additional analog inputs
   * Update boot scripts to point to current configuration
