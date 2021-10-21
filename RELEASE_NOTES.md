@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-18-0__: 2021-10-6 J. Mock
+  * New FW version R4.4.9 built against amc_carrier_core 4.4.9
+
 * __l2MpsLN-R3-17-0__: 2021-10-6 J. Mock
   * Restore ana_units.req to autosave facility for all analog link nodes
 
