@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-19-1__: 2022-01-11 J. Mock
+  * Add directories for new IOCs sioc-gunb-mp02,
+      sioc-l3b-mp06, sioc-undh-mp11
+
 * __l2MpsLN-R3-19-0__: 2022-01-11 J. Mock
   * Upgrade timing modules for enum direction change 
   * No longer convert any low level analog inputs PVs from raw counts to mV
