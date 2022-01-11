@@ -1,9 +1,9 @@
 #This database handles montoring the link node for mode(SC/NC)
 #faults and provides functionality to correct them
 
-record(mbbi, "$(P):LCLSMODE_RBV"){
+record(mbbi, "$(NAME):LCLSMODE_RBV"){
     field(DESC, "Node Timing Mode Readback")
-    field(INP, "$(P):LCLSMODE_CALC")
+    field(INP, "$(NAME):LCLSMODE_CALC")
     field(SCAN, "1 second")
     field(ZRST, "NC")
     field(ONST, "SC")
@@ -13,14 +13,14 @@ record(mbbi, "$(P):LCLSMODE_RBV"){
     field(TWSV, "MAJOR")
 }
 
-record(mbbi, "$(P):LCLSMODE"){
+record(mbbi, "$(NAME):LCLSMODE"){
     field(DESC, "Node Timing Mode Set")
     field(ZRST, "NC")
     field(ONST, "SC")
-    field(FLNK, "$(P):SET_LCLSMODE")
+    field(FLNK, "$(NAME):SET_LCLSMODE")
 }
 
-record(calc, $(P):LCLSMODE_CALC){
+record(calc, $(NAME):LCLSMODE_CALC){
     field(DESC, "Timing Mode Cacluation")
     field(SCAN, "1 second")
     field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
@@ -29,26 +29,26 @@ record(calc, $(P):LCLSMODE_CALC){
     field(CALC, "(!A)&B&C ? 0 : A&B&(!C) ? 1 : 2")
 }
 
-record(fanout, "$(P):SET_LCLSMODE"){
+record(fanout, "$(NAME):SET_LCLSMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(LNK0, "$(P):SET_TPRMODE")
-    field(LNK1, "$(P):SET_LC1_MODE")
+    field(LNK0, "$(NAME):SET_TPRMODE")
+    field(LNK1, "$(NAME):SET_LC1_MODE")
 }
 
-record(calcout, "$(P):SET_TPRMODE"){
+record(calcout, "$(NAME):SET_TPRMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):LCLSMODE")
+    field(INPA, "$(NAME):LCLSMODE")
     field(CALC, "!A ? 0 : 1")
     field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
     field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
 }
 
-record(calcout, "$(P):SET_LC1_MODE"){
+record(calcout, "$(NAME):SET_LC1_MODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):LCLSMODE")
+    field(INPA, "$(NAME):LCLSMODE")
     field(CALC, "!A ? 1 : 0")
     field(OUT, "$(P):LC1_MODE")
     field(FLNK, "$(P):LC1_MODE")

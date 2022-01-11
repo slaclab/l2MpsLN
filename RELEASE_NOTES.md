@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-19-2__: 2022-01-11 J. Mock
+  * Fix bug related to mode calculation and setting.
+
 * __l2MpsLN-R3-19-1__: 2022-01-11 J. Mock
   * Add directories for new IOCs sioc-gunb-mp02,
       sioc-l3b-mp06, sioc-undh-mp11
