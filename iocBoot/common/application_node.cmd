@@ -129,7 +129,7 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # Link Node database (from l2MpsLN)
 # Records that read/write FW data registers
 # defined in l2MpsLN/firmware/mpsLN.dict file)
-dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsAN.db", "P=${IOC_NAME}, PORT=${YCPSWASYN_PORT}")
 
 dbLoadRecords("db/modeManagerAN.db", "P=${L2MPS_PREFIX}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
