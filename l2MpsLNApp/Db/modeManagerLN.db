@@ -59,7 +59,7 @@ record(calcout, "$(NAME):SET_LC1_MODE"){
 record(calcout, "$(NAME):SET_CROSSBAR1"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(P):LCLSMODE")
+    field(INPA, "$(NAME):LCLSMODE")
     field(CALC, "!A ? 0 : 3")
     field(OUT, "$(P):TCRB1:OUTPUTCONFIG") #0 RTM_IN0 (LCLS1), 1 FPGA, 2 BP, 3 RTM_IN1 (LCLS2)
     field(FLNK, "$(P):TCRB1:OUTPUTCONFIG")
