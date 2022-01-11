@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-19-0__: 2022-01-11 J. Mock
+  * Upgrade timing modules for enum direction change 
+  * No longer convert any low level analog inputs PVs from raw counts to mV
+  * Change prefix of :LCLSMODE from {MPS_PREFIX} to {IOC_NAME}
+
 * __l2MpsLN-R3-18-0__: 2021-10-20 J. Mock
   * New FW version R4.4.9 built against amc_carrier_core 4.4.9
 
