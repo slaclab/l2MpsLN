@@ -57,7 +57,8 @@ DB_INSTALLS += $(TPRTRIGGER)/db/tprDeviceNamePV.db
 DB_INSTALLS += $(TPRPATTERN)/db/tprPattern.db
 
 # Install Database for crossbarControl module
-DB_INSTALLS += $(CROSSBARCONTROL)/db/crossbarCtrl.db
+DB_INSTALLS += $(ATCACOMMON)/db/crossbarCtrl.db
+DB_INSTALLS += $(ATCACOMMON)/db/ATCACommon.db
 
 # Install Database for the evrClient module
 DB_INSTALLS += $(EVRCLIENT)/db/evr.db
@@ -66,6 +67,15 @@ DB_INSTALLS += $(EVRCLIENT)/db/evrPatternAll.db
 DB_INSTALLS += $(EVRCLIENT)/db/evrEventAll.db
 DB_INSTALLS += $(EVRCLIENT)/db/evrDevTrig.db
 DB_INSTALLS += $(EVRCLIENT)/db/bsaATTREdef.db
+DB_INSTALLS += $(EVRCLIENT)/db/Bsa.db
+
+# ==========================================================
+# SC Timing: Pull in Database Templates for BSA/BSSS
+# ==========================================================
+DB_INSTALLS += $(BSADRIVER)/db/bsa.db
+DB_INSTALLS += $(BSADRIVER)/db/bsss.db
+DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl.db
+DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl_localTest.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

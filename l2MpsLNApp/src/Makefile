@@ -9,25 +9,45 @@ USR_CXXFLAGS += -std=c++0x
 # =====================================================
 # Path to "NON EPICS" External PACKAGES: USER INCLUDES
 # ======================================================
-USR_INCLUDES = $(addprefix -I,$(BOOST_INCLUDE) $(CPSW_FRAMEWORK_INCLUDE) $(YAML_INCLUDE) $(L2MPS_INCLUDE) $(YAMLREADER_INCLUDE) $(DEVICELIB_INCLUDE))
+USR_INCLUDES += -I$(BOOST_INCLUDE)
+USR_INCLUDES += -I$(CPSW_FRAMEWORK_INCLUDE)
+USR_INCLUDES += -I$(YAML_INCLUDE)
+USR_INCLUDES += -I$(YAMLREADER_INCLUDE)
+USR_INCLUDES += -I$(DEVICELIB_INCLUDE)
+USR_INCLUDES += -I$(COMMONATCA_INCLUDE)
+USR_INCLUDES += -I$(HPSTPR_INCLUDE)
+USR_INCLUDES += -I$(BSA_INCLUDE)
+USR_INCLUDES += -I$(L2MPS_INCLUDE)
 # =====================================================
 
 # ======================================================
 #PATH TO "NON EPICS" EXTERNAL PACKAGES: USER LIBRARIES
 # ======================================================
-cpsw_DIR = $(CPSW_FRAMEWORK_LIB)
-yaml-cpp_DIR = $(YAML_LIB)
-l2Mps_DIR = $(L2MPS_LIB)
-deviceLib_DIR = $(DEVICELIB_LIB)
-yamlReader_DIR  = $(YAMLREADER_LIB)
-hpstpr_DIR = $(HPSTPR_LIB)
+cpsw_DIR          = $(CPSW_FRAMEWORK_LIB)
+yaml-cpp_DIR      = $(YAML_LIB)
+l2Mps_DIR         = $(L2MPS_LIB)
+deviceLib_DIR     = $(DEVICELIB_LIB)
+yamlReader_DIR    = $(YAMLREADER_LIB)
+hpstpr_DIR        = $(HPSTPR_LIB)
+boost_system_DIR  = $(BOOST_LIB)
+hpstpr_DIR        = $(HPSTPR_LIB)
+bsa_DIR           = $(BSA_LIB)
+commonATCA_DIR    = $(COMMONATCA_LIB)
 
 # =====================================================
 
 # ======================================================
 # LINK "NON EPICS" EXTERNAL PACKAGE LIBRARIES STATICALLY
 # =======================================================
-USR_LIBS_Linux += l2Mps yamlReader deviceLib hpstpr cpsw yaml-cpp
+USR_LIBS_Linux += l2Mps    
+USR_LIBS_Linux += cpsw 
+USR_LIBS_Linux += boost_system 
+USR_LIBS_Linux += yaml-cpp 
+USR_LIBS_Linux += hpstpr 
+USR_LIBS_Linux += bsa 
+USR_LIBS_Linux += commonATCA
+USR_LIBS_Linux += yamlReader 
+USR_LIBS_Linux += deviceLib
 # ======================================================
 
 #=============================
@@ -57,18 +77,21 @@ l2MpsLN_DBD += bsa.dbd
 l2MpsLN_DBD += iocAdmin.dbd
 l2MpsLN_DBD += devSeqCar.dbd
 l2MpsLN_DBD += crossbarControl.dbd
+l2MpsLN_DBD += ATCACommon.dbd
+l2MpsLN_DBD += bsaAsynDriver.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
 l2MpsLN_LIBS += autosave
+l2MpsLN_LIBS += ATCACommon
 l2MpsLN_LIBS += yamlLoader
 l2MpsLN_LIBS += l2MpsAsyn
 l2MpsLN_LIBS += yamlDownloader
 l2MpsLN_LIBS += ycpswasyn
-l2MpsLN_LIBS += crossbarControl
 l2MpsLN_LIBS += eventBsaSupport
 l2MpsLN_LIBS += tprPattern
 l2MpsLN_LIBS += tprTrigger
+l2MpsLN_LIBS += bsaDriver
 l2MpsLN_LIBS += BsaCore
 l2MpsLN_LIBS += asyn
 l2MpsLN_LIBS += seqCar seq pv

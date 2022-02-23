@@ -24,6 +24,7 @@ epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
 # YAML file
 epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
+#epicsEnvSet("YAML","/afs/slac/g/controls/development/users/ernesto/firmwareApps/images/AmcCarrierMpsAnalogLinkNode_project.yaml/000TopLevel.yaml")
 
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
@@ -59,6 +60,7 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
+
 
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
@@ -114,6 +116,8 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 #    Root path,                 # Root path to the AxiSy56040 register area
 crossbarControlAsynDriverConfigure("${CROSSBARCTRL_PORT}", "mmio/AmcCarrierCore/AxiSy56040")
 
+cpswATCACommonAsynDriverConfigure("atca0", "mmio")
+
 # ==========================================
 # Load application specific configurations
 # ==========================================
@@ -127,6 +131,12 @@ cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 # ===========================================
 asynSetTraceMask("${L2MPSASYN_PORT}",, -1, 0)
 asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
+
+addBsa("SIGNAL00",       "uint32")
+bsaAsynDriverConfigure("bsaPort", "mmio/AmcCarrierCore/AmcCarrierBsa","strm/AmcCarrierDRAM/dram")
+listBsa()
+bsssAssociateBsaChannels("bsaPort")
+bsssAsynDriverConfigure("bsssPort", "mmio/AmcCarrierCore/AmcCarrierBsa/Bsss")
 
 # ===========================================
 #               DB LOADING
@@ -143,8 +153,19 @@ dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_
 #  crossbarControl database
 dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX}, PORT=${CROSSBARCTRL_PORT}")
 
+#  ATCA Common database
+dbLoadRecords("db/ATCACommon.db",   "DEV=${IOC_PV}:0,PORT=atca0")
+
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL00,SECN=SIGNAL00")
+
+# BSSS Control/Monintoring PVs
+dbLoadRecords("db/bsssCtrl_localTest.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort")
+
+# BSSS Scalar PVs
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=0,BSAKEY=SIGNAL00,SECN=SIGNAL00")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
