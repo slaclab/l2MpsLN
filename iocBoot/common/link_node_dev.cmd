@@ -8,10 +8,10 @@
 # Setup environment variables specific to the DEV environment
 # ====================================================================
 # MPS Database location
-epicsEnvSet("PHYSICS_TOP", "/usr/local/g/lcls/physics")
+epicsEnvSet("PHYSICS_TOP", "/afs/slac/g/lcls/physics")
 
 # MPS history server configurations
-epicsEnvSet("MPS_MANAGER_HOST", "lcls-srv02")
+epicsEnvSet("MPS_MANAGER_HOST", "lcls-dev3")
 
 # ====================================================================
 # Load the common Central Node startup

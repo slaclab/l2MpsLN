@@ -1,0 +1,12 @@
+#======================================
+# Stream waveforms (16-bit data)
+#======================================
+file "waveform_stream16.template" { pattern
+{ WAVE  , DESC,                                   PARAM      }
+{ $(WF0), "Raw ADC waveform (Bay 0, ch 0)",       Stream0:16 }
+{ $(WF1), "Raw ADC waveform (Bay 0, ch 1)",       Stream1:16 }
+{ $(WF2), "Raw ADC waveform (Bay 0, ch 2)",       Stream2:16 }
+{ $(WF3), "Raw ADC waveform (Bay 1, ch 0)",       Stream4:16 }
+{ $(WF4), "Raw ADC waveform (Bay 1, ch 1)",       Stream5:16 }
+{ $(WF5), "Raw ADC waveform (Bay 1, ch 2)",       Stream6:16 }
+}
