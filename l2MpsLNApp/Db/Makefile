@@ -27,6 +27,7 @@ DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
 DB += mpsLN.db
 DB += mpsAN.db
 DB += mpsDN.db
+DB += mpsWF.db
 DB += modeManagerLN.db
 DB += modeManagerAN.db
 # ==========================================
