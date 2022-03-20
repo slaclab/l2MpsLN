@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-20-0__: 2022-01-11 J. Mock
+  * Add script for auto archive file generation
+
 * __l2MpsLN-R3-19-2__: 2022-01-11 J. Mock
   * Fix bug related to mode calculation and setting.
 

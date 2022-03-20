@@ -24,6 +24,7 @@ epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
 # YAML file
 epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
+#epicsEnvSet("YAML","/afs/slac/g/controls/development/users/ernesto/firmwareApps/images/AmcCarrierMpsAnalogLinkNode_project.yaml/000TopLevel.yaml")
 
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
@@ -59,6 +60,7 @@ DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
+
 
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
@@ -114,6 +116,8 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 #    Root path,                 # Root path to the AxiSy56040 register area
 crossbarControlAsynDriverConfigure("${CROSSBARCTRL_PORT}", "mmio/AmcCarrierCore/AxiSy56040")
 
+cpswATCACommonAsynDriverConfigure("atca0", "mmio")
+
 # ==========================================
 # Load application specific configurations
 # ==========================================
@@ -127,6 +131,23 @@ cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 # ===========================================
 asynSetTraceMask("${L2MPSASYN_PORT}",, -1, 0)
 asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
+
+addBsa("SIGNAL00",       "uint32")
+addBsa("SIGNAL01",       "uint32")
+addBsa("SIGNAL02",       "uint32")
+addBsa("SIGNAL03",       "uint32")
+addBsa("SIGNAL04",       "uint32")
+addBsa("SIGNAL05",       "uint32")
+addBsa("SIGNAL06",       "uint32")
+addBsa("SIGNAL07",       "uint32")
+addBsa("SIGNAL08",       "uint32")
+addBsa("SIGNAL09",       "uint32")
+addBsa("SIGNAL10",       "uint32")
+addBsa("SIGNAL11",       "uint32")
+bsaAsynDriverConfigure("bsaPort", "mmio/AmcCarrierCore/AmcCarrierBsa","strm/AmcCarrierDRAM/dram")
+listBsa()
+bsssAssociateBsaChannels("bsaPort")
+bsssAsynDriverConfigure("bsssPort", "mmio/AmcCarrierCore/AmcCarrierBsa/Bsss")
 
 # ===========================================
 #               DB LOADING
@@ -143,8 +164,41 @@ dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_
 #  crossbarControl database
 dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX}, PORT=${CROSSBARCTRL_PORT}")
 
+#  ATCA Common database
+dbLoadRecords("db/ATCACommon.db",   "DEV=${IOC_PV}:0,PORT=atca0")
+
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL00,SECN=SIGNAL00")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL01,SECN=SIGNAL01")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL02,SECN=SIGNAL02")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL03,SECN=SIGNAL03")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL04,SECN=SIGNAL04")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL05,SECN=SIGNAL05")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL06,SECN=SIGNAL06")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL07,SECN=SIGNAL07")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL08,SECN=SIGNAL08")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL09,SECN=SIGNAL09")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL10,SECN=SIGNAL10")
+dbLoadRecords("db/bsa.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsaPort,BSAKEY=SIGNAL11,SECN=SIGNAL11")
+
+# BSSS Control/Monintoring PVs
+dbLoadRecords("db/bsssCtrl.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort")
+
+# BSSS Scalar PVs
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=0,BSAKEY=SIGNAL00,SECN=SIGNAL00")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=1,BSAKEY=SIGNAL01,SECN=SIGNAL01")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=2,BSAKEY=SIGNAL02,SECN=SIGNAL02")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=3,BSAKEY=SIGNAL03,SECN=SIGNAL03")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=4,BSAKEY=SIGNAL04,SECN=SIGNAL04")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=5,BSAKEY=SIGNAL05,SECN=SIGNAL05")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=6,BSAKEY=SIGNAL06,SECN=SIGNAL06")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=7,BSAKEY=SIGNAL07,SECN=SIGNAL07")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=8,BSAKEY=SIGNAL08,SECN=SIGNAL08")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=9,BSAKEY=SIGNAL09,SECN=SIGNAL09")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=10,BSAKEY=SIGNAL10,SECN=SIGNAL10")
+dbLoadRecords("db/bsss.db", "DEV=MPLN:GUNB:MP01:1,PORT=bsssPort,IDX=11,BSAKEY=SIGNAL11,SECN=SIGNAL11")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****

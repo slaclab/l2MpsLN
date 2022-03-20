@@ -110,6 +110,26 @@ tprPatternAsynDriverConfigure("${TPRPATTERN_PORT}", "mmio/AmcCarrierCore", "tstr
 # ==========================================
 crossbarControlAsynDriverConfigure("crossbar", "mmio/AmcCarrierCore/AxiSy56040")
 
+# ===========================================
+#               BSA Driver
+# ===========================================
+addBsa("C0_I0",       "uint32")
+addBsa("C1_I0",       "uint32")
+addBsa("C2_I0",       "uint32")
+addBsa("C3_I0",       "uint32")
+addBsa("C4_I0",       "uint32")
+addBsa("C5_I0",       "uint32")
+addBsa("C0_I1",       "uint32")
+addBsa("C1_I1",       "uint32")
+addBsa("C2_I1",       "uint32")
+addBsa("C3_I1",       "uint32")
+addBsa("C4_I1",       "uint32")
+addBsa("C5_I1",       "uint32")
+bsaAsynDriverConfigure("bsaPort", "mmio/AmcCarrierCore/AmcCarrierBsa","strm/AmcCarrierDRAM/dram")
+listBsa()
+bsssAssociateBsaChannels("bsaPort")
+bsssAsynDriverConfigure("bsssPort", "mmio/AmcCarrierCore/AmcCarrierBsa/Bsss")
+
 # ==========================================
 # Load application specific configurations
 # ==========================================
@@ -160,6 +180,37 @@ dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX},PORT=crossbar")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+
+# BSA / BSSS PV loading
+dbLoadRecords("db/bsa.db", "DEV=${DEV0},PORT=bsaPort,BSAKEY=C0_I0,SECN=${C0_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV1},PORT=bsaPort,BSAKEY=C1_I0,SECN=${C1_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV2},PORT=bsaPort,BSAKEY=C2_I0,SECN=${C2_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV3},PORT=bsaPort,BSAKEY=C3_I0,SECN=${C3_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV4},PORT=bsaPort,BSAKEY=C4_I0,SECN=${C4_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV5},PORT=bsaPort,BSAKEY=C5_I0,SECN=${C5_I0}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV0},PORT=bsaPort,BSAKEY=C0_I1,SECN=${C0_I1}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV1},PORT=bsaPort,BSAKEY=C1_I1,SECN=${C1_I1}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV2},PORT=bsaPort,BSAKEY=C2_I1,SECN=${C2_I1}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV3},PORT=bsaPort,BSAKEY=C3_I1,SECN=${C3_I1}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV4},PORT=bsaPort,BSAKEY=C4_I1,SECN=${C4_I1}")
+dbLoadRecords("db/bsa.db", "DEV=${DEV5},PORT=bsaPort,BSAKEY=C5_I1,SECN=${C5_I1}")
+
+# BSSS Control/Monintoring PVs
+dbLoadRecords("db/bsssCtrl.db", "DEV=${L2MPS_PREFIX},PORT=bsssPort")
+
+# BSSS Scalar PVs
+dbLoadRecords("db/bsss.db", "DEV=${DEV0},PORT=bsssPort,IDX=0,BSAKEY=C0_I0,SECN=${C0_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV1},PORT=bsssPort,IDX=1,BSAKEY=C1_I0,SECN=${C1_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV2},PORT=bsssPort,IDX=2,BSAKEY=C2_I0,SECN=${C2_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV3},PORT=bsssPort,IDX=3,BSAKEY=C3_I0,SECN=${C3_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV4},PORT=bsssPort,IDX=4,BSAKEY=C4_I0,SECN=${C4_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV5},PORT=bsssPort,IDX=5,BSAKEY=C5_I0,SECN=${C5_I0}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV0},PORT=bsssPort,IDX=6,BSAKEY=C0_I1,SECN=${C0_I1}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV1},PORT=bsssPort,IDX=7,BSAKEY=C1_I1,SECN=${C1_I1}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV2},PORT=bsssPort,IDX=8,BSAKEY=C2_I1,SECN=${C2_I1}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV3},PORT=bsssPort,IDX=9,BSAKEY=C3_I1,SECN=${C3_I1}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV4},PORT=bsssPort,IDX=10,BSAKEY=C4_I1,SECN=${C4_I1}")
+dbLoadRecords("db/bsss.db", "DEV=${DEV5},PORT=bsssPort,IDX=11,BSAKEY=C5_I1,SECN=${C5_I1}")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
