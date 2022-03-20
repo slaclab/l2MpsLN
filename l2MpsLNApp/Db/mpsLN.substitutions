@@ -395,95 +395,90 @@ file "RegRW.template" { pattern
 { CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
 { CON_GT_TX_DIFF_CTRL_2,    "GT TX difference control (port 2)",        "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
 { CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
-}
-
-# Single register with AO records
-file "RegRW_Analog.template" { pattern
-{ R,                        DESC,                                       PINI,   SCAN,           EGU,    LINR,       EGUL,       EGUF,              PREC,   PARAM                            }
-{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_0           }
-{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_1           }
-{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_2           }
-{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_3           }
-{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_4           }
-{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcVals_5           }
-{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_0         }
-{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_1         }
-{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_2         }
-{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_3         }
-{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_4         }
-{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_ForcePrcValsL1_5         }
-{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_0               }
-{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_1               }
-{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_2               }
-{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_3               }
-{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_4               }
-{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlm_5               }
-{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_0             }
-{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_1             }
-{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_2             }
-{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_3             }
-{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_4             }
-{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_treshBlmL1_5             }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_0              }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_1              }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_2              }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_3              }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_4              }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_Intercept_5              }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_0            }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_1            }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_2            }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_3            }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_4            }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",            0,      ANACORE_InterceptL1_5            }
-{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_0       }
-{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_1       }
-{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_2       }
-{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_3       }
-{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_4       }
-{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeak_5       }
-{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_0       }
-{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_1       }
-{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_2       }
-{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_3       }
-{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_4       }
-{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeak_5       }
-{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_0   }
-{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_1   }
-{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_2   }
-{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_3   }
-{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_4   }
-{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestal_5   }
-{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_0   }
-{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_1   }
-{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_2   }
-{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_3   }
-{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_4   }
-{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestal_5   }
-{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_0     }
-{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_1     }
-{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_2     }
-{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_3     }
-{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_4     }
-{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPeakL1_5     }
-{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_0     }
-{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_1     }
-{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_2     }
-{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_3     }
-{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_4     }
-{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPeakL1_5     }
-{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_0 }
-{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_1 }
-{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_2 }
-{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_3 }
-{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_4 }
-{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerDelayPedestalL1_5 }
-{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_0 }
-{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_1 }
-{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_2 }
-{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_3 }
-{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_4 }
-{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "YES",  "1 second",     "us",   "LINEAR",   "0",        "373.631699",      3,      ANACORE_triggerWidthPedestalL1_5 }
+{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_0           }
+{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_1           }
+{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_2           }
+{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_3           }
+{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_4           }
+{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_5           }
+{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_0         }
+{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_1         }
+{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_2         }
+{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_3         }
+{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_4         }
+{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_5         }
+{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_0               }
+{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_1               }
+{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_2               }
+{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_3               }
+{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_4               }
+{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_5               }
+{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_0             }
+{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_1             }
+{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_2             }
+{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_3             }
+{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_4             }
+{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_5             }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "1 second",     "raw",   ANACORE_Intercept_0              }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "1 second",     "raw",   ANACORE_Intercept_1              }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "1 second",     "raw",   ANACORE_Intercept_2              }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second",     "raw",   ANACORE_Intercept_3              }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second",     "raw",   ANACORE_Intercept_4              }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second",     "raw",   ANACORE_Intercept_5              }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "1 second",     "raw",   ANACORE_InterceptL1_0            }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "1 second",     "raw",   ANACORE_InterceptL1_1            }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "1 second",     "raw",   ANACORE_InterceptL1_2            }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "1 second",     "raw",   ANACORE_InterceptL1_3            }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "1 second",     "raw",   ANACORE_InterceptL1_4            }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "1 second",     "raw",   ANACORE_InterceptL1_5            }
+{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_0       }
+{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_1       }
+{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_2       }
+{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_3       }
+{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_4       }
+{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_5       }
+{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_0       }
+{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_1       }
+{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_2       }
+{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_3       }
+{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_4       }
+{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_5       }
+{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_0   }
+{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_1   }
+{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_2   }
+{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_3   }
+{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_4   }
+{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_5   }
+{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_0   }
+{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_1   }
+{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_2   }
+{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_3   }
+{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_4   }
+{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_5   }
+{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_0     }
+{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_1     }
+{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_2     }
+{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_3     }
+{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_4     }
+{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_5     }
+{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_0     }
+{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_1     }
+{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_2     }
+{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_3     }
+{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_4     }
+{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_5     }
+{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_0 }
+{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_1 }
+{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_2 }
+{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_3 }
+{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_4 }
+{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_5 }
+{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_0 }
+{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_1 }
+{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_2 }
+{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_3 }
+{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_4 }
+{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_5 }
 }
 
 #======================================
@@ -543,7 +538,7 @@ file "Reg2BitsRW.template" { pattern
 #======================================
 file "Reg2BitsRO.template" { pattern
 { R,                DESC,                                   ZRST,           ONST,               TWST,           THST,           ADDR,   SCAN,       PARAM                   }
-{ ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Local",            "Permit",       "Undefined",    "0",    "1 second", ASMCORE_stateSM         }
+{ ASM_STATE_SM,     "State of the ASM state machine",       "Block",        "Standby",          "Accelerate",   "Undefined",    "0",    "1 second", ASMCORE_stateSM         }
 { TIM_SRC_RTM0_RBV, "Timing source for RTM #0",             "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_0            }
 { TIM_SRC_FPGA_RBV, "Timing source for FPGA",               "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_1            }
 { TIM_SRC_BP_RBV,   "Timing source for Backplane",          "RTM_0",        "FPGA",             "Backplane",    "RTM_1",        "1",    "1 second", TIM_CB_OUT_2            }
@@ -588,19 +583,6 @@ file "Reg4BitsRW.template" { pattern
 file "RegCharArrayRO.template" { pattern
 { R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
 { FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
-}
-
-#======================================
-# Stream waveforms (16-bit data)
-#======================================
-file "waveform_stream16.template" { pattern
-{ R,                    DESC,                                   PARAM      }
-{ BAY0_ADC0_WF,         "Raw ADC waveform (Bay 0, ch 0)",       Stream0:16 }
-{ BAY0_ADC1_WF,         "Raw ADC waveform (Bay 0, ch 1)",       Stream1:16 }
-{ BAY0_ADC2_WF,         "Raw ADC waveform (Bay 0, ch 2)",       Stream2:16 }
-{ BAY1_ADC0_WF,         "Raw ADC waveform (Bay 1, ch 0)",       Stream4:16 }
-{ BAY1_ADC1_WF,         "Raw ADC waveform (Bay 1, ch 1)",       Stream5:16 }
-{ BAY1_ADC2_WF,         "Raw ADC waveform (Bay 1, ch 2)",       Stream6:16 }
 }
 
 #======================================
