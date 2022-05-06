@@ -257,6 +257,7 @@
 /mmio/AmcCarrierCore/AxiSy56040/OutputConfig[1]                                             TIM_CB_OUT_1
 /mmio/AmcCarrierCore/AxiSy56040/OutputConfig[2]                                             TIM_CB_OUT_2
 /mmio/AmcCarrierCore/AxiSy56040/OutputConfig[3]                                             TIM_CB_OUT_3
+/mmio/AmcCarrierCore/AmcCarrierTiming/TimingFrameRx/RxDown                                  RxDown
 
 # =============================
 # PGP2AXI

@@ -283,6 +283,11 @@ file "Reg1BitRW.template" { pattern
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
 }
 
+file "Reg1BitRW_int.template" { pattern
+{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,                     PARAM                    }
+{ TIMING_RX_ERR,      "TPR Rx Err: 1=Err",                      "OK",       "Error",    "1 second",               RxDown                   }
+}
+
 #======================================
 # 1-bit Register with ScalVal_RO interfaces
 #======================================
