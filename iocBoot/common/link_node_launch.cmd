@@ -59,7 +59,7 @@ cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
-setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/current/link_node_db")
+setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/testing/link_node_db")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
@@ -126,18 +126,18 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # ===========================================
 #               BSA Driver
 # ===========================================
-addBsa("C0_I0",       "uint32")
-addBsa("C1_I0",       "uint32")
-addBsa("C2_I0",       "uint32")
-addBsa("C3_I0",       "uint32")
-addBsa("C4_I0",       "uint32")
-addBsa("C5_I0",       "uint32")
-addBsa("C0_I1",       "uint32")
-addBsa("C1_I1",       "uint32")
-addBsa("C2_I1",       "uint32")
-addBsa("C3_I1",       "uint32")
-addBsa("C4_I1",       "uint32")
-addBsa("C5_I1",       "uint32")
+addBsa("C0_I0",       "int32")
+addBsa("C1_I0",       "int32")
+addBsa("C2_I0",       "int32")
+addBsa("C3_I0",       "int32")
+addBsa("C4_I0",       "int32")
+addBsa("C5_I0",       "int32")
+addBsa("C0_I1",       "int32")
+addBsa("C1_I1",       "int32")
+addBsa("C2_I1",       "int32")
+addBsa("C3_I1",       "int32")
+addBsa("C4_I1",       "int32")
+addBsa("C5_I1",       "int32")
 bsaAsynDriverConfigure("bsaPort", "mmio/AmcCarrierCore/AmcCarrierBsa","strm/AmcCarrierDRAM/dram")
 listBsa()
 bsssAssociateBsaChannels("bsaPort")
@@ -153,26 +153,6 @@ dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsWF.db","WF0=${WF0},WF1=${WF1},WF2=${WF2},WF3=${WF3},WF4=${WF4},WF5=${WF5}, PORT=${YCPSWASYN_PORT}")
 
 dbLoadRecords("db/modeManagerLN.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
-
-# tprTrigger database
-dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=00,DEV_PREFIX=${L2MPS_PREFIX}:TRG00_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=01,DEV_PREFIX=${L2MPS_PREFIX}:TRG01_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=02,DEV_PREFIX=${L2MPS_PREFIX}:TRG02_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=03,DEV_PREFIX=${L2MPS_PREFIX}:TRG03_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=04,DEV_PREFIX=${L2MPS_PREFIX}:TRG04_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=05,DEV_PREFIX=${L2MPS_PREFIX}:TRG05_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=06,DEV_PREFIX=${L2MPS_PREFIX}:TRG06_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=07,DEV_PREFIX=${L2MPS_PREFIX}:TRG07_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=08,DEV_PREFIX=${L2MPS_PREFIX}:TRG08_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=09,DEV_PREFIX=${L2MPS_PREFIX}:TRG09_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=10,DEV_PREFIX=${L2MPS_PREFIX}:TRG10_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=11,DEV_PREFIX=${L2MPS_PREFIX}:TRG11_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=12,DEV_PREFIX=${L2MPS_PREFIX}:TRG12_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=13,DEV_PREFIX=${L2MPS_PREFIX}:TRG13_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=14,DEV_PREFIX=${L2MPS_PREFIX}:TRG14_,PORT=${TPRTRIGGER_PORT}")
-#dbLoadRecords("db/tprDeviceNamePV.db","LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=15,DEV_PREFIX=${L2MPS_PREFIX}:TRG15_,PORT=${TPRTRIGGER_PORT}")
-
 
 # tprPattern database
 dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
