@@ -3,6 +3,14 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-21-0__: 2022-05-06 J. Mock
+  * Upgrade ApplicationNode and DigitalNode FW to R4.8.1
+  * Upgrade AnalogLinkNode to FW R4.7.0
+  * Add PV and register access for latching timing fault
+  * Upgrade to l2Mps R3.8.0
+  * Upgrade to l2MpsAsyn R3.12.0
+  * Change BSA type from uint32 to int32
+
 * __l2MpsLN-R3-20-0__: 2022-01-11 J. Mock
   * Add script for auto archive file generation
 
