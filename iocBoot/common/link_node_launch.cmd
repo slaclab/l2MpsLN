@@ -54,12 +54,13 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # Load default configurations
 # ==========================================
 # Load the default configuration
-cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+#cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+cpswLoadConfigFile("iocBoot/common/configs/defaults.yaml", "mmio")
 
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
-setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/testing/link_node_db")
+setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/current/link_node_db")
 
 # *****************************************
 # **** Driver setup for L2MPSASYNConfig ****
