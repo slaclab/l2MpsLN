@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-21-1__: 2022-05-16 J. Mock
+  * Change path to epics area in link_node_launch.cmd to point to current
+  * Temporarily load defaults.yaml file for link node from iocBoot/common/config
+    until problem in FW is fixed
+
 * __l2MpsLN-R3-21-0__: 2022-05-06 J. Mock
   * Upgrade ApplicationNode and DigitalNode FW to R4.8.1
   * Upgrade AnalogLinkNode to FW R4.7.0
