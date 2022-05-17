@@ -128,6 +128,7 @@ dbLoadRecords("db/mpsDN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/modeManagerLN.db", "P=${L2MPS_PREFIX},NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # tprPattern database
+dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
 # crossbarControl
