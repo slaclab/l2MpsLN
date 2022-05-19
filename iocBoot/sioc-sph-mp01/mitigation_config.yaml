@@ -1,0 +1,10 @@
+## Load mitigation configurations
+- AppTop:
+    - AppCore:
+        - MpsLinkNodeCore:
+            - MpsMitigationCore:
+                - mpsConfig: !<value> 0x0
+                - mpsRtmDest[0]: !<value> 0x3
+                - mpsRtmDest[1]: !<value> 0x3
+                - mpsRtmDest[2]: !<value> 0x3
+                - mpsRtmDest[3]: !<value> 0x3

@@ -13,4 +13,6 @@ epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 #
 < ${TOP}/iocBoot/common/link_node.cmd
 
+cpswLoadConfigFile("iocBoot/sioc-sps-mp02/mitigation_config.yaml", "mmio")
+
 system("scripts/setupBPClockRT.sh shm-sps-sp02-1")

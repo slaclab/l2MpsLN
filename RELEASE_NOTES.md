@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-22-0__: 2022-05-16 J. Mock
+  * Add mitigation_config.yaml to link node startup files for the 
+    5 link nodes that are also mitigation nodes to properly configure
+    them to listen to correct destinations.
+
 * __l2MpsLN-R3-21-1__: 2022-05-16 J. Mock
   * Change path to epics area in link_node_launch.cmd to point to current
   * Temporarily load defaults.yaml file for link node from iocBoot/common/config
