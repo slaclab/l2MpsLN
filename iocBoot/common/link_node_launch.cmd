@@ -45,7 +45,8 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+# Commented out for applying fix to yaml file -Kyle Leleux 08/15/2022
+#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
