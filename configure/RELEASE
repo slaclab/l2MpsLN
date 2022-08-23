@@ -27,9 +27,10 @@ BSACORE_MODULE_VERSION          = R1.5.4
 TIMINGAPI_MODULE_VERSION        = R0.6
 TPRPATTERN_MODULE_VERSION       = R2.3.2
 EVRCLIENT_MODULE_VERSION        = R1.5.1
-BSADRIVER_MODULE_VERSION        = R2.1.0
+BSADRIVER_MODULE_VERSION        = R2.1.0-2.0
 SEQ_MODULE_VERSION              = R2.2.4-1.2
 ATCACOMMON_MODULE_VERSION       = R1.6.2
+PVXS_MODULE_VERSION             = pvxs-git
 
 # ==========================================================
 # Define module paths using pattern
@@ -52,6 +53,7 @@ EVRCLIENT        = $(EPICS_MODULES)/evrClient/$(EVRCLIENT_MODULE_VERSION)
 SEQ              = $(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
 BSADRIVER        = $(EPICS_MODULES)/bsaDriver/$(BSADRIVER_MODULE_VERSION)
 ATCACOMMON       = $(EPICS_MODULES)/ATCACommon/$(ATCACOMMON_MODULE_VERSION)
+PVXS             = $(EPICS_MODULES)/pvxs/$(PVXS_MODULE_VERSION)
 
 # =====================================================================
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
