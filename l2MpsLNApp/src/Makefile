@@ -52,8 +52,10 @@ USR_LIBS_Linux += deviceLib
 
 #=============================
 # Build the IOC application
+#============================
+PROD_IOC_linuxRT-x86_64 = l2MpsLN
+PROD_IOC = $(PROD_IOC_$(T_A))
 
-PROD_IOC = l2MpsLN
 # l2MpsLN.dbd will be created and installed
 DBD += l2MpsLN.dbd
 
@@ -79,6 +81,7 @@ l2MpsLN_DBD += devSeqCar.dbd
 l2MpsLN_DBD += crossbarControl.dbd
 l2MpsLN_DBD += ATCACommon.dbd
 l2MpsLN_DBD += bsaAsynDriver.dbd
+l2MpsLN_DBD += pvxsIoc.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -95,6 +98,8 @@ l2MpsLN_LIBS += bsaDriver
 l2MpsLN_LIBS += BsaCore
 l2MpsLN_LIBS += asyn
 l2MpsLN_LIBS += seqCar seq pv
+l2MpsLN_LIBS += pvxsIoc
+l2MpsLN_LIBS += pvxs
 
 # Link QSRV (pvAccess Server) if available
 ifdef EPICS_QSRV_MAJOR_VERSION
