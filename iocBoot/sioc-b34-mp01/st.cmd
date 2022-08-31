@@ -5,7 +5,7 @@
 
 < envPaths
 
-epicsEnvSet("SLOT_ID", "2")
+epicsEnvSet("SLOT_ID", "4")
 epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 
 #
@@ -13,4 +13,3 @@ epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 #
 < ${TOP}/iocBoot/common/link_node_dev.cmd
 
-system("scripts/setupBPClockRT.sh shm-b34-sp08-1")

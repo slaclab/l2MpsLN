@@ -350,258 +350,261 @@
                 - InitJesd: !<value> 0x01
                 - EnableTx: !<value> 0x1
                 - DacReg: !<value>
-                    - 0x0018
-                    - 0x0003
-                    - 0x2080
-                    - 0xa301
-                    - 0xfcfc
-                    - 0x000d
-                    - 0xfcfc
-                    - 0x2a00
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0400
-                    - 0x0400
-                    - 0x0400
-                    - 0x0400
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0020
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x9999
-                    - 0x9980
-                    - 0x8008
-                    - 0x0000
-                    - 0x1b14
-                    - 0xffff
-                    - 0x0010
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x003f
-                    - 0xffff
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0xffff
-                    - 0x0004
-                    - 0x0000
-                    - 0x3000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0228
-                    - 0x00a8
-                    - 0x8908
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0044
-                    - 0x190a
-                    - 0x31c3
-                    - 0x0004
-                    - 0x0321
-                    - 0x0501
-                    - 0x1f01
-                    - 0x0100
-                    - 0x0f2f
-                    - 0x1c61
-                    - 0x0000
-                    - 0x0017
-                    - 0x00ff
-                    - 0x0000
-                    - 0x0017
-                    - 0x00ff
-                    - 0x0000
-                    - 0x00ff
-                    - 0x00ff
-                    - 0x0000
-                    - 0x00ff
-                    - 0x00ff
-                    - 0x2222
-                    - 0x0000
-                    - 0x0000
-                    - 0x0123
-                    - 0x4567
-                    - 0x0211
-                    - 0x0000
-                    - 0x0000
-                    - 0x0703
-                    - 0x0703
-                    - 0xee0b
-                    - 0xff07
-                    - 0xff07
-                    - 0x3f04
-                    - 0x9e0f
-                    - 0x6d0e
-                    - 0x000f
-                    - 0xffff
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0018
-                    - 0x0003
-                    - 0x2080
-                    - 0xa301
-                    - 0xfcfc
-                    - 0x000d
-                    - 0xfcfc
-                    - 0x2a00
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0400
-                    - 0x0400
-                    - 0x0400
-                    - 0x0400
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0020
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x9999
-                    - 0x9980
-                    - 0x8008
-                    - 0x0000
-                    - 0x1b14
-                    - 0xffff
-                    - 0x0010
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x003f
-                    - 0xffff
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0xffff
-                    - 0x0004
-                    - 0x0000
-                    - 0x3000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0228
-                    - 0x00a8
-                    - 0x8908
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0044
-                    - 0x190a
-                    - 0x31c3
-                    - 0x0004
-                    - 0x0321
-                    - 0x0501
-                    - 0x1f01
-                    - 0x0100
-                    - 0x0f2f
-                    - 0x1c61
-                    - 0x0000
-                    - 0x0017
-                    - 0x00ff
-                    - 0x0000
-                    - 0x0017
-                    - 0x00ff
-                    - 0x0000
-                    - 0x00ff
-                    - 0x00ff
-                    - 0x0000
-                    - 0x00ff
-                    - 0x00ff
-                    - 0x2222
-                    - 0x0000
-                    - 0x0000
-                    - 0x0123
-                    - 0x4567
-                    - 0x0211
-                    - 0x0000
-                    - 0x0000
-                    - 0x0703
-                    - 0x0703
-                    - 0xee0b
-                    - 0xff07
-                    - 0xff07
-                    - 0x3f04
-                    - 0x9e0f
-                    - 0x6d0e
-                    - 0x000f
-                    - 0xffff
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
-                    - 0x0000
+                    ############################
+                    - 0x0018 # DacReg[0]: 0x0018
+                    - 0x0003 # DacReg[1]: 0x0003
+                    - 0x2080 # DacReg[2]: 0x2080
+                    - 0xF300 # DacReg[3]: 0xF300
+                    - 0xFCFC # DacReg[4]: 0xFCFC
+                    - 0xFC07 # DacReg[5]: 0xFC07
+                    - 0xFFFF # DacReg[6]: 0xFFFF
+                    - 0x3800 # DacReg[7]: 0x3800
+                    - 0x0000 # DacReg[8]: 0x0000
+                    - 0x0000 # DacReg[9]: 0x0000
+                    - 0x0000 # DacReg[10]: 0x0000
+                    - 0x0000 # DacReg[11]: 0x0000
+                    - 0x0400 # DacReg[12]: 0x0400
+                    - 0x0400 # DacReg[13]: 0x0400
+                    - 0x0400 # DacReg[14]: 0x0400
+                    - 0x0400 # DacReg[15]: 0x0400
+                    - 0x0000 # DacReg[16]: 0x0000
+                    - 0x0000 # DacReg[17]: 0x0000
+                    - 0x0000 # DacReg[18]: 0x0000
+                    - 0x0000 # DacReg[19]: 0x0000
+                    - 0x0000 # DacReg[20]: 0x0000
+                    - 0x0000 # DacReg[21]: 0x0000
+                    - 0x0000 # DacReg[22]: 0x0000
+                    - 0x0000 # DacReg[23]: 0x0000
+                    - 0x0000 # DacReg[24]: 0x0000
+                    - 0x0000 # DacReg[25]: 0x0000
+                    - 0x0020 # DacReg[26]: 0x0020
+                    - 0x0000 # DacReg[27]: 0x0000
+                    - 0x0000 # DacReg[28]: 0x0000
+                    - 0x0000 # DacReg[29]: 0x0000
+                    - 0x9999 # DacReg[30]: 0x9999
+                    - 0x9980 # DacReg[31]: 0x9980
+                    - 0x8008 # DacReg[32]: 0x8008
+                    - 0x0000 # DacReg[33]: 0x0000
+                    - 0x1b14 # DacReg[34]: 0x1b14
+                    - 0xffff # DacReg[35]: 0xffff
+                    - 0x0010 # DacReg[36]: 0x0010
+                    - 0x0000 # DacReg[37]: 0x0000
+                    - 0x0000 # DacReg[38]: 0x0000
+                    - 0x0000 # DacReg[39]: 0x0000
+                    - 0x003f # DacReg[40]: 0x003f
+                    - 0xffff # DacReg[41]: 0xffff
+                    - 0x0000 # DacReg[42]: 0x0000
+                    - 0x0000 # DacReg[43]: 0x0000
+                    - 0x0000 # DacReg[44]: 0x0000
+                    - 0x0000 # DacReg[45]: 0x0000
+                    - 0xffff # DacReg[46]: 0xffff
+                    - 0x0004 # DacReg[47]: 0x0004
+                    - 0x0000 # DacReg[48]: 0x0000
+                    - 0x1000 # DacReg[49]: 0x1000
+                    - 0x0000 # DacReg[50]: 0x0000
+                    - 0x0000 # DacReg[51]: 0x0000
+                    - 0x0000 # DacReg[52]: 0x0000
+                    - 0x0000 # DacReg[53]: 0x0000
+                    - 0x0000 # DacReg[54]: 0x0000
+                    - 0x0000 # DacReg[55]: 0x0000
+                    - 0x0000 # DacReg[56]: 0x0000
+                    - 0x0000 # DacReg[57]: 0x0000
+                    - 0x0000 # DacReg[58]: 0x0000
+                    - 0x0000 # DacReg[59]: 0x0000
+                    - 0x0228 # DacReg[60]: 0x0228
+                    - 0x00AD # DacReg[61]: 0x00AD  # Fully adaptive equalizer, boost on
+                    - 0x0108 # DacReg[62]: 0x0108  # JESD termination setting and rate.
+                    - 0x0000 # DacReg[63]: 0x0000
+                    - 0x0000 # DacReg[64]: 0x0000
+                    - 0x0000 # DacReg[65]: 0x0000
+                    - 0x0000 # DacReg[66]: 0x0000
+                    - 0x0000 # DacReg[67]: 0x0000
+                    - 0x0000 # DacReg[68]: 0x0000
+                    - 0x0000 # DacReg[69]: 0x0000
+                    - 0x0044 # DacReg[70]: 0x0044
+                    - 0x190a # DacReg[71]: 0x190a
+                    - 0x31c3 # DacReg[72]: 0x31c3
+                    - 0x0004 # DacReg[73]: 0x0004
+                    - 0x0321 # DacReg[74]: 0x0321
+                    - 0x1F01 # DacReg[75]: 0x1F01
+                    - 0x1f01 # DacReg[76]: 0x1f01
+                    - 0x0100 # DacReg[77]: 0x0100
+                    - 0x0f2f # DacReg[78]: 0x0f2f  # Enable scrambler
+                    - 0x1c61 # DacReg[79]: 0x1c61
+                    - 0x0000 # DacReg[80]: 0x0000
+                    - 0x0026 # DacReg[81]: 0x0026  # sync_request_ena_link0
+                    - 0x0026 # DacReg[82]: 0x0026  # error_ena_link0
+                    - 0x0000 # DacReg[83]: 0x0000
+                    - 0x0026 # DacReg[84]: 0x0026  # sync_request_ena_link1 
+                    - 0x0026 # DacReg[85]: 0x0026  # error_ena_link1
+                    - 0x0000 # DacReg[86]: 0x0000
+                    - 0x00ff # DacReg[87]: 0x00ff
+                    - 0x00ff # DacReg[88]: 0x00ff
+                    - 0x0000 # DacReg[89]: 0x0000
+                    - 0x00ff # DacReg[90]: 0x00ff
+                    - 0x00ff # DacReg[91]: 0x00ff
+                    - 0x6666 # DacReg[92]: 0x6666  # Skip two SYSREF pulses then use all pulses.
+                    - 0x0000 # DacReg[93]: 0x0000
+                    - 0x0000 # DacReg[94]: 0x0000
+                    - 0x0123 # DacReg[95]: 0x0123
+                    - 0x4567 # DacReg[96]: 0x4567
+                    - 0x0211 # DacReg[97]: 0x0211
+                    - 0x0000 # DacReg[98]: 0x0000
+                    - 0x0000 # DacReg[99]: 0x0000
+                    - 0x0000 # DacReg[100]: 0x0 # write to clear alarms 
+                    - 0x0000 # DacReg[101]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[102]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[103]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[104]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[105]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[106]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[107]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[108]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[109]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[110]: 0x0000
+                    - 0x0000 # DacReg[111]: 0x0000
+                    - 0x0000 # DacReg[112]: 0x0000
+                    - 0x0000 # DacReg[113]: 0x0000
+                    - 0x0000 # DacReg[114]: 0x0000
+                    - 0x0000 # DacReg[115]: 0x0000
+                    - 0x0000 # DacReg[116]: 0x0000
+                    - 0x0000 # DacReg[117]: 0x0000
+                    - 0x0000 # DacReg[118]: 0x0000
+                    - 0x0000 # DacReg[119]: 0x0000
+                    - 0x0000 # DacReg[120]: 0x0000
+                    - 0x0000 # DacReg[121]: 0x0000
+                    - 0x0000 # DacReg[122]: 0x0000
+                    - 0x0000 # DacReg[123]: 0x0000
+                    - 0x0000 # DacReg[124]: 0x0000
+                    - 0x0000 # DacReg[125]: 0x0000
+                    ############################
+                    - 0x0018 # DacReg[0]: 0x0018
+                    - 0x0003 # DacReg[1]: 0x0003
+                    - 0x2080 # DacReg[2]: 0x2080
+                    - 0xF300 # DacReg[3]: 0xF300
+                    - 0xFCFC # DacReg[4]: 0xFCFC
+                    - 0xFC07 # DacReg[5]: 0xFC07
+                    - 0xFFFF # DacReg[6]: 0xFFFF
+                    - 0x3800 # DacReg[7]: 0x3800
+                    - 0x0000 # DacReg[8]: 0x0000
+                    - 0x0000 # DacReg[9]: 0x0000
+                    - 0x0000 # DacReg[10]: 0x0000
+                    - 0x0000 # DacReg[11]: 0x0000
+                    - 0x0400 # DacReg[12]: 0x0400
+                    - 0x0400 # DacReg[13]: 0x0400
+                    - 0x0400 # DacReg[14]: 0x0400
+                    - 0x0400 # DacReg[15]: 0x0400
+                    - 0x0000 # DacReg[16]: 0x0000
+                    - 0x0000 # DacReg[17]: 0x0000
+                    - 0x0000 # DacReg[18]: 0x0000
+                    - 0x0000 # DacReg[19]: 0x0000
+                    - 0x0000 # DacReg[20]: 0x0000
+                    - 0x0000 # DacReg[21]: 0x0000
+                    - 0x0000 # DacReg[22]: 0x0000
+                    - 0x0000 # DacReg[23]: 0x0000
+                    - 0x0000 # DacReg[24]: 0x0000
+                    - 0x0000 # DacReg[25]: 0x0000
+                    - 0x0020 # DacReg[26]: 0x0020
+                    - 0x0000 # DacReg[27]: 0x0000
+                    - 0x0000 # DacReg[28]: 0x0000
+                    - 0x0000 # DacReg[29]: 0x0000
+                    - 0x9999 # DacReg[30]: 0x9999
+                    - 0x9980 # DacReg[31]: 0x9980
+                    - 0x8008 # DacReg[32]: 0x8008
+                    - 0x0000 # DacReg[33]: 0x0000
+                    - 0x1b14 # DacReg[34]: 0x1b14
+                    - 0xffff # DacReg[35]: 0xffff
+                    - 0x0010 # DacReg[36]: 0x0010
+                    - 0x0000 # DacReg[37]: 0x0000
+                    - 0x0000 # DacReg[38]: 0x0000
+                    - 0x0000 # DacReg[39]: 0x0000
+                    - 0x003f # DacReg[40]: 0x003f
+                    - 0xffff # DacReg[41]: 0xffff
+                    - 0x0000 # DacReg[42]: 0x0000
+                    - 0x0000 # DacReg[43]: 0x0000
+                    - 0x0000 # DacReg[44]: 0x0000
+                    - 0x0000 # DacReg[45]: 0x0000
+                    - 0xffff # DacReg[46]: 0xffff
+                    - 0x0004 # DacReg[47]: 0x0004
+                    - 0x0000 # DacReg[48]: 0x0000
+                    - 0x1000 # DacReg[49]: 0x1000
+                    - 0x0000 # DacReg[50]: 0x0000
+                    - 0x0000 # DacReg[51]: 0x0000
+                    - 0x0000 # DacReg[52]: 0x0000
+                    - 0x0000 # DacReg[53]: 0x0000
+                    - 0x0000 # DacReg[54]: 0x0000
+                    - 0x0000 # DacReg[55]: 0x0000
+                    - 0x0000 # DacReg[56]: 0x0000
+                    - 0x0000 # DacReg[57]: 0x0000
+                    - 0x0000 # DacReg[58]: 0x0000
+                    - 0x0000 # DacReg[59]: 0x0000
+                    - 0x0228 # DacReg[60]: 0x0228
+                    - 0x00AD # DacReg[61]: 0x00AD  # Fully adaptive equalizer, boost on
+                    - 0x0108 # DacReg[62]: 0x0108  # JESD termination setting and rate.
+                    - 0x0000 # DacReg[63]: 0x0000
+                    - 0x0000 # DacReg[64]: 0x0000
+                    - 0x0000 # DacReg[65]: 0x0000
+                    - 0x0000 # DacReg[66]: 0x0000
+                    - 0x0000 # DacReg[67]: 0x0000
+                    - 0x0000 # DacReg[68]: 0x0000
+                    - 0x0000 # DacReg[69]: 0x0000
+                    - 0x0044 # DacReg[70]: 0x0044
+                    - 0x190a # DacReg[71]: 0x190a
+                    - 0x31c3 # DacReg[72]: 0x31c3
+                    - 0x0004 # DacReg[73]: 0x0004
+                    - 0x0321 # DacReg[74]: 0x0321
+                    - 0x1F01 # DacReg[75]: 0x1F01
+                    - 0x1f01 # DacReg[76]: 0x1f01
+                    - 0x0100 # DacReg[77]: 0x0100
+                    - 0x0f2f # DacReg[78]: 0x0f2f  # Enable scrambler
+                    - 0x1c61 # DacReg[79]: 0x1c61
+                    - 0x0000 # DacReg[80]: 0x0000
+                    - 0x0026 # DacReg[81]: 0x0026  # sync_request_ena_link0
+                    - 0x0026 # DacReg[82]: 0x0026  # error_ena_link0
+                    - 0x0000 # DacReg[83]: 0x0000
+                    - 0x0026 # DacReg[84]: 0x0026  # sync_request_ena_link1 
+                    - 0x0026 # DacReg[85]: 0x0026  # error_ena_link1
+                    - 0x0000 # DacReg[86]: 0x0000
+                    - 0x00ff # DacReg[87]: 0x00ff
+                    - 0x00ff # DacReg[88]: 0x00ff
+                    - 0x0000 # DacReg[89]: 0x0000
+                    - 0x00ff # DacReg[90]: 0x00ff
+                    - 0x00ff # DacReg[91]: 0x00ff
+                    - 0x6666 # DacReg[92]: 0x6666  # Skip two SYSREF pulses then use all pulses.
+                    - 0x0000 # DacReg[93]: 0x0000
+                    - 0x0000 # DacReg[94]: 0x0000
+                    - 0x0123 # DacReg[95]: 0x0123
+                    - 0x4567 # DacReg[96]: 0x4567
+                    - 0x0211 # DacReg[97]: 0x0211
+                    - 0x0000 # DacReg[98]: 0x0000
+                    - 0x0000 # DacReg[99]: 0x0000
+                    - 0x0000 # DacReg[100]: 0x0 # write to clear alarms 
+                    - 0x0000 # DacReg[101]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[102]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[103]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[104]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[105]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[106]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[107]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[108]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[109]: 0x0 # write to clear alarms0
+                    - 0x0000 # DacReg[110]: 0x0000
+                    - 0x0000 # DacReg[111]: 0x0000
+                    - 0x0000 # DacReg[112]: 0x0000
+                    - 0x0000 # DacReg[113]: 0x0000
+                    - 0x0000 # DacReg[114]: 0x0000
+                    - 0x0000 # DacReg[115]: 0x0000
+                    - 0x0000 # DacReg[116]: 0x0000
+                    - 0x0000 # DacReg[117]: 0x0000
+                    - 0x0000 # DacReg[118]: 0x0000
+                    - 0x0000 # DacReg[119]: 0x0000
+                    - 0x0000 # DacReg[120]: 0x0000
+                    - 0x0000 # DacReg[121]: 0x0000
+                    - 0x0000 # DacReg[122]: 0x0000
+                    - 0x0000 # DacReg[123]: 0x0000
+                    - 0x0000 # DacReg[124]: 0x0000
+                    - 0x0000 # DacReg[125]: 0x0000
+                    ############################
     - AppTopJesd:
         - JesdRx:
             - Enable: !<value> 0x0f
@@ -657,7 +660,16 @@
             - TriggerHwAutoRearm: !<value> Disabled
             - TriggerCascMask: !<value> Disabled
             - TriggerSw: !<value> 0x0
-
+- AppTop:
+    - DacSigGen:
+        - Waveform:
+            - MemoryArray: !<value>  0x0000
+        - PeriodSize: !<value> 0x00000001
+        - SoftwareTrigger: !<value> 0x0
+        - SignFormat: !<value> 0x0
+        - HoldLastValue: !<value> 0x1
+        - ModeMask: !<value> 0x0
+        - EnableMask: !<value> 0x3
 ############################
 ## Initialize the JESD lanes
 ############################

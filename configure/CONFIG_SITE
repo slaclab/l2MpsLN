@@ -106,7 +106,7 @@ HPSTPR_INCLUDE=$(HPSTPR_TOP)/$(PKG_ARCH)/include
 # BSA API
 # ======================================
 BSA_PACKAGE_NAME    = timing/bsa
-BSA_VERSION         = R2.0.0
+BSA_VERSION         = R2.0.0-2.0
 BSA_TOP             = $(PACKAGE_SITE_TOP)/$(BSA_PACKAGE_NAME)/$(BSA_VERSION)
 BSA_LIB             = $(BSA_TOP)/$(PKG_ARCH)/lib
 BSA_INCLUDE         = $(BSA_TOP)/$(PKG_ARCH)/include

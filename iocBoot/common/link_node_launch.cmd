@@ -16,7 +16,9 @@ epicsEnvSet("YAML_PATH", "${TOP}/firmware/yaml_fixes")
 epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
 # YAML file
-epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
+# Temporary - load static yaml configuration from sioc-bpn25-mp01
+#epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
+epicsEnvSet("YAML","${IOC_DATA}/${STATIC_IOC}/yaml/000TopLevel.yaml")
 
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
@@ -45,7 +47,8 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+# Commented out for applying fix to yaml file -Kyle Leleux 08/15/2022
+#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
@@ -61,27 +64,6 @@ cpswLoadConfigFile("iocBoot/common/configs/defaults.yaml", "mmio")
 # setMpsConfigurationPath(
 #   Path)                   # Path to the MPS configuraton TOP directory
 setMpsConfigurationPath("${FACILITY_ROOT}/physics/mps_configuration/current/link_node_db")
-
-# *****************************************
-# **** Driver setup for L2MPSASYNConfig ****
-## Configure asyn port driver
-# L2MPSASYNConfig(
-#    Port Name)                 # the name given to this port driver
-L2MPSASYNConfig("${L2MPSASYN_PORT}")
-
-## Set the MpsManager hostname and port number
-# L2MPSASYNSetManagerHost(
-#    MpsManagerHostName,   # Server hostname
-#    MpsManagerPortNumber) # Server port number
-#
-# In DEV, the MpsManager runs in lcls-dev3, default port number.
-L2MPSASYNSetManagerHost("${MPS_MANAGER_HOST}", 1975)
-
-## Configure the LCLS1 BSA driver
-# L2MpsL1BsaConfig(
-#    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
-#    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
-L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
 
 ## Configure asyn port driverx
 # YCPSWASYNConfig(
@@ -118,14 +100,7 @@ cpswLoadConfigFile("iocBoot/common/configs/specificsLN.yaml", "mmio")
 # ==========================================
 
 # ===========================================
-#               ASYN MASKS
-# ===========================================
-asynSetTraceMask("${L2MPSASYN_PORT}",, -1, 0)
-asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
-
-
-# ===========================================
-#               BSA Driver
+#             LCLS2 BSA Driver
 # ===========================================
 addBsa("C0_I0",       "int32")
 addBsa("C1_I0",       "int32")
@@ -133,16 +108,43 @@ addBsa("C2_I0",       "int32")
 addBsa("C3_I0",       "int32")
 addBsa("C4_I0",       "int32")
 addBsa("C5_I0",       "int32")
-addBsa("C0_I1",       "int32")
-addBsa("C1_I1",       "int32")
-addBsa("C2_I1",       "int32")
-addBsa("C3_I1",       "int32")
-addBsa("C4_I1",       "int32")
-addBsa("C5_I1",       "int32")
+
 bsaAsynDriverConfigure("bsaPort", "mmio/AmcCarrierCore/AmcCarrierBsa","strm/AmcCarrierDRAM/dram")
 listBsa()
 bsssAssociateBsaChannels("bsaPort")
 bsssAsynDriverConfigure("bsssPort", "mmio/AmcCarrierCore/AmcCarrierBsa/Bsss")
+
+# ===========================================
+#               MPS Driver
+# ===========================================
+## Configure asyn port driver
+# L2MPSASYNConfig(
+#    Port Name)                 # the name given to this port driver
+L2MPSASYNConfig("${L2MPSASYN_PORT}")
+
+## Set the MpsManager hostname and port number
+# L2MPSASYNSetManagerHost(
+#    MpsManagerHostName,   # Server hostname
+#    MpsManagerPortNumber) # Server port number
+#
+# In DEV, the MpsManager runs in lcls-dev3, default port number.
+L2MPSASYNSetManagerHost("${MPS_MANAGER_HOST}", 1975)
+
+# ===========================================
+#             LCLS1 BSA Driver
+# ===========================================
+
+## Configure the LCLS1 BSA driver
+# L2MpsL1BsaConfig(
+#    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
+#    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
+L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
+
+# ===========================================
+#               ASYN MASKS
+# ===========================================
+asynSetTraceMask("${L2MPSASYN_PORT}",, -1, 0)
+asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 
 # ===========================================
 #               DB LOADING
@@ -165,36 +167,8 @@ dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX},PORT=crossbar")
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 
-# BSA / BSSS PV loading
-dbLoadRecords("db/bsa.db", "DEV=${DEV0},PORT=bsaPort,BSAKEY=C0_I0,SECN=${C0_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV1},PORT=bsaPort,BSAKEY=C1_I0,SECN=${C1_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV2},PORT=bsaPort,BSAKEY=C2_I0,SECN=${C2_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV3},PORT=bsaPort,BSAKEY=C3_I0,SECN=${C3_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV4},PORT=bsaPort,BSAKEY=C4_I0,SECN=${C4_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV5},PORT=bsaPort,BSAKEY=C5_I0,SECN=${C5_I0}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV0},PORT=bsaPort,BSAKEY=C0_I1,SECN=${C0_I1}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV1},PORT=bsaPort,BSAKEY=C1_I1,SECN=${C1_I1}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV2},PORT=bsaPort,BSAKEY=C2_I1,SECN=${C2_I1}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV3},PORT=bsaPort,BSAKEY=C3_I1,SECN=${C3_I1}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV4},PORT=bsaPort,BSAKEY=C4_I1,SECN=${C4_I1}")
-dbLoadRecords("db/bsa.db", "DEV=${DEV5},PORT=bsaPort,BSAKEY=C5_I1,SECN=${C5_I1}")
-
 # BSSS Control/Monintoring PVs
 dbLoadRecords("db/bsssCtrl.db", "DEV=${L2MPS_PREFIX},PORT=bsssPort")
-
-# BSSS Scalar PVs
-dbLoadRecords("db/bsss.db", "DEV=${DEV0},PORT=bsssPort,IDX=0,BSAKEY=C0_I0,SECN=${C0_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV1},PORT=bsssPort,IDX=1,BSAKEY=C1_I0,SECN=${C1_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV2},PORT=bsssPort,IDX=2,BSAKEY=C2_I0,SECN=${C2_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV3},PORT=bsssPort,IDX=3,BSAKEY=C3_I0,SECN=${C3_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV4},PORT=bsssPort,IDX=4,BSAKEY=C4_I0,SECN=${C4_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV5},PORT=bsssPort,IDX=5,BSAKEY=C5_I0,SECN=${C5_I0}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV0},PORT=bsssPort,IDX=6,BSAKEY=C0_I1,SECN=${C0_I1}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV1},PORT=bsssPort,IDX=7,BSAKEY=C1_I1,SECN=${C1_I1}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV2},PORT=bsssPort,IDX=8,BSAKEY=C2_I1,SECN=${C2_I1}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV3},PORT=bsssPort,IDX=9,BSAKEY=C3_I1,SECN=${C3_I1}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV4},PORT=bsssPort,IDX=10,BSAKEY=C4_I1,SECN=${C4_I1}")
-dbLoadRecords("db/bsss.db", "DEV=${DEV5},PORT=bsssPort,IDX=11,BSAKEY=C5_I1,SECN=${C5_I1}")
 
 # **********************************************************************
 # **** Load iocAdmin databases to support IOC Health and monitoring ****
