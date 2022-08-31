@@ -9,6 +9,7 @@
 # ====================================================================
 # MPS Database location
 epicsEnvSet("PHYSICS_TOP", "/usr/local/g/lcls/physics")
+epicsEnvSet("STATIC_IOC", "sioc-bpn25-mp01")
 
 # MPS history server configurations
 epicsEnvSet("MPS_MANAGER_HOST", "lcls-srv02")
