@@ -7,7 +7,6 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
   * Upgrade modules and FW to amc_carrier_core R4.8
   * Temporary: Load 000TopLevel.yaml file static - no downloader
   * Temporary: Load default.yaml static
-  
 
 * __l2MpsLN-R3-22-1__: 2022-05-16 J. Mock
   * Change scan rate of ANA_BSA PVs to .1 second

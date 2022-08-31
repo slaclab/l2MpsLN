@@ -21,6 +21,7 @@ epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 
+
 # YCPSWASYN Dictionary file
 epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mpsAN.dict")
 
@@ -54,7 +55,8 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # Load default configurations
 # ==========================================
 # Load the default configuration
-cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+#cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
+cpswLoadConfigFile("iocBoot/common/configs/ANdefaults.yaml", "mmio")
 
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
@@ -149,7 +151,8 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # Link Node database (from l2MpsLN)
 # Records that read/write FW data registers
 # defined in l2MpsLN/firmware/mpsLN.dict file)
-dbLoadRecords("db/mpsAN.db", "P=${IOC_NAME}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF0=${WF0},WF1=${WF1},WF2=${WF2},WF3=${WF3},WF4=${WF4},WF5=${WF5}, PORT=${YCPSWASYN_PORT}")
 
 dbLoadRecords("db/modeManagerAN.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
@@ -281,10 +284,13 @@ create_monitor_set("manual_settings.req" , 30 )
 create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
-dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
-dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
+dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1024
+dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1024
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
 dbpf ${L2MPS_PREFIX}:TIM_CLK_SRC.PROC 1
 dbpf ${L2MPS_PREFIX}:THR_LOADED 1
 dbpf ${L2MPS_PREFIX}:MPS_EN 1
+dbpf ${L2MPS_PREFIX}:DM0_HW_ARM 1
+dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
+dbpf ${L2MPS_PREFIX}:TIMING_RX_ERR 0
