@@ -27,10 +27,10 @@ BSACORE_MODULE_VERSION          = R1.5.4
 TIMINGAPI_MODULE_VERSION        = R0.6
 TPRPATTERN_MODULE_VERSION       = R2.3.2
 EVRCLIENT_MODULE_VERSION        = R1.5.1
-BSADRIVER_MODULE_VERSION        = R2.1.0-2.0
+BSADRIVER_MODULE_VERSION        = R2.3.0
 SEQ_MODULE_VERSION              = R2.2.4-1.2
 ATCACOMMON_MODULE_VERSION       = R1.6.2
-PVXS_MODULE_VERSION             = pvxs-git
+PVXS_MODULE_VERSION             = R0.3.1-0.0.1
 
 # ==========================================================
 # Define module paths using pattern
