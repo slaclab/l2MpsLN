@@ -17,8 +17,7 @@ epicsEnvSet("YAML_DIR","${IOC_DATA}/${IOC}/yaml")
 
 # YAML file
 # Temporary - load static yaml configuration from sioc-bpn25-mp01
-#epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
-epicsEnvSet("YAML","${IOC_DATA}/${STATIC_IOC}/yaml/000TopLevel.yaml")
+epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
 
 # Defaults Yaml file
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
@@ -47,8 +46,7 @@ l2MpsLN_registerRecordDeviceDriver(pdbbase)
 # ===========================================
 
 ## yamlDownloader
-# Commented out for applying fix to yaml file -Kyle Leleux 08/15/2022
-#DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
+DownloadYamlFile("${FPGA_IP}", "${YAML_DIR}")
 
 ## yamlLoader
 cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
@@ -57,8 +55,7 @@ cpswLoadYamlFile("${YAML}", "NetIODev", "", "${FPGA_IP}")
 # Load default configurations
 # ==========================================
 # Load the default configuration
-#cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
-cpswLoadConfigFile("iocBoot/common/configs/defaults.yaml", "mmio")
+cpswLoadConfigFile("${DEFAULTS_FILE}", "mmio")
 
 ## Set MPS Configuration location
 # setMpsConfigurationPath(
