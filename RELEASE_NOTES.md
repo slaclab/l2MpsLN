@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-24-0__: 2022-09-03 J. Mock
+  * Upgrade Analog Link Node FW to 4.8.6
+  * Stop temporarily loading yaml files from temp locations - load from downloader
+  * Update init_timing script
+
 * __l2MpsLN-R3-23-0__: 2022-08-31 J. Mock
   * Upgrade modules and FW to amc_carrier_core R4.8
   * Temporary: Load 000TopLevel.yaml file static - no downloader
