@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-25-0__: 2022-09-28 J. Mock
+  * Upgrade AN and DN firmware to 4.8.6
+
 * __l2MpsLN-R3-24-1__: 2022-09-06 J. Mock
   * Fix sioc-l0b-mp05/st.cmd to point to shm-l0b-sp03-1 (10.0.1.102)
 
