@@ -15,31 +15,21 @@ include $(TOP)/configure/CONFIG
 # LCLS2 MPS application specific databases
 # ==========================================
 # Common database to all applications
-DB_INSTALLS += $(L2MPSASYN)/db/mps.db
+##DB_INSTALLS += $(L2MPSASYN)/db/mps.db
 # Application specific database
-DB_INSTALLS += $(L2MPSASYN)/db/mps_blm.db
-DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
-# ==========================================
+##DB_INSTALLS += $(L2MPSASYN)/db/mps_blm.db
+##DB_INSTALLS += $(L2MPSASYN)/db/mps_scale_factor.db
 
 # ==========================================
-# MPS LN specific databases
-# ==========================================
-DB += mpsLN.db
-DB += mpsAN.db
-DB += mpsDN.db
-DB += mpsWF.db
-DB += modeManagerLN.db
-DB += modeManagerAN.db
-# ==========================================
-
-# For saving and loading yaml configuration
-DB += saveLoadConfig.db
 
 # Install Common databases needed by All IOCs
 # ========================================================
 # Install databases from iocAdmin package
 # These databases support IOC Health and Monitoring
 # ========================================================
+DB_INSTALLS += $(ATCACOMMON)/db/StreamGainControl.db
+DB_INSTALLS += $(ATCACOMMON)/db/StreamEGU.db
+DB_INSTALLS += $(ATCACOMMON)/db/StreamSize.db
 DB_INSTALLS += $(IOCADMIN)/db/iocAdminSoft.db
 DB_INSTALLS += $(IOCADMIN)/db/iocAdminScanMon.db
 IOCRELEASE_DB += iocRelease.db
@@ -77,6 +67,21 @@ DB_INSTALLS += $(BSADRIVER)/db/bsa.db
 DB_INSTALLS += $(BSADRIVER)/db/bsss.db
 DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl.db
 DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl_localTest.db
+
+# ==========================================
+# MPS LN specific databases
+# ==========================================
+DB += mpsLN.db
+DB += mpsAN.db
+DB += mpsDN.db
+DB += mpsWF.db
+DB += mpsGC.db
+DB += modeManagerLN.db
+DB += modeManagerAN.db
+# ==========================================
+
+# For saving and loading yaml configuration
+DB += saveLoadConfig.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

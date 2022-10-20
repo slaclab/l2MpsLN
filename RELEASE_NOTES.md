@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-26-0__: 2022-09-28 J. Mock
+  * Load from ATCACommon new dbs for waveform and gain control
+
 * __l2MpsLN-R3-25-0__: 2022-09-28 J. Mock
   * Upgrade AN and DN firmware to 4.8.6
 

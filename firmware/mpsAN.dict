@@ -293,3 +293,13 @@
 /Stream4                                                                                    Stream4
 /Stream5                                                                                    Stream5
 /Stream6                                                                                    Stream6
+
+# =============================
+# DacSigGen Streams
+# ============================= 
+/mmio/AppTop/DacSigGen[0]/EnableMask                                                        DSG0_Enable
+/mmio/AppTop/DacSigGen[0]/Waveform[0]/MemoryArray[0]                                        DSG0_VoltOut_0
+/mmio/AppTop/DacSigGen[0]/Waveform[1]/MemoryArray[0]                                        DSG0_VoltOut_1
+/mmio/AppTop/DacSigGen[1]/EnableMask                                                        DSG1_Enable
+/mmio/AppTop/DacSigGen[1]/Waveform[0]/MemoryArray[0]                                        DSG1_VoltOut_0
+/mmio/AppTop/DacSigGen[1]/Waveform[1]/MemoryArray[0]                                        DSG1_VoltOut_1

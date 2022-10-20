@@ -593,7 +593,7 @@ file "RegCharArrayRO.template" { pattern
 #======================================
 # Stream waveform size
 #======================================
-file "streamSize.template" { pattern
+file "StreamSize.db" { pattern
 { R,                    BAY,    }
 { DM0_BUFFER_SIZE,      "0",    }
 { DM1_BUFFER_SIZE,      "1",    }
