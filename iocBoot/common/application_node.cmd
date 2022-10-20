@@ -146,7 +146,16 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # Records that read/write FW data registers
 # defined in l2MpsLN/firmware/mpsLN.dict file)
 dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF0=${WF0},WF1=${WF1},WF2=${WF2},WF3=${WF3},WF4=${WF4},WF5=${WF5}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF0},WFA=${WFA0},BAY=0,CH=0,ST=0, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF1},WFA=${WFA1},BAY=0,CH=1,ST=1, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF2},WFA=${WFA2},BAY=0,CH=2,ST=2, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF3},WFA=${WFA3},BAY=1,CH=0,ST=4, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF4},WFA=${WFA4},BAY=1,CH=1,ST=5, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsWF.db","WF=${WF5},WFA=${WFA5},BAY=1,CH=2,ST=6, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsGC.db","GC=${GC0},GCA=${GCA0},BAY=0,CH=0, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsGC.db","GC=${GC1},GCA=${GCA1},BAY=0,CH=1, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsGC.db","GC=${GC2},GCA=${GCA2},BAY=1,CH=0, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/mpsGC.db","GC=${GC3},GCA=${GCA3},BAY=1,CH=1, PORT=${YCPSWASYN_PORT}")
 
 dbLoadRecords("db/modeManagerAN.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 
@@ -250,8 +259,8 @@ create_monitor_set("manual_settings.req" , 30 )
 create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
-dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1024
-dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1024
+dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
+dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS0_CLK 156.25
 dbpf TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}:SYS2_CLK 156.25
 dbpf ${L2MPS_PREFIX}:TIM_CLK_SRC.PROC 1

@@ -53,6 +53,7 @@ EVRCLIENT        = $(EPICS_MODULES)/evrClient/$(EVRCLIENT_MODULE_VERSION)
 SEQ              = $(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
 BSADRIVER        = $(EPICS_MODULES)/bsaDriver/$(BSADRIVER_MODULE_VERSION)
 ATCACOMMON       = $(EPICS_MODULES)/ATCACommon/$(ATCACOMMON_MODULE_VERSION)
+ATCACOMMON       = /afs/slac/g/lcls/epics/iocTop/namrata/ATCACommon
 PVXS             = $(EPICS_MODULES)/pvxs/$(PVXS_MODULE_VERSION)
 
 # =====================================================================

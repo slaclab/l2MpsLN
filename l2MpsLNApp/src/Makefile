@@ -82,6 +82,7 @@ l2MpsLN_DBD += crossbarControl.dbd
 l2MpsLN_DBD += ATCACommon.dbd
 l2MpsLN_DBD += bsaAsynDriver.dbd
 l2MpsLN_DBD += pvxsIoc.dbd
+l2MpsLN_DBD += streamManipulation.dbd
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -100,6 +101,7 @@ l2MpsLN_LIBS += asyn
 l2MpsLN_LIBS += seqCar seq pv
 l2MpsLN_LIBS += pvxsIoc
 l2MpsLN_LIBS += pvxs
+l2MpsLN_LIBS += streamManipulation
 
 # Link QSRV (pvAccess Server) if available
 ifdef EPICS_QSRV_MAJOR_VERSION
