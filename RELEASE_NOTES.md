@@ -3,7 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R3-26-0__: 2022-09-28 J. Mock
+* __l2MpsLN-R3-26-1__: 2022-10-20 J. Mock
+  * Add missing substitution file to repository
+
+* __l2MpsLN-R3-26-0__: 2022-10-20 J. Mock
   * Load from ATCACommon new dbs for waveform and gain control
 
 * __l2MpsLN-R3-25-0__: 2022-09-28 J. Mock
