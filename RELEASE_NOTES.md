@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R3-26-2__: 2022-10-23 J. Mock
+  * Make RTM DO channel 1 in sioc-l0b-mp04 point to dest 13 for LHS
+
 * __l2MpsLN-R3-26-1__: 2022-10-20 J. Mock
   * Add missing substitution file to repository
 
