@@ -252,11 +252,6 @@ file "Reg1BitRW.template" { pattern
 { DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    "asynUInt32Digital",    DM1_TrigHwAutoReArm      }
 }
 
-file "Reg1BitRW_int.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,                     PARAM                    }
-{ TIMING_RX_ERR,      "TPR Rx Err: 1=Err",                      "OK",       "Error",    "1 second",               RxDown                   }
-}
-
 #======================================
 # 2-bit Register with ScalVal interfaces
 #======================================

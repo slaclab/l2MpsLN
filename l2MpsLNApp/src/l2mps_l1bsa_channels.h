@@ -26,24 +26,34 @@
 #include <vector>
 #include <BsaApi.h>
 
+#define NUM_CHANNELS 24
+
 class L2MpsL1BsaChannels
 {
 public:
-    L2MpsL1BsaChannels(const std::string& prefix, const std::vector<std::string>& names);
     ~L2MpsL1BsaChannels();
-
+    static L2MpsL1BsaChannels* getInstance();
+    int createChannels(const std::string& prefix);
     // Get an specific BSA channel
     BsaChannel at(std::size_t i) const;
-
+    double getOffset(std::size_t i);
+    double getSlope(std::size_t i);
+    size_t size();
     // Print a list of the BSA channels created
     void printChannelIds() const;
+    void setOffset(std::size_t i, double val);
+    void setSlope(std::size_t i, double val);
 
 private:
+    static L2MpsL1BsaChannels* instance;
+    L2MpsL1BsaChannels();
+    L2MpsL1BsaChannels(const L2MpsL1BsaChannels&);
+    L2MpsL1BsaChannels& operator=(const L2MpsL1BsaChannels&);
     // BSA channels
     std::vector<BsaChannel> channels_;
-
-    // RT priority for BsaCore thread pool
-    static const unsigned BsaPrio;
+    std::vector<double> offsets_;
+    std::vector<double> slopes_;
+    std::vector<std::string> bsaChannelNames_;
 };
 
 #endif

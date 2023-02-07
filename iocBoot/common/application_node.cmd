@@ -121,6 +121,8 @@ L2MPSASYNConfig("${L2MPSASYN_PORT}")
 # In DEV, the MpsManager runs in lcls-dev3, default port number.
 L2MPSASYNSetManagerHost("${MPS_MANAGER_HOST}", 1975)
 
+epicsEnvSet("TPR","TPR:${LOCATION}:MP${LOCATION_INDEX}:${CARD_INDEX}")
+
 # ===========================================
 #             LCLS1 BSA Driver
 # ===========================================
@@ -129,7 +131,7 @@ L2MPSASYNSetManagerHost("${MPS_MANAGER_HOST}", 1975)
 # L2MpsL1BsaConfig(
 #    streamName,                # Name of the CPSW stream interface for the LCLS1 BSA data
 #    recordPrefix)              # Record name prefix for the LCLS1 BSA PVs
-L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}")
+L2MpsL1BsaConfig("Lcls1BsaStream", "${L2MPS_PREFIX}", "L2MPS_L1BSA")
 
 # ==========================================
 
@@ -146,6 +148,7 @@ asynSetTraceMask("${YCPSWASYN_PORT}",, -1, 0)
 # Records that read/write FW data registers
 # defined in l2MpsLN/firmware/mpsLN.dict file)
 dbLoadRecords("db/mpsAN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/timing_rx_error.db", "P=${TPR}, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsWF.db","WF=${WF0},WFA=${WFA0},BAY=0,CH=0,ST=0, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsWF.db","WF=${WF1},WFA=${WFA1},BAY=0,CH=1,ST=1, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsWF.db","WF=${WF2},WFA=${WFA2},BAY=0,CH=2,ST=2, PORT=${YCPSWASYN_PORT}")
@@ -156,15 +159,18 @@ dbLoadRecords("db/mpsGC.db","GC=${GC0},GCA=${GCA0},BAY=0,CH=0, PORT=${YCPSWASYN_
 dbLoadRecords("db/mpsGC.db","GC=${GC1},GCA=${GCA1},BAY=0,CH=1, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsGC.db","GC=${GC2},GCA=${GCA2},BAY=1,CH=0, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsGC.db","GC=${GC3},GCA=${GCA3},BAY=1,CH=1, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/l2MpsL1Bsa.db","P=${L2MPS_PREFIX}")
 
-dbLoadRecords("db/modeManagerAN.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+dbLoadRecords("db/modeManagerAN.db","P=${L2MPS_PREFIX},NAME=${IOC_NAME},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},TPR=${TPR}")
 
 # tprPattern database
 dbLoadRecords("db/tprTrig.db", "PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
 dbLoadRecords("db/tprPattern.db", "PORT=${TPRPATTERN_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX}")
+dbLoadRecords("db/tprDeviceNamePV.db","PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=08,DEV_PREFIX=${TPR}:GP0_")
+dbLoadRecords("db/tprDeviceNamePV.db","PORT=${TPRTRIGGER_PORT},LOCA=${LOCATION},IOC_UNIT=MP${LOCATION_INDEX},INST=${CARD_INDEX},NN=09,DEV_PREFIX=${TPR}:GP1_")
 
 # crossbarControl
-dbLoadRecords("db/crossbarCtrl.db", "DEV=${L2MPS_PREFIX},PORT=crossbar")
+dbLoadRecords("db/crossbarCtrl.db", "DEV=${TPR},PORT=crossbar")
 
 # Save/load configuration database
 dbLoadRecords("db/saveLoadConfig.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
@@ -268,4 +274,4 @@ dbpf ${L2MPS_PREFIX}:THR_LOADED 1
 dbpf ${L2MPS_PREFIX}:MPS_EN 1
 dbpf ${L2MPS_PREFIX}:DM0_HW_ARM 1
 dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
-dbpf ${L2MPS_PREFIX}:TIMING_RX_ERR 0
+dbpf ${TPR}:TIMING_RX_ERR 0

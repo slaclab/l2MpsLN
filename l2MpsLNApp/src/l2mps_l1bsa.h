@@ -25,9 +25,7 @@
 #include <iomanip>
 #include <string>
 #include <inttypes.h>
-#include <thread>
-#include <iocsh.h>
-#include <epicsExport.h>
+#include <epicsThread.h>
 #include <alarm.h>
 #include <errlog.h>
 #include <boost/atomic.hpp>
@@ -39,13 +37,23 @@
 class L2MpsL1Bsa
 {
 public:
-    L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix);
     ~L2MpsL1Bsa();
 
     // Flags and variables accessible from iocShell
-    static bool        enable_;      // Flag to enable/disable the processing of BSA data
-    static bool        debug_;       // Flag to enable/disable debug mode
-    static std::size_t strmCounter_; // Number of streams received
+    static L2MpsL1Bsa* getInstance();
+    void setStreamName(std::string strmName);
+    void setRecordPrefix(std::string rPrefix);
+    void streamTask();
+    int fireStreamTask();
+    int setEnable(bool e);
+    int setDebug(bool e);
+    bool getEnable();
+    bool getDebug();
+    epicsTimeStamp lastTimeStamp_;
+    void printStats();
+    int getStreamCounts();
+    int getStreamErrCounts();
+    void resetCounters();
 
 private:
     // Structure of the stream data.
@@ -64,17 +72,21 @@ private:
     }
     __attribute__((packed, aligned(1)))
     stream_data_t;
-
+    L2MpsL1Bsa();
+    bool        enable;      // Flag to enable/disable the processing of BSA data
+    bool        debug;       // Flag to enable/disable debug mode
+    size_t strmCounter; // Number of streams received
+    size_t strmTimeoutCounter; // Number of streams received
+    L2MpsL1Bsa& operator=(const L2MpsL1Bsa&);
     // This method receive the data stream, process it, and move the data
     // to BsaCore. It runs in the streamThread_ thread.
-    void streamTask();
+    std::string streamName;
+    std::string recordPrefix;
+    static L2MpsL1Bsa* instance;
+    L2MpsL1Bsa(const L2MpsL1Bsa&);
 
-    const std::vector<std::string> bsaChannelNames_; // BSA channel names
-    L2MpsL1BsaChannels             bsaChannels_;     // BSA channels
-    Stream                         strm_;            // Firmware data stream interface
     boost::atomic<bool>            run_;             // Flag to stop the thread
-    std::thread                    streamThread_;    // Stream receiver thread
-    static unsigned                strmThrPrio_;     // Stream receiver thread RT priority
+    //std::thread                    streamThread_;    // Stream receiver thread
 };
 
 #endif

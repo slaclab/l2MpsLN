@@ -3,6 +3,15 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-0-0__: 2023-02-07 jmock
+  * Update mode manager database to read in external mode setting
+  * Update mode manager database to change name from LCLSMODE
+    to FACMODE
+  * Rewrite l2MpsL1Bsa driver to be an epics thread instead of a POSIX thread
+  * Add an asyn port driver component to set the slope and intercept of the
+    lcls1 bsa data.  Follows same convention of LCLS2 BSA slope and intercept
+  * Add PVs to read in and out the status of l1 bsa driver
+
 * __l2MpsLN-R3-26-3__: 2023-01-11 jmock
   * Change units for application node from us to counts (raw)
 

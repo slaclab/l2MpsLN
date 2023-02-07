@@ -1,9 +1,9 @@
 #This database handles montoring the link node for mode(SC/NC)
 #faults and provides functionality to correct them
 
-record(mbbi, "$(NAME):LCLSMODE_RBV"){
+record(mbbi, "$(NAME):FACMODE_RBV"){
     field(DESC, "Node Timing Mode Readback")
-    field(INP, "$(NAME):LCLSMODE_CALC")
+    field(INP, "$(NAME):FACMODERBV_CALC")
     field(SCAN, "1 second")
     field(ZRST, "NC")
     field(ONST, "SC")
@@ -13,14 +13,14 @@ record(mbbi, "$(NAME):LCLSMODE_RBV"){
     field(TWSV, "MAJOR")
 }
 
-record(mbbi, "$(NAME):LCLSMODE"){
+record(mbbi, "$(NAME):FACMODE"){
     field(DESC, "Node Timing Mode Set")
     field(ZRST, "NC")
     field(ONST, "SC")
-    field(FLNK, "$(NAME):SET_LCLSMODE")
+    field(FLNK, "$(NAME):SET_FACMODE")
 }
 
-record(calc, $(NAME):LCLSMODE_CALC){
+record(calc, $(NAME):FACMODERBV_CALC){
     field(DESC, "Timing Mode Cacluation")
     field(SCAN, "1 second")
     field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
@@ -29,27 +29,141 @@ record(calc, $(NAME):LCLSMODE_CALC){
     field(CALC, "(!A)&B&C ? 0 : A&B&(!C) ? 1 : 2")
 }
 
-record(fanout, "$(NAME):SET_LCLSMODE"){
+record(fanout, "$(NAME):SET_FACMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
     field(LNK0, "$(NAME):SET_TPRMODE")
     field(LNK1, "$(NAME):SET_LC1_MODE")
+    field(LNK2, "$(NAME):SET_CROSSBAR")
 }
 
 record(calcout, "$(NAME):SET_TPRMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(NAME):LCLSMODE")
+    field(INPA, "$(NAME):FACMODE")
     field(CALC, "!A ? 0 : 1")
     field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
     field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
 }
 
+record(calcout, "$(NAME):SET_CROSSBAR"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(NAME):FACMODE")
+    field(CALC, "A ? 0 : 0")
+    field(OUT, "$(TPR):TCRB:MODECTRL")
+    field(FLNK, "$(TPR):TCRB:MODECTRL")
+}
+
 record(calcout, "$(NAME):SET_LC1_MODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
-    field(INPA, "$(NAME):LCLSMODE")
+    field(INPA, "$(NAME):FACMODE")
     field(CALC, "!A ? 1 : 0")
     field(OUT, "$(P):LC1_MODE")
     field(FLNK, "$(P):LC1_MODE")
+}
+
+record(mbbo, "$(TPR):TCRB:MODECTRL") {
+  field(PINI, "YES")
+  field(DESC, "Crossbar selection")
+  field(OMSL, "supervisory")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(ZRST, "AN: BP")
+  field(ONST, "AN: miniTpg")
+  field(FLNK, "$(TPR):TCRB:MODECTRL_CALC")
+  info(autosaveFields, "VAL")
+}
+
+record(calc, "$(TPR):TCRB:MODECTRL_CALC") {
+  field(DESC, "Crossbar selection")
+  field(CALC, "A=0?55:A=1?59:0")
+  field(INPA, "$(TPR):TCRB:MODECTRL")
+  field(FLNK, "$(TPR):TCRB:MODECTRL_SEQ")
+}
+
+record(seq,  "$(TPR):TCRB:MODECTRL_SEQ") {
+  field(DESC, "Crossbar selection")
+  field(SELM, "Mask")
+  field(SELL, "$(TPR):TCRB:MODECTRL_CALC")
+  field(DOL1, "0")
+  field(LNK1, "$(TPR):TCRB0:OUTPUTCONFIG PP")
+  field(DOL2, "3")
+  field(LNK2, "$(TPR):TCRB3:OUTPUTCONFIG PP")
+  field(DOL3, "2")
+  field(LNK3, "$(TPR):TCRB1:OUTPUTCONFIG PP")
+  field(DOL4, "1")
+  field(LNK4, "$(TPR):TCRB1:OUTPUTCONFIG PP")
+  field(DOL5, "0")
+  field(LNK5, "$(TPR):TIMING_RX_ERR PP")
+  field(DOL6, "2")
+  field(LNK6, "$(TPR):TCRB2:OUTPUTCONFIG PP")
+}
+
+record(calcout, "$(TPR):TCRB:MODE_CALC") {
+  field(SCAN, "1 second")
+  field(DESC, "Crossbar selection")
+  field(CALC, "C=2?0:C=1?1:2")
+  field(INPA, "$(TPR):TCRB0:OUTPUTCONFIG CP MSI")
+  field(INPB, "$(TPR):TCRB3:OUTPUTCONFIG CP MSI")
+  field(INPC, "$(TPR):TCRB1:OUTPUTCONFIG CP MSI")
+  field(INPD, "$(TPR):TCRB2:OUTPUTCONFIG CP MSI")
+  field(INPE, "$(TPR):TCRB:MODECTRL")
+  field(INPF, "$(TPR):TCRB:MODE")
+	field(OCAL, "E=F?1:0")
+	field(OOPT, "Every Time")
+	field(DOPT, "Use OCAL")
+  field(FLNK, "$(TPR):TCRB:MODE")
+}
+
+record(mbbi, "$(TPR):TCRB:MODE") {
+  field(DESC, "Crossbar selection")
+  field(INP,  "$(TPR):TCRB:MODE_CALC MS")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(ZRST, "AN: BP")
+  field(ONST, "AN: miniTpg")
+  field(ONSV, "MINOR")
+  field(TWST, "Unknown")
+  field(TWSV, "INVALID")
+  field(FLNK, "$(TPR):TCRB:MODESTAT")
+}
+
+record(bi, "$(TPR):TCRB:MODESTAT")
+{
+  field(DESC, "Timing selection/RTM control")
+	field(INP,  "$(TPR):TCRB:MODE_CALC.OVAL MSS")
+  field(ZNAM, "Inconsistent")
+  field(ONAM, "Ok")
+  field(ZSV,  "MAJOR")
+  field(OSV,  "NO_ALARM")
+}
+
+record(mbbo, "$(TPR):WFSTREAMRATE")
+{
+  field(DESC, "WF Stream Rate")
+  field(ZRST, "1 Hz")
+  field(ONST, "10 Hz")
+  field(FLNK, "$(TPR):WFSTREAMRATE_CALC")
+}
+record(calc, "$(TPR):WFSTREAMRATE_CALC") {
+  field(DESC, "WF Stream Rate")
+  field(CALC, "A=0?6:A=1?9:0")
+  field(INPA, "$(TPR):WFSTREAMRATE")
+  field(FLNK, "$(TPR):WFSTREAMRATE_SEQ")
+}
+record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
+  field(DESC, "Crossbar selection")
+  field(SELM, "Mask")
+  field(SELL, "$(TPR):WFSTREAMRATE_CALC")
+  field(DOL1, "43")
+  field(LNK1, "$(TPR):CH06_EVCODE PP")
+  field(DOL2, "45")
+  field(LNK2, "$(TPR):CH06_EVCODE PP")
+  field(DOL3, "0")
+  field(LNK3, "$(TPR):CH06_FIXEDRATE PP")
+  field(DOL4, "1")
+  field(LNK4, "$(TPR):CH06_FIXEDRATE PP")
 }
