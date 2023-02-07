@@ -5,7 +5,7 @@
 
 < envPaths
 
-epicsEnvSet("SLOT_ID", "4")
+epicsEnvSet("SLOT_ID", "2")
 epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 
 #
