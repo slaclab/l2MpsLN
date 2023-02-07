@@ -20,69 +20,53 @@
 
 #include "l2mps_l1bsa.h"
 
-// Initialize static members
-bool        L2MpsL1Bsa::enable_      = true;
-bool        L2MpsL1Bsa::debug_       = false;
-std::size_t L2MpsL1Bsa::strmCounter_ = 0;
-unsigned    L2MpsL1Bsa::strmThrPrio_ = 80; // Use RT priority 80 for the Stream receiver thread
+static void C_streamTask(void *p) {
+    L2MpsL1Bsa* pStreamBSA = L2MpsL1Bsa::getInstance();
+    pStreamBSA->streamTask();
+}
 
-L2MpsL1Bsa::L2MpsL1Bsa(const std::string& streamName, const std::string& recordPrefix)
-:
-    // This are the parameters names for each of the 24 data words in the data stream.
-    // The order here should match the order of the data words in the stream, as defined
-    // in the FW application.
-    // The BSA PV name will be '${recordPrefix}:' followed by this parameter name.
-    bsaChannelNames_ {
-        "LC1_BSA_B0_C0_I0",
-        "LC1_BSA_B0_C1_I0",
-        "LC1_BSA_B0_C2_I0",
-        "LC1_BSA_B1_C0_I0",
-        "LC1_BSA_B1_C1_I0",
-        "LC1_BSA_B1_C2_I0",
-        "LC1_BSA_B0_C0_I1",
-        "LC1_BSA_B0_C1_I1",
-        "LC1_BSA_B0_C2_I1",
-        "LC1_BSA_B1_C0_I1",
-        "LC1_BSA_B1_C1_I1",
-        "LC1_BSA_B1_C2_I1",
-        "LC1_BSA_B0_C0_I2",
-        "LC1_BSA_B0_C1_I2",
-        "LC1_BSA_B0_C2_I2",
-        "LC1_BSA_B1_C0_I2",
-        "LC1_BSA_B1_C1_I2",
-        "LC1_BSA_B1_C2_I2",
-        "LC1_BSA_B0_C0_I3",
-        "LC1_BSA_B0_C1_I3",
-        "LC1_BSA_B0_C2_I3",
-        "LC1_BSA_B1_C0_I3",
-        "LC1_BSA_B1_C1_I3",
-        "LC1_BSA_B1_C2_I3",
-    },
-    bsaChannels_(recordPrefix, bsaChannelNames_),
-    strm_(IStream::create(cpswGetRoot()->findByName(streamName.c_str()))),
-    run_(true),
-    streamThread_( std::thread( &L2MpsL1Bsa::streamTask, this) )
-{
-    // Set the name for the 'streamThread_' thread
-    if( pthread_setname_np( streamThread_.native_handle(), "L2MpsLcls1Bsa" ) )
-        std::cerr <<  "pthread_setname_np failed for L2MpsL1Bsa thread" << std::endl;
+// Singleton design pattern: initialize class instance pointer to null.
+L2MpsL1Bsa* L2MpsL1Bsa::instance = 0;
 
-    /* Temporary remove this RT priority setting
-    // Set the RT priority and policy for the 'streamThread_' thread
-    struct sched_param schParams;
-    schParams.sched_priority = strmThrPrio_;
-    if( pthread_setschedparam( streamThread_.native_handle(), SCHED_FIFO, &schParams) )
-        std::cerr << "Failed to set Thread RT priority to " << strmThrPrio_ << std::endl;
-    */
+// Get the instance pointer for the class. If it is the first time,
+// create a new one.
+L2MpsL1Bsa* L2MpsL1Bsa::getInstance() {
+    if (instance == 0) {
+        instance = new L2MpsL1Bsa();
+    }
 
-    bsaChannels_.printChannelIds();
+    return instance;
+}
+
+L2MpsL1Bsa::L2MpsL1Bsa() {
+    run_ = true;
+    enable = true;
+    debug = false;
+    strmCounter = 0;
+    strmTimeoutCounter = 0;
+}
+
+void L2MpsL1Bsa::setStreamName(std::string strmName) {  
+    streamName = strmName; 
+}
+
+void L2MpsL1Bsa::setRecordPrefix(std::string rPrefix) {  
+    recordPrefix = rPrefix; 
+}
+
+int L2MpsL1Bsa::fireStreamTask() {
+    epicsThreadCreate(streamName.c_str(), epicsThreadPriorityHigh + 3,
+                  epicsThreadGetStackSize(epicsThreadStackMedium),
+                  (EPICSTHREADFUNC) C_streamTask, NULL);
+
+    return 0;
 }
 
 L2MpsL1Bsa::~L2MpsL1Bsa()
 {
     // Stop the thread
     run_ = false;
-    streamThread_.join();
+    delete instance;
 }
 
 void L2MpsL1Bsa::streamTask()
@@ -91,6 +75,10 @@ void L2MpsL1Bsa::streamTask()
     std::size_t stream_data_size {sizeof(stream_data_t) + 9};
     uint8_t *buf = new uint8_t[stream_data_size];
     std::size_t got;
+    Path p = cpswGetRoot();
+    Path strm_name = p->findByName(streamName.c_str());
+    Stream strm_ = IStream::create(strm_name);
+    L2MpsL1BsaChannels *pChannels = L2MpsL1BsaChannels::getInstance();
 
     //std::size_t count {0};
     for(;;)
@@ -104,12 +92,14 @@ void L2MpsL1Bsa::streamTask()
 
         // If BSA processing is disable, just discard the stream data
         // We still need to read the buffer to avoid back-pressuring the FW
-        if ( !enable_ )
+        if ( !enable )
             continue;
 
         // Check if the stream read timed out
-        if ( 0 == got )
+        if ( 0 == got ) {
+            ++strmTimeoutCounter;
             continue;
+        }
 
         // If we received data, check that we received the correct number of bytes
         if ( stream_data_size != got )
@@ -119,27 +109,28 @@ void L2MpsL1Bsa::streamTask()
         }
 
         // Increment the stream counter
-        ++strmCounter_;
+        ++strmCounter;
 
         // Create a stream data pointer on the received data buffer payload, after the 8-byte header
         stream_data_t* pSD{ (stream_data_t*)(buf + 8) };
 
         // Copy the LCLS1 BSA data from the stream into the BsaCore facility
-        for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
+        for (std::size_t i{0}; i < pChannels->size(); ++i)
         {
+            double data = static_cast<double>(pSD->data[i]) * pChannels->getSlope(i) + pChannels->getOffset(i);
             BSA_StoreData(
-                bsaChannels_.at(i),
+                pChannels->at(i),
                 pSD->timeStamp,
-                static_cast<double>(pSD->data[i]),
+                data,
                 static_cast<BsaStat>(epicsAlarmNone),  // For now, we don't support alarm
                 static_cast<BsaSevr>(epicsSevNone));   // nor severity.
         }
-
+        lastTimeStamp_ = pSD->timeStamp;
         // If debug mode is enabled, print out
         // 1/360 frames into the IOC shell
-        if ( debug_ )
+        if ( debug )
         {
-            if ( 0 == (strmCounter_ % 360) )
+            if ( 0 == (strmCounter % 360) )
             {
                 std::cout << "Stream data:" << std::endl;
                 std::cout << "===================" << std::endl;
@@ -153,120 +144,58 @@ void L2MpsL1Bsa::streamTask()
                 std::cout << "edefMinor  = 0x" <<  pSD->edefMinor << std::endl;
                 std::cout << "edefAvgDn  = 0x" <<  pSD->edefAvgDn << std::endl;
                 std::cout << std::dec;
-                for (std::size_t i{0}; i < bsaChannelNames_.size(); ++i)
-                    std::cout << bsaChannelNames_.at(i) << " = " <<  pSD->data[i] << std::endl;
+                for (std::size_t i{0}; i < pChannels->size(); ++i)
+                    std::cout << pChannels->at(i) << " = " <<  pSD->data[i] << std::endl;
                 std::cout << "===================" << std::endl;
-                std::cout << "Stream received counter = " << strmCounter_ << std::endl;
+                std::cout << "Stream received counter = " << strmCounter << std::endl;
                 std::cout << std::endl;
             }
         }
     }
 }
 
-// L2MpsL1BsaConfig
-extern "C" int L2MpsL1BsaConfig(const char* streamName, const char* recordPrefix)
-{
-    if ( (!streamName) || ('\0' == streamName[0]) )
-    {
-        fprintf( stderr, "Error: The name of the LCLS1 BSA stream is empty\n");
-        return -1;
-    }
-
-    if ( (!recordPrefix) || ('\0' == recordPrefix[0]) )
-    {
-        fprintf( stderr, "Error: The record prefix for the LCLS1 BSA PVs is empty\n");
-        return -1;
-    }
-
-    new L2MpsL1Bsa(streamName, recordPrefix);
-
+int L2MpsL1Bsa::setEnable(bool e) {
+    enable = e;
     return 0;
 }
 
-static const iocshArg confArg0 = { "streamName",   iocshArgString };
-static const iocshArg confArg1 = { "recordPrefix", iocshArgString };
-
-static const iocshArg * const confArgs[] =
-{
-    &confArg0,
-    &confArg1
-};
-
-static const iocshFuncDef configFuncDef = {"L2MpsL1BsaConfig", 2, confArgs};
-
-static void configCallFunc(const iocshArgBuf *args)
-{
-    L2MpsL1BsaConfig(args[0].sval, args[1].sval);
-}
-
-// L2MpsL1BsaEnable
-extern "C" int L2MpsL1BsaEnable(bool e)
-{
-    L2MpsL1Bsa::enable_ = e;
-
+int L2MpsL1Bsa::setDebug(bool e) {
+    debug = e;
     return 0;
 }
 
-static const iocshArg setEnableArg0 = { "Flag (0=off, 1=on)",   iocshArgInt };
-
-static const iocshArg * const setEnableArgs[] =
-{
-    &setEnableArg0,
-};
-
-static const iocshFuncDef setEnableFuncDef = {"L2MpsL1BsaEnable", 1, setEnableArgs};
-
-static void setEnableCallFunc(const iocshArgBuf *args)
-{
-    L2MpsL1BsaEnable(args[0].ival);
+bool L2MpsL1Bsa::getEnable() {
+    return enable;
 }
 
-// L2MpsL1BsaDebug
-extern "C" int L2MpsL1BsaDebug(bool d)
-{
-    L2MpsL1Bsa::debug_ = d;
-
-    return 0;
+bool L2MpsL1Bsa::getDebug() {
+    return debug;
 }
 
-static const iocshArg setDebugArg0 = { "Flag (0=off, 1=on)",   iocshArgInt };
-
-static const iocshArg * const setDebugArgs[] =
-{
-    &setDebugArg0,
-};
-
-static const iocshFuncDef setDebugFuncDef = {"L2MpsL1BsaDebug", 1, setDebugArgs};
-
-static void setDebugCallFunc(const iocshArgBuf *args)
-{
-    L2MpsL1BsaDebug(args[0].ival);
+int L2MpsL1Bsa::getStreamCounts() {
+  return (int)strmCounter;
 }
 
-// L2MpsL1BsaPrintCounter
-extern "C" int L2MpsL1BsaPrintCounter()
-{
-    printf("Stream received counter = %zu\n", L2MpsL1Bsa::strmCounter_);
-
-    return 0;
+int L2MpsL1Bsa::getStreamErrCounts() {
+  return (int)strmTimeoutCounter;
 }
 
-static const iocshFuncDef printCounterFuncDef = {"L2MpsL1BsaPrintCounter", 0};
-
-static void printCounterCallFunc(const iocshArgBuf *args)
-{
-    L2MpsL1BsaPrintCounter();
+void L2MpsL1Bsa::resetCounters() {
+    strmCounter = 0;
+    strmTimeoutCounter = 0;
 }
+  
 
-// iocshRegister
-void L2MpsL1BsaRegister(void)
-{
-    iocshRegister( &configFuncDef,        configCallFunc       );
-    iocshRegister( &setEnableFuncDef,     setEnableCallFunc    );
-    iocshRegister( &setDebugFuncDef,      setDebugCallFunc     );
-    iocshRegister( &printCounterFuncDef,  printCounterCallFunc );
-}
-
-extern "C" {
-    epicsExportRegistrar(L2MpsL1BsaRegister);
+void L2MpsL1Bsa::printStats() {
+    std::cout << "L2MpsL1Bsa Driver" << std::endl;
+    std::cout << "===================" << std::endl;
+    std::cout << "Stream Name: " << streamName << std::endl;
+    std::cout << "Run Flag: " <<  run_ << std::endl;
+    std::cout << "Enable Flag: " <<  enable << std::endl;
+    std::cout << "Debug Flag: " << debug << std::endl;
+    std::cout << "Time stamp = 0x" <<  lastTimeStamp_.secPastEpoch << ", " << lastTimeStamp_.nsec << std::endl;
+    std::cout << "Stream received counter = " << strmCounter << std::endl;
+    std::cout << "Stream Timeout counter = " << strmTimeoutCounter << std::endl;
+    std::cout << "===================" << std::endl;
+    std::cout << std::endl;
 }

@@ -78,6 +78,8 @@ DB += mpsWF.db
 DB += mpsGC.db
 DB += modeManagerLN.db
 DB += modeManagerAN.db
+DB += l2MpsL1Bsa.db
+DB += timing_rx_error.db
 # ==========================================
 
 # For saving and loading yaml configuration

@@ -84,6 +84,12 @@ l2MpsLN_DBD += bsaAsynDriver.dbd
 l2MpsLN_DBD += pvxsIoc.dbd
 l2MpsLN_DBD += streamManipulation.dbd
 
+# l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
+l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
+l2MpsLN_SRCS += IOCfunctions.cpp
+l2MpsLN_SRCS += l2MpsLnDriver.cpp
+l2MpsLN_SRCS += l2mps_l1bsa.cpp l2mps_l1bsa_channels.cpp
+
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
 l2MpsLN_LIBS += autosave
@@ -111,9 +117,6 @@ ifdef EPICS_QSRV_MAJOR_VERSION
    l2MpsLN_DBD  += qsrv.dbd
 endif
 
-# l2MpsLN_registerRecordDeviceDriver.cpp derives from l2MpsLN.dbd
-l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
-l2MpsLN_SRCS += l2mps_l1bsa l2mps_l1bsa_channels
 
 # Build the main IOC entry point on workstation OSs.
 l2MpsLN_SRCS_DEFAULT += l2MpsLNMain.cpp
