@@ -7,10 +7,16 @@
 
 epicsEnvSet("SLOT_ID", "2")
 epicsEnvSet("FPGA_IP","10.1.1.10${SLOT_ID}")
+epicsEnvSet("FACILITY","lcls")
+epicsEnvSet("TYPE","LN")
+
+epicsEnvSet("LOCATION","L0B")
+epicsEnvSet("LOCATION_INDEX","MP01")
+epicsEnvSet("MODE_INPV", "1")
 
 #
 # Loads common Link Node startup
 #
-< ${TOP}/iocBoot/common/link_node.cmd
+< ${TOP}/iocBoot/common/start.cmd
 
 system("scripts/setupBPClockRT.sh shm-l0b-sp01-2")
