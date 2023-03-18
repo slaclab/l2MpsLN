@@ -4,172 +4,172 @@
 
 # Single register with longin records
 file "RegRO.template" { pattern
-{ R,                            DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
-{ CON_LOCSIZE,                  "Number Of Local Channels",                 "YES",  "Passive",  "",         CONCEN_LocSize              }
-{ CON_PGPSIZE,                  "Number Of PGP Channels",                   "YES",  "Passive",  "",         CONCEN_PgpSize              }
-{ CON_TOTSIZE,                  "Total Number Of Channels",                 "YES",  "Passive",  "",         CONCEN_Size                 }
-{ CON_ARBSIZE,                  "Arbiter Count Size",                       "YES",  "Passive",  "",         CONCEN_ArbCount             }
-{ CON_PACKCNT,                  "Total packet count (TX)",                  "YES",  "1 second", "",         CONCEN_PacketCount          }
-{ CON_PACKRATE,                 "Total Packet Rate",                        "YES",  "1 second", "",         CONCEN_PacketRate           }
-{ CON_WORDCNT,                  "Total Word Count",                         "YES",  "1 second", "",         CONCEN_WordCount            }
-{ CON_WORDRATE,                 "Total Word Rate",                          "YES",  "1 second", "",         CONCEN_WordRate             }
-{ CON_PACKDROPCNT_0,            "Packet Drop count ch 0",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_0    }
-{ CON_PACKDROPCNT_1,            "Packet Drop count ch 1",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_1    }
-{ CON_PACKDROPCNT_2,            "Packet Drop count ch 2",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_2    }
-{ CON_PACKDROPCNT_3,            "Packet Drop count ch 3",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_3    }
-{ CON_PACKDROPCNT_4,            "Packet Drop count ch 4",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_4    }
-{ CON_PACKDROPCNT_5,            "Packet Drop count ch 5",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_5    }
-{ CON_PACKDROPCNT_6,            "Packet Drop count ch 6",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_6    }
-{ CON_PACKDROPCNT_7,            "Packet Drop count ch 7",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_7    }
-{ CON_PACKDROPCNT_8,            "Packet Drop count ch 8",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_8    }
-{ CON_PACKDROPCNT_9,            "Packet Drop count ch 9",                   "YES",  "1 second", "",         CONCEN_PacketDropCount_9    }
-{ CON_PACKDROPCNT_10,           "Packet Drop count ch 10",                  "YES",  "1 second", "",         CONCEN_PacketDropCount_10   }
-{ CON_PACKDROPCNT_11,           "Packet Drop count ch 11",                  "YES",  "1 second", "",         CONCEN_PacketDropCount_11   }
-{ CON_PACKOFCNT_0,              "Packet Overflow count ch 0",               "YES",  "1 second", "",         CONCEN_OverflowCount_0      }
-{ CON_PACKOFCNT_1,              "Packet Overflow count ch 1",               "YES",  "1 second", "",         CONCEN_OverflowCount_1      }
-{ CON_PACKOFCNT_2,              "Packet Overflow count ch 2",               "YES",  "1 second", "",         CONCEN_OverflowCount_2      }
-{ CON_PACKOFCNT_3,              "Packet Overflow count ch 3",               "YES",  "1 second", "",         CONCEN_OverflowCount_3      }
-{ CON_PACKOFCNT_4,              "Packet Overflow count ch 4",               "YES",  "1 second", "",         CONCEN_OverflowCount_4      }
-{ CON_PACKOFCNT_5,              "Packet Overflow count ch 5",               "YES",  "1 second", "",         CONCEN_OverflowCount_5      }
-{ CON_PACKOFCNT_6,              "Packet Overflow count ch 6",               "YES",  "1 second", "",         CONCEN_OverflowCount_6      }
-{ CON_PACKOFCNT_7,              "Packet Overflow count ch 7",               "YES",  "1 second", "",         CONCEN_OverflowCount_7      }
-{ CON_PACKOFCNT_8,              "Packet Overflow count ch 8",               "YES",  "1 second", "",         CONCEN_OverflowCount_8      }
-{ CON_PACKOFCNT_9,              "Packet Overflow count ch 9",               "YES",  "1 second", "",         CONCEN_OverflowCount_9      }
-{ CON_PACKOFCNT_10,             "Packet Overflow count ch 10",              "YES",  "1 second", "",         CONCEN_OverflowCount_10     }
-{ CON_PACKOFCNT_11,             "Packet Overflow count ch 11",              "YES",  "1 second", "",         CONCEN_OverflowCount_11     }
-{ CON_PAUSECNT_0,               "Pause Detection count ch 0",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_0        }
-{ CON_PAUSECNT_1,               "Pause Detection count ch 1",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_1        }
-{ CON_PAUSECNT_2,               "Pause Detection count ch 2",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_2        }
-{ CON_PAUSECNT_3,               "Pause Detection count ch 3",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_3        }
-{ CON_PAUSECNT_4,               "Pause Detection count ch 4",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_4        }
-{ CON_PAUSECNT_5,               "Pause Detection count ch 5",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_5        }
-{ CON_PAUSECNT_6,               "Pause Detection count ch 6",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_6        }
-{ CON_PAUSECNT_7,               "Pause Detection count ch 7",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_7        }
-{ CON_PAUSECNT_8,               "Pause Detection count ch 8",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_8        }
-{ CON_PAUSECNT_9,               "Pause Detection count ch 9",               "YES",  "1 second", "",         CONCEN_PauseDetCnt_9        }
-{ CON_PAUSECNT_10,              "Pause Detection count ch 10",              "YES",  "1 second", "",         CONCEN_PauseDetCnt_10       }
-{ CON_PAUSECNT_11,              "Pause Detection count ch 11",              "YES",  "1 second", "",         CONCEN_PauseDetCnt_11       }
-{ DIG_BYTESCNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",         DIGMES_DigitalBytes         }
-{ DIG_DBIN,                     "Debounced Input Values",                   "YES",  "1 second", "",         DIGMES_RegInputBits         }
-{ DIG_SWBYTECNT,                "Number of software bytes in message",      "YES",  "Passive",  "",         DIGMES_SwBytes              }
-{ MITMSG_CLASS_0,               "Mit msg power class limits,dest 0",        "YES",  "1 second", "",         MITIG_mitMsgClass_0         }
-{ MITMSG_CLASS_1,               "Mit msg power class limits,dest 1",        "YES",  "1 second", "",         MITIG_mitMsgClass_1         }
-{ MITMSG_CLASS_2,               "Mit msg power class limits,dest 2",        "YES",  "1 second", "",         MITIG_mitMsgClass_2         }
-{ MITMSG_CLASS_3,               "Mit msg power class limits,dest 3",        "YES",  "1 second", "",         MITIG_mitMsgClass_3         }
-{ MITMSG_CLASS_4,               "Mit msg power class limits,dest 4",        "YES",  "1 second", "",         MITIG_mitMsgClass_4         }
-{ MITMSG_CLASS_5,               "Mit msg power class limits,dest 5",        "YES",  "1 second", "",         MITIG_mitMsgClass_5         }
-{ MITMSG_CLASS_6,               "Mit msg power class limits,dest 6",        "YES",  "1 second", "",         MITIG_mitMsgClass_6         }
-{ MITMSG_CLASS_7,               "Mit msg power class limits,dest 7",        "YES",  "1 second", "",         MITIG_mitMsgClass_7         }
-{ MITMSG_CLASS_8,               "Mit msg power class limits,dest 8",        "YES",  "1 second", "",         MITIG_mitMsgClass_8         }
-{ MITMSG_CLASS_9,               "Mit msg power class limits,dest 9",        "YES",  "1 second", "",         MITIG_mitMsgClass_9         }
-{ MITMSG_CLASS_10,              "Mit msg power class limits,dest 10",       "YES",  "1 second", "",         MITIG_mitMsgClass_10        }
-{ MITMSG_CLASS_11,              "Mit msg power class limits,dest 11",       "YES",  "1 second", "",         MITIG_mitMsgClass_11        }
-{ MITMSG_CLASS_12,              "Mit msg power class limits,dest 12",       "YES",  "1 second", "",         MITIG_mitMsgClass_12        }
-{ MITMSG_CLASS_13,              "Mit msg power class limits,dest 13",       "YES",  "1 second", "",         MITIG_mitMsgClass_13        }
-{ MITMSG_CLASS_14,              "Mit msg power class limits,dest 14",       "YES",  "1 second", "",         MITIG_mitMsgClass_14        }
-{ MITMSG_CLASS_15,              "Mit msg power class limits,dest 15",       "YES",  "1 second", "",         MITIG_mitMsgClass_15        }
-{ MITMSG_TMSTMP,                "Mit msg time stamp",                       "YES",  "1 second", "",         MITIG_mitMsgTimeStamp       }
-{ MITMSG_ERRORCNT,              "Mit msg error counter",                    "YES",  "1 second", "",         MITIG_mpsErrorCnt           }
-{ MITMSG_TIMEOUTCNT,            "Mit msg timeout counter",                  "YES",  "1 second", "",         MITIG_mpsTimeoutCnt         }
-{ RTM_DI,                       "RTM digital input status",                 "YES",  "1 second", "",         RTM_DIN                     }
-{ RTM_DO,                       "RTM digital output status",                "YES",  "1 second", "",         RTM_DOUT                    }
-{ FPGA_VER,                     "FPGA's Firmware Version Number",           "YES",  "1 second", "",         AV_FpgaVersion              }
-{ FPGA_UPTIMECNT,               "FPGA's seconds since last reset",          "YES",  "1 second", "s",        AV_UpTimeCnt                }
-{ PGP_RX_CLK_0,                 "Pgp2bAxi 0 RX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_RxClkFreq_0             }
-{ PGP_RX_FRAME_CNT_0,           "Pgp2bAxi 0 RX Frame Count",                "YES",  "1 second", "frames",   PGP_RxFrameCnt_0            }
-{ PGP_RX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 RX Frame Error Count",          "YES",  "1 second", "frames",   PGP_RxFrameErrCnt_0         }
-{ PGP_RX_LINK_DOWN_CNT_0,       "Pgp2bAxi 0 RX Link Down Count",            "YES",  "1 second", "",         PGP_RxLinkDownCnt_0         }
-{ PGP_RX_LINK_ERR_CNT_0,        "Pgp2bAxi 0 RX Link Error Count",           "YES",  "1 second", "",         PGP_RxLinkErrCnt_0          }
-{ PGP_RX_CLK_1,                 "Pgp2bAxi 1 RX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_RxClkFreq_1             }
-{ PGP_RX_FRAME_CNT_1,           "Pgp2bAxi 1 RX Frame Count",                "YES",  "1 second", "frames",   PGP_RxFrameCnt_1            }
-{ PGP_RX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 RX Frame Error Count",          "YES",  "1 second", "frames",   PGP_RxFrameErrCnt_1         }
-{ PGP_RX_LINK_DOWN_CNT_1,       "Pgp2bAxi 1 RX Link Down Count",            "YES",  "1 second", "",         PGP_RxLinkDownCnt_1         }
-{ PGP_RX_LINK_ERR_CNT_1,        "Pgp2bAxi 1 RX Link Error Count",           "YES",  "1 second", "",         PGP_RxLinkErrCnt_1          }
-{ PGP_RX_CLK_2,                 "Pgp2bAxi 2 RX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_RxClkFreq_2             }
-{ PGP_RX_FRAME_CNT_2,           "Pgp2bAxi 2 RX Frame Count",                "YES",  "1 second", "frames",   PGP_RxFrameCnt_2            }
-{ PGP_RX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 RX Frame Error Count",          "YES",  "1 second", "frames",   PGP_RxFrameErrCnt_2         }
-{ PGP_RX_LINK_DOWN_CNT_2,       "Pgp2bAxi 2 RX Link Down Count",            "YES",  "1 second", "",         PGP_RxLinkDownCnt_2         }
-{ PGP_RX_LINK_ERR_CNT_2,        "Pgp2bAxi 2 RX Link Error Count",           "YES",  "1 second", "",         PGP_RxLinkErrCnt_2          }
-{ PGP_RX_CLK_3,                 "Pgp2bAxi 3 RX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_RxClkFreq_3             }
-{ PGP_RX_FRAME_CNT_3,           "Pgp2bAxi 3 RX Frame Count",                "YES",  "1 second", "frames",   PGP_RxFrameCnt_3            }
-{ PGP_RX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 RX Frame Error Count",          "YES",  "1 second", "frames",   PGP_RxFrameErrCnt_3         }
-{ PGP_RX_LINK_DOWN_CNT_3,       "Pgp2bAxi 3 RX Link Down Count",            "YES",  "1 second", "",         PGP_RxLinkDownCnt_3         }
-{ PGP_RX_LINK_ERR_CNT_3,        "Pgp2bAxi 3 RX Link Error Count",           "YES",  "1 second", "",         PGP_RxLinkErrCnt_3          }
-{ PGP_TX_CLK_0,                 "Pgp2bAxi 0 TX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_TxClkFreq_0             }
-{ PGP_TX_FRAME_CNT_0,           "Pgp2bAxi 0 TX Frame Count",                "YES",  "1 second", "frames",   PGP_TxFrameCnt_0            }
-{ PGP_TX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_0         }
-{ PGP_TX_CLK_1,                 "Pgp2bAxi 1 TX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_TxClkFreq_1             }
-{ PGP_TX_FRAME_CNT_1,           "Pgp2bAxi 1 TX Frame Count",                "YES",  "1 second", "frames",   PGP_TxFrameCnt_1            }
-{ PGP_TX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_1         }
-{ PGP_TX_CLK_2,                 "Pgp2bAxi 2 TX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_TxClkFreq_2             }
-{ PGP_TX_FRAME_CNT_2,           "Pgp2bAxi 2 TX Frame Count",                "YES",  "1 second", "frames",   PGP_TxFrameCnt_2            }
-{ PGP_TX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_2         }
-{ PGP_TX_CLK_3,                 "Pgp2bAxi 3 TX Clock Frequency",            "YES",  "1 second", "Hz",       PGP_TxClkFreq_3             }
-{ PGP_TX_FRAME_CNT_3,           "Pgp2bAxi 3 TX Frame Count",                "YES",  "1 second", "frames",   PGP_TxFrameCnt_3            }
-{ PGP_TX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",   PGP_TxFrameErrCnt_3         }
-{ LC1_UDP_DHCP_IP,              "LCLS-I DHCP Server IP Address",            "YES",  "1 second", "",         LC1_UdpDhcpIP               }
-{ LC1_UDP_LOCAL_MAC,            "LCLS-I Port Local MAC address",            "YES",  "1 second", "",         LC1_UdplocalMac             }
-{ LC1_TIMEOUT_STATUS,           "LCLS-I timeout status (11-bits)",          "YES",  "1 second", "",         LC1_TimeoutStatusMask       }
-{ LC1_MSG_ERROR_CNT,            "LCLS-I Message Error Counter",             "YES",  "1 second", "",         LC1_lcls1MessageError       }
-{ LC2_MSG_ERROR_CNT,            "LCLS-II Message Error Counter",            "YES",  "1 second", "",         LC1_lcls2MessageError       }
-{ LC1_MAC_ADDR,                 "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",         LC1_MacAddr                 }
-{ ASM_MPS_AMC_DOUT,             "State of the 4 AMC lines",                 "YES",  "1 second", "",         ASMCORE_mpsAmcDout          }
-{ PGP_RX_MON_FRAME_CNT_0,       "PGP 0 Rx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_RxMonFrameCnt_0         }
-{ PGP_RX_MON_FRAME_SIZE_0,      "PGP 0 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_RxMonFrameSize_0        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMax_0     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_0,  "PGP 0 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMin_0     }
-{ PGP_RX_MON_FRAME_CNT_1,       "PGP 1 Rx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_RxMonFrameCnt_1         }
-{ PGP_RX_MON_FRAME_SIZE_1,      "PGP 1 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_RxMonFrameSize_1        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_1,  "PGP 1 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMax_1     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_1,  "PGP 1 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMin_1     }
-{ PGP_RX_MON_FRAME_CNT_2,       "PGP 2 Rx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_RxMonFrameCnt_2         }
-{ PGP_RX_MON_FRAME_SIZE_2,      "PGP 2 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_RxMonFrameSize_2        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMax_2     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMin_2     }
-{ PGP_RX_MON_FRAME_CNT_3,       "PGP 3 Rx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_RxMonFrameCnt_3         }
-{ PGP_RX_MON_FRAME_SIZE_3,      "PGP 3 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_RxMonFrameSize_3        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMax_3     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_RxMonFrameSizeMin_3     }
-{ PGP_TX_MON_FRAME_CNT_0,       "PGP 0 Tx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_TxMonFrameCnt_0         }
-{ PGP_TX_MON_FRAME_SIZE_0,      "PGP 0 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_TxMonFrameSize_0        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMax_0     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_0,  "PGP 0 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMin_0     }
-{ PGP_TX_MON_FRAME_CNT_1,       "PGP 1 Tx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_TxMonFrameCnt_1         }
-{ PGP_TX_MON_FRAME_SIZE_1,      "PGP 1 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_TxMonFrameSize_1        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_1,  "PGP 1 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMax_1     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_1,  "PGP 1 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMin_1     }
-{ PGP_TX_MON_FRAME_CNT_2,       "PGP 2 Tx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_TxMonFrameCnt_2         }
-{ PGP_TX_MON_FRAME_SIZE_2,      "PGP 2 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_TxMonFrameSize_2        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMax_2     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMin_2     }
-{ PGP_TX_MON_FRAME_CNT_3,       "PGP 3 Tx Mon Frame Count",                 "YES",  "1 second", "frames",   PGP_TxMonFrameCnt_3         }
-{ PGP_TX_MON_FRAME_SIZE_3,      "PGP 3 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",    PGP_TxMonFrameSize_3        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMax_3     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",    PGP_TxMonFrameSizeMin_3     }
-{ PGP_RX_MON_FRAME_RATE_0,      "PGP 0 Rx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_RxMonFrameRate_0        }
-{ PGP_RX_MON_FRAME_RATE_MAX_0,  "PGP 0 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMax_0     }
-{ PGP_RX_MON_FRAME_RATE_MIN_0,  "PGP 0 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMin_0     } 
-{ PGP_RX_MON_FRAME_RATE_1,      "PGP 1 Rx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_RxMonFrameRate_1        }
-{ PGP_RX_MON_FRAME_RATE_MAX_1,  "PGP 1 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMax_1     }
-{ PGP_RX_MON_FRAME_RATE_MIN_1,  "PGP 1 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMin_1     }
-{ PGP_RX_MON_FRAME_RATE_2,      "PGP 2 Rx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_RxMonFrameRate_2        }
-{ PGP_RX_MON_FRAME_RATE_MAX_2,  "PGP 2 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMax_2     }
-{ PGP_RX_MON_FRAME_RATE_MIN_2,  "PGP 2 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMin_2     }
-{ PGP_RX_MON_FRAME_RATE_3,      "PGP 3 Rx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_RxMonFrameRate_3        }
-{ PGP_RX_MON_FRAME_RATE_MAX_3,  "PGP 3 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMax_3     }
-{ PGP_RX_MON_FRAME_RATE_MIN_3,  "PGP 3 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_RxMonFrameRateMin_3     }
-{ PGP_TX_MON_FRAME_RATE_0,      "PGP 0 Tx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_TxMonFrameRate_0        }
-{ PGP_TX_MON_FRAME_RATE_MAX_0,  "PGP 0 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMax_0     }
-{ PGP_TX_MON_FRAME_RATE_MIN_0,  "PGP 0 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMin_0     }
-{ PGP_TX_MON_FRAME_RATE_1,      "PGP 1 Tx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_TxMonFrameRate_1        }
-{ PGP_TX_MON_FRAME_RATE_MAX_1,  "PGP 1 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMax_1     }
-{ PGP_TX_MON_FRAME_RATE_MIN_1,  "PGP 1 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMin_1     }
-{ PGP_TX_MON_FRAME_RATE_2,      "PGP 2 Tx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_TxMonFrameRate_2        }
-{ PGP_TX_MON_FRAME_RATE_MAX_2,  "PGP 2 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMax_2     }
-{ PGP_TX_MON_FRAME_RATE_MIN_2,  "PGP 2 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMin_2     }
-{ PGP_TX_MON_FRAME_RATE_3,      "PGP 3 Tx Frame Rate",                      "YES",  "1 second", "Hz",       PGP_TxMonFrameRate_3        }
-{ PGP_TX_MON_FRAME_RATE_MAX_3,  "PGP 3 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMax_3     }
-{ PGP_TX_MON_FRAME_RATE_MIN_3,  "PGP 3 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",       PGP_TxMonFrameRateMin_3     }
+{ R,                            DESC,                                       PINI,   SCAN,       EGU,       LOW, LSV,      HIGH, HSV,          PARAM                       }
+{ CON_LOCSIZE,                  "Number Of Local Channels",                 "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_LocSize              }
+{ CON_PGPSIZE,                  "Number Of PGP Channels",                   "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_PgpSize              }
+{ CON_TOTSIZE,                  "Total Number Of Channels",                 "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_Size                 }
+{ CON_ARBSIZE,                  "Arbiter Count Size",                       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_ArbCount             }
+{ CON_PACKCNT,                  "Total packet count (TX)",                  "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_PacketCount          }
+{ CON_PACKRATE,                 "Total Packet Rate",                        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_PacketRate           }
+{ CON_WORDCNT,                  "Total Word Count",                         "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_WordCount            }
+{ CON_WORDRATE,                 "Total Word Rate",                          "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_WordRate             }
+{ CON_PACKDROPCNT_0,            "Packet Drop count ch 0",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_0    }
+{ CON_PACKDROPCNT_1,            "Packet Drop count ch 1",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_1    }
+{ CON_PACKDROPCNT_2,            "Packet Drop count ch 2",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_2    }
+{ CON_PACKDROPCNT_3,            "Packet Drop count ch 3",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_3    }
+{ CON_PACKDROPCNT_4,            "Packet Drop count ch 4",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_4    }
+{ CON_PACKDROPCNT_5,            "Packet Drop count ch 5",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_5    }
+{ CON_PACKDROPCNT_6,            "Packet Drop count ch 6",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_6    }
+{ CON_PACKDROPCNT_7,            "Packet Drop count ch 7",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_7    }
+{ CON_PACKDROPCNT_8,            "Packet Drop count ch 8",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_8    }
+{ CON_PACKDROPCNT_9,            "Packet Drop count ch 9",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_9    }
+{ CON_PACKDROPCNT_10,           "Packet Drop count ch 10",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_10   }
+{ CON_PACKDROPCNT_11,           "Packet Drop count ch 11",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_11   }
+{ CON_PACKOFCNT_0,              "Packet Overflow count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_0      }
+{ CON_PACKOFCNT_1,              "Packet Overflow count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_1      }
+{ CON_PACKOFCNT_2,              "Packet Overflow count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_2      }
+{ CON_PACKOFCNT_3,              "Packet Overflow count ch 3",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_3      }
+{ CON_PACKOFCNT_4,              "Packet Overflow count ch 4",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_4      }
+{ CON_PACKOFCNT_5,              "Packet Overflow count ch 5",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_5      }
+{ CON_PACKOFCNT_6,              "Packet Overflow count ch 6",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_6      }
+{ CON_PACKOFCNT_7,              "Packet Overflow count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_7      }
+{ CON_PACKOFCNT_8,              "Packet Overflow count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_8      }
+{ CON_PACKOFCNT_9,              "Packet Overflow count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_9      }
+{ CON_PACKOFCNT_10,             "Packet Overflow count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_10     }
+{ CON_PACKOFCNT_11,             "Packet Overflow count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_11     }
+{ CON_PAUSECNT_0,               "Pause Detection count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_0        }
+{ CON_PAUSECNT_1,               "Pause Detection count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_1        }
+{ CON_PAUSECNT_2,               "Pause Detection count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_2        }
+{ CON_PAUSECNT_3,               "Pause Detection count ch 3",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_3        }
+{ CON_PAUSECNT_4,               "Pause Detection count ch 4",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_4        }
+{ CON_PAUSECNT_5,               "Pause Detection count ch 5",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_5        }
+{ CON_PAUSECNT_6,               "Pause Detection count ch 6",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_6        }
+{ CON_PAUSECNT_7,               "Pause Detection count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_7        }
+{ CON_PAUSECNT_8,               "Pause Detection count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_8        }
+{ CON_PAUSECNT_9,               "Pause Detection count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_9        }
+{ CON_PAUSECNT_10,              "Pause Detection count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_10       }
+{ CON_PAUSECNT_11,              "Pause Detection count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_11       }
+{ DIG_BYTESCNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
+{ DIG_DBIN,                     "Debounced Input Values",                   "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_RegInputBits         }
+{ DIG_SWBYTECNT,                "Number of software bytes in message",      "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_SwBytes              }
+{ MITMSG_CLASS_0,               "Mit msg power class limits,dest 0",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_0         }
+{ MITMSG_CLASS_1,               "Mit msg power class limits,dest 1",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_1         }
+{ MITMSG_CLASS_2,               "Mit msg power class limits,dest 2",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_2         }
+{ MITMSG_CLASS_3,               "Mit msg power class limits,dest 3",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_3         }
+{ MITMSG_CLASS_4,               "Mit msg power class limits,dest 4",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_4         }
+{ MITMSG_CLASS_5,               "Mit msg power class limits,dest 5",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_5         }
+{ MITMSG_CLASS_6,               "Mit msg power class limits,dest 6",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_6         }
+{ MITMSG_CLASS_7,               "Mit msg power class limits,dest 7",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_7         }
+{ MITMSG_CLASS_8,               "Mit msg power class limits,dest 8",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_8         }
+{ MITMSG_CLASS_9,               "Mit msg power class limits,dest 9",        "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_9         }
+{ MITMSG_CLASS_10,              "Mit msg power class limits,dest 10",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_10        }
+{ MITMSG_CLASS_11,              "Mit msg power class limits,dest 11",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_11        }
+{ MITMSG_CLASS_12,              "Mit msg power class limits,dest 12",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_12        }
+{ MITMSG_CLASS_13,              "Mit msg power class limits,dest 13",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_13        }
+{ MITMSG_CLASS_14,              "Mit msg power class limits,dest 14",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_14        }
+{ MITMSG_CLASS_15,              "Mit msg power class limits,dest 15",       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgClass_15        }
+{ MITMSG_TMSTMP,                "Mit msg time stamp",                       "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mitMsgTimeStamp       }
+{ MITMSG_ERRORCNT,              "Mit msg error counter",                    "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mpsErrorCnt           }
+{ MITMSG_TIMEOUTCNT,            "Mit msg timeout counter",                  "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mpsTimeoutCnt         }
+{ RTM_DI,                       "RTM digital input status",                 "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    RTM_DIN                     }
+{ RTM_DO,                       "RTM digital output status",                "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    RTM_DOUT                    }
+{ FPGA_VER,                     "FPGA's Firmware Version Number",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    AV_FpgaVersion              }
+{ FPGA_UPTIMECNT,               "FPGA's seconds since last reset",          "YES",  "1 second", "s",       "", "NO_ALARM", "", "NO_ALARM",    AV_UpTimeCnt                }
+{ PGP_RX_CLK_0,                 "Pgp2bAxi 0 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_0             }
+{ PGP_RX_FRAME_CNT_0,           "Pgp2bAxi 0 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_0            }
+{ PGP_RX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_0         }
+{ PGP_RX_LINK_DOWN_CNT_0,       "Pgp2bAxi 0 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_0         }
+{ PGP_RX_LINK_ERR_CNT_0,        "Pgp2bAxi 0 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_0          }
+{ PGP_RX_CLK_1,                 "Pgp2bAxi 1 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_1             }
+{ PGP_RX_FRAME_CNT_1,           "Pgp2bAxi 1 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_1            }
+{ PGP_RX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_1         }
+{ PGP_RX_LINK_DOWN_CNT_1,       "Pgp2bAxi 1 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_1         }
+{ PGP_RX_LINK_ERR_CNT_1,        "Pgp2bAxi 1 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_1          }
+{ PGP_RX_CLK_2,                 "Pgp2bAxi 2 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_2             }
+{ PGP_RX_FRAME_CNT_2,           "Pgp2bAxi 2 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_2            }
+{ PGP_RX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_2         }
+{ PGP_RX_LINK_DOWN_CNT_2,       "Pgp2bAxi 2 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_2         }
+{ PGP_RX_LINK_ERR_CNT_2,        "Pgp2bAxi 2 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_2          }
+{ PGP_RX_CLK_3,                 "Pgp2bAxi 3 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_3             }
+{ PGP_RX_FRAME_CNT_3,           "Pgp2bAxi 3 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_3            }
+{ PGP_RX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_3         }
+{ PGP_RX_LINK_DOWN_CNT_3,       "Pgp2bAxi 3 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_3         }
+{ PGP_RX_LINK_ERR_CNT_3,        "Pgp2bAxi 3 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_3          }
+{ PGP_TX_CLK_0,                 "Pgp2bAxi 0 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_0             }
+{ PGP_TX_FRAME_CNT_0,           "Pgp2bAxi 0 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_0            }
+{ PGP_TX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_0         }
+{ PGP_TX_CLK_1,                 "Pgp2bAxi 1 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_1             }
+{ PGP_TX_FRAME_CNT_1,           "Pgp2bAxi 1 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_1            }
+{ PGP_TX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_1         }
+{ PGP_TX_CLK_2,                 "Pgp2bAxi 2 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_2             }
+{ PGP_TX_FRAME_CNT_2,           "Pgp2bAxi 2 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_2            }
+{ PGP_TX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_2         }
+{ PGP_TX_CLK_3,                 "Pgp2bAxi 3 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_3             }
+{ PGP_TX_FRAME_CNT_3,           "Pgp2bAxi 3 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_3            }
+{ PGP_TX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_3         }
+{ LC1_UDP_DHCP_IP,              "LCLS-I DHCP Server IP Address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdpDhcpIP               }
+{ LC1_UDP_LOCAL_MAC,            "LCLS-I Port Local MAC address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdplocalMac             }
+{ LC1_TIMEOUT_STATUS,           "LCLS-I timeout status (11-bits)",          "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_TimeoutStatusMask       }
+{ LC1_MSG_ERROR_CNT,            "LCLS-I Message Error Counter",             "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_lcls1MessageError       }
+{ LC2_MSG_ERROR_CNT,            "LCLS-II Message Error Counter",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_lcls2MessageError       }
+{ LC1_MAC_ADDR,                 "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_MacAddr                 }
+{ ASM_MPS_AMC_DOUT,             "State of the 4 AMC lines",                 "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ASMCORE_mpsAmcDout          }
+{ PGP_RX_MON_FRAME_CNT_0,       "PGP 0 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_0         }
+{ PGP_RX_MON_FRAME_SIZE_0,      "PGP 0 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_0        }
+{ PGP_RX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_0     }
+{ PGP_RX_MON_FRAME_SIZE_MIN_0,  "PGP 0 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_0     }
+{ PGP_RX_MON_FRAME_CNT_1,       "PGP 1 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_1         }
+{ PGP_RX_MON_FRAME_SIZE_1,      "PGP 1 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_1        }
+{ PGP_RX_MON_FRAME_SIZE_MAX_1,  "PGP 1 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_1     }
+{ PGP_RX_MON_FRAME_SIZE_MIN_1,  "PGP 1 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_1     }
+{ PGP_RX_MON_FRAME_CNT_2,       "PGP 2 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_2         }
+{ PGP_RX_MON_FRAME_SIZE_2,      "PGP 2 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_2        }
+{ PGP_RX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_2     }
+{ PGP_RX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_2     }
+{ PGP_RX_MON_FRAME_CNT_3,       "PGP 3 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_3         }
+{ PGP_RX_MON_FRAME_SIZE_3,      "PGP 3 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_3        }
+{ PGP_RX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_3     }
+{ PGP_RX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_3     }
+{ PGP_TX_MON_FRAME_CNT_0,       "PGP 0 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_0         }
+{ PGP_TX_MON_FRAME_SIZE_0,      "PGP 0 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_0        }
+{ PGP_TX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_0     }
+{ PGP_TX_MON_FRAME_SIZE_MIN_0,  "PGP 0 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_0     }
+{ PGP_TX_MON_FRAME_CNT_1,       "PGP 1 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_1         }
+{ PGP_TX_MON_FRAME_SIZE_1,      "PGP 1 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_1        }
+{ PGP_TX_MON_FRAME_SIZE_MAX_1,  "PGP 1 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_1     }
+{ PGP_TX_MON_FRAME_SIZE_MIN_1,  "PGP 1 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_1     }
+{ PGP_TX_MON_FRAME_CNT_2,       "PGP 2 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_2         }
+{ PGP_TX_MON_FRAME_SIZE_2,      "PGP 2 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_2        }
+{ PGP_TX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_2     }
+{ PGP_TX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_2     }
+{ PGP_TX_MON_FRAME_CNT_3,       "PGP 3 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_3         }
+{ PGP_TX_MON_FRAME_SIZE_3,      "PGP 3 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_3        }
+{ PGP_TX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_3     }
+{ PGP_TX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_3     }
+{ PGP_RX_MON_FRAME_RATE_0,      "PGP 0 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_0        }
+{ PGP_RX_MON_FRAME_RATE_MAX_0,  "PGP 0 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_0     }
+{ PGP_RX_MON_FRAME_RATE_MIN_0,  "PGP 0 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_0     } 
+{ PGP_RX_MON_FRAME_RATE_1,      "PGP 1 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_1        }
+{ PGP_RX_MON_FRAME_RATE_MAX_1,  "PGP 1 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_1     }
+{ PGP_RX_MON_FRAME_RATE_MIN_1,  "PGP 1 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_1     }
+{ PGP_RX_MON_FRAME_RATE_2,      "PGP 2 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_2        }
+{ PGP_RX_MON_FRAME_RATE_MAX_2,  "PGP 2 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_2     }
+{ PGP_RX_MON_FRAME_RATE_MIN_2,  "PGP 2 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_2     }
+{ PGP_RX_MON_FRAME_RATE_3,      "PGP 3 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_3        }
+{ PGP_RX_MON_FRAME_RATE_MAX_3,  "PGP 3 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_3     }
+{ PGP_RX_MON_FRAME_RATE_MIN_3,  "PGP 3 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_3     }
+{ PGP_TX_MON_FRAME_RATE_0,      "PGP 0 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_0        }
+{ PGP_TX_MON_FRAME_RATE_MAX_0,  "PGP 0 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_0     }
+{ PGP_TX_MON_FRAME_RATE_MIN_0,  "PGP 0 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_0     }
+{ PGP_TX_MON_FRAME_RATE_1,      "PGP 1 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_1        }
+{ PGP_TX_MON_FRAME_RATE_MAX_1,  "PGP 1 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_1     }
+{ PGP_TX_MON_FRAME_RATE_MIN_1,  "PGP 1 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_1     }
+{ PGP_TX_MON_FRAME_RATE_2,      "PGP 2 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_2        }
+{ PGP_TX_MON_FRAME_RATE_MAX_2,  "PGP 2 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_2     }
+{ PGP_TX_MON_FRAME_RATE_MIN_2,  "PGP 2 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_2     }
+{ PGP_TX_MON_FRAME_RATE_3,      "PGP 3 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_3        }
+{ PGP_TX_MON_FRAME_RATE_MAX_3,  "PGP 3 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_3     }
+{ PGP_TX_MON_FRAME_RATE_MIN_3,  "PGP 3 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_3     }
 }
 
 # Single register with AI records
@@ -271,6 +271,10 @@ file "RegRW.template" { pattern
 { CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
 }
 
+file "Reg1BitRW.template" { pattern
+{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   ZSV,        OSV,     PARAM                    }
+{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
+}
 
 #======================================
 # 1-bit Register with ScalVal interfaces
@@ -279,7 +283,6 @@ file "Reg1BitRW.template" { pattern
 { R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   PARAM                    }
 { DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
 { DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
-{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    DIGMES_DigitalForceEn    }
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
 }
 

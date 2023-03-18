@@ -1,26 +1,6 @@
 #This database handles montoring the link node for mode(SC/NC)
 #faults and provides functionality to correct them
-
-record(mbbi, "$(NAME):FACMODE_RBV"){
-    field(DESC, "Node Timing Mode Readback")
-    field(INP, "$(NAME):FACMODERBV_CALC")
-    field(SCAN, "1 second")
-    field(ZRST, "NC")
-    field(ONST, "SC")
-    field(TWST, "Misconfigured")
-    field(ZRSV, "NO_ALARM")
-    field(ONSV, "NO_ALARM")
-    field(TWSV, "MAJOR")
-}
-
-record(mbbi, "$(NAME):FACMODE"){
-    field(DESC, "Node Timing Mode Set")
-    field(ZRST, "NC")
-    field(ONST, "SC")
-    field(FLNK, "$(NAME):SET_FACMODE")
-}
-
-record(calc, $(NAME):FACMODERBV_CALC){
+record(calc, $(NAME):FACMODE_RBV_CALC){
     field(DESC, "Timing Mode Cacluation")
     field(SCAN, "1 second")
     field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
@@ -35,6 +15,7 @@ record(fanout, "$(NAME):SET_FACMODE"){
     field(LNK0, "$(NAME):SET_TPRMODE")
     field(LNK1, "$(NAME):SET_LC1_MODE")
     field(LNK2, "$(NAME):SET_CROSSBAR")
+    field(LNK3, "$(TPR):RESET_RX_ERR")
 }
 
 record(calcout, "$(NAME):SET_TPRMODE"){
@@ -64,6 +45,16 @@ record(calcout, "$(NAME):SET_LC1_MODE"){
     field(FLNK, "$(P):LC1_MODE")
 }
 
+record(calcout, "$(TPR):RESET_RX_ERR") {
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(TPR):TIMING_RX_ERR")
+    field(CALC, "A=1?0:0")
+    field(ODLY, "2")
+    field(OUT,  "$(TPR):TIMING_RX_ERR")
+    field(FLNK, "$(TPR):TIMING_RX_ERR")
+}
+
 record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(PINI, "YES")
   field(DESC, "Crossbar selection")
@@ -71,8 +62,8 @@ record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(SCAN, "Passive")
   field(ZRVL, "0")
   field(ONVL, "1")
-  field(ZRST, "AN: BP")
-  field(ONST, "AN: miniTpg")
+  field(ZRST, "Backplane")
+  field(ONST, "miniTpg")
   field(FLNK, "$(TPR):TCRB:MODECTRL_CALC")
   info(autosaveFields, "VAL")
 }
@@ -123,8 +114,8 @@ record(mbbi, "$(TPR):TCRB:MODE") {
   field(INP,  "$(TPR):TCRB:MODE_CALC MS")
   field(ZRVL, "0")
   field(ONVL, "1")
-  field(ZRST, "AN: BP")
-  field(ONST, "AN: miniTpg")
+  field(ZRST, "Backplane")
+  field(ONST, "miniTpg")
   field(ONSV, "MINOR")
   field(TWST, "Unknown")
   field(TWSV, "INVALID")
@@ -147,6 +138,7 @@ record(mbbo, "$(TPR):WFSTREAMRATE")
   field(ZRST, "1 Hz")
   field(ONST, "10 Hz")
   field(FLNK, "$(TPR):WFSTREAMRATE_CALC")
+  info(autosaveFields, "VAL")
 }
 record(calc, "$(TPR):WFSTREAMRATE_CALC") {
   field(DESC, "WF Stream Rate")
@@ -155,7 +147,7 @@ record(calc, "$(TPR):WFSTREAMRATE_CALC") {
   field(FLNK, "$(TPR):WFSTREAMRATE_SEQ")
 }
 record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
-  field(DESC, "Crossbar selection")
+  field(DESC, "WF Stream Rate")
   field(SELM, "Mask")
   field(SELL, "$(TPR):WFSTREAMRATE_CALC")
   field(DOL1, "43")

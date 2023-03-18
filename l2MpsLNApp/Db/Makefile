@@ -30,6 +30,10 @@ include $(TOP)/configure/CONFIG
 DB_INSTALLS += $(ATCACOMMON)/db/StreamGainControl.db
 DB_INSTALLS += $(ATCACOMMON)/db/StreamEGU.db
 DB_INSTALLS += $(ATCACOMMON)/db/StreamSize.db
+DB_INSTALLS += $(ATCACOMMON)/db/StreamType.db
+DB_INSTALLS += $(ATCACOMMON)/db/StreamShort.db
+DB_INSTALLS += $(ATCACOMMON)/db/crossbarCtrl.db
+DB_INSTALLS += $(ATCACOMMON)/db/ATCACommon.db
 DB_INSTALLS += $(IOCADMIN)/db/iocAdminSoft.db
 DB_INSTALLS += $(IOCADMIN)/db/iocAdminScanMon.db
 IOCRELEASE_DB += iocRelease.db
@@ -66,7 +70,7 @@ DB_INSTALLS += $(EVRCLIENT)/db/Bsa.db
 DB_INSTALLS += $(BSADRIVER)/db/bsa.db
 DB_INSTALLS += $(BSADRIVER)/db/bsss.db
 DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl.db
-DB_INSTALLS += $(BSADRIVER)/db/bsssCtrl_localTest.db
+DB_INSTALLS += $(BSADRIVER)/db/bsasCtrl.db
 
 # ==========================================
 # MPS LN specific databases
@@ -78,8 +82,10 @@ DB += mpsWF.db
 DB += mpsGC.db
 DB += modeManagerLN.db
 DB += modeManagerAN.db
+DB += modeManagerDN.db
 DB += l2MpsL1Bsa.db
 DB += timing_rx_error.db
+DB += facMode.template
 # ==========================================
 
 # For saving and loading yaml configuration
