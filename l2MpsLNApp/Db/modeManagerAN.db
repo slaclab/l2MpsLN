@@ -159,3 +159,16 @@ record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
   field(DOL4, "1")
   field(LNK4, "$(TPR):CH06_FIXEDRATE PP")
 }
+record(bo,  "$(P):RESET_ERR") {
+  field(DESC, "Reset all errors in LN")
+  field(ZNAM, "Release")
+  field(ONAM, "Reset")
+  field(FLNK,  "$(P):RESET_ERR_SEQ PP NMS")
+}
+
+record(seq, "$(P):RESET_ERR_SEQ"){
+  field(DESC, "Reset all errors in LN")
+  field(SELM, "All")
+  field(DOL1, "1")
+  field(LNK1, "$(P):SALT_RST_CNT PP")
+}
