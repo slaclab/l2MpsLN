@@ -19,3 +19,4 @@ epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 #
 < ${TOP}/iocBoot/common/start.cmd
 
+system("scripts/setupBPClockRT.sh shm-b34-sp08-1")
