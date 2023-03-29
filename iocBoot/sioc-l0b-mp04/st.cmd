@@ -7,11 +7,17 @@
 
 epicsEnvSet("SLOT_ID", "2")
 epicsEnvSet("FPGA_IP","10.1.1.10${SLOT_ID}")
+epicsEnvSet("FACILITY","lcls")
+epicsEnvSet("TYPE","LN")
+
+epicsEnvSet("LOCATION","L0B")
+epicsEnvSet("LOCATION_INDEX","MP04")
+epicsEnvSet("MODE_INPV", "1")
 
 #
 # Loads common Link Node startup
 #
-< ${TOP}/iocBoot/common/link_node.cmd
+< ${TOP}/iocBoot/common/start.cmd
 
 cpswLoadConfigFile("iocBoot/sioc-l0b-mp04/mitigation_config.yaml", "mmio")
 

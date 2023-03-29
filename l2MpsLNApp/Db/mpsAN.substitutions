@@ -4,20 +4,20 @@
 
 # Single register with longin records
 file "RegRO.template" { pattern
-{ R,                        DESC,                                       PINI,   SCAN,       EGU,        PARAM                       }
-{ ADC_VALID_0,              "Adc valid flags, Bay 0",                   "YES",  "1 second", "",         AMCADC_AdcValid_0           }
-{ ADC_VALID_1,              "Adc valid flags, Bay 1",                   "YES",  "1 second", "",         AMCADC_AdcValid_1           }
-{ FPGA_VER,                 "FPGA's Firmware Version Number",           "YES",  "1 second", "",         AV_FpgaVersion              }
-{ ANA_OVERTHR_CNT_0         "Over threshold for ADC input 0",           "YES",  "1 second", "",         ANACORE_overThreshCnt_0     }
-{ ANA_OVERTHR_CNT_1         "Over threshold for ADC input 1",           "YES",  "1 second", "",         ANACORE_overThreshCnt_1     }
-{ ANA_OVERTHR_CNT_2         "Over threshold for ADC input 2",           "YES",  "1 second", "",         ANACORE_overThreshCnt_2     }
-{ ANA_OVERTHR_CNT_3         "Over threshold for ADC input 3",           "YES",  "1 second", "",         ANACORE_overThreshCnt_3     }
-{ ANA_OVERTHR_CNT_4         "Over threshold for ADC input 4",           "YES",  "1 second", "",         ANACORE_overThreshCnt_4     }
-{ ANA_OVERTHR_CNT_5         "Over threshold for ADC input 5",           "YES",  "1 second", "",         ANACORE_overThreshCnt_5     }
-{ ANA_BUNCH_CNT,            "Bunch present counter",                    "YES",  "1 second", "",         ANACORE_bunchPresentCnt     }
-{ FPGA_UPTIMECNT,           "FPGA's seconds since last reset",          "YES",  "1 second", "s",        AV_UpTimeCnt                }
-{ DM0_TRIGGER_CNT,          "DaqMux, bay0, trigger counter",            "YES",  "1 second", "triggers", DM0_TrigCnt                 }
-{ DM1_TRIGGER_CNT,          "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers", DM1_TrigCnt                 }
+{ R,                            DESC,                                       PINI,   SCAN,       EGU,       LOW, LSV,      HIGH, HSV,          PARAM                       }
+{ ADC_VALID_0,                  "Adc valid flags, Bay 0",                   "YES",  "1 second", "",        "", "",         "", "",            AMCADC_AdcValid_0           }
+{ ADC_VALID_1,                  "Adc valid flags, Bay 1",                   "YES",  "1 second", "",        "", "",         "", "",            AMCADC_AdcValid_1           }
+{ FPGA_VER,                     "FPGA's Firmware Version Number",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    AV_FpgaVersion              }
+{ ANA_OVERTHR_CNT_0             "Over threshold for ADC input 0",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_0     }
+{ ANA_OVERTHR_CNT_1             "Over threshold for ADC input 1",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_1     }
+{ ANA_OVERTHR_CNT_2             "Over threshold for ADC input 2",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_2     }
+{ ANA_OVERTHR_CNT_3             "Over threshold for ADC input 3",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_3     }
+{ ANA_OVERTHR_CNT_4             "Over threshold for ADC input 4",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_4     }
+{ ANA_OVERTHR_CNT_5             "Over threshold for ADC input 5",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_5     }
+{ ANA_BUNCH_CNT,                "Bunch present counter",                    "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_bunchPresentCnt     }
+{ FPGA_UPTIMECNT,               "FPGA's seconds since last reset",          "YES",  "1 second", "s",       "", "NO_ALARM", "", "NO_ALARM",    AV_UpTimeCnt                }
+{ DM0_TRIGGER_CNT,              "DaqMux, bay0, trigger counter",            "YES",  "1 second", "triggers","", "NO_ALARM", "", "NO_ALARM",    DM0_TrigCnt                 }
+{ DM1_TRIGGER_CNT,              "DaqMux, bay1, trigger counter",            "YES",  "1 second", "triggers","", "NO_ALARM", "", "NO_ALARM",    DM1_TrigCnt                 }
 }
 
 # Single register with AI records

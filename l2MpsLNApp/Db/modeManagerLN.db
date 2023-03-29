@@ -1,44 +1,21 @@
 #This database handles montoring the link node for mode(SC/NC)
 #faults and provides functionality to correct them
-
-record(mbbi, "$(NAME):FACMODE_RBV"){
-    field(DESC, "Node Timing Mode Readback")
-    field(INP, "$(NAME):FACMODERBV_CALC")
-    field(SCAN, "1 second")
-    field(ZRST, "NC")
-    field(ONST, "SC")
-    field(TWST, "Misconfigured")
-    field(THST, "Timing Rx Link Down")
-    field(ZRSV, "NO_ALARM")
-    field(ONSV, "NO_ALARM")
-    field(TWSV, "MAJOR")
-    field(THSV, "MAJOR")
-}
-
-record(mbbi, "$(NAME):FACMODE"){
-    field(DESC, "Node Timing Mode Set")
-    field(ZRST, "NC")
-    field(ONST, "SC")
-    field(FLNK, "$(NAME):SET_FACMODE")
-}
-
-record(calc, $(NAME):FACMODERBV_CALC){
+record(calc, $(NAME):FACMODE_RBV_CALC){
     field(DESC, "Timing Mode Cacluation")
     field(SCAN, "1 second")
     field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
     field(INPB, "TPR:$(LOCA):$(IOC_UNIT):$(INST):RXLNKSTATUS")# 0 down 1 up
     field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
-    field(CALC, "B?((!A)&B&C?0:A&B&(!C)?1:2):3")
+    field(CALC, "((!A)&B&C?0:A&B&(!C)?1:2)")
 }
-
 record(fanout, "$(NAME):SET_FACMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
     field(LNK0, "$(NAME):SET_TPRMODE")
     field(LNK1, "$(NAME):SET_LC1_MODE")
     field(LNK2, "$(NAME):SET_CROSSBAR")
+    field(LNK3, "$(P):LC1_CLRTIMEOUT")
 }
-
 record(calcout, "$(NAME):SET_TPRMODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
@@ -47,7 +24,6 @@ record(calcout, "$(NAME):SET_TPRMODE"){
     field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
     field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
 }
-
 record(calcout, "$(NAME):SET_LC1_MODE"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
@@ -56,7 +32,6 @@ record(calcout, "$(NAME):SET_LC1_MODE"){
     field(OUT, "$(P):LC1_MODE")
     field(FLNK, "$(P):LC1_MODE")
 }
-
 record(calcout, "$(NAME):SET_CROSSBAR"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
@@ -65,7 +40,6 @@ record(calcout, "$(NAME):SET_CROSSBAR"){
     field(OUT, "$(TPR):TCRB:MODECTRL")
     field(FLNK, "$(TPR):TCRB:MODECTRL")
 }
-
 record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(PINI, "YES")
   field(DESC, "Crossbar selection")
@@ -77,12 +51,12 @@ record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(THVL, "3")
   field(FRVL, "4")
   field(FVVL, "5")
-  field(ZRST, "NC: Entire Crate")
-  field(ONST, "SC: Enitre Crate")
-  field(TWST, "BP: NC; LN: SC")
-  field(THST, "BP: SC; LN: NC")
-  field(FRST, "BP: NC; LN: miniTPG")
-  field(FVST, "BP: SC; LN: miniTPG")
+  field(ZRST, "Entire Crate=NC")
+  field(ONST, "Enitre Crate=SC")
+  field(TWST, "Crate=NC; LN=SC")
+  field(THST, "Crate=SC; LN=NC")
+  field(FRST, "Crate=NC; LN=miniTPG")
+  field(FVST, "Crate=SC; LN=miniTPG")
   field(FLNK, "$(TPR):TCRB:MODECTRL_CALC")
   info(autosaveFields, "VAL")
 }
@@ -142,13 +116,13 @@ record(mbbi, "$(TPR):TCRB:MODE") {
   field(FRVL, "4")
   field(FVVL, "5")
   field(SXVL, "6")
-  field(ZRST, "NC: Entire Crate")
-  field(ONST, "SC: Enitre Crate")
-  field(TWST, "BP: NC; LN: SC")
-  field(THST, "BP: SC; LN: SC")
-  field(FRST, "BP: NC; LN: miniTPG")
+  field(ZRST, "Entire Crate=NC")
+  field(ONST, "Enitre Crate=SC")
+  field(TWST, "Crate=NC; LN=SC")
+  field(THST, "Crate=SC; LN=NC")
+  field(FRST, "Crate=NC; LN=miniTPG")
+  field(FVST, "Crate=SC; LN=miniTPG")
   field(FRSV, "MINOR")
-  field(FVST, "BP: SC; LN: miniTPG")
   field(FVSV, "MINOR")
   field(SXST, "Unknown")
   field(SXSV, "INVALID")
@@ -170,6 +144,7 @@ record(mbbo, "$(TPR):WFSTREAMRATE")
   field(ZRST, "1 Hz")
   field(ONST, "10 Hz")
   field(FLNK, "$(TPR):WFSTREAMRATE_CALC")
+  info(autosaveFields, "VAL")
 }
 record(calc, "$(TPR):WFSTREAMRATE_CALC") {
   field(DESC, "WF Stream Rate")
@@ -178,7 +153,7 @@ record(calc, "$(TPR):WFSTREAMRATE_CALC") {
   field(FLNK, "$(TPR):WFSTREAMRATE_SEQ")
 }
 record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
-  field(DESC, "Crossbar selection")
+  field(DESC, "WF Stream Rate")
   field(SELM, "Mask")
   field(SELL, "$(TPR):WFSTREAMRATE_CALC")
   field(DOL1, "43")
@@ -189,4 +164,30 @@ record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
   field(LNK3, "$(TPR):CH06_FIXEDRATE PP")
   field(DOL4, "1")
   field(LNK4, "$(TPR):CH06_FIXEDRATE PP")
+}
+
+record(bo,  "$(P):RESET_ERR") {
+  field(DESC, "Reset all errors in LN")
+  field(ZNAM, "Release")
+  field(ONAM, "Reset")
+  field(FLNK,  "$(P):RESET_ERR_SEQ PP NMS")
+}
+
+record(seq, "$(P):RESET_ERR_SEQ"){
+  field(DESC, "Reset all errors in LN")
+  field(SELM, "All")
+  field(DOL1, "1")
+  field(LNK1, "$(P):PGP_CNTRST_0.PROC PP")
+  field(DOL2, "1")
+  field(LNK2, "$(P):PGP_CNTRST_1 PP")
+  field(DOL3, "1")
+  field(LNK3, "$(P):PGP_CNTRST_2 PP")
+  field(DOL4, "1")
+  field(LNK4, "$(P):PGP_CNTRST_3 PP")
+  field(DOL5, "1")
+  field(LNK5, "$(P):CON_CNTRST PP")
+  field(DOL6, "1")
+  field(LNK6, "$(P):LC1_CLRTIMEOUT PP")
+  field(DOL7, "1")
+  field(LNK7, "$(P):SALT_RST_CNT PP")
 }

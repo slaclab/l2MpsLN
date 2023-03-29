@@ -4,5 +4,9 @@ record(longin,  "$(P):$(R)") {
     field(EGU,  "$(EGU)")
     field(PINI, "$(PINI)")
     field(SCAN, "$(SCAN)")
+    field(LOW,  "$(LOW="")")
+    field(LSV,  "$(LSV="NO_ALARM")")
+    field(HIGH, "$(HIGH="")")
+    field(HSV,  "$(HSV="NO_ALARM")")
     field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
 }
