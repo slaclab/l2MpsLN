@@ -67,8 +67,6 @@ set_pass0_restoreFile("info_settings.sav")
 set_pass1_restoreFile("info_settings.sav")
 set_pass0_restoreFile("info_positions.sav")
 set_pass1_restoreFile("info_positions.sav")
-set_pass0_restoreFile("ana_units.sav")
-set_pass1_restoreFile("ana_units.sav")
 
 # ===========================================
 #          CHANNEL ACESS SECURITY
@@ -124,3 +122,4 @@ dbpf ${L2MPS_PREFIX}:DM0_HW_ARM 1
 dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
 dbpf ${TPR}:TIMING_RX_ERR 0
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
+dbpf ${L2MPS_PREFIX}:RESET_ERR.PROC 1

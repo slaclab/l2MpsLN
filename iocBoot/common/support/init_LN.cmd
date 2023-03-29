@@ -31,3 +31,6 @@ dbLoadRecords("db/mpsGC.db","GC=${GC0},GCA=${GCA0},BAY=0,CH=0, PORT=${YCPSWASYN_
 dbLoadRecords("db/mpsGC.db","GC=${GC1},GCA=${GCA1},BAY=0,CH=1, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsGC.db","GC=${GC2},GCA=${GCA2},BAY=1,CH=0, PORT=${YCPSWASYN_PORT}")
 dbLoadRecords("db/mpsGC.db","GC=${GC3},GCA=${GCA3},BAY=1,CH=1, PORT=${YCPSWASYN_PORT}")
+
+set_pass0_restoreFile("ana_units.sav")
+set_pass1_restoreFile("ana_units.sav")
