@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-1-0__: 2023-02-07 jmock
+  * Update mode manager PVs
+  * Update boot scripts to make maintenance easier
+  * Update FW/SW to 4.10.2 for bsa bug fix and DN yaml fix
+
 * __l2MpsLN-R4-0-0__: 2023-02-07 jmock
   * Update mode manager database to read in external mode setting
   * Update mode manager database to change name from LCLSMODE
