@@ -6,7 +6,9 @@ record(calc, $(NAME):FACMODE_RBV_CALC){
     field(INPA, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE") #0 lcls1 1 lcls 2
     field(INPB, "TPR:$(LOCA):$(IOC_UNIT):$(INST):RXLNKSTATUS")# 0 down 1 up
     field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
-    field(CALC, "(!A)&B&C ? 0 : A&B&(!C) ? 1 : 2")
+    field(INPD, "$(P):NC_BSA_EN_RBV") #0 disable 1 enable
+    field(INPE, "$(TPR):SC_BSA_ENABLE") #0 disable 1 enable 
+    field(CALC, "((!A)&B&C&D&(!E)?0:A&B&(!C)&(!D)&E?1:2)")
 }
 
 record(fanout, "$(NAME):SET_FACMODE"){
@@ -16,6 +18,9 @@ record(fanout, "$(NAME):SET_FACMODE"){
     field(LNK1, "$(NAME):SET_LC1_MODE")
     field(LNK2, "$(NAME):SET_CROSSBAR")
     field(LNK3, "$(TPR):RESET_RX_ERR")
+    field(LNK4, "$(NAME):SET_NC_BSA_EN")
+    field(LNK5, "$(NAME):SET_SC_BSA_EN")
+    field(LNK6, "$(P):LC1_CLRTIMEOUT")
 }
 
 record(calcout, "$(NAME):SET_TPRMODE"){
@@ -26,7 +31,22 @@ record(calcout, "$(NAME):SET_TPRMODE"){
     field(OUT, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
     field(FLNK, "TPR:$(LOCA):$(IOC_UNIT):$(INST):MODE")
 }
-
+record(calcout, "$(NAME):SET_NC_BSA_EN"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(NAME):FACMODE")
+    field(CALC, "!A ? 1 : 0")
+    field(OUT,  "$(P):NC_BSA_EN")
+    field(FLNK, "$(P):NC_BSA_EN")
+}
+record(calcout, "$(NAME):SET_SC_BSA_EN"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(NAME):FACMODE")
+    field(CALC, "!A ? 0 : 1")
+    field(OUT,  "$(TPR):SC_BSA_ENABLE")
+    field(FLNK, "$(TPR):SC_BSA_ENABLE")
+}
 record(calcout, "$(NAME):SET_CROSSBAR"){
     field(DESC, "Internal")
     field(SCAN, "Passive")
@@ -159,16 +179,51 @@ record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
   field(DOL4, "1")
   field(LNK4, "$(TPR):CH06_FIXEDRATE PP")
 }
+record(bo,  "$(P):RESET_REMOTE") {
+  field(DESC,  "Reset all errors in LN"
+  field(DOL,   "SIOC:SYS0:MP00:RESET_ALL CPP NMS")
+  field(OMSL,  "closed_loop")
+  field(OUT,   "$(P):RESET_ERR PP")
+}
 record(bo,  "$(P):RESET_ERR") {
   field(DESC, "Reset all errors in LN")
   field(ZNAM, "Release")
   field(ONAM, "Reset")
   field(FLNK,  "$(P):RESET_ERR_SEQ PP NMS")
 }
-
 record(seq, "$(P):RESET_ERR_SEQ"){
   field(DESC, "Reset all errors in LN")
   field(SELM, "All")
   field(DOL1, "1")
   field(LNK1, "$(P):SALT_RST_CNT PP")
+}
+record(bo, "$(TPR):SC_BSA_ENABLE")
+{
+    field(DESC, "Bsa Enable")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT),0) bsa_enable")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(OMSL, "supervisory")
+    field(VAL,  "1")
+}
+record(bi, "$(TPR):SC_BSA_STATUS")
+{
+    field(DESC, "BSA Status")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0) status")
+    field(SCAN, "I/O Intr")
+    field(ZNAM, "NORMAL")
+    field(ONAM, "FAULT")
+    field(ZSV,  "NO_ALARM")
+    field(OSV,  "MAJOR")
+    field(PINI, "YES")
+}
+record(longin, "$(TPR):SC_BSA_FLTCNT")
+{
+    field(DESC, "BSA Fault Count")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0) fault_cnt")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
 }

@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-2-0__: 2023-04-23 jmock
+  * Update BSA driver to 3.2.0
+  * Add NC / SC BSA stream enable to FACMODE calc
+
 * __l2MpsLN-R4-1-0__: 2023-02-07 jmock
   * Update mode manager PVs
   * Update boot scripts to make maintenance easier

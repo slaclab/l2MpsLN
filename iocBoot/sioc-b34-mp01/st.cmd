@@ -10,8 +10,8 @@ epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 epicsEnvSet("FACILITY","dev")
 epicsEnvSet("TYPE","LN")
 
-epicsEnvSet("LOCATION","UNDH")
-epicsEnvSet("LOCATION_INDEX","MP06")
+epicsEnvSet("LOCATION","B34")
+epicsEnvSet("LOCATION_INDEX","MP01")
 epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 
 #
