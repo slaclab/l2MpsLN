@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-2-2__: 2023-04-24 jmock
+  * Change BSAS NTNDArray Prefix from {L2MPS_PREFIX} to {TPR}
+    to be consistent with BPMs
+
 * __l2MpsLN-R4-2-1__: 2023-04-23 jmock
   * Fix bug in modeManagerAN and modeManagerDN
 
