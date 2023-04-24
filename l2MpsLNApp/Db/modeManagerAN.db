@@ -180,7 +180,7 @@ record(seq,  "$(TPR):WFSTREAMRATE_SEQ") {
   field(LNK4, "$(TPR):CH06_FIXEDRATE PP")
 }
 record(bo,  "$(P):RESET_REMOTE") {
-  field(DESC,  "Reset all errors in LN"
+  field(DESC,  "Reset all errors in LN")
   field(DOL,   "SIOC:SYS0:MP00:RESET_ALL CPP NMS")
   field(OMSL,  "closed_loop")
   field(OUT,   "$(P):RESET_ERR PP")
