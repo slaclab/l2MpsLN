@@ -123,3 +123,6 @@ dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
 dbpf ${TPR}:TIMING_RX_ERR 0
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
 dbpf ${L2MPS_PREFIX}:RESET_ERR.PROC 1
+
+iocshCmd("pvxsl() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsl")
+iocshCmd("pvxsr() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsr")

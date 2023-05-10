@@ -8,7 +8,7 @@ record(calc, $(NAME):FACMODE_RBV_CALC){
     field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
     field(INPD, "$(P):NC_BSA_EN_RBV") #0 disable 1 enable
     field(INPE, "$(TPR):SC_BSA_ENABLE") #0 disable 1 enable 
-    field(CALC, "((!A)&B&C&D&(!E)?0:A&B&(!C)&(!D)&E?1:2)")
+    field(CALC, "((!A)&B&C&(!D)&(!E)?0:A&B&(!C)&(!D)&(!E)?1:2)")
 }
 record(fanout, "$(NAME):SET_FACMODE"){
     field(DESC, "Internal")
@@ -219,8 +219,8 @@ record(seq, "$(P):RESET_ERR_SEQ"){
 record(bo, "$(TPR):SC_BSA_ENABLE")
 {
     field(DESC, "Bsa Enable")
-    field(ZNAM, "Disable")
-    field(ONAM, "Enable")
+    field(ZNAM, "Not Implemented")
+    field(ONAM, "Not Implemented")
     field(OMSL, "supervisory")
     field(VAL,  "1")
 }
@@ -228,8 +228,8 @@ record(bi, "$(TPR):SC_BSA_STATUS")
 {
     field(DESC, "BSA Status")
     field(SCAN, "Passive")
-    field(ZNAM, "NORMAL")
-    field(ONAM, "FAULT")
+    field(ZNAM, "Not Implemented")
+    field(ONAM, "Not Implemented")
     field(ZSV,  "NO_ALARM")
     field(OSV,  "MAJOR")
     field(PINI, "YES")
@@ -240,5 +240,29 @@ record(longin, "$(TPR):SC_BSA_FLTCNT")
     field(DESC, "BSA Fault Count")
     field(SCAN, "Passive")
     field(PINI, "YES")
+    field(VAL,  "0")
+}
+record(bo, "$(TPR):BSSS_CTRL")
+{
+    field(DESC, "Bsa Enable")
+    field(ZNAM, "Not Implemented")
+    field(ONAM, "Not Implemented")
+    field(OMSL, "supervisory")
+    field(VAL,  "0")
+}
+record(bo, "$(TPR):BSSS_PKTSZ")
+{
+    field(DESC, "Bsa Enable")
+    field(ZNAM, "Not Implemented")
+    field(ONAM, "Not Implemented")
+    field(OMSL, "supervisory")
+    field(VAL,  "0")
+}
+record(bo, "$(TPR):BSSS_RATELIMIT")
+{
+    field(DESC, "Bsa Enable")
+    field(ZNAM, "Not Implemented")
+    field(ONAM, "Not Implemented")
+    field(OMSL, "supervisory")
     field(VAL,  "0")
 }

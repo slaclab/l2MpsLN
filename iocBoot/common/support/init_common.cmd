@@ -4,9 +4,10 @@
 #
 # ====================================================================
 
-epicsEnvSet("INST","1")
+epicsEnvSet("INST","0")
 epicsEnvSet("IOC_NAME", "SIOC:${LOCATION}:${LOCATION_INDEX}")
 epicsEnvSet("TPR","TPR:${LOCATION}:${LOCATION_INDEX}:${INST}")
+epicsEnvSet("BSAS","BSAS:${LOCATION}:${LOCATION_INDEX}:${INST}")
 epicsEnvSet("MODE_RBV","${IOC_NAME}:FACMODE_RBV_CALC")
 
 # CPSW Port names
