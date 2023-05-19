@@ -3,7 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R4-3-1__: 2023-05-10 jmock
+* __l2MpsLN-R4-4-0__: 2023-05-18 jmock
+  * Update bsaDriver to R4.0.0
+
+* __l2MpsLN-R4-3-1__: 2023-05-17 jmock
   * Change RTM mitigation for mechanical shutter from
     dest 0x2 to dest 0xE in sioc-gunb-mp01
 
