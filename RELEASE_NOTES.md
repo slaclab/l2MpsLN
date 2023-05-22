@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-4-1__: 2023-05-22 jmock
+  * Remove BSAS from IOC boot script
+
 * __l2MpsLN-R4-4-0__: 2023-05-18 jmock
   * Update bsaDriver to R4.0.0
 
