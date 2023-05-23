@@ -210,18 +210,18 @@ file "RegRO_Analog.template" { pattern
 { ANA_AVG_VAL_3,            "Analog core: Average value (ch 3)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_3  }
 { ANA_AVG_VAL_4,            "Analog core: Average value (ch 4)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_4  }
 { ANA_AVG_VAL_5,            "Analog core: Average value (ch 5)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_5  }
-{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_0   }
-{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_1   }
-{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_2   }
-{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_3   }
-{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_4   }
-{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_5   }
-{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_6   }
-{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_7   }
-{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_8   }
-{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_9   }
-{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_10  }
-{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  ".1 second",    "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_11  }
+{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_0   }
+{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_1   }
+{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_2   }
+{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_3   }
+{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_4   }
+{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_5   }
+{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_6   }
+{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_7   }
+{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_8   }
+{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_9   }
+{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_10  }
+{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_11  }
 { ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_12  }
 { ANA_BSA_DATA_13,          "BSA data (ch 13)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_13  }
 { ANA_BSA_DATA_14,          "BSA data (ch 14)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_14  }
