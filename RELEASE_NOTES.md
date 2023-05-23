@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-4-2__: 2023-05-22 jmock
+  * Update TPR version to 2.5
+
 * __l2MpsLN-R4-4-1__: 2023-05-22 jmock
   * Remove BSAS from IOC boot script
 
