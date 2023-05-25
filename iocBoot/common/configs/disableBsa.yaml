@@ -4,8 +4,8 @@
     - enable: !<value> 0x0
 - Bsss1:
     - enable: !<value> 0x0
--Bsas:
-    -BsasModule:
+- Bsas:
+    - BsasModule:
         - TableReset:
             - Enable: !<value>
                 - 0x0
@@ -21,7 +21,7 @@
         - BsasStream:
             - enable: !<value> 0x0
         - Acquire:
-            -Enable: !<value>
+            - Enable: !<value>
                 - 0x0
                 - 0x0
                 - 0x0

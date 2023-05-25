@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-4-4__: 2023-05-24 jmock
+  * Adjust disableBsa.yaml file to fix "- "
+  * Change I0 asyn scan rate back to 0.1 seconds
+
 * __l2MpsLN-R4-4-3__: 2023-05-22 jmock
   * Change ANA_BSA_SCAN rate from .1 second to 1 second
 
