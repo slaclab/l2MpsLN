@@ -7,8 +7,9 @@ record(calc, $(NAME):FACMODE_RBV_CALC){
     field(INPB, "TPR:$(LOCA):$(IOC_UNIT):$(INST):RXLNKSTATUS")# 0 down 1 up
     field(INPC, "$(P):LC1_MODE_RBV") #0 disable 1 enable 
     field(INPD, "$(P):NC_BSA_EN_RBV") #0 disable 1 enable
-    field(INPE, "$(TPR):SC_BSA_ENABLE") #0 disable 1 enable 
-    field(CALC, "((!A)&B&C&D&(!E)?0:A&B&(!C)&(!D)&E?1:2)")
+    field(INPE, "$(TPR):SC_BSA_ENABLE") #0 disable 1 enable
+    field(INPF, "$(P):LC1_TIMEOUT_EN_RBV") #0 disable 1 enable
+    field(CALC, "((!A)&B&C&D&(!E)&F?0:A&B&(!C)&(!D)&E&(!F)?1:2)")
 }
 record(fanout, "$(NAME):SET_FACMODE"){
     field(DESC, "Internal")
@@ -18,7 +19,16 @@ record(fanout, "$(NAME):SET_FACMODE"){
     field(LNK2, "$(NAME):SET_CROSSBAR")
     field(LNK3, "$(NAME):SET_NC_BSA_EN")
     field(LNK4, "$(NAME):SET_SC_BSA_EN")
-    field(LNK5, "$(P):LC1_CLRTIMEOUT")
+    field(LNK5, "$(NAME):SET_NC_CORE_EN")
+    field(LNK6, "$(P):LC1_CLRTIMEOUT")
+}
+record(calcout, "$(NAME):SET_NC_CORE_EN"){
+    field(DESC, "Internal")
+    field(SCAN, "Passive")
+    field(INPA, "$(NAME):FACMODE")
+    field(CALC, "!A ? 1 : 0")
+    field(OUT,  "$(P):LC1_TIMEOUT_EN")
+    field(FLNK, "$(P):LC1_TIMEOUT_EN")
 }
 record(calcout, "$(NAME):SET_NC_BSA_EN"){
     field(DESC, "Internal")
