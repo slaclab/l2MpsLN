@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-5-0__: 2023-08-01 jmock
+  * Adjust modeManagerLN.db to turn off NC Core when in SC Mode
+    * This happens as part of mode switching and is driven by
+      FACMODE
+
 * __l2MpsLN-R4-4-4__: 2023-05-24 jmock
   * Adjust disableBsa.yaml file to fix "- "
   * Change I0 asyn scan rate back to 0.1 seconds
