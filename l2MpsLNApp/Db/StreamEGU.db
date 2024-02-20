@@ -1,0 +1,144 @@
+##########################################################################
+# Description:
+# This database reads the stream from firmware 
+# It converts raw data to user units
+# It reads a portion of the waveform into a record as per user request
+#
+# Macros:
+# DEVICE: Device prefix
+# ATTR  : Device attribute  
+# DESC  : Device description
+# PORT  : The asyn port name. It must match the port name given
+#         when calling "YCPSWASYNConfig" on st.cmd
+# PARAM : The asyn parameter name. It must be defined in the
+#         dictionary file and assigned to a register.
+##########################################################################
+# Buffer PV, to hold all the stream data
+# up to 10e6 points
+record(waveform, "$(DEVICE):$(ATTR)_WF_RAW-BUF")
+{
+  field(DESC,    "$(DESC) Buffer Data")
+  field(DTYP,    "asynInt16ArrayIn")
+  field(NELM,    "1000000")
+  field(FTVL,    "SHORT")
+  field(SCAN,    "I/O Intr")
+  field(INP,     "@asyn($(PORT),5)$(PARAM)")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_RAW PP")
+  field(ASG,     "Internal")
+}
+
+# Interface PV, to display only the necessary data
+# range from the data received in the buffer
+record(subArray, "$(DEVICE):$(ATTR)_WF_RAW") 
+{
+  field(DESC,    "$(DESC) Raw Subarray")
+  field(INP,     "$(DEVICE):$(ATTR)_WF_RAW-BUF")
+  field(FTVL,    "SHORT")
+  field(MALM,    "1000000")
+  field(NELM,    "1024")
+  field(INDX,    "0")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E PP")
+}
+
+# Interface PV, to display only the necessary data
+# range from the data received in the buffer in user units
+record(subArray, "$(DEVICE):$(ATTR)_WF") 
+{
+  field(DESC,    "$(DESC) Subarray")
+  field(INP,     "$(DEVICE):$(ATTR)_WF_R2E.VALA")
+  field(FTVL,    "DOUBLE")
+  field(MALM,    "1000000")
+  field(NELM,    "1024")
+  field(INDX,    "0")
+  field(EGU,    "mV")
+}
+
+# PV to hold the start for the display array
+record(ao, "$(DEVICE):$(ATTR)_WF_START") 
+{
+  field(DESC,    "$(DESC) Subarray start")
+  field(DRVH,    "1000000")
+  field(HOPR,    "1000000")
+  field(PINI,    "YES")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_SEQ")
+  info(autosaveFields, "VAL")
+}
+
+# PV to hold the length for the display array
+record(ao, "$(DEVICE):$(ATTR)_WF_NELM") 
+{
+  field(DESC,    "$(DESC) Subarray length")
+  field(DRVH,    "1000000")
+  field(HOPR,    "1000000")
+  field(PINI,    "YES")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_SEQ")
+  info(autosaveFields, "VAL")
+}
+
+# PV to send data start and nelm to raw and wf PVs
+record(seq, "$(DEVICE):$(ATTR)_WF_SEQ") 
+{
+  field(DESC, "Update NELM and INDX value")
+  field(DOL1, "$(DEVICE):$(ATTR)_WF_START")
+  field(LNK1, "$(DEVICE):$(ATTR)_WF_RAW.INDX PP")
+
+  field(DOL2, "$(DEVICE):$(ATTR)_WF_START")
+  field(LNK2, "$(DEVICE):$(ATTR)_WF.INDX PP")
+
+  field(DOL3, "$(DEVICE):$(ATTR)_WF_NELM")
+  field(LNK3, "$(DEVICE):$(ATTR)_WF_RAW.NELM PP")
+
+  field(DOL4, "$(DEVICE):$(ATTR)_WF_NELM")
+  field(LNK4, "$(DEVICE):$(ATTR)_WF.NELM PP")
+
+  field(ASG,  "Internal")
+}
+
+
+# PV to hold the slope for the display array (raw to egu conversion)
+record(ao, "$(DEVICE):$(ATTR)_SLOPE_WF") 
+{
+  field(DESC,    "$(DESC) WF slope")
+  field(PREC,    "2")
+  field(EGU,    "mV/raw")
+  field(PINI,    "YES")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
+  info(autosaveFields, "VAL")
+}
+
+
+# PV to hold the offset for the display array (raw to egu conversion)
+record(ao, "$(DEVICE):$(ATTR)_OFFSET_WF") 
+{
+  field(DESC,    "$(DESC) WF offset in raw")
+  field(PINI,    "YES")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
+  field(EGU,    "raw")
+  info(autosaveFields, "VAL")
+}
+
+# PV to enable debug mode for gain to voltage subroutine 
+record(bo, "$(DEVICE):$(ATTR)_WF_DEBUG") {
+  field(DESC, "Subroutine Debug")
+  field(ONAM, "DEBUG ON")
+  field(ZNAM, "DEBUG OFF")
+}
+
+# PV to calculate the interface pv in user units
+record (aSub, "$(DEVICE):$(ATTR)_WF_R2E") 
+{
+  field(DESC, "$(DESC) subarray raw to egu")
+  field(SNAM, "calcWFinEGU")
+  field(INPA, "$(DEVICE):$(ATTR)_WF_RAW PP")
+  field(NOA, "1000000")
+  field(FTA, "SHORT")
+  field(INPB, "$(DEVICE):$(ATTR)_SLOPE_WF PP")
+  field(FTB, "DOUBLE")
+  field(INPC, "$(DEVICE):$(ATTR)_OFFSET_WF PP")
+  field(FTC, "SHORT")
+  field(INPD, "$(DEVICE):$(ATTR)_WF_DEBUG PP")
+  field(OUTA, "$(DEVICE):$(ATTR)_WF")
+  field(FLNK, "$(DEVICE):$(ATTR)_WF")
+  field(NOVA, "1000000")
+  field(FTVA, "DOUBLE")
+}

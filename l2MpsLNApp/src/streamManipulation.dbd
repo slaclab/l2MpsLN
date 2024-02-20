@@ -1,0 +1,6 @@
+function(calcWFinEGU)
+function(initPolynomial)
+function(calcPolynomial)
+function(aInit)
+function(calcG2V)
+
