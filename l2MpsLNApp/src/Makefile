@@ -53,8 +53,11 @@ USR_LIBS_Linux += deviceLib
 #=============================
 # Build the IOC application
 #============================
-PROD_IOC_linuxRT-x86_64 = l2MpsLN
-PROD_IOC = $(PROD_IOC_$(T_A))
+#PROD_IOC_linuxRT-x86_64 = l2MpsLN
+#PROD_IOC = $(PROD_IOC_$(T_A))
+
+PROD_IOC = l2MpsLN
+
 
 # l2MpsLN.dbd will be created and installed
 DBD += l2MpsLN.dbd
@@ -89,6 +92,7 @@ l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
 l2MpsLN_SRCS += IOCfunctions.cpp
 l2MpsLN_SRCS += l2MpsLnDriver.cpp
 l2MpsLN_SRCS += l2mps_l1bsa.cpp l2mps_l1bsa_channels.cpp
+l2MpsLN_SRCS += asubG2V.c asubRWF2EGU.c asubV2RAW.c
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
@@ -107,7 +111,7 @@ l2MpsLN_LIBS += asyn
 l2MpsLN_LIBS += seqCar seq pv
 l2MpsLN_LIBS += pvxsIoc
 l2MpsLN_LIBS += pvxs
-l2MpsLN_LIBS += streamManipulation
+#l2MpsLN_LIBS += streamManipulation
 
 # Link QSRV (pvAccess Server) if available
 ifdef EPICS_QSRV_MAJOR_VERSION
