@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-5-1__: 2024-03-08 jmock
+  * Fix FLNK bug in Reg3BitsRW.template - RBV PV needs to link to CALC PV
+    but it was linking to set PV
+  * Adjust mitigation_config.yaml in iocBoot/sioc-sps-mp02 so that RTM_DOUT permits
+    2 and 3 listen to destination 5 (LESA) instead of destination 4 (SXR)
+
 * __l2MpsLN-R4-5-0__: 2023-08-01 jmock
   * Adjust modeManagerLN.db to turn off NC Core when in SC Mode
     * This happens as part of mode switching and is driven by

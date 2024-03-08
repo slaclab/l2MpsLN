@@ -47,7 +47,7 @@ record(mbbi,    "$(P):$(R)_RBV") {
     field(FVST, "$(FVST)")
     field(SXST, "$(SXST)")
     field(SVST, "$(SVST)")
-    field(FLNK, "$(P):$(R)")
+    field(FLNK, "$(P):$(R)_CALC")
 }
 record(calc,    "$(P):$(R)_CALC") {
     field(DESC, "$(DESC)")
