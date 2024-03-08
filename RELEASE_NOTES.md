@@ -3,7 +3,7 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R4-5-1__: 2023-08-01 jmock
+* __l2MpsLN-R4-5-1__: 2024-03-08 jmock
   * Fix FLNK bug in Reg3BitsRW.template - RBV PV needs to link to CALC PV
     but it was linking to set PV
   * Adjust mitigation_config.yaml in iocBoot/sioc-sps-mp02 so that RTM_DOUT permits
