@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-5-2__: 2024-03-26 jmock
+  * Update iocBoot/sioc-gunb-mp02/mitigation_config.yaml:
+    * Duplicate ASM settings for laser 1 to laser 2.
+      AOM Permit and Trigger select for Bay 1 will match Bay 0
+
 * __l2MpsLN-R4-5-1__: 2024-03-08 jmock
   * Fix FLNK bug in Reg3BitsRW.template - RBV PV needs to link to CALC PV
     but it was linking to set PV
