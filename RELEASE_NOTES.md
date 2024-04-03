@@ -25,7 +25,7 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
     * Move waveform stream support from ATCACommon back to the app
       * The ATCACommon PR was rejected.  Temporary until
         we decide how to move forward
-    * Create new dev ioc sioc-b34-mp11
+  * Create new dev ioc sioc-b34-mp11
 
 * __l2MpsLN-R4-5-2__: 2024-03-26 jmock
   * Update iocBoot/sioc-gunb-mp02/mitigation_config.yaml:
