@@ -27,11 +27,6 @@ include $(TOP)/configure/CONFIG
 # Install databases from iocAdmin package
 # These databases support IOC Health and Monitoring
 # ========================================================
-DB_INSTALLS += $(ATCACOMMON)/db/StreamGainControl.db
-DB_INSTALLS += $(ATCACOMMON)/db/StreamEGU.db
-DB_INSTALLS += $(ATCACOMMON)/db/StreamSize.db
-DB_INSTALLS += $(ATCACOMMON)/db/StreamType.db
-DB_INSTALLS += $(ATCACOMMON)/db/StreamShort.db
 DB_INSTALLS += $(ATCACOMMON)/db/crossbarCtrl.db
 DB_INSTALLS += $(ATCACOMMON)/db/ATCACommon.db
 DB_INSTALLS += $(IOCADMIN)/db/iocAdminSoft.db

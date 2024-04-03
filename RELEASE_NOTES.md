@@ -3,6 +3,30 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-6-0__: 2024-04-03 jmock
+  * Update app framework to build for host arch and target arch
+    * Update to modules:
+      * ATCACOMMON_MODULE_VERSION       = R2.0.1
+      * YAMLLOADER_MODULE_VERSION       = R2.3.5
+      * L2MPSASYN_MODULE_VERSION        = R3.11.1
+      * YCPSWASYN_MODULE_VERSION        = R3.3.6
+      * YAMLDOWNLOADER_MODULE_VERSION   = R1.2.3
+      * TPRTRIGGER_MODULE_VERSION       = R2.6.3
+      * BSACORE_MODULE_VERSION          = R1.5.6
+      * TIMINGAPI_MODULE_VERSION        = R0.9
+      * TPRPATTERN_MODULE_VERSION       = R2.3.7
+      * EVRCLIENT_MODULE_VERSION        = R1.5.3
+      * BSADRIVER_MODULE_VERSION        = R4.2.0
+    * Update to Packages:
+      * LINUX_VERSION       = rhel7
+      * HPSTPR_VERSION      = R2.5.0
+      * BSA_VERSION         = R2.6.0
+      * COMMONATCA_VERSION  = R2.0.0
+    * Move waveform stream support from ATCACommon back to the app
+      * The ATCACommon PR was rejected.  Temporary until
+        we decide how to move forward
+  * Create new dev ioc sioc-b34-mp11
+
 * __l2MpsLN-R4-5-2__: 2024-03-26 jmock
   * Update iocBoot/sioc-gunb-mp02/mitigation_config.yaml:
     * Duplicate ASM settings for laser 1 to laser 2.
