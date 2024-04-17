@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-6-1__: 2024-04-03 jmock
+  * Re-enable BSAS service in all IOCs
+
 * __l2MpsLN-R4-6-0__: 2024-04-03 jmock
   * Update app framework to build for host arch and target arch
     * Update to modules:
