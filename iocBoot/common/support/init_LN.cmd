@@ -16,7 +16,7 @@
 # ===========================================
 #             LCLS2 BSAS Driver
 # ===========================================
-#< ${TOP}/iocBoot/common/support/init_lc2_bsas.cmd
+< ${TOP}/iocBoot/common/support/init_lc2_bsas.cmd
 
 # ===========================================
 #          Load LN Specific databases
