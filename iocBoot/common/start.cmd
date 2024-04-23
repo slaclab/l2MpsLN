@@ -110,6 +110,7 @@ system("./makeArchive.sh ${IOC} &")
 cd(${TOP})
 
 # After call to restore thresholds, clear lcls1 timeout so MPS is functional
+dbpf ${L2MPS_PREFIX}:LC1_TIMEOUT_EN.PROC 1
 dbpf ${L2MPS_PREFIX}:DM0_BUFFER_SIZE 1000000
 dbpf ${L2MPS_PREFIX}:DM1_BUFFER_SIZE 1000000
 dbpf TPR:${LOCATION}:${LOCATION_INDEX}:${INST}:SYS0_CLK 156.25
@@ -121,8 +122,9 @@ dbpf ${L2MPS_PREFIX}:SALT_RST_PLL.PROC 1
 dbpf ${L2MPS_PREFIX}:DM0_HW_ARM 1
 dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
 dbpf ${TPR}:TIMING_RX_ERR 0
-dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
 dbpf ${L2MPS_PREFIX}:RESET_ERR.PROC 1
+dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
+
 
 iocshCmd("pvxsl() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsl")
 iocshCmd("pvxsr() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsr")

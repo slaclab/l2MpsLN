@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-6-2__: 2024-04-23 jmock
+  * Add a PROC for LC1 Enable on startup - it's not always
+    getting done on time and needs extra help.
+
 * __l2MpsLN-R4-6-1__: 2024-04-17 jmock
   * Re-enable BSAS service in all IOCs
 
