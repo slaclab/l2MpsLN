@@ -3,6 +3,13 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R4-6-3__: 2024-05-07 jmock
+  * Add analog processing settings to specific.yaml for:
+    * BYKIK in sioc-bsyh-mp03
+    * BYKIKS in sioc-bsys-mp04
+    * BKRCUS in sioc-clts-mp01
+  * Stop loading BSAS to see if it help IOC crashing
+
 * __l2MpsLN-R4-6-2__: 2024-04-23 jmock
   * Add a PROC for LC1 Enable on startup - it's not always
     getting done on time and needs extra help.
