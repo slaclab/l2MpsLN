@@ -4,3 +4,9 @@
         - MpsLinkNodeCore:
             - MpsMitigationCore:
                 - mpsConfig: !<value> 0x2
+#Analog Processing Settings
+- AppTop:
+  - AppCore:
+    - MpsAnalogCore:
+      - MpsAnalogLcls1Reg:
+        - IntegrationCounts[0]: !<value> 2
