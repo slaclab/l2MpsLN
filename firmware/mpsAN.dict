@@ -293,3 +293,11 @@
 /Stream4                                                                                    Stream4
 /Stream5                                                                                    Stream5
 /Stream6                                                                                    Stream6
+
+# =============================
+# DC Output Streams
+# =============================
+/mmio/AppTop/AppCore/DacOutput[0]                                                           DSG0_VoltOut_0
+/mmio/AppTop/AppCore/DacOutput[1]                                                           DSG0_VoltOut_1
+/mmio/AppTop/AppCore/DacOutput[2]                                                           DSG1_VoltOut_0
+/mmio/AppTop/AppCore/DacOutput[3]                                                           DSG1_VoltOut_1
