@@ -6,15 +6,15 @@
 < envPaths
 
 epicsEnvSet("SLOT_ID", "2")
-epicsEnvSet("L2MPS_PREFIX", "MPLN:B34:MP01:1")
+epicsEnvSet("L2MPS_PREFIX", "MPLN:GUNB:MP01:1")
 epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
 epicsEnvSet("FACILITY","dev")
 epicsEnvSet("TYPE","LN")
 epicsEnvSet("APPID","2")
 epicsEnvSet("DIGAID","1")
 
-epicsEnvSet("LOCATION","B34")
-epicsEnvSet("LOCATION_INDEX","MP11")
+epicsEnvSet("LOCATION","GUNB")
+epicsEnvSet("LOCATION_INDEX","MP01")
 epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 
 #
