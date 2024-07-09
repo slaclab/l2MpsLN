@@ -43,7 +43,7 @@ file "RegRO.template" { pattern
 { CON_PAUSECNT_7,               "Pause Detection count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_7        }
 { CON_PAUSECNT_8,               "Pause Detection count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_8        }
 { CON_PAUSECNT_9,               "Pause Detection count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_9        }
-{ DIG_BYTESCNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
+{ DIG_BYTECNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
 { DIG_DBIN,                     "Debounced Input Values",                   "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_RegInputBits         }
 { DIG_SWBYTECNT,                "Number of software bytes in message",      "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_SwBytes              }
 { ADC_VALID_0,                  "Adc valid flags, Bay 0",                   "YES",  "1 second", "",        "", "",         "", "",            AMCADC_AdcValid_0           }
