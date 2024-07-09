@@ -5,7 +5,7 @@
 #include "l2MpsLnDriver.h"
 
 // L2MpsL1BsaConfig
-extern "C" int L2MpsL1BsaConfig(const char* streamName, const char* recordPrefix, const char* portName)
+extern "C" int L2MpsL1BsaConfig(const char* streamName, const char* portName)
 {
     if ( (!streamName) || ('\0' == streamName[0]) )
     {
@@ -13,20 +13,14 @@ extern "C" int L2MpsL1BsaConfig(const char* streamName, const char* recordPrefix
         return -1;
     }
 
-    if ( (!recordPrefix) || ('\0' == recordPrefix[0]) )
-    {
-        fprintf( stderr, "Error: The record prefix for the LCLS1 BSA PVs is empty\n");
-        return -1;
-    }
     class L2MpsL1BsaChannels* pL2MpsL1BsaChannels;
     pL2MpsL1BsaChannels = L2MpsL1BsaChannels::getInstance();
-    pL2MpsL1BsaChannels->createChannels(recordPrefix);
+    pL2MpsL1BsaChannels->createChannels();
     pL2MpsL1BsaChannels->printChannelIds();
 
     class L2MpsL1Bsa* pL2MpsL1Bsa;
     pL2MpsL1Bsa = L2MpsL1Bsa::getInstance();
     pL2MpsL1Bsa->setStreamName(streamName);
-    pL2MpsL1Bsa->setRecordPrefix(recordPrefix);
     pL2MpsL1Bsa->fireStreamTask();
 
     new L2MpsL1BsaDriver(portName);
@@ -35,21 +29,19 @@ extern "C" int L2MpsL1BsaConfig(const char* streamName, const char* recordPrefix
 }
 
 static const iocshArg confArg0 = { "streamName",   iocshArgString };
-static const iocshArg confArg1 = { "recordPrefix", iocshArgString };
-static const iocshArg confArg2 = { "portName",     iocshArgString };
+static const iocshArg confArg1 = { "portName",     iocshArgString };
 
 static const iocshArg * const confArgs[] =
 {
     &confArg0,
-    &confArg1,
-    &confArg2
+    &confArg1
 };
 
-static const iocshFuncDef configFuncDef = {"L2MpsL1BsaConfig", 3, confArgs};
+static const iocshFuncDef configFuncDef = {"L2MpsL1BsaConfig", 2, confArgs};
 
 static void configCallFunc(const iocshArgBuf *args)
 {
-    L2MpsL1BsaConfig(args[0].sval, args[1].sval, args[2].sval);
+    L2MpsL1BsaConfig(args[0].sval, args[1].sval);
 }
 
 // L2MpsL1BsaEnable

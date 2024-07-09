@@ -32,36 +32,36 @@ L2MpsL1BsaChannels* L2MpsL1BsaChannels::getInstance() {
 L2MpsL1BsaChannels::L2MpsL1BsaChannels() {
 }
 
-int L2MpsL1BsaChannels::createChannels(const std::string& prefix) {
+int L2MpsL1BsaChannels::createChannels() {
     bsaChannelNames_ = {
-        "LC1_BSA_B0_C0_I0",
-        "LC1_BSA_B0_C1_I0",
-        "LC1_BSA_B0_C2_I0",
-        "LC1_BSA_B1_C0_I0",
-        "LC1_BSA_B1_C1_I0",
-        "LC1_BSA_B1_C2_I0",
-        "LC1_BSA_B0_C0_I1",
-        "LC1_BSA_B0_C1_I1",
-        "LC1_BSA_B0_C2_I1",
-        "LC1_BSA_B1_C0_I1",
-        "LC1_BSA_B1_C1_I1",
-        "LC1_BSA_B1_C2_I1",
-        "LC1_BSA_B0_C0_I2",
-        "LC1_BSA_B0_C1_I2",
-        "LC1_BSA_B0_C2_I2",
-        "LC1_BSA_B1_C0_I2",
-        "LC1_BSA_B1_C1_I2",
-        "LC1_BSA_B1_C2_I2",
-        "LC1_BSA_B0_C0_I3",
-        "LC1_BSA_B0_C1_I3",
-        "LC1_BSA_B0_C2_I3",
-        "LC1_BSA_B1_C0_I3",
-        "LC1_BSA_B1_C1_I3",
-        "LC1_BSA_B1_C2_I3",
+        "C0_I0",
+        "C1_I0",
+        "C2_I0",
+        "C3_I0",
+        "C4_I0",
+        "C5_I0",
+        "C0_I1",
+        "C1_I1",
+        "C2_I1",
+        "C3_I1",
+        "C4_I1",
+        "C5_I1",
+        "C0_I0F",
+        "C1_I0F",
+        "C2_I0F",
+        "C3_I0F",
+        "C4_I0F",
+        "C5_I0F",
+        "C0_I1F",
+        "C1_I1F",
+        "C2_I1F",
+        "C3_I1F",
+        "C4_I1F",
+        "C5_I1F"
     };
     for (auto it ( bsaChannelNames_.begin() ) ; it != bsaChannelNames_.end(); ++it)
     {
-        std::string id ( prefix + ":" + *it );
+        std::string id ( *it );
         channels_.push_back(BSA_CreateChannel(id.c_str()));
         offsets_.push_back(0.);
         slopes_.push_back(1.);

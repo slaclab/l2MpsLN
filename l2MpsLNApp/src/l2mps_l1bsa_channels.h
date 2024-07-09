@@ -33,7 +33,7 @@ class L2MpsL1BsaChannels
 public:
     ~L2MpsL1BsaChannels();
     static L2MpsL1BsaChannels* getInstance();
-    int createChannels(const std::string& prefix);
+    int createChannels();
     // Get an specific BSA channel
     BsaChannel at(std::size_t i) const;
     double getOffset(std::size_t i);

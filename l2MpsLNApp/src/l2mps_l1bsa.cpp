@@ -50,10 +50,6 @@ void L2MpsL1Bsa::setStreamName(std::string strmName) {
     streamName = strmName; 
 }
 
-void L2MpsL1Bsa::setRecordPrefix(std::string rPrefix) {  
-    recordPrefix = rPrefix; 
-}
-
 int L2MpsL1Bsa::fireStreamTask() {
     epicsThreadCreate(streamName.c_str(), epicsThreadPriorityHigh + 3,
                   epicsThreadGetStackSize(epicsThreadStackMedium),
