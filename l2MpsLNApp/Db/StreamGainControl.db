@@ -46,7 +46,7 @@ record(ao, "$(DEVICE):$(ATTR)_AMP_V"){
   field(DRVL, "-1.6")
   field(OUT,  "@asyn($(PORT),1)$(PARAM)")
   field(SCAN, "Passive")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_RBV")
+  field(FLNK, "$(DEVICE):$(ATTR)_AMP_V_RBV")
 }
 
 # Readback PV for amplifier voltage in register units 
