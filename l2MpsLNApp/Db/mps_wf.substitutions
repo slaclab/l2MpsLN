@@ -1,0 +1,22 @@
+#================================================================================#
+# MPS PV template for analog input channels                                      #
+# Macro description:                                                             #
+#   - P           : Device prefix i.e. CBLM:UNDH:1375                            #
+#   - BAY         : AMC Bay (0 or 1)                                             #
+#   - INP         : AMC Channel (0, 1, or 2)                                     #
+#   - GCH         : Gain Channel (0 or 1)                                        #
+#================================================================================#
+file "StreamEGU.db"
+{ pattern
+{ DEVICE,  ATTR,    DESC,                     PORT,               PARAM                       }
+{ $(P),    FAST,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT   ,  Stream_B$(BAY)_C$(INP):16   }
+}
+file "StreamGainControl.db"
+{ pattern
+{ DEVICE,   ATTR,   PORT,            PARAM                           }
+{ $(P),     FAST,   YCPSWASYN_PORT,  DSG$(BAY)_VoltOut_$(GCH)        }
+}
+file Reg1BitRW.template {pattern
+{ R,          DESC,                    ZNAM,       ONAM,       SCAN,       DTYP,               PARAM,                    PORT           }
+{ AutoRearm,  "Waveform Stream On/Off" Disabled    Enabled     "1 second"  asynUInt32Digital   DM$(BAY)_TrigHwAutoReArm, YCPSWASYN_PORT }
+}

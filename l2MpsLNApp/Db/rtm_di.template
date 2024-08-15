@@ -1,0 +1,24 @@
+#================================================================================#
+# RTM DI PVs                                                                     #
+# Macro description:                                                             #
+#   - P     : MPLN Prefix                                                        #
+#   - CH    : Channel Number                                                     #
+#================================================================================#
+record(calc, "$(P):RTM_CH_$(CH)_CALC") {
+    field(DESC, "Input CALC")
+    field(PINI, "YES")  
+    field(SCAN, "1 second")
+    field(FLNK, "$(P):RTM_CH_$(CH)_RBV")
+    field(INPA, "$(P):RTM_DI")
+    field(CALC, "((A>>$(CH))&1)")
+}
+record(bi, "$(P):RTM_CH_$(CH)_RBV") {
+    field(DESC, "Input CALC")
+    field(PINI, "NO") 
+    field(ZNAM, "INACTIVE")
+    field(ONAM, "ACTIVE")
+    field(ZSV, "MAJOR")
+    field(OSV, "NO_ALARM")
+    field(INP, "$(P):RTM_CH_$(CH)_CALC")
+    info(autosaveFields, "DESC")
+}

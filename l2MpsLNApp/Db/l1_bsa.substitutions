@@ -1,0 +1,16 @@
+#================================================================================#
+# MPS PV template for analog input channels                                      #
+# Macro description:                                                             #
+#   - P           : Device prefix i.e. CBLM:UNDH:1375                            #
+#   - ATTR        : Fault name from database e.g. LOSS                           #
+#   - BAY         : AMC Bay (0 or 1)                                             #
+#   - INP         : AMC Channel (0, 1, or 2                                      #
+#   - EGU         : Engineering Units                                            #
+#================================================================================#
+file l1_bsa.template { pattern
+{ DEV,  SECN,             BSAKEY,              EGU,    HO, LO, PR, AD, SINK_SIZE  }
+{ $(P), I0_$(ATTR),       I0_B$(BAY)_C$(INP),  $(EGU), 0,  0,  3,  0,  1          }
+{ $(P), I0_$(ATTR)_FLOAT, I0_B$(BAY)_C$(INP)F, $(EGU), 0,  0,  3,  0,  1          }
+{ $(P), I1_$(ATTR),       I1_B$(BAY)_C$(INP),  $(EGU), 0,  0,  3,  0,  1          }
+{ $(P), I1_$(ATTR)_FLOAT, I1_B$(BAY)_C$(INP)F, $(EGU), 0,  0,  3,  0,  1          }  
+}

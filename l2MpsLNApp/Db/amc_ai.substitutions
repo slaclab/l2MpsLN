@@ -1,0 +1,59 @@
+#================================================================================#
+# MPS PV template for analog input channels                                      #
+# Macro description:                                                             #
+#   - P           : Device prefix i.e. CBLM:UNDH:1375                            #
+#   - ATTR        : Fault name from database e.g. LOSS                           #
+#   - BAY         : AMC Bay (0 or 1)                                             #
+#   - INP         : AMC Channel (0, 1, or 2)                                     #
+#   - EGU         : Engineering Units                                            #
+#   - TPR         : TPR Prefix, needed for LCLS2 BSA (bsa.db)                    #
+#================================================================================#
+file RegRO_Analog.template { pattern
+{ R,              DESC,                        SCAN,        EGU,    PREC, LINR,            PARAM,              PORT           } 
+{ I0_$(ATTR),     "Scaled analog input value", ".1 second", $(EGU), 3,    "SLOPE",         I0_B$(BAY)_C$(INP), YCPSWASYN_PORT }
+{ I1_$(ATTR),     "Scaled analog input value", ".1 second", $(EGU), 3,    "SLOPE",         I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+{ I0_$(ATTR)_RAW, "Scaled analog input value", ".1 second", "raw",  3,    "NO CONVERSION", I0_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+{ I1_$(ATTR)_RAW, "Scaled analog input value", ".1 second", "raw",  3,    "NO CONVERSION", I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+}
+file RegisterDoubleIn.template { pattern
+{ R,                DESC,                        SCAN,        EGU,    PREC, LINR,    PARAM,               PORT            } 
+{ I0_$(ATTR)_FLOAT, "Scaled analog input value", ".1 second", $(EGU), 3,    "SLOPE", I0_B$(BAY)_C$(INP)F, YCPSWASYN_PORT  }
+{ I1_$(ATTR)_FLOAT, "Scaled analog input value", ".1 second", $(EGU), 3,    "SLOPE", I1_B$(BAY)_C$(INP)F, YCPSWASYN_PORT  }
+}
+file RegRW_AnalogAS.template { pattern
+{ R,              DESC,        PINI,   SCAN,        EGU,  LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT            }
+{ FW_OFFSET,     "DC Offset",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT  }
+}
+file Reg1BitRW.template {pattern
+{ R,          DESC,                    ZNAM,       ONAM,       SCAN,       DTYP,               PARAM,                    PORT           }
+{ AutoRearm,  "Waveform Stream On/Off" Disabled    Enabled     "1 second"  asynUInt32Digital   DM$(BAY)_TrigHwAutoReArm, YCPSWASYN_PORT }
+}
+file bsa.db { pattern
+{ DEV,   SECN,             TPR,    PORT,    BSAKEY              }
+{  $(P), I0_$(ATTR),       $(TPR), bsaPort, I0_B$(BAY)_C$(INP)  }
+{  $(P), I0_$(ATTR)_FLOAT, $(TPR), bsaPort, I0_B$(BAY)_C$(INP)F }
+{  $(P), I1_$(ATTR),       $(TPR), bsaPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR)_FLOAT, $(TPR), bsaPort, I1_B$(BAY)_C$(INP)F }  
+}
+file bsss.db { pattern
+{ DEV,   SECN,             EGU,    PORT,     BSAKEY              }
+{  $(P), I0_$(ATTR),       $(EGU), bsssPort, I0_B$(BAY)_C$(INP)  }
+{  $(P), I0_$(ATTR)_FLOAT, $(EGU), bsssPort, I0_B$(BAY)_C$(INP)F }
+{  $(P), I1_$(ATTR),       $(EGU), bsssPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR)_FLOAT, $(EGU), bsssPort, I1_B$(BAY)_C$(INP)F }  
+}
+file slope.template { pattern
+{ R,                PR, EGU    }
+{ I0_$(ATTR),       3,  $(EGU) }
+{ I0_$(ATTR)_FLOAT, 3,  $(EGU) }
+{ I1_$(ATTR),       3,  $(EGU) }
+{ I1_$(ATTR)_FLOAT, 3,  $(EGU) }
+}
+file mps_ai.db { pattern
+{ PORT }
+{ L2MPSASYN_PORT }
+}
+file StreamEGU.db { pattern
+{ DEVICE, ATTR,  DESC,                      PORT,            PARAM                      }
+{ $(P),   MPS,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
+}

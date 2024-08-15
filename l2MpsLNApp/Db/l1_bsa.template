@@ -1,0 +1,1218 @@
+#================================================================================#
+# LCLS-II MPS PV template for BSA Core PVs (LCLS-I BSA)                          #
+# Based on bsaATTREdef.db from event module                                      #
+# Macro description:                                                             #
+#   - DEV     : Record name prefix i.e. CBLM:UNDH:1375                           #
+#   - SECN    : Attribute i.e I0_LOSS                                            #
+#   - EGU     : Engineering units                                                #
+#   - HO      : HOPR field                                                       #
+#   - LO      : LOPR Field                                                       #
+#   - PR      : Precision                                                        #
+#   - AD      : ADEL field                                                       #
+#   - BSAKEY  : BSA channel eg. IX_BY_CZ where:                                  #
+#                               X is integrator: 0,1                             #
+#                               Y is Bay: 0,1                                    #
+#                               Z is channel: 0,1,2                              #
+#   - BSACHAN : Channel (0-5) corresponding to 
+#================================================================================#
+record (ao, "$(DEV):$(SECN)_SLOPE_NCBSA") {
+  field(DTYP, "asynFloat64")
+  field(OUT,  "@asyn(L2MPS_L1BSA 98)L1BSA_$(BSAKEY)")
+  field(EGU,  "$(EGU)/raw")
+  field(PINI, "YES")
+  field(PREC, "$(PR)")
+  info(autosaveFields, "VAL")
+  field(FLNK, "$(DEV):$(SECN)_SLOPE_NCBSA_RBV")
+  field(DOL,  "$(DEV):$(SECN)_SLOPE CP")
+  field(OMSL, "closed_loop")
+}
+
+record (ai, "$(DEV):$(SECN)_SLOPE_NCBSA_RBV") {
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn(L2MPS_L1BSA 98)L1BSA_$(BSAKEY)")
+  field(EGU,  "$(EGU)/raw")
+  field(PINI, "YES")
+  field(PREC, "$(PR)")
+  field(SCAN, "1 second")
+}
+
+record (ao, "$(DEV):$(SECN)_OFFSET_NCBSA") {
+  field(DTYP, "asynFloat64")
+  field(OUT,  "@asyn(L2MPS_L1BSA 99)L1BSA_$(BSAKEY)")
+  field(EGU,  "$(EGU)/raw")
+  field(PINI, "YES")
+  field(PREC, "$(PR)")
+  info(autosaveFields, "VAL")
+  field(FLNK, "$(DEV):$(SECN)_OFFSET_NCBSA_RBV")
+  field(DOL,  "$(DEV):$(SECN)_OFFSET_EGU CP")
+  field(OMSL, "closed_loop")
+}
+
+record (ai, "$(DEV):$(SECN)_OFFSET_NCBSA_RBV") {
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn(L2MPS_L1BSA 99)L1BSA_$(BSAKEY)")
+  field(EGU,  "$(EGU)/raw")
+  field(PINI, "YES")
+  field(PREC, "$(PR)")
+  field(SCAN, "1 second")
+}
+
+record(bsa, "$(DEV):$(SECN)1") {
+  field(DESC, "$(ATTR) Avg for EDEF 1")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "1")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST1")
+  field(VRES, "$(DEV):$(SECN)HST1.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST1.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST1.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST1.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST1") {
+  field(DESC, "$(ATTR) Hst for EDEF 1")
+  field(INP, "$(DEV):$(SECN)1")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)1.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST1")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST1") {
+  field(DESC, "HST #Pulses avged-EDEF 1")
+  field(INP, "$(DEV):$(SECN)1.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)1.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST1")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST1") {
+  field(DESC, "HST RMS-EDEF 1")
+  field(INP, "$(DEV):$(SECN)1.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)1.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST1")
+}
+
+record(bsa, "$(DEV):$(SECN)2") {
+  field(DESC, "$(ATTR) Avg for EDEF 2")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "2")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST2")
+  field(VRES, "$(DEV):$(SECN)HST2.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST2.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST2.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST2.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST2") {
+  field(DESC, "$(ATTR) Hst for EDEF 2")
+  field(INP, "$(DEV):$(SECN)2")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)2.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST2")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST2") {
+  field(DESC, "HST #Pulses avged-EDEF 2")
+  field(INP, "$(DEV):$(SECN)2.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)2.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST2")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST2") {
+  field(DESC, "HST RMS-EDEF 2")
+  field(INP, "$(DEV):$(SECN)2.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)2.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST2")
+}
+
+record(bsa, "$(DEV):$(SECN)3") {
+  field(DESC, "$(ATTR) Avg for EDEF 3")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "3")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST3")
+  field(VRES, "$(DEV):$(SECN)HST3.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST3.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST3.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST3.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST3") {
+  field(DESC, "$(ATTR) Hst for EDEF 3")
+  field(INP, "$(DEV):$(SECN)3")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)3.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST3")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST3") {
+  field(DESC, "HST #Pulses avged-EDEF 3")
+  field(INP, "$(DEV):$(SECN)3.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)3.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST3")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST3") {
+  field(DESC, "HST RMS-EDEF 3")
+  field(INP, "$(DEV):$(SECN)3.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)3.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST3")
+}
+
+record(bsa, "$(DEV):$(SECN)4") {
+  field(DESC, "$(ATTR) Avg for EDEF 4")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "4")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST4")
+  field(VRES, "$(DEV):$(SECN)HST4.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST4.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST4.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST4.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST4") {
+  field(DESC, "$(ATTR) Hst for EDEF 4")
+  field(INP, "$(DEV):$(SECN)4")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)4.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST4")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST4") {
+  field(DESC, "HST #Pulses avged-EDEF 4")
+  field(INP, "$(DEV):$(SECN)4.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)4.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST4")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST4") {
+  field(DESC, "HST RMS-EDEF 4")
+  field(INP, "$(DEV):$(SECN)4.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)4.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST4")
+}
+
+record(bsa, "$(DEV):$(SECN)5") {
+  field(DESC, "$(ATTR) Avg for EDEF 5")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "5")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST5")
+  field(VRES, "$(DEV):$(SECN)HST5.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST5.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST5.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST5.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST5") {
+  field(DESC, "$(ATTR) Hst for EDEF 5")
+  field(INP, "$(DEV):$(SECN)5")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)5.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST5")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST5") {
+  field(DESC, "HST #Pulses avged-EDEF 5")
+  field(INP, "$(DEV):$(SECN)5.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)5.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST5")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST5") {
+  field(DESC, "HST RMS-EDEF 5")
+  field(INP, "$(DEV):$(SECN)5.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)5.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST5")
+}
+
+record(bsa, "$(DEV):$(SECN)6") {
+  field(DESC, "$(ATTR) Avg for EDEF 6")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "6")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST6")
+  field(VRES, "$(DEV):$(SECN)HST6.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST6.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST6.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST6.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST6") {
+  field(DESC, "$(ATTR) Hst for EDEF 6")
+  field(INP, "$(DEV):$(SECN)6")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)6.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST6")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST6") {
+  field(DESC, "HST #Pulses avged-EDEF 6")
+  field(INP, "$(DEV):$(SECN)6.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)6.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST6")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST6") {
+  field(DESC, "HST RMS-EDEF 6")
+  field(INP, "$(DEV):$(SECN)6.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)6.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST6")
+}
+ 
+record(bsa, "$(DEV):$(SECN)7") {
+  field(DESC, "$(ATTR) Avg for EDEF 7")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "7")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST7")
+  field(VRES, "$(DEV):$(SECN)HST7.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST7.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST7.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST7.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST7") {
+  field(DESC, "$(ATTR) Hst for EDEF 7")
+  field(INP, "$(DEV):$(SECN)7")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)7.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST7")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST7") {
+  field(DESC, "HST #Pulses avged-EDEF 7")
+  field(INP, "$(DEV):$(SECN)7.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)7.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST7")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST7") {
+  field(DESC, "HST RMS-EDEF 7")
+  field(INP, "$(DEV):$(SECN)7.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)7.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST7")
+}
+ 
+record(bsa, "$(DEV):$(SECN)8") {
+  field(DESC, "$(ATTR) Avg for EDEF 8")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "8")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST8")
+  field(VRES, "$(DEV):$(SECN)HST8.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST8.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST8.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST8.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST8") {
+  field(DESC, "$(ATTR) Hst for EDEF 8")
+  field(INP, "$(DEV):$(SECN)8")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)8.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST8")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST8") {
+  field(DESC, "HST #Pulses avged-EDEF 8")
+  field(INP, "$(DEV):$(SECN)8.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)8.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST8")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST8") {
+  field(DESC, "HST RMS-EDEF 8")
+  field(INP, "$(DEV):$(SECN)8.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)8.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST8")
+}
+
+record(bsa, "$(DEV):$(SECN)9") {
+  field(DESC, "$(ATTR) Avg for EDEF 9")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "9")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST9")
+  field(VRES, "$(DEV):$(SECN)HST9.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST9.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST9.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST9.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST9") {
+  field(DESC, "$(ATTR) Hst for EDEF 9")
+  field(INP, "$(DEV):$(SECN)9")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)9.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST9")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST9") {
+  field(DESC, "HST #Pulses avged-EDEF 9")
+  field(INP, "$(DEV):$(SECN)9.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)9.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST9")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST9") {
+  field(DESC, "HST RMS-EDEF 9")
+  field(INP, "$(DEV):$(SECN)9.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)9.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST9")
+}
+
+record(bsa, "$(DEV):$(SECN)10") {
+  field(DESC, "$(ATTR) Avg for EDEF 10")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "10")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST10")
+  field(VRES, "$(DEV):$(SECN)HST10.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST10.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST10.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST10.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST10") {
+  field(DESC, "$(ATTR) Hst for EDEF 10")
+  field(INP, "$(DEV):$(SECN)10")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)10.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST10")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST10") {
+  field(DESC, "HST #Pulses avged-EDEF 10")
+  field(INP, "$(DEV):$(SECN)10.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)10.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST10")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST10") {
+  field(DESC, "HST RMS-EDEF 10")
+  field(INP, "$(DEV):$(SECN)10.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)10.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST10")
+}
+ 
+record(bsa, "$(DEV):$(SECN)11") {
+  field(DESC, "$(ATTR) Avg for EDEF 11")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "11")
+  field(NELM, "$(SINK_SIZE=10)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST11")
+  field(VRES, "$(DEV):$(SECN)HST11.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST11.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST11.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST11.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST11") {
+  field(DESC, "$(ATTR) Hst for EDEF 11")
+  field(INP, "$(DEV):$(SECN)11")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)11.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST11")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST11") {
+  field(DESC, "HST #Pulses avged-EDEF 11")
+  field(INP, "$(DEV):$(SECN)11.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)11.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST11")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST11") {
+  field(DESC, "HST RMS-EDEF 11")
+  field(INP, "$(DEV):$(SECN)11.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)11.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST11")
+}
+
+record(bsa, "$(DEV):$(SECN)CUS1H") {
+  field(DESC, "$(ATTR) Avg for EDEF CUS1H")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "12")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUS1H")
+  field(VRES, "$(DEV):$(SECN)HSTCUS1H.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUS1H.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUS1H.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUS1H.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUS1H") {
+  field(DESC, "$(ATTR) Hst for EDEF CUS1H")
+  field(INP, "$(DEV):$(SECN)CUS1H")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUS1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUS1H")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUS1H") {
+  field(DESC, "HST #Pulses avged-EDEF CUS1H")
+  field(INP, "$(DEV):$(SECN)CUS1H.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUS1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUS1H")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUS1H") {
+  field(DESC, "HST RMS-EDEF CUS1H")
+  field(INP, "$(DEV):$(SECN)CUS1H.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUS1H.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUS1H")
+}
+
+record(bsa, "$(DEV):$(SECN)CUSTH") {
+  field(DESC, "$(ATTR) Avg for EDEF CUSTH")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "13")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUSTH")
+  field(VRES, "$(DEV):$(SECN)HSTCUSTH.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUSTH.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUSTH.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUSTH.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUSTH") {
+  field(DESC, "$(ATTR) Hst for EDEF CUSTH")
+  field(INP, "$(DEV):$(SECN)CUSTH")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUSTH.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUSTH")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUSTH") {
+  field(DESC, "HST #Pulses avged-EDEF CUSTH")
+  field(INP, "$(DEV):$(SECN)CUSTH.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUSTH.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUSTH")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUSTH") {
+  field(DESC, "HST RMS-EDEF CUSTH")
+  field(INP, "$(DEV):$(SECN)CUSTH.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUSTH.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUSTH")
+}
+
+record(bsa, "$(DEV):$(SECN)CUSBR") {
+  field(DESC, "$(ATTR) Avg for EDEF CUSBR")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "14")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUSBR")
+  field(VRES, "$(DEV):$(SECN)HSTCUSBR.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUSBR.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUSBR.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUSBR.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUSBR") {
+  field(DESC, "$(ATTR) Hst for EDEF CUSBR")
+  field(INP, "$(DEV):$(SECN)CUSBR")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUSBR.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUSBR")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUSBR") {
+  field(DESC, "HST #Pulses avged-EDEF CUSBR")
+  field(INP, "$(DEV):$(SECN)CUSBR.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUSBR.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUSBR")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUSBR") {
+  field(DESC, "HST RMS-EDEF CUSBR")
+  field(INP, "$(DEV):$(SECN)CUSBR.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUSBR.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUSBR")
+}
+
+record(bsa, "$(DEV):$(SECN)CUH1H") {
+  field(DESC, "$(ATTR) Avg for EDEF CUH1H")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "15")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUH1H")
+  field(VRES, "$(DEV):$(SECN)HSTCUH1H.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUH1H.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUH1H.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUH1H.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUH1H") {
+  field(DESC, "$(ATTR) Hst for EDEF CUH1H")
+  field(INP, "$(DEV):$(SECN)CUH1H")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUH1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUH1H")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUH1H") {
+  field(DESC, "HST #Pulses avged-EDEF CUH1H")
+  field(INP, "$(DEV):$(SECN)CUH1H.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUH1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUH1H")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUH1H") {
+  field(DESC, "HST RMS-EDEF CUH1H")
+  field(INP, "$(DEV):$(SECN)CUH1H.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUH1H.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUH1H")
+}
+
+record(bsa, "$(DEV):$(SECN)1H") {
+  field(DESC, "$(ATTR) Avg for EDEF 1H")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "16")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HST1H")
+  field(VRES, "$(DEV):$(SECN)HST1H.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHST1H.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHST1H.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHST1H.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HST1H") {
+  field(DESC, "$(ATTR) Hst for EDEF 1H")
+  field(INP, "$(DEV):$(SECN)1H")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHST1H")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHST1H") {
+  field(DESC, "HST #Pulses avged-EDEF 1H")
+  field(INP, "$(DEV):$(SECN)1H.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)1H.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHST1H")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHST1H") {
+  field(DESC, "HST RMS-EDEF 1H")
+  field(INP, "$(DEV):$(SECN)1H.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)1H.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHST1H")
+}
+
+record(bsa, "$(DEV):$(SECN)TH") {
+  field(DESC, "$(ATTR) Avg for EDEF TH")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "17")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTTH")
+  field(VRES, "$(DEV):$(SECN)HSTTH.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTTH.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTTH.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTTH.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTTH") {
+  field(DESC, "$(ATTR) Hst for EDEF TH")
+  field(INP, "$(DEV):$(SECN)TH")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)TH.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTTH")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTTH") {
+  field(DESC, "HST #Pulses avged-EDEF TH")
+  field(INP, "$(DEV):$(SECN)TH.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)TH.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTTH")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTTH") {
+  field(DESC, "HST RMS-EDEF TH")
+  field(INP, "$(DEV):$(SECN)TH.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)TH.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTTH")
+}
+
+record(bsa, "$(DEV):$(SECN)BR") {
+  field(DESC, "$(ATTR) Avg for EDEF BR")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "18")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTBR")
+  field(VRES, "$(DEV):$(SECN)HSTBR.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTBR.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTBR.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTBR.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTBR") {
+  field(DESC, "$(ATTR) Hst for EDEF BR")
+  field(INP, "$(DEV):$(SECN)BR")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)BR.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTBR")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTBR") {
+  field(DESC, "HST #Pulses avged-EDEF BR")
+  field(INP, "$(DEV):$(SECN)BR.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)BR.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTBR")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTBR") {
+  field(DESC, "HST RMS-EDEF BR")
+  field(INP, "$(DEV):$(SECN)BR.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)BR.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTBR")
+}
+
+record(bsa, "$(DEV):$(SECN)CUHTH") {
+  field(DESC, "$(ATTR) Avg for EDEF CUHTH")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "19")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUHTH")
+  field(VRES, "$(DEV):$(SECN)HSTCUHTH.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUHTH.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUHTH.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUHTH.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUHTH") {
+  field(DESC, "$(ATTR) Hst for EDEF CUHTH")
+  field(INP, "$(DEV):$(SECN)CUHTH")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUHTH.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUHTH")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUHTH") {
+  field(DESC, "HST #Pulses avged-EDEF CUHTH")
+  field(INP, "$(DEV):$(SECN)CUHTH.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUHTH.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUHTH")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUHTH") {
+  field(DESC, "HST RMS-EDEF CUHTH")
+  field(INP, "$(DEV):$(SECN)CUHTH.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUHTH.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUHTH")
+}
+
+record(bsa, "$(DEV):$(SECN)CUHBR") {
+  field(DESC, "$(ATTR) Avg for EDEF CUHBR")
+  field(DTYP, "BSA")
+  field(SCAN, "I/O Intr")
+  field(PRIO, "HIGH")
+  field(INP, "@$(BSAKEY)")
+  field(EDEF, "20")
+  field(NELM, "$(SINK_SIZE=1)")
+  field(EGU, "$(EGU)")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(ADEL, "$(AD)")
+  field(MDEL, "-1")
+  field(TSE, "-2")
+  field(FLNK, "$(DEV):$(SECN)HSTCUHBR")
+  field(VRES, "$(DEV):$(SECN)HSTCUHBR.RES")
+  field(CRES, "$(DEV):$(SECN)CNTHSTCUHBR.RES")
+  field(RRES, "$(DEV):$(SECN)RMSHSTCUHBR.RES")
+#  field(PRES, "$(DEV):$(SECN)PIDHSTCUHBR.RES")
+}
+
+record(compress, "$(DEV):$(SECN)HSTCUHBR") {
+  field(DESC, "$(ATTR) Hst for EDEF CUHBR")
+  field(INP, "$(DEV):$(SECN)CUHBR")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(PREC, "$(PR)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUHBR.TIME")
+  field(FLNK, "$(DEV):$(SECN)CNTHSTCUHBR")
+}
+
+record(compress, "$(DEV):$(SECN)CNTHSTCUHBR") {
+  field(DESC, "HST #Pulses avged-EDEF CUHBR")
+  field(INP, "$(DEV):$(SECN)CUHBR.CNT")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  field(TSEL, "$(DEV):$(SECN)CUHBR.TIME")
+  field(FLNK, "$(DEV):$(SECN)RMSHSTCUHBR")
+}
+
+record(compress, "$(DEV):$(SECN)RMSHSTCUHBR") {
+  field(DESC, "HST RMS-EDEF CUHBR")
+  field(INP, "$(DEV):$(SECN)CUHBR.RMS")
+  field(ALG, "Circular Buffer")
+  field(NSAM, "2800")
+  field(HOPR, "$(HO)")
+  field(LOPR, "$(LO)")
+  field(EGU, "$(EGU)")
+  field(TSEL, "$(DEV):$(SECN)CUHBR.TIME")
+#  field(FLNK, "$(DEV):$(SECN)PIDHSTCUHBR")
+}
