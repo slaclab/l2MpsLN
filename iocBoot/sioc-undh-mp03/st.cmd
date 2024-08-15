@@ -5,18 +5,28 @@
 
 < envPaths
 
-epicsEnvSet("SLOT_ID", "2")
-epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
-epicsEnvSet("FACILITY","lcls")
+# =======================================
+# Define mode management and type
+# =======================================
+epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 epicsEnvSet("TYPE","LN")
 
-epicsEnvSet("LOCATION","UNDH")
-epicsEnvSet("LOCATION_INDEX","MP03")
-epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
+# =======================================
+# Initialize default environment variables
+# =======================================
+< ${TOP}/iocBoot/common/support/ana_default.cmd
 
-#
-# Loads common Link Node startup
-#
+# =======================================
+# Load specific environment variables for this unit
+# =======================================
+< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
+
+# =======================================
+# Load common initialization file
+# =======================================
 < ${TOP}/iocBoot/common/start.cmd
 
-system("scripts/setupBPClockRT.sh shm-undh-sp05-1")
+# =======================================
+# Setup crate backplane communication
+# =======================================
+system("scripts/setupBPClockRT.sh ${SHM}")

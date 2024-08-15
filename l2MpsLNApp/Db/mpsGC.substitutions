@@ -1,5 +1,0 @@
-file "StreamGainControl.db"
-{ pattern
-        { DEVICE,   ATTR ,    PORT,  PARAM                           }
-        { $(GC)  ,$(GCA)  , $(PORT),  DSG$(BAY)_VoltOut_$(CH)        }
-}

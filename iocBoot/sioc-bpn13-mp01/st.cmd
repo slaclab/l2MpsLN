@@ -5,18 +5,28 @@
 
 < envPaths
 
-epicsEnvSet("SLOT_ID", "2")
-epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
-epicsEnvSet("FACILITY","lcls")
+# =======================================
+# Define mode management and type
+# =======================================
 epicsEnvSet("TYPE","LN")
-
-epicsEnvSet("LOCATION","BPN13")
-epicsEnvSet("LOCATION_INDEX","MP01")
 epicsEnvSet("MODE_INPV", "1")
 
-#
-# Loads common Link Node startup
-#
+# =======================================
+# Initialize default environment variables
+# =======================================
+< ${TOP}/iocBoot/common/support/ana_default.cmd
+
+# =======================================
+# Load specific environment variables for this unit
+# =======================================
+< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
+
+# =======================================
+# Load common initialization file
+# =======================================
 < ${TOP}/iocBoot/common/start.cmd
 
-system("scripts/setupBPClockRT.sh shm-bpn13-sp01-1")
+# =======================================
+# Setup crate backplane communication
+# =======================================
+system("scripts/setupBPClockRT.sh ${SHM}")
