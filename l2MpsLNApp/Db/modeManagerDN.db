@@ -69,21 +69,17 @@ record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(ONVL, "1")
   field(TWVL, "2")
   field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
   field(ZRST, "Entire Crate=NC")
   field(ONST, "Enitre Crate=SC")
   field(TWST, "Crate=NC; LN=SC")
   field(THST, "Crate=SC; LN=NC")
-  field(FRST, "Crate=NC; LN=miniTPG")
-  field(FVST, "Crate=SC; LN=miniTPG")
   field(FLNK, "$(TPR):TCRB:MODECTRL_CALC")
   info(autosaveFields, "VAL")
 }
 
 record(calc, "$(TPR):TCRB:MODECTRL_CALC") {
   field(DESC, "Crossbar selection")
-  field(CALC, "A=0?167:A=1?211:A=2?179:A=3?199:A=4?171:A=5?203:0")
+  field(CALC, "A=0?167:A=1?211:A=2?179:A=3?199:0")
   field(INPA, "$(TPR):TCRB:MODECTRL")
   field(FLNK, "$(TPR):TCRB:MODECTRL_SEQ")
 }
@@ -142,8 +138,8 @@ record(mbbi, "$(TPR):TCRB:MODE") {
   field(THST, "Crate=SC; LN=NC")
   field(FRST, "Crate=NC; LN=miniTPG")
   field(FVST, "Crate=SC; LN=miniTPG")
-  field(FRSV, "MINOR")
-  field(FVSV, "MINOR")
+  field(FRSV, "MAJOR")
+  field(FVSV, "MAJOR")
   field(SXST, "Unknown")
   field(SXSV, "INVALID")
   field(FLNK, "$(TPR):TCRB:MODESTAT")
