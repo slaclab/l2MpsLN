@@ -62,7 +62,7 @@ DBD += l2MpsLN.dbd
 l2MpsLN_DBD += base.dbd
 l2MpsLN_DBD += devIocStats.dbd
 l2MpsLN_DBD += asSupport.dbd
-l2MpsLN_DBD += l2mps_l1bsa.dbd
+l2MpsLN_DBD += l2MpsLnDriver.dbd
 
 # Include dbd files from all support applications:
 l2MpsLN_DBD += system.dbd
@@ -88,6 +88,7 @@ l2MpsLN_SRCS += l2MpsLN_registerRecordDeviceDriver.cpp
 l2MpsLN_SRCS += IOCfunctions.cpp
 l2MpsLN_SRCS += l2MpsLnDriver.cpp
 l2MpsLN_SRCS += l2mps_l1bsa.cpp l2mps_l1bsa_channels.cpp
+l2MpsLN_SRCS += l2MpsLnFunctions.cpp
 l2MpsLN_SRCS += asubG2V.c asubRWF2EGU.c asubV2RAW.c
 
 # Add all the support libraries needed by this IOC
