@@ -1,0 +1,79 @@
+#================================================================================#
+# MPS PV template for analog input channels                                      #
+# Macro description:                                                             #
+#   - P           : Device prefix i.e. CBLM:UNDH:1375                            #
+#   - R           : Fault name from database e.g. I0_LOSS                        #
+#   - ACCL        : Accelerator (NC or SC)                                       #
+#   - TSEC        : Timing system cycles per second (360 or 910000)              #
+#   - PORT        : Asyn Port                                                    #
+#   - DCYPARAM    : Asyn Parameter for decay factor                              #
+#   - SCLPARAM    : Asyn Parameter for scale factor                              #
+#================================================================================#
+record(ao,    "$(P):$(R)_INT_$(ACCL)") {
+  field(DESC, "integration time in seconds")
+  field(EGU,  "s")
+  field(SCAN, "Passive")
+  field(PINI, "YES")
+  field(VAL,  "0")
+  field(PREC, "3")
+  field(FLNK, "$(P):$(R)_INT_CALC_$(ACCL)")
+  info(autosaveFields, "VAL")
+}
+record(calc,  "$(P):$(R)_INT_CALC_$(ACCL)") {
+  field(DESC, "Turn decay time into FW variable")
+  field(INPA, "$(P):$(R)_INT_$(ACCL)")
+  field(INPB, "$(TSEC)")
+  field(CALC, "(A=0)?0:(EXP(-1/(A*B)))")
+  field(PREC, "12")
+  field(FLNK, "$(P):$(R)_INTDCY_$(ACCL)")
+}
+record(ao,    "$(P):$(R)_INTDCY_$(ACCL)") {
+  field(DESC, "decay multiplier")
+  field(DTYP, "asynFloat64")
+  field(DOL,  "$(P):$(R)_INT_CALC_$(ACCL)")
+  field(OMSL, "closed_loop")
+  field(OUT,  "@asyn($(PORT),3)$(DCYPARAM)")
+  field(SCAN, "Passive")
+  field(PREC, "12")
+  field(FLNK, "$(P):$(R)_INTDCY_$(ACCL)_RBV")
+}
+record(ai,    "$(P):$(R)_INTDCY_$(ACCL)_RBV") {
+  field(DESC, "decay multiplier RBV")
+  field(DTYP, "asynFloat64")
+  field(INP,  "@asyn($(PORT),3)$(DCYPARAM)")
+  field(SCAN, "1 second")
+  field(PREC, "12")
+  field(FLNK, "$(P):$(R)_INT_CALC_$(ACCL)_RBV")
+}
+record(calc,  "$(P):$(R)_INT_CALC_$(ACCL)_RBV") {
+  field(DESC, "Turn FW scal factor back into seconds")
+  field(INPA, "$(P):$(R)_INTDCY_$(ACCL)_RBV")
+  field(INPB, "$(TSEC)")
+  field(CALC, "(A=0)?0:(-1/(LN(A)*B))")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+  field(FLNK, "$(P):$(R)_INT_$(ACCL)_RBV")
+}
+record(ai,     "$(P):$(R)_INT_$(ACCL)_RBV") {
+  field(DESC, "integration time in s RBV")
+  field(EGU,  "s")
+  field(INP,  "$(P):$(R)_INT_CALC_$(ACCL)_RBV")
+  field(SCAN, "Passive")
+}
+record(ao, "$(P):$(R)_INTSCL_$(ACCL)") {
+    field(DTYP, "asynFloat64")
+    field(DESC, "Integrator scale factor")
+    field(PINI, "YES")
+    field(SCAN, "Passive")
+    field(OUT,  "@asyn($(PORT),3)$(SCLPARAM)")
+    field(PREC, "3")
+    field(FLNK, "$(P):$(R)_INTSCL_$(ACCL)_RBV")
+    info(autosaveFields, "VAL")
+}
+record(ai,  "$(P):$(R)_INTSCL_$(ACCL)_RBV") {
+    field(DTYP, "asynFloat64")
+    field(DESC, "Integrator scale factor")
+    field(SCAN, "1 second")
+    field(INP,  "@asyn($(PORT),3)$(SCLPARAM)")
+    field(PREC, "3")
+}

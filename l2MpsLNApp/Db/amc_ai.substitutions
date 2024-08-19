@@ -57,3 +57,10 @@ file StreamEGU.db { pattern
 { DEVICE, ATTR,  DESC,                      PORT,            PARAM                      }
 { $(P),   MPS,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
 }
+file ana_decay.template { pattern
+{ R,       ACCL, TSEC,    PORT,           DCYPARAM,                  SCLPARAM                   }
+{ I0_LOSS, NC,   360,     YCPSWASYN_PORT, I0_B$(BAY)_C$(INP)_LC1DCY, I0_B$(BAY)_C$(INP)_LC1SCL  }
+{ I0_LOSS, SC,   910000,  YCPSWASYN_PORT, I0_B$(BAY)_C$(INP)_LC2DCY, I0_B$(BAY)_C$(INP)_LC2SCL  }
+{ I1_LOSS, NC,   360,     YCPSWASYN_PORT, I1_B$(BAY)_C$(INP)_LC1DCY, I1_B$(BAY)_C$(INP)_LC1SCL  }
+{ I1_LOSS, SC,   910000,  YCPSWASYN_PORT, I1_B$(BAY)_C$(INP)_LC2DCY, I1_B$(BAY)_C$(INP)_LC2SCL  }
+}
