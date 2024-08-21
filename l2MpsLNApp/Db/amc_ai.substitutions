@@ -24,10 +24,6 @@ file RegRW_AnalogAS.template { pattern
 { R,              DESC,        PINI,   SCAN,        EGU,  LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT            }
 { FW_OFFSET,     "DC Offset",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT  }
 }
-file Reg1BitRW.template {pattern
-{ R,          DESC,                    ZNAM,       ONAM,       SCAN,       DTYP,               PARAM,                    PORT           }
-{ AutoRearm,  "Waveform Stream On/Off" Disabled    Enabled     "1 second"  asynUInt32Digital   DM$(BAY)_TrigHwAutoReArm, YCPSWASYN_PORT }
-}
 file bsa.db { pattern
 { DEV,   SECN,             TPR,    PORT,    BSAKEY              }
 {  $(P), I0_$(ATTR),       $(TPR), bsaPort, I0_B$(BAY)_C$(INP)  }
