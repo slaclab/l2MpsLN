@@ -22,7 +22,7 @@
           - TimeoutEnable: !<value> 1
           - TimeoutTime: !<value> 7
 #Channel 0
--mmio:
+- mmio:
   - AppTop:
     - AppCore:
       - MpsAnalogCore:
