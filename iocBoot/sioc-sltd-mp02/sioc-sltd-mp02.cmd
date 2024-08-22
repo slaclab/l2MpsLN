@@ -1,7 +1,7 @@
 epicsEnvSet("LN","98")
 epicsEnvSet("MPS_CONFIG_VERSION","2024-08-17-a")
 epicsEnvSet("L2MPS_PREFIX","MPLN:SLTD:MP02:1")
-epicsEnvSet("CRATE","1")
+epicsEnvSet("CRATE","0")
 epicsEnvSet("SLOT_ID","3")
 epicsEnvSet("LOCATION","SLTD")
 epicsEnvSet("LOCATION_INDEX","MP02")

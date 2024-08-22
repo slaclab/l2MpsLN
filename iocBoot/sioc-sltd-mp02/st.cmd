@@ -26,7 +26,3 @@ epicsEnvSet("TYPE","LN")
 # =======================================
 < ${TOP}/iocBoot/common/start.cmd
 
-# =======================================
-# Setup crate backplane communication
-# =======================================
-system("scripts/setupBPClockRT.sh ${SHM}")
