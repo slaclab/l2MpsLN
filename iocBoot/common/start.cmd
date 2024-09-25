@@ -49,13 +49,6 @@ epicsEnvSet("ENGINEER","Jeremy Mock")
 cd ${TOP}
 
 # ===========================================
-#               DBD LOADING
-# ===========================================
-## Register all support components
-dbLoadDatabase("dbd/l2MpsLN.dbd",0,0)
-l2MpsLN_registerRecordDeviceDriver(pdbbase)
-
-# ===========================================
 #             CPSW DRIVER SETUP
 # ===========================================
 
@@ -117,7 +110,9 @@ cpswLoadConfigFile("iocBoot/${IOC}/${IOC}.yaml", "")
 
 ## Configure asyn port driver
 # L2MPSASYNConfig(
-#    Port Name)                 # the name given to this port driver
+#    Port Name,    # the name given to this port driver
+#    APP ID,       # the unique application ID
+#    MPS Prefix)   # the MPS PV prefix
 L2MPSASYNConfig("${L2MPSASYN_PORT}","${APPID}","${L2MPS_PREFIX}")
 
 ## Configure the Link Node driver
