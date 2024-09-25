@@ -21,10 +21,4 @@
           - TimeoutMask: !<value> 65
           - TimeoutEnable: !<value> 1
           - TimeoutTime: !<value> 7
-- mmio:
-  - AppTop:
-    - AppCore:
-        - MpsLinkNodeCore:
-            - MpsMitigationCore:
-                - mpsConfig: !<value> 0x1
 
