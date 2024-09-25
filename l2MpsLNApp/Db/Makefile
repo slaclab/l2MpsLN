@@ -13,6 +13,11 @@ DB_INSTALLS += $(BSADRIVER)/db/bsasCtrl.db
 # ==========================================================
 DB_INSTALLS += $(L2MPSASYN)/db/mps.db
 DB_INSTALLS += $(L2MPSASYN)/db/mps_soft.db
+DB_INSTALLS += $(L2MPSASYN)/db/lc2_analog_sw.db
+DB_INSTALLS += $(L2MPSASYN)/db/lc2_bpm_sw.db
+DB_INSTALLS += $(L2MPSASYN)/db/lc2_watchdog.db
+
+
 
 # ==========================================
 # MPS LN specific databases
