@@ -1,4 +1,7 @@
-# Set default environment macros, to be overwritten later if necessary
+# ===========================================
+#      Set Default Environment Variables
+# ===========================================
+
 epicsEnvSet("DIGAID","0")
 epicsEnvSet("APPID","0")
 epicsEnvSet("BAYS","0")
@@ -26,3 +29,10 @@ epicsEnvSet("CH5_P","")
 epicsEnvSet("CH5_R","")
 epicsEnvSet("CH5_EGU","")
 epicsEnvSet("CH5_GCH","")
+
+# ===========================================
+#               DBD LOADING
+# ===========================================
+## Register all support components
+dbLoadDatabase("${TOP}/dbd/l2MpsLN.dbd",0,0)
+l2MpsLN_registerRecordDeviceDriver(pdbbase)
