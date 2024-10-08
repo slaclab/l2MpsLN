@@ -27,6 +27,11 @@ epicsEnvSet("TYPE","LN")
 < ${TOP}/iocBoot/common/start.cmd
 
 # =======================================
+# Load mitigation settings
+# =======================================
+cpswLoadConfigFile("iocBoot/${IOC}/mitigation_config.yaml", "mmio")
+
+# =======================================
 # Setup crate backplane communication
 # =======================================
 system("scripts/setupBPClockRT.sh ${SHM}")
