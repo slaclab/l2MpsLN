@@ -8,7 +8,6 @@ record(ao, "$(P):$(R)") {
     field(FLNK, "$(P):$(R)_RBV")
     field(PREC, "$(PREC)")
 }
-
 record(ai,  "$(P):$(R)_RBV") {
     field(DTYP, "asynFloat64")
     field(DESC, "$(DESC)")
