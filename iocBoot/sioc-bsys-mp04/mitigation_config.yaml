@@ -1,0 +1,5 @@
+- AppTop:
+  - AppCore:
+    - MpsLinkNodeCore:
+      - MpsMitigationCore:
+        - mpsConfig: !<value> 0x3
