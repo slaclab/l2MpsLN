@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-0-1__: 2024-10-08 jmock
+  * build against mps_configuration 2024-10-07-a
+
 * __l2MpsLN-R5-0-0__: 2024-10-08 jmock
   * build against l2MpsAsyn 4.1.0
   * refactor databases to load from local instead of mps_configuration
