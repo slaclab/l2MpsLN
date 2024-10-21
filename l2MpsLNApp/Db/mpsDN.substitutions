@@ -183,57 +183,57 @@ file "RegCmd.template" { pattern
 file "RegRW.template" { pattern
 { R,                        DESC,                                       SCAN,      EGU,        PARAM                            }
 { DIG_APPID,                "Digital Application ID",                   "Passive", "",         DIGMES_AppId                     }
-{ DIG_FORCEBITS,            "Digital Force Bits",                       "Passive", "",         DIGMES_DigitalForceBits          }
-{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "Passive", "",         MITIG_mpsAmcDest_0               }
-{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "Passive", "",         MITIG_mpsAmcDest_1               }
-{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "Passive", "",         MITIG_mpsAmcDest_2               }
-{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "Passive", "",         MITIG_mpsAmcDest_3               }
-{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "Passive", "",         MITIG_mpsRtmDest_0               }
-{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "Passive", "",         MITIG_mpsRtmDest_1               }
-{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "Passive", "",         MITIG_mpsRtmDest_2               }
-{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "Passive", "",         MITIG_mpsRtmDest_3               }
+{ DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",        DIGMES_DigitalForceBits          }
+{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second", "",        MITIG_mpsAmcDest_0               }
+{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second", "",        MITIG_mpsAmcDest_1               }
+{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second", "",        MITIG_mpsAmcDest_2               }
+{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "1 second", "",        MITIG_mpsAmcDest_3               }
+{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "1 second", "",        MITIG_mpsRtmDest_0               }
+{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second", "",        MITIG_mpsRtmDest_1               }
+{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second", "",        MITIG_mpsRtmDest_2               }
+{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second", "",        MITIG_mpsRtmDest_3               }
 { LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "Passive", "",         LC1_UdpBroadcastIP               }
 { LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "Passive", "us",       LC1_TimeoutTime                  }
 { LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "Passive", "",         LC1_TimeoutMask                  }
 { LC1_NODE_ID,              "LCLS-I Link Node BLM Application ID",      "Passive", "",         LC1_NodeId                       }
 { LC1_IP_ADDR,              "LCLS-I Port IP Address",                   "Passive", "",         LC1_IpAddr                       }
-{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_0                 }
-{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_1                 }
-{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_2                 }
-{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_3                 }
-{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_4                 }
-{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_5                 }
-{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_6                 }
-{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_7                 }
-{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_8                 }
-{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_9                 }
-{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "Passive", "",         LC1_appIdRemap_10                }
-{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "Passive", "",         ASMCORE_mpsOpenSrs               }
-{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "Passive", "",         ASMCORE_mpsCloseSrs              }
-{ ASM_SHTR_SRS,             "Shutter signal selection",                 "Passive", "",         ASMCORE_shtrSrs                  }
-{ CON_GT_RX_POL,            "GT RX polarity",                           "Passive", "",         CONCEN_GtRxPolarity              }
-{ CON_GT_TX_POL,            "Gt TX polarity",                           "Passive", "",         CONCEN_GtTxPolarity              }
-{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "Passive", "",         CONCEN_GtTxPreCursor_0           }
-{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "Passive", "",         CONCEN_GtTxPreCursor_1           }
-{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "Passive", "",         CONCEN_GtTxPostCursor_0          }
-{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "Passive", "",         CONCEN_GtTxPostCursor_1          }
-{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "Passive", "",         CONCEN_GtTxDiffCtrl_0            }
-{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "Passive", "",         CONCEN_GtTxDiffCtrl_1            }
+{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_0                 }
+{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_1                 }
+{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_2                 }
+{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_3                 }
+{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_4                 }
+{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_5                 }
+{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_6                 }
+{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_7                 }
+{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_8                 }
+{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_9                 }
+{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_10                }
+{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second", "",        ASMCORE_mpsOpenSrs               }
+{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second", "",        ASMCORE_mpsCloseSrs              }
+{ ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",        ASMCORE_shtrSrs                  }
+{ CON_GT_RX_POL,            "GT RX polarity",                           "1 second", "",        CONCEN_GtRxPolarity              }
+{ CON_GT_TX_POL,            "Gt TX polarity",                           "1 second", "",        CONCEN_GtTxPolarity              }
+{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "1 second", "",        CONCEN_GtTxPreCursor_0           }
+{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "1 second", "",        CONCEN_GtTxPreCursor_1           }
+{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "1 second", "",        CONCEN_GtTxPostCursor_0          }
+{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "1 second", "",        CONCEN_GtTxPostCursor_1          }
+{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "1 second", "",        CONCEN_GtTxDiffCtrl_0            }
+{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",        CONCEN_GtTxDiffCtrl_1            }
 }
 
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                        ZNAM,       ONAM,       SCAN,         DTYP,                   ZSV,        OSV,     PARAM                    }
-{ DIG_FORCEBITSEN,    "Enable Digital Force Bits", "Disable",  "Enable",   "Passive",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
+{ R,                  DESC,                        ZNAM,       ONAM,       SCAN,          DTYP,                   ZSV,        OSV,     PARAM                    }
+{ DIG_FORCEBITSEN,    "Enable Digital Force Bits", "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
 }
 
 #======================================
 # 1-bit Register with ScalVal interfaces
 #======================================
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,         DTYP,                   PARAM                    }
-{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "Passive",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
-{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "Passive",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
-{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "Passive",    "asynUInt32Digital",    LC1_TimeoutEnable        }
+{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   PARAM                    }
+{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
+{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
+{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
 }
 
 #======================================
@@ -275,7 +275,7 @@ file "Reg2BitsRO.template" { pattern
 #======================================
 file "Reg3BitsRW.template" { pattern
 { R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,      PARAM                   }
-{ MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "Passive", MITIG_mpsConfig         }
+{ MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "1 second", MITIG_mpsConfig         }
 }
 
 #======================================
@@ -283,10 +283,10 @@ file "Reg3BitsRW.template" { pattern
 #======================================
 file "Reg4BitsRW.template" { pattern
 { R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           FRST,          FVST,          SXST,          SVST,          EIST,          NIST,          TEST,          ELST,          TVST,          TTST,          FTST,          FFST,        SCAN,       PARAM                           }
-{ ASM_AMC_DEST_0,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "Passive", ASMCORE_mpsAmcDest_0            }
-{ ASM_AMC_DEST_1,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "Passive", ASMCORE_mpsAmcDest_1            }
-{ ASM_AMC_DEST_2,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "Passive", ASMCORE_mpsAmcDest_2            }
-{ ASM_AMC_DEST_3,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "Passive", ASMCORE_mpsAmcDest_3            }
+{ ASM_AMC_DEST_0,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_0            }
+{ ASM_AMC_DEST_1,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_1            }
+{ ASM_AMC_DEST_2,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_2            }
+{ ASM_AMC_DEST_3,       "AMC destination",                      "AMC00",        "AMC01",            "AMC10",            "AMC11",        "AOM Permit",  "Trig select", "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ASMCORE_mpsAmcDest_3            }
 }
 
 #======================================
