@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-1-0__: 2024-10-21 jmock
+  * build against mps_configuration 2024-10-21-a (include PBLM:DASEL:415)
+  * Build against l2MpsAsyn 4.1.2
+  * Activate BSAS for I0 and I0 FLOAT
+  * Activate BSA for I0, I0 FLOAT, and I1
+
 * __l2MpsLN-R5-0-1__: 2024-10-08 jmock
   * build against mps_configuration 2024-10-07-a
 

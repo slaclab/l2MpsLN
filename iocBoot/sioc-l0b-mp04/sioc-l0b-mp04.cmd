@@ -1,5 +1,5 @@
 epicsEnvSet("LN","54")
-epicsEnvSet("MPS_CONFIG_VERSION","2024-10-07-a")
+epicsEnvSet("MPS_CONFIG_VERSION","2024-10-21-a")
 epicsEnvSet("L2MPS_PREFIX","MPLN:L0B:MP04:1")
 epicsEnvSet("CRATE","1")
 epicsEnvSet("SLOT_ID","2")
