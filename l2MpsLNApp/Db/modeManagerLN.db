@@ -214,15 +214,9 @@ record(seq, "$(P):RESET_ERR_SEQ"){
   field(DOL2, "1")
   field(LNK2, "$(P):PGP_CNTRST_1 PP")
   field(DOL3, "1")
-  field(LNK3, "$(P):PGP_CNTRST_2 PP")
+  field(LNK3, "$(P):CON_CNTRST PP")
   field(DOL4, "1")
-  field(LNK4, "$(P):PGP_CNTRST_3 PP")
-  field(DOL5, "1")
-  field(LNK5, "$(P):CON_CNTRST PP")
-  field(DOL6, "1")
-  field(LNK6, "$(P):LC1_CLRTIMEOUT PP")
-  field(DOL7, "1")
-  field(LNK7, "$(P):SALT_RST_CNT PP")
+  field(LNK4, "$(P):LC1_CLRTIMEOUT PP")
 }
 record(bo, "$(TPR):SC_BSA_ENABLE")
 {
