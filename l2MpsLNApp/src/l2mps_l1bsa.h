@@ -81,7 +81,6 @@ private:
     // This method receive the data stream, process it, and move the data
     // to BsaCore. It runs in the streamThread_ thread.
     std::string streamName;
-    std::string recordPrefix;
     static L2MpsL1Bsa* instance;
     L2MpsL1Bsa(const L2MpsL1Bsa&);
 

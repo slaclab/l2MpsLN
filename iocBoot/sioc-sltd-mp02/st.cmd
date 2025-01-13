@@ -5,16 +5,24 @@
 
 < envPaths
 
-epicsEnvSet("SLOT_ID", "3")
-epicsEnvSet("FPGA_IP","10.0.1.10${SLOT_ID}")
-epicsEnvSet("FACILITY","lcls")
+# =======================================
+# Define mode management and type
+# =======================================
+epicsEnvSet("MODE_INPV", "1")
 epicsEnvSet("TYPE","LN")
 
-epicsEnvSet("LOCATION","SLTD")
-epicsEnvSet("LOCATION_INDEX","MP02")
-epicsEnvSet("MODE_INPV", "1")
+# =======================================
+# Initialize default environment variables
+# =======================================
+< ${TOP}/iocBoot/common/support/ana_default.cmd
 
-#
-# Loads common Link Node startup
-#
+# =======================================
+# Load specific environment variables for this unit
+# =======================================
+< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
+
+# =======================================
+# Load common initialization file
+# =======================================
 < ${TOP}/iocBoot/common/start.cmd
+

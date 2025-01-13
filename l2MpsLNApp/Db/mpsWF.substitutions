@@ -1,6 +1,0 @@
-#ATTR is FAST or MPS
-file "StreamEGU.db"
-{ pattern
-        { DEVICE     ,   ATTR,      DESC                                   ,    PORT   ,   PARAM                       }
-        { $(WF)     ,   $(WFA),   "(Bay $(BAY), ch $(CH))", $(PORT)   ,  Stream$(ST):16               }
-}

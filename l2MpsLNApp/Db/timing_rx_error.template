@@ -1,0 +1,38 @@
+record(bi,      "$(P):RXLNKSTATUS_LTCH") {
+    field(DTYP, "asynInt32")
+    field(DESC, "$(DESC)")
+    field(PINI, "YES")
+    field(SCAN, "$(SCAN)")
+    field(INP,  "@asyn($(PORT),1)$(PARAM)")
+    field(ZNAM, "$(ZNAM)")
+    field(ONAM, "$(ONAM)")
+    field(ZSV,  "NO_ALARM")
+    field(OSV,  "MAJOR")
+}
+record(bo,      "$(P):RXLNKSTATUS_RESET") {
+    field(DTYP, "Soft Channel")
+    field(DESC, "Process this record to reset rx error")
+    field(PINI, "YES")
+    field(SCAN, "Passive")
+    field(ZNAM, "Normal")
+    field(ONAM, "Reset")
+    field(FLNK, "$(P):RXLNKSTATUS_RESET_RAW")
+}
+record(bo,      "$(P):RXLNKSTATUS_RESET_RAW") {
+    field(DTYP, "asynInt32")
+    field(DESC, "Process this record to reset rx error")
+    field(PINI, "YES")
+    field(SCAN, "Passive")
+    field(OMSL, "closed_loop")
+    field(DOL,  "$(P):RXLNKSTATUS_RESET_VAL.VAL")
+    field(OUT,  "@asyn($(PORT),1)$(PARAM)")
+    field(ZNAM, "Normal")
+    field(ONAM, "Reset")
+    field(FLNK, "$(P):RXLNKSTATUS_LTCH")
+}
+record(ao,      "$(P):RXLNKSTATUS_RESET_VAL") {
+    field(DTYP, "Soft Channel")
+    field(DESC, "Record to hold a 0")
+    field(VAL,  "0")
+    field(PINI, "YES")
+}

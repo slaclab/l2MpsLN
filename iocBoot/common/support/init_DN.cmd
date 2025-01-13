@@ -1,10 +1,2 @@
-# ===========================================
-#               MPS Driver
-# ===========================================
-< ${TOP}/iocBoot/common/support/init_mps_driver.cmd
-
-# ===========================================
-#             LCLS1 BSA Driver
-# ===========================================
-# Load this only to get PV support.
-< ${TOP}/iocBoot/common/support/init_lc1_bsa.cmd
+# Set the IS_DN flag to ignore commands later in startup
+epicsEnvSet("IS_DN","#")

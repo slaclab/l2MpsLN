@@ -1,0 +1,12 @@
+## Enable SALT registers for 7 slots
+- AmcCarrierCore:
+  - AppMps:
+    - AppMpsSalt: 
+      - MpsChEnable: !<value> 0x3e
+
+## Load configurations
+- AppTop:
+  - AppCore:
+    - MpsLinkNodeCore:
+      - MpsMitigationCore:
+        - mpsConfig: !<value> 0x0

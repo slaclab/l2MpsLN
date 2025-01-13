@@ -1,36 +1,51 @@
 # ===========================================
 #             LCLS2 BSA Driver
 # ===========================================
-< ${TOP}/iocBoot/common/support/init_lc2_bsa.cmd
-
-# ===========================================
-#               MPS Driver
-# ===========================================
-< ${TOP}/iocBoot/common/support/init_mps_driver.cmd
-
-# ===========================================
-#             LCLS1 BSA Driver
-# ===========================================
-< ${TOP}/iocBoot/common/support/init_lc1_bsa.cmd
+ < ${TOP}/iocBoot/common/support/init_lc2_bsa.cmd
 
 # ===========================================
 #             LCLS2 BSAS Driver
 # ===========================================
-# < ${TOP}/iocBoot/common/support/init_lc2_bsas.cmd
+ < ${TOP}/iocBoot/common/support/init_lc2_bsas.cmd
 
 # ===========================================
-#          Load LN Specific databases
+#         Load LN Soft Input databases
 # ===========================================
-dbLoadRecords("db/mpsWF.db","WF=${WF0},WFA=${WFA0},BAY=0,CH=0,ST=0, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF=${WF1},WFA=${WFA1},BAY=0,CH=1,ST=1, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF=${WF2},WFA=${WFA2},BAY=0,CH=2,ST=2, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF=${WF3},WFA=${WFA3},BAY=1,CH=0,ST=4, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF=${WF4},WFA=${WFA4},BAY=1,CH=1,ST=5, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsWF.db","WF=${WF5},WFA=${WFA5},BAY=1,CH=2,ST=6, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsGC.db","GC=${GC0},GCA=${GCA0},BAY=0,CH=0, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsGC.db","GC=${GC1},GCA=${GCA1},BAY=0,CH=1, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsGC.db","GC=${GC2},GCA=${GCA2},BAY=1,CH=0, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/mpsGC.db","GC=${GC3},GCA=${GCA3},BAY=1,CH=1, PORT=${YCPSWASYN_PORT}")
+
+$(IS_LN="")dbLoadRecords("db/mps_soft.db","P=${L2MPS_PREFIX},PORT=${L2MPSASYN_PORT}")
+
+# ===========================================
+#       Load MPS Analog Input databases
+# ===========================================
+# Channel 0
+$(CH0_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH0_P},ATTR=${CH0_R},EGU=${CH0_EGU},BAY=0,INP=0,TPR=$(TPR)")
+$(CH0_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH0_P},ATTR=${CH0_R},EGU=${CH0_EGU},BAY=0,INP=0")
+$(CH0_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH0_P},BAY=0,INP=0,GCH=${CH0_GCH}")
+
+# Channel 1
+$(CH1_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH1_P},ATTR=${CH1_R},EGU=${CH1_EGU},BAY=0,INP=1,TPR=$(TPR)")
+$(CH1_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH1_P},ATTR=${CH1_R},EGU=${CH1_EGU},BAY=0,INP=1")
+$(CH1_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH1_P},BAY=0,INP=0,GCH=${CH1_GCH}")
+
+# Channel 2
+$(CH2_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH2_P},ATTR=${CH2_R},EGU=${CH2_EGU},BAY=0,INP=2,TPR=$(TPR)")
+$(CH2_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH2_P},ATTR=${CH2_R},EGU=${CH2_EGU},BAY=0,INP=2")
+$(CH2_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH2_P},BAY=0,INP=0,GCH=${CH2_GCH}")
+
+# Channel 3
+$(CH3_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH3_P},ATTR=${CH3_R},EGU=${CH3_EGU},BAY=1,INP=0,TPR=$(TPR)")
+$(CH3_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH3_P},ATTR=${CH3_R},EGU=${CH3_EGU},BAY=1,INP=0")
+$(CH3_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH3_P},BAY=0,INP=0,GCH=${CH3_GCH}")
+
+# Channel 4
+$(CH4_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH4_P},ATTR=${CH4_R},EGU=${CH4_EGU},BAY=1,INP=1,TPR=$(TPR)")
+$(CH4_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH4_P},ATTR=${CH4_R},EGU=${CH4_EGU},BAY=1,INP=1")
+$(CH4_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH4_P},BAY=0,INP=0,GCH=${CH4_GCH}")
+
+# Channel 5
+$(CH5_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH5_P},ATTR=${CH5_R},EGU=${CH5_EGU},BAY=1,INP=2,TPR=$(TPR)")
+$(CH5_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH5_P},ATTR=${CH5_R},EGU=${CH5_EGU},BAY=1,INP=2")
+$(CH5_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH5_P},BAY=0,INP=0,GCH=${CH5_GCH}")
 
 set_pass0_restoreFile("ana_units.sav")
 set_pass1_restoreFile("ana_units.sav")

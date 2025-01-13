@@ -23,8 +23,6 @@ file "RegRO.template" { pattern
 { CON_PACKDROPCNT_7,            "Packet Drop count ch 7",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_7    }
 { CON_PACKDROPCNT_8,            "Packet Drop count ch 8",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_8    }
 { CON_PACKDROPCNT_9,            "Packet Drop count ch 9",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_9    }
-{ CON_PACKDROPCNT_10,           "Packet Drop count ch 10",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_10   }
-{ CON_PACKDROPCNT_11,           "Packet Drop count ch 11",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_11   }
 { CON_PACKOFCNT_0,              "Packet Overflow count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_0      }
 { CON_PACKOFCNT_1,              "Packet Overflow count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_1      }
 { CON_PACKOFCNT_2,              "Packet Overflow count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_2      }
@@ -35,8 +33,6 @@ file "RegRO.template" { pattern
 { CON_PACKOFCNT_7,              "Packet Overflow count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_7      }
 { CON_PACKOFCNT_8,              "Packet Overflow count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_8      }
 { CON_PACKOFCNT_9,              "Packet Overflow count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_9      }
-{ CON_PACKOFCNT_10,             "Packet Overflow count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_10     }
-{ CON_PACKOFCNT_11,             "Packet Overflow count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_11     }
 { CON_PAUSECNT_0,               "Pause Detection count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_0        }
 { CON_PAUSECNT_1,               "Pause Detection count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_1        }
 { CON_PAUSECNT_2,               "Pause Detection count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_2        }
@@ -47,8 +43,6 @@ file "RegRO.template" { pattern
 { CON_PAUSECNT_7,               "Pause Detection count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_7        }
 { CON_PAUSECNT_8,               "Pause Detection count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_8        }
 { CON_PAUSECNT_9,               "Pause Detection count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_9        }
-{ CON_PAUSECNT_10,              "Pause Detection count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_10       }
-{ CON_PAUSECNT_11,              "Pause Detection count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_11       }
 { DIG_BYTESCNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
 { DIG_DBIN,                     "Debounced Input Values",                   "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_RegInputBits         }
 { DIG_SWBYTECNT,                "Number of software bytes in message",      "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_SwBytes              }
@@ -85,28 +79,12 @@ file "RegRO.template" { pattern
 { PGP_RX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_1         }
 { PGP_RX_LINK_DOWN_CNT_1,       "Pgp2bAxi 1 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_1         }
 { PGP_RX_LINK_ERR_CNT_1,        "Pgp2bAxi 1 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_1          }
-{ PGP_RX_CLK_2,                 "Pgp2bAxi 2 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_2             }
-{ PGP_RX_FRAME_CNT_2,           "Pgp2bAxi 2 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_2            }
-{ PGP_RX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_2         }
-{ PGP_RX_LINK_DOWN_CNT_2,       "Pgp2bAxi 2 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_2         }
-{ PGP_RX_LINK_ERR_CNT_2,        "Pgp2bAxi 2 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_2          }
-{ PGP_RX_CLK_3,                 "Pgp2bAxi 3 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_3             }
-{ PGP_RX_FRAME_CNT_3,           "Pgp2bAxi 3 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_3            }
-{ PGP_RX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_3         }
-{ PGP_RX_LINK_DOWN_CNT_3,       "Pgp2bAxi 3 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_3         }
-{ PGP_RX_LINK_ERR_CNT_3,        "Pgp2bAxi 3 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_3          }
 { PGP_TX_CLK_0,                 "Pgp2bAxi 0 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_0             }
 { PGP_TX_FRAME_CNT_0,           "Pgp2bAxi 0 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_0            }
 { PGP_TX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_0         }
 { PGP_TX_CLK_1,                 "Pgp2bAxi 1 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_1             }
 { PGP_TX_FRAME_CNT_1,           "Pgp2bAxi 1 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_1            }
 { PGP_TX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_1         }
-{ PGP_TX_CLK_2,                 "Pgp2bAxi 2 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_2             }
-{ PGP_TX_FRAME_CNT_2,           "Pgp2bAxi 2 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_2            }
-{ PGP_TX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_2         }
-{ PGP_TX_CLK_3,                 "Pgp2bAxi 3 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_3             }
-{ PGP_TX_FRAME_CNT_3,           "Pgp2bAxi 3 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_3            }
-{ PGP_TX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_3         }
 { LC1_UDP_DHCP_IP,              "LCLS-I DHCP Server IP Address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdpDhcpIP               }
 { LC1_UDP_LOCAL_MAC,            "LCLS-I Port Local MAC address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdplocalMac             }
 { LC1_TIMEOUT_STATUS,           "LCLS-I timeout status (11-bits)",          "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_TimeoutStatusMask       }
@@ -126,10 +104,6 @@ file "RegRO.template" { pattern
 { PGP_RX_MON_FRAME_SIZE_2,      "PGP 2 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_2        }
 { PGP_RX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_2     }
 { PGP_RX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_2     }
-{ PGP_RX_MON_FRAME_CNT_3,       "PGP 3 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_3         }
-{ PGP_RX_MON_FRAME_SIZE_3,      "PGP 3 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_3        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_3     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_3     }
 { PGP_TX_MON_FRAME_CNT_0,       "PGP 0 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_0         }
 { PGP_TX_MON_FRAME_SIZE_0,      "PGP 0 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_0        }
 { PGP_TX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_0     }
@@ -142,10 +116,6 @@ file "RegRO.template" { pattern
 { PGP_TX_MON_FRAME_SIZE_2,      "PGP 2 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_2        }
 { PGP_TX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_2     }
 { PGP_TX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_2     }
-{ PGP_TX_MON_FRAME_CNT_3,       "PGP 3 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_3         }
-{ PGP_TX_MON_FRAME_SIZE_3,      "PGP 3 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_3        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_3     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_3     }
 { PGP_RX_MON_FRAME_RATE_0,      "PGP 0 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_0        }
 { PGP_RX_MON_FRAME_RATE_MAX_0,  "PGP 0 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_0     }
 { PGP_RX_MON_FRAME_RATE_MIN_0,  "PGP 0 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_0     } 
@@ -155,9 +125,6 @@ file "RegRO.template" { pattern
 { PGP_RX_MON_FRAME_RATE_2,      "PGP 2 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_2        }
 { PGP_RX_MON_FRAME_RATE_MAX_2,  "PGP 2 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_2     }
 { PGP_RX_MON_FRAME_RATE_MIN_2,  "PGP 2 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_2     }
-{ PGP_RX_MON_FRAME_RATE_3,      "PGP 3 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_3        }
-{ PGP_RX_MON_FRAME_RATE_MAX_3,  "PGP 3 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_3     }
-{ PGP_RX_MON_FRAME_RATE_MIN_3,  "PGP 3 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_3     }
 { PGP_TX_MON_FRAME_RATE_0,      "PGP 0 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_0        }
 { PGP_TX_MON_FRAME_RATE_MAX_0,  "PGP 0 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_0     }
 { PGP_TX_MON_FRAME_RATE_MIN_0,  "PGP 0 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_0     }
@@ -167,9 +134,6 @@ file "RegRO.template" { pattern
 { PGP_TX_MON_FRAME_RATE_2,      "PGP 2 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_2        }
 { PGP_TX_MON_FRAME_RATE_MAX_2,  "PGP 2 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_2     }
 { PGP_TX_MON_FRAME_RATE_MIN_2,  "PGP 2 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_2     }
-{ PGP_TX_MON_FRAME_RATE_3,      "PGP 3 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_3        }
-{ PGP_TX_MON_FRAME_RATE_MAX_3,  "PGP 3 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_3     }
-{ PGP_TX_MON_FRAME_RATE_MIN_3,  "PGP 3 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_3     }
 }
 
 # Single register with AI records
@@ -187,9 +151,6 @@ file "RegRO_Analog.template" { pattern
 { PGP_RX_MON_BANDWIDTH_2,      "PGP 2 Rx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidth_2    }
 { PGP_RX_MON_BANDWIDTH_MAX_2,  "PGP 2 Rx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMax_2 }
 { PGP_RX_MON_BANDWIDTH_MIN_2,  "PGP 2 Rx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMin_2 }
-{ PGP_RX_MON_BANDWIDTH_3,      "PGP 3 Rx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidth_3    }
-{ PGP_RX_MON_BANDWIDTH_MAX_3,  "PGP 3 Rx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMax_3 }
-{ PGP_RX_MON_BANDWIDTH_MIN_3,  "PGP 3 Rx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMin_3 }
 { PGP_TX_MON_BANDWIDTH_0,      "PGP 0 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_0    }
 { PGP_TX_MON_BANDWIDTH_MAX_0,  "PGP 0 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_0 }
 { PGP_TX_MON_BANDWIDTH_MIN_0,  "PGP 0 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_0 }
@@ -199,9 +160,6 @@ file "RegRO_Analog.template" { pattern
 { PGP_TX_MON_BANDWIDTH_2,      "PGP 2 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_2    }
 { PGP_TX_MON_BANDWIDTH_MAX_2,  "PGP 2 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_2 }
 { PGP_TX_MON_BANDWIDTH_MIN_2,  "PGP 2 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_2 }
-{ PGP_TX_MON_BANDWIDTH_3,      "PGP 3 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_3    }
-{ PGP_TX_MON_BANDWIDTH_MAX_3,  "PGP 3 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_3 }
-{ PGP_TX_MON_BANDWIDTH_MIN_3,  "PGP 3 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_3 }
 }
 
 #======================================
@@ -214,8 +172,6 @@ file "RegCmd.template" { pattern
 { MITMSG_CLRTIMEOUT,    "Clear Timeout",                        "NO",   "Passive",  MITIG_clrTimeout         }
 { PGP_CNTRST_0,         "Pgp2bAxi 0 reset counters",            "NO",   "Passive",  PGP_RstCnt_0             }
 { PGP_CNTRST_1,         "Pgp2bAxi 1 reset counters",            "NO",   "Passive",  PGP_RstCnt_1             }
-{ PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2             }
-{ PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3             }
 { LC1_CLRTIMEOUT,       "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout            }
 }
 
@@ -225,55 +181,49 @@ file "RegCmd.template" { pattern
 
 # Single register with longout records
 file "RegRW.template" { pattern
-{ R,                        DESC,                                       SCAN,       EGU,        PARAM                               }
-{ DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
-{ DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
-{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second", "",         MITIG_mpsAmcDest_0                  }
-{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second", "",         MITIG_mpsAmcDest_1                  }
-{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second", "",         MITIG_mpsAmcDest_2                  }
-{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "1 second", "",         MITIG_mpsAmcDest_3                  }
-{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "1 second", "",         MITIG_mpsRtmDest_0                  }
-{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second", "",         MITIG_mpsRtmDest_1                  }
-{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second", "",         MITIG_mpsRtmDest_2                  }
-{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second", "",         MITIG_mpsRtmDest_3                  }
-{ LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "1 second", "",         LC1_UdpBroadcastIP                  }
-{ LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "1 second", "us",       LC1_TimeoutTime                     }
-{ LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "1 second", "",         LC1_TimeoutMask                     }
-{ LC1_NODE_ID,              "LCLS-I Link Node BLM Application ID",      "1 second", "",         LC1_NodeId                          }
-{ LC1_IP_ADDR,              "LCLS-I Port IP Address",                   "1 second", "",         LC1_IpAddr                          }
-{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_0                    }
-{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_1                    }
-{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_2                    }
-{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_3                    }
-{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_4                    }
-{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_5                    }
-{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_6                    }
-{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_7                    }
-{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_8                    }
-{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_9                    }
-{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_10                   }
-{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second", "",         ASMCORE_mpsOpenSrs                  }
-{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second", "",         ASMCORE_mpsCloseSrs                 }
-{ ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                     }
-{ CON_GT_RX_POL,            "GT RX polarity",                           "1 second", "",         CONCEN_GtRxPolarity                 }
-{ CON_GT_TX_POL,            "Gt TX polarity",                           "1 second", "",         CONCEN_GtTxPolarity                 }
-{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "1 second", "",         CONCEN_GtTxPreCursor_0              }
-{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "1 second", "",         CONCEN_GtTxPreCursor_1              }
-{ CON_GT_TX_PRE_CUR_2,      "GT TX pre-cursor (port 2)",                "1 second", "",         CONCEN_GtTxPreCursor_2              }
-{ CON_GT_TX_PRE_CUR_3,      "GT TX pre-cursor (port 3)",                "1 second", "",         CONCEN_GtTxPreCursor_3              }
-{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "1 second", "",         CONCEN_GtTxPostCursor_0             }
-{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "1 second", "",         CONCEN_GtTxPostCursor_1             }
-{ CON_GT_TX_POST_CUR_2,     "GT TX post-cursor (port 2)",               "1 second", "",         CONCEN_GtTxPostCursor_2             }
-{ CON_GT_TX_POST_CUR_3,     "GT TX post-cursor (port 3)",               "1 second", "",         CONCEN_GtTxPostCursor_3             }
-{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "1 second", "",         CONCEN_GtTxDiffCtrl_0               }
-{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
-{ CON_GT_TX_DIFF_CTRL_2,    "GT TX difference control (port 2)",        "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
-{ CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
+{ R,                        DESC,                                       SCAN,      EGU,        PARAM                            }
+{ DIG_APPID,                "Digital Application ID",                   "Passive", "",         DIGMES_AppId                     }
+{ DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",        DIGMES_DigitalForceBits          }
+{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second", "",        MITIG_mpsAmcDest_0               }
+{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second", "",        MITIG_mpsAmcDest_1               }
+{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second", "",        MITIG_mpsAmcDest_2               }
+{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "1 second", "",        MITIG_mpsAmcDest_3               }
+{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "1 second", "",        MITIG_mpsRtmDest_0               }
+{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second", "",        MITIG_mpsRtmDest_1               }
+{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second", "",        MITIG_mpsRtmDest_2               }
+{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second", "",        MITIG_mpsRtmDest_3               }
+{ LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "Passive", "",         LC1_UdpBroadcastIP               }
+{ LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "Passive", "us",       LC1_TimeoutTime                  }
+{ LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "Passive", "",         LC1_TimeoutMask                  }
+{ LC1_NODE_ID,              "LCLS-I Link Node BLM Application ID",      "Passive", "",         LC1_NodeId                       }
+{ LC1_IP_ADDR,              "LCLS-I Port IP Address",                   "Passive", "",         LC1_IpAddr                       }
+{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_0                 }
+{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_1                 }
+{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_2                 }
+{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_3                 }
+{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_4                 }
+{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_5                 }
+{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_6                 }
+{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_7                 }
+{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_8                 }
+{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_9                 }
+{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",        LC1_appIdRemap_10                }
+{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second", "",        ASMCORE_mpsOpenSrs               }
+{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second", "",        ASMCORE_mpsCloseSrs              }
+{ ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",        ASMCORE_shtrSrs                  }
+{ CON_GT_RX_POL,            "GT RX polarity",                           "1 second", "",        CONCEN_GtRxPolarity              }
+{ CON_GT_TX_POL,            "Gt TX polarity",                           "1 second", "",        CONCEN_GtTxPolarity              }
+{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "1 second", "",        CONCEN_GtTxPreCursor_0           }
+{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "1 second", "",        CONCEN_GtTxPreCursor_1           }
+{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "1 second", "",        CONCEN_GtTxPostCursor_0          }
+{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "1 second", "",        CONCEN_GtTxPostCursor_1          }
+{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "1 second", "",        CONCEN_GtTxDiffCtrl_0            }
+{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",        CONCEN_GtTxDiffCtrl_1            }
 }
 
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   ZSV,        OSV,     PARAM                    }
-{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
+{ R,                  DESC,                        ZNAM,       ONAM,       SCAN,          DTYP,                   ZSV,        OSV,     PARAM                    }
+{ DIG_FORCEBITSEN,    "Enable Digital Force Bits", "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
 }
 
 #======================================
@@ -286,11 +236,6 @@ file "Reg1BitRW.template" { pattern
 { LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
 }
 
-file "Reg1BitRW_int.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,                     PARAM                    }
-{ TIMING_RX_ERR,      "TPR Rx Err: 1=Err",                      "OK",       "Error",    "1 second",               RxDown                   }
-}
-
 #======================================
 # 1-bit Register with ScalVal_RO interfaces
 #======================================
@@ -300,18 +245,10 @@ file "Reg1BitRO.template" { pattern
 { PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_0 }
 { PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_1     }
 { PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_1 }
-{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_2     }
-{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_2 }
-{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_3     }
-{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_3 }
 { PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_0     }
 { PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_0    }
 { PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_1     }
 { PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_1    }
-{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_2     }
-{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_2    }
-{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_3     }
-{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_3    }
 { ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_aomPermit    }
 { ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_trgSelect    }
 { ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_shutter      }
@@ -337,7 +274,7 @@ file "Reg2BitsRO.template" { pattern
 # 3-bit Register with ScalVal interfaces
 #======================================
 file "Reg3BitsRW.template" { pattern
-{ R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,       PARAM                   }
+{ R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,      PARAM                   }
 { MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "1 second", MITIG_mpsConfig         }
 }
 
@@ -356,7 +293,49 @@ file "Reg4BitsRW.template" { pattern
 # Char Array Registers with ScalVal_RO interfaces
 #======================================
 file "RegCharArrayRO.template" { pattern
-{ R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
-{ FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
+{ R,                    DESC,                               PINI,   SCAN,          NELM,   PARAM           }
+{ FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "Passive",     256,    AV_BuildStamp   }
 }
 
+#======================================
+# RTM DI PVs
+#======================================
+file "rtm_di.template" {pattern
+{ CH }
+{ 0  }
+{ 1  }
+{ 2  }
+{ 3  }
+{ 4  }
+{ 5  }
+{ 6  }
+{ 7  }
+{ 8  }
+{ 9  }
+{ 10 }
+{ 11 }
+{ 12 }
+{ 13 }
+{ 14 }
+{ 15 }
+{ 16 }
+{ 17 }
+{ 18 }
+{ 19 }
+{ 20 }
+{ 21 }
+{ 22 }
+{ 23 }
+{ 24 }
+{ 25 }
+{ 26 }
+{ 27 }
+{ 28 }
+{ 29 }
+{ 30 }
+{ 31 }
+}
+file config_version.template { pattern
+{ MPS_CONFIG_VERSION }
+{ $(VER)             }
+}

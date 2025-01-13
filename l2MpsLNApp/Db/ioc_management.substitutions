@@ -1,0 +1,25 @@
+#================================================================================#
+# Collection of db files imported from various modules used for IOC Management   #
+# Macro description:                                                             #
+#   - IOC   : IOC PV Prefix (e.g. SIOC:GUNB:MP01)                                #
+#================================================================================#
+file iocAdminSoft.db { pattern
+{ IOC    }
+{ $(IOC) }
+}
+file iocAdminScanMon.db { pattern
+{ IOC    }
+{ $(IOC) }
+}
+file iocRelease.db { pattern
+{ IOC    }
+{ $(IOC) }
+}
+file devSeqCar.db { pattern
+{ SIOC   }
+{ $(IOC) }
+}
+file save_restoreStatus.db { pattern
+{ P      }
+{ $(IOC): }
+}

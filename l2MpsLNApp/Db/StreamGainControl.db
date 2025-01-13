@@ -32,42 +32,35 @@ record(seq, "$(DEVICE):$(ATTR)_AMP_BYP_SEQ") {
   field(LNK2, "$(DEVICE):$(ATTR)_AMP_V PP")
   field(ASG,  "Internal")
 }
-
-# PV that holds amplifier voltage 
-record(ao, "$(DEVICE):$(ATTR)_AMP_V") {
-  field(DESC, "Amplifier Voltage")
-  field(PINI, "NO")
-  field(EGU, "V")
-  field(DRVH, "1.59")
-  field(DRVL,"-1.66")
-  field(PREC, "2")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_V2R_SUB")
-}
-
 # PV that sets amplifier voltage in register units 
-record(longout, "$(DEVICE):$(ATTR)_AMP_RAW"){
+record(ao, "$(DEVICE):$(ATTR)_AMP_V"){
   field(DTYP, "asynInt32")
-  field(DESC, "Amplifier Voltage Raw")
+  field(DESC, "Amplifier Voltage")
+  field(LINR, "LINEAR")
+  field(PINI, "YES")
+  field(EGUL, "-1.67")
+  field(EGUF, "1.66")
+  field(PREC, "3")
+  field(EGU,  "V")
+  field(DRVH, "1.6")
+  field(DRVL, "-1.6")
   field(OUT,  "@asyn($(PORT),1)$(PARAM)")
   field(SCAN, "Passive")
+  field(FLNK, "$(DEVICE):$(ATTR)_AMP_V_RBV")
 }
 
 # Readback PV for amplifier voltage in register units 
-record(longin, "$(DEVICE):$(ATTR)_AMP_RAW_RBV"){
+record(ai, "$(DEVICE):$(ATTR)_AMP_V_RBV"){
   field(DTYP, "asynInt32")
-  field(DESC, "Amplifier Voltage RBV in Raw Counts")
+  field(LINR, "LINEAR")
+  field(PINI, "YES")
+  field(EGUL, "-1.67")
+  field(EGUF, "1.66")
+  field(PREC, "3")
+  field(EGU,  "V")
+  field(DESC, "Amplifier Voltage RBV in Volts")
   field(INP,  "@asyn($(PORT),1)$(PARAM)")
   field(SCAN, "1 second")
-  field(PINI, "YES")
-}
-
-# PV that holds amplifier voltage 
-record(ai, "$(DEVICE):$(ATTR)_AMP_V_RBV"){
-  field(DESC, "Amplifier Voltage RBV")
-  field(EGU, "V")
-  field(HOPR, "1.59")
-  field(LOPR,"-1.66")
-  field(PREC, "2")
 }
 
 # PV that holds amplifier gain in dB
@@ -107,58 +100,3 @@ record(aSub, "$(DEVICE):$(ATTR)_AMP_G2V") {
   field(PREC, "2")
   info(autosaveFields, "INPA")
 }
-
-# PV to calculate voltage to Raw 
-record(sub, "$(DEVICE):$(ATTR)_AMP_V2R_SUB") {
-  field(SCAN, "Passive")
-  field(INPA, "32740")
-  field(INPB, "18471")
-  field(INPC, "-26.89")
-  field(INPD, "488.8")
-  field(INPE, "31.39")
-  field(INPF, "0")
-  field(INPG, "0")
-  field(INPH, "0")
-  field(INPL, "$(DEVICE):$(ATTR)_AMP_V")
-  field(PREC, "4")
-  field(PINI, "YES")
-  field(INAM, "initPolynomial")
-  field(SNAM, "calcPolynomial")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_V2R_CALC")
-}
-
-# PV to save ,voltage to register, output to PV that writes to the register
-record(calcout, "$(DEVICE):$(ATTR)_AMP_V2R_CALC") {
-  field(CALC, "A")
-  field(INPA, "$(DEVICE):$(ATTR)_AMP_V2R_SUB.VAL")
-  field(OUT,  "$(DEVICE):$(ATTR)_AMP_RAW")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_RAW")
-}
- 
-# PV to calculate register readback to voltage readback
-record(sub, "$(DEVICE):$(ATTR)_AMP_R2V_SUB") {
-  field(SCAN, "Passive")
-  field(INPA, "1.687")
-  field(INPB, "-5.587e-05")
-  field(INPC, "1.638e-09")
-  field(INPD, "-1.506e-13")
-  field(INPE, "6.275e-18")
-  field(INPF, "-1.337e-22")
-  field(INPG, "1.414e-27")
-  field(INPH, "-5.862e-33")
-  field(INPL, "$(DEVICE):$(ATTR)_AMP_RAW_RBV")
-  field(PREC, "4")
-  field(PINI, "YES")
-  field(INAM, "initPolynomial")
-  field(SNAM, "calcPolynomial")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_R2V_CALC")
-}
-
-# PV to save ,voltage to register, output to PV that writes to the register
-record(calcout, "$(DEVICE):$(ATTR)_AMP_R2V_CALC") {
-  field(CALC, "A")
-  field(INPA, "$(DEVICE):$(ATTR)_AMP_R2V_SUB.VAL")
-  field(OUT,  "$(DEVICE):$(ATTR)_AMP_V_RBV")
-  field(FLNK, "$(DEVICE):$(ATTR)_AMP_V_RBV")
-}
-

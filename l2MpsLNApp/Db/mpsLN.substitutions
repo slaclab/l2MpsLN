@@ -4,7 +4,7 @@
 
 # Single register with longin records
 file "RegRO.template" { pattern
-{ R,                            DESC,                                       PINI,   SCAN,       EGU,       LOW, LSV,      HIGH, HSV,          PARAM                       }
+{ R,                            DESC,                                       PINI,   SCAN,       EGU,       LOW, LSV,       HIGH, HSV,         PARAM                       }
 { CON_LOCSIZE,                  "Number Of Local Channels",                 "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_LocSize              }
 { CON_PGPSIZE,                  "Number Of PGP Channels",                   "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_PgpSize              }
 { CON_TOTSIZE,                  "Total Number Of Channels",                 "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    CONCEN_Size                 }
@@ -23,8 +23,6 @@ file "RegRO.template" { pattern
 { CON_PACKDROPCNT_7,            "Packet Drop count ch 7",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_7    }
 { CON_PACKDROPCNT_8,            "Packet Drop count ch 8",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_8    }
 { CON_PACKDROPCNT_9,            "Packet Drop count ch 9",                   "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_9    }
-{ CON_PACKDROPCNT_10,           "Packet Drop count ch 10",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_10   }
-{ CON_PACKDROPCNT_11,           "Packet Drop count ch 11",                  "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PacketDropCount_11   }
 { CON_PACKOFCNT_0,              "Packet Overflow count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_0      }
 { CON_PACKOFCNT_1,              "Packet Overflow count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_1      }
 { CON_PACKOFCNT_2,              "Packet Overflow count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_2      }
@@ -35,8 +33,6 @@ file "RegRO.template" { pattern
 { CON_PACKOFCNT_7,              "Packet Overflow count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_7      }
 { CON_PACKOFCNT_8,              "Packet Overflow count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_8      }
 { CON_PACKOFCNT_9,              "Packet Overflow count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_9      }
-{ CON_PACKOFCNT_10,             "Packet Overflow count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_10     }
-{ CON_PACKOFCNT_11,             "Packet Overflow count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_OverflowCount_11     }
 { CON_PAUSECNT_0,               "Pause Detection count ch 0",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_0        }
 { CON_PAUSECNT_1,               "Pause Detection count ch 1",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_1        }
 { CON_PAUSECNT_2,               "Pause Detection count ch 2",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_2        }
@@ -47,9 +43,7 @@ file "RegRO.template" { pattern
 { CON_PAUSECNT_7,               "Pause Detection count ch 7",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_7        }
 { CON_PAUSECNT_8,               "Pause Detection count ch 8",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_8        }
 { CON_PAUSECNT_9,               "Pause Detection count ch 9",               "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_9        }
-{ CON_PAUSECNT_10,              "Pause Detection count ch 10",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_10       }
-{ CON_PAUSECNT_11,              "Pause Detection count ch 11",              "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       CONCEN_PauseDetCnt_11       }
-{ DIG_BYTESCNT,                 "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
+{ DIG_BYTECNT,                  "Number of digital bytes in message",       "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_DigitalBytes         }
 { DIG_DBIN,                     "Debounced Input Values",                   "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_RegInputBits         }
 { DIG_SWBYTECNT,                "Number of software bytes in message",      "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    DIGMES_SwBytes              }
 { ADC_VALID_0,                  "Adc valid flags, Bay 0",                   "YES",  "1 second", "",        "", "",         "", "",            AMCADC_AdcValid_0           }
@@ -75,7 +69,7 @@ file "RegRO.template" { pattern
 { MITMSG_TIMEOUTCNT,            "Mit msg timeout counter",                  "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    MITIG_mpsTimeoutCnt         }
 { RTM_DI,                       "RTM digital input status",                 "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    RTM_DIN                     }
 { RTM_DO,                       "RTM digital output status",                "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    RTM_DOUT                    }
-{ FPGA_VER,                     "FPGA's Firmware Version Number",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    AV_FpgaVersion              }
+{ FPGA_VER,                     "FPGA's Firmware Version Number",           "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    AV_FpgaVersion              }
 { FPGA_UPTIMECNT,               "FPGA's seconds since last reset",          "YES",  "1 second", "s",       "", "NO_ALARM", "", "NO_ALARM",    AV_UpTimeCnt                }
 { PGP_RX_CLK_0,                 "Pgp2bAxi 0 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_0             }
 { PGP_RX_FRAME_CNT_0,           "Pgp2bAxi 0 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_0            }
@@ -87,34 +81,18 @@ file "RegRO.template" { pattern
 { PGP_RX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_1         }
 { PGP_RX_LINK_DOWN_CNT_1,       "Pgp2bAxi 1 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_1         }
 { PGP_RX_LINK_ERR_CNT_1,        "Pgp2bAxi 1 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_1          }
-{ PGP_RX_CLK_2,                 "Pgp2bAxi 2 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_2             }
-{ PGP_RX_FRAME_CNT_2,           "Pgp2bAxi 2 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_2            }
-{ PGP_RX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_2         }
-{ PGP_RX_LINK_DOWN_CNT_2,       "Pgp2bAxi 2 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_2         }
-{ PGP_RX_LINK_ERR_CNT_2,        "Pgp2bAxi 2 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_2          }
-{ PGP_RX_CLK_3,                 "Pgp2bAxi 3 RX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxClkFreq_3             }
-{ PGP_RX_FRAME_CNT_3,           "Pgp2bAxi 3 RX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxFrameCnt_3            }
-{ PGP_RX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 RX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_RxFrameErrCnt_3         }
-{ PGP_RX_LINK_DOWN_CNT_3,       "Pgp2bAxi 3 RX Link Down Count",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkDownCnt_3         }
-{ PGP_RX_LINK_ERR_CNT_3,        "Pgp2bAxi 3 RX Link Error Count",           "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       PGP_RxLinkErrCnt_3          }
 { PGP_TX_CLK_0,                 "Pgp2bAxi 0 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_0             }
 { PGP_TX_FRAME_CNT_0,           "Pgp2bAxi 0 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_0            }
 { PGP_TX_FRAME_ERR_CNT_0,       "Pgp2bAxi 0 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_0         }
 { PGP_TX_CLK_1,                 "Pgp2bAxi 1 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_1             }
 { PGP_TX_FRAME_CNT_1,           "Pgp2bAxi 1 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_1            }
 { PGP_TX_FRAME_ERR_CNT_1,       "Pgp2bAxi 1 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_1         }
-{ PGP_TX_CLK_2,                 "Pgp2bAxi 2 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_2             }
-{ PGP_TX_FRAME_CNT_2,           "Pgp2bAxi 2 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_2            }
-{ PGP_TX_FRAME_ERR_CNT_2,       "Pgp2bAxi 2 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_2         }
-{ PGP_TX_CLK_3,                 "Pgp2bAxi 3 TX Clock Frequency",            "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxClkFreq_3             }
-{ PGP_TX_FRAME_CNT_3,           "Pgp2bAxi 3 TX Frame Count",                "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxFrameCnt_3            }
-{ PGP_TX_FRAME_ERR_CNT_3,       "Pgp2bAxi 3 TX Frame Error Count",          "YES",  "1 second", "frames",  "", "NO_ALARM", "1","MAJOR",       PGP_TxFrameErrCnt_3         }
-{ LC1_UDP_DHCP_IP,              "LCLS-I DHCP Server IP Address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdpDhcpIP               }
-{ LC1_UDP_LOCAL_MAC,            "LCLS-I Port Local MAC address",            "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdplocalMac             }
+{ LC1_UDP_DHCP_IP,              "LCLS-I DHCP Server IP Address",            "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdpDhcpIP               }
+{ LC1_UDP_LOCAL_MAC,            "LCLS-I Port Local MAC address",            "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_UdplocalMac             }
 { LC1_TIMEOUT_STATUS,           "LCLS-I timeout status (11-bits)",          "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_TimeoutStatusMask       }
 { LC1_MSG_ERROR_CNT,            "LCLS-I Message Error Counter",             "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_lcls1MessageError       }
 { LC2_MSG_ERROR_CNT,            "LCLS-II Message Error Counter",            "YES",  "1 second", "",        "", "NO_ALARM", "1","MAJOR",       LC1_lcls2MessageError       }
-{ LC1_MAC_ADDR,                 "LCLS-I Port MAC Address. Set by BSI",      "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_MacAddr                 }
+{ LC1_MAC_ADDR,                 "LCLS-I Port MAC Address. Set by BSI",      "YES",  "Passive",  "",        "", "NO_ALARM", "", "NO_ALARM",    LC1_MacAddr                 }
 { ASM_MPS_AMC_DOUT,             "State of the 4 AMC lines",                 "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ASMCORE_mpsAmcDout          }
 { ANA_OVERTHR_CNT_0             "Over threshold for ADC input 0",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_0     }
 { ANA_OVERTHR_CNT_1             "Over threshold for ADC input 1",           "YES",  "1 second", "",        "", "NO_ALARM", "", "NO_ALARM",    ANACORE_overThreshCnt_1     }
@@ -137,10 +115,6 @@ file "RegRO.template" { pattern
 { PGP_RX_MON_FRAME_SIZE_2,      "PGP 2 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_2        }
 { PGP_RX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_2     }
 { PGP_RX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_2     }
-{ PGP_RX_MON_FRAME_CNT_3,       "PGP 3 Rx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameCnt_3         }
-{ PGP_RX_MON_FRAME_SIZE_3,      "PGP 3 Rx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSize_3        }
-{ PGP_RX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Rx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMax_3     }
-{ PGP_RX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Rx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameSizeMin_3     }
 { PGP_TX_MON_FRAME_CNT_0,       "PGP 0 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_0         }
 { PGP_TX_MON_FRAME_SIZE_0,      "PGP 0 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_0        }
 { PGP_TX_MON_FRAME_SIZE_MAX_0,  "PGP 0 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_0     }
@@ -153,10 +127,6 @@ file "RegRO.template" { pattern
 { PGP_TX_MON_FRAME_SIZE_2,      "PGP 2 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_2        }
 { PGP_TX_MON_FRAME_SIZE_MAX_2,  "PGP 2 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_2     }
 { PGP_TX_MON_FRAME_SIZE_MIN_2,  "PGP 2 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_2     }
-{ PGP_TX_MON_FRAME_CNT_3,       "PGP 3 Tx Mon Frame Count",                 "YES",  "1 second", "frames",  "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameCnt_3         }
-{ PGP_TX_MON_FRAME_SIZE_3,      "PGP 3 Tx Mon Frame Size",                  "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSize_3        }
-{ PGP_TX_MON_FRAME_SIZE_MAX_3,  "PGP 3 Tx Mon Frame Max Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMax_3     }
-{ PGP_TX_MON_FRAME_SIZE_MIN_3,  "PGP 3 Tx Mon Frame Min Size",              "YES",  "1 second", "bytes",   "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameSizeMin_3     }
 { PGP_RX_MON_FRAME_RATE_0,      "PGP 0 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_0        }
 { PGP_RX_MON_FRAME_RATE_MAX_0,  "PGP 0 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_0     }
 { PGP_RX_MON_FRAME_RATE_MIN_0,  "PGP 0 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_0     } 
@@ -166,9 +136,6 @@ file "RegRO.template" { pattern
 { PGP_RX_MON_FRAME_RATE_2,      "PGP 2 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_2        }
 { PGP_RX_MON_FRAME_RATE_MAX_2,  "PGP 2 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_2     }
 { PGP_RX_MON_FRAME_RATE_MIN_2,  "PGP 2 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_2     }
-{ PGP_RX_MON_FRAME_RATE_3,      "PGP 3 Rx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRate_3        }
-{ PGP_RX_MON_FRAME_RATE_MAX_3,  "PGP 3 Rx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMax_3     }
-{ PGP_RX_MON_FRAME_RATE_MIN_3,  "PGP 3 Rx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_RxMonFrameRateMin_3     }
 { PGP_TX_MON_FRAME_RATE_0,      "PGP 0 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_0        }
 { PGP_TX_MON_FRAME_RATE_MAX_0,  "PGP 0 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_0     }
 { PGP_TX_MON_FRAME_RATE_MIN_0,  "PGP 0 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_0     }
@@ -178,9 +145,6 @@ file "RegRO.template" { pattern
 { PGP_TX_MON_FRAME_RATE_2,      "PGP 2 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_2        }
 { PGP_TX_MON_FRAME_RATE_MAX_2,  "PGP 2 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_2     }
 { PGP_TX_MON_FRAME_RATE_MIN_2,  "PGP 2 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_2     }
-{ PGP_TX_MON_FRAME_RATE_3,      "PGP 3 Tx Frame Rate",                      "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRate_3        }
-{ PGP_TX_MON_FRAME_RATE_MAX_3,  "PGP 3 Tx Frame Rate Max",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMax_3     }
-{ PGP_TX_MON_FRAME_RATE_MIN_3,  "PGP 3 Tx Frame Rate Min",                  "YES",  "1 second", "Hz",      "", "NO_ALARM", "", "NO_ALARM",    PGP_TxMonFrameRateMin_3     }
 }
 
 # Single register with AI records
@@ -210,30 +174,18 @@ file "RegRO_Analog.template" { pattern
 { ANA_AVG_VAL_3,            "Analog core: Average value (ch 3)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_3  }
 { ANA_AVG_VAL_4,            "Analog core: Average value (ch 4)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_4  }
 { ANA_AVG_VAL_5,            "Analog core: Average value (ch 5)",        "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_AvgValue_5  }
-{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_0   }
-{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_1   }
-{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_2   }
-{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_3   }
-{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_4   }
-{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  ".1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_5   }
-{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_6   }
-{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_7   }
-{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_8   }
-{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_9   }
-{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_10  }
-{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_11  }
-{ ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_12  }
-{ ANA_BSA_DATA_13,          "BSA data (ch 13)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_13  }
-{ ANA_BSA_DATA_14,          "BSA data (ch 14)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_14  }
-{ ANA_BSA_DATA_15,          "BSA data (ch 15)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_15  }
-{ ANA_BSA_DATA_16,          "BSA data (ch 16)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_16  }
-{ ANA_BSA_DATA_17,          "BSA data (ch 17)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_17  }
-{ ANA_BSA_DATA_18,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_18  }
-{ ANA_BSA_DATA_19,          "BSA data (ch 19)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_19  }
-{ ANA_BSA_DATA_20,          "BSA data (ch 20)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_20  }
-{ ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_21  }
-{ ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_22  }
-{ ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      ANACORE_BsaData_23  }
+{ ANA_BSA_DATA_0,           "BSA data (ch 0)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B0_C0            }
+{ ANA_BSA_DATA_1,           "BSA data (ch 1)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B0_C1            }
+{ ANA_BSA_DATA_2,           "BSA data (ch 2)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B0_C2            }
+{ ANA_BSA_DATA_3,           "BSA data (ch 3)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B1_C0            }
+{ ANA_BSA_DATA_4,           "BSA data (ch 4)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B1_C1            }
+{ ANA_BSA_DATA_5,           "BSA data (ch 5)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I0_B1_C2            }
+{ ANA_BSA_DATA_6,           "BSA data (ch 6)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B0_C0            }
+{ ANA_BSA_DATA_7,           "BSA data (ch 7)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B0_C1            }
+{ ANA_BSA_DATA_8,           "BSA data (ch 8)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B0_C2            }
+{ ANA_BSA_DATA_9,           "BSA data (ch 9)",                          "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B1_C0            }
+{ ANA_BSA_DATA_10,          "BSA data (ch 10)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B1_C1            }
+{ ANA_BSA_DATA_11,          "BSA data (ch 11)",                         "YES",  "1 second",     "raw",   "NO CONVERSION",   "0",        "2400",     0,      I1_B1_C2            }
 # NOTE: These FW registers contain unsigned 32-bit values. But ycpswasyn doesn't implement at the moment a getBounds() method based on the register number of bits.
 # Therefore, getBounds() return the default values low=0, high=65535. So, we defined here the EGUL and EGUH values based on this bounds.
 # Even if YCPSWASYN would have implemented the getBounds() method, that method does not support unsigned 32-bit values (i.e. low=0, high=2^32-1), as high is a int32 value.
@@ -248,9 +200,6 @@ file "RegRO_Analog.template" { pattern
 { PGP_RX_MON_BANDWIDTH_2,      "PGP 2 Rx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidth_2    }
 { PGP_RX_MON_BANDWIDTH_MAX_2,  "PGP 2 Rx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMax_2 }
 { PGP_RX_MON_BANDWIDTH_MIN_2,  "PGP 2 Rx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMin_2 }
-{ PGP_RX_MON_BANDWIDTH_3,      "PGP 3 Rx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidth_3    }
-{ PGP_RX_MON_BANDWIDTH_MAX_3,  "PGP 3 Rx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMax_3 }
-{ PGP_RX_MON_BANDWIDTH_MIN_3,  "PGP 3 Rx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_RxMonBandwidthMin_3 }
 { PGP_TX_MON_BANDWIDTH_0,      "PGP 0 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_0    }
 { PGP_TX_MON_BANDWIDTH_MAX_0,  "PGP 0 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_0 }
 { PGP_TX_MON_BANDWIDTH_MIN_0,  "PGP 0 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_0 }
@@ -260,10 +209,25 @@ file "RegRO_Analog.template" { pattern
 { PGP_TX_MON_BANDWIDTH_2,      "PGP 2 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_2    }
 { PGP_TX_MON_BANDWIDTH_MAX_2,  "PGP 2 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_2 }
 { PGP_TX_MON_BANDWIDTH_MIN_2,  "PGP 2 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_2 }
-{ PGP_TX_MON_BANDWIDTH_3,      "PGP 3 Tx Bandwidth",                    "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidth_3    }
-{ PGP_TX_MON_BANDWIDTH_MAX_3,  "PGP 3 Tx Bandwidth Max",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMax_3 }
-{ PGP_TX_MON_BANDWIDTH_MIN_3,  "PGP 3 Tx Bandwidth Min",                "YES",  "1 second",     "Mbps", "LINEAR",   "0",        "0.5242880", 3,      PGP_TxMonBandwidthMin_3 }
 }
+
+# Single register with single point precision
+file "RegisterDoubleIn.template" { pattern
+{ R,                        DESC,                                       PINI,   SCAN,           EGU,   PARAM               }
+{ ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C0F           }
+{ ANA_BSA_DATA_13,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C1F           }
+{ ANA_BSA_DATA_14,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C2F           }
+{ ANA_BSA_DATA_15,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C0F           }
+{ ANA_BSA_DATA_16,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C1F           }
+{ ANA_BSA_DATA_17,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C2F           }
+{ ANA_BSA_DATA_18,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C0F           }
+{ ANA_BSA_DATA_19,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C1F           }
+{ ANA_BSA_DATA_20,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C2F           }
+{ ANA_BSA_DATA_21,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C0F           }
+{ ANA_BSA_DATA_22,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C1F           }
+{ ANA_BSA_DATA_23,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C2F           }
+}
+
 
 #======================================
 # Register with Command interfaces
@@ -275,228 +239,237 @@ file "RegCmd.template" { pattern
 { MITMSG_CLRTIMEOUT,    "Clear Timeout",                        "NO",   "Passive",  MITIG_clrTimeout         }
 { PGP_CNTRST_0,         "Pgp2bAxi 0 reset counters",            "NO",   "Passive",  PGP_RstCnt_0             }
 { PGP_CNTRST_1,         "Pgp2bAxi 1 reset counters",            "NO",   "Passive",  PGP_RstCnt_1             }
-{ PGP_CNTRST_2,         "Pgp2bAxi 2 reset counters",            "NO",   "Passive",  PGP_RstCnt_2             }
-{ PGP_CNTRST_3,         "Pgp2bAxi 3 reset counters",            "NO",   "Passive",  PGP_RstCnt_3             }
 { LC1_CLRTIMEOUT,       "LCLS-I Clear timeout error",           "NO",   "Passive",  LC1_ClearTout            }
 { ANA_OVERTHR_CNTRST,   "Clear over threshold and bunch cnts",  "NO",   "Passive",  ANACORE_clrOverThreshCnt }
+}
+
+#======================================
+# Register with DoubleVal interfaces
+#======================================
+# Single register with ao / ai records
+file "RegRWDouble.template" { pattern
+{ R,                        DESC,                                       SCAN,       EGU, PREC,        PARAM                               }
+{ LC2_ANA_INTDCY_0,         "LCLS2 Integration decay (I0 C0)",          "1 second", "",  12,          I0_B0_C0_LC2DCY                     }
+{ LC2_ANA_INTDCY_1,         "LCLS2 Integration decay (I1 C0)",          "1 second", "",  12,          I1_B0_C0_LC2DCY                     }
+{ LC2_ANA_INTDCY_2,         "LCLS2 Integration decay (I0 C1)",          "1 second", "",  12,          I0_B0_C1_LC2DCY                     }
+{ LC2_ANA_INTDCY_3,         "LCLS2 Integration decay (I1 C1)",          "1 second", "",  12,          I1_B0_C1_LC2DCY                     }
+{ LC2_ANA_INTDCY_4,         "LCLS2 Integration decay (I0 C2)",          "1 second", "",  12,          I0_B0_C2_LC2DCY                     }
+{ LC2_ANA_INTDCY_5,         "LCLS2 Integration decay (I1 C2)",          "1 second", "",  12,          I1_B0_C2_LC2DCY                     }
+{ LC2_ANA_INTDCY_6,         "LCLS2 Integration decay (I0 C3)",          "1 second", "",  12,          I0_B1_C0_LC2DCY                     }
+{ LC2_ANA_INTDCY_7,         "LCLS2 Integration decay (I1 C3)",          "1 second", "",  12,          I1_B1_C0_LC2DCY                     }
+{ LC2_ANA_INTDCY_8,         "LCLS2 Integration decay (I0 C4)",          "1 second", "",  12,          I0_B1_C1_LC2DCY                     }
+{ LC2_ANA_INTDCY_9,         "LCLS2 Integration decay (I1 C4)",          "1 second", "",  12,          I1_B1_C1_LC2DCY                     }
+{ LC2_ANA_INTDCY_10,        "LCLS2 Integration decay (I0 C5)",          "1 second", "",  12,          I0_B1_C2_LC2DCY                     }
+{ LC2_ANA_INTDCY_11,        "LCLS2 Integration decay (I1 C5)",          "1 second", "",  12,          I1_B1_C2_LC2DCY                     }
+{ LC2_ANA_INTSCL_0,         "LCLS2 Integration scale (I0 C0)",          "1 second", "",  3,           I0_B0_C0_LC2SCL                     }
+{ LC2_ANA_INTSCL_1,         "LCLS2 Integration scale (I1 C0)",          "1 second", "",  3,           I1_B0_C0_LC2SCL                     }
+{ LC2_ANA_INTSCL_2,         "LCLS2 Integration scale (I0 C1)",          "1 second", "",  3,           I0_B0_C1_LC2SCL                     }
+{ LC2_ANA_INTSCL_3,         "LCLS2 Integration scale (I1 C1)",          "1 second", "",  3,           I1_B0_C1_LC2SCL                     }
+{ LC2_ANA_INTSCL_4,         "LCLS2 Integration scale (I0 C2)",          "1 second", "",  3,           I0_B0_C2_LC2SCL                     }
+{ LC2_ANA_INTSCL_5,         "LCLS2 Integration scale (I1 C2)",          "1 second", "",  3,           I1_B0_C2_LC2SCL                     }
+{ LC2_ANA_INTSCL_6,         "LCLS2 Integration scale (I0 C3)",          "1 second", "",  3,           I0_B1_C0_LC2SCL                     }
+{ LC2_ANA_INTSCL_7,         "LCLS2 Integration scale (I1 C3)",          "1 second", "",  3,           I1_B1_C0_LC2SCL                     }
+{ LC2_ANA_INTSCL_8,         "LCLS2 Integration scale (I0 C4)",          "1 second", "",  3,           I0_B1_C1_LC2SCL                     }
+{ LC2_ANA_INTSCL_9,         "LCLS2 Integration scale (I1 C4)",          "1 second", "",  3,           I1_B1_C1_LC2SCL                     }
+{ LC2_ANA_INTSCL_10,        "LCLS2 Integration scale (I0 C5)",          "1 second", "",  3,           I0_B1_C2_LC2SCL                     }
+{ LC2_ANA_INTSCL_11,        "LCLS2 Integration scale (I1 C5)",          "1 second", "",  3,           I1_B1_C2_LC2SCL                     }
+{ LC1_ANA_INTDCY_0,         "LCLS1 Integration decay (I0 C0)",          "1 second", "",  12,          I0_B0_C0_LC1DCY                     }
+{ LC1_ANA_INTDCY_1,         "LCLS1 Integration decay (I1 C0)",          "1 second", "",  12,          I1_B0_C0_LC1DCY                     }
+{ LC1_ANA_INTDCY_2,         "LCLS1 Integration decay (I0 C1)",          "1 second", "",  12,          I0_B0_C1_LC1DCY                     }
+{ LC1_ANA_INTDCY_3,         "LCLS1 Integration decay (I1 C1)",          "1 second", "",  12,          I1_B0_C1_LC1DCY                     }
+{ LC1_ANA_INTDCY_4,         "LCLS1 Integration decay (I0 C2)",          "1 second", "",  12,          I0_B0_C2_LC1DCY                     }
+{ LC1_ANA_INTDCY_5,         "LCLS1 Integration decay (I1 C2)",          "1 second", "",  12,          I1_B0_C2_LC1DCY                     }
+{ LC1_ANA_INTDCY_6,         "LCLS1 Integration decay (I0 C3)",          "1 second", "",  12,          I0_B1_C0_LC1DCY                     }
+{ LC1_ANA_INTDCY_7,         "LCLS1 Integration decay (I1 C3)",          "1 second", "",  12,          I1_B1_C0_LC1DCY                     }
+{ LC1_ANA_INTDCY_8,         "LCLS1 Integration decay (I0 C4)",          "1 second", "",  12,          I0_B1_C1_LC1DCY                     }
+{ LC1_ANA_INTDCY_9,         "LCLS1 Integration decay (I1 C4)",          "1 second", "",  12,          I1_B1_C1_LC1DCY                     }
+{ LC1_ANA_INTDCY_10,        "LCLS1 Integration decay (I0 C5)",          "1 second", "",  12,          I0_B1_C2_LC1DCY                     }
+{ LC1_ANA_INTDCY_11,        "LCLS1 Integration decay (I1 C5)",          "1 second", "",  12,          I1_B1_C2_LC1DCY                     }
+{ LC1_ANA_INTSCL_0,         "LCLS1 Integration scale (I0 C0)",          "1 second", "",  3,           I0_B0_C0_LC1SCL                     }
+{ LC1_ANA_INTSCL_1,         "LCLS1 Integration scale (I1 C0)",          "1 second", "",  3,           I1_B0_C0_LC1SCL                     }
+{ LC1_ANA_INTSCL_2,         "LCLS1 Integration scale (I0 C1)",          "1 second", "",  3,           I0_B0_C1_LC1SCL                     }
+{ LC1_ANA_INTSCL_3,         "LCLS1 Integration scale (I1 C1)",          "1 second", "",  3,           I1_B0_C1_LC1SCL                     }
+{ LC1_ANA_INTSCL_4,         "LCLS1 Integration scale (I0 C2)",          "1 second", "",  3,           I0_B0_C2_LC1SCL                     }
+{ LC1_ANA_INTSCL_5,         "LCLS1 Integration scale (I1 C2)",          "1 second", "",  3,           I1_B0_C2_LC1SCL                     }
+{ LC1_ANA_INTSCL_6,         "LCLS1 Integration scale (I0 C3)",          "1 second", "",  3,           I0_B1_C0_LC1SCL                     }
+{ LC1_ANA_INTSCL_7,         "LCLS1 Integration scale (I1 C3)",          "1 second", "",  3,           I1_B1_C0_LC1SCL                     }
+{ LC1_ANA_INTSCL_8,         "LCLS1 Integration scale (I0 C4)",          "1 second", "",  3,           I0_B1_C1_LC1SCL                     }
+{ LC1_ANA_INTSCL_9,         "LCLS1 Integration scale (I1 C4)",          "1 second", "",  3,           I1_B1_C1_LC1SCL                     }
+{ LC1_ANA_INTSCL_10,        "LCLS1 Integration scale (I0 C5)",          "1 second", "",  3,           I0_B1_C2_LC1SCL                     }
+{ LC1_ANA_INTSCL_11,        "LCLS1 Integration scale (I1 C5)",          "1 second", "",  3,           I1_B1_C2_LC1SCL                     }
 }
 
 #======================================
 # Register with ScalVal interfaces
 #======================================
 
+file "RegRW_Analog.template" { pattern
+{ R,              DESC,                PINI,   SCAN,        EGU,  LINR,    ESLO,  EOFF, PREC,   PARAM        }
+{ ANA_OFFSET_0,   "DC Offset (ch 0)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B0_C0_OFF    }
+{ ANA_OFFSET_1,   "DC Offset (ch 1)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B0_C1_OFF    }
+{ ANA_OFFSET_2,   "DC Offset (ch 2)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B0_C2_OFF    }
+{ ANA_OFFSET_3,   "DC Offset (ch 3)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B1_C0_OFF    }
+{ ANA_OFFSET_4,   "DC Offset (ch 4)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B1_C1_OFF    }
+{ ANA_OFFSET_5,   "DC Offset (ch 5)",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B1_C2_OFF    }
+}
 # Single register with longout records
 file "RegRW.template" { pattern
-{ R,                        DESC,                                       SCAN,       EGU,        PARAM                               }
-{ LC2_ANA_INTCNT_0,         "LCLS2 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCount_0          }
-{ LC2_ANA_INTCNT_1,         "LCLS2 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCount_1          }
-{ LC2_ANA_INTCNT_2,         "LCLS2 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCount_2          }
-{ LC2_ANA_INTCNT_3,         "LCLS2 Integration count (ch 3)",           "1 second", "counts",   ANACORE_IntegrationCount_3          }
-{ LC2_ANA_INTCNT_4,         "LCLS2 Integration count (ch 4)",           "1 second", "counts",   ANACORE_IntegrationCount_4          }
-{ LC2_ANA_INTCNT_5,         "LCLS2 Integration count (ch 5)",           "1 second", "counts",   ANACORE_IntegrationCount_5          }
-{ LC2_ANA_INTCNT_6,         "LCLS2 Integration count (ch 6)",           "1 second", "counts",   ANACORE_IntegrationCount_6          }
-{ LC2_ANA_INTCNT_7,         "LCLS2 Integration count (ch 7)",           "1 second", "counts",   ANACORE_IntegrationCount_7          }
-{ LC2_ANA_INTCNT_8,         "LCLS2 Integration count (ch 8)",           "1 second", "counts",   ANACORE_IntegrationCount_8          }
-{ LC2_ANA_INTCNT_9,         "LCLS2 Integration count (ch 9)",           "1 second", "counts",   ANACORE_IntegrationCount_9          }
-{ LC2_ANA_INTCNT_10,        "LCLS2 Integration count (ch 10)",          "1 second", "counts",   ANACORE_IntegrationCount_10         }
-{ LC2_ANA_INTCNT_11,        "LCLS2 Integration count (ch 11)",          "1 second", "counts",   ANACORE_IntegrationCount_11         }
-{ LC2_ANA_INTCNT_12,        "LCLS2 Integration count (ch 12)",          "1 second", "counts",   ANACORE_IntegrationCount_12         }
-{ LC2_ANA_INTCNT_13,        "LCLS2 Integration count (ch 13)",          "1 second", "counts",   ANACORE_IntegrationCount_13         }
-{ LC2_ANA_INTCNT_14,        "LCLS2 Integration count (ch 14)",          "1 second", "counts",   ANACORE_IntegrationCount_14         }
-{ LC2_ANA_INTCNT_15,        "LCLS2 Integration count (ch 15)",          "1 second", "counts",   ANACORE_IntegrationCount_15         }
-{ LC2_ANA_INTCNT_16,        "LCLS2 Integration count (ch 16)",          "1 second", "counts",   ANACORE_IntegrationCount_16         }
-{ LC2_ANA_INTCNT_17,        "LCLS2 Integration count (ch 17)",          "1 second", "counts",   ANACORE_IntegrationCount_17         }
-{ LC2_ANA_INTCNT_18,        "LCLS2 Integration count (ch 18)",          "1 second", "counts",   ANACORE_IntegrationCount_18         }
-{ LC2_ANA_INTCNT_19,        "LCLS2 Integration count (ch 19)",          "1 second", "counts",   ANACORE_IntegrationCount_19         }
-{ LC2_ANA_INTCNT_20,        "LCLS2 Integration count (ch 20)",          "1 second", "counts",   ANACORE_IntegrationCount_20         }
-{ LC2_ANA_INTCNT_21,        "LCLS2 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCount_21         }
-{ LC2_ANA_INTCNT_22,        "LCLS2 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCount_22         }
-{ LC2_ANA_INTCNT_23,        "LCLS2 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCount_23         }
-{ LC2_ANA_SLOPE_0,          "LCLS2 Equation slope (ch 0)",              "1 second", "",         ANACORE_Slope_0                     }
-{ LC2_ANA_SLOPE_1,          "LCLS2 Equation slope (ch 1)",              "1 second", "",         ANACORE_Slope_1                     }
-{ LC2_ANA_SLOPE_2,          "LCLS2 Equation slope (ch 2)",              "1 second", "",         ANACORE_Slope_2                     }
-{ LC2_ANA_SLOPE_3,          "LCLS2 Equation slope (ch 3)",              "1 second", "",         ANACORE_Slope_3                     }
-{ LC2_ANA_SLOPE_4,          "LCLS2 Equation slope (ch 4)",              "1 second", "",         ANACORE_Slope_4                     }
-{ LC2_ANA_SLOPE_5,          "LCLS2 Equation slope (ch 5)",              "1 second", "",         ANACORE_Slope_5                     }
-{ LC1_ANA_INTCNT_0,         "LCLS1 Integration count (ch 0)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_0       }
-{ LC1_ANA_INTCNT_1,         "LCLS1 Integration count (ch 1)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_1       }
-{ LC1_ANA_INTCNT_2,         "LCLS1 Integration count (ch 2)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_2       }
-{ LC1_ANA_INTCNT_3,         "LCLS1 Integration count (ch 3)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_3       }
-{ LC1_ANA_INTCNT_4,         "LCLS1 Integration count (ch 4)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_4       }
-{ LC1_ANA_INTCNT_5,         "LCLS1 Integration count (ch 5)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_5       }
-{ LC1_ANA_INTCNT_6,         "LCLS1 Integration count (ch 6)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_6       }
-{ LC1_ANA_INTCNT_7,         "LCLS1 Integration count (ch 7)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_7       }
-{ LC1_ANA_INTCNT_8,         "LCLS1 Integration count (ch 8)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_8       }
-{ LC1_ANA_INTCNT_9,         "LCLS1 Integration count (ch 9)",           "1 second", "counts",   ANACORE_IntegrationCountsL1_9       }
-{ LC1_ANA_INTCNT_10,        "LCLS1 Integration count (ch 10)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_10      }
-{ LC1_ANA_INTCNT_11,        "LCLS1 Integration count (ch 11)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_11      }
-{ LC1_ANA_INTCNT_12,        "LCLS1 Integration count (ch 12)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_12      }
-{ LC1_ANA_INTCNT_13,        "LCLS1 Integration count (ch 13)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_13      }
-{ LC1_ANA_INTCNT_14,        "LCLS1 Integration count (ch 14)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_14      }
-{ LC1_ANA_INTCNT_15,        "LCLS1 Integration count (ch 15)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_15      }
-{ LC1_ANA_INTCNT_16,        "LCLS1 Integration count (ch 16)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_16      }
-{ LC1_ANA_INTCNT_17,        "LCLS1 Integration count (ch 17)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_17      }
-{ LC1_ANA_INTCNT_18,        "LCLS1 Integration count (ch 18)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_18      }
-{ LC1_ANA_INTCNT_19,        "LCLS1 Integration count (ch 19)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_19      }
-{ LC1_ANA_INTCNT_20,        "LCLS1 Integration count (ch 20)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_20      }
-{ LC1_ANA_INTCNT_21,        "LCLS1 Integration count (ch 21)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_21      }
-{ LC1_ANA_INTCNT_22,        "LCLS1 Integration count (ch 22)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_22      }
-{ LC1_ANA_INTCNT_23,        "LCLS1 Integration count (ch 23)",          "1 second", "counts",   ANACORE_IntegrationCountsL1_23      }
-{ LC1_ANA_SLOPE_0,          "LCLS1 Equation slope (ch 0)",              "1 second", "",         ANACORE_SlopeL1_0                   }
-{ LC1_ANA_SLOPE_1,          "LCLS1 Equation slope (ch 1)",              "1 second", "",         ANACORE_SlopeL1_1                   }
-{ LC1_ANA_SLOPE_2,          "LCLS1 Equation slope (ch 2)",              "1 second", "",         ANACORE_SlopeL1_2                   }
-{ LC1_ANA_SLOPE_3,          "LCLS1 Equation slope (ch 3)",              "1 second", "",         ANACORE_SlopeL1_3                   }
-{ LC1_ANA_SLOPE_4,          "LCLS1 Equation slope (ch 4)",              "1 second", "",         ANACORE_SlopeL1_4                   }
-{ LC1_ANA_SLOPE_5,          "LCLS1 Equation slope (ch 5)",              "1 second", "",         ANACORE_SlopeL1_5                   }
-{ DIG_APPID,                "Application ID",                           "Passive",  "",         DIGMES_AppId                        }
-{ DIG_FORCEBITS,            "Digital Force Bits",                       "1 second", "",         DIGMES_DigitalForceBits             }
-{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second", "",         MITIG_mpsAmcDest_0                  }
-{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second", "",         MITIG_mpsAmcDest_1                  }
-{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second", "",         MITIG_mpsAmcDest_2                  }
-{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "1 second", "",         MITIG_mpsAmcDest_3                  }
-{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "1 second", "",         MITIG_mpsRtmDest_0                  }
-{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second", "",         MITIG_mpsRtmDest_1                  }
-{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second", "",         MITIG_mpsRtmDest_2                  }
-{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second", "",         MITIG_mpsRtmDest_3                  }
-{ LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "1 second", "",         LC1_UdpBroadcastIP                  }
-{ LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "1 second", "us",       LC1_TimeoutTime                     }
-{ LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "1 second", "",         LC1_TimeoutMask                     }
-{ LC1_NODE_ID,              "LCLS-I Link Node BLM Application ID",      "1 second", "",         LC1_NodeId                          }
-{ LC1_IP_ADDR,              "LCLS-I Port IP Address",                   "1 second", "",         LC1_IpAddr                          }
-{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_0                    }
-{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_1                    }
-{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_2                    }
-{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_3                    }
-{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_4                    }
-{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_5                    }
-{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_6                    }
-{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_7                    }
-{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_8                    }
-{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_9                    }
-{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "1 second", "",         LC1_appIdRemap_10                   }
-{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second", "",         ASMCORE_mpsOpenSrs                  }
-{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second", "",         ASMCORE_mpsCloseSrs                 }
-{ ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second", "",         ASMCORE_shtrSrs                     }
-{ LC2_ANA_BOX_INT_EN,       "LCLS2 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEn           }
-{ LC2_ANA_OFF_POL,          "LCLS2 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarity              }
-{ LC1_ANA_BOX_INT_EN,       "LCLS1 Enable Boxcar int. on bunch",        "1 second", "",         ANACORE_bunchPresentIntEnL1         }
-{ LC1_ANA_OFF_POL,          "LCLS1 Offset subtraction polarity",        "1 second", "",         ANACORE_offsetPolarityL1            }
-{ CON_GT_RX_POL,            "GT RX polarity",                           "1 second", "",         CONCEN_GtRxPolarity                 }
-{ CON_GT_TX_POL,            "Gt TX polarity",                           "1 second", "",         CONCEN_GtTxPolarity                 }
-{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "1 second", "",         CONCEN_GtTxPreCursor_0              }
-{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "1 second", "",         CONCEN_GtTxPreCursor_1              }
-{ CON_GT_TX_PRE_CUR_2,      "GT TX pre-cursor (port 2)",                "1 second", "",         CONCEN_GtTxPreCursor_2              }
-{ CON_GT_TX_PRE_CUR_3,      "GT TX pre-cursor (port 3)",                "1 second", "",         CONCEN_GtTxPreCursor_3              }
-{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "1 second", "",         CONCEN_GtTxPostCursor_0             }
-{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "1 second", "",         CONCEN_GtTxPostCursor_1             }
-{ CON_GT_TX_POST_CUR_2,     "GT TX post-cursor (port 2)",               "1 second", "",         CONCEN_GtTxPostCursor_2             }
-{ CON_GT_TX_POST_CUR_3,     "GT TX post-cursor (port 3)",               "1 second", "",         CONCEN_GtTxPostCursor_3             }
-{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "1 second", "",         CONCEN_GtTxDiffCtrl_0               }
-{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "1 second", "",         CONCEN_GtTxDiffCtrl_1               }
-{ CON_GT_TX_DIFF_CTRL_2,    "GT TX difference control (port 2)",        "1 second", "",         CONCEN_GtTxDiffCtrl_2               }
-{ CON_GT_TX_DIFF_CTRL_3,    "GT TX difference control (port 3)",        "1 second", "",         CONCEN_GtTxDiffCtrl_3               }
-{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_0           }
-{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_1           }
-{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_2           }
-{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_3           }
-{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_4           }
-{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second",     "raw",   ANACORE_ForcePrcVals_5           }
-{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_0         }
-{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_1         }
-{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_2         }
-{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_3         }
-{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_4         }
-{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "1 second",     "raw",   ANACORE_ForcePrcValsL1_5         }
-{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_0               }
-{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_1               }
-{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_2               }
-{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_3               }
-{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_4               }
-{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlm_5               }
-{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_0             }
-{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_1             }
-{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_2             }
-{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_3             }
-{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_4             }
-{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "1 second",     "raw",   ANACORE_treshBlmL1_5             }
-{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "1 second",     "raw",   ANACORE_Intercept_0              }
-{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "1 second",     "raw",   ANACORE_Intercept_1              }
-{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "1 second",     "raw",   ANACORE_Intercept_2              }
-{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "1 second",     "raw",   ANACORE_Intercept_3              }
-{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "1 second",     "raw",   ANACORE_Intercept_4              }
-{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "1 second",     "raw",   ANACORE_Intercept_5              }
-{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "1 second",     "raw",   ANACORE_InterceptL1_0            }
-{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "1 second",     "raw",   ANACORE_InterceptL1_1            }
-{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "1 second",     "raw",   ANACORE_InterceptL1_2            }
-{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "1 second",     "raw",   ANACORE_InterceptL1_3            }
-{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "1 second",     "raw",   ANACORE_InterceptL1_4            }
-{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "1 second",     "raw",   ANACORE_InterceptL1_5            }
-{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_0       }
-{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_1       }
-{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_2       }
-{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_3       }
-{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_4       }
-{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeak_5       }
-{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_0       }
-{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_1       }
-{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_2       }
-{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_3       }
-{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_4       }
-{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeak_5       }
-{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_0   }
-{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_1   }
-{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_2   }
-{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_3   }
-{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_4   }
-{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestal_5   }
-{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_0   }
-{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_1   }
-{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_2   }
-{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_3   }
-{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_4   }
-{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestal_5   }
-{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_0     }
-{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_1     }
-{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_2     }
-{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_3     }
-{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_4     }
-{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "1 second",     "samples",    ANACORE_triggerDelayPeakL1_5     }
-{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_0     }
-{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_1     }
-{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_2     }
-{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_3     }
-{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_4     }
-{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "1 second",     "samples",    ANACORE_triggerWidthPeakL1_5     }
-{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_0 }
-{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_1 }
-{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_2 }
-{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_3 }
-{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_4 }
-{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "1 second",     "samples",    ANACORE_triggerDelayPedestalL1_5 }
-{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_0 }
-{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_1 }
-{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_2 }
-{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_3 }
-{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_4 }
-{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "1 second",     "samples",    ANACORE_triggerWidthPedestalL1_5 }
+{ R,                        DESC,                                       SCAN,      EGU,        PARAM                            }
+{ DIG_APPID,                "Digital Application ID",                   "Passive",  "",        DIGMES_AppId                     }
+{ LC2_ANA_SLOPE_0,          "LCLS2 Equation slope (ch 0)",              "Passive", "",         ANACORE_Slope_0                  }
+{ LC2_ANA_SLOPE_1,          "LCLS2 Equation slope (ch 1)",              "Passive", "",         ANACORE_Slope_1                  }
+{ LC2_ANA_SLOPE_2,          "LCLS2 Equation slope (ch 2)",              "Passive", "",         ANACORE_Slope_2                  }
+{ LC2_ANA_SLOPE_3,          "LCLS2 Equation slope (ch 3)",              "Passive", "",         ANACORE_Slope_3                  }
+{ LC2_ANA_SLOPE_4,          "LCLS2 Equation slope (ch 4)",              "Passive", "",         ANACORE_Slope_4                  }
+{ LC2_ANA_SLOPE_5,          "LCLS2 Equation slope (ch 5)",              "Passive", "",         ANACORE_Slope_5                  }
+{ LC1_ANA_SLOPE_0,          "LCLS1 Equation slope (ch 0)",              "Passive", "",         ANACORE_SlopeL1_0                }
+{ LC1_ANA_SLOPE_1,          "LCLS1 Equation slope (ch 1)",              "Passive", "",         ANACORE_SlopeL1_1                }
+{ LC1_ANA_SLOPE_2,          "LCLS1 Equation slope (ch 2)",              "Passive", "",         ANACORE_SlopeL1_2                }
+{ LC1_ANA_SLOPE_3,          "LCLS1 Equation slope (ch 3)",              "Passive", "",         ANACORE_SlopeL1_3                }
+{ LC1_ANA_SLOPE_4,          "LCLS1 Equation slope (ch 4)",              "Passive", "",         ANACORE_SlopeL1_4                }
+{ LC1_ANA_SLOPE_5,          "LCLS1 Equation slope (ch 5)",              "Passive", "",         ANACORE_SlopeL1_5                }
+{ DIG_FORCEBITS,            "Digital Force Bits",                       "Passive", "",         DIGMES_DigitalForceBits          }
+{ MITMSG_AMCDEST_0,         "Destination for AMC channel 0",            "1 second","",         MITIG_mpsAmcDest_0               }
+{ MITMSG_AMCDEST_1,         "Destination for AMC channel 1",            "1 second","",         MITIG_mpsAmcDest_1               }
+{ MITMSG_AMCDEST_2,         "Destination for AMC channel 2",            "1 second","",         MITIG_mpsAmcDest_2               }
+{ MITMSG_AMCDEST_3,         "Destination for AMC channel 3",            "1 second","",         MITIG_mpsAmcDest_3               }
+{ MITMSG_RTMDEST_0,         "Destination for RTM channel 0",            "1 second","",         MITIG_mpsRtmDest_0               }
+{ MITMSG_RTMDEST_1,         "Destination for RTM channel 1",            "1 second","",         MITIG_mpsRtmDest_1               }
+{ MITMSG_RTMDEST_2,         "Destination for RTM channel 2",            "1 second","",         MITIG_mpsRtmDest_2               }
+{ MITMSG_RTMDEST_3,         "Destination for RTM channel 3",            "1 second","",         MITIG_mpsRtmDest_3               }
+{ LC1_UDP_BC_IP,            "LCLS-I Port UDP Broadcast IP address",     "Passive", "",         LC1_UdpBroadcastIP               }
+{ LC1_TIMEOUT,              "LCLS-I Application timeout (0 - 7us)",     "Passive", "us",       LC1_TimeoutTime                  }
+{ LC1_TIMEOUT_MASK,         "LCLS-I Application timeout mask",          "1 second","",         LC1_TimeoutMask                  }
+{ LC1_NODE_ID,              "LCLS-I Link Node BLM Application ID",      "Passive", "",         LC1_NodeId                       }
+{ LC1_IP_ADDR,              "LCLS-I Port IP Address",                   "Passive", "",         LC1_IpAddr                       }
+{ LC1_REMAP_ID_0,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_0                 }
+{ LC1_REMAP_ID_1,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_1                 }
+{ LC1_REMAP_ID_2,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_2                 }
+{ LC1_REMAP_ID_3,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_3                 }
+{ LC1_REMAP_ID_4,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_4                 }
+{ LC1_REMAP_ID_5,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_5                 }
+{ LC1_REMAP_ID_6,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_6                 }
+{ LC1_REMAP_ID_7,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_7                 }
+{ LC1_REMAP_ID_8,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_8                 }
+{ LC1_REMAP_ID_9,           "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_9                 }
+{ LC1_REMAP_ID_10,          "LCLS-I in-crate AppID Remap to 0-10",      "1 second","",         LC1_appIdRemap_10                }
+{ ASM_MPS_OPEN_SRS,         "Open shutter signal selection",            "1 second","",         ASMCORE_mpsOpenSrs               }
+{ ASM_MPS_CLOSE_SRS,        "Closed shutter signal selection",          "1 second","",         ASMCORE_mpsCloseSrs              }
+{ ASM_SHTR_SRS,             "Shutter signal selection",                 "1 second","",         ASMCORE_shtrSrs                  }
+{ LC2_ANA_BOX_INT_EN,       "LCLS2 Enable Boxcar int. on bunch",        "1 second","",         ANACORE_bunchPresentIntEn        }
+{ LC2_ANA_OFF_POL,          "LCLS2 Offset subtraction polarity",        "1 second","",         ANACORE_offsetPolarity           }
+{ LC1_ANA_BOX_INT_EN,       "LCLS1 Enable Boxcar int. on bunch",        "1 second","",         ANACORE_bunchPresentIntEnL1      }
+{ LC1_ANA_OFF_POL,          "LCLS1 Offset subtraction polarity",        "1 second","",         ANACORE_offsetPolarityL1         }
+{ CON_GT_RX_POL,            "GT RX polarity",                           "Passive", "",         CONCEN_GtRxPolarity              }
+{ CON_GT_TX_POL,            "Gt TX polarity",                           "Passive", "",         CONCEN_GtTxPolarity              }
+{ CON_GT_TX_PRE_CUR_0,      "GT TX pre-cursor (port 0)",                "Passive", "",         CONCEN_GtTxPreCursor_0           }
+{ CON_GT_TX_PRE_CUR_1,      "GT TX pre-cursor (port 1)",                "Passive", "",         CONCEN_GtTxPreCursor_1           }
+{ CON_GT_TX_POST_CUR_0,     "GT TX post-cursor (port 0)",               "Passive", "",         CONCEN_GtTxPostCursor_0          }
+{ CON_GT_TX_POST_CUR_1,     "GT TX post-cursor (port 1)",               "Passive", "",         CONCEN_GtTxPostCursor_1          }
+{ CON_GT_TX_DIFF_CTRL_0,    "GT TX difference control (port 0)",        "Passive", "",         CONCEN_GtTxDiffCtrl_0            }
+{ CON_GT_TX_DIFF_CTRL_1,    "GT TX difference control (port 1)",        "Passive", "",         CONCEN_GtTxDiffCtrl_1            }
+{ LC2_ANA_FPRCVAL_0,        "LCLS2 Force value (ch 0)",                 "1 second","raw",      ANACORE_ForcePrcVals_0           }
+{ LC2_ANA_FPRCVAL_1,        "LCLS2 Force value (ch 1)",                 "1 second","raw",      ANACORE_ForcePrcVals_1           }
+{ LC2_ANA_FPRCVAL_2,        "LCLS2 Force value (ch 2)",                 "1 second","raw",      ANACORE_ForcePrcVals_2           }
+{ LC2_ANA_FPRCVAL_3,        "LCLS2 Force value (ch 3)",                 "1 second","raw",      ANACORE_ForcePrcVals_3           }
+{ LC2_ANA_FPRCVAL_4,        "LCLS2 Force value (ch 4)",                 "1 second","raw",      ANACORE_ForcePrcVals_4           }
+{ LC2_ANA_FPRCVAL_5,        "LCLS2 Force value (ch 5)",                 "1 second","raw",      ANACORE_ForcePrcVals_5           }
+{ LC1_ANA_FPRCVAL_0,        "LCLS1 Force value (ch 0)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_0         }
+{ LC1_ANA_FPRCVAL_1,        "LCLS1 Force value (ch 1)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_1         }
+{ LC1_ANA_FPRCVAL_2,        "LCLS1 Force value (ch 2)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_2         }
+{ LC1_ANA_FPRCVAL_3,        "LCLS1 Force value (ch 3)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_3         }
+{ LC1_ANA_FPRCVAL_4,        "LCLS1 Force value (ch 4)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_4         }
+{ LC1_ANA_FPRCVAL_5,        "LCLS1 Force value (ch 5)",                 "1 second","raw",      ANACORE_ForcePrcValsL1_5         }
+{ LC2_ANA_BLM_THR_0         "LCLS2 BLM 0 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_0               }
+{ LC2_ANA_BLM_THR_1         "LCLS2 BLM 1 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_1               }
+{ LC2_ANA_BLM_THR_2         "LCLS2 BLM 2 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_2               }
+{ LC2_ANA_BLM_THR_3         "LCLS2 BLM 3 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_3               }
+{ LC2_ANA_BLM_THR_4         "LCLS2 BLM 4 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_4               }
+{ LC2_ANA_BLM_THR_5         "LCLS2 BLM 5 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlm_5               }
+{ LC1_ANA_BLM_THR_0         "LCLS1 BLM 0 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_0             }
+{ LC1_ANA_BLM_THR_1         "LCLS1 BLM 1 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_1             }
+{ LC1_ANA_BLM_THR_2         "LCLS1 BLM 2 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_2             }
+{ LC1_ANA_BLM_THR_3         "LCLS1 BLM 3 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_3             }
+{ LC1_ANA_BLM_THR_4         "LCLS1 BLM 4 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_4             }
+{ LC1_ANA_BLM_THR_5         "LCLS1 BLM 5 pulse diff threshold",         "Passive", "raw",      ANACORE_treshBlmL1_5             }
+{ LC2_ANA_INTERCEPT_0,      "LCLS2 Equation intercept (ch 0)",          "Passive", "raw",      ANACORE_Intercept_0              }
+{ LC2_ANA_INTERCEPT_1,      "LCLS2 Equation intercept (ch 1)",          "Passive", "raw",      ANACORE_Intercept_1              }
+{ LC2_ANA_INTERCEPT_2,      "LCLS2 Equation intercept (ch 2)",          "Passive", "raw",      ANACORE_Intercept_2              }
+{ LC2_ANA_INTERCEPT_3,      "LCLS2 Equation intercept (ch 3)",          "Passive", "raw",      ANACORE_Intercept_3              }
+{ LC2_ANA_INTERCEPT_4,      "LCLS2 Equation intercept (ch 4)",          "Passive", "raw",      ANACORE_Intercept_4              }
+{ LC2_ANA_INTERCEPT_5,      "LCLS2 Equation intercept (ch 5)",          "Passive", "raw",      ANACORE_Intercept_5              }
+{ LC1_ANA_INTERCEPT_0,      "LCLS1 Equation intercept (ch 0)",          "Passive", "raw",      ANACORE_InterceptL1_0            }
+{ LC1_ANA_INTERCEPT_1,      "LCLS1 Equation intercept (ch 1)",          "Passive", "raw",      ANACORE_InterceptL1_1            }
+{ LC1_ANA_INTERCEPT_2,      "LCLS1 Equation intercept (ch 2)",          "Passive", "raw",      ANACORE_InterceptL1_2            }
+{ LC1_ANA_INTERCEPT_3,      "LCLS1 Equation intercept (ch 3)",          "Passive", "raw",      ANACORE_InterceptL1_3            }
+{ LC1_ANA_INTERCEPT_4,      "LCLS1 Equation intercept (ch 4)",          "Passive", "raw",      ANACORE_InterceptL1_4            }
+{ LC1_ANA_INTERCEPT_5,      "LCLS1 Equation intercept (ch 5)",          "Passive", "raw",      ANACORE_InterceptL1_5            }
+{ LC2_ANA_PK_DEL_TRG_0,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_0       }
+{ LC2_ANA_PK_DEL_TRG_1,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_1       }
+{ LC2_ANA_PK_DEL_TRG_2,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_2       }
+{ LC2_ANA_PK_DEL_TRG_3,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_3       }
+{ LC2_ANA_PK_DEL_TRG_4,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_4       }
+{ LC2_ANA_PK_DEL_TRG_5,     "LCLS2 Peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeak_5       }
+{ LC2_ANA_PK_WDT_TRG_0,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_0       }
+{ LC2_ANA_PK_WDT_TRG_1,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_1       }
+{ LC2_ANA_PK_WDT_TRG_2,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_2       }
+{ LC2_ANA_PK_WDT_TRG_3,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_3       }
+{ LC2_ANA_PK_WDT_TRG_4,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_4       }
+{ LC2_ANA_PK_WDT_TRG_5,     "LCLS2 Peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeak_5       }
+{ LC2_ANA_PD_DEL_TRG_0,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_0   }
+{ LC2_ANA_PD_DEL_TRG_1,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_1   }
+{ LC2_ANA_PD_DEL_TRG_2,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_2   }
+{ LC2_ANA_PD_DEL_TRG_3,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_3   }
+{ LC2_ANA_PD_DEL_TRG_4,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_4   }
+{ LC2_ANA_PD_DEL_TRG_5,     "LCLS2 Pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestal_5   }
+{ LC2_ANA_PD_WDT_TRG_0,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_0   }
+{ LC2_ANA_PD_WDT_TRG_1,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_1   }
+{ LC2_ANA_PD_WDT_TRG_2,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_2   }
+{ LC2_ANA_PD_WDT_TRG_3,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_3   }
+{ LC2_ANA_PD_WDT_TRG_4,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_4   }
+{ LC2_ANA_PD_WDT_TRG_5,     "LCLS2 Pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestal_5   }
+{ LC1_ANA_PK_DEL_TRG_0,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_0     }
+{ LC1_ANA_PK_DEL_TRG_1,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_1     }
+{ LC1_ANA_PK_DEL_TRG_2,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_2     }
+{ LC1_ANA_PK_DEL_TRG_3,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_3     }
+{ LC1_ANA_PK_DEL_TRG_4,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_4     }
+{ LC1_ANA_PK_DEL_TRG_5,     "LCLS1 peak window trig. delay",            "1 second","samples",  ANACORE_triggerDelayPeakL1_5     }
+{ LC1_ANA_PK_WDT_TRG_0,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_0     }
+{ LC1_ANA_PK_WDT_TRG_1,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_1     }
+{ LC1_ANA_PK_WDT_TRG_2,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_2     }
+{ LC1_ANA_PK_WDT_TRG_3,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_3     }
+{ LC1_ANA_PK_WDT_TRG_4,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_4     }
+{ LC1_ANA_PK_WDT_TRG_5,     "LCLS1 peak window trig. width",            "1 second","samples",  ANACORE_triggerWidthPeakL1_5     }
+{ LC1_ANA_PD_DEL_TRG_0,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_0 }
+{ LC1_ANA_PD_DEL_TRG_1,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_1 }
+{ LC1_ANA_PD_DEL_TRG_2,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_2 }
+{ LC1_ANA_PD_DEL_TRG_3,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_3 }
+{ LC1_ANA_PD_DEL_TRG_4,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_4 }
+{ LC1_ANA_PD_DEL_TRG_5,     "LCLS1 pedestal window trig delay",         "1 second","samples",  ANACORE_triggerDelayPedestalL1_5 }
+{ LC1_ANA_PD_WDT_TRG_0,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_0 }
+{ LC1_ANA_PD_WDT_TRG_1,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_1 }
+{ LC1_ANA_PD_WDT_TRG_2,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_2 }
+{ LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_3 }
+{ LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_4 }
+{ LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_5 }
 }
 
 
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   ZSV,        OSV,     PARAM                    }
-{ DIG_FORCEBITSEN,    "Enable Digital Force Bits",              "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
+{ R,                  DESC,                        ZNAM,       ONAM,       SCAN,         DTYP,                   ZSV,        OSV,     PARAM                    }
+{ DIG_FORCEBITSEN,    "Enable Digital Force Bits", "Disable",  "Enable",   "1 second",   "asynUInt32Digital",    "NO_ALARM", "MAJOR", DIGMES_DigitalForceEn    }
 }
 
 #======================================
 # 1-bit Register with ScalVal interfaces
 #======================================
 file "Reg1BitRW.template" { pattern
-{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,          DTYP,                   PARAM                    }
-{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L1Polarity_0      }
-{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",    "asynUInt32Digital",    DIGMES_L2Polarity_0      }
-{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",    "asynUInt32Digital",    LC1_TimeoutEnable        }
-{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",    "asynUInt32Digital",    DM0_TrigHwAutoReArm      }
-{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",    "asynUInt32Digital",    DM1_TrigHwAutoReArm      }
+{ R,                  DESC,                                     ZNAM,       ONAM,       SCAN,         DTYP,                   PARAM                    }
+{ DIG_L1POL_0,        "Digital Bit Polarity for LCLS2",         "Inverse",  "Direct",   "1 second",   "asynUInt32Digital",    DIGMES_L1Polarity_0      }
+{ DIG_L2POL_0,        "Digital Bit Polarity for LCLS1",         "Inverse",  "Direct",   "1 second",   "asynUInt32Digital",    DIGMES_L2Polarity_0      }
+{ LC1_TIMEOUT_EN,     "Enable LCLS-I Application Timeouts",     "Disable",  "Enable",   "1 second",   "asynUInt32Digital",    LC1_TimeoutEnable        }
+{ DM0_HW_ARM,         "DaqMux, bay0, arm hw triggers",          "Disabled", "Enabled",  "1 second",   "asynUInt32Digital",    DM0_TrigHwAutoReArm      }
+{ DM1_HW_ARM,         "DaqMux, bay1, arm hw triggers",          "Disabled", "Enabled",  "1 second",   "asynUInt32Digital",    DM1_TrigHwAutoReArm      }
 }
 
 #======================================
@@ -508,18 +481,10 @@ file "Reg1BitRO.template" { pattern
 { PGP_RX_LOC_RDY_0,     "Pgp2bAxi 0 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_0 }
 { PGP_RX_PHY_RDY_1,     "Pgp2bAxi 1 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_1     }
 { PGP_RX_LOC_RDY_1,     "Pgp2bAxi 1 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_1 }
-{ PGP_RX_PHY_RDY_2,     "Pgp2bAxi 2 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_2     }
-{ PGP_RX_LOC_RDY_2,     "Pgp2bAxi 2 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_2 }
-{ PGP_RX_PHY_RDY_3,     "Pgp2bAxi 3 RX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxPhyReady_3     }
-{ PGP_RX_LOC_RDY_3,     "Pgp2bAxi 3 Rx Local Link Ready",       "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_RxLocLinkReady_3 }
 { PGP_TX_PHY_RDY_0,     "Pgp2bAxi 0 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_0     }
 { PGP_TX_LINK_RDY_0,    "Pgp2bAxi 0 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_0    }
 { PGP_TX_PHY_RDY_1,     "Pgp2bAxi 1 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_1     }
 { PGP_TX_LINK_RDY_1,    "Pgp2bAxi 1 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_1    }
-{ PGP_TX_PHY_RDY_2,     "Pgp2bAxi 2 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_2     }
-{ PGP_TX_LINK_RDY_2,    "Pgp2bAxi 2 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_2    }
-{ PGP_TX_PHY_RDY_3,     "Pgp2bAxi 3 TX Phy is Ready",           "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxPhyReady_3     }
-{ PGP_TX_LINK_RDY_3,    "Pgp2bAxi 3 Tx Link Ready",             "Not ready",    "Ready",    "1 second",     "asynUInt32Digital",    PGP_TxLinkReady_3    }
 { ASM_AOM_PERMIT,       "State of AOM permit line",             "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_aomPermit    }
 { ASM_TRG_SELECT,       "State of trigger select line",         "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_trgSelect    }
 { ASM_SHUTTER,          "State of shutter input line",          "Disabled",     "Enabled",  "1 second",     "asynUInt32Digital",    ASMCORE_shutter      }
@@ -555,7 +520,7 @@ file "Reg2BitsRO.template" { pattern
 # 3-bit Register with ScalVal interfaces
 #======================================
 file "Reg3BitsRW.template" { pattern
-{ R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,       PARAM                   }
+{ R,                DESC,                       ZRST,           ONST,               TWST,           THST,       FRST,           FVST,           SXST,       SVST,           SCAN,      PARAM                   }
 { MIT_KICK_TYPE,    "Mitigation kicker type",   "None",         "BKRCUS",           "ByKIK",        "ByKIKS",   "",             "",             "",         "",             "1 second", MITIG_mpsConfig         }
 }
 
@@ -563,7 +528,7 @@ file "Reg3BitsRW.template" { pattern
 # 4-bit Register with ScalVal interfaces
 #======================================
 file "Reg4BitsRW.template" { pattern
-{ R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           FRST,          FVST,          SXST,          SVST,          EIST,          NIST,          TEST,          ELST,          TVST,          TTST,          FTST,          FFST,        SCAN,       PARAM                           }
+{ R,                    DESC,                                   ZRST,           ONST,               TWST,               THST,           FRST,          FVST,          SXST,          SVST,          EIST,          NIST,          TEST,          ELST,          TVST,          TTST,          FTST,          FFST,        SCAN,       PARAM                          }
 { LC2_ANA_PROCSEL_0,    "LCLS2 Processing Selection (ch 0)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_0      }
 { LC2_ANA_PROCSEL_1,    "LCLS2 Processing Selection (ch 1)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_1      }
 { LC2_ANA_PROCSEL_2,    "LCLS2 Processing Selection (ch 2)",    "None",         "Integration",      "Linear Equation",  "",             "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",            "",          "1 second", ANACORE_ProcessingSelect_2      }
@@ -586,8 +551,8 @@ file "Reg4BitsRW.template" { pattern
 # Char Array Registers with ScalVal_RO interfaces
 #======================================
 file "RegCharArrayRO.template" { pattern
-{ R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM           }
-{ FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "1 second",     256,    AV_BuildStamp   }
+{ R,                    DESC,                               PINI,   SCAN,           NELM,   PARAM          }
+{ FPGA_BUILDSTAMP,      "FPGA's firmware build string",     "YES",  "Passive",     256,    AV_BuildStamp   }
 }
 
 #======================================
@@ -597,4 +562,47 @@ file "StreamSize.template" { pattern
 { R,                    BAY,    }
 { DM0_BUFFER_SIZE,      "0",    }
 { DM1_BUFFER_SIZE,      "1",    }
+}
+
+#======================================
+# RTM DI PVs
+#======================================
+file "rtm_di.template" {pattern
+{ CH }
+{ 0  }
+{ 1  }
+{ 2  }
+{ 3  }
+{ 4  }
+{ 5  }
+{ 6  }
+{ 7  }
+{ 8  }
+{ 9  }
+{ 10 }
+{ 11 }
+{ 12 }
+{ 13 }
+{ 14 }
+{ 15 }
+{ 16 }
+{ 17 }
+{ 18 }
+{ 19 }
+{ 20 }
+{ 21 }
+{ 22 }
+{ 23 }
+{ 24 }
+{ 25 }
+{ 26 }
+{ 27 }
+{ 28 }
+{ 29 }
+{ 30 }
+{ 31 }
+}
+file config_version.template { pattern
+{ MPS_CONFIG_VERSION }
+{ $(VER)             }
 }

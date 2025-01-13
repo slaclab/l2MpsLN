@@ -1,0 +1,31 @@
+#================================================================================#
+# Collection of db files imported from various modules used for TPR Management   #
+# Macro description:                                                             #
+#   - LOCA     : TPR Area (e.g. GUNB)                                            #
+#   - IOC_UNIT : e.g. MP01                                                       #
+#================================================================================#
+
+#======================================
+# 1 bit R/W integers
+#======================================
+file "timing_rx_error.template" { pattern
+{ P,                           DESC,                ZNAM, ONAM,    SCAN,       PARAM,  PORT             }
+{ "TPR:$(LOCA):$(IOC_UNIT):0", "TPR Rx Err: 1=Err", "OK", "Fault", "1 second", RxDown, YCPSWASYN_PORT   }
+}
+file tprDeviceNamePV.db { pattern
+{ LOCA,    IOC_UNIT,    INST, NN, DEV_PREFIX,                       PORT            }
+{ $(LOCA), $(IOC_UNIT), 0,    08, "TPR:$(LOCA):$(IOC_UNIT):0:GP0_", TPRTRIGGER_PORT }
+{ $(LOCA), $(IOC_UNIT), 0,    00, "TPR:$(LOCA):$(IOC_UNIT):0:GP1_", TPRTRIGGER_PORT }
+}
+file tprTrig.db { pattern
+{ LOCA,    IOC_UNIT,    INST, PORT            }
+{ $(LOCA), $(IOC_UNIT), 0,    TPRTRIGGER_PORT }
+}
+file crossbarCtrl.db { pattern
+{ DEV,                         PORT     }
+{ "TPR:$(LOCA):$(IOC_UNIT):0", crossbar }
+}
+file tprPattern.db { pattern
+{ LOCA,    IOC_UNIT,    INST, PORT            }
+{ $(LOCA), $(IOC_UNIT), 0,    TPRPATTERN_PORT }
+}
