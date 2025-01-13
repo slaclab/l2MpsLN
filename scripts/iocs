@@ -42,7 +42,6 @@
 ./copy.sh sioc-fees-mp02
 ./copy.sh sioc-fees-mp03
 ./copy.sh sioc-gunb-mp01
-./copy.sh sioc-gunb-mp01b
 ./copy.sh sioc-gunb-mp02
 ./copy.sh sioc-l0b-mp01
 ./copy.sh sioc-l0b-mp02
