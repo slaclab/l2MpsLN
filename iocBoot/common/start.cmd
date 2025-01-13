@@ -37,7 +37,7 @@ epicsEnvSet("YAML","${YAML_DIR}/000TopLevel.yaml")
 epicsEnvSet("DEFAULTS_FILE", "${YAML_DIR}/config/defaults.yaml")
 
 # YCPSWASYN Dictionary file
-epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mps${TYPE}.dict")
+epicsEnvSet("YCPSWASYN_DICT_FILE", "firmware/mps${TYPE}${UND}.dict")
 
 # *********************************************
 # **** Environment variables for IOC Admin ****
@@ -101,7 +101,7 @@ dbLoadRecords("db/tpr_management.db","LOCA=${LOCATION},IOC_UNIT=${LOCATION_INDEX
 # ==========================================
 # Load application specific configurations
 # ==========================================
-cpswLoadConfigFile("iocBoot/common/configs/specifics${TYPE}.yaml", "mmio")
+cpswLoadConfigFile("iocBoot/common/configs/specifics${TYPE}${UND}.yaml", "mmio")
 
 # ==========================================
 #     Load IOC specific configurations
@@ -126,8 +126,8 @@ L2MpsSetBaysPresent ${BAYS}
 # Load MPS Driver Databases
 dbLoadRecords("db/l2MpsL1Bsa.db","P=${L2MPS_PREFIX}")
 dbLoadRecords("db/mps.db","P=${L2MPS_PREFIX},PORT=${L2MPSASYN_PORT}")
-dbLoadRecords("db/mps${TYPE}.db", "P=${L2MPS_PREFIX}, VER=${MPS_CONFIG_VERSION},NUM=${BAYS}, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/modeManager${TYPE}.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=${LOCATION_INDEX},INST=${INST},TPR=${TPR},PORT=bsaPort")
+dbLoadRecords("db/mps${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, VER=${MPS_CONFIG_VERSION},NUM=${BAYS}, PORT=${YCPSWASYN_PORT}")
+dbLoadRecords("db/modeManager${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=${LOCATION_INDEX},INST=${INST},TPR=${TPR},PORT=bsaPort")
 dbLoadRecords("db/facMode.template","IOC=${IOC_NAME},FLNK=${IOC_NAME}:SET_FACMODE,INPV=${MODE_INPV},INPR=${MODE_RBV}")
 dbLoadRecords("db/analog${BAYS}bay.db","P=${L2MPS_PREFIX}")
 

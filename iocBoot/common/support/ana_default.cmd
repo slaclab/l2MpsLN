@@ -29,6 +29,7 @@ epicsEnvSet("CH5_P","")
 epicsEnvSet("CH5_R","")
 epicsEnvSet("CH5_EGU","")
 epicsEnvSet("CH5_GCH","")
+epicsEnvSet("UND","")
 
 # ===========================================
 #               DBD LOADING

@@ -23,15 +23,20 @@ DB_INSTALLS += $(L2MPSASYN)/db/lc2_watchdog.db
 # MPS LN specific databases
 # ==========================================
 DB += mpsLN.db
+DB += mpsLN_UND.db
 DB += mpsAN.db
+DB += mpsAN_UND.db
 DB += mpsDN.db
 DB += mps_wf.db
 DB += modeManagerLN.db
+DB += modeManagerLN_UND.db
 DB += modeManagerAN.db
+DB += modeManagerAN_UND.db
 DB += modeManagerDN.db
 DB += l2MpsL1Bsa.db
 DB += facMode.template
 DB += amc_ai.db
+DB += amc_ai_UND.db
 DB += l1_bsa.db
 DB += ioc_management.db
 DB += tpr_management.db

@@ -5,16 +5,16 @@
       - MpsLinkNodeCore:
         - UdpBroadcastIP: !<value> 4294967295
         - MpsLcls1Core:
-          - NodeId: !<value> 134
-          - IpAddr: !<value> 2248190144
-          - appIdRemap[0]: !<value> 260
-          - appIdRemap[1]: !<value> 262
-          - appIdRemap[2]: !<value> 263
-          - appIdRemap[3]: !<value> 0
+          - NodeId: !<value> 136
+          - IpAddr: !<value> 2281744576
+          - appIdRemap[0]: !<value> 348
+          - appIdRemap[1]: !<value> 283
+          - appIdRemap[2]: !<value> 284
+          - appIdRemap[3]: !<value> 285
           - appIdRemap[4]: !<value> 0
           - appIdRemap[5]: !<value> 0
-          - appIdRemap[6]: !<value> 261
-          - appIdRemap[7]: !<value> 265
+          - appIdRemap[6]: !<value> 282
+          - appIdRemap[7]: !<value> 287
           - appIdRemap[8]: !<value> 0
           - appIdRemap[9]: !<value> 0
           - appIdRemap[10]: !<value> 0

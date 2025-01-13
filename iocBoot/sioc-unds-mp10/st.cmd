@@ -17,6 +17,11 @@ epicsEnvSet("TYPE","AN")
 < ${TOP}/iocBoot/common/support/ana_default.cmd
 
 # =======================================
+# Set this IOC up as an Undulator BLM type
+# =======================================
+epicsEnvSet("UND","_UND")
+
+# =======================================
 # Load specific environment variables for this unit
 # =======================================
 < ${TOP}/iocBoot/${IOC}/${IOC}.cmd
@@ -25,3 +30,8 @@ epicsEnvSet("TYPE","AN")
 # Load common initialization file
 # =======================================
 < ${TOP}/iocBoot/common/start.cmd
+
+# =======================================
+# Load undulator BLM settings
+# =======================================
+cpswLoadConfigFile("iocBoot/${IOC}/blm_config.yaml", "mmio")
