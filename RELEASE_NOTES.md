@@ -3,6 +3,12 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-2-0__: 2025-01-13 jmock
+  * build against mps_configuration 2025-01-09-a
+  * Allow FW 4.10.2 to run against this version of the application
+    * New dict and substitution files to handle different register data types
+    * High level PV names are the same
+
 * __l2MpsLN-R5-1-0__: 2024-10-21 jmock
   * build against mps_configuration 2024-10-21-a (include PBLM:DASEL:415)
   * Build against l2MpsAsyn 4.1.2
