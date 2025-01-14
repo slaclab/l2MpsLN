@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-2-1__: 2025-01-13 jmock
+  * Create missing iocBoot/common/configs/specificsAN_UND.yaml
+
 * __l2MpsLN-R5-2-0__: 2025-01-13 jmock
   * build against mps_configuration 2025-01-09-a
   * Allow FW 4.10.2 to run against this version of the application
