@@ -3,13 +3,6 @@
     - MpsLinkNodeCore:
       - MpsMitigationCore:
         - mpsConfig: !<value> 0x1
-- AppTop:
-  - AppCore:
-    - MpsAnalogCore:
-      - MpsAnalogLcls1Reg:
-        - PrcValueSelect: !<value> 0
-      - MpsAnalogLcls2Reg:
-        - PrcValueSelect: !<value> 0
 #Channel 0
 - AppTop:
   - AppCore:

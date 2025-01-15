@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-2-3__: 2025-01-15 jmock
+  * Change sioc-clts-mp01 analog processing to use avg values instead of peak values
+
 * __l2MpsLN-R5-2-2__: 2025-01-15 jmock
   * Change sioc-clts-mp01, sioc-bsys-mp04, and sioc-bsyh-mp03 to
     be UND type, so the kicker watching works better until FW bug fix
