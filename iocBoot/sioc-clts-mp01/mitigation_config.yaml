@@ -3,3 +3,26 @@
     - MpsLinkNodeCore:
       - MpsMitigationCore:
         - mpsConfig: !<value> 0x1
+- AppTop:
+  - AppCore:
+    - MpsAnalogCore:
+      - MpsAnalogLcls1Reg:
+        - PrcValueSelect: !<value> 0
+      - MpsAnalogLcls2Reg:
+        - PrcValueSelect: !<value> 0
+#Channel 0
+- AppTop:
+  - AppCore:
+    - MpsAnalogCore:
+      - MpsAnalogLcls1Reg:
+        - ProcessingSelect[0]: !<value> 1
+        - IntegrationCounts[0]: !<value> 2
+        - IntegrationCounts[1]: !<value> 179
+        - IntegrationCounts[2]: !<value> 0
+        - IntegrationCounts[3]: !<value> 0
+      - MpsAnalogLcls2Reg:
+        - ProcessingSelect[0]: !<value> 1
+        - IntegrationCounts[0]: !<value> 10
+        - IntegrationCounts[1]: !<value> 0
+        - IntegrationCounts[2]: !<value> 0
+        - IntegrationCounts[3]: !<value> 0

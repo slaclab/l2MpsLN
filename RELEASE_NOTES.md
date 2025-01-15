@@ -3,6 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-2-2__: 2025-01-15 jmock
+  * Change sioc-clts-mp01, sioc-bsys-mp04, and sioc-bsyh-mp03 to
+    be UND type, so the kicker watching works better until FW bug fix
+    is finished
+
 * __l2MpsLN-R5-2-1__: 2025-01-13 jmock
   * Create missing iocBoot/common/configs/specificsAN_UND.yaml
 
