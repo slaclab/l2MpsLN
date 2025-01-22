@@ -8,12 +8,17 @@
 #   - EGU         : Engineering Units                                            #
 #   - TPR         : TPR Prefix, needed for LCLS2 BSA (bsa.db)                    #
 #================================================================================#
-file RegRO_Analog.template { pattern
-{ R,              DESC,                        SCAN,        EGU,    PREC, LINR,            PARAM,              PORT           } 
-{ I0_$(ATTR),     "Scaled analog input value", "1 second", $(EGU), 3,    "SLOPE",         I0_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
-{ I1_$(ATTR),     "Scaled analog input value", "1 second", $(EGU), 3,    "SLOPE",         I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
-{ I0_$(ATTR)_RAW, "Scaled analog input value", "1 second", "raw",  3,    "NO CONVERSION", I0_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
-{ I1_$(ATTR)_RAW, "Scaled analog input value", "1 second", "raw",  3,    "NO CONVERSION", I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+#file RegRO_Analog.template { pattern
+#{ R,              DESC,                        SCAN,        EGU,    PREC, LINR,            PARAM,              PORT           } 
+#{ I0_$(ATTR),     "Scaled analog input value", "1 second", $(EGU), 3,    "SLOPE",         I0_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+#{ I1_$(ATTR),     "Scaled analog input value", "1 second", $(EGU), 3,    "SLOPE",         I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+#{ I0_$(ATTR)_RAW, "Scaled analog input value", "1 second", "raw",  3,    "NO CONVERSION", I0_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+#{ I1_$(ATTR)_RAW, "Scaled analog input value", "1 second", "raw",  3,    "NO CONVERSION", I1_B$(BAY)_C$(INP), YCPSWASYN_PORT  }
+#}
+file analog.template { pattern
+{ R,          EGU,    TPR,    IOC,    NCBSA,    SCBSA,    PORT,           PARAM              } 
+{ I0_$(ATTR), $(EGU), $(TPR), $(IOC), $(NCBSA), $(SCBSA), YCPSWASYN_PORT, I0_B$(BAY)_C$(INP) }
+{ I1_$(ATTR), $(EGU), $(TPR), $(IOC), $(NCBSA), $(SCBSA), YCPSWASYN_PORT, I0_B$(BAY)_C$(INP) }
 }
 file RegisterDoubleIn.template { pattern
 { R,                DESC,                        SCAN,        EGU,    PREC, LINR,    PARAM,               PORT           } 

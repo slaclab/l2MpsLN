@@ -1,0 +1,55 @@
+#================================================================================#
+# MPS PV template for analog input channels                                      #
+# Macro description:                                                             #
+#   - P           : Device prefix i.e. CBLM:UNDH:1375                            #
+#   - R           : Fault name from database e.g. I0_LOSS                        #
+#   - EGU         : Engineering Units                                            #
+#   - TPR         : TPR Prefix, needed for LCLS2 BSA (bsa.db)                    #
+#   - IOC         : IOC Prefix, e.g. SIOC:GUNB:MP01, for mode                    #
+#   - NCBSA       : BSA attribute, to know beam path (e.g. S, H, of L)           #
+#   - PORT        : YCPSWASYN Port                                               #
+#   - PARAM       : YCPSWASYN Parameter                                          #
+#================================================================================#
+record(ai,  "$(P):$(R)") {
+    field(DTYP, "Soft Channel")
+    field(DESC, "Analog input value")
+    field(EGU,  "$(EGU="")")
+    field(PINI, "YES")
+    field(SCAN, ".1 second")
+    field(PREC, "$(PREC=0)")
+    field(LINR, "NO CONVERSION")
+}
+record(ai,  "$(P):$(R)_ASYN") {
+    field(DTYP, "asynInt32")
+    field(DESC, "Analog input value Async")
+    field(EGU,  "$(EGU="")")
+    field(PINI, "YES")
+    field(LINR, "SLOPE")
+    field(PREC, "$(PREC=0)")
+    field(ESLO, "$(ESLO=1)")
+    field(EOFF, "$(EOFF=0)")
+    field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
+    field(SCAN, "1 second")
+}
+record(ai,  "$(P):$(R)_RAW") {
+    field(DTYP, "asynInt32")
+    field(DESC, "Analog input value Async Raw")
+    field(EGU,  "$(EGU="")")
+    field(PINI, "YES")
+    field(SCAN, "1 second")
+    field(LINR, "NO CONVERSION")
+    field(PREC, "0")
+    field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
+}
+record(calcout, "$(P):$(R)_CALC") {
+    field(DTYP, "Soft Channel")
+    field(DESC, "Analog input value calc")
+    field(CALC, "(A>0)?(((B<2)?(B=0)?D:E):C):C")
+    field(INPA, "$(TPR):CH15_RATE")
+    field(INPB, "$(IOC):FACMODE_RBV CP")
+    field(INPC, "$(P):$(R)_ASYN CP")
+    field(INPD, "$(P):$(R)CU$(BSA)TH CP")
+    field(INPE, "$(P):$(R)SC$(BSA)TH CP")
+    field(OUT,  "$(P):$(R)")
+    field(FLNK, "$(P):$(R)")
+}

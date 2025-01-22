@@ -30,6 +30,9 @@ epicsEnvSet("CH5_R","")
 epicsEnvSet("CH5_EGU","")
 epicsEnvSet("CH5_GCH","")
 epicsEnvSet("UND","")
+epicsEnvSet("BEAMPATH","L")
+epicsEnvSet("TPR_MASK","62")
+epicsEnvSet("EVR_EC","140")
 
 # ===========================================
 #               DBD LOADING
