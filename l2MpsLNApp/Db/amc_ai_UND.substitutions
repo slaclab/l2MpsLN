@@ -65,4 +65,3 @@ file StreamEGU.db { pattern
 { DEVICE, ATTR,  DESC,                      PORT,            PARAM                      }
 { $(P),   MPS,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
 }
-]
