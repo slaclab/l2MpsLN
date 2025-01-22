@@ -25,6 +25,7 @@ epicsEnvSet("UND","_UND")
 # Load specific environment variables for this unit
 # =======================================
 < ${TOP}/iocBoot/${IOC}/${IOC}.cmd
+< ${TOP}/iocBoot/common/support/ana_sxr.cmd
 
 # =======================================
 # Load common initialization file

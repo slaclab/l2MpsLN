@@ -20,6 +20,7 @@ epicsEnvSet("TYPE","DN")
 # Load specific environment variables for this unit
 # =======================================
 < ${TOP}/iocBoot/${IOC}/${IOC}.cmd
+< ${TOP}/iocBoot/common/support/ana_hxr.cmd
 
 # =======================================
 # Load common initialization file
