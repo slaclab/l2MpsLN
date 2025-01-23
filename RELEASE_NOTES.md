@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-2-5__: 2025-01-22 jmock
+  * Add in I1 LCLS2 BSA PVs so as not to break choice.
+
 * __l2MpsLN-R5-2-4__: 2025-01-22 jmock
   * Change analog processing asynchronous PVs to point to BSA values if available and 
     FW reads if no beam present.  See analog.template
