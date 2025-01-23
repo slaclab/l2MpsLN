@@ -16,7 +16,7 @@ record(ai,  "$(P):$(R)") {
     field(EGU,  "$(EGU="")")
     field(PINI, "YES")
     field(SCAN, ".1 second")
-    field(PREC, "$(PREC=0)")
+    field(PREC, "3")
     field(LINR, "NO CONVERSION")
 }
 record(ai,  "$(P):$(R)_ASYN") {
@@ -25,7 +25,7 @@ record(ai,  "$(P):$(R)_ASYN") {
     field(EGU,  "$(EGU="")")
     field(PINI, "YES")
     field(LINR, "SLOPE")
-    field(PREC, "$(PREC=0)")
+    field(PREC, "3")
     field(ESLO, "$(ESLO=1)")
     field(EOFF, "$(EOFF=0)")
     field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
@@ -52,4 +52,5 @@ record(calcout, "$(P):$(R)_CALC") {
     field(INPE, "$(P):$(R)SC$(BSA)TH CP")
     field(OUT,  "$(P):$(R)")
     field(FLNK, "$(P):$(R)")
+    field(PREC, "3")
 }
