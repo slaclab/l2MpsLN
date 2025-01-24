@@ -1,4 +1,4 @@
-# Release notes
+# Release notes Update
 
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
