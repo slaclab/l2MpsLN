@@ -104,6 +104,13 @@ HPSTPR_TOP=$(PACKAGE_SITE_TOP)/$(HPSTPR_PACKAGE_NAME)/$(HPSTPR_VERSION)
 HPSTPR_LIB=$(HPSTPR_TOP)/$(PKG_ARCH)/lib
 HPSTPR_INCLUDE=$(HPSTPR_TOP)/$(PKG_ARCH)/include
 
+# TIRPC
+TIRPC_PACKAGE_NAME    = tirpc
+TIRPC_VERSION         = 1.3.5
+TIRPC_TOP             = $(PACKAGE_SITE_TOP)/$(TIRPC_PACKAGE_NAME)/$(TIRPC_VERSION)
+TIRPC_LIB             = $(TIRPC_TOP)/$(PKG_ARCH)/lib
+TIRPC_INCLUDE         = $(TIRPC_TOP)/$(PKG_ARCH)/include
+
 # ======================================
 # BSA API
 # ======================================
