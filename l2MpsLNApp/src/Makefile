@@ -33,7 +33,7 @@ boost_system_DIR  = $(BOOST_LIB)
 hpstpr_DIR        = $(HPSTPR_LIB)
 bsa_DIR           = $(BSA_LIB)
 commonATCA_DIR    = $(COMMONATCA_LIB)
-
+tirpc_DIR         = $(TIRPC_LIB)
 # =====================================================
 
 # ======================================================
@@ -48,6 +48,9 @@ USR_LIBS_Linux += bsa
 USR_LIBS_Linux += commonATCA
 USR_LIBS_Linux += yamlReader 
 USR_LIBS_Linux += deviceLib
+ifeq ($(NEEDS_TIRPC),YES)
+USR_LIBS_Linux += tirpc
+endif
 # ======================================================
 
 #=============================
