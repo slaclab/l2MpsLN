@@ -3,4 +3,5 @@ function(initPolynomial)
 function(calcPolynomial)
 function(aInit)
 function(calcG2V)
+function(calcTimeArray)
 

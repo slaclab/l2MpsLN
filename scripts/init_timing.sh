@@ -1,5 +1,4 @@
 #! /bin/bash
-
 caput $1:TPRTRIG00.DESC "NC Kicker Abort"
 caput $1:TPRTRIG01.DESC "NC Kicker Standby"
 caput $1:TPRTRIG02.DESC "NC Kicker User Abort"
@@ -42,7 +41,7 @@ caput $1:CH01_EVCODE "0"
 caput $1:CH02_EVCODE "161"
 caput $1:CH03_EVCODE "0"
 caput $1:CH04_EVCODE "140"
-caput $1:CH05_EVCODE "20"
+caput $1:CH05_EVCODE "40"
 caput $1:CH06_EVCODE "45"
 caput $1:CH07_EVCODE "0"
 caput $1:CH08_EVCODE "43"

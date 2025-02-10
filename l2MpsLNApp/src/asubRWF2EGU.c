@@ -16,7 +16,7 @@
 #include <recSup.h>
 #include <aSubRecord.h>
 /* Make an array with each element */
-/* EGU_WF= (RAW_WF - OFFSET) * SLOPE */
+/* EGU_WF= (RAW_WF + OFFSET) * SLOPE */
 
 static long calcWFinEGU(aSubRecord *pasub) {
     short i;
@@ -41,7 +41,7 @@ static long calcWFinEGU(aSubRecord *pasub) {
 		printf("\nInput: %d (-> %.3f)", rawInput[i], (double)rawInput[i]);
         }
 		
-        scaledInput = (double)rawInput[i] - offset;
+        scaledInput = (double)rawInput[i] + offset;
 		
         if (debug) {
 		printf("\nscaledInput %.3f", scaledInput);

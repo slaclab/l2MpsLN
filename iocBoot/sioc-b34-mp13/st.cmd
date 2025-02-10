@@ -9,7 +9,7 @@
 # Define mode management and type
 # =======================================
 epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
-epicsEnvSet("TYPE","AN")
+epicsEnvSet("TYPE","LN")
 
 # =======================================
 # Initialize default environment variables

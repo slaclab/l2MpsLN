@@ -33,6 +33,8 @@ epicsEnvSet("UND","")
 epicsEnvSet("BEAMPATH","L")
 epicsEnvSet("TPR_MASK","62")
 epicsEnvSet("EVR_EC","140")
+epicsEnvSet("NC_TS_DELAY","3")
+epicsEnvSet("SC_TS_DELAY","4")
 
 # ===========================================
 #               DBD LOADING

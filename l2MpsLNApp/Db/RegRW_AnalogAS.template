@@ -14,7 +14,6 @@ record(ao,      "$(P):$(R)") {
     field(FLNK, "$(P):$(R)_RBV")
     info(autosaveFields, "VAL")
 }
-
 record(ai,      "$(P):$(R)_RBV") {
     field(DTYP, "asynInt32")
     field(DESC, "$(DESC)")

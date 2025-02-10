@@ -19,29 +19,31 @@ file RegisterDoubleIn.template { pattern
 { I1_$(ATTR)_FLOAT, "Scaled analog input value", "1 second", $(EGU), 3,    "SLOPE", I1_B$(BAY)_C$(INP)F, YCPSWASYN_PORT  }
 }
 file RegRW_AnalogAS.template { pattern
-{ R,              DESC,        PINI,   SCAN,        EGU,  LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT            }
-{ FW_OFFSET,     "DC Offset",  "YES",  "1 second",  "", , "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT  }
+{ R,                DESC,                        PINI,   SCAN,        EGU,           LINR,            ESLO,  EOFF, PREC,   PARAM,                   PORT            }
+{ FW_OFFSET,        "DC Offset",                 "YES",  "1 second",  "",            "SLOPE",         0.5,   0,    3,      B$(BAY)_C$(INP)_OFF,     YCPSWASYN_PORT  }
+{ I0_$(ATTR)_ZBAND, "Analog deadband around 0",  "YES",  "1 second",  "ADC Counts",  "NO CONVERSION", "",    "",   0,      I0_B$(BAY)_C$(INP)_ZERO, YCPSWASYN_PORT  }
+{ I1_$(ATTR)_ZBAND, "Analog deadband around 0",  "YES",  "1 second",  "ADC Counts",  "NO CONVERSION", "",    "",   0,      I1_B$(BAY)_C$(INP)_ZERO, YCPSWASYN_PORT  }
 }
 file bsa.db { pattern
 { DEV,   SECN,             TPR,    PORT,    BSAKEY              }
 {  $(P), I0_$(ATTR),       $(TPR), bsaPort, I0_B$(BAY)_C$(INP)  }
 {  $(P), I0_$(ATTR)_FLOAT, $(TPR), bsaPort, I0_B$(BAY)_C$(INP)F }
 {  $(P), I1_$(ATTR),       $(TPR), bsaPort, I1_B$(BAY)_C$(INP)  }
-#{  $(P), I1_$(ATTR)_FLOAT, $(TPR), bsaPort, I1_B$(BAY)_C$(INP)F }  
+{  $(P), I1_$(ATTR)_FLOAT, $(TPR), bsaPort, I1_B$(BAY)_C$(INP)F }  
 }
 file bsss.db { pattern
 { DEV,   SECN,             EGU,    PORT,     BSAKEY              }
 {  $(P), I0_$(ATTR),       $(EGU), bsssPort, I0_B$(BAY)_C$(INP)  }
 {  $(P), I0_$(ATTR)_FLOAT, $(EGU), bsssPort, I0_B$(BAY)_C$(INP)F }
 {  $(P), I1_$(ATTR),       $(EGU), bsssPort, I1_B$(BAY)_C$(INP)  }
-#{  $(P), I1_$(ATTR)_FLOAT, $(EGU), bsssPort, I1_B$(BAY)_C$(INP)F }  
+{  $(P), I1_$(ATTR)_FLOAT, $(EGU), bsssPort, I1_B$(BAY)_C$(INP)F }  
 }
 file bsas.db { pattern
 { DEV,   SECN,              PORT,     BSAKEY              }
 {  $(P), I0_$(ATTR),        bsasPort, I0_B$(BAY)_C$(INP)  }
 {  $(P), I0_$(ATTR)_FLOAT,  bsasPort, I0_B$(BAY)_C$(INP)F }
-{  $(P), I1_$(ATTR),       bsasPort, I1_B$(BAY)_C$(INP)  }
-#{  $(P), I1_$(ATTR)_FLOAT, bsasPort, I1_B$(BAY)_C$(INP)F }  
+{  $(P), I1_$(ATTR),        bsasPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR)_FLOAT,  bsasPort, I1_B$(BAY)_C$(INP)F }  
 }
 file slope.template { pattern
 { R,                PR, EGU    }
@@ -55,8 +57,8 @@ file mps_ai.db { pattern
 { L2MPSASYN_PORT }
 }
 file StreamEGU.db { pattern
-{ DEVICE, ATTR,  DESC,                      PORT,            PARAM                      }
-{ $(P),   MPS,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
+{ DEVICE, ATTR,  DESC,                      EGU,    PORT,            PARAM                      }
+{ $(P),   MPS,   "(Bay $(BAY), ch $(INP))", $(EGU), YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
 }
 file ana_decay.template { pattern
 { R,       ACCL, TSEC,    PORT,           DCYPARAM,                  SCLPARAM                   }
@@ -64,4 +66,12 @@ file ana_decay.template { pattern
 { I0_LOSS, SC,   910000,  YCPSWASYN_PORT, I0_B$(BAY)_C$(INP)_LC2DCY, I0_B$(BAY)_C$(INP)_LC2SCL  }
 { I1_LOSS, NC,   360,     YCPSWASYN_PORT, I1_B$(BAY)_C$(INP)_LC1DCY, I1_B$(BAY)_C$(INP)_LC1SCL  }
 { I1_LOSS, SC,   910000,  YCPSWASYN_PORT, I1_B$(BAY)_C$(INP)_LC2DCY, I1_B$(BAY)_C$(INP)_LC2SCL  }
+}
+file "RegRO_Analog.template" { pattern
+{ R,            DESC,                  PINI,   SCAN,       EGU,   LINR,     EGUL, EGUF,        PREC, PORT,           PARAM                    }
+{ AMC_CLK_FREQ, "AMC Clock frequency", "YES",  "1 second", "MHz", "LINEAR", "0",  "0.065535",  2,    YCPSWASYN_PORT, AMCADC_AmcClkFreq_$(BAY) }
+}
+file Reg1BitRW.template {pattern
+{ R,          DESC,                    ZNAM,       ONAM,       SCAN,       DTYP,               PARAM,                    PORT           }
+{ AutoRearm,  "Waveform Stream On/Off" Disabled    Enabled     "1 second"  asynUInt32Digital   DM$(BAY)_TrigHwAutoReArm, YCPSWASYN_PORT }
 }

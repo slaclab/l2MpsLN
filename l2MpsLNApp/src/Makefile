@@ -92,7 +92,7 @@ l2MpsLN_SRCS += IOCfunctions.cpp
 l2MpsLN_SRCS += l2MpsLnDriver.cpp
 l2MpsLN_SRCS += l2mps_l1bsa.cpp l2mps_l1bsa_channels.cpp
 l2MpsLN_SRCS += l2MpsLnFunctions.cpp
-l2MpsLN_SRCS += asubG2V.c asubRWF2EGU.c asubV2RAW.c
+l2MpsLN_SRCS += asubG2V.c asubRWF2EGU.c asubV2RAW.c asubWeightXAxis.c
 
 # Add all the support libraries needed by this IOC
 l2MpsLN_LIBS += devIocStats
