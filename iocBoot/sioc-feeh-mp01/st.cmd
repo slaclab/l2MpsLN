@@ -10,6 +10,7 @@
 # =======================================
 epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 epicsEnvSet("TYPE","DN")
+epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables

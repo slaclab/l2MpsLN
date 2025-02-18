@@ -10,6 +10,7 @@
 # =======================================
 epicsEnvSet("MODE_INPV", "0")
 epicsEnvSet("TYPE","LN")
+epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables
