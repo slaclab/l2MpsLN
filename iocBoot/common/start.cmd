@@ -106,7 +106,7 @@ cpswLoadConfigFile("iocBoot/common/configs/specifics${TYPE}${UND}.yaml", "mmio")
 # ==========================================
 #     Load IOC specific configurations
 # ==========================================
-cpswLoadConfigFile("iocBoot/${IOC}/${IOC}.yaml", "")
+cpswLoadConfigFile("iocBoot/config/${IOC}.yaml", "")
 
 ## Configure asyn port driver
 # L2MPSASYNConfig(
@@ -239,9 +239,6 @@ dbpf ${TPR}:CH15_FIXEDRATE 6
 dbpf ${TPR}:CH15_SYS2_TCTL 1
 dbpf ${TPR}:CH15_EVCODE ${EVR_EC}
 $(IS_NC=#)dbpf ${TPR}:CH15_SYS0_TCTL 1
-
-
-
 
 iocshCmd("pvxsl() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsl")
 iocshCmd("pvxsr() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsr")
