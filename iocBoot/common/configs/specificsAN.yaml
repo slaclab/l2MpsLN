@@ -39,7 +39,7 @@
       - MpsAnalogLcls2Reg:
         - PrcValueSelect: !<value> 3
 # Analog Processing Settings
-# Default all channels to No Processing
+# Default all channels to Integration
 # Default all Integrators to 1 scaling and 
 # 0 decay
 #Channel 0
@@ -47,13 +47,13 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[0]: !<value> 0
+        - ProcessingSelect[0]: !<value> 1
         - IntegrationDecay[0]: !<value> 0
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0
         - IntegrationScaling[1]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[0]: !<value> 0
+        - ProcessingSelect[0]: !<value> 1
         - IntegrationDecay[0]: !<value> 0
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0
@@ -63,13 +63,13 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[1]: !<value> 0
+        - ProcessingSelect[1]: !<value> 1
         - IntegrationDecay[2]: !<value> 0
         - IntegrationScaling[2]: !<value> 1
         - IntegrationDecay[3]: !<value> 0
         - IntegrationScaling[3]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[1]: !<value> 0
+        - ProcessingSelect[1]: !<value> 1
         - IntegrationDecay[2]: !<value> 0
         - IntegrationScaling[2]: !<value> 1
         - IntegrationDecay[3]: !<value> 0
@@ -79,13 +79,13 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[2]: !<value> 0
+        - ProcessingSelect[2]: !<value> 1
         - IntegrationDecay[4]: !<value> 0
         - IntegrationScaling[4]: !<value> 1
         - IntegrationDecay[5]: !<value> 0
         - IntegrationScaling[5]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[2]: !<value> 0
+        - ProcessingSelect[2]: !<value> 1
         - IntegrationDecay[4]: !<value> 0
         - IntegrationScaling[4]: !<value> 1
         - IntegrationDecay[5]: !<value> 0
@@ -95,13 +95,13 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[3]: !<value> 0
+        - ProcessingSelect[3]: !<value> 1
         - IntegrationDecay[6]: !<value> 0
         - IntegrationScaling[6]: !<value> 1
         - IntegrationDecay[7]: !<value> 0
         - IntegrationScaling[7]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[3]: !<value> 0
+        - ProcessingSelect[3]: !<value> 1
         - IntegrationDecay[6]: !<value> 0
         - IntegrationScaling[6]: !<value> 1
         - IntegrationDecay[7]: !<value> 0
@@ -111,13 +111,13 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[4]: !<value> 0
+        - ProcessingSelect[4]: !<value> 1
         - IntegrationDecay[8]: !<value> 0
         - IntegrationScaling[8]: !<value> 1
         - IntegrationDecay[9]: !<value> 0
         - IntegrationScaling[9]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[4]: !<value> 0
+        - ProcessingSelect[4]: !<value> 1
         - IntegrationDecay[8]: !<value> 0
         - IntegrationScaling[8]: !<value> 1
         - IntegrationDecay[9]: !<value> 0
@@ -127,14 +127,15 @@
   - AppCore:
     - MpsAnalogCore:
       - MpsAnalogLcls1Reg:
-        - ProcessingSelect[5]: !<value> 0
+        - ProcessingSelect[5]: !<value> 1
         - IntegrationDecay[10]: !<value> 0
         - IntegrationScaling[10]: !<value> 1
         - IntegrationDecay[11]: !<value> 0
         - IntegrationScaling[11]: !<value> 1
       - MpsAnalogLcls2Reg:
-        - ProcessingSelect[5]: !<value> 0
+        - ProcessingSelect[5]: !<value> 1
         - IntegrationDecay[10]: !<value> 0
         - IntegrationScaling[10]: !<value> 1
         - IntegrationDecay[11]: !<value> 0
         - IntegrationScaling[11]: !<value> 1
+        

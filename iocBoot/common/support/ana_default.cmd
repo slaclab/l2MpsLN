@@ -33,6 +33,9 @@ epicsEnvSet("UND","")
 epicsEnvSet("BEAMPATH","L")
 epicsEnvSet("TPR_MASK","62")
 epicsEnvSet("EVR_EC","140")
+epicsEnvSet("NC_TS_DELAY","3")
+epicsEnvSet("SC_TS_DELAY","4")
+epicsEnvSet("CU","SC")
 
 # ===========================================
 #               DBD LOADING
@@ -40,3 +43,8 @@ epicsEnvSet("EVR_EC","140")
 ## Register all support components
 dbLoadDatabase("${TOP}/dbd/l2MpsLN.dbd",0,0)
 l2MpsLN_registerRecordDeviceDriver(pdbbase)
+
+# =======================================
+# Load specific environment variables for this unit
+# =======================================
+< ${TOP}/iocBoot/startup/${IOC}.cmd

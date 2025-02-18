@@ -106,7 +106,7 @@ cpswLoadConfigFile("iocBoot/common/configs/specifics${TYPE}${UND}.yaml", "mmio")
 # ==========================================
 #     Load IOC specific configurations
 # ==========================================
-cpswLoadConfigFile("iocBoot/${IOC}/${IOC}.yaml", "")
+cpswLoadConfigFile("iocBoot/config/${IOC}.yaml", "")
 
 ## Configure asyn port driver
 # L2MPSASYNConfig(
@@ -127,7 +127,7 @@ L2MpsSetBaysPresent ${BAYS}
 dbLoadRecords("db/l2MpsL1Bsa.db","P=${L2MPS_PREFIX}")
 dbLoadRecords("db/mps.db","P=${L2MPS_PREFIX},PORT=${L2MPSASYN_PORT}")
 dbLoadRecords("db/mps${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, VER=${MPS_CONFIG_VERSION},NUM=${BAYS}, PORT=${YCPSWASYN_PORT}")
-dbLoadRecords("db/modeManager${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=${LOCATION_INDEX},INST=${INST},TPR=${TPR},PORT=bsaPort")
+dbLoadRecords("db/modeManager${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=${LOCATION_INDEX},INST=${INST},TPR=${TPR},PORT=bsaPort,NC_TS_DELAY=${NC_TS_DELAY},SC_TS_DELAY=${SC_TS_DELAY}")
 dbLoadRecords("db/facMode.template","IOC=${IOC_NAME},FLNK=${IOC_NAME}:SET_FACMODE,INPV=${MODE_INPV},INPR=${MODE_RBV}")
 dbLoadRecords("db/analog${BAYS}bay.db","P=${L2MPS_PREFIX}")
 
@@ -239,9 +239,6 @@ dbpf ${TPR}:CH15_FIXEDRATE 6
 dbpf ${TPR}:CH15_SYS2_TCTL 1
 dbpf ${TPR}:CH15_EVCODE ${EVR_EC}
 $(IS_NC=#)dbpf ${TPR}:CH15_SYS0_TCTL 1
-
-
-
 
 iocshCmd("pvxsl() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsl")
 iocshCmd("pvxsr() > ${IOC_DATA}/${IOC}/iocInfo/IOC.pvxsr")

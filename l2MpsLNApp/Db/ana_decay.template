@@ -13,7 +13,7 @@ record(ao,    "$(P):$(R)_INT_$(ACCL)") {
   field(DESC, "integration time in seconds")
   field(EGU,  "s")
   field(SCAN, "Passive")
-  field(PINI, "YES")
+  field(PINI, "NO")
   field(VAL,  "0")
   field(PREC, "3")
   field(FLNK, "$(P):$(R)_INT_CALC_$(ACCL)")

@@ -10,6 +10,7 @@
 # =======================================
 epicsEnvSet("MODE_INPV", "MPS:UNDS:1:FACMODE CPP MSI")
 epicsEnvSet("TYPE","AN")
+epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables
@@ -17,14 +18,8 @@ epicsEnvSet("TYPE","AN")
 < ${TOP}/iocBoot/common/support/ana_default.cmd
 
 # =======================================
-# Set this IOC up as an Undulator BLM type
-# =======================================
-epicsEnvSet("UND","_UND")
-
-# =======================================
 # Load specific environment variables for this unit
 # =======================================
-< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
 < ${TOP}/iocBoot/common/support/ana_sxr.cmd
 
 # =======================================

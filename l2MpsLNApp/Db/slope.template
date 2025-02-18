@@ -9,10 +9,11 @@ record (ao, "$(P):$(R)_SLOPE") {
   field(EGU,  "$(EGU)/raw")
   field(PINI, "YES")
   field(PREC, "$(PR)")
-  info(autosaveFields, "VAL")
   field(FLNK, "$(P):$(R)_SLOPE_SEQ")
   field(DESC, "Slope")
   field(VAL,  "1")
+  field(OMSL, "closed_loop")
+  field(DOL,  "$(P):MPS_SLOPE CPP")
 }
 record(dfanout,  "$(P):$(R)_SLOPE_SEQ") {
   field(DESC, "Slope")

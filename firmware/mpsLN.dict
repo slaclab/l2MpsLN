@@ -268,6 +268,18 @@
 /mmio/AppTop/AppCore/MpsAnalogCore/BsaDataFloat[9]                                          I1_B1_C0F
 /mmio/AppTop/AppCore/MpsAnalogCore/BsaDataFloat[10]                                         I1_B1_C1F
 /mmio/AppTop/AppCore/MpsAnalogCore/BsaDataFloat[11]                                         I1_B1_C2F
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[0]                                           I0_B0_C0_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[1]                                           I0_B0_C1_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[2]                                           I0_B0_C2_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[3]                                           I0_B1_C0_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[4]                                           I0_B1_C1_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt0[5]                                           I0_B1_C2_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[0]                                           I1_B0_C0_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[1]                                           I1_B0_C1_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[2]                                           I1_B0_C2_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[3]                                           I1_B1_C0_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[4]                                           I1_B1_C1_ZERO
+/mmio/AppTop/AppCore/MpsAnalogCore/gapZeroInt1[5]                                           I1_B1_C2_ZERO
 /mmio/AppTop/AppCore/MpsAnalogCore/overThreshCnt[0]                                         ANACORE_overThreshCnt_0
 /mmio/AppTop/AppCore/MpsAnalogCore/overThreshCnt[1]                                         ANACORE_overThreshCnt_1
 /mmio/AppTop/AppCore/MpsAnalogCore/overThreshCnt[2]                                         ANACORE_overThreshCnt_2
@@ -282,6 +294,7 @@
 /mmio/AppTop/AppCore/MpsAnalogCore/dcOffset1[0]                                             B1_C0_OFF
 /mmio/AppTop/AppCore/MpsAnalogCore/dcOffset1[1]                                             B1_C1_OFF
 /mmio/AppTop/AppCore/MpsAnalogCore/dcOffset1[2]                                             B1_C2_OFF
+/mmio/AppTop/AppCore/MpsAnalogCore/timingStampDelay                                         ANACORE_timingStampDelay
 
 # =============================
 # Digital Messages

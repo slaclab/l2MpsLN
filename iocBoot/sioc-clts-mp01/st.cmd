@@ -10,6 +10,7 @@
 # =======================================
 epicsEnvSet("MODE_INPV", "0")
 epicsEnvSet("TYPE","LN")
+epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables
@@ -24,7 +25,6 @@ epicsEnvSet("UND","_UND")
 # =======================================
 # Load specific environment variables for this unit
 # =======================================
-< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
 < ${TOP}/iocBoot/common/support/ana_sxr.cmd
 
 # =======================================

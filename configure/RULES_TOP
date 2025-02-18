@@ -1,3 +1,18 @@
 #RULES_TOP
 include $(CONFIG)/RULES_TOP
 
+all: mps_configuration boot config
+
+mps_configuration:
+	ln -s $(PHYSICS_TOP)/mps_configuration/current mps_configuration
+
+boot:
+	cp -a mps_configuration/link_node_db/startup/. iocBoot/startup/
+
+config:
+	cp -a mps_configuration/link_node_db/config/. iocBoot/config/
+
+distclean:
+	-rm mps_configuration
+	-rm iocBoot/startup/*
+	-rm iocBoot/config/*

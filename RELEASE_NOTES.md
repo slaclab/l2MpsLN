@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-3-0__: 2025-02-18 jmock
+  * Build against new cpsw and modules for rocky9 host
+  * Update PVs and ioc booting for fixed analog processing
+
 * __l2MpsLN-R5-2-5__: 2025-01-22 jmock
   * Add in I1 LCLS2 BSA PVs so as not to break choice.
 

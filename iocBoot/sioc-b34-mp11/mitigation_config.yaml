@@ -3,3 +3,31 @@
     - MpsLinkNodeCore:
       - MpsMitigationCore:
         - mpsConfig: !<value> 0x2
+
+
+        ## Delay time stamp by 4 clocks
+- AppTop:
+  - AppCore:
+    - MpsAnalogCore:
+      - timingStampDelay: !<value> 4
+- AmcCarrierCore:
+  - AmcCarrierTiming:
+    - EvrV2CoreTriggers:
+      - EvrV2TriggerReg[5]:
+        - Polarity: !<value> 0
+#Channel 0
+- AppTop:
+  - AppCore:
+    - MpsAnalogCore:
+      - MpsAnalogLcls1Reg:
+        - ProcessingSelect[0]: !<value> 1
+        - IntegrationDecay[0]: !<value> 0
+        - IntegrationScaling[0]: !<value> 1
+        - IntegrationDecay[1]: !<value> 0.99446
+        - IntegrationScaling[1]: !<value> 1
+      - MpsAnalogLcls2Reg:
+        - ProcessingSelect[0]: !<value> 1
+        - IntegrationDecay[0]: !<value> 0.999998
+        - IntegrationScaling[0]: !<value> 1
+        - IntegrationDecay[1]: !<value> 0
+        - IntegrationScaling[1]: !<value> 1

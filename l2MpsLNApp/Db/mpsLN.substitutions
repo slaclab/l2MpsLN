@@ -215,17 +215,17 @@ file "RegRO_Analog.template" { pattern
 file "RegisterDoubleIn.template" { pattern
 { R,                        DESC,                                       PINI,   SCAN,           EGU,   PARAM               }
 { ANA_BSA_DATA_12,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C0F           }
-{ ANA_BSA_DATA_13,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C1F           }
-{ ANA_BSA_DATA_14,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B0_C2F           }
-{ ANA_BSA_DATA_15,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C0F           }
-{ ANA_BSA_DATA_16,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C1F           }
-{ ANA_BSA_DATA_17,          "BSA data (ch 12)",                         "YES",  "1 second",     "raw", I0_B1_C2F           }
+{ ANA_BSA_DATA_13,          "BSA data (ch 13)",                         "YES",  "1 second",     "raw", I0_B0_C1F           }
+{ ANA_BSA_DATA_14,          "BSA data (ch 14)",                         "YES",  "1 second",     "raw", I0_B0_C2F           }
+{ ANA_BSA_DATA_15,          "BSA data (ch 15)",                         "YES",  "1 second",     "raw", I0_B1_C0F           }
+{ ANA_BSA_DATA_16,          "BSA data (ch 16)",                         "YES",  "1 second",     "raw", I0_B1_C1F           }
+{ ANA_BSA_DATA_17,          "BSA data (ch 17)",                         "YES",  "1 second",     "raw", I0_B1_C2F           }
 { ANA_BSA_DATA_18,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C0F           }
-{ ANA_BSA_DATA_19,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C1F           }
-{ ANA_BSA_DATA_20,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B0_C2F           }
-{ ANA_BSA_DATA_21,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C0F           }
-{ ANA_BSA_DATA_22,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C1F           }
-{ ANA_BSA_DATA_23,          "BSA data (ch 18)",                         "YES",  "1 second",     "raw", I1_B1_C2F           }
+{ ANA_BSA_DATA_19,          "BSA data (ch 19)",                         "YES",  "1 second",     "raw", I1_B0_C1F           }
+{ ANA_BSA_DATA_20,          "BSA data (ch 20)",                         "YES",  "1 second",     "raw", I1_B0_C2F           }
+{ ANA_BSA_DATA_21,          "BSA data (ch 21)",                         "YES",  "1 second",     "raw", I1_B1_C0F           }
+{ ANA_BSA_DATA_22,          "BSA data (ch 22)",                         "YES",  "1 second",     "raw", I1_B1_C1F           }
+{ ANA_BSA_DATA_23,          "BSA data (ch 23)",                         "YES",  "1 second",     "raw", I1_B1_C2F           }
 }
 
 
@@ -452,6 +452,19 @@ file "RegRW.template" { pattern
 { LC1_ANA_PD_WDT_TRG_3,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_3 }
 { LC1_ANA_PD_WDT_TRG_4,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_4 }
 { LC1_ANA_PD_WDT_TRG_5,     "LCLS1 pedestal windows trig. width",       "1 second","samples",  ANACORE_triggerWidthPedestalL1_5 }
+{ TIME_STAMP_DELAY,         "Time stamp delay",                         "1 second","clocks",   ANACORE_timingStampDelay         }
+{ ANA_GAP_ZERO_0,           "Deadband around 0 in ADC counts, I0 C0",   "1 second","counts",   I0_B0_C0_ZERO                    }
+{ ANA_GAP_ZERO_1,           "Deadband around 0 in ADC counts, I0 C1",   "1 second","counts",   I0_B0_C1_ZERO                    }
+{ ANA_GAP_ZERO_2,           "Deadband around 0 in ADC counts, I0 C2",   "1 second","counts",   I0_B0_C2_ZERO                    }
+{ ANA_GAP_ZERO_3,           "Deadband around 0 in ADC counts, I0 C3",   "1 second","counts",   I0_B1_C0_ZERO                    }
+{ ANA_GAP_ZERO_4,           "Deadband around 0 in ADC counts, I0 C4",   "1 second","counts",   I0_B1_C1_ZERO                    }
+{ ANA_GAP_ZERO_5,           "Deadband around 0 in ADC counts, I0 C5",   "1 second","counts",   I0_B1_C2_ZERO                    }
+{ ANA_GAP_ZERO_6,           "Deadband around 0 in ADC counts, I1 C0",   "1 second","counts",   I1_B0_C0_ZERO                    }
+{ ANA_GAP_ZERO_7,           "Deadband around 0 in ADC counts, I1 C1",   "1 second","counts",   I1_B0_C1_ZERO                    }
+{ ANA_GAP_ZERO_8,           "Deadband around 0 in ADC counts, I1 C2",   "1 second","counts",   I1_B0_C2_ZERO                    }
+{ ANA_GAP_ZERO_9,           "Deadband around 0 in ADC counts, I1 C3",   "1 second","counts",   I1_B1_C0_ZERO                    }
+{ ANA_GAP_ZERO_10,          "Deadband around 0 in ADC counts, I1 C4",   "1 second","counts",   I1_B1_C1_ZERO                    }
+{ ANA_GAP_ZERO_11,          "Deadband around 0 in ADC counts, I1 C5",   "1 second","counts",   I1_B1_C2_ZERO                    }
 }
 
 

@@ -20,7 +20,8 @@ record(fanout, "$(NAME):SET_FACMODE"){
     field(LNK3, "$(NAME):SET_NC_BSA_EN")
     field(LNK4, "$(NAME):SET_SC_BSA_EN")
     field(LNK5, "$(NAME):SET_NC_CORE_EN")
-    field(LNK6, "$(P):LC1_CLRTIMEOUT")
+    field(LNK6, "$(NAME):SET_TIME_STAMP_DELAY")
+    field(LNK7, "$(P):LC1_CLRTIMEOUT")
 }
 record(calcout, "$(NAME):SET_NC_CORE_EN"){
     field(DESC, "Internal")
@@ -69,6 +70,24 @@ record(calcout, "$(NAME):SET_CROSSBAR"){
     field(CALC, "!A ? 0 : 1")
     field(OUT, "$(TPR):TCRB:MODECTRL")
     field(FLNK, "$(TPR):TCRB:MODECTRL")
+}
+record(calcout, "$(NAME):SET_TIME_STAMP_DELAY"){
+    field(DESC, "Time stamp delay is 3 = NC or 4 = SC")
+    field(SCAN, "Passive")
+    field(INPA, "$(NAME):FACMODE")
+    field(INPB, "$(P):TIME_STAMP_DELAY_NC")
+    field(INPC, "$(P):TIME_STAMP_DELAY_SC")
+    field(CALC, "!A ? B : C")
+    field(OUT,  "$(P):TIME_STAMP_DELAY")
+    field(FLNK, "$(P):TIME_STAMP_DELAY")
+}
+record(ao,      "$(P):TIME_STAMP_DELAY_NC"){
+    field(DESC, "NC time stamp delay (expected 3)")
+    field(VAL,  "$(NC_TS_DELAY)")
+}
+record(ao,      "$(P):TIME_STAMP_DELAY_SC"){
+    field(DESC, "SC time stamp delay (expected 4)")
+    field(VAL,  "$(SC_TS_DELAY)")
 }
 record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(PINI, "YES")

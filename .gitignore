@@ -14,3 +14,5 @@ dbd/
 startup/
 cfg/
 restor/
+config/
+mps_configuration

@@ -13,6 +13,15 @@
 # PARAM : The asyn parameter name. It must be defined in the
 #         dictionary file and assigned to a register.
 ##########################################################################
+record(ao,      "$(DEVICE):MPS_SLOPE") {
+    field(DESC, "Slope of channel in EGU/raw")
+    field(EGU,  "$(EGU)")
+    field(PINI, "YES")
+    field(SCAN, "Passive")
+    field(PREC, "3")
+    field(VAL,  "1")
+    info(autosaveFields, "VAL")
+}
 # Buffer PV, to hold all the stream data
 # up to 10e6 points
 record(waveform, "$(DEVICE):$(ATTR)_WF_RAW-BUF")
@@ -23,7 +32,7 @@ record(waveform, "$(DEVICE):$(ATTR)_WF_RAW-BUF")
   field(FTVL,    "SHORT")
   field(SCAN,    "I/O Intr")
   field(INP,     "@asyn($(PORT),5)$(PARAM)")
-  field(FLNK,    "$(DEVICE):$(ATTR)_WF_RAW PP")
+  field(FLNK,    "$(DEVICE):$(ATTR)_X_WF_RAW-BUF PP")
   field(ASG,     "Internal")
 }
 
@@ -50,29 +59,64 @@ record(subArray, "$(DEVICE):$(ATTR)_WF")
   field(MALM,    "1000000")
   field(NELM,    "1024")
   field(INDX,    "0")
-  field(EGU,    "mV")
+  field(EGU,     "$(EGU)")
 }
-
+record(ao, "$(DEVICE):$(ATTR)_WF_START_EGU")
+{
+  field(DESC,    "$(DESC) Subarray start EGU")
+  field(DRVH,    "2857143")
+  field(HOPR,    "2857143")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_START_CALC")
+  info(autosaveFields, "VAL")
+  field(PINI,    "YES")
+}
 # PV to hold the start for the display array
+record(calcout, "$(DEVICE):$(ATTR)_WF_START_CALC")
+{
+  field(DESC,    "$(DESC) Subarray start EGU")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_START")
+  field(OUT,     "$(DEVICE):$(ATTR)_WF_START")
+  field(INPA,    "$(DEVICE):$(ATTR)_WF_START_EGU")
+  field(INPB,    "$(DEVICE):AMC_CLK_FREQ CP")
+  field(CALC,    "FLOOR((2*A*B)/1000)")
+}
 record(ao, "$(DEVICE):$(ATTR)_WF_START") 
 {
   field(DESC,    "$(DESC) Subarray start")
   field(DRVH,    "1000000")
   field(HOPR,    "1000000")
-  field(PINI,    "YES")
+  field(PINI,    "NO")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_SEQ")
-  info(autosaveFields, "VAL")
+  field(DOL,     "$(DEVICE):$(ATTR)_WF_START_CALC")
+  field(OMSL,    "closed_loop")
 }
-
+record(ao, "$(DEVICE):$(ATTR)_WF_NELM_EGU")
+{
+  field(DESC,    "$(DESC) Subarray start EGU")
+  field(DRVH,    "2857143")
+  field(HOPR,    "2857143")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_NELM_CALC")
+  info(autosaveFields, "VAL")
+  field(PINI,    "YES")
+}
+# PV to hold the start for the display array
+record(calcout, "$(DEVICE):$(ATTR)_WF_NELM_CALC")
+{
+  field(DESC,    "$(DESC) Subarray start EGU")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_NELM")
+  field(OUT,     "$(DEVICE):$(ATTR)_WF_NELM")
+  field(INPA,    "$(DEVICE):$(ATTR)_WF_NELM_EGU")
+  field(INPB,    "$(DEVICE):AMC_CLK_FREQ CP")
+  field(CALC,    "FLOOR((2*A*B)/1000)")
+}
 # PV to hold the length for the display array
 record(ao, "$(DEVICE):$(ATTR)_WF_NELM") 
 {
   field(DESC,    "$(DESC) Subarray length")
-  field(DRVH,    "1000000")
-  field(HOPR,    "1000000")
-  field(PINI,    "YES")
+  field(PINI,    "NO")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_SEQ")
-  info(autosaveFields, "VAL")
+  field(DOL,     "$(DEVICE):$(ATTR)_WF_NELM_CALC")
+  field(OMSL,    "closed_loop")
 }
 
 # PV to send data start and nelm to raw and wf PVs
@@ -82,28 +126,41 @@ record(seq, "$(DEVICE):$(ATTR)_WF_SEQ")
   field(DOL1, "$(DEVICE):$(ATTR)_WF_START")
   field(LNK1, "$(DEVICE):$(ATTR)_WF_RAW.INDX PP")
 
-  field(DOL2, "$(DEVICE):$(ATTR)_WF_START")
-  field(LNK2, "$(DEVICE):$(ATTR)_WF.INDX PP")
+  field(DOL2, "$(DEVICE):$(ATTR)_WF_NELM")
+  field(LNK2, "$(DEVICE):$(ATTR)_WF_RAW.NELM PP")
 
   field(DOL3, "$(DEVICE):$(ATTR)_WF_NELM")
-  field(LNK3, "$(DEVICE):$(ATTR)_WF_RAW.NELM PP")
+  field(LNK3, "$(DEVICE):$(ATTR)_WF.NELM PP")
 
-  field(DOL4, "$(DEVICE):$(ATTR)_WF_NELM")
-  field(LNK4, "$(DEVICE):$(ATTR)_WF.NELM PP")
+  field(DOL4, "$(DEVICE):$(ATTR)_WF_START")
+  field(LNK4, "$(DEVICE):$(ATTR)_X_WF.INDX PP")
+
+  field(DOL5, "$(DEVICE):$(ATTR)_WF_NELM")
+  field(LNK5, "$(DEVICE):$(ATTR)_X_WF.NELM PP")
 
   field(ASG,  "Internal")
 }
 
+record(calcout, "$(DEVICE):$(ATTR)_SLOPE_WF_CALC") 
+{
+  field(DESC,    "$(DESC) WF slope")
+  field(PREC,    "3")
+  field(EGU,     "$(EGU)/raw")
+  field(FLNK,    "$(DEVICE):$(ATTR)_SLOPE_WF")
+  field(CALC,    "A*.5")
+  field(INPA,    "$(DEVICE):MPS_SLOPE CPP")
+}
 
 # PV to hold the slope for the display array (raw to egu conversion)
 record(ao, "$(DEVICE):$(ATTR)_SLOPE_WF") 
 {
   field(DESC,    "$(DESC) WF slope")
-  field(PREC,    "2")
-  field(EGU,    "mV/raw")
+  field(PREC,    "3")
+  field(EGU,     "$(EGU)/raw")
   field(PINI,    "YES")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
-  info(autosaveFields, "VAL")
+  field(OMSL,    "closed_loop")
+  field(DOL,     "$(DEVICE):MPS_SLOPE_WF_CALC")
 }
 
 
@@ -113,8 +170,9 @@ record(ao, "$(DEVICE):$(ATTR)_OFFSET_WF")
   field(DESC,    "$(DESC) WF offset in raw")
   field(PINI,    "YES")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
-  field(EGU,    "raw")
-  info(autosaveFields, "VAL")
+  field(EGU,     "raw")
+  field(OMSL,    "closed_loop")
+  field(DOL,     "$(DEVICE):FW_OFFSET")
 }
 
 # PV to enable debug mode for gain to voltage subroutine 
@@ -141,4 +199,36 @@ record (aSub, "$(DEVICE):$(ATTR)_WF_R2E")
   field(FLNK, "$(DEVICE):$(ATTR)_WF")
   field(NOVA, "1000000")
   field(FTVA, "DOUBLE")
+}
+# PV to enable debug mode for gain to voltage subroutine 
+record(bo, "$(DEVICE):$(ATTR)_X_WF_DEBUG") {
+  field(DESC, "Subroutine Debug")
+  field(ONAM, "DEBUG ON")
+  field(ZNAM, "DEBUG OFF")
+  field(VAL,  "0")
+}
+# Create a waveform with the sampling time. This will be the X axis of the
+# waveform.
+record (aSub, "$(DEVICE):$(ATTR)_X_WF_RAW-BUF") {
+  field(SNAM, "calcTimeArray")
+  field(FTA, "LONG")
+  field(FTVA, "DOUBLE")
+  field(NOVA, "1000000")
+  field(INPA, "$(DEVICE):AMC_CLK_FREQ CP")
+  field(INPB, "$(DEVICE):$(ATTR)_X_WF_DEBUG PP")
+  field(OUTA, "$(DEVICE):$(ATTR)_X_WF")
+  field(FLNK, "$(DEVICE):$(ATTR)_X_WF PP")
+}
+# Interface PV, to display only the necessary data
+# range from the data received in the buffer
+record(subArray, "$(DEVICE):$(ATTR)_X_WF") 
+{
+  field(DESC,    "$(DESC) X Subarray")
+  field(INP,     "$(DEVICE):$(ATTR)_X_WF_RAW-BUF.VALA")
+  field(FTVL,    "DOUBLE")
+  field(MALM,    "1000000")
+  field(NELM,    "1024")
+  field(INDX,    "0")
+  field(FLNK,    "$(DEVICE):$(ATTR)_WF_RAW PP")
+  field(EGU,     "ns")
 }

@@ -10,6 +10,7 @@
 # =======================================
 epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")
 epicsEnvSet("TYPE","LN")
+epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables
@@ -24,7 +25,6 @@ epicsEnvSet("UND","_UND")
 # =======================================
 # Load specific environment variables for this unit
 # =======================================
-< ${TOP}/iocBoot/${IOC}/${IOC}.cmd
 < ${TOP}/iocBoot/common/support/ana_hxr.cmd
 
 # =======================================

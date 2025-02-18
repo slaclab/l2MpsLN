@@ -19,7 +19,6 @@ epicsEnvSet("TYPE","LN")
 # =======================================
 # Set this IOC up as an Undulator BLM type
 # =======================================
-epicsEnvSet("UND","_UND")
 epicsEnvSet("BEAMPATH","H")
 epicsEnvSet("EVR_EC","137")
 epicsEnvSet("TPR_MASK","8")
