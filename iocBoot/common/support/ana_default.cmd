@@ -31,11 +31,13 @@ epicsEnvSet("CH5_EGU","")
 epicsEnvSet("CH5_GCH","")
 epicsEnvSet("UND","")
 epicsEnvSet("BEAMPATH","L")
-epicsEnvSet("TPR_MASK","62")
+epicsEnvSet("SEQNUM","2")
+epicsEnvSet("SEQBIT","5")
 epicsEnvSet("EVR_EC","140")
 epicsEnvSet("NC_TS_DELAY","3")
 epicsEnvSet("SC_TS_DELAY","4")
 epicsEnvSet("CU","SC")
+epicsEnvSet("MODE_INPV", "1")
 
 # ===========================================
 #               DBD LOADING
