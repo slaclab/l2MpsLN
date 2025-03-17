@@ -7,11 +7,19 @@
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0.99446
         - IntegrationScaling[1]: !<value> 1
+        - triggerDelayPeak[0]: !<value> 0
+        - triggerWidthPeak[0]: !<value> 18
+        - triggerDelayPedestal[0]: !<value> 123
+        - triggerWidthPedestal[0]: !<value> 0
       - MpsAnalogLcls2Reg:
         - IntegrationDecay[0]: !<value> 0.999998
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0
         - IntegrationScaling[1]: !<value> 1
+        - triggerDelayPeak[0]: !<value> 0
+        - triggerWidthPeak[0]: !<value> 18
+        - triggerDelayPedestal[0]: !<value> 123
+        - triggerWidthPedestal[0]: !<value> 0
 #Channel 1
 - AppTop:
   - AppCore:
