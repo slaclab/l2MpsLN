@@ -8,14 +8,13 @@
 # =======================================
 # Define mode management and type
 # =======================================
-epicsEnvSet("MODE_INPV", "0")
 epicsEnvSet("TYPE","LN")
-epicsEnvSet("CU","CU")
 
 # =======================================
 # Initialize default environment variables
 # =======================================
 < ${TOP}/iocBoot/common/support/ana_default.cmd
+epicsEnvSet("MODE_INPV", "0")
 
 # =======================================
 # Set this IOC up as an Undulator BLM type

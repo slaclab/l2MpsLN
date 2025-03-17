@@ -9,7 +9,6 @@
 # Define mode management and type
 # =======================================
 epicsEnvSet("TYPE","LN")
-epicsEnvSet("MODE_INPV", "1")
 
 # =======================================
 # Initialize default environment variables
