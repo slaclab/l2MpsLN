@@ -209,8 +209,6 @@ cd ${TOP}
 # Note: the last arg cannot be set to 0
 create_monitor_set("info_settings.req" , 30 )
 create_monitor_set("info_positions.req", 30 )
-create_monitor_set("manual_settings.req" , 30 )
-$(IS_DN="")create_monitor_set("ana_units.req" , 30, "P=${L2MPS_PREFIX}" )
 
 #////////////////////////////////////////#
 #Run script to generate archiver files   #
@@ -232,10 +230,10 @@ $(IS_DN="")dbpf ${L2MPS_PREFIX}:DM1_HW_ARM 1
 dbpf ${TPR}:RXLNKSTATUS_RESET 1
 dbpf ${L2MPS_PREFIX}:RESET_ERR.PROC 1
 dbpf ${L2MPS_PREFIX}:LC1_CLRTIMEOUT.PROC 1
-dbpf ${TPR}:CH15_DESTMASK ${TPR_MASK}
-dbpf ${TPR}:CH15_RATEMODE 0
-dbpf ${TPR}:CH15_DESTMODE 0
-dbpf ${TPR}:CH15_FIXEDRATE 6
+dbpf ${TPR}:CH15_RATEMODE 2
+dbpf ${TPR}:CH15_DESTMODE 2
+dbpf ${TPR}:CH15_SEQNUM ${SEQNUM}
+dbpf ${TPR}:CH15_SEQBIT ${SEQBIT}
 dbpf ${TPR}:CH15_SYS2_TCTL 1
 dbpf ${TPR}:CH15_EVCODE ${EVR_EC}
 $(IS_NC=#)dbpf ${TPR}:CH15_SYS0_TCTL 1
