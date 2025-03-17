@@ -73,12 +73,14 @@ record(calcout, "$(NAME):SET_TIME_STAMP_DELAY"){
     field(FLNK, "$(P):TIME_STAMP_DELAY")
 }
 record(ao,      "$(P):TIME_STAMP_DELAY_NC"){
-    field(DESC, "NC time stamp delay (expected 3)")
+    field(DESC, "NC time stamp delay (expected $(NC_TS_DELAY))")
     field(VAL,  "$(NC_TS_DELAY)")
+    info(autosaveFields, "VAL")
 }
 record(ao,      "$(P):TIME_STAMP_DELAY_SC"){
-    field(DESC, "SC time stamp delay (expected 4)")
+    field(DESC, "SC time stamp delay (expected $(SC_TS_DELAY))")
     field(VAL,  "$(SC_TS_DELAY)")
+    info(autosaveFields, "VAL")
 }
 record(mbbo, "$(TPR):TCRB:MODECTRL") {
   field(PINI, "YES")
