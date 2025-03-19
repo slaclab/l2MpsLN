@@ -3,6 +3,16 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-4-0__: 2025-03-19 jmock
+  * Refactor ioc boot files to simplify changes
+  * Update channel 15 timing settings to look at bits instead of destinations
+  * Deprecate ana_units.sav
+  * Restore I1 scalar (not float) BSA PVs
+  * Change scan rate of asyn analog PV to 0.1 s
+  * Add time stamp delay to autosave
+  * Add cblm-specific time window properties to yaml files
+  * Add in default analog time windows since avg processing is used
+
 * __l2MpsLN-R5-3-1__: 2025-02-19 jmock
   * Pare down LCLS2 BSA list to I0 scalar only
 
