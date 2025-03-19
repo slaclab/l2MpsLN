@@ -2,5 +2,8 @@
 # Set up analog processing PVs
 # =======================================
 epicsEnvSet("BEAMPATH","H")
-epicsEnvSet("EVR_EC","137")
-epicsEnvSet("TPR_MASK","8")
+epicsEnvSet("EVR_EC","119")
+epicsEnvSet("SEQNUM","1")
+epicsEnvSet("SEQBIT","9")
+epicsEnvSet("CU","CU")
+epicsEnvSet("MODE_INPV", "MPS:UNDH:1:FACMODE CPP MSI")

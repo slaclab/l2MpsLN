@@ -28,21 +28,21 @@ file bsa.db { pattern
 { DEV,   SECN,             TPR,    PORT,    BSAKEY              }
 {  $(P), I0_$(ATTR),       $(TPR), bsaPort, I0_B$(BAY)_C$(INP)  }
 #{  $(P), I0_$(ATTR)_FLOAT, $(TPR), bsaPort, I0_B$(BAY)_C$(INP)F }
-#{  $(P), I1_$(ATTR),       $(TPR), bsaPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR),       $(TPR), bsaPort, I1_B$(BAY)_C$(INP)  }
 #{  $(P), I1_$(ATTR)_FLOAT, $(TPR), bsaPort, I1_B$(BAY)_C$(INP)F }  
 }
 file bsss.db { pattern
 { DEV,   SECN,             EGU,    PORT,     BSAKEY              }
 {  $(P), I0_$(ATTR),       $(EGU), bsssPort, I0_B$(BAY)_C$(INP)  }
 #{  $(P), I0_$(ATTR)_FLOAT, $(EGU), bsssPort, I0_B$(BAY)_C$(INP)F }
-#{  $(P), I1_$(ATTR),       $(EGU), bsssPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR),       $(EGU), bsssPort, I1_B$(BAY)_C$(INP)  }
 #{  $(P), I1_$(ATTR)_FLOAT, $(EGU), bsssPort, I1_B$(BAY)_C$(INP)F }  
 }
 file bsas.db { pattern
 { DEV,   SECN,              PORT,     BSAKEY              }
 {  $(P), I0_$(ATTR),        bsasPort, I0_B$(BAY)_C$(INP)  }
 #{  $(P), I0_$(ATTR)_FLOAT,  bsasPort, I0_B$(BAY)_C$(INP)F }
-#{  $(P), I1_$(ATTR),        bsasPort, I1_B$(BAY)_C$(INP)  }
+{  $(P), I1_$(ATTR),        bsasPort, I1_B$(BAY)_C$(INP)  }
 #{  $(P), I1_$(ATTR)_FLOAT,  bsasPort, I1_B$(BAY)_C$(INP)F }  
 }
 file slope.template { pattern

@@ -28,7 +28,7 @@ record(ai,  "$(P):$(R)_ASYN") {
     field(ESLO, "$(ESLO=1)")
     field(EOFF, "$(EOFF=0)")
     field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
-    field(SCAN, "1 second")
+    field(SCAN, ".1 second")
 }
 record(ai,  "$(P):$(R)_RAW") {
     field(DTYP, "asynInt32")

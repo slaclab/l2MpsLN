@@ -58,5 +58,3 @@ $(CH5_MPS=#)dbLoadRecords("db/amc_ai${UND}.db","P=${CH5_P},ATTR=${CH5_R},EGU=${C
 $(CH5_L1BSA=#)dbLoadRecords("db/l1_bsa.db","P=${CH5_P},ATTR=${CH5_R},EGU=${CH5_EGU},BAY=1,INP=2")
 $(CH5_WF=#)dbLoadRecords("db/mps_wf.db","P=${CH5_P},BAY=0,INP=0,GCH=${CH5_GCH},EGU=${CH5_EGU}")
 
-set_pass0_restoreFile("ana_units.sav")
-set_pass1_restoreFile("ana_units.sav")
