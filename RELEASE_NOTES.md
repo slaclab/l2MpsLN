@@ -3,6 +3,9 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-4-1__: 2025-03-19 jmock
+  * Fix MPS_SLOPE naming collision between FAST and AMC inputs
+
 * __l2MpsLN-R5-4-0__: 2025-03-19 jmock
   * Refactor ioc boot files to simplify changes
   * Update channel 15 timing settings to look at bits instead of destinations

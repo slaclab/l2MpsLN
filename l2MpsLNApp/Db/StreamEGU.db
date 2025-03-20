@@ -13,7 +13,7 @@
 # PARAM : The asyn parameter name. It must be defined in the
 #         dictionary file and assigned to a register.
 ##########################################################################
-record(ao,      "$(DEVICE):MPS_SLOPE") {
+record(ao,      "$(DEVICE):$(ATTR)_SLOPE") {
     field(DESC, "Slope of channel in EGU/raw")
     field(EGU,  "$(EGU)")
     field(PINI, "YES")
@@ -148,7 +148,7 @@ record(calcout, "$(DEVICE):$(ATTR)_SLOPE_WF_CALC")
   field(EGU,     "$(EGU)/raw")
   field(FLNK,    "$(DEVICE):$(ATTR)_SLOPE_WF")
   field(CALC,    "A*.5")
-  field(INPA,    "$(DEVICE):MPS_SLOPE CPP")
+  field(INPA,    "$(DEVICE):$(ATTR)_SLOPE CPP")
 }
 
 # PV to hold the slope for the display array (raw to egu conversion)
@@ -160,7 +160,7 @@ record(ao, "$(DEVICE):$(ATTR)_SLOPE_WF")
   field(PINI,    "YES")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
   field(OMSL,    "closed_loop")
-  field(DOL,     "$(DEVICE):MPS_SLOPE_WF_CALC")
+  field(DOL,     "$(DEVICE):$(ATTR)_SLOPE_WF_CALC")
 }
 
 
