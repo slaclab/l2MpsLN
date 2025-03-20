@@ -3,6 +3,10 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-4-2__: 2025-03-20 jmock
+  * Change AutoRearm and AMC_CLK_FREQ PV names to avoid duplicates
+  * Change SC BSSS PV that I(0/1)_(ATTR)_ uses to L since that is the only one that doesn't seem to care about beam presence
+
 * __l2MpsLN-R5-4-1__: 2025-03-19 jmock
   * Fix MPS_SLOPE naming collision between FAST and AMC inputs
 
