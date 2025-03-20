@@ -48,7 +48,7 @@ record(calcout, "$(P):$(R)_CALC") {
     field(INPB, "$(IOC):FACMODE_RBV")
     field(INPC, "$(P):$(R)_ASYN")
     field(INPD, "$(P):$(R)$(CU)$(BSA)TH")
-    field(INPE, "$(P):$(R)SC$(BSA)TH")
+    field(INPE, "$(P):$(R)SCLTH")
     field(OUT,  "$(P):$(R)")
     field(FLNK, "$(P):$(R)")
     field(SCAN, ".1 second")

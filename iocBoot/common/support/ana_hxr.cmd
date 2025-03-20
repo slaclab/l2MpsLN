@@ -1,7 +1,7 @@
 # =======================================
 # Set up analog processing PVs
 # =======================================
-epicsEnvSet("BEAMPATH","L")
+epicsEnvSet("BEAMPATH","H")
 epicsEnvSet("EVR_EC","119")
 epicsEnvSet("SEQNUM","2")
 epicsEnvSet("SEQBIT","5")
