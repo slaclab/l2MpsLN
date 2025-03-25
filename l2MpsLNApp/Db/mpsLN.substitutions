@@ -619,3 +619,9 @@ file config_version.template { pattern
 { MPS_CONFIG_VERSION }
 { $(VER)             }
 }
+
+#======================================
+# Mitigation timestamp alarm
+#======================================
+#file "mitigation.template" { pattern
+#{ 

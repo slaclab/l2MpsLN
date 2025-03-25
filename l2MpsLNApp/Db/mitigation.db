@@ -1,0 +1,18 @@
+record(compress, "$(P):MITMSG:WATCHER") {
+    field(INP, "$(P):MITMSG_TMSTMP.VAL CP")
+    field(NSAM, "1000")
+    field(ALG, "Circular Buffer")
+    field(FLNK, "$(P):MITMSG:ALARM")
+}
+record(calcout, "$(P):MITMSG:ALARM") {
+    field(INPA, "$(P):MITMSG:WATCHER NPP")
+    field(CALC, "A[0]==A[999]")
+    field(HIHI, "1")
+    field(OUT, "$(P):MITMSG:ALARM_RBV PP")
+}
+record(bo, "$(P):MITMSG:ALARM_RBV) {
+    field(ZNAM, "GOOD")
+    field(ONAM, "BAD")
+    field(SCAN, "Passive")
+    field(PINI, "NO")
+}
