@@ -6,7 +6,7 @@ record(compress, "$(P):MITMSG:WATCHER") {
 }
 record(calcout, "$(P):MITMSG:ALARM") {
     field(INPA, "$(P):MITMSG:WATCHER NPP")
-    field(CALC, "A[0]==A[999]")
+    field(CALC, "A[0]=A[999]")
     field(HIHI, "1")
     field(OUT, "$(P):MITMSG:ALARM_RBV PP")
 }

@@ -32,7 +32,8 @@ epicsEnvSet("TPR_MASK","8")
 # Load common initialization file
 # =======================================
 < ${TOP}/iocBoot/common/start.cmd
-
+dbLoadRecords("db/mitigation.db", "P=${L2MPS_PREFIX}")
+dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 # =======================================
 # Load undulator BLM settings
 # =======================================
