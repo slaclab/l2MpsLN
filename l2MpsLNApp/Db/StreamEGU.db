@@ -13,7 +13,7 @@
 # PARAM : The asyn parameter name. It must be defined in the
 #         dictionary file and assigned to a register.
 ##########################################################################
-record(ao,      "$(DEVICE):MPS_SLOPE") {
+record(ao,      "$(DEVICE):$(ATTR)_SLOPE") {
     field(DESC, "Slope of channel in EGU/raw")
     field(EGU,  "$(EGU)")
     field(PINI, "YES")
@@ -77,7 +77,7 @@ record(calcout, "$(DEVICE):$(ATTR)_WF_START_CALC")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_START")
   field(OUT,     "$(DEVICE):$(ATTR)_WF_START")
   field(INPA,    "$(DEVICE):$(ATTR)_WF_START_EGU")
-  field(INPB,    "$(DEVICE):AMC_CLK_FREQ CP")
+  field(INPB,    "$(DEVICE):$(ATTR)_CLK_FREQ CP")
   field(CALC,    "FLOOR((2*A*B)/1000)")
 }
 record(ao, "$(DEVICE):$(ATTR)_WF_START") 
@@ -106,7 +106,7 @@ record(calcout, "$(DEVICE):$(ATTR)_WF_NELM_CALC")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_NELM")
   field(OUT,     "$(DEVICE):$(ATTR)_WF_NELM")
   field(INPA,    "$(DEVICE):$(ATTR)_WF_NELM_EGU")
-  field(INPB,    "$(DEVICE):AMC_CLK_FREQ CP")
+  field(INPB,    "$(DEVICE):$(ATTR)_CLK_FREQ CP")
   field(CALC,    "FLOOR((2*A*B)/1000)")
 }
 # PV to hold the length for the display array
@@ -148,7 +148,7 @@ record(calcout, "$(DEVICE):$(ATTR)_SLOPE_WF_CALC")
   field(EGU,     "$(EGU)/raw")
   field(FLNK,    "$(DEVICE):$(ATTR)_SLOPE_WF")
   field(CALC,    "A*.5")
-  field(INPA,    "$(DEVICE):MPS_SLOPE CPP")
+  field(INPA,    "$(DEVICE):$(ATTR)_SLOPE CPP")
 }
 
 # PV to hold the slope for the display array (raw to egu conversion)
@@ -160,7 +160,7 @@ record(ao, "$(DEVICE):$(ATTR)_SLOPE_WF")
   field(PINI,    "YES")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_R2E")
   field(OMSL,    "closed_loop")
-  field(DOL,     "$(DEVICE):MPS_SLOPE_WF_CALC")
+  field(DOL,     "$(DEVICE):$(ATTR)_SLOPE_WF_CALC")
 }
 
 
@@ -214,7 +214,7 @@ record (aSub, "$(DEVICE):$(ATTR)_X_WF_RAW-BUF") {
   field(FTA, "LONG")
   field(FTVA, "DOUBLE")
   field(NOVA, "1000000")
-  field(INPA, "$(DEVICE):AMC_CLK_FREQ CP")
+  field(INPA, "$(DEVICE):$(ATTR)_CLK_FREQ CP")
   field(INPB, "$(DEVICE):$(ATTR)_X_WF_DEBUG PP")
   field(OUTA, "$(DEVICE):$(ATTR)_X_WF")
   field(FLNK, "$(DEVICE):$(ATTR)_X_WF PP")

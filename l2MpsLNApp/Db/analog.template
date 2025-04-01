@@ -28,7 +28,7 @@ record(ai,  "$(P):$(R)_ASYN") {
     field(ESLO, "$(ESLO=1)")
     field(EOFF, "$(EOFF=0)")
     field(INP,  "@asyn($(PORT),$(ADDR=0))$(PARAM)")
-    field(SCAN, "1 second")
+    field(SCAN, ".1 second")
 }
 record(ai,  "$(P):$(R)_RAW") {
     field(DTYP, "asynInt32")
@@ -48,7 +48,7 @@ record(calcout, "$(P):$(R)_CALC") {
     field(INPB, "$(IOC):FACMODE_RBV")
     field(INPC, "$(P):$(R)_ASYN")
     field(INPD, "$(P):$(R)$(CU)$(BSA)TH")
-    field(INPE, "$(P):$(R)SC$(BSA)TH")
+    field(INPE, "$(P):$(R)SCLTH")
     field(OUT,  "$(P):$(R)")
     field(FLNK, "$(P):$(R)")
     field(SCAN, ".1 second")

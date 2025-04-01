@@ -58,3 +58,7 @@ file StreamEGU.db { pattern
 { DEVICE, ATTR,  DESC,                      PORT,            PARAM                      }
 { $(P),   MPS,   "(Bay $(BAY), ch $(INP))", YCPSWASYN_PORT,  Stream_B$(BAY)_C$(INP):16  }
 }
+file "RegRO_Analog.template" { pattern
+{ R,            DESC,                  PINI,   SCAN,       EGU,   LINR,     EGUL, EGUF,        PREC, PORT,           PARAM                    }
+{ MPS_CLK_FREQ, "AMC Clock frequency", "YES",  "1 second", "MHz", "LINEAR", "0",  "0.065535",  2,    YCPSWASYN_PORT, AMCADC_AmcClkFreq_$(BAY) }
+}

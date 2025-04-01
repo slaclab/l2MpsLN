@@ -3,6 +3,26 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
+* __l2MpsLN-R5-4-3__: 2025-03-20 jmock
+  * Fix typo in ATTR input
+
+* __l2MpsLN-R5-4-2__: 2025-03-20 jmock
+  * Change AutoRearm and AMC_CLK_FREQ PV names to avoid duplicates
+  * Change SC BSSS PV that I(0/1)_(ATTR)_ uses to L since that is the only one that doesn't seem to care about beam presence
+
+* __l2MpsLN-R5-4-1__: 2025-03-19 jmock
+  * Fix MPS_SLOPE naming collision between FAST and AMC inputs
+
+* __l2MpsLN-R5-4-0__: 2025-03-19 jmock
+  * Refactor ioc boot files to simplify changes
+  * Update channel 15 timing settings to look at bits instead of destinations
+  * Deprecate ana_units.sav
+  * Restore I1 scalar (not float) BSA PVs
+  * Change scan rate of asyn analog PV to 0.1 s
+  * Add time stamp delay to autosave
+  * Add cblm-specific time window properties to yaml files
+  * Add in default analog time windows since avg processing is used
+
 * __l2MpsLN-R5-3-1__: 2025-02-19 jmock
   * Pare down LCLS2 BSA list to I0 scalar only
 

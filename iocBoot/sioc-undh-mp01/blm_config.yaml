@@ -1,4 +1,4 @@
-#Channel 0
+#Channel 0 CBLM:UNDH:2375
 - AppTop:
   - AppCore:
     - MpsAnalogCore:
@@ -7,12 +7,20 @@
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0.99446
         - IntegrationScaling[1]: !<value> 1
+        - triggerDelayPeak[0]: !<value> 1684
+        - triggerWidthPeak[0]: !<value> 88
+        - triggerDelayPedestal[0]: !<value> 61390
+        - triggerWidthPedestal[0]: !<value> 175
       - MpsAnalogLcls2Reg:
         - IntegrationDecay[0]: !<value> 0.999998
         - IntegrationScaling[0]: !<value> 1
         - IntegrationDecay[1]: !<value> 0
         - IntegrationScaling[1]: !<value> 1
-#Channel 1
+        - triggerDelayPeak[0]: !<value> 21
+        - triggerWidthPeak[0]: !<value> 18
+        - triggerDelayPedestal[0]: !<value> 123
+        - triggerWidthPedestal[0]: !<value> 18
+#Channel 1 CBLM:UNDH:2475
 - AppTop:
   - AppCore:
     - MpsAnalogCore:
@@ -21,12 +29,20 @@
         - IntegrationScaling[2]: !<value> 1
         - IntegrationDecay[3]: !<value> 0.99446
         - IntegrationScaling[3]: !<value> 1
+        - triggerDelayPeak[1]: !<value> 1684
+        - triggerWidthPeak[1]: !<value> 88
+        - triggerDelayPedestal[1]: !<value> 61390
+        - triggerWidthPedestal[1]: !<value> 175
       - MpsAnalogLcls2Reg:
         - IntegrationDecay[2]: !<value> 0.999998
         - IntegrationScaling[2]: !<value> 1
         - IntegrationDecay[3]: !<value> 0
         - IntegrationScaling[3]: !<value> 1
-#Channel 2
+        - triggerDelayPeak[1]: !<value> 20
+        - triggerWidthPeak[1]: !<value> 18
+        - triggerDelayPedestal[1]: !<value> 123
+        - triggerWidthPedestal[1]: !<value> 18
+#Channel 2 CBLM:UNDH:2575
 - AppTop:
   - AppCore:
     - MpsAnalogCore:
@@ -35,12 +51,20 @@
         - IntegrationScaling[4]: !<value> 1
         - IntegrationDecay[5]: !<value> 0.99446
         - IntegrationScaling[5]: !<value> 1
+        - triggerDelayPeak[2]: !<value> 1695
+        - triggerWidthPeak[2]: !<value> 88
+        - triggerDelayPedestal[2]: !<value> 61390
+        - triggerWidthPedestal[2]: !<value> 175
       - MpsAnalogLcls2Reg:
         - IntegrationDecay[4]: !<value> 0.999998
         - IntegrationScaling[4]: !<value> 1
         - IntegrationDecay[5]: !<value> 0
         - IntegrationScaling[5]: !<value> 1
-#Channel 3
+        - triggerDelayPeak[2]: !<value> 35
+        - triggerWidthPeak[2]: !<value> 18
+        - triggerDelayPedestal[2]: !<value> 123
+        - triggerWidthPedestal[2]: !<value> 18
+#Channel 3 CBLM:UNDH:2675
 - AppTop:
   - AppCore:
     - MpsAnalogCore:
@@ -49,9 +73,17 @@
         - IntegrationScaling[6]: !<value> 1
         - IntegrationDecay[7]: !<value> 0.99446
         - IntegrationScaling[7]: !<value> 1
+        - triggerDelayPeak[3]: !<value> 1708
+        - triggerWidthPeak[3]: !<value> 88
+        - triggerDelayPedestal[3]: !<value> 61390
+        - triggerWidthPedestal[3]: !<value> 175
       - MpsAnalogLcls2Reg:
         - IntegrationDecay[6]: !<value> 0.999998
         - IntegrationScaling[6]: !<value> 1
         - IntegrationDecay[7]: !<value> 0
         - IntegrationScaling[7]: !<value> 1
+        - triggerDelayPeak[3]: !<value> 33
+        - triggerWidthPeak[3]: !<value> 18
+        - triggerDelayPedestal[3]: !<value> 123
+        - triggerWidthPedestal[3]: !<value> 18
 
