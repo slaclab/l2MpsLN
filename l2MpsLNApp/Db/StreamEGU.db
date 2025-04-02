@@ -69,6 +69,7 @@ record(ao, "$(DEVICE):$(ATTR)_WF_START_EGU")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_START_CALC")
   info(autosaveFields, "VAL")
   field(PINI,    "YES")
+  field(EGU,     "ns")
 }
 # PV to hold the start for the display array
 record(calcout, "$(DEVICE):$(ATTR)_WF_START_CALC")
@@ -98,6 +99,7 @@ record(ao, "$(DEVICE):$(ATTR)_WF_NELM_EGU")
   field(FLNK,    "$(DEVICE):$(ATTR)_WF_NELM_CALC")
   info(autosaveFields, "VAL")
   field(PINI,    "YES")
+  field(EGU,     "ns")
 }
 # PV to hold the start for the display array
 record(calcout, "$(DEVICE):$(ATTR)_WF_NELM_CALC")
