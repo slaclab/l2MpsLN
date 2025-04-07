@@ -1,18 +1,33 @@
 record(compress, "$(P):MITMSG:WATCHER") {
     field(INP, "$(P):MITMSG_TMSTMP.VAL CP")
-    field(NSAM, "1000")
+    field(NSAM, "10")
+    field(SCAN, "1 second")
     field(ALG, "Circular Buffer")
     field(FLNK, "$(P):MITMSG:ALARM")
 }
+record(compress, "$(P):MITMSG:WATCHER_MIN"){
+    field(INP, "$(P):MITMSG:WATCHER NPP MS")
+    field(ALG, "N to 1 High Value")
+    field(N, "10")
+    field(FLNK, "$(P):MITMSG:WATCHER_MAX")
+}
+record(compress, "$(P):MITMSG:WATCHER_MAX"){
+    field(INP, "$(P):MITMSG:WATCHER NPP MS")
+    field(ALG, "N to 1 Low Value")
+    field(N, "10")
+    field(FLNK, "$(P):MITMSG:ALARM")
+}
 record(calcout, "$(P):MITMSG:ALARM") {
-    field(INPA, "$(P):MITMSG:WATCHER NPP")
-    field(CALC, "A[0]=A[999]")
+    field(INPA, "$(P):MITMSG:WATCHER_MAX.VAL")
+    field(INPB, "$(P):MITMSG:WATCHER_MIN.VAL")
+    field(INPC, "$(P):MITMSG:WATCHER.SEVR")
+    field(CALC, "(C=3)?0:((A=B)?0:1)")
     field(HIHI, "1")
     field(OUT, "$(P):MITMSG:ALARM_RBV PP")
 }
 record(bo, "$(P):MITMSG:ALARM_RBV) {
-    field(ZNAM, "GOOD")
-    field(ONAM, "BAD")
+    field(ZNAM, "BAD")
+    field(ONAM, "GOOD")
     field(SCAN, "Passive")
     field(PINI, "NO")
 }
