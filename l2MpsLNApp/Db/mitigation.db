@@ -22,7 +22,6 @@ record(calcout, "$(P):MITMSG:ALARM") {
     field(INPB, "$(P):MITMSG:WATCHER_MIN.VAL")
     field(INPC, "$(P):MITMSG:WATCHER.SEVR")
     field(CALC, "(C=3)?0:((A=B)?0:1)")
-    field(HIHI, "1")
     field(OUT, "$(P):MITMSG:ALARM_RBV PP")
 }
 record(bo, "$(P):MITMSG:ALARM_RBV) {
@@ -30,4 +29,6 @@ record(bo, "$(P):MITMSG:ALARM_RBV) {
     field(ONAM, "GOOD")
     field(SCAN, "Passive")
     field(PINI, "NO")
+    field(ZSV, "NO_ALARM")
+    field(OSV, "MAJOR")
 }
