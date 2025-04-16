@@ -14,7 +14,7 @@ epicsEnvSet("TYPE","LN")
 # Initialize default environment variables
 # =======================================
 < ${TOP}/iocBoot/common/support/ana_default.cmd
-
+epicsEnvSet("CARED_FOR", "1")
 # =======================================
 # Load common initialization file
 # =======================================
