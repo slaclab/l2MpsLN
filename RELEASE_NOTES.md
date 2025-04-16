@@ -3,8 +3,11 @@
 Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
-* __l2MpsLN-R5-4-4__: 2025-04-16 lujko
+* __l2MpsLN-R5-4-5__: 2025-04-16 lujko
   * Add new alarm on MITMSG_TMSTMP records 
+
+* __l2MpsLN-R5-4-4__: 2025-4-02 jmock
+  * Add EGU to WF START and NELM records
 
 * __l2MpsLN-R5-4-3__: 2025-03-20 jmock
   * Fix typo in ATTR input
