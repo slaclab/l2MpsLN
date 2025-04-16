@@ -38,6 +38,7 @@ epicsEnvSet("NC_TS_DELAY","3")
 epicsEnvSet("SC_TS_DELAY","4")
 epicsEnvSet("CU","SC")
 epicsEnvSet("MODE_INPV", "1")
+epicsEnvSet("CARED_FOR", "3")
 
 # ===========================================
 #               DBD LOADING

@@ -620,8 +620,3 @@ file config_version.template { pattern
 { $(VER)             }
 }
 
-#======================================
-# Mitigation timestamp alarm
-#======================================
-#file "mitigation.template" { pattern
-#{ 
