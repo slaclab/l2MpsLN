@@ -238,7 +238,7 @@ record(seq, "$(P):RESET_ERR_SEQ"){
   field(LNK3, "$(P):CON_CNTRST PP")
   field(DOL4, "1")
   field(LNK4, "$(P):LC1_CLRTIMEOUT PP")
-  field(DOL5, "1")
+  field(DOL5, "0")
   field(LNK5, "$(P):MITMSG_CLRTIMEOUT")
 }
 record(bo, "$(TPR):SC_BSA_ENABLE")
