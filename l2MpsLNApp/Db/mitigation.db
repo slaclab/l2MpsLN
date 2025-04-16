@@ -37,6 +37,6 @@ record(bo, "$(P):MITMSG_WDOG_STATUS") {
     field(ONAM, "GOOD")
     field(SCAN, "Passive")
     field(PINI, "NO")
-    field(ZSV, "NO_ALARM")
-    field(OSV, "MAJOR")
+    field(OSV, "NO_ALARM")
+    field(ZSV, "MAJOR")
 }
