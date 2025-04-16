@@ -24,6 +24,7 @@ $(IS_NC=#)epicsEnvSet("CU","CU")
 # ===========================================
 
 $(IS_LN="")dbLoadRecords("db/mps_soft.db","P=${L2MPS_PREFIX},PORT=${L2MPSASYN_PORT}")
+dbLoadRecords("db/mitigation.db", "P=${L2MPS_PREFIX}, CARED_FOR=${CARED_FOR}")
 
 # ===========================================
 #       Load MPS Analog Input databases

@@ -43,6 +43,7 @@ DB += tpr_management.db
 DB += analog0bay.db
 DB += analog1bay.db
 DB += analog2bay.db
+DB += mitigation.db
 # ==========================================
 
 # For saving and loading yaml configuration

@@ -619,3 +619,4 @@ file config_version.template { pattern
 { MPS_CONFIG_VERSION }
 { $(VER)             }
 }
+
