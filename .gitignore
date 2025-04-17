@@ -5,7 +5,6 @@ O.*
 *.swp
 *.bak
 envPaths
-RELEASE_SITE
 bin/
 lib/
 include/
