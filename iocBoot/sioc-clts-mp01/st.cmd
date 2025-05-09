@@ -14,7 +14,6 @@ epicsEnvSet("TYPE","LN")
 # Initialize default environment variables
 # =======================================
 < ${TOP}/iocBoot/common/support/ana_default.cmd
-epicsEnvSet("MODE_INPV", "0")
 
 # =======================================
 # Set this IOC up as an Undulator BLM type
@@ -25,6 +24,7 @@ epicsEnvSet("UND","_UND")
 # Load specific environment variables for this unit
 # =======================================
 < ${TOP}/iocBoot/common/support/ana_sxr.cmd
+epicsEnvSet("MODE_INPV", "0")
 
 # =======================================
 # Load common initialization file

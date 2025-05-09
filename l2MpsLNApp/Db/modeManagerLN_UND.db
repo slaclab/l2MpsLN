@@ -206,6 +206,13 @@ record(bo,  "$(P):RESET_ERR") {
   field(FLNK,  "$(P):RESET_ERR_SEQ PP NMS")
 }
 
+record(bo, "$(P):RESET_TIMEOUTS_REMOTE") {
+  field(DESC, "Reset timeout of LN")
+  field(DOL,  "SIOC:SYS0:MP00:CLEAR_TIMEOUTS CPP NMS")
+  field(OMSL, "closed_loop")
+  field(OUT,  "$(P):RESET_ERR PP")
+}
+
 record(seq, "$(P):RESET_ERR_SEQ"){
   field(DESC, "Reset all errors in LN")
   field(SELM, "All")
