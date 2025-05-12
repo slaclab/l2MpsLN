@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* tag:__l2MpsLN-R5-4-9__: 2025-05-12 lujko
+  * New tag for build system compatibility
+
 * tag:__l2MpsLN-R5-4-8__: 2025-04-18 lujko
   * New tag for build system compatibility
 
