@@ -10,6 +10,8 @@ record(ao,      "$(P):$(R)") {
     field(PREC, "$(PREC)")
     field(EOFF, "$(EOFF="")")
     field(ESLO, "$(ESLO="")")
+    field(DOL,  "$(DOL="")")
+    field(OMSL, "closed_loop")
     field(OUT,  "@asyn($(PORT),1)$(PARAM)")
     field(FLNK, "$(P):$(R)_RBV")
 }

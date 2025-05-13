@@ -20,6 +20,28 @@ record(ao,      "$(DEVICE):$(ATTR)_SLOPE") {
     field(SCAN, "Passive")
     field(PREC, "3")
     field(VAL,  "1")
+    field(FLNK, "$(DEVICE):$(ATTR)_SLOPE_SEQ")
+    info(autosaveFields, "VAL")
+}
+record(dfanout,  "$(P):$(ATTR)_SLOPE_SEQ") {
+  field(DESC, "Slope")
+  field(OMSL, "closed_loop")
+  field(SELM, "All")
+  field(DOL,  "$(P):$(ATTR)_SLOPE")
+  field(FLNK, "$(P):$(ATTR)_OFFSET")
+  field(OUTA, "$(P):$(ATTR)_OFFSET.ESLO")
+}
+record(ao,      "$(DEVICE):$(ATTR)_OFFSET") {
+    field(DESC, "Offset of channel in EGU")
+    field(EGU,  "$(EGU)")
+    field(PINI, "YES")
+    field(SCAN, "Passive")
+    field(PREC, "3")
+    field(VAL,  "1")
+    field(LINR, "SLOPE")
+    field(ESLO, "1")
+    field(EOFF, "0")
+    field(FLNK, "$(DEVICE):FW_OFFSET")
     info(autosaveFields, "VAL")
 }
 # Buffer PV, to hold all the stream data
