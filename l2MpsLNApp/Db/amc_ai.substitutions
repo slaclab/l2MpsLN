@@ -20,9 +20,12 @@ file RegisterDoubleIn.template { pattern
 }
 file RegRW_AnalogAS.template { pattern
 { R,                DESC,                        PINI,   SCAN,        EGU,           LINR,            ESLO,  EOFF, PREC,   PARAM,                   PORT            }
-{ FW_OFFSET,        "DC Offset",                 "YES",  "1 second",  "",            "SLOPE",         0.5,   0,    3,      B$(BAY)_C$(INP)_OFF,     YCPSWASYN_PORT  }
 { I0_$(ATTR)_ZBAND, "Analog deadband around 0",  "YES",  "1 second",  "ADC Counts",  "NO CONVERSION", "",    "",   0,      I0_B$(BAY)_C$(INP)_ZERO, YCPSWASYN_PORT  }
 { I1_$(ATTR)_ZBAND, "Analog deadband around 0",  "YES",  "1 second",  "ADC Counts",  "NO CONVERSION", "",    "",   0,      I1_B$(BAY)_C$(INP)_ZERO, YCPSWASYN_PORT  }
+}
+file RegRW_AnalogDOL.template { pattern
+{ R,                DESC,         PINI,   SCAN,        EGU, LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT,           DOL                    }
+{ FW_OFFSET,        "DC Offset",  "YES",  "1 second",  "",  "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT, "$(P):MPS_OFFSET.RVAL" }
 }
 file bsa.db { pattern
 { DEV,   SECN,             TPR,    PORT,    BSAKEY              }
