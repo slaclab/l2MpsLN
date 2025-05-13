@@ -13,7 +13,6 @@ record(ao,      "$(P):$(R)") {
     field(OUT,  "@asyn($(PORT),1)$(PARAM)")
     field(FLNK, "$(P):$(R)_RBV")
 }
-
 record(ai,      "$(P):$(R)_RBV") {
     field(DTYP, "asynInt32")
     field(DESC, "$(DESC)")
