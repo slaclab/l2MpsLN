@@ -24,7 +24,3 @@ file "RegRO_Analog.template" { pattern
 { R,            DESC,                  PINI,   SCAN,       EGU,   LINR,     EGUL, EGUF,        PREC, PORT,           PARAM                    }
 { FAST_CLK_FREQ, "AMC Clock frequency", "YES",  "1 second", "MHz", "LINEAR", "0",  "0.065535",  2,    YCPSWASYN_PORT, AMCADC_AmcClkFreq_$(BAY) }
 }
-file RegRW_AnalogDOL.template { pattern
-{ R,                DESC,         PINI,   SCAN,        EGU, LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT,           DOL                    }
-{ FW_OFFSET,        "DC Offset",  "YES",  "1 second",  "",  "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT, "$(P):MPS_OFFSET.RVAL" }
-}

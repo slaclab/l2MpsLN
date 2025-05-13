@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* tag:__l2MpsLN-R5-5-1__: 2025-05-13 jmock
+  * Fix problem with WF type channels offset
+
 * tag:__l2MpsLN-R5-5-0__: 2025-05-13 jmock
   * Add MPS_OFFSET PV for analog channels that allows user to set offset in EGU
 
