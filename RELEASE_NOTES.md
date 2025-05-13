@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* tag:__l2MpsLN-R5-5-0__: 2025-05-13 jmock
+  * Add MPS_OFFSET PV for analog channels that allows user to set offset in EGU
+
 * tag:__l2MpsLN-R5-4-9__: 2025-05-12 lujko
   * New tag for build system compatibility
 
