@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* tag:__l2MpsLN-R5-5-2__: 2025-05-13 jmock
+  * Fix problem where offset is not processing properly
+
 * tag:__l2MpsLN-R5-5-1__: 2025-05-13 jmock
   * Fix problem with WF type channels offset
 

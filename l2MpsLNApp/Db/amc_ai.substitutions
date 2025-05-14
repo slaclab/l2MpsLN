@@ -25,7 +25,7 @@ file RegRW_AnalogAS.template { pattern
 }
 file RegRW_AnalogDOL.template { pattern
 { R,                DESC,         PINI,   SCAN,        EGU, LINR,    ESLO,  EOFF, PREC,   PARAM,               PORT,           DOL                    }
-{ FW_OFFSET,        "DC Offset",  "YES",  "1 second",  "",  "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT, "$(P):MPS_OFFSET.RVAL" }
+{ FW_OFFSET,        "DC Offset",  "NO",  "1 second",  "",  "SLOPE", 0.5,   0,    3,      B$(BAY)_C$(INP)_OFF, YCPSWASYN_PORT, "$(P):MPS_OFFSET_CALC" }
 }
 file bsa.db { pattern
 { DEV,   SECN,             TPR,    PORT,    BSAKEY              }
