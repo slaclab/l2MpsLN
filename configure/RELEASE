@@ -54,7 +54,7 @@ SEQ              = $(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
 BSADRIVER        = $(EPICS_MODULES)/bsaDriver/$(BSADRIVER_MODULE_VERSION)
 ATCACOMMON       = $(EPICS_MODULES)/ATCACommon/$(ATCACOMMON_MODULE_VERSION)
 PVXS             = $(EPICS_MODULES)/pvxs/$(PVXS_MODULE_VERSION)
-
+WAVEFORM_DRIVER  = $(EPICS_MODULES)/WaveformReaderAsyn
 # =====================================================================
 # Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
 # ====================================================================
