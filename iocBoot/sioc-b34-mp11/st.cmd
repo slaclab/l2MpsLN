@@ -34,6 +34,10 @@ dbLoadRecords("db/mpsLN.db", "P=${L2MPS_PREFIX}, PORT=${YCPSWASYN_PORT}")
 # Load common initialization file
 # =======================================
 < ${TOP}/iocBoot/common/start.cmd
+
+# Waveform Reader config
+waveformReaderConfigure("lujko", 0, 1000000, 3)
+
 # =======================================
 # Load undulator BLM settings
 # =======================================

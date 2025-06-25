@@ -19,6 +19,7 @@ USR_INCLUDES += -I$(HPSTPR_INCLUDE)
 USR_INCLUDES += -I$(BSA_INCLUDE)
 USR_INCLUDES += -I$(L2MPS_INCLUDE)
 USR_INCLUDES += -I$(FFTW_INCLUDE)
+USR_INCLUDES += -I$(WAVEFORMREADERASYN_INCLUDE)
 # =====================================================
 
 # ======================================================
@@ -79,6 +80,7 @@ l2MpsLN_DBD += l2MpsAsyn.dbd
 l2MpsLN_DBD += yamlLoader.dbd
 l2MpsLN_DBD += ycpswasyn.dbd
 l2MpsLN_DBD += yamlDownloader.dbd
+l2MpsLN_DBD += LukasWaveformReader.dbd
 l2MpsLN_DBD += tprTriggerAsynDriver.dbd
 l2MpsLN_DBD += tprPatternAsynDriver.dbd
 l2MpsLN_DBD += bsaCore.dbd
@@ -116,6 +118,7 @@ l2MpsLN_LIBS += asyn
 l2MpsLN_LIBS += seqCar seq pv
 l2MpsLN_LIBS += pvxsIoc
 l2MpsLN_LIBS += pvxs
+l2MpsLN_LIBS += LukasWaveformReader
 
 # Link QSRV (pvAccess Server) if available
 ifdef EPICS_QSRV_MAJOR_VERSION
