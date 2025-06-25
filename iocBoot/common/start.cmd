@@ -130,6 +130,8 @@ dbLoadRecords("db/mps${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, VER=${MPS_CONFIG_VER
 dbLoadRecords("db/modeManager${TYPE}${UND}.db", "P=${L2MPS_PREFIX}, NAME=${IOC_NAME}, LOCA=${LOCATION}, IOC_UNIT=${LOCATION_INDEX},INST=${INST},TPR=${TPR},PORT=bsaPort,NC_TS_DELAY=${NC_TS_DELAY},SC_TS_DELAY=${SC_TS_DELAY}")
 dbLoadRecords("db/facMode.template","IOC=${IOC_NAME},FLNK=${IOC_NAME}:SET_FACMODE,INPV=${MODE_INPV},INPR=${MODE_RBV}")
 dbLoadRecords("db/analog${BAYS}bay.db","P=${L2MPS_PREFIX}")
+dbLoadRecords("db/waveform.db", "USER=lujko,PORT=lujko,ADDR=0,TIMEOUT=0, WAVEFORM_SIZE=500000")
+dbLoadRecords("db/waveformUnique.db", "USER=lujko,PORT=lujko,ADDR=0,TIMEOUT=0, WAVEFORM_SIZE=500000")
 
 # =======================================
 # Initialize type-specific settings and drivers

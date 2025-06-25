@@ -1,0 +1,10 @@
+#Substitution file
+
+file waveform.template
+{
+pattern
+{channel}
+{"0"}
+{"1"}
+{"2"}
+}

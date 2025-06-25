@@ -44,6 +44,8 @@ DB += analog0bay.db
 DB += analog1bay.db
 DB += analog2bay.db
 DB += mitigation.db
+DB += waveform.db
+DB += waveformUnique.db
 # ==========================================
 
 # For saving and loading yaml configuration
