@@ -17,7 +17,8 @@ DB_INSTALLS += $(L2MPSASYN)/db/lc2_analog_sw.db
 DB_INSTALLS += $(L2MPSASYN)/db/lc2_bpm_sw.db
 DB_INSTALLS += $(L2MPSASYN)/db/lc2_watchdog.db
 
-
+DB_INSTALLS += ${WAVEFORMREADERASYN_TOP}/db/waveform.db
+DB_INSTALLS += ${WAVEFORMREADERASYN_TOP}/db/waveformUnique.db
 
 # ==========================================
 # MPS LN specific databases
