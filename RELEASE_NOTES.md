@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* tag:__l2MpsLN-R5-6-0__: 2025-09-23 jmock
+  * Make LN98 sioc-sltd-mp02 a digital node
+
 * tag:__l2MpsLN-R5-5-2__: 2025-05-13 jmock
   * Fix problem where offset is not processing properly
 

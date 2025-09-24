@@ -8,7 +8,7 @@
 # =======================================
 # Define mode management and type
 # =======================================
-epicsEnvSet("TYPE","LN")
+epicsEnvSet("TYPE","DN")
 
 # =======================================
 # Initialize default environment variables
