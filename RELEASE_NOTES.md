@@ -4,6 +4,9 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+  * Correct typo in iocBoot/common/support/init_lc2_bsas.cmd:
+    * I1 scalar attributes were incorrectly called I0.
+
 * tag:__l2MpsLN-R5-6-0__: 2025-09-23 jmock
   * Make LN98 sioc-sltd-mp02 a digital node
 
