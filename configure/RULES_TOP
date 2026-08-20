@@ -7,10 +7,10 @@ mps_configuration:
 	ln -s $(PHYSICS_TOP)/mps_configuration/current mps_configuration
 
 boot:
-	cp -a mps_configuration/link_node_db/startup/. iocBoot/startup/
+	cp -a mps_configuration/link_node/startup/. iocBoot/startup/
 
 config:
-	cp -a mps_configuration/link_node_db/config/. iocBoot/config/
+	cp -a mps_configuration/link_node/config/. iocBoot/config/
 
 distclean:
 	-rm mps_configuration
