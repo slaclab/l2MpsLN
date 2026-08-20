@@ -4,6 +4,13 @@ Release notes for the SLAC LCLS-II HPS MPS Link Node
 
 ## Releases:
 
+* __l2MpsLN-he1__: 2026-08-20 jmock
+  * Change mps_configuration path from link_node_db to link_node
+  * Updates for LCLS-II-HE:
+    * Remove IOCs that are deprecated
+    * Rename sioc-l3b-mp06 to sioc-l3b-mp04
+    * Add new IOCs
+  * Address typos
   * Correct typo in iocBoot/common/support/init_lc2_bsas.cmd:
     * I1 scalar attributes were incorrectly called I0.
 
